@@ -1,6 +1,6 @@
 """
 IMAI AI Digest — aggregator.py
-Runs daily via Render cron. Fetches new blog posts (daily) + arXiv papers (Mondays),
+Runs daily via Render cron. Fetches new blog posts (daily) + arXiv papers (Fridays only),
 scores them with Claude, emails a ranked digest.
 
 Env vars required:
@@ -22,6 +22,9 @@ from email.mime.text import MIMEText
 import feedparser
 import requests
 from anthropic import Anthropic
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # ── Sources ────────────────────────────────────────────────────────────────────
 
@@ -46,17 +49,85 @@ ARXIV_QUERY = (
     "ti:\"fine-tuning\" OR ti:\"autonomous\" OR ti:\"agentic\")"
 )
 
-SCORE_PROMPT = """You score articles for Adi, an AI consultant helping businesses adopt AI (not a researcher).
+BLOG_SCORE_PROMPT = """\
+You score blog articles for Adi. He builds Claude-based agents, RAG pipelines, MCP servers,
+and data dashboards for SMB clients. He is NOT a researcher and does NOT build models.
+He occasionally uses AWS but never needs step-by-step cloud tutorials.
+He wants to know what frontier labs are shipping and where applied AI is headed.
 
-HIGH (8-10): New LLM features/products, applied agent/RAG/MCP techniques, AI for business workflows,
-             economic impact studies, AI engineering best practices, new model capabilities.
-MED  (5-7):  General AI news, model benchmarks, open-source releases, AI policy with biz implications.
-LOW  (1-4):  Pure ML theory, life sciences/biotech AI, robotics, computer vision, social science.
+IMPORTANT: Adi reads these during 5-10 minute breaks. Prefer SHORT, punchy articles.
+Long deep-dives (20+ min reads) should only score 7+ if truly essential.
+
+Be harsh. Most articles are noise. A typical day should have 2-5 items scoring 7+.
+
+9-10  MUST READ — New model or feature launch from Anthropic, OpenAI, Google, or Meta.
+      Real-world agent or RAG deployment with concrete results. MCP or tool-use advances.
+      AI fundamentally changing how a business operates.
+7-8   WORTH READING — Interesting open-source release Adi could use in client work.
+      AI engineering pattern worth borrowing (evals, guardrails, orchestration).
+      Short architecture explainers that deepen understanding of how AI systems work.
+      Thoughtful industry analysis from a credible source (not a vendor pitch).
+4-6   SKIP UNLESS BORED — General AI news with no application angle. Benchmarks or model
+      comparisons without practical takeaway. Vendor announcements dressed as thought leadership.
+      Long-form content that could be summarized in 2 sentences.
+1-3   IGNORE — Cloud provider step-by-step tutorials (SageMaker, Bedrock, Azure how-tos).
+      Life sciences, robotics, pure ML theory, computer vision. Anything requiring a PhD to act on.
+      Recap posts, partnership announcements, hiring news.
+
+Scoring traps to avoid:
+- A post from Anthropic/OpenAI is NOT automatically a 9. Score the CONTENT, not the brand.
+- "How to do X on AWS/Azure/GCP" is a 1-3 tutorial, not a 7-8 engineering pattern.
+- Music/video/image generation is a 4 unless it has a clear business-tool angle.
 
 Return ONLY a JSON array. Each item: {"index": N, "score": 1-10, "reason": "max 12 words"}
 """
 
-client = Anthropic()
+PAPER_SCORE_PROMPT = """\
+You score arXiv papers for Adi. He builds Claude-based agents, RAG pipelines, MCP servers,
+and data dashboards for SMB clients. He is NOT a researcher and does NOT build models.
+He will only skim these, so they must be immediately useful to a practitioner.
+
+Be EXTREMELY harsh. Only 1-4 papers per week should score 8+. Most papers are a 1-3.
+
+8-10  WORTH A SKIM — Directly applicable to building agents, RAG, MCP, or tool-use systems.
+      Clear practical takeaway Adi can use in client work. New technique he can implement.
+5-7   MAYBE — Interesting applied AI result but not directly actionable.
+1-4   SKIP — Math-heavy. Theoretical. Proofs or formal analysis. Pure ML training techniques.
+      Model architecture research. Anything requiring PhD-level understanding to act on.
+      Benchmarks without practical implications. Computer vision, robotics, life sciences.
+
+Scoring traps to avoid:
+- If the abstract is full of equations, Greek letters, or theorem references → score 1-3.
+- "We prove that..." or "We derive bounds..." → score 1-2.
+- Papers about training/pretraining methods → score 1-3 (Adi doesn't train models).
+
+Return ONLY a JSON array. Each item: {"index": N, "score": 1-10, "reason": "max 12 words"}
+"""
+
+MAX_PAPERS = 4
+
+REQUIRED_ENV = ["ANTHROPIC_API_KEY"]
+SMTP_ENV = ["SMTP_HOST", "SMTP_PORT", "SMTP_USER", "SMTP_PASS", "DIGEST_TO"]
+
+
+def check_env():
+    missing = [v for v in REQUIRED_ENV if not os.environ.get(v)]
+    if missing:
+        sys.exit(f"❌ Missing required env vars: {', '.join(missing)}")
+    smtp_missing = [v for v in SMTP_ENV if not os.environ.get(v)]
+    if smtp_missing:
+        print(f"⚠ Missing SMTP env vars (email will be skipped): {', '.join(smtp_missing)}")
+    return len(smtp_missing) == 0
+
+
+client = None
+
+
+def get_client():
+    global client
+    if client is None:
+        client = Anthropic()
+    return client
 
 
 # ── Fetch ──────────────────────────────────────────────────────────────────────
@@ -125,7 +196,7 @@ def fetch_arxiv(days_back=7):
 
 # ── Score ──────────────────────────────────────────────────────────────────────
 
-def score(articles):
+def score(articles, prompt):
     if not articles:
         return []
     results = []
@@ -134,10 +205,10 @@ def score(articles):
         payload = [{"index": j, "title": a["title"], "source": a["source"], "summary": a["summary"]}
                    for j, a in enumerate(batch)]
         try:
-            resp = client.messages.create(
+            resp = get_client().messages.create(
                 model="claude-opus-4-5",
                 max_tokens=800,
-                system=SCORE_PROMPT,
+                system=prompt,
                 messages=[{"role": "user", "content": json.dumps(payload)}],
             )
             scores = {r["index"]: r for r in json.loads(resp.content[0].text)}
@@ -168,27 +239,37 @@ def build_body(blogs, papers):
     today = datetime.date.today().strftime("%A, %b %d %Y")
     lines = [f"IMAI AI Digest — {today}\n{'='*50}\n"]
 
-    if blogs:
-        lines.append(f"📰 BLOG ARTICLES ({len(blogs)} new)\n")
-        for a in blogs:
-            lines.append(f"  [{a['score']}/10] {a['title']}")
+    def format_items(items):
+        for a in items:
+            emoji = "📰" if a["type"] == "Blog" else "📄"
+            lines.append(f"  {emoji} [{a['score']}/10] {a['title']}")
             lines.append(f"  {a['source']} · {a['published']}")
             lines.append(f"  {a['url']}")
             if a.get("reason"):
                 lines.append(f"  → {a['reason']}")
             lines.append("")
-    else:
-        lines.append("📰 No new blog articles in the last 24 hours.\n")
 
-    if papers:
-        lines.append(f"\n📄 ARXIV PAPERS ({len(papers)} new)\n")
-        for a in papers:
-            lines.append(f"  [{a['score']}/10] {a['title']}")
-            lines.append(f"  {a['published']}")
-            lines.append(f"  {a['url']}")
-            if a.get("reason"):
-                lines.append(f"  → {a['reason']}")
-            lines.append("")
+    # Blog posts (daily) — score >= 7, fallback to 6
+    top_blogs = [a for a in blogs if a["score"] >= 7]
+    if not top_blogs:
+        top_blogs = [a for a in blogs if a["score"] >= 6]
+    top_blogs = top_blogs[:8]
+
+    if top_blogs:
+        lines.append(f"📰 Blog Posts ({len(top_blogs)}):\n")
+        format_items(top_blogs)
+    else:
+        lines.append("No notable blog posts today.\n")
+
+    # Papers (Fridays only) — score >= 8, hard cap at MAX_PAPERS
+    top_papers = [a for a in papers if a["score"] >= 8]
+    top_papers = top_papers[:MAX_PAPERS]
+
+    if top_papers:
+        lines.append(f"\n📄 Research Papers ({len(top_papers)}):\n")
+        format_items(top_papers)
+    elif papers:
+        lines.append("\nNo must-read papers this week.\n")
 
     return "\n".join(lines)
 
@@ -197,14 +278,15 @@ def build_body(blogs, papers):
 
 def main():
     today = datetime.date.today()
-    is_monday = today.weekday() == 0
+    is_friday = today.weekday() == 4
     force_all = "--all" in sys.argv
     force_blogs = "--blogs" in sys.argv
     force_arxiv = "--arxiv" in sys.argv
 
     run_blogs = force_all or force_blogs or (not force_arxiv)
-    run_arxiv = force_all or force_arxiv or is_monday
+    run_arxiv = force_all or force_arxiv or is_friday
 
+    can_email = check_env()
     print(f"Running digest — blogs: {run_blogs}, arXiv: {run_arxiv}")
 
     blogs, papers = [], []
@@ -213,15 +295,13 @@ def main():
         print("Fetching blogs...")
         raw = fetch_blogs()
         print(f"  {len(raw)} new articles found, scoring...")
-        blogs = score(raw)
+        blogs = score(raw, BLOG_SCORE_PROMPT)
 
     if run_arxiv:
         print("Fetching arXiv...")
         raw = fetch_arxiv()
         print(f"  {len(raw)} new papers found, scoring...")
-        papers = score(raw)
-        # Only surface papers scoring 6+ to keep it manageable
-        papers = [p for p in papers if p["score"] >= 6]
+        papers = score(raw, PAPER_SCORE_PROMPT)
 
     total = len(blogs) + len(papers)
     print(f"Digest ready: {len(blogs)} blog posts, {len(papers)} papers")
@@ -232,11 +312,14 @@ def main():
     # Print to stdout (visible in Render logs) and email
     print("\n" + body)
 
-    try:
-        send_email(subject, body)
-        print("✅ Email sent.")
-    except Exception as ex:
-        print(f"⚠ Email failed (check SMTP env vars): {ex}")
+    if can_email:
+        try:
+            send_email(subject, body)
+            print("✅ Email sent.")
+        except Exception as ex:
+            print(f"⚠ Email failed: {ex}")
+    else:
+        print("⚠ Skipping email (SMTP env vars not set).")
 
 
 if __name__ == "__main__":

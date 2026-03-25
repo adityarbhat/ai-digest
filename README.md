@@ -56,8 +56,8 @@ python aggregator.py --arxiv  # arXiv only
 
 ## Schedule
 
-- **Daily (Mon–Sun):** Blog posts from the last 28 hours
-- **Mondays only:** arXiv papers from the last 7 days (scored 6+/10 only)
+- **Daily (Mon–Sun):** Blog posts from the last 28 hours (short reads preferred)
+- **Fridays only:** arXiv papers from the last 7 days (max 4, scored 8+/10 only)
 
 ## Sources
 
