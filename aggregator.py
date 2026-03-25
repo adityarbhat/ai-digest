@@ -30,15 +30,24 @@ load_dotenv()
 # ── Sources ────────────────────────────────────────────────────────────────────
 
 BLOGS = [
+    # Anthropic — primary ecosystem
     ("Anthropic",       "https://www.anthropic.com/rss.xml"),
+    # Frontier labs — know what competitors ship
     ("OpenAI",          "https://openai.com/blog/rss.xml"),
     ("Google DeepMind", "https://deepmind.google/blog/rss.xml"),
     ("Meta AI",         "https://ai.meta.com/blog/rss/"),
     ("Mistral AI",      "https://mistral.ai/news/rss"),
-    ("Hugging Face",    "https://huggingface.co/blog/feed.xml"),
-    ("LangChain",       "https://blog.langchain.dev/rss/"),
-    ("AWS ML Blog",     "https://aws.amazon.com/blogs/machine-learning/feed/"),
-    ("Microsoft AI",    "https://blogs.microsoft.com/ai/feed/"),
+    # AI techniques & practitioner insight
+    ("Simon Willison",  "https://simonwillison.net/atom/everything/"),
+    ("The Batch (deeplearning.ai)", "https://www.deeplearning.ai/the-batch/feed/"),
+    # Economic / business / policy analysis
+    ("MIT Tech Review", "https://www.technologyreview.com/feed/"),
+    ("Brookings AI",    "https://www.brookings.edu/topic/artificial-intelligence/feed/"),
+    ("a]6z",            "https://a16z.com/feed/"),
+    # Community signal (high-quality only)
+    ("Hacker News AI",  "https://hnrss.org/newest?q=AI+OR+LLM+OR+Claude+OR+GPT&points=100"),
+    ("Ars Technica",    "https://feeds.arstechnica.com/arstechnica/technology-lab"),
+    ("The Verge AI",    "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"),
 ]
 
 # arXiv: applied LLM / agent / RAG / MCP topics only
@@ -51,34 +60,40 @@ ARXIV_QUERY = (
 )
 
 BLOG_SCORE_PROMPT = """\
-You score blog articles for Adi. He builds Claude-based agents, RAG pipelines, MCP servers,
-and data dashboards for SMB clients. He is NOT a researcher and does NOT build models.
-He occasionally uses AWS but never needs step-by-step cloud tutorials.
-He wants to know what frontier labs are shipping and where applied AI is headed.
+You score blog articles for Adi. He is an AI consultant who works exclusively in the
+Claude/Anthropic ecosystem — building agents, RAG pipelines, MCP servers, and data
+dashboards for SMB clients. He does NOT use LangChain, LlamaIndex, or other orchestration
+frameworks. He is NOT a researcher and does NOT build or train models.
+
+He cares about:
+1. What Anthropic ships (new Claude features, API changes, MCP updates) — top priority
+2. What competitor labs ship (to stay informed, not to switch)
+3. Applied AI techniques he can use with Claude (prompting, evals, tool use patterns)
+4. Big-picture: economic impact of AI, industry surveys, future-of-work analysis, policy
 
 IMPORTANT: Adi reads these during 5-10 minute breaks. Prefer SHORT, punchy articles.
 Long deep-dives (20+ min reads) should only score 7+ if truly essential.
 
 Be harsh. Most articles are noise. A typical day should have 2-5 items scoring 7+.
 
-9-10  MUST READ — New model or feature launch from Anthropic, OpenAI, Google, or Meta.
-      Real-world agent or RAG deployment with concrete results. MCP or tool-use advances.
-      AI fundamentally changing how a business operates.
-7-8   WORTH READING — Interesting open-source release Adi could use in client work.
-      AI engineering pattern worth borrowing (evals, guardrails, orchestration).
-      Short architecture explainers that deepen understanding of how AI systems work.
-      Thoughtful industry analysis from a credible source (not a vendor pitch).
-4-6   SKIP UNLESS BORED — General AI news with no application angle. Benchmarks or model
-      comparisons without practical takeaway. Vendor announcements dressed as thought leadership.
-      Long-form content that could be summarized in 2 sentences.
-1-3   IGNORE — Cloud provider step-by-step tutorials (SageMaker, Bedrock, Azure how-tos).
-      Life sciences, robotics, pure ML theory, computer vision. Anything requiring a PhD to act on.
+9-10  MUST READ — New Claude/Anthropic feature, API change, or MCP advance.
+      Major model launch from any frontier lab. AI economic impact research with
+      clear business implications. Surveys on AI adoption or productivity.
+7-8   WORTH READING — Applied AI technique Adi can use (prompting, evals, tool use).
+      Competitor lab ships something that changes the landscape.
+      Thoughtful industry/economic analysis from a credible source (McKinsey, Brookings, a16z).
+4-6   SKIP — General AI news with no application angle. Framework-specific content
+      (LangChain, LlamaIndex, CrewAI tutorials). Benchmarks without practical takeaway.
+      Vendor announcements dressed as thought leadership. Long-form fluff.
+1-3   IGNORE — Cloud provider tutorials (SageMaker, Bedrock, Azure how-tos).
+      Life sciences, robotics, pure ML theory, computer vision.
       Recap posts, partnership announcements, hiring news.
 
 Scoring traps to avoid:
 - A post from Anthropic/OpenAI is NOT automatically a 9. Score the CONTENT, not the brand.
 - "How to do X on AWS/Azure/GCP" is a 1-3 tutorial, not a 7-8 engineering pattern.
 - Music/video/image generation is a 4 unless it has a clear business-tool angle.
+- LangChain/LlamaIndex/CrewAI content is a 3-4 max — Adi doesn't use these.
 
 Return ONLY a JSON array. Each item: {"index": N, "score": 1-10, "reason": "max 12 words"}
 """

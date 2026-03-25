@@ -61,8 +61,9 @@ python aggregator.py --arxiv  # arXiv only
 
 ## Sources
 
-Blogs: Anthropic, OpenAI, Google DeepMind, Meta AI, Mistral, Hugging Face,
-       LangChain, AWS ML Blog, Microsoft AI
+Blogs: Anthropic, OpenAI, Google DeepMind, Meta AI, Mistral,
+       Simon Willison, The Batch (deeplearning.ai), MIT Tech Review,
+       Brookings AI, a16z, Hacker News (AI, 100+ pts), Ars Technica, The Verge AI
 
 arXiv: cs.AI / cs.CL / cs.LG filtered for agents, RAG, MCP, LLM engineering,
        enterprise AI, tool use, context management
