@@ -17,6 +17,7 @@ import json
 import os
 import smtplib
 import sys
+import time
 from email.mime.text import MIMEText
 
 import feedparser
@@ -204,17 +205,21 @@ def score(articles, prompt):
         batch = articles[i:i+10]
         payload = [{"index": j, "title": a["title"], "source": a["source"], "summary": a["summary"]}
                    for j, a in enumerate(batch)]
-        try:
-            resp = get_client().messages.create(
-                model="claude-opus-4-5",
-                max_tokens=800,
-                system=prompt,
-                messages=[{"role": "user", "content": json.dumps(payload)}],
-            )
-            scores = {r["index"]: r for r in json.loads(resp.content[0].text)}
-        except Exception as ex:
-            print(f"  ⚠ scoring: {ex}")
-            scores = {}
+        scores = {}
+        for attempt in range(3):
+            try:
+                resp = get_client().messages.create(
+                    model="claude-sonnet-4-5-20250514",
+                    max_tokens=800,
+                    system=prompt,
+                    messages=[{"role": "user", "content": json.dumps(payload)}],
+                )
+                scores = {r["index"]: r for r in json.loads(resp.content[0].text)}
+                break
+            except Exception as ex:
+                print(f"  ⚠ scoring (attempt {attempt+1}/3): {ex}")
+                if attempt < 2:
+                    time.sleep(2 ** attempt)
         for j, a in enumerate(batch):
             a["score"] = scores.get(j, {}).get("score", 5)
             a["reason"] = scores.get(j, {}).get("reason", "")
