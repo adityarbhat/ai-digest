@@ -1,0 +1,20 @@
+services:
+  - type: cron
+    name: imai-ai-digest
+    runtime: python
+    schedule: "0 13 * * *"   # 7:00 AM MT (UTC-6) = 13:00 UTC
+    buildCommand: pip install -r requirements.txt
+    startCommand: python aggregator.py
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: SMTP_HOST
+        value: smtp.gmail.com
+      - key: SMTP_PORT
+        value: 587
+      - key: SMTP_USER
+        sync: false          # set in Render dashboard
+      - key: SMTP_PASS
+        sync: false          # Gmail app password — set in Render dashboard
+      - key: DIGEST_TO
+        sync: false          # your email — set in Render dashboard
