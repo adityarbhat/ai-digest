@@ -30,24 +30,24 @@ load_dotenv()
 # ── Sources ────────────────────────────────────────────────────────────────────
 
 BLOGS = [
-    # Anthropic — primary ecosystem
-    ("Anthropic",       "https://www.anthropic.com/rss.xml"),
+    # Anthropic news (anthropic.com has no RSS — using Google News)
+    ("Anthropic",       "https://news.google.com/rss/search?q=Anthropic+Claude+AI&hl=en-US&gl=US&ceid=US:en"),
     # Frontier labs — know what competitors ship
     ("OpenAI",          "https://openai.com/blog/rss.xml"),
     ("Google DeepMind", "https://deepmind.google/blog/rss.xml"),
-    ("Meta AI",         "https://ai.meta.com/blog/rss/"),
-    ("Mistral AI",      "https://mistral.ai/news/rss"),
     # AI techniques & practitioner insight
     ("Simon Willison",  "https://simonwillison.net/atom/everything/"),
-    ("The Batch (deeplearning.ai)", "https://www.deeplearning.ai/the-batch/feed/"),
-    # Economic / business / policy analysis
+    ("TechCrunch AI",   "https://techcrunch.com/category/artificial-intelligence/feed/"),
+    # Tech & economic analysis
     ("MIT Tech Review", "https://www.technologyreview.com/feed/"),
-    ("Brookings AI",    "https://www.brookings.edu/topic/artificial-intelligence/feed/"),
-    ("a]6z",            "https://a16z.com/feed/"),
-    # Community signal (high-quality only)
-    ("Hacker News AI",  "https://hnrss.org/newest?q=AI+OR+LLM+OR+Claude+OR+GPT&points=100"),
     ("Ars Technica",    "https://feeds.arstechnica.com/arstechnica/technology-lab"),
     ("The Verge AI",    "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"),
+    # System design & engineering depth (free alternatives to ByteByteGo)
+    ("Cloudflare Blog",      "https://blog.cloudflare.com/rss/"),
+    ("GitHub Engineering",   "https://github.blog/engineering.atom"),
+    ("Netflix Tech Blog",    "https://medium.com/feed/netflix-techblog"),
+    # Community signal (high-quality only)
+    ("Hacker News",     "https://hnrss.org/best"),
 ]
 
 # arXiv: applied LLM / agent / RAG / MCP topics only
@@ -69,25 +69,26 @@ He cares about:
 1. What Anthropic ships (new Claude features, API changes, MCP updates) — top priority
 2. What competitor labs ship (to stay informed, not to switch)
 3. Applied AI techniques he can use with Claude (prompting, evals, tool use patterns)
-4. Big-picture: economic impact of AI, industry surveys, future-of-work analysis, policy
+4. System design: how large-scale systems are built (databases, distributed systems, APIs) — helps him build better architectures for clients
+5. Big-picture: economic impact of AI, industry surveys, future-of-work analysis, policy
 
 IMPORTANT: Adi reads these during 5-10 minute breaks. Prefer SHORT, punchy articles.
 Long deep-dives (20+ min reads) should only score 7+ if truly essential.
 
-Be harsh. Most articles are noise. A typical day should have 2-5 items scoring 7+.
+Aim for 5-10 articles per day scoring 6+. Cast a wide net — Adi is still calibrating.
 
 9-10  MUST READ — New Claude/Anthropic feature, API change, or MCP advance.
       Major model launch from any frontier lab. AI economic impact research with
       clear business implications. Surveys on AI adoption or productivity.
 7-8   WORTH READING — Applied AI technique Adi can use (prompting, evals, tool use).
       Competitor lab ships something that changes the landscape.
-      Thoughtful industry/economic analysis from a credible source (McKinsey, Brookings, a16z).
-4-6   SKIP — General AI news with no application angle. Framework-specific content
-      (LangChain, LlamaIndex, CrewAI tutorials). Benchmarks without practical takeaway.
-      Vendor announcements dressed as thought leadership. Long-form fluff.
-1-3   IGNORE — Cloud provider tutorials (SageMaker, Bedrock, Azure how-tos).
+      Industry/economic analysis. System design patterns applicable to AI systems.
+6     INTERESTING — General AI news, product launches, funding rounds with context,
+      system design deep-dives, practitioner takeaways. Give benefit of the doubt here.
+4-5   BORDERLINE — Interesting but not actionable. Recap posts, opinion pieces.
+1-3   SKIP — Cloud provider tutorials (SageMaker, Bedrock, Azure how-tos).
       Life sciences, robotics, pure ML theory, computer vision.
-      Recap posts, partnership announcements, hiring news.
+      Pure hiring/partnership announcements with no substance.
 
 Scoring traps to avoid:
 - A post from Anthropic/OpenAI is NOT automatically a 9. Score the CONTENT, not the brand.
@@ -269,11 +270,13 @@ def build_body(blogs, papers):
                 lines.append(f"  → {a['reason']}")
             lines.append("")
 
-    # Blog posts (daily) — score >= 7, fallback to 6
+    # Blog posts (daily) — score >= 7, fallback to 6, then top-5 regardless
     top_blogs = [a for a in blogs if a["score"] >= 7]
     if not top_blogs:
         top_blogs = [a for a in blogs if a["score"] >= 6]
-    top_blogs = top_blogs[:8]
+    if not top_blogs:
+        top_blogs = blogs[:5]  # always show something
+    top_blogs = top_blogs[:10]
 
     if top_blogs:
         lines.append(f"📰 Blog Posts ({len(top_blogs)}):\n")
