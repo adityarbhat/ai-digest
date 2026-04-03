@@ -250,7 +250,13 @@ def score(articles, prompt):
                     system=prompt,
                     messages=[{"role": "user", "content": json.dumps(payload)}],
                 )
-                scores = {r["index"]: r for r in json.loads(resp.content[0].text)}
+                text = resp.content[0].text.strip()
+                # Strip markdown code fences if present
+                if text.startswith("```"):
+                    text = text.split("\n", 1)[1]  # drop first line (```json or ```)
+                if text.endswith("```"):
+                    text = text.rsplit("```", 1)[0]
+                scores = {r["index"]: r for r in json.loads(text.strip())}
                 break
             except Exception as ex:
                 print(f"  ⚠ scoring (attempt {attempt+1}/3): {ex}")
