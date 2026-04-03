@@ -3,15 +3,25 @@
 ## What this project does
 Daily email digest: fetches RSS feeds → scores with Claude Haiku → emails ranked results. Runs on Render cron.
 
-## Last commit: 46a986c (2026-03-30)
-Fixed broken RSS feeds (6 sources were 404), added system design sources, loosened scoring.
+## Last commit: (2026-04-03)
+Overhauled sources and scoring: removed generic journalism (TechCrunch, Verge, Ars Technica),
+added practitioner/research blogs (Lilian Weng, Chip Huyen, HuggingFace, BAIR, Google Research,
+Stanford HAI, Meta AI, Microsoft Research, Replit, W&B). arXiv now runs daily (not just Fridays).
+Scoring now heavily penalizes journalism and rewards technical insight.
 
 ## Active RSS sources
-- Anthropic → Google News RSS (anthropic.com has no RSS feed)
-- OpenAI, Google DeepMind
-- Simon Willison, TechCrunch AI, MIT Tech Review, Ars Technica, The Verge AI
-- Cloudflare Blog, GitHub Engineering, Netflix Tech Blog (system design)
+- Anthropic, Meta AI → Google News RSS
+- OpenAI, Google DeepMind, Microsoft Research
+- Simon Willison, Lilian Weng, Chip Huyen, HuggingFace (practitioner blogs)
+- BAIR Blog, Google Research, Stanford HAI (university research blogs)
+- Replit, Weights & Biases (application-company engineering)
+- MIT Tech Review, Cloudflare Blog, GitHub Engineering
 - Hacker News /best
+
+## arXiv
+- Runs **daily** (was Fridays-only), 2-day lookback window, max 30 papers fetched
+- Shows top 3 papers scored 7+ (was 4 papers at 8+)
+- Query covers: agents, computer use, GUI agents, tool use, RAG, MCP, chain-of-thought, code gen
 
 ## Key env vars
 `ANTHROPIC_API_KEY`, `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`, `DIGEST_TO`

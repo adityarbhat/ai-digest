@@ -1,6 +1,6 @@
 """
 IMAI AI Digest — aggregator.py
-Runs daily via Render cron. Fetches new blog posts (daily) + arXiv papers (Fridays only),
+Runs daily via Render cron. Fetches new blog posts + arXiv papers (both daily),
 scores them with Claude, emails a ranked digest.
 
 Env vars required:
@@ -35,28 +35,38 @@ BLOGS = [
     # Frontier labs — know what competitors ship
     ("OpenAI",          "https://openai.com/blog/rss.xml"),
     ("Google DeepMind", "https://deepmind.google/blog/rss.xml"),
-    # AI techniques & practitioner insight
+    ("Meta AI",         "https://news.google.com/rss/search?q=Meta+AI+Llama+agents&hl=en-US&gl=US&ceid=US:en"),
+    ("Microsoft Research", "https://www.microsoft.com/en-us/research/feed/"),
+    # Deep technical / practitioner blogs
     ("Simon Willison",  "https://simonwillison.net/atom/everything/"),
-    ("TechCrunch AI",   "https://techcrunch.com/category/artificial-intelligence/feed/"),
+    ("Lilian Weng",     "https://lilianweng.github.io/index.xml"),       # OpenAI research lead, deep technical
+    ("Chip Huyen",      "https://huyenchip.com/feed.xml"),               # ML systems & production AI
+    ("HuggingFace",     "https://huggingface.co/blog/feed.xml"),         # model releases, techniques, papers
+    # University & top research lab blogs (paper summaries in plain language)
+    ("BAIR Blog",       "https://bair.berkeley.edu/blog/feed.xml"),      # Berkeley AI Research
+    ("Google Research", "https://blog.research.google/feeds/posts/default?alt=rss"),
+    ("Stanford HAI",    "https://hai.stanford.edu/news/feed"),           # Stanford Human-Centered AI
+    # Application-company engineering blogs (agentic / product AI)
+    ("Replit",          "https://blog.replit.com/rss.xml"),              # AI-native dev tools
+    ("Weights & Biases", "https://wandb.ai/fully-connected/rss.xml"),    # ML tooling & evals
     # Tech & economic analysis
     ("MIT Tech Review", "https://www.technologyreview.com/feed/"),
-    ("Ars Technica",    "https://feeds.arstechnica.com/arstechnica/technology-lab"),
-    ("The Verge AI",    "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"),
-    # System design & engineering depth (free alternatives to ByteByteGo)
+    # System design & engineering depth
     ("Cloudflare Blog",      "https://blog.cloudflare.com/rss/"),
     ("GitHub Engineering",   "https://github.blog/engineering.atom"),
-    ("Netflix Tech Blog",    "https://medium.com/feed/netflix-techblog"),
     # Community signal (high-quality only)
     ("Hacker News",     "https://hnrss.org/best"),
 ]
 
-# arXiv: applied LLM / agent / RAG / MCP topics only
+# arXiv: applied LLM / agent / computer use topics — practitioner-relevant only
 ARXIV_QUERY = (
-    "(cat:cs.AI OR cat:cs.CL OR cat:cs.LG) AND ("
-    "ti:agent OR ti:RAG OR ti:\"retrieval augmented\" OR ti:\"large language model\" OR "
-    "ti:\"tool use\" OR ti:\"model context protocol\" OR ti:\"prompt\" OR "
-    "ti:\"context window\" OR ti:\"AI application\" OR ti:\"enterprise\" OR "
-    "ti:\"fine-tuning\" OR ti:\"autonomous\" OR ti:\"agentic\")"
+    "(cat:cs.AI OR cat:cs.CL OR cat:cs.HC) AND ("
+    "ti:agent OR ti:\"multi-agent\" OR ti:\"computer use\" OR ti:\"computer agent\" OR "
+    "ti:\"web agent\" OR ti:\"GUI agent\" OR ti:\"tool use\" OR ti:\"tool calling\" OR "
+    "ti:RAG OR ti:\"retrieval augmented\" OR ti:\"model context protocol\" OR "
+    "ti:\"chain-of-thought\" OR ti:\"in-context learning\" OR ti:\"prompt\" OR "
+    "ti:\"context window\" OR ti:\"agentic\" OR ti:\"autonomous agent\" OR "
+    "ti:\"AI assistant\" OR ti:\"code generation\" OR ti:\"function calling\")"
 )
 
 BLOG_SCORE_PROMPT = """\
@@ -67,33 +77,38 @@ frameworks. He is NOT a researcher and does NOT build or train models.
 
 He cares about:
 1. What Anthropic ships (new Claude features, API changes, MCP updates) — top priority
-2. What competitor labs ship (to stay informed, not to switch)
-3. Applied AI techniques he can use with Claude (prompting, evals, tool use patterns)
-4. System design: how large-scale systems are built (databases, distributed systems, APIs) — helps him build better architectures for clients
-5. Big-picture: economic impact of AI, industry surveys, future-of-work analysis, policy
+2. Frontier AI capabilities: new agent techniques, computer use, tool use, multimodal
+3. Applied AI techniques he can use with Claude (prompting, evals, RAG patterns, MCP)
+4. Research distillations: a blog post explaining a new paper in plain terms
+5. System design: how large-scale systems are built (relevant to building AI pipelines)
+6. Big-picture: economic impact of AI, industry surveys, future-of-work analysis
 
-IMPORTANT: Adi reads these during 5-10 minute breaks. Prefer SHORT, punchy articles.
-Long deep-dives (20+ min reads) should only score 7+ if truly essential.
+PENALIZE HEAVILY: journalism and news reporting.
+- "Company X announces Y" style articles from WIRED, NBC, TechCrunch → 3-4 max
+- "According to sources..." reporting → 2-3
+- Product launch coverage with no technical depth → 3-4
+Adi gets these from newsletters already. He wants INSIGHT and TECHNIQUE.
 
-Aim for 5-10 articles per day scoring 6+. Cast a wide net — Adi is still calibrating.
+REWARD: technical practitioners writing about what they built or discovered.
+- "I tested X and here's what I found" → 7-8 if relevant
+- Deep analysis of how a new technique works → 7-9
+- Research paper explained in plain terms → 6-8
 
 9-10  MUST READ — New Claude/Anthropic feature, API change, or MCP advance.
-      Major model launch from any frontier lab. AI economic impact research with
-      clear business implications. Surveys on AI adoption or productivity.
-7-8   WORTH READING — Applied AI technique Adi can use (prompting, evals, tool use).
-      Competitor lab ships something that changes the landscape.
-      Industry/economic analysis. System design patterns applicable to AI systems.
-6     INTERESTING — General AI news, product launches, funding rounds with context,
-      system design deep-dives, practitioner takeaways. Give benefit of the doubt here.
-4-5   BORDERLINE — Interesting but not actionable. Recap posts, opinion pieces.
-1-3   SKIP — Cloud provider tutorials (SageMaker, Bedrock, Azure how-tos).
-      Life sciences, robotics, pure ML theory, computer vision.
-      Pure hiring/partnership announcements with no substance.
+      Major model launch from any frontier lab with technical details.
+      Practitioner deep-dive on agent/computer-use/tool-use technique.
+7-8   WORTH READING — Applied AI technique Adi can use. Research distillation.
+      System design pattern applicable to AI pipelines. Practitioner analysis.
+6     INTERESTING — Technical blog post, deep product analysis, engineering write-up.
+4-5   BORDERLINE — News coverage with some depth. Opinion pieces.
+1-3   SKIP — Pure journalism/news reporting with no technical content.
+      Cloud provider tutorials. Life sciences, robotics, pure ML theory.
+      Hiring/partnership announcements.
 
 Scoring traps to avoid:
-- A post from Anthropic/OpenAI is NOT automatically a 9. Score the CONTENT, not the brand.
-- "How to do X on AWS/Azure/GCP" is a 1-3 tutorial, not a 7-8 engineering pattern.
-- Music/video/image generation is a 4 unless it has a clear business-tool angle.
+- WIRED/NBC/TechCrunch article about Claude = score the depth, NOT the subject. Usually 3-4.
+- A post from Anthropic/OpenAI is NOT automatically a 9. Score the CONTENT.
+- "How to do X on AWS/Azure/GCP" is a 1-3 tutorial.
 - LangChain/LlamaIndex/CrewAI content is a 3-4 max — Adi doesn't use these.
 
 Return ONLY a JSON array. Each item: {"index": N, "score": 1-10, "reason": "max 12 words"}
@@ -104,24 +119,29 @@ You score arXiv papers for Adi. He builds Claude-based agents, RAG pipelines, MC
 and data dashboards for SMB clients. He is NOT a researcher and does NOT build models.
 He will only skim these, so they must be immediately useful to a practitioner.
 
-Be EXTREMELY harsh. Only 1-4 papers per week should score 8+. Most papers are a 1-3.
+Target: 1-3 papers per day at 7+. Adi wants to stay current with frontier research
+on agents and computer use — even if he won't implement every detail.
 
-8-10  WORTH A SKIM — Directly applicable to building agents, RAG, MCP, or tool-use systems.
-      Clear practical takeaway Adi can use in client work. New technique he can implement.
-5-7   MAYBE — Interesting applied AI result but not directly actionable.
-1-4   SKIP — Math-heavy. Theoretical. Proofs or formal analysis. Pure ML training techniques.
-      Model architecture research. Anything requiring PhD-level understanding to act on.
-      Benchmarks without practical implications. Computer vision, robotics, life sciences.
+8-10  MUST SKIM — New technique for agents, computer use, GUI agents, or tool use.
+      Better RAG or in-context learning approach. New finding on how LLMs reason/plan.
+      Practical benchmark showing what actually works in agentic systems.
+7     WORTH A LOOK — Interesting applied result, clear takeaway even if indirect.
+      New approach to prompt engineering, context management, or agent coordination.
+5-6   MAYBE — Applied AI result, relevant topic but unclear practical use.
+1-4   SKIP — Math-heavy. Theoretical proofs. Pure training/pretraining methods.
+      Model architecture research. Computer vision, robotics, life sciences.
+      Benchmarks on standard NLP tasks with no agent/tool-use angle.
 
 Scoring traps to avoid:
-- If the abstract is full of equations, Greek letters, or theorem references → score 1-3.
+- If abstract has equations, Greek letters, or theorems → score 1-3.
 - "We prove that..." or "We derive bounds..." → score 1-2.
-- Papers about training/pretraining methods → score 1-3 (Adi doesn't train models).
+- Papers about training/pretraining → score 1-3 (Adi doesn't train models).
+- Inference optimization (quantization, speculative decoding, KV cache) → score 2-3.
 
 Return ONLY a JSON array. Each item: {"index": N, "score": 1-10, "reason": "max 12 words"}
 """
 
-MAX_PAPERS = 4
+MAX_PAPERS = 3  # daily cap — quality over quantity
 
 REQUIRED_ENV = ["ANTHROPIC_API_KEY"]
 SMTP_ENV = ["SMTP_HOST", "SMTP_PORT", "SMTP_USER", "SMTP_PASS", "DIGEST_TO"]
@@ -178,12 +198,12 @@ def fetch_blogs(hours_back=28):
     return articles
 
 
-def fetch_arxiv(days_back=7):
+def fetch_arxiv(days_back=2):
     try:
         r = requests.get(
             "http://export.arxiv.org/api/query",
             params={"search_query": ARXIV_QUERY, "sortBy": "submittedDate",
-                    "sortOrder": "descending", "max_results": 40},
+                    "sortOrder": "descending", "max_results": 30},
             timeout=20,
         )
         r.raise_for_status()
@@ -284,15 +304,15 @@ def build_body(blogs, papers):
     else:
         lines.append("No notable blog posts today.\n")
 
-    # Papers (Fridays only) — score >= 8, hard cap at MAX_PAPERS
-    top_papers = [a for a in papers if a["score"] >= 8]
+    # Papers (daily) — score >= 7, hard cap at MAX_PAPERS
+    top_papers = [a for a in papers if a["score"] >= 7]
     top_papers = top_papers[:MAX_PAPERS]
 
     if top_papers:
         lines.append(f"\n📄 Research Papers ({len(top_papers)}):\n")
         format_items(top_papers)
     elif papers:
-        lines.append("\nNo must-read papers this week.\n")
+        lines.append("\nNo notable papers today.\n")
 
     return "\n".join(lines)
 
@@ -307,7 +327,7 @@ def main():
     force_arxiv = "--arxiv" in sys.argv
 
     run_blogs = force_all or force_blogs or (not force_arxiv)
-    run_arxiv = force_all or force_arxiv or is_friday
+    run_arxiv = force_all or force_arxiv or True  # run daily, not just Fridays
 
     can_email = check_env()
     print(f"Running digest — blogs: {run_blogs}, arXiv: {run_arxiv}")
