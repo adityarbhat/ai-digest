@@ -94,6 +94,57 @@ HTML_SOURCES = [
     },
 ]
 
+OFFICIAL_UPDATE_PAGES = [
+    {
+        "source": "Anthropic Docs",
+        "title": "Anthropic Release Notes",
+        "url": "https://docs.anthropic.com/en/release-notes/overview",
+        "lane": "Client-Relevant Now",
+    },
+    {
+        "source": "Anthropic Docs",
+        "title": "Claude Code Overview",
+        "url": "https://docs.anthropic.com/en/docs/claude-code/overview",
+        "lane": "Build Patterns",
+    },
+    {
+        "source": "Anthropic Docs",
+        "title": "Claude Code Tutorials",
+        "url": "https://docs.anthropic.com/en/docs/claude-code/tutorials",
+        "lane": "Experiments To Run",
+    },
+    {
+        "source": "OpenAI Help",
+        "title": "ChatGPT Release Notes",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+        "lane": "Client-Relevant Now",
+    },
+    {
+        "source": "OpenAI Help",
+        "title": "Using Codex with your ChatGPT plan",
+        "url": "https://help.openai.com/en/articles/11369540-codex-in-chatgpt",
+        "lane": "Client-Relevant Now",
+    },
+    {
+        "source": "OpenAI Help",
+        "title": "Prompt engineering best practices for ChatGPT",
+        "url": "https://help.openai.com/en/articles/10032626-prompt-engineering-best-practices-for-chatgpt",
+        "lane": "Build Patterns",
+    },
+    {
+        "source": "OpenAI",
+        "title": "Codex Overview",
+        "url": "https://openai.com/codex",
+        "lane": "Build Patterns",
+    },
+    {
+        "source": "OpenAI Academy",
+        "title": "Codex Academy",
+        "url": "https://openai.com/academy/codex/",
+        "lane": "Experiments To Run",
+    },
+]
+
 CLAUDE_BLOG_URL = "https://claude.com/blog"
 CLAUDE_BLOG_KEYWORDS = (
     "claude code",
@@ -189,7 +240,10 @@ STACK_KEYWORDS = (
 SOURCE_PRIORITY = {
     "Claude Blog": 120,
     "Anthropic": 115,
+    "Anthropic Docs": 114,
     "OpenAI": 100,
+    "OpenAI Help": 99,
+    "OpenAI Academy": 98,
     "Google DeepMind": 95,
     "Meta AI": 90,
     "Mistral AI": 88,
@@ -212,7 +266,10 @@ SOURCE_PRIORITY = {
 SOURCE_CAPS = {
     "Claude Blog": 3,
     "Anthropic": 2,
+    "Anthropic Docs": 2,
     "OpenAI": 1,
+    "OpenAI Help": 2,
+    "OpenAI Academy": 1,
     "Google DeepMind": 1,
     "Meta AI": 1,
     "Mistral AI": 1,
@@ -604,7 +661,7 @@ def cap_sources(articles, limit):
 
 def article_key(article):
     parsed = urlparse(article["url"])
-    canonical = f"{parsed.netloc}{parsed.path}".rstrip("/")
+    canonical = article.get("version_key") or f"{parsed.netloc}{parsed.path}".rstrip("/")
     if not canonical:
         canonical = normalize_title(article["title"])
     digest = hashlib.sha1(canonical.encode("utf-8")).hexdigest()
@@ -735,6 +792,49 @@ def fetch_html_source(config, hours_back=72):
         })
 
     return dedupe_articles(articles)
+
+
+def extract_update_summary(text):
+    lines = [line.strip() for line in text.splitlines() if line.strip()]
+    trimmed = []
+    for line in lines:
+        lowered = line.lower()
+        if lowered in {"openai", "anthropic", "search", "table of contents"}:
+            continue
+        trimmed.append(line)
+        if len(" ".join(trimmed)) >= 500:
+            break
+    return clean_text(" ".join(trimmed))[:600]
+
+
+def fetch_official_update_pages():
+    articles = []
+    for config in OFFICIAL_UPDATE_PAGES:
+        try:
+            response = requests.get(config["url"], headers=HTTP_HEADERS, timeout=20)
+            response.raise_for_status()
+        except Exception as ex:
+            print(f"  ⚠ {config['title']}: {ex}")
+            continue
+
+        page_text = extract_article_text(response.text)
+        if not page_text:
+            continue
+        summary = extract_update_summary(page_text)
+        content_hash = hashlib.sha1(summary.encode("utf-8")).hexdigest()[:12]
+        articles.append({
+            "source": config["source"],
+            "type": "Blog",
+            "title": config["title"],
+            "url": config["url"],
+            "summary": summary,
+            "published_dt": None,
+            "published": "Live",
+            "lane": config["lane"],
+            "version_key": f"{config['url']}#{content_hash}",
+            "is_official_update": True,
+        })
+    return articles
 
 
 def enrich_articles(articles, limit=MAX_BLOG_ENRICH):
@@ -979,7 +1079,7 @@ def select_consultant_sections(items):
     return sections
 
 
-def build_body(blogs, papers):
+def build_body(blogs, papers, official_updates):
     today = datetime.date.today().strftime("%A, %b %d %Y")
     lines = [f"IMAI AI Digest — {today}\n{'='*50}\n"]
 
@@ -997,6 +1097,22 @@ def build_body(blogs, papers):
                 lines.append(f"  Try next: {a['action']}")
             lines.append("")
 
+    def format_updates(items):
+        for a in items:
+            lines.append(f"  📌 {a['title']}")
+            lines.append(f"  {a['source']} · {a['published']}")
+            lines.append(f"  {a['url']}")
+            if a.get("summary"):
+                lines.append(f"  → {a['summary'][:220]}")
+            lines.append("")
+
+    featured_items = []
+
+    if official_updates:
+        lines.append(f"Official Product Updates ({len(official_updates)}):\n")
+        format_updates(official_updates)
+        featured_items.extend(official_updates)
+
     combined = sorted(
         blogs + papers,
         key=lambda item: (
@@ -1007,7 +1123,6 @@ def build_body(blogs, papers):
         reverse=True,
     )
     sections = select_consultant_sections(combined)
-    featured_items = []
 
     if any(sections.values()):
         total_items = sum(len(items) for items in sections.values())
@@ -1040,7 +1155,12 @@ def main():
     state = prune_state(load_state())
     print(f"Running digest — blogs: {run_blogs}, arXiv: {run_arxiv}")
 
-    blogs, papers = [], []
+    blogs, papers, official_updates = [], [], []
+
+    print("Fetching official product update pages...")
+    raw_updates = fetch_official_update_pages()
+    official_updates = filter_unsent(raw_updates, state)
+    print(f"  {len(official_updates)} changed official pages found")
 
     if run_blogs:
         print("Fetching blogs...")
@@ -1057,11 +1177,12 @@ def main():
         print(f"  {len(raw)} unsent papers found, scoring...")
         papers = score(raw, PAPER_SCORE_PROMPT, state=state)
 
-    body, featured_items = build_body(blogs, papers)
+    body, featured_items = build_body(blogs, papers, official_updates)
     total = len(featured_items)
-    blog_count = len([item for item in featured_items if item["type"] == "Blog"])
+    update_count = len([item for item in featured_items if item.get("is_official_update")])
+    blog_count = len([item for item in featured_items if item["type"] == "Blog" and not item.get("is_official_update")])
     paper_count = len([item for item in featured_items if item["type"] == "Paper"])
-    print(f"Digest ready: {blog_count} featured blog posts, {paper_count} featured papers")
+    print(f"Digest ready: {update_count} official updates, {blog_count} featured blog posts, {paper_count} featured papers")
     subject = f"AI Digest {today} — {total} items"
 
     # Print to stdout (visible in Render logs) and email

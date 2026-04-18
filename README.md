@@ -80,3 +80,14 @@ Blogs: Claude Blog, Anthropic, OpenAI, Google DeepMind, Meta AI, Mistral,
 
 arXiv: cs.AI / cs.CL / cs.LG filtered for agents, RAG, MCP, LLM engineering,
        enterprise AI, tool use, context management
+
+## OpenAI Quick Links
+
+- OpenAI Blog: [https://openai.com/blog](https://openai.com/blog)
+- ChatGPT Release Notes: [https://help.openai.com/en/articles/6825453-chatgpt-release-notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes)
+- Codex Overview: [https://openai.com/codex](https://openai.com/codex)
+- Introducing Codex: [https://openai.com/index/introducing-codex/](https://openai.com/index/introducing-codex/)
+- Using Codex with your ChatGPT plan: [https://help.openai.com/en/articles/11369540-codex-in-chatgpt](https://help.openai.com/en/articles/11369540-codex-in-chatgpt)
+- Codex Academy: [https://openai.com/academy/codex/](https://openai.com/academy/codex/)
+- How OpenAI uses Codex: [https://openai.com/business/guides-and-resources/how-openai-uses-codex/](https://openai.com/business/guides-and-resources/how-openai-uses-codex/)
+- Prompt engineering best practices for ChatGPT: [https://help.openai.com/en/articles/10032626-prompt-engineering-best-practices-for-chatgpt](https://help.openai.com/en/articles/10032626-prompt-engineering-best-practices-for-chatgpt)
