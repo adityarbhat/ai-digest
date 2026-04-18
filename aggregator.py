@@ -13,16 +13,23 @@ Env vars required:
 """
 
 import datetime
+import hashlib
+import html
 import json
 import os
+import re
 import smtplib
 import sys
 import time
+from difflib import SequenceMatcher
 from email.mime.text import MIMEText
+from pathlib import Path
+from urllib.parse import urljoin, urlparse
 
 import feedparser
 import requests
 from anthropic import Anthropic
+from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -54,9 +61,207 @@ BLOGS = [
     # System design & engineering depth
     ("Cloudflare Blog",      "https://blog.cloudflare.com/rss/"),
     ("GitHub Engineering",   "https://github.blog/engineering.atom"),
+    ("Brookings AI",    "https://www.brookings.edu/topic/artificial-intelligence/feed/"),
+    ("a]6z",            "https://a16z.com/feed/"),
+    # Architecture / distributed systems / software delivery
+    ("Martin Fowler",   "https://martinfowler.com/feed.atom"),
+    ("InfoQ Architecture Articles", "https://feed.infoq.com/architecture/articles/"),
+    ("InfoQ Architecture News", "https://feed.infoq.com/architecture/news/"),
     # Community signal (high-quality only)
     ("Hacker News",     "https://hnrss.org/best"),
 ]
+
+HTML_SOURCES = [
+    {
+        "source": "Render Blog",
+        "url": "https://render.com/blog",
+        "path_prefixes": ("/blog/",),
+    },
+    {
+        "source": "Supabase Engineering",
+        "url": "https://supabase.com/blog/categories/engineering",
+        "path_prefixes": ("/blog/",),
+    },
+    {
+        "source": "Supabase Developers",
+        "url": "https://supabase.com/blog/categories/developers",
+        "path_prefixes": ("/blog/",),
+    },
+    {
+        "source": "pganalyze",
+        "url": "https://pganalyze.com/blog",
+        "path_prefixes": ("/blog/",),
+    },
+]
+
+CLAUDE_BLOG_URL = "https://claude.com/blog"
+CLAUDE_BLOG_KEYWORDS = (
+    "claude code",
+    "claude cowork",
+    "cowork",
+    "managed agents",
+    "skills",
+    "mcp",
+    "subagents",
+    "tool use",
+    "context",
+    "hooks",
+)
+HIGH_SIGNAL_KEYWORDS = (
+    "claude",
+    "anthropic",
+    "agent",
+    "agents",
+    "tool use",
+    "mcp",
+    "skill",
+    "skills",
+    "workflow",
+    "prompt",
+    "eval",
+    "context",
+    "enterprise",
+    "architecture",
+    "reasoning",
+    "system design",
+    "distributed system",
+    "distributed systems",
+    "microservices",
+    "event-driven",
+    "idempotency",
+    "queue",
+    "workflow",
+    "billing",
+    "invoice",
+    "inventory",
+    "scheduling",
+    "warehouse",
+    "audit",
+    "state machine",
+    "python",
+    "fastapi",
+    "flask",
+    "streamlit",
+    "supabase",
+    "postgres",
+    "render",
+    "row level security",
+    "rls",
+    "background job",
+    "cron",
+    "api design",
+)
+LOW_SIGNAL_KEYWORDS = (
+    "hiring",
+    "partnership",
+    "funding",
+    "award",
+    "webinar",
+    "event",
+    "conference",
+    "livestream",
+    "recap",
+    "newsletter",
+    "week in review",
+    "kubernetes tutorial",
+    "eks",
+    "gke",
+    "aks",
+    "next.js tutorial",
+    "react tutorial",
+    "typescript tutorial",
+)
+STACK_KEYWORDS = (
+    "python",
+    "fastapi",
+    "flask",
+    "streamlit",
+    "supabase",
+    "postgres",
+    "render",
+    "row level security",
+    "rls",
+    "background job",
+    "cron",
+    "api",
+    "dashboard",
+)
+SOURCE_PRIORITY = {
+    "Claude Blog": 120,
+    "Anthropic": 115,
+    "OpenAI": 100,
+    "Google DeepMind": 95,
+    "Meta AI": 90,
+    "Mistral AI": 88,
+    "Render Blog": 87,
+    "Supabase Engineering": 87,
+    "Supabase Developers": 81,
+    "pganalyze": 85,
+    "Martin Fowler": 86,
+    "InfoQ Architecture Articles": 84,
+    "InfoQ Architecture News": 80,
+    "Simon Willison": 82,
+    "The Batch (deeplearning.ai)": 78,
+    "MIT Tech Review": 72,
+    "Brookings AI": 70,
+    "a]6z": 68,
+    "Ars Technica": 60,
+    "The Verge AI": 58,
+    "Hacker News AI": 45,
+}
+SOURCE_CAPS = {
+    "Claude Blog": 3,
+    "Anthropic": 2,
+    "OpenAI": 1,
+    "Google DeepMind": 1,
+    "Meta AI": 1,
+    "Mistral AI": 1,
+    "Render Blog": 1,
+    "Supabase Engineering": 2,
+    "Supabase Developers": 1,
+    "pganalyze": 1,
+    "Martin Fowler": 1,
+    "InfoQ Architecture Articles": 2,
+    "InfoQ Architecture News": 1,
+    "Simon Willison": 1,
+    "The Batch (deeplearning.ai)": 1,
+    "MIT Tech Review": 1,
+    "Brookings AI": 1,
+    "a]6z": 1,
+    "Ars Technica": 1,
+    "The Verge AI": 1,
+    "Hacker News AI": 1,
+}
+STOPWORDS = {
+    "a", "an", "and", "are", "be", "for", "from", "how", "in", "into", "is",
+    "of", "on", "or", "the", "this", "to", "using", "with", "your",
+}
+DATE_PATTERNS = (
+    (
+        re.compile(
+            r"\b("
+            r"January|February|March|April|May|June|July|August|September|October|November|December"
+            r")\s+\d{1,2},\s+\d{4}\b"
+        ),
+        "%B %d, %Y",
+    ),
+    (
+        re.compile(
+            r"\b\d{1,2}\s+("
+            r"Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
+            r")\s+\d{4}\b"
+        ),
+        "%d %b %Y",
+    ),
+    (
+        re.compile(
+            r"\b\d{1,2}\s+("
+            r"January|February|March|April|May|June|July|August|September|October|November|December"
+            r")\s+\d{4}\b"
+        ),
+        "%d %B %Y",
+    ),
+)
 
 # arXiv: applied LLM / agent / computer use topics — practitioner-relevant only
 ARXIV_QUERY = (
@@ -75,6 +280,12 @@ Claude/Anthropic ecosystem — building agents, RAG pipelines, MCP servers, and 
 dashboards for SMB clients. He does NOT use LangChain, LlamaIndex, or other orchestration
 frameworks. He is NOT a researcher and does NOT build or train models.
 
+He is also building larger business systems, including warehouse-management-style software
+with inventory, billing, invoicing, scheduling, and operational workflows. He values
+system design and distributed systems when they help him design or advise on real software.
+His primary implementation stack is Python, Streamlit dashboards, Flask/FastAPI web apps,
+Supabase for database/backend/auth/storage, and Render for hosting/deployment.
+
 He cares about:
 1. What Anthropic ships (new Claude features, API changes, MCP updates) — top priority
 2. Frontier AI capabilities: new agent techniques, computer use, tool use, multimodal
@@ -82,6 +293,7 @@ He cares about:
 4. Research distillations: a blog post explaining a new paper in plain terms
 5. System design: how large-scale systems are built (relevant to building AI pipelines)
 6. Big-picture: economic impact of AI, industry surveys, future-of-work analysis
+7. Interesting, high-signal articles he will actually finish in one sitting
 
 PENALIZE HEAVILY: journalism and news reporting.
 - "Company X announces Y" style articles from WIRED, NBC, TechCrunch → 3-4 max
@@ -94,11 +306,16 @@ REWARD: technical practitioners writing about what they built or discovered.
 - Deep analysis of how a new technique works → 7-9
 - Research paper explained in plain terms → 6-8
 
+You are scoring for consultant value, not literary quality. Ask:
+"Will this make Adi better at advising, designing, selling, or implementing AI systems?"
+"Does this fit his working stack and the kinds of business systems he ships?"
+
 9-10  MUST READ — New Claude/Anthropic feature, API change, or MCP advance.
       Major model launch from any frontier lab with technical details.
       Practitioner deep-dive on agent/computer-use/tool-use technique.
 7-8   WORTH READING — Applied AI technique Adi can use. Research distillation.
-      System design pattern applicable to AI pipelines. Practitioner analysis.
+      System design pattern applicable to AI pipelines or business software.
+      Practitioner analysis, workflow, reliability, or distributed-systems lessons.
 6     INTERESTING — Technical blog post, deep product analysis, engineering write-up.
 4-5   BORDERLINE — News coverage with some depth. Opinion pieces.
 1-3   SKIP — Pure journalism/news reporting with no technical content.
@@ -107,17 +324,34 @@ REWARD: technical practitioners writing about what they built or discovered.
 
 Scoring traps to avoid:
 - WIRED/NBC/TechCrunch article about Claude = score the depth, NOT the subject. Usually 3-4.
-- A post from Anthropic/OpenAI is NOT automatically a 9. Score the CONTENT.
-- "How to do X on AWS/Azure/GCP" is a 1-3 tutorial.
+- A post from Anthropic/OpenAI is NOT automatically a 9. Score the CONTENT, not the brand.
+- If two posts cover the same launch, prefer the original source and score commentary lower.
+- "How to do X on AWS/Azure/GCP" is a 1-3 tutorial, not a 7-8 engineering pattern.
+- Music/video/image generation is a 4 unless it has a clear business-tool angle.
 - LangChain/LlamaIndex/CrewAI content is a 3-4 max — Adi doesn't use these.
+- Reward concrete workflow, architecture, tradeoff, or product capability insight.
+- Reward lessons that can improve client advising, solution design, or delivery quality.
+- Prefer Python-first, Postgres-friendly, managed-stack-friendly patterns.
+- Prefer content directly relevant to Streamlit, Flask, FastAPI, Supabase, or Render.
+- Down-rank infra-heavy advice that assumes Kubernetes/platform teams unless clearly transferable.
 
-Return ONLY a JSON array. Each item: {"index": N, "score": 1-10, "reason": "max 12 words"}
+Choose exactly one lane:
+- "Client-Relevant Now" = launches, capability shifts, adoption/business implications
+- "Build Patterns" = agent workflows, architecture, system design, distributed systems
+- "Experiments To Run" = strong candidate for a near-term test or prototype
+- "Strategic Signals" = market, policy, adoption, or consulting positioning signal
+
+Return ONLY a JSON array. Each item:
+{"index": N, "score": 1-10, "reason": "max 12 words", "lane": "...", "client_value": "max 16 words", "action": "max 16 words"}
 """
 
 PAPER_SCORE_PROMPT = """\
 You score arXiv papers for Adi. He builds Claude-based agents, RAG pipelines, MCP servers,
 and data dashboards for SMB clients. He is NOT a researcher and does NOT build models.
 He will only skim these, so they must be immediately useful to a practitioner.
+He also wants actionable engineering research for coding agents, system design, and
+distributed systems relevant to real business software.
+His stack is Python, Streamlit, Flask/FastAPI, Supabase/Postgres, and Render.
 
 Target: 1-3 papers per day at 7+. Adi wants to stay current with frontier research
 on agents and computer use — even if he won't implement every detail.
@@ -135,13 +369,28 @@ on agents and computer use — even if he won't implement every detail.
 Scoring traps to avoid:
 - If abstract has equations, Greek letters, or theorems → score 1-3.
 - "We prove that..." or "We derive bounds..." → score 1-2.
-- Papers about training/pretraining → score 1-3 (Adi doesn't train models).
+- Papers about training/pretraining methods → score 1-3 (Adi doesn't train models).
 - Inference optimization (quantization, speculative decoding, KV cache) → score 2-3.
+- Reward papers with reusable eval setups, implementation patterns, failure modes, or experiments.
+- Prefer research that maps cleanly to Python apps, APIs, Postgres-backed systems, or managed deployments.
+- Down-rank work that assumes infra complexity far beyond his current stack unless highly transferable.
 
-Return ONLY a JSON array. Each item: {"index": N, "score": 1-10, "reason": "max 12 words"}
+Choose exactly one lane:
+- "Build Patterns"
+- "Experiments To Run"
+- "Strategic Signals"
+
+Return ONLY a JSON array. Each item:
+{"index": N, "score": 1-10, "reason": "max 12 words", "lane": "...", "client_value": "max 16 words", "action": "max 16 words"}
 """
 
 MAX_PAPERS = 3  # daily cap — quality over quantity
+MAX_BLOG_ENRICH = 12
+STATE_PATH = Path("data/sent_items.json")
+STATE_RETENTION_DAYS = 45
+HTTP_HEADERS = {
+    "User-Agent": "IMAI-AI-Digest/1.0 (+https://claude.com/blog)",
+}
 
 REQUIRED_ENV = ["ANTHROPIC_API_KEY"]
 SMTP_ENV = ["SMTP_HOST", "SMTP_PORT", "SMTP_USER", "SMTP_PASS", "DIGEST_TO"]
@@ -167,11 +416,420 @@ def get_client():
     return client
 
 
+def clean_text(value):
+    return re.sub(r"\s+", " ", html.unescape(value or "")).strip()
+
+
+def parse_date(text):
+    if not text:
+        return None
+    for regex, fmt in DATE_PATTERNS:
+        match = regex.search(text)
+        if not match:
+            continue
+        try:
+            return datetime.datetime.strptime(match.group(0), fmt)
+        except ValueError:
+            continue
+    return None
+
+
+def now_utc():
+    return datetime.datetime.utcnow()
+
+
+def normalize_title(title):
+    title = clean_text(title).lower()
+    title = re.sub(r"[^a-z0-9\s]", " ", title)
+    return re.sub(r"\s+", " ", title).strip()
+
+
+def title_tokens(title):
+    return {
+        token.rstrip("s")
+        for token in normalize_title(title).split()
+        if len(token) > 2 and token not in STOPWORDS
+    }
+
+
+def source_priority(source):
+    return SOURCE_PRIORITY.get(source, 50)
+
+
+def topical_bonus(article):
+    text = f"{article['title']} {article.get('summary', '')}".lower()
+    bonus = 0
+    bonus += sum(2 for keyword in CLAUDE_BLOG_KEYWORDS if keyword in text)
+    bonus += sum(1 for keyword in HIGH_SIGNAL_KEYWORDS if keyword in text)
+    bonus += sum(1 for keyword in STACK_KEYWORDS if keyword in text)
+    bonus -= sum(2 for keyword in LOW_SIGNAL_KEYWORDS if keyword in text)
+    if article["source"] == "Claude Blog":
+        bonus += 4
+    if article["source"] == "Anthropic":
+        bonus += 2
+    return bonus
+
+
+def novelty_penalty(article, state):
+    penalty = 0
+    title = article["title"]
+    key = article_key(article)
+    seen = state.get("sent", {})
+    if key in seen:
+        penalty += 10
+    recent_titles = [
+        item.get("title", "")
+        for item in seen.values()
+        if item.get("kind") == article["type"]
+    ]
+    for old_title in recent_titles[-60:]:
+        if not old_title:
+            continue
+        sim = similarity(title, old_title)
+        if sim >= 0.92:
+            penalty += 5
+        elif sim >= 0.82:
+            penalty += 2
+    return penalty
+
+
+def looks_relevant(article):
+    text = f"{article['title']} {article.get('summary', '')}".lower()
+    if any(keyword in text for keyword in LOW_SIGNAL_KEYWORDS):
+        return False
+    if article["source"] in {"Claude Blog", "Anthropic", "OpenAI", "Google DeepMind", "Meta AI", "Mistral AI"}:
+        return True
+    if any(keyword in text for keyword in CLAUDE_BLOG_KEYWORDS):
+        return True
+    if any(keyword in text for keyword in STACK_KEYWORDS):
+        return True
+    return any(keyword in text for keyword in HIGH_SIGNAL_KEYWORDS)
+
+
+def infer_lane(article):
+    text = f"{article['title']} {article.get('summary', '')}".lower()
+    if article["source"] in {"Claude Blog", "Anthropic", "OpenAI", "Google DeepMind", "Meta AI", "Mistral AI"}:
+        return "Client-Relevant Now"
+    if any(
+        keyword in text
+        for keyword in (
+            "experiment",
+            "benchmark",
+            "eval",
+            "ablation",
+            "test",
+            "prototype",
+            "verification",
+        )
+    ):
+        return "Experiments To Run"
+    if any(
+        keyword in text
+        for keyword in (
+            "adoption",
+            "survey",
+            "economic",
+            "policy",
+            "market",
+            "future of work",
+            "productivity",
+        )
+    ):
+        return "Strategic Signals"
+    return "Build Patterns"
+
+
+def similarity(a, b):
+    return SequenceMatcher(None, normalize_title(a), normalize_title(b)).ratio()
+
+
+def likely_same_story(a, b):
+    if normalize_title(a["title"]) == normalize_title(b["title"]):
+        return True
+    if similarity(a["title"], b["title"]) >= 0.87:
+        return True
+    tokens_a = title_tokens(a["title"])
+    tokens_b = title_tokens(b["title"])
+    if len(tokens_a) < 3 or len(tokens_b) < 3:
+        return False
+    overlap = len(tokens_a & tokens_b) / max(1, min(len(tokens_a), len(tokens_b)))
+    key_overlap = (
+        any(keyword in normalize_title(a["title"]) for keyword in CLAUDE_BLOG_KEYWORDS) and
+        any(keyword in normalize_title(b["title"]) for keyword in CLAUDE_BLOG_KEYWORDS)
+    )
+    return overlap >= 0.75 and key_overlap
+
+
+def choose_better_article(current, candidate):
+    current_rank = current.get("score", 0) * 10 + topical_bonus(current) + source_priority(current["source"])
+    candidate_rank = candidate.get("score", 0) * 10 + topical_bonus(candidate) + source_priority(candidate["source"])
+    if candidate_rank > current_rank:
+        return candidate
+    return current
+
+
+def dedupe_articles(articles):
+    unique = []
+    seen_urls = set()
+    for article in articles:
+        url = article["url"]
+        if not url or url in seen_urls:
+            continue
+        seen_urls.add(url)
+        replaced = False
+        for idx, existing in enumerate(unique):
+            if likely_same_story(existing, article):
+                unique[idx] = choose_better_article(existing, article)
+                replaced = True
+                break
+        if not replaced:
+            unique.append(article)
+    return unique
+
+
+def cap_sources(articles, limit):
+    kept = []
+    per_source = {}
+    for article in articles:
+        source = article["source"]
+        cap = SOURCE_CAPS.get(source, 1)
+        if per_source.get(source, 0) >= cap:
+            continue
+        kept.append(article)
+        per_source[source] = per_source.get(source, 0) + 1
+        if len(kept) >= limit:
+            break
+    return kept
+
+
+def article_key(article):
+    parsed = urlparse(article["url"])
+    canonical = f"{parsed.netloc}{parsed.path}".rstrip("/")
+    if not canonical:
+        canonical = normalize_title(article["title"])
+    digest = hashlib.sha1(canonical.encode("utf-8")).hexdigest()
+    return digest
+
+
+def load_state():
+    if not STATE_PATH.exists():
+        return {"sent": {}}
+    try:
+        with STATE_PATH.open("r", encoding="utf-8") as fh:
+            state = json.load(fh)
+    except Exception:
+        return {"sent": {}}
+    if not isinstance(state, dict):
+        return {"sent": {}}
+    state.setdefault("sent", {})
+    return state
+
+
+def prune_state(state):
+    cutoff = now_utc() - datetime.timedelta(days=STATE_RETENTION_DAYS)
+    pruned = {}
+    for key, item in state.get("sent", {}).items():
+        sent_at = item.get("sent_at")
+        if not sent_at:
+            pruned[key] = item
+            continue
+        try:
+            sent_dt = datetime.datetime.fromisoformat(sent_at)
+        except ValueError:
+            pruned[key] = item
+            continue
+        if sent_dt >= cutoff:
+            pruned[key] = item
+    state["sent"] = pruned
+    return state
+
+
+def save_state(state):
+    STATE_PATH.parent.mkdir(parents=True, exist_ok=True)
+    with STATE_PATH.open("w", encoding="utf-8") as fh:
+        json.dump(prune_state(state), fh, indent=2, sort_keys=True)
+
+
+def mark_sent(state, items):
+    sent = state.setdefault("sent", {})
+    timestamp = now_utc().isoformat()
+    for article in items:
+        sent[article_key(article)] = {
+            "title": article["title"],
+            "url": article["url"],
+            "source": article["source"],
+            "kind": article["type"],
+            "sent_at": timestamp,
+        }
+    return state
+
+
+def filter_unsent(articles, state):
+    seen = state.get("sent", {})
+    return [article for article in articles if article_key(article) not in seen]
+
+
+def extract_article_text(html_text):
+    soup = BeautifulSoup(html_text, "html.parser")
+    for tag in soup(["script", "style", "noscript", "svg"]):
+        tag.decompose()
+    container = soup.find("main") or soup.find("article") or soup.body or soup
+    text = clean_text(container.get_text(" ", strip=True))
+    return text[:1200]
+
+
+def fetch_html_source(config, hours_back=72):
+    cutoff = now_utc() - datetime.timedelta(hours=hours_back)
+    try:
+        response = requests.get(config["url"], headers=HTTP_HEADERS, timeout=20)
+        response.raise_for_status()
+    except Exception as ex:
+        print(f"  ⚠ {config['source']}: {ex}")
+        return []
+
+    soup = BeautifulSoup(response.text, "html.parser")
+    articles = []
+    seen = set()
+
+    for anchor in soup.find_all("a", href=True):
+        href = anchor.get("href", "")
+        url = urljoin(config["url"], href)
+        parsed = urlparse(url)
+        if parsed.netloc != urlparse(config["url"]).netloc:
+            continue
+        if not any(parsed.path.startswith(prefix) for prefix in config["path_prefixes"]):
+            continue
+        title = clean_text(anchor.get_text(" ", strip=True))
+        if not title or len(title) < 12:
+            continue
+        if url == config["url"] or url in seen:
+            continue
+        seen.add(url)
+
+        summary = ""
+        published = None
+        container = anchor
+        for _ in range(5):
+            container = container.parent
+            if container is None:
+                break
+            block_text = clean_text(container.get_text(" ", strip=True))
+            if not summary and block_text:
+                summary = block_text[:500]
+            if published is None:
+                published = parse_date(block_text)
+            if published:
+                break
+
+        if published and published < cutoff:
+            continue
+
+        articles.append({
+            "source": config["source"],
+            "type": "Blog",
+            "title": title,
+            "url": url,
+            "summary": summary,
+            "published_dt": published,
+            "published": published.strftime("%b %d") if published else "?",
+        })
+
+    return dedupe_articles(articles)
+
+
+def enrich_articles(articles, limit=MAX_BLOG_ENRICH):
+    ranked = sorted(
+        articles,
+        key=lambda article: (
+            topical_bonus(article),
+            source_priority(article["source"]),
+            article.get("published_dt") or datetime.datetime.min,
+        ),
+        reverse=True,
+    )
+    for article in ranked[:limit]:
+        try:
+            response = requests.get(article["url"], headers=HTTP_HEADERS, timeout=20)
+            response.raise_for_status()
+            article_text = extract_article_text(response.text)
+            if article_text:
+                article["summary"] = article_text
+                article["enriched"] = True
+        except Exception as ex:
+            print(f"  ⚠ enrich {article['source']}: {ex}")
+    return articles
+
+
 # ── Fetch ──────────────────────────────────────────────────────────────────────
 
-def fetch_blogs(hours_back=28):
-    cutoff = datetime.datetime.utcnow() - datetime.timedelta(hours=hours_back)
+def fetch_claude_blog(hours_back=72):
+    cutoff = now_utc() - datetime.timedelta(hours=hours_back)
+    try:
+        response = requests.get(CLAUDE_BLOG_URL, headers=HTTP_HEADERS, timeout=20)
+        response.raise_for_status()
+    except Exception as ex:
+        print(f"  ⚠ Claude Blog: {ex}")
+        return []
+
+    soup = BeautifulSoup(response.text, "html.parser")
     articles = []
+    seen = set()
+
+    for anchor in soup.find_all("a", href=True):
+        href = anchor.get("href", "")
+        if "/blog/" not in href:
+            continue
+        url = urljoin(CLAUDE_BLOG_URL, href)
+        parsed = urlparse(url)
+        if parsed.path.rstrip("/") == "/blog":
+            continue
+        title = clean_text(anchor.get_text(" ", strip=True))
+        if (
+            not title or
+            title.lower() in {"read more", "blog", "try claude"} or
+            len(title) < 12
+        ):
+            continue
+        if url in seen:
+            continue
+        seen.add(url)
+
+        summary = ""
+        published = None
+        container = anchor
+        for _ in range(4):
+            container = container.parent
+            if container is None:
+                break
+            block_text = clean_text(container.get_text(" ", strip=True))
+            if not summary and block_text:
+                summary = block_text[:500]
+            if published is None:
+                published = parse_date(block_text)
+            if published:
+                break
+
+        if published and published < cutoff:
+            continue
+
+        articles.append({
+            "source": "Claude Blog",
+            "type": "Blog",
+            "title": title,
+            "url": url,
+            "summary": summary,
+            "published_dt": published,
+            "published": published.strftime("%b %d") if published else "?",
+        })
+
+    return dedupe_articles(articles)
+
+
+def fetch_blogs(hours_back=28):
+    cutoff = now_utc() - datetime.timedelta(hours=hours_back)
+    articles = fetch_claude_blog(hours_back=max(hours_back, 72))
+    for config in HTML_SOURCES:
+        articles.extend(fetch_html_source(config, hours_back=max(hours_back, 72)))
     for name, rss in BLOGS:
         try:
             feed = feedparser.parse(rss)
@@ -191,11 +849,13 @@ def fetch_blogs(hours_back=28):
                     "source": name, "type": "Blog",
                     "title": e.get("title", "").strip(), "url": url,
                     "summary": e.get("summary", "")[:400],
+                    "published_dt": pub,
                     "published": pub.strftime("%b %d") if pub else "?",
                 })
         except Exception as ex:
             print(f"  ⚠ {name}: {ex}")
-    return articles
+    filtered = [article for article in articles if looks_relevant(article)]
+    return dedupe_articles(filtered)
 
 
 def fetch_arxiv(days_back=2):
@@ -204,6 +864,7 @@ def fetch_arxiv(days_back=2):
             "http://export.arxiv.org/api/query",
             params={"search_query": ARXIV_QUERY, "sortBy": "submittedDate",
                     "sortOrder": "descending", "max_results": 30},
+            headers=HTTP_HEADERS,
             timeout=20,
         )
         r.raise_for_status()
@@ -211,7 +872,7 @@ def fetch_arxiv(days_back=2):
         print(f"  ⚠ arXiv: {ex}")
         return []
 
-    cutoff = datetime.datetime.utcnow() - datetime.timedelta(days=days_back)
+    cutoff = now_utc() - datetime.timedelta(days=days_back)
     papers = []
     for e in feedparser.parse(r.text).entries:
         url = e.get("id", e.get("link", ""))
@@ -226,6 +887,7 @@ def fetch_arxiv(days_back=2):
             "source": "arXiv", "type": "Paper",
             "title": e.get("title", "").replace("\n", " ").strip(), "url": url,
             "summary": e.get("summary", "")[:400],
+            "published_dt": pub,
             "published": pub.strftime("%b %d") if pub else "?",
         })
     return papers
@@ -233,9 +895,10 @@ def fetch_arxiv(days_back=2):
 
 # ── Score ──────────────────────────────────────────────────────────────────────
 
-def score(articles, prompt):
+def score(articles, prompt, state=None):
     if not articles:
         return []
+    state = state or {"sent": {}}
     results = []
     for i in range(0, len(articles), 10):
         batch = articles[i:i+10]
@@ -265,8 +928,26 @@ def score(articles, prompt):
         for j, a in enumerate(batch):
             a["score"] = scores.get(j, {}).get("score", 5)
             a["reason"] = scores.get(j, {}).get("reason", "")
+            a["lane"] = scores.get(j, {}).get("lane", infer_lane(a))
+            a["client_value"] = scores.get(j, {}).get("client_value", "")
+            a["action"] = scores.get(j, {}).get("action", "")
+            a["priority_bonus"] = topical_bonus(a)
+            a["novelty_penalty"] = novelty_penalty(a, state)
+            a["digest_rank"] = (a["score"] * 10) + a["priority_bonus"] - a["novelty_penalty"]
             results.append(a)
-    return sorted(results, key=lambda x: x["score"], reverse=True)
+    results = dedupe_articles(results)
+    return sorted(
+        results,
+        key=lambda x: (
+            x.get("digest_rank", x["score"] * 10),
+            x["score"],
+            x.get("priority_bonus", 0),
+            -x.get("novelty_penalty", 0),
+            source_priority(x["source"]),
+            x.get("published_dt") or datetime.datetime.min,
+        ),
+        reverse=True,
+    )
 
 
 # ── Email ──────────────────────────────────────────────────────────────────────
@@ -282,6 +963,22 @@ def send_email(subject, body):
         s.send_message(msg)
 
 
+def select_consultant_sections(items):
+    section_order = [
+        ("Client-Relevant Now", 4),
+        ("Build Patterns", 5),
+        ("Experiments To Run", 4),
+        ("Strategic Signals", 3),
+    ]
+    sections = {}
+    for label, limit in section_order:
+        chosen = [item for item in items if item.get("lane") == label and item["score"] >= 6]
+        if label == "Strategic Signals":
+            chosen = [item for item in items if item.get("lane") == label and item["score"] >= 5]
+        sections[label] = cap_sources(chosen, limit=limit)
+    return sections
+
+
 def build_body(blogs, papers):
     today = datetime.date.today().strftime("%A, %b %d %Y")
     lines = [f"IMAI AI Digest — {today}\n{'='*50}\n"]
@@ -294,33 +991,37 @@ def build_body(blogs, papers):
             lines.append(f"  {a['url']}")
             if a.get("reason"):
                 lines.append(f"  → {a['reason']}")
+            if a.get("client_value"):
+                lines.append(f"  Client value: {a['client_value']}")
+            if a.get("action"):
+                lines.append(f"  Try next: {a['action']}")
             lines.append("")
 
-    # Blog posts (daily) — score >= 7, fallback to 6, then top-5 regardless
-    top_blogs = [a for a in blogs if a["score"] >= 7]
-    if not top_blogs:
-        top_blogs = [a for a in blogs if a["score"] >= 6]
-    if not top_blogs:
-        top_blogs = blogs[:5]  # always show something
-    top_blogs = top_blogs[:10]
+    combined = sorted(
+        blogs + papers,
+        key=lambda item: (
+            item.get("digest_rank", item["score"] * 10),
+            item["score"],
+            item.get("published_dt") or datetime.datetime.min,
+        ),
+        reverse=True,
+    )
+    sections = select_consultant_sections(combined)
+    featured_items = []
 
-    if top_blogs:
-        lines.append(f"📰 Blog Posts ({len(top_blogs)}):\n")
-        format_items(top_blogs)
+    if any(sections.values()):
+        total_items = sum(len(items) for items in sections.values())
+        lines.append(f"Consultant Intelligence ({total_items}):\n")
+        for label, section_items in sections.items():
+            if not section_items:
+                continue
+            lines.append(f"{label}:\n")
+            format_items(section_items)
+            featured_items.extend(section_items)
     else:
-        lines.append("No notable blog posts today.\n")
+        lines.append("No notable consultant-relevant items today.\n")
 
-    # Papers (daily) — score >= 7, hard cap at MAX_PAPERS
-    top_papers = [a for a in papers if a["score"] >= 7]
-    top_papers = top_papers[:MAX_PAPERS]
-
-    if top_papers:
-        lines.append(f"\n📄 Research Papers ({len(top_papers)}):\n")
-        format_items(top_papers)
-    elif papers:
-        lines.append("\nNo notable papers today.\n")
-
-    return "\n".join(lines)
+    return "\n".join(lines), featured_items
 
 
 # ── Main ───────────────────────────────────────────────────────────────────────
@@ -336,6 +1037,7 @@ def main():
     run_arxiv = force_all or force_arxiv or True  # run daily, not just Fridays
 
     can_email = check_env()
+    state = prune_state(load_state())
     print(f"Running digest — blogs: {run_blogs}, arXiv: {run_arxiv}")
 
     blogs, papers = [], []
@@ -343,19 +1045,23 @@ def main():
     if run_blogs:
         print("Fetching blogs...")
         raw = fetch_blogs()
-        print(f"  {len(raw)} new articles found, scoring...")
-        blogs = score(raw, BLOG_SCORE_PROMPT)
+        raw = filter_unsent(raw, state)
+        print(f"  {len(raw)} unsent articles found, enriching/scoring...")
+        raw = enrich_articles(raw, limit=MAX_BLOG_ENRICH)
+        blogs = score(raw, BLOG_SCORE_PROMPT, state=state)
 
     if run_arxiv:
         print("Fetching arXiv...")
         raw = fetch_arxiv()
-        print(f"  {len(raw)} new papers found, scoring...")
-        papers = score(raw, PAPER_SCORE_PROMPT)
+        raw = filter_unsent(raw, state)
+        print(f"  {len(raw)} unsent papers found, scoring...")
+        papers = score(raw, PAPER_SCORE_PROMPT, state=state)
 
-    total = len(blogs) + len(papers)
-    print(f"Digest ready: {len(blogs)} blog posts, {len(papers)} papers")
-
-    body = build_body(blogs, papers)
+    body, featured_items = build_body(blogs, papers)
+    total = len(featured_items)
+    blog_count = len([item for item in featured_items if item["type"] == "Blog"])
+    paper_count = len([item for item in featured_items if item["type"] == "Paper"])
+    print(f"Digest ready: {blog_count} featured blog posts, {paper_count} featured papers")
     subject = f"AI Digest {today} — {total} items"
 
     # Print to stdout (visible in Render logs) and email
@@ -364,6 +1070,8 @@ def main():
     if can_email:
         try:
             send_email(subject, body)
+            mark_sent(state, featured_items)
+            save_state(state)
             print("✅ Email sent.")
         except Exception as ex:
             print(f"⚠ Email failed: {ex}")

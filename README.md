@@ -1,7 +1,7 @@
 # IMAI AI Digest
 
-Checks frontier AI lab blogs daily + arXiv weekly, scores articles with Claude,
-and emails you a ranked digest every morning at 7 AM MT.
+Checks Claude + frontier AI lab blogs daily and arXiv weekly, enriches top candidates with article text,
+deduplicates overlapping coverage, remembers what it already sent, and emails a consultant-focused digest every morning at 7 AM MT.
 
 ## What you get in your inbox
 
@@ -54,16 +54,29 @@ python aggregator.py --arxiv  # arXiv only
    - DIGEST_TO
 5. Done — runs every morning at 7 AM MT
 
+## What changed
+
+- Directly monitors [claude.com/blog](https://claude.com/blog) so Claude Code / Cowork posts don't get missed
+- Deduplicates near-identical stories before and after scoring
+- Biases ranking toward short, applied, high-signal reads instead of generic AI news
+- Caps repeated sources so the digest feels curated instead of repetitive
+- Fetches article text for the strongest candidates before scoring so titles alone don't dominate
+- Tracks sent items in `data/sent_items.json` so the digest avoids repeating stories across days
+- Scores items for consultant value, not just reading quality
+- Splits the digest into `Client-Relevant Now`, `Build Patterns`, `Experiments To Run`, and `Strategic Signals`
+
 ## Schedule
 
-- **Daily (Mon–Sun):** Blog posts from the last 28 hours (short reads preferred)
+- **Daily (Mon–Sun):** Blog posts from the last 28 hours, with Claude blog coverage expanded to catch recent posts reliably
 - **Fridays only:** arXiv papers from the last 7 days (max 4, scored 8+/10 only)
 
 ## Sources
 
-Blogs: Anthropic, OpenAI, Google DeepMind, Meta AI, Mistral,
+Blogs: Claude Blog, Anthropic, OpenAI, Google DeepMind, Meta AI, Mistral,
        Simon Willison, The Batch (deeplearning.ai), MIT Tech Review,
-       Brookings AI, a16z, Hacker News (AI, 100+ pts), Ars Technica, The Verge AI
+       Brookings AI, a16z, Martin Fowler, InfoQ Architecture, Render Blog,
+       Supabase Engineering, Supabase Developers, pganalyze,
+       Hacker News (AI, 100+ pts), Ars Technica, The Verge AI
 
 arXiv: cs.AI / cs.CL / cs.LG filtered for agents, RAG, MCP, LLM engineering,
        enterprise AI, tool use, context management
