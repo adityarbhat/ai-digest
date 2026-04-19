@@ -2,7 +2,7 @@ services:
   - type: cron
     name: imai-ai-digest
     runtime: python
-    schedule: "0 13 * * *"   # 7:00 AM MT (UTC-6) = 13:00 UTC
+    schedule: "0 12 * * *"   # 6:00 AM MDT (UTC-6) = 12:00 UTC
     buildCommand: pip install -r requirements.txt
     startCommand: python aggregator.py
     envVars:

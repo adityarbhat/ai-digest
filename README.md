@@ -1,7 +1,7 @@
 # IMAI AI Digest
 
 Checks Claude + frontier AI lab blogs daily and arXiv weekly, enriches top candidates with article text,
-deduplicates overlapping coverage, remembers what it already sent, and emails a consultant-focused digest every morning at 7 AM MT.
+deduplicates overlapping coverage, remembers what it already sent, and emails a consultant-focused digest every morning at 6 AM MDT.
 
 ## What you get in your inbox
 
@@ -52,7 +52,7 @@ python aggregator.py --arxiv  # arXiv only
    - SMTP_USER
    - SMTP_PASS
    - DIGEST_TO
-5. Done — runs every morning at 7 AM MT
+5. Done — runs every morning at 6 AM MDT
 
 ## What changed
 

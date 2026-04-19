@@ -670,15 +670,16 @@ def article_key(article):
 
 def load_state():
     if not STATE_PATH.exists():
-        return {"sent": {}}
+        return {"sent": {}, "official_pages": {}}
     try:
         with STATE_PATH.open("r", encoding="utf-8") as fh:
             state = json.load(fh)
     except Exception:
-        return {"sent": {}}
+        return {"sent": {}, "official_pages": {}}
     if not isinstance(state, dict):
-        return {"sent": {}}
+        return {"sent": {}, "official_pages": {}}
     state.setdefault("sent", {})
+    state.setdefault("official_pages", {})
     return state
 
 
@@ -698,6 +699,20 @@ def prune_state(state):
         if sent_dt >= cutoff:
             pruned[key] = item
     state["sent"] = pruned
+    official_pages = {}
+    for url, item in state.get("official_pages", {}).items():
+        updated_at = item.get("updated_at")
+        if not updated_at:
+            official_pages[url] = item
+            continue
+        try:
+            updated_dt = datetime.datetime.fromisoformat(updated_at)
+        except ValueError:
+            official_pages[url] = item
+            continue
+        if updated_dt >= cutoff:
+            official_pages[url] = item
+    state["official_pages"] = official_pages
     return state
 
 
@@ -709,6 +724,7 @@ def save_state(state):
 
 def mark_sent(state, items):
     sent = state.setdefault("sent", {})
+    official_pages = state.setdefault("official_pages", {})
     timestamp = now_utc().isoformat()
     for article in items:
         sent[article_key(article)] = {
@@ -718,6 +734,13 @@ def mark_sent(state, items):
             "kind": article["type"],
             "sent_at": timestamp,
         }
+        if article.get("is_official_update"):
+            official_pages[article["url"]] = {
+                "title": article["title"],
+                "content_hash": article.get("content_hash"),
+                "blocks": article.get("content_blocks", []),
+                "updated_at": timestamp,
+            }
     return state
 
 
@@ -733,6 +756,97 @@ def extract_article_text(html_text):
     container = soup.find("main") or soup.find("article") or soup.body or soup
     text = clean_text(container.get_text(" ", strip=True))
     return text[:1200]
+
+
+def extract_structured_page_blocks(html_text, limit=160):
+    soup = BeautifulSoup(html_text, "html.parser")
+    for tag in soup(["script", "style", "noscript", "svg"]):
+        tag.decompose()
+    container = soup.find("main") or soup.find("article") or soup.body or soup
+    selectors = ["h1", "h2", "h3", "h4", "p", "li"]
+    blocks = []
+    seen = set()
+    for node in container.find_all(selectors):
+        text = clean_text(node.get_text(" ", strip=True))
+        if len(text) < 8:
+            continue
+        lowered = text.lower()
+        if lowered in {"openai", "anthropic", "search", "table of contents"}:
+            continue
+        if lowered in seen:
+            continue
+        seen.add(lowered)
+        blocks.append(text)
+        if len(blocks) >= limit:
+            break
+    if not blocks:
+        fallback = clean_text(container.get_text("\n", strip=True))
+        blocks = [line.strip() for line in fallback.splitlines() if len(line.strip()) >= 8][:limit]
+    return blocks
+
+
+def classify_update_change(previous_blocks, current_blocks):
+    if not current_blocks:
+        return {}
+
+    if not previous_blocks:
+        return {
+            "change_kind": "Initial snapshot",
+            "start_here": current_blocks[0],
+            "start_position": "top of page",
+            "scan_guidance": "Skim the top sections to get the baseline structure for future diffs.",
+            "change_excerpt": current_blocks[0],
+        }
+
+    previous_norm = [normalize_title(block) for block in previous_blocks]
+    current_norm = [normalize_title(block) for block in current_blocks]
+    matcher = SequenceMatcher(None, previous_norm, current_norm)
+    changes = [opcode for opcode in matcher.get_opcodes() if opcode[0] != "equal"]
+    if not changes:
+        return {
+            "change_kind": "Minor wording change",
+            "start_here": current_blocks[0],
+            "start_position": "top of page",
+            "scan_guidance": "No clear section shift found; scan the top few paragraphs for copy edits.",
+            "change_excerpt": current_blocks[0],
+        }
+
+    first_tag, _, _, j1, j2 = changes[0]
+    start_idx = min(j1, max(0, len(current_blocks) - 1))
+    if first_tag == "delete" and start_idx >= len(current_blocks):
+        start_idx = max(0, len(current_blocks) - 1)
+    start_here = current_blocks[start_idx]
+
+    if all(tag == "insert" and i1 >= len(previous_blocks) - 1 for tag, i1, _, _, _ in changes):
+        change_kind = "Appended new material"
+        scan_guidance = "Start at this point and read downward; older sections above are probably unchanged."
+    elif all(tag == "insert" for tag, *_ in changes):
+        change_kind = "Inserted new section"
+        scan_guidance = "Start here, then skim the next few blocks because the new material was inserted mid-page."
+    elif any(tag == "replace" for tag, *_ in changes):
+        change_kind = "Edited existing section"
+        scan_guidance = "Reread this section plus the next 2-3 blocks; the update modified existing guidance."
+    else:
+        change_kind = "Restructured content"
+        scan_guidance = "Use this as the restart point and skim nearby headings because sections moved around."
+
+    percent = int(((start_idx + 1) / max(1, len(current_blocks))) * 100)
+    start_position = "top of page" if percent <= 20 else f"around {percent}% into the page"
+
+    changed_blocks = []
+    for tag, _, _, block_start, block_end in changes:
+        if tag in {"insert", "replace"}:
+            changed_blocks.extend(current_blocks[block_start:block_end])
+    changed_blocks = [block for block in changed_blocks if len(block) >= 20]
+    change_excerpt = changed_blocks[0] if changed_blocks else start_here
+
+    return {
+        "change_kind": change_kind,
+        "start_here": start_here,
+        "start_position": start_position,
+        "scan_guidance": scan_guidance,
+        "change_excerpt": change_excerpt,
+    }
 
 
 def fetch_html_source(config, hours_back=72):
@@ -807,8 +921,9 @@ def extract_update_summary(text):
     return clean_text(" ".join(trimmed))[:600]
 
 
-def fetch_official_update_pages():
+def fetch_official_update_pages(state):
     articles = []
+    previous_pages = state.get("official_pages", {})
     for config in OFFICIAL_UPDATE_PAGES:
         try:
             response = requests.get(config["url"], headers=HTTP_HEADERS, timeout=20)
@@ -817,11 +932,14 @@ def fetch_official_update_pages():
             print(f"  ⚠ {config['title']}: {ex}")
             continue
 
-        page_text = extract_article_text(response.text)
+        content_blocks = extract_structured_page_blocks(response.text)
+        page_text = " ".join(content_blocks)
         if not page_text:
             continue
         summary = extract_update_summary(page_text)
-        content_hash = hashlib.sha1(summary.encode("utf-8")).hexdigest()[:12]
+        content_hash = hashlib.sha1(page_text.encode("utf-8")).hexdigest()[:12]
+        previous_blocks = previous_pages.get(config["url"], {}).get("blocks", [])
+        change_info = classify_update_change(previous_blocks, content_blocks)
         articles.append({
             "source": config["source"],
             "type": "Blog",
@@ -833,6 +951,9 @@ def fetch_official_update_pages():
             "lane": config["lane"],
             "version_key": f"{config['url']}#{content_hash}",
             "is_official_update": True,
+            "content_hash": content_hash,
+            "content_blocks": content_blocks,
+            **change_info,
         })
     return articles
 
@@ -1102,6 +1223,14 @@ def build_body(blogs, papers, official_updates):
             lines.append(f"  📌 {a['title']}")
             lines.append(f"  {a['source']} · {a['published']}")
             lines.append(f"  {a['url']}")
+            if a.get("start_here"):
+                lines.append(f"  Start rereading: {a.get('start_position', 'near the top')} — {a['start_here'][:140]}")
+            if a.get("change_kind"):
+                lines.append(f"  Change type: {a['change_kind']}")
+            if a.get("change_excerpt"):
+                lines.append(f"  New text cue: {a['change_excerpt'][:220]}")
+            if a.get("scan_guidance"):
+                lines.append(f"  How to scan it: {a['scan_guidance']}")
             if a.get("summary"):
                 lines.append(f"  → {a['summary'][:220]}")
             lines.append("")
@@ -1158,7 +1287,7 @@ def main():
     blogs, papers, official_updates = [], [], []
 
     print("Fetching official product update pages...")
-    raw_updates = fetch_official_update_pages()
+    raw_updates = fetch_official_update_pages(state)
     official_updates = filter_unsent(raw_updates, state)
     print(f"  {len(official_updates)} changed official pages found")
 
