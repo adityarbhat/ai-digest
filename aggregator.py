@@ -1276,11 +1276,14 @@ def main():
     force_all = "--all" in sys.argv
     force_blogs = "--blogs" in sys.argv
     force_arxiv = "--arxiv" in sys.argv
+    allow_no_email = "--allow-no-email" in sys.argv
 
     run_blogs = force_all or force_blogs or (not force_arxiv)
     run_arxiv = force_all or force_arxiv or True  # run daily, not just Fridays
 
     can_email = check_env()
+    if not can_email and not allow_no_email:
+        sys.exit("❌ SMTP env vars missing. Refusing to continue without email delivery. Use --allow-no-email to override.")
     state = prune_state(load_state())
     print(f"Running digest — blogs: {run_blogs}, arXiv: {run_arxiv}")
 
@@ -1325,6 +1328,7 @@ def main():
             print("✅ Email sent.")
         except Exception as ex:
             print(f"⚠ Email failed: {ex}")
+            raise
     else:
         print("⚠ Skipping email (SMTP env vars not set).")
 
