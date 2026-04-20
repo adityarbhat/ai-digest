@@ -5,7 +5,7 @@ scores them with Claude, emails a ranked digest.
 
 Env vars required:
     ANTHROPIC_API_KEY
-    SMTP_HOST       e.g. smtp.gmail.com
+    SMTP_HOST       e.g. smtp.zoho.com
     SMTP_PORT       e.g. 587
     SMTP_USER       your Gmail address
     SMTP_PASS       Gmail app password (not your login password)

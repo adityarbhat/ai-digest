@@ -23,7 +23,7 @@ deduplicates overlapping coverage, remembers what it already sent, and emails a 
 pip install -r requirements.txt
 
 export ANTHROPIC_API_KEY=sk-...
-export SMTP_HOST=smtp.gmail.com
+export SMTP_HOST=smtp.zoho.com
 export SMTP_PORT=587
 export SMTP_USER=you@gmail.com
 export SMTP_PASS=your-gmail-app-password   # NOT your login password
