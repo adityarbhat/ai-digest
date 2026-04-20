@@ -22,6 +22,7 @@ import smtplib
 import sys
 import time
 from difflib import SequenceMatcher
+from email.utils import parsedate_to_datetime
 from email.mime.text import MIMEText
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
@@ -56,11 +57,14 @@ BLOGS = [
     # Application-company engineering blogs (agentic / product AI)
     ("Replit",          "https://blog.replit.com/rss.xml"),              # AI-native dev tools
     ("Weights & Biases", "https://wandb.ai/fully-connected/rss.xml"),    # ML tooling & evals
+    ("Supabase Blog",   "https://supabase.com/blog/rss.xml"),            # Supabase product + engineering updates
+    ("Neon Blog",       "https://neon.tech/blog/rss.xml"),               # Postgres/serverless architecture
     # Tech & economic analysis
     ("MIT Tech Review", "https://www.technologyreview.com/feed/"),
     # System design & engineering depth
     ("Cloudflare Blog",      "https://blog.cloudflare.com/rss/"),
     ("GitHub Engineering",   "https://github.blog/engineering.atom"),
+    ("AWS Architecture Blog", "https://aws.amazon.com/blogs/architecture/feed/"),
     ("Brookings AI",    "https://www.brookings.edu/topic/artificial-intelligence/feed/"),
     ("a]6z",            "https://a16z.com/feed/"),
     # Architecture / distributed systems / software delivery
@@ -249,8 +253,11 @@ SOURCE_PRIORITY = {
     "Mistral AI": 88,
     "Render Blog": 87,
     "Supabase Engineering": 87,
+    "Supabase Blog": 87,
     "Supabase Developers": 81,
+    "Neon Blog": 84,
     "pganalyze": 85,
+    "AWS Architecture Blog": 86,
     "Martin Fowler": 86,
     "InfoQ Architecture Articles": 84,
     "InfoQ Architecture News": 80,
@@ -275,8 +282,11 @@ SOURCE_CAPS = {
     "Mistral AI": 1,
     "Render Blog": 1,
     "Supabase Engineering": 2,
+    "Supabase Blog": 2,
     "Supabase Developers": 1,
+    "Neon Blog": 1,
     "pganalyze": 1,
+    "AWS Architecture Blog": 1,
     "Martin Fowler": 1,
     "InfoQ Architecture Articles": 2,
     "InfoQ Architecture News": 1,
@@ -319,6 +329,8 @@ DATE_PATTERNS = (
         "%d %B %Y",
     ),
 )
+BLOG_RECENCY_HOURS = 24
+OFFICIAL_UPDATE_RECENCY_HOURS = 24
 
 # arXiv: applied LLM / agent / computer use topics — practitioner-relevant only
 ARXIV_QUERY = (
@@ -480,6 +492,25 @@ def clean_text(value):
 def parse_date(text):
     if not text:
         return None
+    # Handle RFC 2822 style strings when present.
+    try:
+        rfc_dt = parsedate_to_datetime(text)
+        if rfc_dt:
+            return rfc_dt.replace(tzinfo=None) if rfc_dt.tzinfo is None else rfc_dt.astimezone(datetime.timezone.utc).replace(tzinfo=None)
+    except Exception:
+        pass
+    # Handle ISO timestamps embedded in HTML snippets/attributes.
+    iso_match = re.search(
+        r"\b\d{4}-\d{2}-\d{2}(?:[T\s]\d{2}:\d{2}(?::\d{2})?(?:Z|[+-]\d{2}:?\d{2})?)?\b",
+        text,
+    )
+    if iso_match:
+        candidate = iso_match.group(0).replace("Z", "+00:00")
+        try:
+            iso_dt = datetime.datetime.fromisoformat(candidate)
+            return iso_dt.astimezone(datetime.timezone.utc).replace(tzinfo=None) if iso_dt.tzinfo else iso_dt
+        except ValueError:
+            pass
     for regex, fmt in DATE_PATTERNS:
         match = regex.search(text)
         if not match:
@@ -493,6 +524,26 @@ def parse_date(text):
 
 def now_utc():
     return datetime.datetime.utcnow()
+
+
+def parse_iso_datetime(value):
+    if not value:
+        return None
+    try:
+        return datetime.datetime.fromisoformat(value)
+    except ValueError:
+        return None
+
+
+def parse_date_from_url(url):
+    match = re.search(r"/(20\d{2})/(0?[1-9]|1[0-2])/(0?[1-9]|[12]\d|3[01])(?:/|$)", url)
+    if not match:
+        return None
+    year, month, day = map(int, match.groups())
+    try:
+        return datetime.datetime(year, month, day)
+    except ValueError:
+        return None
 
 
 def normalize_title(title):
@@ -701,16 +752,11 @@ def prune_state(state):
     state["sent"] = pruned
     official_pages = {}
     for url, item in state.get("official_pages", {}).items():
-        updated_at = item.get("updated_at")
-        if not updated_at:
+        stamp = parse_iso_datetime(item.get("last_seen_at")) or parse_iso_datetime(item.get("updated_at"))
+        if not stamp:
             official_pages[url] = item
             continue
-        try:
-            updated_dt = datetime.datetime.fromisoformat(updated_at)
-        except ValueError:
-            official_pages[url] = item
-            continue
-        if updated_dt >= cutoff:
+        if stamp >= cutoff:
             official_pages[url] = item
     state["official_pages"] = official_pages
     return state
@@ -739,6 +785,7 @@ def mark_sent(state, items):
                 "title": article["title"],
                 "content_hash": article.get("content_hash"),
                 "blocks": article.get("content_blocks", []),
+                "last_seen_at": timestamp,
                 "updated_at": timestamp,
             }
     return state
@@ -849,7 +896,7 @@ def classify_update_change(previous_blocks, current_blocks):
     }
 
 
-def fetch_html_source(config, hours_back=72):
+def fetch_html_source(config, hours_back=BLOG_RECENCY_HOURS):
     cutoff = now_utc() - datetime.timedelta(hours=hours_back)
     try:
         response = requests.get(config["url"], headers=HTTP_HEADERS, timeout=20)
@@ -892,7 +939,12 @@ def fetch_html_source(config, hours_back=72):
             if published:
                 break
 
-        if published and published < cutoff:
+        if published is None:
+            published = parse_date_from_url(url)
+
+        # Strict freshness rule for scraped HTML sources:
+        # only include if we can parse a date and it's within the window.
+        if published is None or published < cutoff:
             continue
 
         articles.append({
@@ -921,8 +973,11 @@ def extract_update_summary(text):
     return clean_text(" ".join(trimmed))[:600]
 
 
-def fetch_official_update_pages(state):
+def fetch_official_update_pages(state, hours_back=OFFICIAL_UPDATE_RECENCY_HOURS):
     articles = []
+    snapshots = {}
+    cutoff = now_utc() - datetime.timedelta(hours=hours_back)
+    observed_at = now_utc().isoformat()
     previous_pages = state.get("official_pages", {})
     for config in OFFICIAL_UPDATE_PAGES:
         try:
@@ -938,8 +993,26 @@ def fetch_official_update_pages(state):
             continue
         summary = extract_update_summary(page_text)
         content_hash = hashlib.sha1(page_text.encode("utf-8")).hexdigest()[:12]
-        previous_blocks = previous_pages.get(config["url"], {}).get("blocks", [])
+        previous_page = previous_pages.get(config["url"], {})
+        previous_blocks = previous_page.get("blocks", [])
+        previous_hash = previous_page.get("content_hash")
+        previous_seen = parse_iso_datetime(previous_page.get("last_seen_at")) or parse_iso_datetime(previous_page.get("updated_at"))
         change_info = classify_update_change(previous_blocks, content_blocks)
+        snapshots[config["url"]] = {
+            "title": config["title"],
+            "content_hash": content_hash,
+            "blocks": content_blocks,
+            "last_seen_at": observed_at,
+            "updated_at": previous_page.get("updated_at"),
+        }
+
+        # Strict freshness rule for official docs pages:
+        # include only newly-detected changes when our previous snapshot is within 24h.
+        if not previous_hash or previous_hash == content_hash:
+            continue
+        if previous_seen is None or previous_seen < cutoff:
+            continue
+
         articles.append({
             "source": config["source"],
             "type": "Blog",
@@ -955,7 +1028,7 @@ def fetch_official_update_pages(state):
             "content_blocks": content_blocks,
             **change_info,
         })
-    return articles
+    return articles, snapshots
 
 
 def enrich_articles(articles, limit=MAX_BLOG_ENRICH):
@@ -983,7 +1056,7 @@ def enrich_articles(articles, limit=MAX_BLOG_ENRICH):
 
 # ── Fetch ──────────────────────────────────────────────────────────────────────
 
-def fetch_claude_blog(hours_back=72):
+def fetch_claude_blog(hours_back=BLOG_RECENCY_HOURS):
     cutoff = now_utc() - datetime.timedelta(hours=hours_back)
     try:
         response = requests.get(CLAUDE_BLOG_URL, headers=HTTP_HEADERS, timeout=20)
@@ -1030,7 +1103,10 @@ def fetch_claude_blog(hours_back=72):
             if published:
                 break
 
-        if published and published < cutoff:
+        if published is None:
+            published = parse_date_from_url(url)
+
+        if published is None or published < cutoff:
             continue
 
         articles.append({
@@ -1046,11 +1122,11 @@ def fetch_claude_blog(hours_back=72):
     return dedupe_articles(articles)
 
 
-def fetch_blogs(hours_back=28):
+def fetch_blogs(hours_back=BLOG_RECENCY_HOURS):
     cutoff = now_utc() - datetime.timedelta(hours=hours_back)
-    articles = fetch_claude_blog(hours_back=max(hours_back, 72))
+    articles = fetch_claude_blog(hours_back=hours_back)
     for config in HTML_SOURCES:
-        articles.extend(fetch_html_source(config, hours_back=max(hours_back, 72)))
+        articles.extend(fetch_html_source(config, hours_back=hours_back))
     for name, rss in BLOGS:
         try:
             feed = feedparser.parse(rss)
@@ -1064,7 +1140,9 @@ def fetch_blogs(hours_back=28):
                     if val:
                         pub = datetime.datetime(*val[:6])
                         break
-                if pub and pub < cutoff:
+                # Strict freshness rule for RSS feeds:
+                # if a feed has no publish/update timestamp, skip it.
+                if pub is None or pub < cutoff:
                     continue
                 articles.append({
                     "source": name, "type": "Blog",
@@ -1290,7 +1368,9 @@ def main():
     blogs, papers, official_updates = [], [], []
 
     print("Fetching official product update pages...")
-    raw_updates = fetch_official_update_pages(state)
+    raw_updates, page_snapshots = fetch_official_update_pages(state)
+    state.setdefault("official_pages", {}).update(page_snapshots)
+    save_state(state)
     official_updates = filter_unsent(raw_updates, state)
     print(f"  {len(official_updates)} changed official pages found")
 
