@@ -282,12 +282,12 @@ SOURCE_PRIORITY = {
     "Hacker News AI": 45,
 }
 SOURCE_CAPS = {
-    "Claude Blog": 3,
-    "Anthropic": 2,
-    "Anthropic Docs": 2,
-    "OpenAI": 1,
-    "OpenAI Help": 2,
-    "OpenAI Academy": 1,
+    "Claude Blog": None,
+    "Anthropic": None,
+    "Anthropic Docs": None,
+    "OpenAI": None,
+    "OpenAI Help": None,
+    "OpenAI Academy": None,
     "Google DeepMind": 1,
     "Meta AI": 1,
     "Mistral AI": 1,
@@ -776,13 +776,76 @@ def cap_sources(articles, limit):
     for article in articles:
         source = article["source"]
         cap = SOURCE_CAPS.get(source, 1)
-        if per_source.get(source, 0) >= cap:
+        if cap is not None and per_source.get(source, 0) >= cap:
             continue
         kept.append(article)
         per_source[source] = per_source.get(source, 0) + 1
         if len(kept) >= limit:
             break
     return kept
+
+
+def article_topic_signature(article):
+    tokens = [
+        token for token in title_tokens(article.get("title", ""))
+        if token not in STOPWORDS
+    ]
+    return tuple(sorted(tokens[:4]))
+
+
+def select_diverse_items(candidates, limit):
+    if limit <= 0 or not candidates:
+        return []
+
+    # Start from highest-ranked items, then greedily add diversity-aware picks.
+    pool = sorted(
+        candidates,
+        key=lambda item: (
+            item.get("digest_rank", item.get("score", 0) * 10),
+            item.get("score", 0),
+            source_priority(item.get("source", "")),
+            item.get("published_dt") or datetime.datetime.min,
+        ),
+        reverse=True,
+    )
+
+    chosen = []
+    per_source = {}
+    used_topics = set()
+
+    while pool and len(chosen) < limit:
+        best_idx = None
+        best_value = None
+
+        for idx, item in enumerate(pool):
+            source = item["source"]
+            cap = SOURCE_CAPS.get(source, 1)
+            if cap is not None and per_source.get(source, 0) >= cap:
+                continue
+
+            topic_key = article_topic_signature(item)
+            diversity_bonus = 0
+            if per_source.get(source, 0) == 0:
+                diversity_bonus += 4
+            if topic_key and topic_key not in used_topics:
+                diversity_bonus += 3
+
+            score_value = item.get("digest_rank", item.get("score", 0) * 10) + diversity_bonus
+            if best_value is None or score_value > best_value:
+                best_value = score_value
+                best_idx = idx
+
+        if best_idx is None:
+            break
+
+        selected = pool.pop(best_idx)
+        chosen.append(selected)
+        per_source[selected["source"]] = per_source.get(selected["source"], 0) + 1
+        topic_key = article_topic_signature(selected)
+        if topic_key:
+            used_topics.add(topic_key)
+
+    return chosen
 
 
 def article_key(article):
@@ -1363,7 +1426,7 @@ def select_consultant_sections(items):
         chosen = [item for item in items if item.get("lane") == label and item["score"] >= 6]
         if label == "Strategic Signals":
             chosen = [item for item in items if item.get("lane") == label and item["score"] >= 5]
-        sections[label] = cap_sources(chosen, limit=limit)
+        sections[label] = select_diverse_items(chosen, limit=limit)
     return sections
 
 
@@ -1436,7 +1499,7 @@ def build_body(blogs, papers, official_updates):
                 item for item in combined
                 if article_key(item) not in seen and item["score"] >= 4
             ]
-            extras = cap_sources(extras, limit=MIN_DIGEST_ITEMS - len(featured_items))
+            extras = select_diverse_items(extras, limit=MIN_DIGEST_ITEMS - len(featured_items))
             if extras:
                 lines.append("Additional Signals:\n")
                 format_items(extras)
