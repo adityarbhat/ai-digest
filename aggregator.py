@@ -65,6 +65,11 @@ BLOGS = [
     ("Cloudflare Blog",      "https://blog.cloudflare.com/rss/"),
     ("GitHub Engineering",   "https://github.blog/engineering.atom"),
     ("AWS Architecture Blog", "https://aws.amazon.com/blogs/architecture/feed/"),
+    ("AWS Engineering",      "https://aws.amazon.com/blogs/developer/feed/"),
+    ("Meta Engineering",     "https://engineering.fb.com/feed/"),
+    ("Airbnb Engineering",   "https://medium.com/feed/airbnb-engineering"),
+    ("Uber Engineering",     "https://www.uber.com/blog/engineering/rss/"),
+    ("Netflix TechBlog",     "https://netflixtechblog.com/feed"),
     ("Brookings AI",    "https://www.brookings.edu/topic/artificial-intelligence/feed/"),
     ("a]6z",            "https://a16z.com/feed/"),
     # Architecture / distributed systems / software delivery
@@ -251,6 +256,7 @@ SOURCE_PRIORITY = {
     "Google DeepMind": 95,
     "Meta AI": 90,
     "Mistral AI": 88,
+    "Cloudflare Blog": 88,
     "Render Blog": 87,
     "Supabase Engineering": 87,
     "Supabase Blog": 87,
@@ -258,6 +264,11 @@ SOURCE_PRIORITY = {
     "Neon Blog": 84,
     "pganalyze": 85,
     "AWS Architecture Blog": 86,
+    "AWS Engineering": 86,
+    "Meta Engineering": 87,
+    "Airbnb Engineering": 85,
+    "Uber Engineering": 86,
+    "Netflix TechBlog": 88,
     "Martin Fowler": 86,
     "InfoQ Architecture Articles": 84,
     "InfoQ Architecture News": 80,
@@ -280,6 +291,7 @@ SOURCE_CAPS = {
     "Google DeepMind": 1,
     "Meta AI": 1,
     "Mistral AI": 1,
+    "Cloudflare Blog": 2,
     "Render Blog": 1,
     "Supabase Engineering": 2,
     "Supabase Blog": 2,
@@ -287,6 +299,11 @@ SOURCE_CAPS = {
     "Neon Blog": 1,
     "pganalyze": 1,
     "AWS Architecture Blog": 1,
+    "AWS Engineering": 1,
+    "Meta Engineering": 1,
+    "Airbnb Engineering": 1,
+    "Uber Engineering": 1,
+    "Netflix TechBlog": 1,
     "Martin Fowler": 1,
     "InfoQ Architecture Articles": 2,
     "InfoQ Architecture News": 1,
@@ -331,6 +348,7 @@ DATE_PATTERNS = (
 )
 BLOG_RECENCY_HOURS = 24
 OFFICIAL_UPDATE_RECENCY_HOURS = 24
+MIN_DIGEST_ITEMS = 4
 
 # arXiv: applied LLM / agent / computer use topics — practitioner-relevant only
 ARXIV_QUERY = (
@@ -526,6 +544,13 @@ def now_utc():
     return datetime.datetime.utcnow()
 
 
+def is_recent(dt, hours_back):
+    if dt is None:
+        return False
+    cutoff = now_utc() - datetime.timedelta(hours=hours_back)
+    return dt >= cutoff
+
+
 def parse_iso_datetime(value):
     if not value:
         return None
@@ -544,6 +569,42 @@ def parse_date_from_url(url):
         return datetime.datetime(year, month, day)
     except ValueError:
         return None
+
+
+def extract_published_datetime(html_text):
+    soup = BeautifulSoup(html_text, "html.parser")
+    # Common metadata keys used by CMS/blog engines.
+    meta_selectors = [
+        ("property", "article:published_time"),
+        ("property", "og:published_time"),
+        ("property", "article:modified_time"),
+        ("name", "parsely-pub-date"),
+        ("name", "publish_date"),
+        ("name", "pubdate"),
+        ("name", "date"),
+        ("name", "dc.date"),
+        ("name", "dc.date.issued"),
+        ("name", "lastmod"),
+        ("itemprop", "datePublished"),
+        ("itemprop", "dateModified"),
+    ]
+    for attr, key in meta_selectors:
+        tag = soup.find("meta", attrs={attr: key})
+        if tag and tag.get("content"):
+            parsed = parse_date(tag.get("content"))
+            if parsed:
+                return parsed
+
+    for time_tag in soup.find_all("time"):
+        if time_tag.get("datetime"):
+            parsed = parse_date(time_tag.get("datetime"))
+            if parsed:
+                return parsed
+        text_value = clean_text(time_tag.get_text(" ", strip=True))
+        parsed = parse_date(text_value)
+        if parsed:
+            return parsed
+    return None
 
 
 def normalize_title(title):
@@ -605,7 +666,21 @@ def looks_relevant(article):
     text = f"{article['title']} {article.get('summary', '')}".lower()
     if any(keyword in text for keyword in LOW_SIGNAL_KEYWORDS):
         return False
-    if article["source"] in {"Claude Blog", "Anthropic", "OpenAI", "Google DeepMind", "Meta AI", "Mistral AI"}:
+    if article["source"] in {
+        "Claude Blog",
+        "Anthropic",
+        "OpenAI",
+        "Google DeepMind",
+        "Meta AI",
+        "Mistral AI",
+        "Cloudflare Blog",
+        "Meta Engineering",
+        "Airbnb Engineering",
+        "Uber Engineering",
+        "Netflix TechBlog",
+        "AWS Architecture Blog",
+        "AWS Engineering",
+    }:
         return True
     if any(keyword in text for keyword in CLAUDE_BLOG_KEYWORDS):
         return True
@@ -897,7 +972,6 @@ def classify_update_change(previous_blocks, current_blocks):
 
 
 def fetch_html_source(config, hours_back=BLOG_RECENCY_HOURS):
-    cutoff = now_utc() - datetime.timedelta(hours=hours_back)
     try:
         response = requests.get(config["url"], headers=HTTP_HEADERS, timeout=20)
         response.raise_for_status()
@@ -939,12 +1013,28 @@ def fetch_html_source(config, hours_back=BLOG_RECENCY_HOURS):
             if published:
                 break
 
+        article_html = ""
+        try:
+            article_resp = requests.get(url, headers=HTTP_HEADERS, timeout=20)
+            article_resp.raise_for_status()
+            article_html = article_resp.text
+        except Exception:
+            article_html = ""
+
+        if article_html:
+            meta_published = extract_published_datetime(article_html)
+            if meta_published:
+                published = meta_published
+            article_text = extract_article_text(article_html)
+            if article_text:
+                summary = article_text[:500]
+
         if published is None:
             published = parse_date_from_url(url)
 
         # Strict freshness rule for scraped HTML sources:
         # only include if we can parse a date and it's within the window.
-        if published is None or published < cutoff:
+        if not is_recent(published, hours_back):
             continue
 
         articles.append({
@@ -1057,7 +1147,6 @@ def enrich_articles(articles, limit=MAX_BLOG_ENRICH):
 # ── Fetch ──────────────────────────────────────────────────────────────────────
 
 def fetch_claude_blog(hours_back=BLOG_RECENCY_HOURS):
-    cutoff = now_utc() - datetime.timedelta(hours=hours_back)
     try:
         response = requests.get(CLAUDE_BLOG_URL, headers=HTTP_HEADERS, timeout=20)
         response.raise_for_status()
@@ -1106,7 +1195,7 @@ def fetch_claude_blog(hours_back=BLOG_RECENCY_HOURS):
         if published is None:
             published = parse_date_from_url(url)
 
-        if published is None or published < cutoff:
+        if not is_recent(published, hours_back):
             continue
 
         articles.append({
@@ -1123,7 +1212,6 @@ def fetch_claude_blog(hours_back=BLOG_RECENCY_HOURS):
 
 
 def fetch_blogs(hours_back=BLOG_RECENCY_HOURS):
-    cutoff = now_utc() - datetime.timedelta(hours=hours_back)
     articles = fetch_claude_blog(hours_back=hours_back)
     for config in HTML_SOURCES:
         articles.extend(fetch_html_source(config, hours_back=hours_back))
@@ -1142,7 +1230,7 @@ def fetch_blogs(hours_back=BLOG_RECENCY_HOURS):
                         break
                 # Strict freshness rule for RSS feeds:
                 # if a feed has no publish/update timestamp, skip it.
-                if pub is None or pub < cutoff:
+                if not is_recent(pub, hours_back):
                     continue
                 articles.append({
                     "source": name, "type": "Blog",
@@ -1154,6 +1242,7 @@ def fetch_blogs(hours_back=BLOG_RECENCY_HOURS):
         except Exception as ex:
             print(f"  ⚠ {name}: {ex}")
     filtered = [article for article in articles if looks_relevant(article)]
+    filtered = [article for article in filtered if is_recent(article.get("published_dt"), hours_back)]
     return dedupe_articles(filtered)
 
 
@@ -1340,6 +1429,18 @@ def build_body(blogs, papers, official_updates):
             lines.append(f"{label}:\n")
             format_items(section_items)
             featured_items.extend(section_items)
+
+        if len(featured_items) < MIN_DIGEST_ITEMS:
+            seen = {article_key(item) for item in featured_items}
+            extras = [
+                item for item in combined
+                if article_key(item) not in seen and item["score"] >= 4
+            ]
+            extras = cap_sources(extras, limit=MIN_DIGEST_ITEMS - len(featured_items))
+            if extras:
+                lines.append("Additional Signals:\n")
+                format_items(extras)
+                featured_items.extend(extras)
     else:
         lines.append("No notable consultant-relevant items today.\n")
 
