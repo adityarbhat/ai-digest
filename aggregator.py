@@ -38,12 +38,9 @@ load_dotenv()
 # ── Sources ────────────────────────────────────────────────────────────────────
 
 BLOGS = [
-    # Anthropic news (anthropic.com has no RSS — using Google News)
-    ("Anthropic",       "https://news.google.com/rss/search?q=Anthropic+Claude+AI&hl=en-US&gl=US&ceid=US:en"),
     # Frontier labs — know what competitors ship
     ("OpenAI",          "https://openai.com/blog/rss.xml"),
     ("Google DeepMind", "https://deepmind.google/blog/rss.xml"),
-    ("Meta AI",         "https://news.google.com/rss/search?q=Meta+AI+Llama+agents&hl=en-US&gl=US&ceid=US:en"),
     ("Microsoft Research", "https://www.microsoft.com/en-us/research/feed/"),
     # Deep technical / practitioner blogs
     ("Simon Willison",  "https://simonwillison.net/atom/everything/"),
@@ -349,6 +346,23 @@ DATE_PATTERNS = (
 BLOG_RECENCY_HOURS = 24
 OFFICIAL_UPDATE_RECENCY_HOURS = 24
 MIN_DIGEST_ITEMS = 4
+MIN_ADDITIONAL_SCORE = 6
+MAX_UNDATED_PRIORITY_SOURCE_ITEMS = 4
+
+LOW_SIGNAL_PUBLISHERS = (
+    "business insider",
+    "the information",
+    "fortune",
+    "cnbc",
+    "yahoo",
+    "the verge",
+    "ars technica",
+    "techcrunch",
+    "venturebeat",
+    "wired",
+    "reuters",
+    "bloomberg",
+)
 
 # arXiv: applied LLM / agent / computer use topics — practitioner-relevant only
 ARXIV_QUERY = (
@@ -505,6 +519,24 @@ def get_client():
 
 def clean_text(value):
     return re.sub(r"\s+", " ", html.unescape(value or "")).strip()
+
+
+def split_trailing_publisher(title):
+    if " - " not in title:
+        return title, ""
+    head, tail = title.rsplit(" - ", 1)
+    head = head.strip()
+    tail = tail.strip()
+    if len(head) >= 8 and 2 <= len(tail) <= 60:
+        return head, tail
+    return title, ""
+
+
+def is_low_signal_publisher(publisher):
+    lowered = (publisher or "").lower()
+    if not lowered:
+        return False
+    return any(token in lowered for token in LOW_SIGNAL_PUBLISHERS)
 
 
 def parse_date(text):
@@ -665,6 +697,8 @@ def novelty_penalty(article, state):
 def looks_relevant(article):
     text = f"{article['title']} {article.get('summary', '')}".lower()
     if any(keyword in text for keyword in LOW_SIGNAL_KEYWORDS):
+        return False
+    if is_low_signal_publisher(article.get("publisher", "")):
         return False
     if article["source"] in {
         "Claude Blog",
@@ -1220,6 +1254,7 @@ def fetch_claude_blog(hours_back=BLOG_RECENCY_HOURS):
     soup = BeautifulSoup(response.text, "html.parser")
     articles = []
     seen = set()
+    undated_kept = 0
 
     for anchor in soup.find_all("a", href=True):
         href = anchor.get("href", "")
@@ -1255,10 +1290,31 @@ def fetch_claude_blog(hours_back=BLOG_RECENCY_HOURS):
             if published:
                 break
 
+        article_html = ""
+        try:
+            article_resp = requests.get(url, headers=HTTP_HEADERS, timeout=20)
+            article_resp.raise_for_status()
+            article_html = article_resp.text
+        except Exception:
+            article_html = ""
+
+        if article_html:
+            meta_published = extract_published_datetime(article_html)
+            if meta_published:
+                published = meta_published
+            article_text = extract_article_text(article_html)
+            if article_text:
+                summary = article_text[:500]
+
         if published is None:
             published = parse_date_from_url(url)
 
-        if not is_recent(published, hours_back):
+        if published is None:
+            # Fail-open for Claude Blog: include a few newest links even if date parsing fails.
+            if undated_kept >= MAX_UNDATED_PRIORITY_SOURCE_ITEMS:
+                continue
+            undated_kept += 1
+        elif not is_recent(published, hours_back):
             continue
 
         articles.append({
@@ -1285,27 +1341,66 @@ def fetch_blogs(hours_back=BLOG_RECENCY_HOURS):
                 url = e.get("link", "")
                 if not url:
                     continue
+                title = e.get("title", "").strip()
+                publisher = ""
+                if "news.google.com" in urlparse(url).netloc:
+                    title, publisher = split_trailing_publisher(title)
                 pub = None
                 for attr in ("published_parsed", "updated_parsed"):
                     val = getattr(e, attr, None)
                     if val:
                         pub = datetime.datetime(*val[:6])
                         break
+                if pub is None:
+                    for attr in ("published", "updated", "created"):
+                        raw_value = e.get(attr, "")
+                        if not raw_value:
+                            continue
+                        pub = parse_date(str(raw_value))
+                        if pub:
+                            break
+                if pub is None:
+                    try:
+                        article_resp = requests.get(url, headers=HTTP_HEADERS, timeout=20)
+                        article_resp.raise_for_status()
+                        pub = extract_published_datetime(article_resp.text) or pub
+                    except Exception:
+                        pass
                 # Strict freshness rule for RSS feeds:
                 # if a feed has no publish/update timestamp, skip it.
-                if not is_recent(pub, hours_back):
+                if pub is None:
+                    # Fail-open for OpenAI blog: keep a few top links even when pub date is missing.
+                    if name != "OpenAI":
+                        continue
+                    openai_undated_count = len([
+                        a for a in articles
+                        if a.get("source") == "OpenAI" and a.get("published_dt") is None
+                    ])
+                    if openai_undated_count >= MAX_UNDATED_PRIORITY_SOURCE_ITEMS:
+                        continue
+                elif not is_recent(pub, hours_back):
                     continue
                 articles.append({
                     "source": name, "type": "Blog",
-                    "title": e.get("title", "").strip(), "url": url,
+                    "title": title, "url": url,
                     "summary": e.get("summary", "")[:400],
+                    "publisher": publisher,
                     "published_dt": pub,
                     "published": pub.strftime("%b %d") if pub else "?",
                 })
         except Exception as ex:
             print(f"  ⚠ {name}: {ex}")
     filtered = [article for article in articles if looks_relevant(article)]
-    filtered = [article for article in filtered if is_recent(article.get("published_dt"), hours_back)]
+    filtered = [
+        article for article in filtered
+        if (
+            is_recent(article.get("published_dt"), hours_back) or
+            (
+                article.get("published_dt") is None and
+                article.get("source") in {"Claude Blog", "OpenAI"}
+            )
+        )
+    ]
     return dedupe_articles(filtered)
 
 
@@ -1497,7 +1592,11 @@ def build_body(blogs, papers, official_updates):
             seen = {article_key(item) for item in featured_items}
             extras = [
                 item for item in combined
-                if article_key(item) not in seen and item["score"] >= 4
+                if (
+                    article_key(item) not in seen and
+                    item["score"] >= MIN_ADDITIONAL_SCORE and
+                    not is_low_signal_publisher(item.get("publisher", ""))
+                )
             ]
             extras = select_diverse_items(extras, limit=MIN_DIGEST_ITEMS - len(featured_items))
             if extras:
