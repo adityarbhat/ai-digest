@@ -348,6 +348,9 @@ OFFICIAL_UPDATE_RECENCY_HOURS = 24
 MIN_DIGEST_ITEMS = 4
 MIN_ADDITIONAL_SCORE = 6
 MAX_UNDATED_PRIORITY_SOURCE_ITEMS = 4
+FRONTIER_HEADLINE_LIMIT = 3
+MAX_RESEARCH_ITEMS = 1
+MIN_RESEARCH_SCORE = 8
 
 LOW_SIGNAL_PUBLISHERS = (
     "business insider",
@@ -639,6 +642,99 @@ def extract_published_datetime(html_text):
     return None
 
 
+def fetch_frontier_watchlist(limit=FRONTIER_HEADLINE_LIMIT):
+    watch = {"Claude Blog": [], "OpenAI Blog": [], "Cloudflare Blog": []}
+    diagnostics = []
+
+    # Claude Blog watch: parse direct /blog/ links from the page and keep top headings.
+    try:
+        response = requests.get(CLAUDE_BLOG_URL, headers=HTTP_HEADERS, timeout=20)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.text, "html.parser")
+        seen = set()
+        for anchor in soup.find_all("a", href=True):
+            href = anchor.get("href", "")
+            if "/blog/" not in href:
+                continue
+            url = urljoin(CLAUDE_BLOG_URL, href)
+            parsed = urlparse(url)
+            if parsed.path.rstrip("/") == "/blog":
+                continue
+            if url in seen:
+                continue
+            seen.add(url)
+            title = clean_text(anchor.get_text(" ", strip=True))
+            if not title or len(title) < 8:
+                continue
+            watch["Claude Blog"].append({"title": title, "url": url, "published": "?"})
+            if len(watch["Claude Blog"]) >= limit:
+                break
+    except Exception as ex:
+        diagnostics.append(f"Claude Blog watch failed: {ex}")
+
+    # OpenAI blog watch: use RSS directly to keep stable openai.com links.
+    try:
+        feed = feedparser.parse("https://openai.com/blog/rss.xml")
+        for e in feed.entries[:30]:
+            url = e.get("link", "")
+            if not url:
+                continue
+            title = clean_text(e.get("title", ""))
+            if not title:
+                continue
+            pub = None
+            for attr in ("published_parsed", "updated_parsed"):
+                val = getattr(e, attr, None)
+                if val:
+                    pub = datetime.datetime(*val[:6])
+                    break
+            if pub is None:
+                for attr in ("published", "updated", "created"):
+                    raw_value = e.get(attr, "")
+                    if raw_value:
+                        pub = parse_date(str(raw_value))
+                        if pub:
+                            break
+            watch["OpenAI Blog"].append({
+                "title": title,
+                "url": url,
+                "published": pub.strftime("%b %d") if pub else "?",
+            })
+            if len(watch["OpenAI Blog"]) >= limit:
+                break
+        if not watch["OpenAI Blog"]:
+            diagnostics.append("OpenAI Blog watch returned 0 entries (RSS may be blocked or changed).")
+    except Exception as ex:
+        diagnostics.append(f"OpenAI Blog watch failed: {ex}")
+
+    # Cloudflare watch for architecture/system design visibility.
+    try:
+        feed = feedparser.parse("https://blog.cloudflare.com/rss/")
+        for e in feed.entries[:30]:
+            url = e.get("link", "")
+            if not url:
+                continue
+            title = clean_text(e.get("title", ""))
+            if not title:
+                continue
+            pub = None
+            if getattr(e, "published_parsed", None):
+                pub = datetime.datetime(*e.published_parsed[:6])
+            watch["Cloudflare Blog"].append({
+                "title": title,
+                "url": url,
+                "published": pub.strftime("%b %d") if pub else "?",
+            })
+            if len(watch["Cloudflare Blog"]) >= limit:
+                break
+        if not watch["Cloudflare Blog"]:
+            diagnostics.append("Cloudflare Blog watch returned 0 entries (RSS may be blocked or changed).")
+    except Exception as ex:
+        diagnostics.append(f"Cloudflare Blog watch failed: {ex}")
+
+    return watch, diagnostics
+
+
 def normalize_title(title):
     title = clean_text(title).lower()
     title = re.sub(r"[^a-z0-9\s]", " ", title)
@@ -754,6 +850,26 @@ def infer_lane(article):
     ):
         return "Strategic Signals"
     return "Build Patterns"
+
+
+def infer_tags(article):
+    text = f"{article.get('title', '')} {article.get('summary', '')}".lower()
+    tags = []
+    if any(keyword in text for keyword in ("mcp", "tool use", "tool calling", "claude code", "codex")):
+        tags.append("tooling-update")
+    if any(keyword in text for keyword in ("architecture", "distributed", "scaling", "reliability", "migration", "incident")):
+        tags.append("system-design")
+    if any(keyword in text for keyword in ("benchmark", "eval", "ablation", "experiment")):
+        tags.append("hands-on-method")
+    if any(keyword in text for keyword in ("security", "auth", "rls", "compliance")):
+        tags.append("security-reliability")
+    if article.get("source") in {"Claude Blog", "OpenAI", "Anthropic Docs", "OpenAI Help"}:
+        tags.append("frontier-update")
+    if article.get("type") == "Paper":
+        tags.append("cutting-edge-research")
+    if not tags:
+        tags.append("practical-build-pattern")
+    return tags[:2]
 
 
 def similarity(a, b):
@@ -1525,9 +1641,11 @@ def select_consultant_sections(items):
     return sections
 
 
-def build_body(blogs, papers, official_updates):
+def build_body(blogs, papers, official_updates, frontier_watch=None, diagnostics=None):
     today = datetime.date.today().strftime("%A, %b %d %Y")
     lines = [f"IMAI AI Digest — {today}\n{'='*50}\n"]
+    frontier_watch = frontier_watch or {}
+    diagnostics = diagnostics or []
 
     def format_items(items):
         for a in items:
@@ -1535,6 +1653,9 @@ def build_body(blogs, papers, official_updates):
             lines.append(f"  {emoji} [{a['score']}/10] {a['title']}")
             lines.append(f"  {a['source']} · {a['published']}")
             lines.append(f"  {a['url']}")
+            tags = a.get("tags") or infer_tags(a)
+            if tags:
+                lines.append(f"  Tags: {', '.join(tags)}")
             if a.get("reason"):
                 lines.append(f"  → {a['reason']}")
             if a.get("client_value"):
@@ -1562,6 +1683,20 @@ def build_body(blogs, papers, official_updates):
 
     featured_items = []
 
+    if frontier_watch:
+        total_frontier = sum(len(items) for items in frontier_watch.values())
+        lines.append(f"Frontier Blog Watch ({total_frontier}):\n")
+        for source in ("Claude Blog", "OpenAI Blog", "Cloudflare Blog"):
+            items = frontier_watch.get(source, [])
+            if not items:
+                continue
+            lines.append(f"{source}:\n")
+            for item in items:
+                lines.append(f"  🔗 {item['title']}")
+                lines.append(f"  {source} · {item.get('published', '?')}")
+                lines.append(f"  {item['url']}")
+                lines.append("")
+
     if official_updates:
         lines.append(f"Official Product Updates ({len(official_updates)}):\n")
         format_updates(official_updates)
@@ -1587,24 +1722,14 @@ def build_body(blogs, papers, official_updates):
             lines.append(f"{label}:\n")
             format_items(section_items)
             featured_items.extend(section_items)
-
-        if len(featured_items) < MIN_DIGEST_ITEMS:
-            seen = {article_key(item) for item in featured_items}
-            extras = [
-                item for item in combined
-                if (
-                    article_key(item) not in seen and
-                    item["score"] >= MIN_ADDITIONAL_SCORE and
-                    not is_low_signal_publisher(item.get("publisher", ""))
-                )
-            ]
-            extras = select_diverse_items(extras, limit=MIN_DIGEST_ITEMS - len(featured_items))
-            if extras:
-                lines.append("Additional Signals:\n")
-                format_items(extras)
-                featured_items.extend(extras)
     else:
         lines.append("No notable consultant-relevant items today.\n")
+
+    if diagnostics:
+        lines.append("Pipeline Diagnostics:\n")
+        for message in diagnostics:
+            lines.append(f"  - {message}")
+        lines.append("")
 
     return "\n".join(lines), featured_items
 
@@ -1629,6 +1754,10 @@ def main():
     print(f"Running digest — blogs: {run_blogs}, arXiv: {run_arxiv}")
 
     blogs, papers, official_updates = [], [], []
+    frontier_watch, watch_diagnostics = fetch_frontier_watchlist()
+    if watch_diagnostics:
+        for message in watch_diagnostics:
+            print(f"  ⚠ {message}")
 
     print("Fetching official product update pages...")
     raw_updates, page_snapshots = fetch_official_update_pages(state)
@@ -1651,8 +1780,10 @@ def main():
         raw = filter_unsent(raw, state)
         print(f"  {len(raw)} unsent papers found, scoring...")
         papers = score(raw, PAPER_SCORE_PROMPT, state=state)
+        papers = [paper for paper in papers if paper.get("score", 0) >= MIN_RESEARCH_SCORE]
+        papers = papers[:MAX_RESEARCH_ITEMS]
 
-    body, featured_items = build_body(blogs, papers, official_updates)
+    body, featured_items = build_body(blogs, papers, official_updates, frontier_watch=frontier_watch, diagnostics=watch_diagnostics)
     total = len(featured_items)
     update_count = len([item for item in featured_items if item.get("is_official_update")])
     blog_count = len([item for item in featured_items if item["type"] == "Blog" and not item.get("is_official_update")])
