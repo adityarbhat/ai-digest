@@ -313,6 +313,68 @@ SOURCE_CAPS = {
     "The Verge AI": 1,
     "Hacker News AI": 1,
 }
+FRONTIER_SOURCES = {
+    "Claude Blog",
+    "Anthropic",
+    "Anthropic Docs",
+    "OpenAI",
+    "OpenAI Help",
+    "OpenAI Academy",
+    "Google DeepMind",
+    "Meta AI",
+    "Mistral AI",
+}
+NON_ARTICLE_SEGMENTS = {
+    "author",
+    "authors",
+    "blog",
+    "categories",
+    "category",
+    "page",
+    "search",
+    "tag",
+    "tags",
+    "topic",
+    "topics",
+}
+OFFICIAL_PRODUCT_KEYWORDS = (
+    "api",
+    "apis",
+    "agent",
+    "agents",
+    "chatgpt",
+    "claude",
+    "codex",
+    "computer use",
+    "developer",
+    "developers",
+    "eval",
+    "function calling",
+    "gpt",
+    "mcp",
+    "model",
+    "models",
+    "prompt",
+    "reasoning",
+    "release",
+    "responses",
+    "sdk",
+    "security",
+    "tool use",
+    "tools",
+    "update",
+)
+OFFICIAL_MARKETING_KEYWORDS = (
+    "case study",
+    "class of",
+    "customer",
+    "customers",
+    "education",
+    "futures",
+    "nonprofit",
+    "student",
+    "students",
+)
 STOPWORDS = {
     "a", "an", "and", "are", "be", "for", "from", "how", "in", "into", "is",
     "of", "on", "or", "the", "this", "to", "using", "with", "your",
@@ -438,6 +500,9 @@ Scoring traps to avoid:
 - Prefer Python-first, Postgres-friendly, managed-stack-friendly patterns.
 - Prefer content directly relevant to Streamlit, Flask, FastAPI, Supabase, or Render.
 - Down-rank infra-heavy advice that assumes Kubernetes/platform teams unless clearly transferable.
+- Category pages, landing pages, or documentation indexes are 1-2, not digest items.
+- Vendor customer stories, education/community programs, and brand campaigns are 2-4 unless
+  they include reusable technical detail, architecture, or implementation lessons.
 
 Choose exactly one lane:
 - "Client-Relevant Now" = launches, capability shifts, adoption/business implications
@@ -660,6 +725,8 @@ def fetch_frontier_watchlist(limit=FRONTIER_HEADLINE_LIMIT):
             parsed = urlparse(url)
             if parsed.path.rstrip("/") == "/blog":
                 continue
+            if not looks_like_article_path(parsed.path):
+                continue
             if url in seen:
                 continue
             seen.add(url)
@@ -681,6 +748,18 @@ def fetch_frontier_watchlist(limit=FRONTIER_HEADLINE_LIMIT):
                 continue
             title = clean_text(e.get("title", ""))
             if not title:
+                continue
+            watch_item = {
+                "source": "OpenAI",
+                "type": "Blog",
+                "title": title,
+                "url": url,
+                "summary": clean_text(e.get("summary", "")[:400]),
+            }
+            if is_marketing_heavy_frontier_item(
+                watch_item,
+                f"{watch_item['title']} {watch_item['summary']}".lower(),
+            ):
                 continue
             pub = None
             for attr in ("published_parsed", "updated_parsed"):
@@ -753,6 +832,42 @@ def source_priority(source):
     return SOURCE_PRIORITY.get(source, 50)
 
 
+def looks_like_article_path(path):
+    segments = [segment for segment in path.split("/") if segment]
+    if "blog" not in segments:
+        return True
+    blog_idx = segments.index("blog")
+    tail = segments[blog_idx + 1:]
+    if not tail:
+        return False
+    if tail[0].lower() in NON_ARTICLE_SEGMENTS:
+        return False
+    slug = tail[-1].strip().lower()
+    return len(slug) >= 4 and any(ch.isalpha() for ch in slug)
+
+
+def is_case_study_title(title):
+    cleaned = clean_text(title)
+    return bool(
+        re.match(
+            r"^[A-Z0-9][\w&+.'-]*(?:\s+[A-Z0-9][\w&+.'-]*){0,3}\s+(uses|builds|helps|powers|transforms)\b",
+            cleaned,
+        )
+    )
+
+
+def is_marketing_heavy_frontier_item(article, text):
+    if article["source"] != "OpenAI":
+        return False
+    if is_case_study_title(article["title"]):
+        return True
+    if any(keyword in text for keyword in ("class of", "futures", "education", "student", "students")):
+        return True
+    has_marketing_signal = any(keyword in text for keyword in OFFICIAL_MARKETING_KEYWORDS)
+    has_product_signal = any(keyword in text for keyword in OFFICIAL_PRODUCT_KEYWORDS)
+    return has_marketing_signal and not has_product_signal
+
+
 def topical_bonus(article):
     text = f"{article['title']} {article.get('summary', '')}".lower()
     bonus = 0
@@ -792,17 +907,22 @@ def novelty_penalty(article, state):
 
 def looks_relevant(article):
     text = f"{article['title']} {article.get('summary', '')}".lower()
+    parsed = urlparse(article["url"])
     if any(keyword in text for keyword in LOW_SIGNAL_KEYWORDS):
         return False
     if is_low_signal_publisher(article.get("publisher", "")):
         return False
+    if parsed.path and not looks_like_article_path(parsed.path):
+        return False
+    if is_marketing_heavy_frontier_item(article, text):
+        return False
+    if article["source"] in FRONTIER_SOURCES:
+        if any(keyword in text for keyword in CLAUDE_BLOG_KEYWORDS):
+            return True
+        if any(keyword in text for keyword in HIGH_SIGNAL_KEYWORDS):
+            return True
+        return any(keyword in text for keyword in OFFICIAL_PRODUCT_KEYWORDS)
     if article["source"] in {
-        "Claude Blog",
-        "Anthropic",
-        "OpenAI",
-        "Google DeepMind",
-        "Meta AI",
-        "Mistral AI",
         "Cloudflare Blog",
         "Meta Engineering",
         "Airbnb Engineering",
@@ -1204,6 +1324,8 @@ def fetch_html_source(config, hours_back=BLOG_RECENCY_HOURS):
             continue
         if not any(parsed.path.startswith(prefix) for prefix in config["path_prefixes"]):
             continue
+        if not looks_like_article_path(parsed.path):
+            continue
         title = clean_text(anchor.get_text(" ", strip=True))
         if not title or len(title) < 12:
             continue
@@ -1379,6 +1501,8 @@ def fetch_claude_blog(hours_back=BLOG_RECENCY_HOURS):
         url = urljoin(CLAUDE_BLOG_URL, href)
         parsed = urlparse(url)
         if parsed.path.rstrip("/") == "/blog":
+            continue
+        if not looks_like_article_path(parsed.path):
             continue
         title = clean_text(anchor.get_text(" ", strip=True))
         if (

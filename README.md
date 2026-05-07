@@ -65,6 +65,10 @@ python aggregator.py --arxiv  # arXiv only
 - Scores items for consultant value, not just reading quality
 - Splits the digest into `Client-Relevant Now`, `Build Patterns`, `Experiments To Run`, and `Strategic Signals`
 
+Note: Render cron jobs do not provide persistent disk storage, so `data/sent_items.json`
+only persists in local/dev environments or on runtimes with durable storage. If you want
+cross-run memory on Render, move digest state to an external store or a worker with disk.
+
 ## Schedule
 
 - **Daily (Mon–Sun):** Blog posts from the last 28 hours, with Claude blog coverage expanded to catch recent posts reliably
