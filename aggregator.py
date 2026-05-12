@@ -30,7 +30,8 @@ from urllib.parse import urljoin, urlparse
 import feedparser
 import requests
 from anthropic import Anthropic
-from bs4 import BeautifulSoup
+from anthropic.types import TextBlock
+from bs4 import BeautifulSoup, Tag
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -413,6 +414,7 @@ MAX_UNDATED_PRIORITY_SOURCE_ITEMS = 4
 FRONTIER_HEADLINE_LIMIT = 3
 MAX_RESEARCH_ITEMS = 1
 MIN_RESEARCH_SCORE = 8
+REQUIRE_PUBLISH_DATE_FOR_DAILY_LIST = True
 
 LOW_SIGNAL_PUBLISHERS = (
     "business insider",
@@ -660,6 +662,36 @@ def parse_iso_datetime(value):
         return None
 
 
+def is_valid_article_url(source, url):
+    parsed = urlparse(url)
+    path = parsed.path.rstrip("/")
+    if not path:
+        return False
+    lowered = path.lower()
+
+    # Claude: exclude category/listing pages and keep concrete article slugs.
+    if source == "Claude Blog":
+        if lowered in {"/blog", "/blog/category", "/blog/categories", "/blog/tag", "/blog/tags"}:
+            return False
+        blocked_segments = ("/blog/category/", "/blog/categories/", "/blog/tag/", "/blog/tags/")
+        if any(segment in lowered for segment in blocked_segments):
+            return False
+        return lowered.startswith("/blog/") and lowered.count("/") >= 2
+
+    # OpenAI: keep article pages, exclude root indexes.
+    # /news/ was added because OpenAI migrated some blog posts to /news/ after 2024.
+    if source == "OpenAI":
+        if lowered in {"/blog", "/index", "/news"}:
+            return False
+        return lowered.startswith("/index/") or lowered.startswith("/blog/") or lowered.startswith("/news/")
+
+    # Cloudflare: blog posts are typically under /<slug>/ on blog.cloudflare.com.
+    if source == "Cloudflare Blog":
+        return lowered not in {"", "/"}
+
+    return True
+
+
 def parse_date_from_url(url):
     match = re.search(r"/(20\d{2})/(0?[1-9]|1[0-2])/(0?[1-9]|[12]\d|3[01])(?:/|$)", url)
     if not match:
@@ -690,12 +722,14 @@ def extract_published_datetime(html_text):
     ]
     for attr, key in meta_selectors:
         tag = soup.find("meta", attrs={attr: key})
-        if tag and tag.get("content"):
+        if isinstance(tag, Tag) and tag.get("content"):
             parsed = parse_date(tag.get("content"))
             if parsed:
                 return parsed
 
     for time_tag in soup.find_all("time"):
+        if not isinstance(time_tag, Tag):
+            continue
         if time_tag.get("datetime"):
             parsed = parse_date(time_tag.get("datetime"))
             if parsed:
@@ -707,7 +741,7 @@ def extract_published_datetime(html_text):
     return None
 
 
-def fetch_frontier_watchlist(limit=FRONTIER_HEADLINE_LIMIT):
+def fetch_frontier_watchlist(limit=FRONTIER_HEADLINE_LIMIT, hours_back=BLOG_RECENCY_HOURS):
     watch = {"Claude Blog": [], "OpenAI Blog": [], "Cloudflare Blog": []}
     diagnostics = []
 
@@ -718,8 +752,10 @@ def fetch_frontier_watchlist(limit=FRONTIER_HEADLINE_LIMIT):
         soup = BeautifulSoup(response.text, "html.parser")
         seen = set()
         for anchor in soup.find_all("a", href=True):
+            if not isinstance(anchor, Tag):
+                continue
             href = anchor.get("href", "")
-            if "/blog/" not in href:
+            if not isinstance(href, str) or "/blog/" not in href:
                 continue
             url = urljoin(CLAUDE_BLOG_URL, href)
             parsed = urlparse(url)
@@ -733,18 +769,95 @@ def fetch_frontier_watchlist(limit=FRONTIER_HEADLINE_LIMIT):
             title = clean_text(anchor.get_text(" ", strip=True))
             if not title or len(title) < 8:
                 continue
-            watch["Claude Blog"].append({"title": title, "url": url, "published": "?"})
+            published = None
+            try:
+                article_resp = requests.get(url, headers=HTTP_HEADERS, timeout=20)
+                article_resp.raise_for_status()
+                published = extract_published_datetime(article_resp.text)
+            except Exception:
+                published = None
+            # Fail-open for Claude Blog: if date parsing fails, include up to `limit`
+            # undated headlines rather than showing an empty watchlist block.
+            if published is not None and not is_recent(published, hours_back):
+                continue
+            # Undated entries are allowed through; they'll still be capped by `limit`.
+            watch["Claude Blog"].append({
+                "title": title,
+                "url": url,
+                "published": published.strftime("%b %d") if published else "?",
+            })
             if len(watch["Claude Blog"]) >= limit:
                 break
+        if not watch["Claude Blog"]:
+            diagnostics.append("Claude Blog watch returned 0 entries (JS-rendered page or scraping blocked) — trying Anthropic news fallback.")
+            # Fallback: anthropic.com/news renders server-side and is scrapeable even when
+            # claude.com/blog is JS-only. Articles appear under /news/<slug>.
+            try:
+                anth_resp = requests.get("https://www.anthropic.com/news", headers=HTTP_HEADERS, timeout=20)
+                anth_resp.raise_for_status()
+                anth_soup = BeautifulSoup(anth_resp.text, "html.parser")
+                anth_seen = set()
+                for anchor in anth_soup.find_all("a", href=True):
+                    if not isinstance(anchor, Tag):
+                        continue
+                    href = anchor.get("href", "")
+                    if not isinstance(href, str) or "/news/" not in href:
+                        continue
+                    anth_url = urljoin("https://www.anthropic.com", href)
+                    parsed_anth = urlparse(anth_url)
+                    if parsed_anth.path.rstrip("/") in {"/news", "/news/"}:
+                        continue
+                    if anth_url in anth_seen:
+                        continue
+                    anth_seen.add(anth_url)
+                    anth_title = clean_text(anchor.get_text(" ", strip=True))
+                    if not anth_title or len(anth_title) < 8:
+                        continue
+                    anth_pub = None
+                    try:
+                        anth_article_resp = requests.get(anth_url, headers=HTTP_HEADERS, timeout=20)
+                        anth_article_resp.raise_for_status()
+                        anth_pub = extract_published_datetime(anth_article_resp.text)
+                    except Exception:
+                        anth_pub = None
+                    if anth_pub is not None and not is_recent(anth_pub, hours_back):
+                        continue
+                    watch["Claude Blog"].append({
+                        "title": anth_title,
+                        "url": anth_url,
+                        "published": anth_pub.strftime("%b %d") if anth_pub else "?",
+                    })
+                    if len(watch["Claude Blog"]) >= limit:
+                        break
+                if watch["Claude Blog"]:
+                    diagnostics.append(f"Claude Blog: Anthropic news fallback found {len(watch['Claude Blog'])} item(s).")
+                else:
+                    diagnostics.append("Anthropic news fallback also returned 0 entries.")
+            except Exception as anth_ex:
+                diagnostics.append(f"Anthropic news fallback failed: {anth_ex}")
     except Exception as ex:
         diagnostics.append(f"Claude Blog watch failed: {ex}")
 
-    # OpenAI blog watch: use RSS directly to keep stable openai.com links.
+    # OpenAI blog watch: try primary RSS, then fall back to /news/ RSS if primary returns 0.
+    # OpenAI has moved posts between /blog/ and /news/ paths since 2024.
+    OPENAI_RSS_URLS = [
+        "https://openai.com/blog/rss.xml",
+        "https://openai.com/news/rss.xml",
+    ]
     try:
-        feed = feedparser.parse("https://openai.com/blog/rss.xml")
-        for e in feed.entries[:30]:
+        openai_entries = []
+        for rss_url in OPENAI_RSS_URLS:
+            feed = feedparser.parse(rss_url)
+            if feed.entries:
+                openai_entries = feed.entries[:30]
+                break
+            else:
+                diagnostics.append(f"OpenAI RSS {rss_url} returned 0 entries, trying next.")
+        for e in openai_entries:
             url = e.get("link", "")
             if not url:
+                continue
+            if not is_valid_article_url("OpenAI", url):
                 continue
             title = clean_text(e.get("title", ""))
             if not title:
@@ -754,7 +867,7 @@ def fetch_frontier_watchlist(limit=FRONTIER_HEADLINE_LIMIT):
                 "type": "Blog",
                 "title": title,
                 "url": url,
-                "summary": clean_text(e.get("summary", "")[:400]),
+                "summary": clean_text(str(e.get("summary", ""))[:400]),
             }
             if is_marketing_heavy_frontier_item(
                 watch_item,
@@ -774,6 +887,10 @@ def fetch_frontier_watchlist(limit=FRONTIER_HEADLINE_LIMIT):
                         pub = parse_date(str(raw_value))
                         if pub:
                             break
+            # Fail-open: include undated OpenAI entries up to `limit` rather than silently dropping.
+            if pub is not None and not is_recent(pub, hours_back):
+                continue
+            # Undated entries are allowed through; capped by `limit`.
             watch["OpenAI Blog"].append({
                 "title": title,
                 "url": url,
@@ -787,27 +904,66 @@ def fetch_frontier_watchlist(limit=FRONTIER_HEADLINE_LIMIT):
         diagnostics.append(f"OpenAI Blog watch failed: {ex}")
 
     # Cloudflare watch for architecture/system design visibility.
+    # Falls back to HTML scraping of blog.cloudflare.com if RSS returns 0 entries.
     try:
+        cloudflare_entries_raw = []
         feed = feedparser.parse("https://blog.cloudflare.com/rss/")
-        for e in feed.entries[:30]:
-            url = e.get("link", "")
-            if not url:
+        if feed.entries:
+            for e in feed.entries[:30]:
+                url = e.get("link", "")
+                if not url or not is_valid_article_url("Cloudflare Blog", url):
+                    continue
+                title = clean_text(e.get("title", ""))
+                if not title:
+                    continue
+                pub = None
+                parsed_tuple = getattr(e, "published_parsed", None)
+                if parsed_tuple:
+                    pub = datetime.datetime(*parsed_tuple[:6])
+                cloudflare_entries_raw.append({"title": title, "url": url, "pub": pub})
+        else:
+            diagnostics.append("Cloudflare RSS returned 0 entries — attempting HTML fallback.")
+            try:
+                cf_resp = requests.get("https://blog.cloudflare.com", headers=HTTP_HEADERS, timeout=20)
+                cf_resp.raise_for_status()
+                cf_soup = BeautifulSoup(cf_resp.text, "html.parser")
+                cf_seen = set()
+                for anchor in cf_soup.find_all("a", href=True):
+                    if not isinstance(anchor, Tag):
+                        continue
+                    href = anchor.get("href", "")
+                    if not isinstance(href, str):
+                        continue
+                    cf_url = urljoin("https://blog.cloudflare.com", href)
+                    if not is_valid_article_url("Cloudflare Blog", cf_url):
+                        continue
+                    if cf_url in cf_seen:
+                        continue
+                    cf_seen.add(cf_url)
+                    cf_title = clean_text(anchor.get_text(" ", strip=True))
+                    if not cf_title or len(cf_title) < 12:
+                        continue
+                    cloudflare_entries_raw.append({"title": cf_title, "url": cf_url, "pub": None})
+                    if len(cloudflare_entries_raw) >= 30:
+                        break
+            except Exception as cf_ex:
+                diagnostics.append(f"Cloudflare HTML fallback failed: {cf_ex}")
+
+        for entry in cloudflare_entries_raw:
+            pub = entry["pub"]
+            # Fail-open: include undated entries up to `limit` rather than silently dropping.
+            if pub is not None and not is_recent(pub, hours_back):
                 continue
-            title = clean_text(e.get("title", ""))
-            if not title:
-                continue
-            pub = None
-            if getattr(e, "published_parsed", None):
-                pub = datetime.datetime(*e.published_parsed[:6])
+            # Undated entries allowed through; capped by `limit`.
             watch["Cloudflare Blog"].append({
-                "title": title,
-                "url": url,
+                "title": entry["title"],
+                "url": entry["url"],
                 "published": pub.strftime("%b %d") if pub else "?",
             })
             if len(watch["Cloudflare Blog"]) >= limit:
                 break
         if not watch["Cloudflare Blog"]:
-            diagnostics.append("Cloudflare Blog watch returned 0 entries (RSS may be blocked or changed).")
+            diagnostics.append("Cloudflare Blog watch returned 0 entries (RSS and HTML fallback both failed).")
     except Exception as ex:
         diagnostics.append(f"Cloudflare Blog watch failed: {ex}")
 
@@ -1208,7 +1364,8 @@ def extract_article_text(html_text):
     soup = BeautifulSoup(html_text, "html.parser")
     for tag in soup(["script", "style", "noscript", "svg"]):
         tag.decompose()
-    container = soup.find("main") or soup.find("article") or soup.body or soup
+    container_node = soup.find("main") or soup.find("article") or soup.body or soup
+    container: Tag = container_node if isinstance(container_node, Tag) else soup
     text = clean_text(container.get_text(" ", strip=True))
     return text[:1200]
 
@@ -1217,7 +1374,8 @@ def extract_structured_page_blocks(html_text, limit=160):
     soup = BeautifulSoup(html_text, "html.parser")
     for tag in soup(["script", "style", "noscript", "svg"]):
         tag.decompose()
-    container = soup.find("main") or soup.find("article") or soup.body or soup
+    container_node = soup.find("main") or soup.find("article") or soup.body or soup
+    container: Tag = container_node if isinstance(container_node, Tag) else soup
     selectors = ["h1", "h2", "h3", "h4", "p", "li"]
     blocks = []
     seen = set()
@@ -1317,7 +1475,11 @@ def fetch_html_source(config, hours_back=BLOG_RECENCY_HOURS):
     seen = set()
 
     for anchor in soup.find_all("a", href=True):
+        if not isinstance(anchor, Tag):
+            continue
         href = anchor.get("href", "")
+        if not isinstance(href, str):
+            continue
         url = urljoin(config["url"], href)
         parsed = urlparse(url)
         if parsed.netloc != urlparse(config["url"]).netloc:
@@ -1495,8 +1657,10 @@ def fetch_claude_blog(hours_back=BLOG_RECENCY_HOURS):
     undated_kept = 0
 
     for anchor in soup.find_all("a", href=True):
+        if not isinstance(anchor, Tag):
+            continue
         href = anchor.get("href", "")
-        if "/blog/" not in href:
+        if not isinstance(href, str) or "/blog/" not in href:
             continue
         url = urljoin(CLAUDE_BLOG_URL, href)
         parsed = urlparse(url)
@@ -1572,16 +1736,26 @@ def fetch_claude_blog(hours_back=BLOG_RECENCY_HOURS):
 
 def fetch_blogs(hours_back=BLOG_RECENCY_HOURS):
     articles = fetch_claude_blog(hours_back=hours_back)
+    print(f"  Claude Blog: {len(articles)} articles found")
     for config in HTML_SOURCES:
+        before = len(articles)
         articles.extend(fetch_html_source(config, hours_back=hours_back))
+        added = len(articles) - before
+        if added:
+            print(f"  {config['source']}: {added} articles found")
     for name, rss in BLOGS:
         try:
+            before_rss = len(articles)
             feed = feedparser.parse(rss)
+            if not feed.entries:
+                print(f"  [fetch] {name}: 0 entries from RSS ({rss})")
             for e in feed.entries[:20]:
-                url = e.get("link", "")
+                url = str(e.get("link", ""))
                 if not url:
                     continue
-                title = e.get("title", "").strip()
+                if not is_valid_article_url(name, url):
+                    continue
+                title = clean_text(str(e.get("title", "")))
                 publisher = ""
                 if "news.google.com" in urlparse(url).netloc:
                     title, publisher = split_trailing_publisher(title)
@@ -1606,41 +1780,66 @@ def fetch_blogs(hours_back=BLOG_RECENCY_HOURS):
                         pub = extract_published_datetime(article_resp.text) or pub
                     except Exception:
                         pass
-                # Strict freshness rule for RSS feeds:
-                # if a feed has no publish/update timestamp, skip it.
+                # Strict freshness rule for RSS feeds.
+                # Priority sources (OpenAI) get a fail-open cap so the watchlist stays
+                # populated even when the RSS omits timestamps.
                 if pub is None:
-                    # Fail-open for OpenAI blog: keep a few top links even when pub date is missing.
-                    if name != "OpenAI":
-                        continue
-                    openai_undated_count = len([
-                        a for a in articles
-                        if a.get("source") == "OpenAI" and a.get("published_dt") is None
-                    ])
-                    if openai_undated_count >= MAX_UNDATED_PRIORITY_SOURCE_ITEMS:
+                    if name == "OpenAI":
+                        openai_undated_count = len([
+                            a for a in articles
+                            if a.get("source") == "OpenAI" and a.get("published_dt") is None
+                        ])
+                        if openai_undated_count >= MAX_UNDATED_PRIORITY_SOURCE_ITEMS:
+                            continue
+                        # fall through — allow this undated OpenAI entry
+                    elif REQUIRE_PUBLISH_DATE_FOR_DAILY_LIST:
+                        print(f"  [date-filter] {name}: dropping entry '{str(e.get('title',''))[:60]}' — no publish date")
                         continue
                 elif not is_recent(pub, hours_back):
                     continue
                 articles.append({
                     "source": name, "type": "Blog",
                     "title": title, "url": url,
-                    "summary": e.get("summary", "")[:400],
+                    "summary": str(e.get("summary", ""))[:400],
                     "publisher": publisher,
                     "published_dt": pub,
                     "published": pub.strftime("%b %d") if pub else "?",
                 })
+            added_rss = len(articles) - before_rss
+            if added_rss:
+                print(f"  [fetch] {name}: {added_rss} recent article(s) collected")
         except Exception as ex:
             print(f"  ⚠ {name}: {ex}")
+    print(f"  [fetch] Total raw articles before relevance/date filter: {len(articles)}")
     filtered = [article for article in articles if looks_relevant(article)]
-    filtered = [
-        article for article in filtered
-        if (
-            is_recent(article.get("published_dt"), hours_back) or
-            (
-                article.get("published_dt") is None and
-                article.get("source") in {"Claude Blog", "OpenAI"}
+    print(f"  [fetch] After relevance filter: {len(filtered)}")
+    # Priority sources (Claude Blog, OpenAI) already enforce their own undated-article cap
+    # inside fetch_claude_blog / fetch_blogs. The secondary filter must not silently drop
+    # those entries again — only enforce recency when a date is actually available.
+    PRIORITY_UNDATED_SOURCES = {"Claude Blog", "OpenAI"}
+    if REQUIRE_PUBLISH_DATE_FOR_DAILY_LIST:
+        before_date_filter = len(filtered)
+        filtered = [
+            article for article in filtered
+            if (
+                (article.get("published_dt") is not None and is_recent(article.get("published_dt"), hours_back))
+                or (article.get("published_dt") is None and article.get("source") in PRIORITY_UNDATED_SOURCES)
             )
-        )
-    ]
+        ]
+        dropped = before_date_filter - len(filtered)
+        if dropped:
+            print(f"  [date-filter] dropped {dropped} articles lacking a recent publish date (kept {len(filtered)})")
+    else:
+        filtered = [
+            article for article in filtered
+            if (
+                is_recent(article.get("published_dt"), hours_back) or
+                (
+                    article.get("published_dt") is None and
+                    article.get("source") in PRIORITY_UNDATED_SOURCES
+                )
+            )
+        ]
     return dedupe_articles(filtered)
 
 
@@ -1661,18 +1860,19 @@ def fetch_arxiv(days_back=2):
     cutoff = now_utc() - datetime.timedelta(days=days_back)
     papers = []
     for e in feedparser.parse(r.text).entries:
-        url = e.get("id", e.get("link", ""))
+        url = str(e.get("id", e.get("link", "")))
         if not url:
             continue
         pub = None
-        if getattr(e, "published_parsed", None):
-            pub = datetime.datetime(*e.published_parsed[:6])
+        parsed_tuple = getattr(e, "published_parsed", None)
+        if parsed_tuple:
+            pub = datetime.datetime(*parsed_tuple[:6])
         if pub and pub < cutoff:
             continue
         papers.append({
             "source": "arXiv", "type": "Paper",
-            "title": e.get("title", "").replace("\n", " ").strip(), "url": url,
-            "summary": e.get("summary", "")[:400],
+            "title": str(e.get("title", "")).replace("\n", " ").strip(), "url": url,
+            "summary": str(e.get("summary", ""))[:400],
             "published_dt": pub,
             "published": pub.strftime("%b %d") if pub else "?",
         })
@@ -1699,7 +1899,10 @@ def score(articles, prompt, state=None):
                     system=prompt,
                     messages=[{"role": "user", "content": json.dumps(payload)}],
                 )
-                text = resp.content[0].text.strip()
+                block = resp.content[0]
+                if not isinstance(block, TextBlock):
+                    raise ValueError(f"Unexpected content block type: {type(block)}")
+                text = block.text.strip()
                 # Strip markdown code fences if present
                 if text.startswith("```"):
                     text = text.split("\n", 1)[1]  # drop first line (```json or ```)
@@ -1750,6 +1953,14 @@ def send_email(subject, body):
 
 
 def select_consultant_sections(items):
+    # Per-lane minimum score thresholds. Raised Build Patterns + Experiments to 7 and
+    # Strategic Signals to 6 to reduce low-value items from sources like Brookings/a16z/InfoQ.
+    LANE_MIN_SCORE = {
+        "Client-Relevant Now": 6,
+        "Build Patterns": 7,
+        "Experiments To Run": 7,
+        "Strategic Signals": 6,
+    }
     section_order = [
         ("Client-Relevant Now", 4),
         ("Build Patterns", 5),
@@ -1758,10 +1969,22 @@ def select_consultant_sections(items):
     ]
     sections = {}
     for label, limit in section_order:
-        chosen = [item for item in items if item.get("lane") == label and item["score"] >= 6]
-        if label == "Strategic Signals":
-            chosen = [item for item in items if item.get("lane") == label and item["score"] >= 5]
+        min_score = LANE_MIN_SCORE.get(label, 6)
+        chosen = [item for item in items if item.get("lane") == label and item.get("score", 0) >= min_score]
         sections[label] = select_diverse_items(chosen, limit=limit)
+
+    # Fallback: if too few total items passed the thresholds, show top picks scored >=5
+    # clearly labelled as below-threshold rather than silently showing an empty digest.
+    total_section_items = sum(len(v) for v in sections.values())
+    if total_section_items < MIN_DIGEST_ITEMS:
+        fallback_pool = [
+            item for item in items
+            if item.get("score", 0) >= 5
+            and not any(item in v for v in sections.values())
+        ]
+        fallback_pool = sorted(fallback_pool, key=lambda x: x.get("score", 0), reverse=True)
+        sections["_fallback"] = fallback_pool[:3]
+
     return sections
 
 
@@ -1809,17 +2032,19 @@ def build_body(blogs, papers, official_updates, frontier_watch=None, diagnostics
 
     if frontier_watch:
         total_frontier = sum(len(items) for items in frontier_watch.values())
-        lines.append(f"Frontier Blog Watch ({total_frontier}):\n")
-        for source in ("Claude Blog", "OpenAI Blog", "Cloudflare Blog"):
-            items = frontier_watch.get(source, [])
-            if not items:
-                continue
-            lines.append(f"{source}:\n")
-            for item in items:
-                lines.append(f"  🔗 {item['title']}")
-                lines.append(f"  {source} · {item.get('published', '?')}")
-                lines.append(f"  {item['url']}")
-                lines.append("")
+        # Only render the section when at least one source returned headlines.
+        if total_frontier > 0:
+            lines.append(f"Frontier Blog Watch ({total_frontier}):\n")
+            for source in ("Claude Blog", "OpenAI Blog", "Cloudflare Blog"):
+                items = frontier_watch.get(source, [])
+                if not items:
+                    continue
+                lines.append(f"{source}:\n")
+                for item in items:
+                    lines.append(f"  {item['title']}")
+                    lines.append(f"  {source} · {item.get('published', '?')}")
+                    lines.append(f"  {item['url']}")
+                    lines.append("")
 
     if official_updates:
         lines.append(f"Official Product Updates ({len(official_updates)}):\n")
@@ -1838,7 +2063,10 @@ def build_body(blogs, papers, official_updates, frontier_watch=None, diagnostics
     sections = select_consultant_sections(combined)
 
     if any(sections.values()):
-        total_items = sum(len(items) for items in sections.values())
+        # Exclude the fallback bucket from the section total shown in the header
+        main_section_count = sum(len(v) for k, v in sections.items() if k != "_fallback")
+        fallback_items = sections.pop("_fallback", [])
+        total_items = main_section_count + len(fallback_items)
         lines.append(f"Consultant Intelligence ({total_items}):\n")
         for label, section_items in sections.items():
             if not section_items:
@@ -1846,6 +2074,10 @@ def build_body(blogs, papers, official_updates, frontier_watch=None, diagnostics
             lines.append(f"{label}:\n")
             format_items(section_items)
             featured_items.extend(section_items)
+        if fallback_items:
+            lines.append("Top picks today (below standard threshold):\n")
+            format_items(fallback_items)
+            featured_items.extend(fallback_items)
     else:
         lines.append("No notable consultant-relevant items today.\n")
 
@@ -1908,11 +2140,15 @@ def main():
         papers = papers[:MAX_RESEARCH_ITEMS]
 
     body, featured_items = build_body(blogs, papers, official_updates, frontier_watch=frontier_watch, diagnostics=watch_diagnostics)
-    total = len(featured_items)
     update_count = len([item for item in featured_items if item.get("is_official_update")])
     blog_count = len([item for item in featured_items if item["type"] == "Blog" and not item.get("is_official_update")])
     paper_count = len([item for item in featured_items if item["type"] == "Paper"])
-    print(f"Digest ready: {update_count} official updates, {blog_count} featured blog posts, {paper_count} featured papers")
+    # Watchlist items are displayed in the email but not tracked in featured_items (they are
+    # not deduplicated against sent_items.json). Count them separately for the subject line
+    # so a digest with only watchlist headlines does not read "0 items".
+    watch_count = sum(len(v) for v in frontier_watch.values())
+    total = update_count + blog_count + paper_count + watch_count
+    print(f"Digest ready: {update_count} official updates, {blog_count} featured blog posts, {paper_count} featured papers, {watch_count} watchlist headlines")
     subject = f"AI Digest {today} — {total} items"
 
     # Print to stdout (visible in Render logs) and email
