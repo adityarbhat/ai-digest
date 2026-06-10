@@ -838,6 +838,54 @@ def extract_published_datetime(html_text):
     return None
 
 
+# Anchor texts that are card buttons, not article titles. When a scraped link
+# carries one of these, the real title must come from the article page itself.
+JUNK_LINK_TITLES = {
+    "read more",
+    "read post",
+    "read article",
+    "read the post",
+    "learn more",
+    "continue reading",
+    "see more",
+    "blog",
+    "try claude",
+}
+
+
+def is_junk_link_title(title):
+    return clean_text(title).lower().rstrip(".…→ ") in JUNK_LINK_TITLES
+
+
+def _strip_site_suffix(title):
+    # Drop trailing site-name suffixes like "Post Title | Anthropic".
+    return clean_text(re.split(r"\s+[|\\—·]\s+", title)[0])
+
+
+def extract_page_title(html_text):
+    if not html_text:
+        return ""
+    soup = BeautifulSoup(html_text, "html.parser")
+    for attr, key in (("property", "og:title"), ("name", "twitter:title")):
+        tag = soup.find("meta", attrs={attr: key})
+        if isinstance(tag, Tag) and tag.get("content"):
+            return _strip_site_suffix(str(tag.get("content")))
+    if soup.title and soup.title.string:
+        return _strip_site_suffix(soup.title.string)
+    h1 = soup.find("h1")
+    if isinstance(h1, Tag):
+        return clean_text(h1.get_text(" ", strip=True))
+    return ""
+
+
+def title_from_slug(path):
+    segments = [segment for segment in (path or "").split("/") if segment]
+    if not segments:
+        return ""
+    words = re.sub(r"[-_]+", " ", segments[-1]).strip()
+    return words[:1].upper() + words[1:] if len(words) >= 8 else ""
+
+
 def fetch_frontier_watchlist(state=None, limit=FRONTIER_HEADLINE_LIMIT, hours_back=BLOG_RECENCY_HOURS):
     watch = {"Claude Blog": [], "OpenAI Blog": [], "Cloudflare Blog": []}
     diagnostics = []
@@ -872,15 +920,23 @@ def fetch_frontier_watchlist(state=None, limit=FRONTIER_HEADLINE_LIMIT, hours_ba
                 continue
             seen.add(url)
             title = clean_text(anchor.get_text(" ", strip=True))
-            if not title or len(title) < 8:
-                continue
             published = None
+            article_html = ""
             try:
                 article_resp = requests.get(url, headers=HTTP_HEADERS, timeout=20)
+                if article_resp.status_code in (404, 410):
+                    continue  # dead link — never show it
                 article_resp.raise_for_status()
-                published = extract_published_datetime(article_resp.text)
+                article_html = article_resp.text
+                published = extract_published_datetime(article_html)
             except Exception:
                 published = None
+            # Card buttons ("Read more") are not titles — pull the real title
+            # from the article page, falling back to a slug-derived title.
+            if not title or is_junk_link_title(title):
+                title = extract_page_title(article_html) or title_from_slug(parsed.path)
+            if not title or len(title) < 8 or is_junk_link_title(title):
+                continue
             # Fail-open for Claude Blog: if date parsing fails, include up to `limit`
             # undated headlines rather than showing an empty watchlist block.
             if published is not None and not is_recent(published, hours_back):
@@ -921,15 +977,21 @@ def fetch_frontier_watchlist(state=None, limit=FRONTIER_HEADLINE_LIMIT, hours_ba
                         continue
                     anth_seen.add(anth_url)
                     anth_title = clean_text(anchor.get_text(" ", strip=True))
-                    if not anth_title or len(anth_title) < 8:
-                        continue
                     anth_pub = None
+                    anth_html = ""
                     try:
                         anth_article_resp = requests.get(anth_url, headers=HTTP_HEADERS, timeout=20)
+                        if anth_article_resp.status_code in (404, 410):
+                            continue  # dead link — never show it
                         anth_article_resp.raise_for_status()
-                        anth_pub = extract_published_datetime(anth_article_resp.text)
+                        anth_html = anth_article_resp.text
+                        anth_pub = extract_published_datetime(anth_html)
                     except Exception:
                         anth_pub = None
+                    if not anth_title or is_junk_link_title(anth_title):
+                        anth_title = extract_page_title(anth_html) or title_from_slug(parsed_anth.path)
+                    if not anth_title or len(anth_title) < 8 or is_junk_link_title(anth_title):
+                        continue
                     if anth_pub is not None and not is_recent(anth_pub, hours_back):
                         continue
                     watch["Claude Blog"].append({
@@ -1874,12 +1936,6 @@ def fetch_claude_blog(hours_back=BLOG_RECENCY_HOURS):
         if not looks_like_article_path(parsed.path):
             continue
         title = clean_text(anchor.get_text(" ", strip=True))
-        if (
-            not title or
-            title.lower() in {"read more", "blog", "try claude"} or
-            len(title) < 12
-        ):
-            continue
         if url in seen:
             continue
         seen.add(url)
@@ -1902,10 +1958,19 @@ def fetch_claude_blog(hours_back=BLOG_RECENCY_HOURS):
         article_html = ""
         try:
             article_resp = requests.get(url, headers=HTTP_HEADERS, timeout=20)
+            if article_resp.status_code in (404, 410):
+                continue  # dead link — never include it
             article_resp.raise_for_status()
             article_html = article_resp.text
         except Exception:
             article_html = ""
+
+        # "Read more" card buttons are not titles — rescue the real title from
+        # the article page (og:title/h1) or the URL slug before giving up.
+        if not title or is_junk_link_title(title) or len(title) < 12:
+            title = extract_page_title(article_html) or title_from_slug(parsed.path)
+        if not title or len(title) < 12 or is_junk_link_title(title):
+            continue
 
         if article_html:
             meta_published = extract_published_datetime(article_html)
@@ -2225,6 +2290,30 @@ def build_body(blogs, papers, official_updates, frontier_watch=None, diagnostics
 
     featured_items = []
 
+    combined = sorted(
+        blogs + papers,
+        key=lambda item: (
+            item.get("digest_rank", item["score"] * 10),
+            item["score"],
+            item.get("published_dt") or datetime.datetime.min,
+        ),
+        reverse=True,
+    )
+    sections = select_consultant_sections(combined)
+
+    # Cross-dedupe within a single email: an article featured in Consultant
+    # Intelligence must not also appear as a watchlist headline. Mutates
+    # frontier_watch in place so main()'s subject-line count stays accurate.
+    section_urls = {
+        item.get("url", "")
+        for section_items in sections.values()
+        for item in section_items
+    }
+    for source in list(frontier_watch.keys()):
+        frontier_watch[source] = [
+            item for item in frontier_watch[source] if item.get("url") not in section_urls
+        ]
+
     if frontier_watch:
         total_frontier = sum(len(items) for items in frontier_watch.values())
         # Only render the section when at least one source returned headlines.
@@ -2245,17 +2334,6 @@ def build_body(blogs, papers, official_updates, frontier_watch=None, diagnostics
         lines.append(f"Official Product Updates ({len(official_updates)}):\n")
         format_updates(official_updates)
         featured_items.extend(official_updates)
-
-    combined = sorted(
-        blogs + papers,
-        key=lambda item: (
-            item.get("digest_rank", item["score"] * 10),
-            item["score"],
-            item.get("published_dt") or datetime.datetime.min,
-        ),
-        reverse=True,
-    )
-    sections = select_consultant_sections(combined)
 
     if any(sections.values()):
         total_items = sum(len(v) for v in sections.values())
