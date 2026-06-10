@@ -2156,8 +2156,11 @@ def score(articles, prompt, state=None):
         return []
     state = state or {"sent": {}}
     results = []
-    for i in range(0, len(articles), 10):
-        batch = articles[i:i+10]
+    # Batch of 8 items × ~120 tokens of JSON each needs ~1000 output tokens;
+    # max_tokens=4000 leaves ample headroom. The old 800 cap truncated the JSON
+    # mid-string on EVERY batch — all articles silently defaulted to score 5.
+    for i in range(0, len(articles), 8):
+        batch = articles[i:i+8]
         payload = [{"index": j, "title": a["title"], "source": a["source"], "summary": a["summary"]}
                    for j, a in enumerate(batch)]
         scores = {}
@@ -2165,7 +2168,7 @@ def score(articles, prompt, state=None):
             try:
                 resp = get_client().messages.create(
                     model="claude-haiku-4-5-20251001",
-                    max_tokens=800,
+                    max_tokens=4000,
                     system=prompt,
                     messages=[{"role": "user", "content": json.dumps(payload)}],
                 )
@@ -2173,12 +2176,14 @@ def score(articles, prompt, state=None):
                 if not isinstance(block, TextBlock):
                     raise ValueError(f"Unexpected content block type: {type(block)}")
                 text = block.text.strip()
-                # Strip markdown code fences if present
-                if text.startswith("```"):
-                    text = text.split("\n", 1)[1]  # drop first line (```json or ```)
-                if text.endswith("```"):
-                    text = text.rsplit("```", 1)[0]
-                scores = {r["index"]: r for r in json.loads(text.strip())}
+                # The model may wrap the array in code fences or append prose
+                # before/after it — parse the first complete JSON array and
+                # ignore everything around it.
+                start = text.find("[")
+                if start == -1:
+                    raise ValueError("no JSON array in scoring response")
+                parsed, _ = json.JSONDecoder().raw_decode(text[start:])
+                scores = {r["index"]: r for r in parsed}
                 break
             except Exception as ex:
                 print(f"  ⚠ scoring (attempt {attempt+1}/3): {ex}")

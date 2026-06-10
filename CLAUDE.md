@@ -4,6 +4,11 @@
 Daily email digest: fetches RSS feeds → scores with Claude Haiku → emails ranked results. Runs on Render cron at 12:00 UTC (6 AM MDT).
 
 ## Last major change (2026-06-10)
+Scoring fix (critical): `score()` had `max_tokens=800`, which truncated Haiku's JSON on
+EVERY batch — all articles silently defaulted to score 5 for weeks (the old 5/10 items in
+digests were never real scores). Now 4000 tokens, batches of 8, and the parser extracts
+the first JSON array via `raw_decode` so trailing model prose can't break it.
+
 Follow-up fix (commit 986c06c): watchlist titles were "Read more" card buttons —
 real titles now rescued from the article page (og:title → <title> → h1 → URL slug,
 site suffix stripped); 404/410 links skipped everywhere; articles featured in
