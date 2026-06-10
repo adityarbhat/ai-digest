@@ -49,7 +49,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "6252b589a588",
-      "last_seen_at": "2026-06-10T21:31:33.134144",
+      "last_seen_at": "2026-06-10T21:52:20.230785",
       "title": "Claude Code Overview",
       "updated_at": null
     },
@@ -175,7 +175,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "df4ba5a18750",
-      "last_seen_at": "2026-06-10T21:31:33.134144",
+      "last_seen_at": "2026-06-10T21:52:20.230785",
       "title": "Claude Code Tutorials",
       "updated_at": null
     },
@@ -214,19 +214,80 @@
         "Usage policy"
       ],
       "content_hash": "0e46d20631df",
-      "last_seen_at": "2026-06-10T21:31:33.134144",
+      "last_seen_at": "2026-06-10T21:52:20.230785",
       "title": "Anthropic Release Notes",
       "updated_at": null
     }
   },
-  "sent": {},
+  "sent": {
+    "28e4f08ffed3ee4f5cfe1bfcea681491825e765e": {
+      "kind": "Blog",
+      "sent_at": "2026-06-10T21:56:22.813035",
+      "source": "Hacker News",
+      "title": "Claude Fable 5",
+      "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5"
+    },
+    "493d8f488edf242172ae596669ae744917797650": {
+      "kind": "Blog",
+      "sent_at": "2026-06-10T21:56:22.813035",
+      "source": "Simon Willison",
+      "title": "If Claude Fable stops helping you, you'll never know",
+      "url": "https://simonwillison.net/2026/Jun/10/if-claude-fable-stops-helping-you/#atom-everything"
+    },
+    "603345d8b284c0c8a2298ee4eb7a3e02cad534cc": {
+      "kind": "Blog",
+      "sent_at": "2026-06-10T21:56:22.813035",
+      "source": "Simon Willison",
+      "title": "Quoting Andrej Karpathy",
+      "url": "https://simonwillison.net/2026/Jun/9/andrej-karpathy/#atom-everything"
+    },
+    "665645886be0d1c75db0382c99c1ef76d94f8b7e": {
+      "kind": "Paper",
+      "sent_at": "2026-06-10T21:56:22.813035",
+      "source": "arXiv",
+      "title": "Workflow-GYM: Towards Long-Horizon Evaluation of Computer-use Agentic tasks in Real-World Professional Fields",
+      "url": "http://arxiv.org/abs/2606.11042v1"
+    },
+    "824abf7518f9e0af2401b2c4968bc63944e2658a": {
+      "kind": "Blog",
+      "sent_at": "2026-06-10T21:56:22.813035",
+      "source": "Spotify Engineering",
+      "title": "Encoding Your Domain Expert: The Context Layer Behind Spotify's Data Assistant",
+      "url": "https://engineering.atspotify.com/2026/6/encoding-your-domain-expert-the-context-layer-behind-spotifys-data-assistant/"
+    },
+    "904125f96820e40600496232e18c8258005d09b3": {
+      "kind": "Paper",
+      "sent_at": "2026-06-10T21:56:22.813035",
+      "source": "arXiv",
+      "title": "Assessing Automated Prompt Injection Attacks in Agentic Environments",
+      "url": "http://arxiv.org/abs/2606.10525v1"
+    },
+    "c8eff483a3a740aefcf98519ab516385b47a7d02": {
+      "kind": "Blog",
+      "sent_at": "2026-06-10T21:56:22.813035",
+      "source": "Claude Blog",
+      "title": "The evolution of agentic surfaces: building with Claude Managed Agents",
+      "url": "https://claude.com/blog/building-with-claude-managed-agents"
+    },
+    "e68bcfa66b2346f6a71f4fe5d3313700a725445c": {
+      "kind": "Blog",
+      "sent_at": "2026-06-10T21:56:22.813035",
+      "source": "Neon Blog",
+      "title": "A branch-first dev loop for Neon: link, checkout and env pull",
+      "url": "https://neon.com/blog/branch-first-dev-loop"
+    }
+  },
   "watchlist_seen": {
     "https://blog.cloudflare.com/private-origins-dns-routing/": "2026-06-10T21:37:31.151750",
+    "https://claude.com/blog/claude-code-desktop-redesign": "2026-06-10T21:56:22.813265",
     "https://claude.com/blog/claude-for-foundation-models": "2026-06-10T21:37:31.151750",
+    "https://claude.com/blog/claude-managed-agents-memory": "2026-06-10T21:56:22.813265",
     "https://claude.com/blog/claude-managed-agents-updates": "2026-06-10T21:37:31.151750",
+    "https://claude.com/blog/connectors-for-everyday-life": "2026-06-10T21:56:22.813265",
     "https://claude.com/blog/new-in-claude-managed-agents": "2026-06-10T21:37:31.151750",
     "https://openai.com/index/lseg": "2026-06-10T21:37:31.151750",
     "https://openai.com/index/nextdoor": "2026-06-10T21:37:31.151750",
+    "https://openai.com/index/notion": "2026-06-10T21:56:22.813265",
     "https://openai.com/index/prc-linked-influence-operations-ai-debates": "2026-06-10T21:37:31.151750"
   }
 }
