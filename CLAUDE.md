@@ -4,6 +4,11 @@
 Daily email digest: fetches RSS feeds → scores with Claude Haiku → emails ranked results. Runs on Render cron at 12:00 UTC (6 AM MDT).
 
 ## Last major change (2026-06-10)
+Follow-up fix (commit 986c06c): watchlist titles were "Read more" card buttons —
+real titles now rescued from the article page (og:title → <title> → h1 → URL slug,
+site suffix stripped); 404/410 links skipped everywhere; articles featured in
+Consultant Intelligence no longer repeat as Frontier Watch headlines in the same email.
+
 Fixed daily staleness and retargeted relevance:
 - **State now persists via GitHub commits.** Render cron filesystems are ephemeral, so
   `data/sent_items.json` was wiped every run — dedupe never worked in production.
