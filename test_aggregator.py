@@ -5,7 +5,8 @@ import unittest
 sys.modules.setdefault("feedparser", types.SimpleNamespace())
 sys.modules.setdefault("requests", types.SimpleNamespace())
 sys.modules.setdefault("anthropic", types.SimpleNamespace(Anthropic=object))
-sys.modules.setdefault("bs4", types.SimpleNamespace(BeautifulSoup=object))
+sys.modules.setdefault("anthropic.types", types.SimpleNamespace(TextBlock=object))
+sys.modules.setdefault("bs4", types.SimpleNamespace(BeautifulSoup=object, Tag=object))
 sys.modules.setdefault("dotenv", types.SimpleNamespace(load_dotenv=lambda: None))
 
 import aggregator

@@ -12,6 +12,7 @@ Env vars required:
     DIGEST_TO       email to send digest to (can be same as SMTP_USER)
 """
 
+import base64
 import datetime
 import hashlib
 import html
@@ -42,9 +43,11 @@ BLOGS = [
     # Frontier labs — know what competitors ship
     ("OpenAI",          "https://openai.com/blog/rss.xml"),
     ("Google DeepMind", "https://deepmind.google/blog/rss.xml"),
+    ("Meta AI",         "https://news.google.com/rss/search?q=site:ai.meta.com"),  # direct RSS 404s; Google News mirror
     ("Microsoft Research", "https://www.microsoft.com/en-us/research/feed/"),
     # Deep technical / practitioner blogs
     ("Simon Willison",  "https://simonwillison.net/atom/everything/"),
+    ("Addy Osmani",     "https://addyosmani.com/rss.xml"),               # AI-assisted engineering / agentic coding essays
     ("Lilian Weng",     "https://lilianweng.github.io/index.xml"),       # OpenAI research lead, deep technical
     ("Chip Huyen",      "https://huyenchip.com/feed.xml"),               # ML systems & production AI
     ("HuggingFace",     "https://huggingface.co/blog/feed.xml"),         # model releases, techniques, papers
@@ -57,6 +60,8 @@ BLOGS = [
     ("Weights & Biases", "https://wandb.ai/fully-connected/rss.xml"),    # ML tooling & evals
     ("Supabase Blog",   "https://supabase.com/blog/rss.xml"),            # Supabase product + engineering updates
     ("Neon Blog",       "https://neon.tech/blog/rss.xml"),               # Postgres/serverless architecture
+    ("Streamlit Blog",  "https://news.google.com/rss/search?q=site:blog.streamlit.io"),  # direct RSS 403s; Google News mirror
+    ("FastAPI Releases", "https://github.com/fastapi/fastapi/releases.atom"),  # changelog feed — FastAPI has no blog
     # Tech & economic analysis
     ("MIT Tech Review", "https://www.technologyreview.com/feed/"),
     # System design & engineering depth
@@ -65,9 +70,15 @@ BLOGS = [
     ("AWS Architecture Blog", "https://aws.amazon.com/blogs/architecture/feed/"),
     ("AWS Engineering",      "https://aws.amazon.com/blogs/developer/feed/"),
     ("Meta Engineering",     "https://engineering.fb.com/feed/"),
-    ("Airbnb Engineering",   "https://medium.com/feed/airbnb-engineering"),
+    ("Airbnb Engineering",   "https://medium.com/feed/airbnb-engineering/tagged/ai"),  # AI-tagged posts only
     ("Uber Engineering",     "https://www.uber.com/blog/engineering/rss/"),
     ("Netflix TechBlog",     "https://netflixtechblog.com/feed"),
+    ("DoorDash Engineering", "https://news.google.com/rss/search?q=site:careersatdoordash.com"),  # direct RSS 403s; Google News mirror
+    ("Spotify Engineering",  "https://engineering.atspotify.com/feed"),
+    ("Slack Engineering",    "https://slack.engineering/feed/"),
+    ("Pinterest Engineering", "https://medium.com/feed/pinterest-engineering"),
+    ("Dropbox Tech",         "https://dropbox.tech/feed"),
+    ("Stripe Blog",          "https://stripe.com/blog/feed.rss"),
     ("Brookings AI",    "https://www.brookings.edu/topic/artificial-intelligence/feed/"),
     ("a]6z",            "https://a16z.com/feed/"),
     # Architecture / distributed systems / software delivery
@@ -168,6 +179,15 @@ CLAUDE_BLOG_KEYWORDS = (
 HIGH_SIGNAL_KEYWORDS = (
     "claude",
     "anthropic",
+    "claude code",
+    "codex",
+    "deepseek",
+    "coding agent",
+    "agentic",
+    "harness",
+    "software factory",
+    "ai-assisted",
+    "cloud certification",
     "agent",
     "agents",
     "tool use",
@@ -267,6 +287,15 @@ SOURCE_PRIORITY = {
     "Airbnb Engineering": 85,
     "Uber Engineering": 86,
     "Netflix TechBlog": 88,
+    "DoorDash Engineering": 84,
+    "Spotify Engineering": 84,
+    "Slack Engineering": 84,
+    "Pinterest Engineering": 82,
+    "Dropbox Tech": 82,
+    "Stripe Blog": 84,
+    "Streamlit Blog": 90,
+    "FastAPI Releases": 90,
+    "Addy Osmani": 88,
     "Martin Fowler": 86,
     "InfoQ Architecture Articles": 84,
     "InfoQ Architecture News": 80,
@@ -302,6 +331,15 @@ SOURCE_CAPS = {
     "Airbnb Engineering": 1,
     "Uber Engineering": 1,
     "Netflix TechBlog": 1,
+    "DoorDash Engineering": 1,
+    "Spotify Engineering": 1,
+    "Slack Engineering": 1,
+    "Pinterest Engineering": 1,
+    "Dropbox Tech": 1,
+    "Stripe Blog": 1,
+    "Streamlit Blog": 1,
+    "FastAPI Releases": 1,
+    "Addy Osmani": 1,
     "Martin Fowler": 1,
     "InfoQ Architecture Articles": 2,
     "InfoQ Architecture News": 1,
@@ -325,6 +363,43 @@ FRONTIER_SOURCES = {
     "Meta AI",
     "Mistral AI",
 }
+# Big-company engineering blogs: only AI/agentic/stack-relevant posts get through.
+# Adi reads these for AI engineering signal, not generic infra content.
+ENGINEERING_AI_GATED_SOURCES = {
+    "Cloudflare Blog",
+    "Meta Engineering",
+    "Airbnb Engineering",
+    "Uber Engineering",
+    "Netflix TechBlog",
+    "AWS Architecture Blog",
+    "AWS Engineering",
+    "DoorDash Engineering",
+    "Spotify Engineering",
+    "Slack Engineering",
+    "Pinterest Engineering",
+    "Dropbox Tech",
+    "Stripe Blog",
+    "GitHub Engineering",
+}
+# Product-update feeds for Adi's own stack: always relevant, even when the title
+# is just a version number (e.g. FastAPI release tags).
+STACK_UPDATE_SOURCES = {
+    "Supabase Blog",
+    "Supabase Engineering",
+    "Supabase Developers",
+    "Neon Blog",
+    "pganalyze",
+    "Render Blog",
+    "Streamlit Blog",
+    "FastAPI Releases",
+}
+# Word-boundary AI topic matcher for gated engineering sources. Substring checks
+# would false-positive ("maintain" contains "ai"), so this must stay a regex.
+AI_TOPIC_PATTERN = re.compile(
+    r"\b(ai|llm|llms|genai|generative|machine learning|deep learning|agent|agents|agentic|"
+    r"copilot|gpt|claude|gemini|llama|deepseek|codex|rag|retrieval|embedding|embeddings|"
+    r"vector|prompt|prompting|inference|fine-?tuning|transformer|recommendation|mlops)\b"
+)
 NON_ARTICLE_SEGMENTS = {
     "author",
     "authors",
@@ -406,14 +481,14 @@ DATE_PATTERNS = (
         "%d %B %Y",
     ),
 )
-BLOG_RECENCY_HOURS = 24
-OFFICIAL_UPDATE_RECENCY_HOURS = 24
-MIN_DIGEST_ITEMS = 4
-MIN_ADDITIONAL_SCORE = 6
+# 36h (not 24h) so a post published right after yesterday's run still lands in
+# today's digest. Persistent sent-state dedupe makes the overlap safe.
+BLOG_RECENCY_HOURS = 36
+OFFICIAL_UPDATE_RECENCY_HOURS = 36
 MAX_UNDATED_PRIORITY_SOURCE_ITEMS = 4
 FRONTIER_HEADLINE_LIMIT = 3
-MAX_RESEARCH_ITEMS = 1
-MIN_RESEARCH_SCORE = 8
+MAX_RESEARCH_ITEMS = 2
+MIN_RESEARCH_SCORE = 7
 REQUIRE_PUBLISH_DATE_FOR_DAILY_LIST = True
 
 LOW_SIGNAL_PUBLISHERS = (
@@ -443,25 +518,32 @@ ARXIV_QUERY = (
 )
 
 BLOG_SCORE_PROMPT = """\
-You score blog articles for Adi. He is an AI consultant who works exclusively in the
+You score blog articles for Adi. He is an AI consultant who works primarily in the
 Claude/Anthropic ecosystem — building agents, RAG pipelines, MCP servers, and data
-dashboards for SMB clients. He does NOT use LangChain, LlamaIndex, or other orchestration
-frameworks. He is NOT a researcher and does NOT build or train models.
+dashboards for SMB clients. His daily coding tools are Claude (Claude Code), OpenAI
+Codex, and DeepSeek. He does NOT use LangChain, LlamaIndex, or other orchestration
+frameworks. He is NOT a researcher and does NOT build or train models — he is an
+engineer and builder at heart.
 
-He is also building larger business systems, including warehouse-management-style software
-with inventory, billing, invoicing, scheduling, and operational workflows. He values
-system design and distributed systems when they help him design or advise on real software.
-His primary implementation stack is Python, Streamlit dashboards, Flask/FastAPI web apps,
-Supabase for database/backend/auth/storage, and Render for hosting/deployment.
+He builds web applications and dashboards for the moving/logistics industry —
+quoting, dispatch, inventory, billing, invoicing, scheduling, and operational
+workflows. He values system design and distributed systems when they help him
+design or advise on real software. His implementation stack is Python, FastAPI/Flask
+web apps, Streamlit dashboards, Supabase (Postgres) for database/backend/auth/storage,
+and Render for hosting/deployment.
 
 He cares about:
 1. What Anthropic ships (new Claude features, API changes, MCP updates) — top priority
-2. Frontier AI capabilities: new agent techniques, computer use, tool use, multimodal
-3. Applied AI techniques he can use with Claude (prompting, evals, RAG patterns, MCP)
-4. Research distillations: a blog post explaining a new paper in plain terms
-5. System design: how large-scale systems are built (relevant to building AI pipelines)
-6. Big-picture: economic impact of AI, industry surveys, future-of-work analysis
-7. Interesting, high-signal articles he will actually finish in one sitting
+2. Agentic AI coding: coding agents, harness engineering, software factories,
+   AI-assisted development workflows, Claude Code / Codex / DeepSeek techniques
+3. Frontier AI capabilities: new agent techniques, computer use, tool use, multimodal
+4. Applied AI techniques he can use with Claude (prompting, evals, RAG patterns, MCP)
+5. Stack updates that change his daily work: FastAPI, Streamlit, Supabase, Postgres, Render
+6. Research distillations: a blog post explaining a new paper in plain terms
+7. System design: how large-scale systems are built (relevant to building AI pipelines)
+8. Cloud platform capability news relevant to cloud certifications (moderate priority)
+9. Big-picture: economic impact of AI, industry surveys, future-of-work analysis
+10. Interesting, high-signal articles he will actually finish in one sitting
 
 PENALIZE HEAVILY: journalism and news reporting.
 - "Company X announces Y" style articles from WIRED, NBC, TechCrunch → 3-4 max
@@ -481,9 +563,11 @@ You are scoring for consultant value, not literary quality. Ask:
 9-10  MUST READ — New Claude/Anthropic feature, API change, or MCP advance.
       Major model launch from any frontier lab with technical details.
       Practitioner deep-dive on agent/computer-use/tool-use technique.
+      Deep dive on agentic coding workflows, harness engineering, or software factories.
 7-8   WORTH READING — Applied AI technique Adi can use. Research distillation.
       System design pattern applicable to AI pipelines or business software.
       Practitioner analysis, workflow, reliability, or distributed-systems lessons.
+      Meaningful release/update for his stack (FastAPI, Streamlit, Supabase, Postgres, Render).
 6     INTERESTING — Technical blog post, deep product analysis, engineering write-up.
 4-5   BORDERLINE — News coverage with some depth. Opinion pieces.
 1-3   SKIP — Pure journalism/news reporting with no technical content.
@@ -518,14 +602,16 @@ Return ONLY a JSON array. Each item:
 
 PAPER_SCORE_PROMPT = """\
 You score arXiv papers for Adi. He builds Claude-based agents, RAG pipelines, MCP servers,
-and data dashboards for SMB clients. He is NOT a researcher and does NOT build models.
+and data dashboards for SMB clients. He is NOT a researcher and does NOT build models,
+but he is a former PhD candidate who genuinely enjoys understanding new research —
+he wants distillable, builder-relevant findings, never math-heavy theory.
 He will only skim these, so they must be immediately useful to a practitioner.
-He also wants actionable engineering research for coding agents, system design, and
-distributed systems relevant to real business software.
+He especially wants research on coding agents, agentic workflows, agent harnesses
+and evaluation, plus system design relevant to real business software.
 His stack is Python, Streamlit, Flask/FastAPI, Supabase/Postgres, and Render.
 
-Target: 1-3 papers per day at 7+. Adi wants to stay current with frontier research
-on agents and computer use — even if he won't implement every detail.
+Target: 1-2 papers per day at 7+. Adi wants to stay current with frontier research
+on agents, coding agents, and computer use — even if he won't implement every detail.
 
 8-10  MUST SKIM — New technique for agents, computer use, GUI agents, or tool use.
       Better RAG or in-context learning approach. New finding on how LLMs reason/plan.
@@ -559,6 +645,16 @@ MAX_PAPERS = 3  # daily cap — quality over quantity
 MAX_BLOG_ENRICH = 12
 STATE_PATH = Path("data/sent_items.json")
 STATE_RETENTION_DAYS = 45
+
+# GitHub-backed state: Render cron filesystems are ephemeral (and crons can't mount
+# disks), so sent-state is committed back to this repo via the Contents API after
+# each run. "[skip render]" in the commit message prevents a redeploy loop — which
+# also means the deployed build never contains the latest state file, so load_state
+# MUST read from the API, never trust the local clone, when a token is configured.
+GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
+GITHUB_REPO = os.environ.get("GITHUB_REPO", "adityarbhat/ai-digest")
+GITHUB_BRANCH = os.environ.get("GITHUB_BRANCH", "main")
+STATE_REPO_PATH = "data/sent_items.json"
 HTTP_HEADERS = {
     "User-Agent": "IMAI-AI-Digest/1.0 (+https://claude.com/blog)",
 }
@@ -643,7 +739,8 @@ def parse_date(text):
 
 
 def now_utc():
-    return datetime.datetime.utcnow()
+    # Naive UTC: all stored/parsed datetimes in this pipeline are naive UTC.
+    return datetime.datetime.now(datetime.timezone.utc).replace(tzinfo=None)
 
 
 def is_recent(dt, hours_back):
@@ -741,9 +838,17 @@ def extract_published_datetime(html_text):
     return None
 
 
-def fetch_frontier_watchlist(limit=FRONTIER_HEADLINE_LIMIT, hours_back=BLOG_RECENCY_HOURS):
+def fetch_frontier_watchlist(state=None, limit=FRONTIER_HEADLINE_LIMIT, hours_back=BLOG_RECENCY_HOURS):
     watch = {"Claude Blog": [], "OpenAI Blog": [], "Cloudflare Blog": []}
     diagnostics = []
+    # Never reshow a headline: skip anything already shown in a past watchlist OR
+    # already emailed as a digest item. This is what stops the same Claude/Anthropic
+    # link from reappearing every morning.
+    state = state or {}
+    already_shown = set(state.get("watchlist_seen", {}))
+    already_shown.update(
+        item.get("url", "") for item in state.get("sent", {}).values()
+    )
 
     # Claude Blog watch: parse direct /blog/ links from the page and keep top headings.
     try:
@@ -763,7 +868,7 @@ def fetch_frontier_watchlist(limit=FRONTIER_HEADLINE_LIMIT, hours_back=BLOG_RECE
                 continue
             if not looks_like_article_path(parsed.path):
                 continue
-            if url in seen:
+            if url in seen or url in already_shown:
                 continue
             seen.add(url)
             title = clean_text(anchor.get_text(" ", strip=True))
@@ -807,7 +912,12 @@ def fetch_frontier_watchlist(limit=FRONTIER_HEADLINE_LIMIT, hours_back=BLOG_RECE
                     parsed_anth = urlparse(anth_url)
                     if parsed_anth.path.rstrip("/") in {"/news", "/news/"}:
                         continue
-                    if anth_url in anth_seen:
+                    # Require a real /news/<slug> article path so nav/category
+                    # anchors ("links that go nowhere") can't slip in.
+                    anth_segments = [seg for seg in parsed_anth.path.split("/") if seg]
+                    if len(anth_segments) < 2 or len(anth_segments[-1]) < 4:
+                        continue
+                    if anth_url in anth_seen or anth_url in already_shown:
                         continue
                     anth_seen.add(anth_url)
                     anth_title = clean_text(anchor.get_text(" ", strip=True))
@@ -855,7 +965,7 @@ def fetch_frontier_watchlist(limit=FRONTIER_HEADLINE_LIMIT, hours_back=BLOG_RECE
                 diagnostics.append(f"OpenAI RSS {rss_url} returned 0 entries, trying next.")
         for e in openai_entries:
             url = e.get("link", "")
-            if not url:
+            if not url or url in already_shown:
                 continue
             if not is_valid_article_url("OpenAI", url):
                 continue
@@ -950,6 +1060,8 @@ def fetch_frontier_watchlist(limit=FRONTIER_HEADLINE_LIMIT, hours_back=BLOG_RECE
                 diagnostics.append(f"Cloudflare HTML fallback failed: {cf_ex}")
 
         for entry in cloudflare_entries_raw:
+            if entry["url"] in already_shown:
+                continue
             pub = entry["pub"]
             # Fail-open: include undated entries up to `limit` rather than silently dropping.
             if pub is not None and not is_recent(pub, hours_back):
@@ -1078,16 +1190,12 @@ def looks_relevant(article):
         if any(keyword in text for keyword in HIGH_SIGNAL_KEYWORDS):
             return True
         return any(keyword in text for keyword in OFFICIAL_PRODUCT_KEYWORDS)
-    if article["source"] in {
-        "Cloudflare Blog",
-        "Meta Engineering",
-        "Airbnb Engineering",
-        "Uber Engineering",
-        "Netflix TechBlog",
-        "AWS Architecture Blog",
-        "AWS Engineering",
-    }:
+    if article["source"] in STACK_UPDATE_SOURCES:
         return True
+    if article["source"] in ENGINEERING_AI_GATED_SOURCES:
+        if AI_TOPIC_PATTERN.search(text):
+            return True
+        return any(keyword in text for keyword in STACK_KEYWORDS)
     if any(keyword in text for keyword in CLAUDE_BLOG_KEYWORDS):
         return True
     if any(keyword in text for keyword in STACK_KEYWORDS):
@@ -1283,19 +1391,67 @@ def article_key(article):
     return digest
 
 
-def load_state():
-    if not STATE_PATH.exists():
-        return {"sent": {}, "official_pages": {}}
-    try:
-        with STATE_PATH.open("r", encoding="utf-8") as fh:
-            state = json.load(fh)
-    except Exception:
-        return {"sent": {}, "official_pages": {}}
+_github_state_sha = None
+
+
+def github_state_enabled():
+    return bool(GITHUB_TOKEN and GITHUB_REPO)
+
+
+def _github_state_url():
+    return f"https://api.github.com/repos/{GITHUB_REPO}/contents/{STATE_REPO_PATH}"
+
+
+def _github_headers():
+    return {
+        "Authorization": f"Bearer {GITHUB_TOKEN}",
+        "Accept": "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28",
+    }
+
+
+def _empty_state():
+    return {"sent": {}, "official_pages": {}, "watchlist_seen": {}}
+
+
+def _normalize_state(state):
     if not isinstance(state, dict):
-        return {"sent": {}, "official_pages": {}}
+        return _empty_state()
     state.setdefault("sent", {})
     state.setdefault("official_pages", {})
+    state.setdefault("watchlist_seen", {})
     return state
+
+
+def load_state():
+    global _github_state_sha
+    if github_state_enabled():
+        try:
+            resp = requests.get(
+                _github_state_url(),
+                params={"ref": GITHUB_BRANCH},
+                headers=_github_headers(),
+                timeout=20,
+            )
+            if resp.status_code == 404:
+                print("  [state] no state file in GitHub yet — starting fresh")
+                return _empty_state()
+            resp.raise_for_status()
+            payload = resp.json()
+            _github_state_sha = payload.get("sha")
+            content = base64.b64decode(payload.get("content", "") or "").decode("utf-8")
+            state = _normalize_state(json.loads(content))
+            print(f"  [state] loaded {len(state['sent'])} sent items from GitHub")
+            return state
+        except Exception as ex:
+            print(f"  ⚠ GitHub state load failed ({ex}) — falling back to local file")
+    if not STATE_PATH.exists():
+        return _empty_state()
+    try:
+        with STATE_PATH.open("r", encoding="utf-8") as fh:
+            return _normalize_state(json.load(fh))
+    except Exception:
+        return _empty_state()
 
 
 def prune_state(state):
@@ -1323,13 +1479,52 @@ def prune_state(state):
         if stamp >= cutoff:
             official_pages[url] = item
     state["official_pages"] = official_pages
+    watchlist_seen = {}
+    for url, stamp in state.get("watchlist_seen", {}).items():
+        seen_dt = parse_iso_datetime(stamp)
+        if seen_dt is None or seen_dt >= cutoff:
+            watchlist_seen[url] = stamp
+    state["watchlist_seen"] = watchlist_seen
     return state
 
 
-def save_state(state):
+def save_state(state, push_remote=True):
+    global _github_state_sha
+    state = prune_state(state)
+    serialized = json.dumps(state, indent=2, sort_keys=True)
     STATE_PATH.parent.mkdir(parents=True, exist_ok=True)
     with STATE_PATH.open("w", encoding="utf-8") as fh:
-        json.dump(prune_state(state), fh, indent=2, sort_keys=True)
+        fh.write(serialized)
+    if not (push_remote and github_state_enabled()):
+        return
+    body = {
+        "message": f"chore: record digest state {now_utc().date().isoformat()} [skip render]",
+        "content": base64.b64encode(serialized.encode("utf-8")).decode("ascii"),
+        "branch": GITHUB_BRANCH,
+    }
+    for attempt in range(2):
+        if _github_state_sha:
+            body["sha"] = _github_state_sha
+        try:
+            resp = requests.put(_github_state_url(), headers=_github_headers(), json=body, timeout=20)
+            if resp.status_code in (409, 422) and attempt == 0:
+                # sha went stale (file changed since load) — refetch and retry once
+                head = requests.get(
+                    _github_state_url(),
+                    params={"ref": GITHUB_BRANCH},
+                    headers=_github_headers(),
+                    timeout=20,
+                )
+                if head.status_code == 200:
+                    _github_state_sha = head.json().get("sha")
+                continue
+            resp.raise_for_status()
+            _github_state_sha = resp.json().get("content", {}).get("sha")
+            print("  [state] committed sent-items state to GitHub")
+            return
+        except Exception as ex:
+            print(f"  ⚠ GitHub state save failed ({ex}) — state kept locally only")
+            return
 
 
 def mark_sent(state, items):
@@ -1358,6 +1553,16 @@ def mark_sent(state, items):
 def filter_unsent(articles, state):
     seen = state.get("sent", {})
     return [article for article in articles if article_key(article) not in seen]
+
+
+def mark_watchlist_shown(state, frontier_watch):
+    seen = state.setdefault("watchlist_seen", {})
+    stamp = now_utc().isoformat()
+    for items in frontier_watch.values():
+        for item in items:
+            if item.get("url"):
+                seen[item["url"]] = stamp
+    return state
 
 
 def extract_article_text(html_text):
@@ -1424,7 +1629,7 @@ def classify_update_change(previous_blocks, current_blocks):
             "change_excerpt": current_blocks[0],
         }
 
-    first_tag, _, _, j1, j2 = changes[0]
+    first_tag, _, _, j1, _ = changes[0]
     start_idx = min(j1, max(0, len(current_blocks) - 1))
     if first_tag == "delete" and start_idx >= len(current_blocks):
         start_idx = max(0, len(current_blocks) - 1)
@@ -1973,18 +2178,8 @@ def select_consultant_sections(items):
         chosen = [item for item in items if item.get("lane") == label and item.get("score", 0) >= min_score]
         sections[label] = select_diverse_items(chosen, limit=limit)
 
-    # Fallback: if too few total items passed the thresholds, show top picks scored >=5
-    # clearly labelled as below-threshold rather than silently showing an empty digest.
-    total_section_items = sum(len(v) for v in sections.values())
-    if total_section_items < MIN_DIGEST_ITEMS:
-        fallback_pool = [
-            item for item in items
-            if item.get("score", 0) >= 5
-            and not any(item in v for v in sections.values())
-        ]
-        fallback_pool = sorted(fallback_pool, key=lambda x: x.get("score", 0), reverse=True)
-        sections["_fallback"] = fallback_pool[:3]
-
+    # No volume padding: Adi prefers 1-3 genuinely high-value items over a digest
+    # filled out with below-threshold picks. A small or even empty day is fine.
     return sections
 
 
@@ -2063,10 +2258,7 @@ def build_body(blogs, papers, official_updates, frontier_watch=None, diagnostics
     sections = select_consultant_sections(combined)
 
     if any(sections.values()):
-        # Exclude the fallback bucket from the section total shown in the header
-        main_section_count = sum(len(v) for k, v in sections.items() if k != "_fallback")
-        fallback_items = sections.pop("_fallback", [])
-        total_items = main_section_count + len(fallback_items)
+        total_items = sum(len(v) for v in sections.values())
         lines.append(f"Consultant Intelligence ({total_items}):\n")
         for label, section_items in sections.items():
             if not section_items:
@@ -2074,10 +2266,6 @@ def build_body(blogs, papers, official_updates, frontier_watch=None, diagnostics
             lines.append(f"{label}:\n")
             format_items(section_items)
             featured_items.extend(section_items)
-        if fallback_items:
-            lines.append("Top picks today (below standard threshold):\n")
-            format_items(fallback_items)
-            featured_items.extend(fallback_items)
     else:
         lines.append("No notable consultant-relevant items today.\n")
 
@@ -2094,7 +2282,6 @@ def build_body(blogs, papers, official_updates, frontier_watch=None, diagnostics
 
 def main():
     today = datetime.date.today()
-    is_friday = today.weekday() == 4
     force_all = "--all" in sys.argv
     force_blogs = "--blogs" in sys.argv
     force_arxiv = "--arxiv" in sys.argv
@@ -2110,7 +2297,7 @@ def main():
     print(f"Running digest — blogs: {run_blogs}, arXiv: {run_arxiv}")
 
     blogs, papers, official_updates = [], [], []
-    frontier_watch, watch_diagnostics = fetch_frontier_watchlist()
+    frontier_watch, watch_diagnostics = fetch_frontier_watchlist(state=state)
     if watch_diagnostics:
         for message in watch_diagnostics:
             print(f"  ⚠ {message}")
@@ -2118,7 +2305,8 @@ def main():
     print("Fetching official product update pages...")
     raw_updates, page_snapshots = fetch_official_update_pages(state)
     state.setdefault("official_pages", {}).update(page_snapshots)
-    save_state(state)
+    # Local-only save here; the single GitHub commit happens after the email goes out.
+    save_state(state, push_remote=False)
     official_updates = filter_unsent(raw_updates, state)
     print(f"  {len(official_updates)} changed official pages found")
 
@@ -2158,6 +2346,7 @@ def main():
         try:
             send_email(subject, body)
             mark_sent(state, featured_items)
+            mark_watchlist_shown(state, frontier_watch)
             save_state(state)
             print("✅ Email sent.")
         except Exception as ex:

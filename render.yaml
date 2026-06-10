@@ -18,3 +18,9 @@ services:
         sync: false          # Gmail app password — set in Render dashboard
       - key: DIGEST_TO
         sync: false          # your email — set in Render dashboard
+      - key: GITHUB_TOKEN
+        sync: false          # fine-grained PAT, Contents read/write on this repo only
+      - key: GITHUB_REPO
+        value: adityarbhat/ai-digest
+      - key: GITHUB_BRANCH
+        value: main

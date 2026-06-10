@@ -1,38 +1,54 @@
 # AI Digest — CLAUDE.md
 
 ## What this project does
-Daily email digest: fetches RSS feeds → scores with Claude Haiku → emails ranked results. Runs on Render cron.
+Daily email digest: fetches RSS feeds → scores with Claude Haiku → emails ranked results. Runs on Render cron at 12:00 UTC (6 AM MDT).
 
-## Last commit: (2026-04-03)
-Overhauled sources and scoring: removed generic journalism (TechCrunch, Verge, Ars Technica),
-added practitioner/research blogs (Lilian Weng, Chip Huyen, HuggingFace, BAIR, Google Research,
-Stanford HAI, Meta AI, Microsoft Research, Replit, W&B). arXiv now runs daily (not just Fridays).
-Scoring now heavily penalizes journalism and rewards technical insight.
+## Last major change (2026-06-10)
+Fixed daily staleness and retargeted relevance:
+- **State now persists via GitHub commits.** Render cron filesystems are ephemeral, so
+  `data/sent_items.json` was wiped every run — dedupe never worked in production.
+  `load_state()`/`save_state()` now read/write the file through the GitHub Contents API
+  (one `[skip render]` commit per day after the email sends). Requires `GITHUB_TOKEN`
+  (fine-grained PAT, Contents read/write), `GITHUB_REPO`, `GITHUB_BRANCH` env vars.
+  Falls back to the local file when no token is set (local dev).
+- **Frontier watchlist deduped**: headline URLs are recorded in `watchlist_seen` and never
+  reshown within 45 days. Anthropic /news fallback now requires real article slugs.
+- **Recency window 24h → 36h** so posts published right after yesterday's run aren't missed
+  (sent-state dedupe makes the overlap safe).
+- **New sources**: Addy Osmani, Meta AI / DoorDash / Streamlit Blog via Google News RSS
+  (direct feeds 403/404), Spotify, Slack, Pinterest, Dropbox, Stripe, FastAPI releases atom,
+  Airbnb switched to AI-tagged feed.
+- **Engineering blogs are AI-gated**: `ENGINEERING_AI_GATED_SOURCES` only pass posts matching
+  `AI_TOPIC_PATTERN` (word-boundary regex) or stack keywords. `STACK_UPDATE_SOURCES`
+  (Supabase, Neon, pganalyze, Render, Streamlit, FastAPI) always pass.
+- **Papers**: up to 2/day at score 7+ (was 1 at 8+).
+- Scoring prompts updated: Adi = agentic AI coding, harness engineering, software factories,
+  MCP, Claude Code/Codex/DeepSeek, moving-industry web apps/dashboards, cloud certs.
+  Substacks he already pays for (ByteByteGo, Addy Osmani's Elevate, System Design Newsletter)
+  are deliberately NOT sources.
 
-## Active RSS sources
-- Anthropic, Meta AI → Google News RSS
-- OpenAI, Google DeepMind, Microsoft Research
-- Simon Willison, Lilian Weng, Chip Huyen, HuggingFace (practitioner blogs)
-- BAIR Blog, Google Research, Stanford HAI (university research blogs)
-- Replit, Weights & Biases (application-company engineering)
-- MIT Tech Review, Cloudflare Blog, GitHub Engineering
-- Hacker News /best
-
-## arXiv
-- Runs **daily** (was Fridays-only), 2-day lookback window, max 30 papers fetched
-- Shows top 3 papers scored 7+ (was 4 papers at 8+)
-- Query covers: agents, computer use, GUI agents, tool use, RAG, MCP, chain-of-thought, code gen
+## State invariants (do not silently change)
+- `data/sent_items.json` is the single source of truth for "already sent". In production it
+  lives in the GitHub repo, NOT the local clone — `[skip render]` commits never reach the
+  deployed build, so `load_state()` must always prefer the API when `GITHUB_TOKEN` is set.
+- Every emailed item AND every watchlist headline must be marked in state after a successful
+  send (`mark_sent` + `mark_watchlist_shown`), then `save_state(state)` (remote push).
+- The mid-run `save_state(state, push_remote=False)` is local-only by design: one GitHub
+  commit per day, after the email.
 
 ## Key env vars
-`ANTHROPIC_API_KEY`, `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`, `DIGEST_TO`
+`ANTHROPIC_API_KEY`, `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`, `DIGEST_TO`,
+`GITHUB_TOKEN`, `GITHUB_REPO`, `GITHUB_BRANCH`
 
 ## Run manually
 ```
-python aggregator.py          # blogs only (default)
+python aggregator.py          # blogs + arXiv (daily default)
 python aggregator.py --all    # blogs + arXiv
-python aggregator.py --arxiv  # arXiv only (normally Fridays-only)
+python aggregator.py --arxiv  # arXiv only
 ```
 
 ## Scoring calibration (ongoing)
-Target: 5-10 articles/day at score 6+. Fallback: show top-5 if nothing scores >=6.
-User is still calibrating — scoring prompt is in `BLOG_SCORE_PROMPT`.
+No forced volume target: quality over quantity. 1-3 high-value items on a slow day is fine,
+zero is acceptable. Never pad with below-threshold picks (the old score>=5 fallback was
+removed deliberately — do not reintroduce it). Papers: up to 2/day at 7+.
+Scoring prompts: `BLOG_SCORE_PROMPT`, `PAPER_SCORE_PROMPT`.

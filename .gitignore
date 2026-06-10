@@ -3,4 +3,3 @@ __pycache__/
 *.pyc
 .env
 .python-version
-data/sent_items.json
