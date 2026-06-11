@@ -49,7 +49,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "6252b589a588",
-      "last_seen_at": "2026-06-10T21:52:20.230785",
+      "last_seen_at": "2026-06-11T12:00:38.280147",
       "title": "Claude Code Overview",
       "updated_at": null
     },
@@ -175,7 +175,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "df4ba5a18750",
-      "last_seen_at": "2026-06-10T21:52:20.230785",
+      "last_seen_at": "2026-06-11T12:00:38.280147",
       "title": "Claude Code Tutorials",
       "updated_at": null
     },
@@ -214,12 +214,26 @@
         "Usage policy"
       ],
       "content_hash": "0e46d20631df",
-      "last_seen_at": "2026-06-10T21:52:20.230785",
+      "last_seen_at": "2026-06-11T12:00:38.280147",
       "title": "Anthropic Release Notes",
       "updated_at": null
     }
   },
   "sent": {
+    "0ffbcc1a418e9a75f6a364314be6a1a4f8fbb377": {
+      "kind": "Paper",
+      "sent_at": "2026-06-11T12:05:24.795435",
+      "source": "arXiv",
+      "title": "Claw-SWE-Bench: A Benchmark for Evaluating OpenClaw-style Agent Harnesses on Coding Tasks",
+      "url": "http://arxiv.org/abs/2606.12344v1"
+    },
+    "284177c0015e0342c872734fdae86d57ecbb7ce6": {
+      "kind": "Blog",
+      "sent_at": "2026-06-11T12:05:24.795435",
+      "source": "Hacker News",
+      "title": "AWS Bedrock to require sharing data with Anthropic for Mythos and future models",
+      "url": "https://news.ycombinator.com/item?id=48473166"
+    },
     "28e4f08ffed3ee4f5cfe1bfcea681491825e765e": {
       "kind": "Blog",
       "sent_at": "2026-06-10T21:56:22.813035",
@@ -234,6 +248,13 @@
       "title": "If Claude Fable stops helping you, you'll never know",
       "url": "https://simonwillison.net/2026/Jun/10/if-claude-fable-stops-helping-you/#atom-everything"
     },
+    "5703f2b38c06efb491ebed7f97321ca9cc62eccc": {
+      "kind": "Blog",
+      "sent_at": "2026-06-11T12:05:24.795435",
+      "source": "Simon Willison",
+      "title": "datasette-agent 0.2a0",
+      "url": "https://simonwillison.net/2026/Jun/10/datasette-agent/#atom-everything"
+    },
     "603345d8b284c0c8a2298ee4eb7a3e02cad534cc": {
       "kind": "Blog",
       "sent_at": "2026-06-10T21:56:22.813035",
@@ -247,6 +268,13 @@
       "source": "arXiv",
       "title": "Workflow-GYM: Towards Long-Horizon Evaluation of Computer-use Agentic tasks in Real-World Professional Fields",
       "url": "http://arxiv.org/abs/2606.11042v1"
+    },
+    "6f3473eb3f463b666f19bcbeb6c144f9e7ca07c2": {
+      "kind": "Blog",
+      "sent_at": "2026-06-11T12:05:24.795435",
+      "source": "Simon Willison",
+      "title": "Anthropic Walks Back Policy That Could Have \u2018Sabotaged\u2019 AI Researchers Using Claude",
+      "url": "https://simonwillison.net/2026/Jun/11/anthropic-walks-back-policy/#atom-everything"
     },
     "824abf7518f9e0af2401b2c4968bc63944e2658a": {
       "kind": "Blog",
@@ -275,19 +303,32 @@
       "source": "Neon Blog",
       "title": "A branch-first dev loop for Neon: link, checkout and env pull",
       "url": "https://neon.com/blog/branch-first-dev-loop"
+    },
+    "fe5a589bbf6ddacceefed5d499e1ed4b5bdee8e1": {
+      "kind": "Blog",
+      "sent_at": "2026-06-11T12:05:24.795435",
+      "source": "Hacker News",
+      "title": "AI agent runs amok in Fedora and elsewhere",
+      "url": "https://lwn.net/SubscriberLink/1077035/c7e7c14fbd60fae9/"
     }
   },
   "watchlist_seen": {
     "https://blog.cloudflare.com/private-origins-dns-routing/": "2026-06-10T21:37:31.151750",
     "https://claude.com/blog/claude-code-desktop-redesign": "2026-06-10T21:56:22.813265",
     "https://claude.com/blog/claude-for-foundation-models": "2026-06-10T21:37:31.151750",
+    "https://claude.com/blog/claude-managed-agents": "2026-06-11T12:05:24.795564",
     "https://claude.com/blog/claude-managed-agents-memory": "2026-06-10T21:56:22.813265",
     "https://claude.com/blog/claude-managed-agents-updates": "2026-06-10T21:37:31.151750",
     "https://claude.com/blog/connectors-for-everyday-life": "2026-06-10T21:56:22.813265",
+    "https://claude.com/blog/harnessing-claudes-intelligence": "2026-06-11T12:05:24.795564",
     "https://claude.com/blog/new-in-claude-managed-agents": "2026-06-10T21:37:31.151750",
+    "https://claude.com/blog/preparing-your-security-program-for-ai-accelerated-offense": "2026-06-11T12:05:24.795564",
     "https://openai.com/index/lseg": "2026-06-10T21:37:31.151750",
     "https://openai.com/index/nextdoor": "2026-06-10T21:37:31.151750",
     "https://openai.com/index/notion": "2026-06-10T21:56:22.813265",
-    "https://openai.com/index/prc-linked-influence-operations-ai-debates": "2026-06-10T21:37:31.151750"
+    "https://openai.com/index/openai-on-oracle-cloud": "2026-06-11T12:05:24.795564",
+    "https://openai.com/index/prc-linked-influence-operations-ai-debates": "2026-06-10T21:37:31.151750",
+    "https://openai.com/index/supporting-eu-trustworthy-ai-ecosystem": "2026-06-11T12:05:24.795564",
+    "https://openai.com/index/using-codex-to-simulate-black-holes": "2026-06-11T12:05:24.795564"
   }
 }
