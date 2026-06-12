@@ -49,7 +49,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "6252b589a588",
-      "last_seen_at": "2026-06-11T12:00:38.280147",
+      "last_seen_at": "2026-06-12T12:00:42.366303",
       "title": "Claude Code Overview",
       "updated_at": null
     },
@@ -175,7 +175,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "df4ba5a18750",
-      "last_seen_at": "2026-06-11T12:00:38.280147",
+      "last_seen_at": "2026-06-12T12:00:42.366303",
       "title": "Claude Code Tutorials",
       "updated_at": null
     },
@@ -214,12 +214,26 @@
         "Usage policy"
       ],
       "content_hash": "0e46d20631df",
-      "last_seen_at": "2026-06-11T12:00:38.280147",
+      "last_seen_at": "2026-06-12T12:00:42.366303",
       "title": "Anthropic Release Notes",
       "updated_at": null
     }
   },
   "sent": {
+    "01211a05531714713ea7e72e3d262b8970c95ec2": {
+      "kind": "Blog",
+      "sent_at": "2026-06-12T12:05:10.310793",
+      "source": "Slack Engineering",
+      "title": "Agentic Testing: Where Agents Fit in the E2E Testing Stack",
+      "url": "https://slack.engineering/agentic-testing-where-agents-fit-in-the-e2e-testing-stack/"
+    },
+    "0885bc3ea906137a27ed20b0264dba1bef17ecc8": {
+      "kind": "Blog",
+      "sent_at": "2026-06-12T12:05:10.310793",
+      "source": "Simon Willison",
+      "title": "Claude Fable is relentlessly proactive",
+      "url": "https://simonwillison.net/2026/Jun/11/fable-is-relentlessly-proactive/#atom-everything"
+    },
     "0ffbcc1a418e9a75f6a364314be6a1a4f8fbb377": {
       "kind": "Paper",
       "sent_at": "2026-06-11T12:05:24.795435",
@@ -262,6 +276,13 @@
       "title": "Quoting Andrej Karpathy",
       "url": "https://simonwillison.net/2026/Jun/9/andrej-karpathy/#atom-everything"
     },
+    "65150a078a5e9534931aef1ee2428efbf2a9b8cf": {
+      "kind": "Paper",
+      "sent_at": "2026-06-12T12:05:10.310793",
+      "source": "arXiv",
+      "title": "Recursive Agent Harnesses",
+      "url": "http://arxiv.org/abs/2606.13643v1"
+    },
     "665645886be0d1c75db0382c99c1ef76d94f8b7e": {
       "kind": "Paper",
       "sent_at": "2026-06-10T21:56:22.813035",
@@ -297,6 +318,27 @@
       "title": "The evolution of agentic surfaces: building with Claude Managed Agents",
       "url": "https://claude.com/blog/building-with-claude-managed-agents"
     },
+    "cb2882bab7c16a4b33046c9c9b0403ee3fcfebcf": {
+      "kind": "Blog",
+      "sent_at": "2026-06-12T12:05:10.310793",
+      "source": "Dropbox Tech",
+      "title": "How Dropbox uses MCP and Dash to close the design-to-code security gap",
+      "url": "https://dropbox.tech/security/dropbox-mcp-dash-design-code-security"
+    },
+    "dee0e41112de64d958c028e113757c0acc228943": {
+      "kind": "Blog",
+      "sent_at": "2026-06-12T12:05:10.310793",
+      "source": "Hacker News",
+      "title": "Anthropic apologizes for invisible Claude Fable guardrails",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/948280/anthropic-claude-fable-invisible-distillation-guardrail"
+    },
+    "e598720370c80294cf3aa599898f8e30846afa91": {
+      "kind": "Paper",
+      "sent_at": "2026-06-12T12:05:10.310793",
+      "source": "arXiv",
+      "title": "AgentBeats: Agentifying Agent Assessment for Openness, Standardization, and Reproducibility",
+      "url": "http://arxiv.org/abs/2606.13608v1"
+    },
     "e68bcfa66b2346f6a71f4fe5d3313700a725445c": {
       "kind": "Blog",
       "sent_at": "2026-06-10T21:56:22.813035",
@@ -314,6 +356,7 @@
   },
   "watchlist_seen": {
     "https://blog.cloudflare.com/private-origins-dns-routing/": "2026-06-10T21:37:31.151750",
+    "https://claude.com/blog/claude-builds-visuals": "2026-06-12T12:05:10.310953",
     "https://claude.com/blog/claude-code-desktop-redesign": "2026-06-10T21:56:22.813265",
     "https://claude.com/blog/claude-for-foundation-models": "2026-06-10T21:37:31.151750",
     "https://claude.com/blog/claude-managed-agents": "2026-06-11T12:05:24.795564",
@@ -322,12 +365,15 @@
     "https://claude.com/blog/connectors-for-everyday-life": "2026-06-10T21:56:22.813265",
     "https://claude.com/blog/harnessing-claudes-intelligence": "2026-06-11T12:05:24.795564",
     "https://claude.com/blog/new-in-claude-managed-agents": "2026-06-10T21:37:31.151750",
+    "https://claude.com/blog/observability-for-developers-building-connectors": "2026-06-12T12:05:10.310953",
     "https://claude.com/blog/preparing-your-security-program-for-ai-accelerated-offense": "2026-06-11T12:05:24.795564",
+    "https://claude.com/blog/whats-new-in-claude-managed-agents": "2026-06-12T12:05:10.310953",
     "https://openai.com/index/lseg": "2026-06-10T21:37:31.151750",
     "https://openai.com/index/nextdoor": "2026-06-10T21:37:31.151750",
     "https://openai.com/index/notion": "2026-06-10T21:56:22.813265",
     "https://openai.com/index/openai-on-oracle-cloud": "2026-06-11T12:05:24.795564",
     "https://openai.com/index/prc-linked-influence-operations-ai-debates": "2026-06-10T21:37:31.151750",
+    "https://openai.com/index/preply": "2026-06-12T12:05:10.310953",
     "https://openai.com/index/supporting-eu-trustworthy-ai-ecosystem": "2026-06-11T12:05:24.795564",
     "https://openai.com/index/using-codex-to-simulate-black-holes": "2026-06-11T12:05:24.795564"
   }
