@@ -49,7 +49,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "6252b589a588",
-      "last_seen_at": "2026-06-19T12:00:59.572621",
+      "last_seen_at": "2026-06-20T12:01:22.865668",
       "title": "Claude Code Overview",
       "updated_at": null
     },
@@ -175,7 +175,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "df4ba5a18750",
-      "last_seen_at": "2026-06-19T12:00:59.572621",
+      "last_seen_at": "2026-06-20T12:01:22.865668",
       "title": "Claude Code Tutorials",
       "updated_at": null
     },
@@ -214,7 +214,7 @@
         "Usage policy"
       ],
       "content_hash": "504ea1e5e27c",
-      "last_seen_at": "2026-06-19T12:00:59.572621",
+      "last_seen_at": "2026-06-20T12:01:22.865668",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-06-17T12:05:14.337381"
     }
@@ -226,6 +226,13 @@
       "source": "Slack Engineering",
       "title": "Agentic Testing: Where Agents Fit in the E2E Testing Stack",
       "url": "https://slack.engineering/agentic-testing-where-agents-fit-in-the-e2e-testing-stack/"
+    },
+    "04b030661d1c7c4bdff8336e0ec86bc0d2dd64c4": {
+      "kind": "Blog",
+      "sent_at": "2026-06-20T12:32:09.900722",
+      "source": "FastAPI Releases",
+      "title": "0.138.0",
+      "url": "https://github.com/fastapi/fastapi/releases/tag/0.138.0"
     },
     "0678f3da3b80c6c2b06e0cc01e633cad4c18a473": {
       "kind": "Paper",
@@ -304,6 +311,13 @@
       "title": "If Claude Fable stops helping you, you'll never know",
       "url": "https://simonwillison.net/2026/Jun/10/if-claude-fable-stops-helping-you/#atom-everything"
     },
+    "4f0d0178db1fd26655e4f50482fb14fe8dbc0e6e": {
+      "kind": "Blog",
+      "sent_at": "2026-06-20T12:32:09.900722",
+      "source": "Simon Willison",
+      "title": "Quoting Sean Lynch",
+      "url": "https://simonwillison.net/2026/Jun/19/sean-lynch/#atom-everything"
+    },
     "5703f2b38c06efb491ebed7f97321ca9cc62eccc": {
       "kind": "Blog",
       "sent_at": "2026-06-11T12:05:24.795435",
@@ -366,6 +380,13 @@
       "source": "Simon Willison",
       "title": "Anthropic Walks Back Policy That Could Have \u2018Sabotaged\u2019 AI Researchers Using Claude",
       "url": "https://simonwillison.net/2026/Jun/11/anthropic-walks-back-policy/#atom-everything"
+    },
+    "73819eb8132de55e3150c09d1d4bbd4da212242b": {
+      "kind": "Blog",
+      "sent_at": "2026-06-20T12:32:09.900722",
+      "source": "Cloudflare Blog",
+      "title": "Temporary Cloudflare Accounts for AI agents",
+      "url": "https://blog.cloudflare.com/temporary-accounts/"
     },
     "7f45f0f7074041d2d4e5724337ba251636a6bf96": {
       "kind": "Blog",
@@ -544,8 +565,11 @@
     "https://openai.com/index/preply": "2026-06-12T12:05:10.310953",
     "https://openai.com/index/supporting-eu-trustworthy-ai-ecosystem": "2026-06-11T12:05:24.795564",
     "https://openai.com/index/using-codex-to-simulate-black-holes": "2026-06-11T12:05:24.795564",
+    "https://www.anthropic.com/news/chris-olah-pope-leo-encyclical": "2026-06-20T12:32:09.900860",
     "https://www.anthropic.com/news/claude-corps": "2026-06-17T12:05:14.337520",
+    "https://www.anthropic.com/news/claude-opus-4-8": "2026-06-20T12:32:09.900860",
     "https://www.anthropic.com/news/expanding-project-glasswing": "2026-06-17T12:05:14.337520",
-    "https://www.anthropic.com/news/fable-mythos-access": "2026-06-17T12:05:14.337520"
+    "https://www.anthropic.com/news/fable-mythos-access": "2026-06-17T12:05:14.337520",
+    "https://www.anthropic.com/news/seoul-office-partnerships-korean-ai-ecosystem": "2026-06-20T12:32:09.900860"
   }
 }
