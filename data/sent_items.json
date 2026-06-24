@@ -49,7 +49,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "6252b589a588",
-      "last_seen_at": "2026-06-23T12:00:46.769726",
+      "last_seen_at": "2026-06-24T12:00:44.901870",
       "title": "Claude Code Overview",
       "updated_at": null
     },
@@ -175,7 +175,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "df4ba5a18750",
-      "last_seen_at": "2026-06-23T12:00:46.769726",
+      "last_seen_at": "2026-06-24T12:00:44.901870",
       "title": "Claude Code Tutorials",
       "updated_at": null
     },
@@ -214,7 +214,7 @@
         "Usage policy"
       ],
       "content_hash": "504ea1e5e27c",
-      "last_seen_at": "2026-06-23T12:00:46.769726",
+      "last_seen_at": "2026-06-24T12:00:44.901870",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-06-17T12:05:14.337381"
     }
@@ -367,6 +367,13 @@
       "title": "datasette-agent 0.3a0",
       "url": "https://simonwillison.net/2026/Jun/15/datasette-agent/#atom-everything"
     },
+    "633073db66e3b02ac0af09bf4d76414e6a9c7e6d": {
+      "kind": "Blog",
+      "sent_at": "2026-06-24T12:04:31.769597",
+      "source": "Simon Willison",
+      "title": "OPFS + Pyodide test harness",
+      "url": "https://simonwillison.net/2026/Jun/23/opfs-pyodide/#atom-everything"
+    },
     "65150a078a5e9534931aef1ee2428efbf2a9b8cf": {
       "kind": "Paper",
       "sent_at": "2026-06-12T12:05:10.310793",
@@ -500,6 +507,13 @@
       "title": "The evolution of agentic surfaces: building with Claude Managed Agents",
       "url": "https://claude.com/blog/building-with-claude-managed-agents"
     },
+    "ca1a74173cf3ecfe8f171091001fb2e880863389": {
+      "kind": "Blog",
+      "sent_at": "2026-06-24T12:04:31.769597",
+      "source": "HuggingFace",
+      "title": "Build real agentic apps using CUGA: two dozen working examples on a lightweight harness",
+      "url": "https://huggingface.co/blog/ibm-research/cuga-apps"
+    },
     "cb2882bab7c16a4b33046c9c9b0403ee3fcfebcf": {
       "kind": "Blog",
       "sent_at": "2026-06-12T12:05:10.310793",
@@ -542,6 +556,13 @@
       "title": "A branch-first dev loop for Neon: link, checkout and env pull",
       "url": "https://neon.com/blog/branch-first-dev-loop"
     },
+    "e74320f6d0015e17f329491bc923af38dbc3c65a": {
+      "kind": "Blog",
+      "sent_at": "2026-06-24T12:04:31.769597",
+      "source": "Claude Blog",
+      "title": "Agent identity in Claude Tag: a new access model for autonomous, team-wide AI",
+      "url": "https://claude.com/blog/agent-identity-access-model"
+    },
     "fc7e5dbf308a75d415ed687f027f92ff1a442f57": {
       "kind": "Blog",
       "sent_at": "2026-06-17T12:05:14.337381",
@@ -563,6 +584,7 @@
     "https://blog.cloudflare.com/dmarc-management-ga/": "2026-06-17T12:05:14.337520",
     "https://blog.cloudflare.com/ensemble-ai-talent-joins-cloudflare/": "2026-06-16T12:05:28.721454",
     "https://blog.cloudflare.com/hyper-bug/": "2026-06-23T12:04:50.588874",
+    "https://blog.cloudflare.com/post-quantum-eo-2026/": "2026-06-24T12:04:31.769763",
     "https://blog.cloudflare.com/private-origins-dns-routing/": "2026-06-10T21:37:31.151750",
     "https://blog.cloudflare.com/scaling-security-scans/": "2026-06-13T12:04:57.026480",
     "https://claude.com/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code": "2026-06-15T12:04:39.740414",
@@ -600,6 +622,8 @@
     "https://openai.com/index/chatgpt-enterprise-spend-controls": "2026-06-19T12:32:01.945543",
     "https://openai.com/index/daybreak-securing-the-world": "2026-06-23T12:04:50.588874",
     "https://openai.com/index/diagnose-rare-childhood-diseases": "2026-06-19T12:32:01.945543",
+    "https://openai.com/index/gpt-5-immunology-mystery": "2026-06-24T12:04:31.769763",
+    "https://openai.com/index/helping-build-shared-standards-for-advanced-ai": "2026-06-24T12:04:31.769763",
     "https://openai.com/index/improving-health-intelligence-in-chatgpt": "2026-06-19T12:32:01.945543",
     "https://openai.com/index/introducing-openai-partner-network": "2026-06-15T12:04:39.740414",
     "https://openai.com/index/lseg": "2026-06-10T21:37:31.151750",
