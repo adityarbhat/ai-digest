@@ -49,7 +49,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "6252b589a588",
-      "last_seen_at": "2026-06-24T12:00:44.901870",
+      "last_seen_at": "2026-06-25T12:00:52.766099",
       "title": "Claude Code Overview",
       "updated_at": null
     },
@@ -175,7 +175,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "df4ba5a18750",
-      "last_seen_at": "2026-06-24T12:00:44.901870",
+      "last_seen_at": "2026-06-25T12:00:52.766099",
       "title": "Claude Code Tutorials",
       "updated_at": null
     },
@@ -214,7 +214,7 @@
         "Usage policy"
       ],
       "content_hash": "504ea1e5e27c",
-      "last_seen_at": "2026-06-24T12:00:44.901870",
+      "last_seen_at": "2026-06-25T12:00:52.766099",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-06-17T12:05:14.337381"
     }
@@ -269,6 +269,13 @@
       "title": "Identity verification on Claude",
       "url": "https://support.claude.com/en/articles/14328960-identity-verification-on-claude"
     },
+    "14a805b0a010f8ac76cf7cadf91e20b4c31505da": {
+      "kind": "Paper",
+      "sent_at": "2026-06-25T12:04:58.851017",
+      "source": "arXiv",
+      "title": "The Unfireable Safety Kernel: Execution-Time AI Alignment for AI Agents and Other Escapable AI Systems",
+      "url": "http://arxiv.org/abs/2606.26057v1"
+    },
     "1a9fdae985a6b7d06969943c33bae0769096d768": {
       "kind": "Blog",
       "sent_at": "2026-06-18T12:32:27.607873",
@@ -304,6 +311,13 @@
       "title": "The text in Claude Code\u2019s \u201cExtended Thinking\u201d output",
       "url": "https://patrickmccanna.net/the-text-in-claude-codes-extended-thinking-output-is-not-authentic/"
     },
+    "2f6581ea473f7fc9daf78c4702d37fb84475beaa": {
+      "kind": "Paper",
+      "sent_at": "2026-06-25T12:04:58.851017",
+      "source": "arXiv",
+      "title": "Why Multi-Step Tool-Use Reinforcement Learning Collapses and How Supervisory Signals Fix It",
+      "url": "http://arxiv.org/abs/2606.26027v1"
+    },
     "41d1cfbc618596a9f222e42fa1f2db9d705f6fef": {
       "kind": "Blog",
       "sent_at": "2026-06-18T12:32:27.607873",
@@ -325,12 +339,26 @@
       "title": "If Claude Fable stops helping you, you'll never know",
       "url": "https://simonwillison.net/2026/Jun/10/if-claude-fable-stops-helping-you/#atom-everything"
     },
+    "4d0d26f4045f6f252c2c10b466f13d2a41ba2b8d": {
+      "kind": "Blog",
+      "sent_at": "2026-06-25T12:04:58.851017",
+      "source": "Google DeepMind",
+      "title": "Introducing computer use in Gemini 3.5 Flash",
+      "url": "https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash/"
+    },
     "4f0d0178db1fd26655e4f50482fb14fe8dbc0e6e": {
       "kind": "Blog",
       "sent_at": "2026-06-20T12:32:09.900722",
       "source": "Simon Willison",
       "title": "Quoting Sean Lynch",
       "url": "https://simonwillison.net/2026/Jun/19/sean-lynch/#atom-everything"
+    },
+    "52ddfb34a989093123abea1950bb9a02baf77cde": {
+      "kind": "Blog",
+      "sent_at": "2026-06-25T12:04:58.851017",
+      "source": "Simon Willison",
+      "title": "simonw/browser-compat-db",
+      "url": "https://simonwillison.net/2026/Jun/24/browser-compat-db/#atom-everything"
     },
     "5703f2b38c06efb491ebed7f97321ca9cc62eccc": {
       "kind": "Blog",
@@ -584,12 +612,14 @@
     "https://blog.cloudflare.com/dmarc-management-ga/": "2026-06-17T12:05:14.337520",
     "https://blog.cloudflare.com/ensemble-ai-talent-joins-cloudflare/": "2026-06-16T12:05:28.721454",
     "https://blog.cloudflare.com/hyper-bug/": "2026-06-23T12:04:50.588874",
+    "https://blog.cloudflare.com/oauth-for-all/": "2026-06-25T12:04:58.851134",
     "https://blog.cloudflare.com/post-quantum-eo-2026/": "2026-06-24T12:04:31.769763",
     "https://blog.cloudflare.com/private-origins-dns-routing/": "2026-06-10T21:37:31.151750",
     "https://blog.cloudflare.com/scaling-security-scans/": "2026-06-13T12:04:57.026480",
     "https://claude.com/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code": "2026-06-15T12:04:39.740414",
     "https://claude.com/blog/artifacts-in-claude-code": "2026-06-19T12:32:01.945543",
     "https://claude.com/blog/best-practices-for-getting-started-with-claude-cowork": "2026-06-14T12:03:39.567586",
+    "https://claude.com/blog/building-effective-human-agent-teams": "2026-06-25T12:04:58.851134",
     "https://claude.com/blog/claude-builds-visuals": "2026-06-12T12:05:10.310953",
     "https://claude.com/blog/claude-code-desktop-redesign": "2026-06-10T21:56:22.813265",
     "https://claude.com/blog/claude-design-stays-on-brand-for-daily-work": "2026-06-18T12:32:27.608101",
@@ -624,12 +654,14 @@
     "https://openai.com/index/diagnose-rare-childhood-diseases": "2026-06-19T12:32:01.945543",
     "https://openai.com/index/gpt-5-immunology-mystery": "2026-06-24T12:04:31.769763",
     "https://openai.com/index/helping-build-shared-standards-for-advanced-ai": "2026-06-24T12:04:31.769763",
+    "https://openai.com/index/how-agents-are-transforming-work": "2026-06-25T12:04:58.851134",
     "https://openai.com/index/improving-health-intelligence-in-chatgpt": "2026-06-19T12:32:01.945543",
     "https://openai.com/index/introducing-openai-partner-network": "2026-06-15T12:04:39.740414",
     "https://openai.com/index/lseg": "2026-06-10T21:37:31.151750",
     "https://openai.com/index/nextdoor": "2026-06-10T21:37:31.151750",
     "https://openai.com/index/notion": "2026-06-10T21:56:22.813265",
     "https://openai.com/index/omio": "2026-06-23T12:04:50.588874",
+    "https://openai.com/index/openai-broadcom-jalapeno-inference-chip": "2026-06-25T12:04:58.851134",
     "https://openai.com/index/openai-on-oracle-cloud": "2026-06-11T12:05:24.795564",
     "https://openai.com/index/patch-the-planet": "2026-06-23T12:04:50.588874",
     "https://openai.com/index/prc-linked-influence-operations-ai-debates": "2026-06-10T21:37:31.151750",
