@@ -49,7 +49,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "6252b589a588",
-      "last_seen_at": "2026-06-25T12:00:52.766099",
+      "last_seen_at": "2026-06-26T12:01:05.470360",
       "title": "Claude Code Overview",
       "updated_at": null
     },
@@ -175,7 +175,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "df4ba5a18750",
-      "last_seen_at": "2026-06-25T12:00:52.766099",
+      "last_seen_at": "2026-06-26T12:01:05.470360",
       "title": "Claude Code Tutorials",
       "updated_at": null
     },
@@ -191,7 +191,7 @@
         "Life sciences",
         "Partners",
         "Claude on AWS",
-        "Google Cloud's Vertex AI",
+        "Claude on Google Cloud",
         "Use cases",
         "Connectors",
         "Customer stories",
@@ -213,10 +213,10 @@
         "Terms of service: Consumer",
         "Usage policy"
       ],
-      "content_hash": "504ea1e5e27c",
-      "last_seen_at": "2026-06-25T12:00:52.766099",
+      "content_hash": "1d0cd2f3a49d",
+      "last_seen_at": "2026-06-26T12:04:38.973334",
       "title": "Anthropic Release Notes",
-      "updated_at": "2026-06-17T12:05:14.337381"
+      "updated_at": "2026-06-26T12:04:38.973334"
     }
   },
   "sent": {
@@ -297,6 +297,13 @@
       "title": "Claude Fable 5",
       "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5"
     },
+    "2b0040d39ca672fb782477a642131cd09982bc31": {
+      "kind": "Blog",
+      "sent_at": "2026-06-26T12:04:38.973334",
+      "source": "Anthropic Docs",
+      "title": "Anthropic Release Notes",
+      "url": "https://docs.anthropic.com/en/release-notes/overview"
+    },
     "2b7ecb3e94b0d96c6e0937e77df2ff32440bed0a": {
       "kind": "Paper",
       "sent_at": "2026-06-17T12:05:14.337381",
@@ -317,6 +324,13 @@
       "source": "arXiv",
       "title": "Why Multi-Step Tool-Use Reinforcement Learning Collapses and How Supervisory Signals Fix It",
       "url": "http://arxiv.org/abs/2606.26027v1"
+    },
+    "357356894b7ec189b70170529ebdeacbdea8f33a": {
+      "kind": "Paper",
+      "sent_at": "2026-06-26T12:04:38.973334",
+      "source": "arXiv",
+      "title": "The Spec Growth Engine: Spec-Anchored, Code-Coupled, Drift-Enforced Architecture for AI-Assisted Software Development",
+      "url": "http://arxiv.org/abs/2606.27045v1"
     },
     "41d1cfbc618596a9f222e42fa1f2db9d705f6fef": {
       "kind": "Blog",
@@ -493,12 +507,26 @@
       "title": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5",
       "url": "https://simonwillison.net/2026/Jun/13/us-government-directive-to-suspend-access/#atom-everything"
     },
+    "a6a8d3b1130ee5dd33319565b58a2d9d8294c798": {
+      "kind": "Blog",
+      "sent_at": "2026-06-26T12:04:38.973334",
+      "source": "Dropbox Tech",
+      "title": "How we used DSPy to turn AI evaluations into better responses in Dash chat",
+      "url": "https://dropbox.tech/machine-learning/how-we-turned-ai-evaluations-into-better-responses-in-dash-chat"
+    },
     "a9e51196b75cfcc52c541c7f87916c6a93d3545f": {
       "kind": "Paper",
       "sent_at": "2026-06-23T12:04:50.588756",
       "source": "arXiv",
       "title": "AOHP: An Open-Source OS-Level Agent Harness for Personalized, Efficient and Secure Interaction",
       "url": "http://arxiv.org/abs/2606.23449v1"
+    },
+    "ae7dfc3b387ef4c2c5b2d4299922b3c645720d86": {
+      "kind": "Blog",
+      "sent_at": "2026-06-26T12:04:38.973334",
+      "source": "FastAPI Releases",
+      "title": "0.138.1",
+      "url": "https://github.com/fastapi/fastapi/releases/tag/0.138.1"
     },
     "b46f0d11f4652e15233545491434adbc2d9705f0": {
       "kind": "Blog",
@@ -615,6 +643,7 @@
     "https://blog.cloudflare.com/oauth-for-all/": "2026-06-25T12:04:58.851134",
     "https://blog.cloudflare.com/post-quantum-eo-2026/": "2026-06-24T12:04:31.769763",
     "https://blog.cloudflare.com/private-origins-dns-routing/": "2026-06-10T21:37:31.151750",
+    "https://blog.cloudflare.com/rollbacks-for-workflows/": "2026-06-26T12:04:38.973471",
     "https://blog.cloudflare.com/scaling-security-scans/": "2026-06-13T12:04:57.026480",
     "https://claude.com/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code": "2026-06-15T12:04:39.740414",
     "https://claude.com/blog/artifacts-in-claude-code": "2026-06-19T12:32:01.945543",
@@ -678,6 +707,7 @@
     "https://www.anthropic.com/news/dxc-anthropic-alliance": "2026-06-21T12:31:23.180324",
     "https://www.anthropic.com/news/expanding-project-glasswing": "2026-06-17T12:05:14.337520",
     "https://www.anthropic.com/news/fable-mythos-access": "2026-06-17T12:05:14.337520",
+    "https://www.anthropic.com/news/introducing-claude-tag": "2026-06-26T12:04:38.973471",
     "https://www.anthropic.com/news/seoul-office-partnerships-korean-ai-ecosystem": "2026-06-20T12:32:09.900860",
     "https://www.anthropic.com/news/services-track-partner-hub": "2026-06-22T12:31:28.939282",
     "https://www.anthropic.com/news/tcs-anthropic-partnership": "2026-06-21T12:31:23.180324"
