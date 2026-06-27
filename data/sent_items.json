@@ -49,7 +49,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "6252b589a588",
-      "last_seen_at": "2026-06-26T12:01:05.470360",
+      "last_seen_at": "2026-06-27T12:01:07.423755",
       "title": "Claude Code Overview",
       "updated_at": null
     },
@@ -175,7 +175,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "df4ba5a18750",
-      "last_seen_at": "2026-06-26T12:01:05.470360",
+      "last_seen_at": "2026-06-27T12:01:07.423755",
       "title": "Claude Code Tutorials",
       "updated_at": null
     },
@@ -214,7 +214,7 @@
         "Usage policy"
       ],
       "content_hash": "1d0cd2f3a49d",
-      "last_seen_at": "2026-06-26T12:04:38.973334",
+      "last_seen_at": "2026-06-27T12:01:07.423755",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-06-26T12:04:38.973334"
     }
@@ -268,6 +268,13 @@
       "source": "Hacker News",
       "title": "Identity verification on Claude",
       "url": "https://support.claude.com/en/articles/14328960-identity-verification-on-claude"
+    },
+    "1303543b92a9427c86b942fb1afb107a0936a00d": {
+      "kind": "Blog",
+      "sent_at": "2026-06-27T12:04:47.036594",
+      "source": "Hacker News",
+      "title": "U.S. allows Anthropic to release Mythos AI to \u2018trusted\u2019 US organizations",
+      "url": "https://www.semafor.com/article/06/27/2026/us-releases-powerful-anthropic-model-mythos-to-some-us-companies"
     },
     "14a805b0a010f8ac76cf7cadf91e20b4c31505da": {
       "kind": "Paper",
@@ -388,6 +395,13 @@
       "title": "Capable but Careless: Do Computer-Use Agents Follow Contextual Integrity?",
       "url": "http://arxiv.org/abs/2606.23189v1"
     },
+    "5a141c1598717e362274003a23e2571ab2e095b5": {
+      "kind": "Paper",
+      "sent_at": "2026-06-27T12:04:47.036594",
+      "source": "arXiv",
+      "title": "A Process Harness for Uplifting Legacy Workflows to Agentic BPM: Design and Realization in CUGA FLO",
+      "url": "http://arxiv.org/abs/2606.27188v1"
+    },
     "5a4b35771a9603aaab5ea56fef7c6c3bc8be67f9": {
       "kind": "Paper",
       "sent_at": "2026-06-18T12:32:27.607873",
@@ -444,12 +458,26 @@
       "title": "HyperTool: Beyond Step-Wise Tool Calls for Tool-Augmented Agents",
       "url": "http://arxiv.org/abs/2606.13663v1"
     },
+    "6b636dc57332b455b8f20106aa0dd3682b7f8fd9": {
+      "kind": "Blog",
+      "sent_at": "2026-06-27T12:04:47.036594",
+      "source": "OpenAI",
+      "title": "Previewing GPT-5.6 Sol: a next-generation model",
+      "url": "https://openai.com/index/previewing-gpt-5-6-sol"
+    },
     "6f3473eb3f463b666f19bcbeb6c144f9e7ca07c2": {
       "kind": "Blog",
       "sent_at": "2026-06-11T12:05:24.795435",
       "source": "Simon Willison",
       "title": "Anthropic Walks Back Policy That Could Have \u2018Sabotaged\u2019 AI Researchers Using Claude",
       "url": "https://simonwillison.net/2026/Jun/11/anthropic-walks-back-policy/#atom-everything"
+    },
+    "6f3745f910d935000ba51767f1853a7d25db21de": {
+      "kind": "Blog",
+      "sent_at": "2026-06-27T12:04:47.036594",
+      "source": "Hacker News",
+      "title": "DeepSeek open-sources inference optimizations with 60\u201385% faster generation [pdf]",
+      "url": "https://github.com/deepseek-ai/DeepSpec/blob/main/DSpark_paper.pdf"
     },
     "73819eb8132de55e3150c09d1d4bbd4da212242b": {
       "kind": "Blog",
@@ -478,6 +506,13 @@
       "source": "Spotify Engineering",
       "title": "Encoding Your Domain Expert: The Context Layer Behind Spotify's Data Assistant",
       "url": "https://engineering.atspotify.com/2026/6/encoding-your-domain-expert-the-context-layer-behind-spotifys-data-assistant/"
+    },
+    "838c2d1a53548b47b9751f1f2854992a40fe63c4": {
+      "kind": "Paper",
+      "sent_at": "2026-06-27T12:04:47.036594",
+      "source": "arXiv",
+      "title": "Where Do CoT Training Gains Land in LLM based Agents?",
+      "url": "http://arxiv.org/abs/2606.26935v1"
     },
     "8f5f73a05a9a61bb4cbb4b5a464f33c8ae2447ac": {
       "kind": "Blog",
