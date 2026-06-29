@@ -49,7 +49,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "6252b589a588",
-      "last_seen_at": "2026-06-28T12:01:04.014785",
+      "last_seen_at": "2026-06-29T12:01:11.951283",
       "title": "Claude Code Overview",
       "updated_at": null
     },
@@ -175,7 +175,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "df4ba5a18750",
-      "last_seen_at": "2026-06-28T12:01:04.014785",
+      "last_seen_at": "2026-06-29T12:01:11.951283",
       "title": "Claude Code Tutorials",
       "updated_at": null
     },
@@ -214,7 +214,7 @@
         "Usage policy"
       ],
       "content_hash": "1d0cd2f3a49d",
-      "last_seen_at": "2026-06-28T12:01:04.014785",
+      "last_seen_at": "2026-06-29T12:01:11.951283",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-06-26T12:04:38.973334"
     }
@@ -254,6 +254,13 @@
       "source": "InfoQ Architecture News",
       "title": "AI Agent Identity and Permission Challenges: How Uber and Auth0 Are Rethinking Access Control",
       "url": "https://www.infoq.com/news/2026/06/ai-agent-identity-uber-auth0/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Architecture-news"
+    },
+    "0fb195b57e36cf7b393c4169a50db3148a579793": {
+      "kind": "Blog",
+      "sent_at": "2026-06-29T12:04:09.335029",
+      "source": "Hacker News",
+      "title": "GLM 5.2 beats Claude in our benchmarks",
+      "url": "https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/"
     },
     "0ffbcc1a418e9a75f6a364314be6a1a4f8fbb377": {
       "kind": "Paper",
@@ -408,6 +415,13 @@
       "source": "arXiv",
       "title": "VISUALSKILL: Multimodal Skills for Computer-Use Agents",
       "url": "http://arxiv.org/abs/2606.18448v1"
+    },
+    "5eafa775c2f968e1832513ad46e464505a92d9f0": {
+      "kind": "Blog",
+      "sent_at": "2026-06-29T12:04:09.335029",
+      "source": "Simon Willison",
+      "title": "Quoting Jon Udell",
+      "url": "https://simonwillison.net/2026/Jun/28/jon-udell/#atom-everything"
     },
     "603345d8b284c0c8a2298ee4eb7a3e02cad534cc": {
       "kind": "Blog",
@@ -722,6 +736,7 @@
     "https://openai.com/index/improving-health-intelligence-in-chatgpt": "2026-06-19T12:32:01.945543",
     "https://openai.com/index/introducing-openai-partner-network": "2026-06-15T12:04:39.740414",
     "https://openai.com/index/lseg": "2026-06-10T21:37:31.151750",
+    "https://openai.com/index/mapping-ai-jobs-transition-eu": "2026-06-29T12:04:09.335154",
     "https://openai.com/index/nextdoor": "2026-06-10T21:37:31.151750",
     "https://openai.com/index/notion": "2026-06-10T21:56:22.813265",
     "https://openai.com/index/omio": "2026-06-23T12:04:50.588874",
