@@ -3,6 +3,26 @@
 ## What this project does
 Daily email digest: fetches RSS feeds → scores with Claude Haiku → emails ranked results. Runs on Render cron at 12:00 UTC (6 AM MDT).
 
+## Last major change (2026-06-29)
+Added 7 strong-engineering-culture company blogs and fixed a dead feed. All 7 are in
+`ENGINEERING_AI_GATED_SOURCES`, so only AI/agentic/system-design posts pass the
+`AI_TOPIC_PATTERN` gate; each is also wired into `SOURCE_PRIORITY` (83–85) and
+`SOURCE_CAPS` (1), mirroring the existing engineering-blog pattern.
+- **New sources**: Instacart (`tech.instacart.com`), Lyft (`eng.lyft.com`), Booking.com
+  (`medium.com/booking-com-development`) — all Medium-backed direct feeds; Etsy Code as
+  Craft (`etsy.com/codeascraft/rss`); Grab, Shopify, LinkedIn via Google News RSS mirror
+  (direct RSS dead or HTML-only).
+- **Uber Engineering feed fixed**: `uber.com/blog/engineering/rss/` now returns 0 entries
+  (silently contributed nothing). Switched to a Google News mirror.
+- **Rejected as dead/off-topic** (do not re-add without re-verifying): Wise (last post
+  494d ago), Canva (252d), Notion (empty feed), Discord (product changelogs, not eng),
+  Figma (product/design, not eng).
+- **Maintenance landmine**: company RSS feeds rot silently — a dead feed yields 0 entries,
+  not an error, so it disappears from the digest unnoticed. When adding/auditing a blog,
+  verify the feed actually returns dated entries; fall back to a Google News `site:` mirror
+  when the direct feed 403s/404s or empties out (the established pattern for Meta AI,
+  DoorDash, Streamlit, Uber, Grab, Shopify, LinkedIn).
+
 ## Last major change (2026-06-10)
 Scoring fix (critical): `score()` had `max_tokens=800`, which truncated Haiku's JSON on
 EVERY batch — all articles silently defaulted to score 5 for weeks (the old 5/10 items in
