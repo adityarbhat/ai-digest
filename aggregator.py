@@ -71,7 +71,7 @@ BLOGS = [
     ("AWS Engineering",      "https://aws.amazon.com/blogs/developer/feed/"),
     ("Meta Engineering",     "https://engineering.fb.com/feed/"),
     ("Airbnb Engineering",   "https://medium.com/feed/airbnb-engineering/tagged/ai"),  # AI-tagged posts only
-    ("Uber Engineering",     "https://www.uber.com/blog/engineering/rss/"),
+    ("Uber Engineering",     "https://news.google.com/rss/search?q=%22Uber+Engineering%22+blog"),  # direct RSS now returns 0 entries; Google News mirror
     ("Netflix TechBlog",     "https://netflixtechblog.com/feed"),
     ("DoorDash Engineering", "https://news.google.com/rss/search?q=site:careersatdoordash.com"),  # direct RSS 403s; Google News mirror
     ("Spotify Engineering",  "https://engineering.atspotify.com/feed"),
@@ -79,6 +79,13 @@ BLOGS = [
     ("Pinterest Engineering", "https://medium.com/feed/pinterest-engineering"),
     ("Dropbox Tech",         "https://dropbox.tech/feed"),
     ("Stripe Blog",          "https://stripe.com/blog/feed.rss"),
+    ("Instacart Engineering", "https://tech.instacart.com/feed"),               # Medium-backed; ML/marketplace eng
+    ("Lyft Engineering",     "https://eng.lyft.com/feed"),                      # Medium-backed; data/ML platform
+    ("Etsy Code as Craft",   "https://www.etsy.com/codeascraft/rss"),           # long-running eng blog; AI/ML + system design
+    ("Booking.com Engineering", "https://medium.com/feed/booking-com-development"),  # Medium-backed
+    ("Grab Engineering",     "https://news.google.com/rss/search?q=site:engineering.grab.com"),  # direct RSS dead; Google News mirror
+    ("Shopify Engineering",  "https://news.google.com/rss/search?q=site:shopify.engineering"),   # .atom redirects to HTML; Google News mirror
+    ("LinkedIn Engineering", "https://news.google.com/rss/search?q=site:linkedin.com/blog/engineering"),  # no direct RSS; Google News mirror
     ("Brookings AI",    "https://www.brookings.edu/topic/artificial-intelligence/feed/"),
     ("a]6z",            "https://a16z.com/feed/"),
     # Architecture / distributed systems / software delivery
@@ -293,6 +300,13 @@ SOURCE_PRIORITY = {
     "Pinterest Engineering": 82,
     "Dropbox Tech": 82,
     "Stripe Blog": 84,
+    "Instacart Engineering": 85,
+    "Lyft Engineering": 85,
+    "Etsy Code as Craft": 84,
+    "Booking.com Engineering": 83,
+    "Grab Engineering": 84,
+    "Shopify Engineering": 85,
+    "LinkedIn Engineering": 84,
     "Streamlit Blog": 90,
     "FastAPI Releases": 90,
     "Addy Osmani": 88,
@@ -337,6 +351,13 @@ SOURCE_CAPS = {
     "Pinterest Engineering": 1,
     "Dropbox Tech": 1,
     "Stripe Blog": 1,
+    "Instacart Engineering": 1,
+    "Lyft Engineering": 1,
+    "Etsy Code as Craft": 1,
+    "Booking.com Engineering": 1,
+    "Grab Engineering": 1,
+    "Shopify Engineering": 1,
+    "LinkedIn Engineering": 1,
     "Streamlit Blog": 1,
     "FastAPI Releases": 1,
     "Addy Osmani": 1,
@@ -380,6 +401,13 @@ ENGINEERING_AI_GATED_SOURCES = {
     "Dropbox Tech",
     "Stripe Blog",
     "GitHub Engineering",
+    "Instacart Engineering",
+    "Lyft Engineering",
+    "Etsy Code as Craft",
+    "Booking.com Engineering",
+    "Grab Engineering",
+    "Shopify Engineering",
+    "LinkedIn Engineering",
 }
 # Product-update feeds for Adi's own stack: always relevant, even when the title
 # is just a version number (e.g. FastAPI release tags).
