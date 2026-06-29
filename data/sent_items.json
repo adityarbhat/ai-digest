@@ -49,7 +49,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "6252b589a588",
-      "last_seen_at": "2026-06-29T12:01:11.951283",
+      "last_seen_at": "2026-06-29T20:10:07.954200",
       "title": "Claude Code Overview",
       "updated_at": null
     },
@@ -175,7 +175,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "df4ba5a18750",
-      "last_seen_at": "2026-06-29T12:01:11.951283",
+      "last_seen_at": "2026-06-29T20:10:07.954200",
       "title": "Claude Code Tutorials",
       "updated_at": null
     },
@@ -214,7 +214,7 @@
         "Usage policy"
       ],
       "content_hash": "1d0cd2f3a49d",
-      "last_seen_at": "2026-06-29T12:01:11.951283",
+      "last_seen_at": "2026-06-29T20:10:07.954200",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-06-26T12:04:38.973334"
     }
@@ -598,6 +598,13 @@
       "title": "Shipping psql without psql: a pure-TypeScript Postgres client in neonctl",
       "url": "https://neon.com/blog/shipping-psql-without-psql"
     },
+    "c22eb6bf9d7744c1dd57d595aacc2d39678e0525": {
+      "kind": "Blog",
+      "sent_at": "2026-06-29T20:13:12.936686",
+      "source": "Claude Blog",
+      "title": "Claude in Microsoft Foundry is now generally available",
+      "url": "https://claude.com/blog/claude-in-microsoft-foundry"
+    },
     "c46831ade3a89b20d5d2ef5431714540c0b76958": {
       "kind": "Blog",
       "sent_at": "2026-06-19T12:32:01.945446",
@@ -625,6 +632,13 @@
       "source": "Dropbox Tech",
       "title": "How Dropbox uses MCP and Dash to close the design-to-code security gap",
       "url": "https://dropbox.tech/security/dropbox-mcp-dash-design-code-security"
+    },
+    "ccff3f3809a032c2f37bf673237f0cabe23b7509": {
+      "kind": "Blog",
+      "sent_at": "2026-06-29T20:13:12.936686",
+      "source": "Simon Willison",
+      "title": "Ornith-1.0: Self-Scaffolding LLMs for Agentic Coding",
+      "url": "https://simonwillison.net/2026/Jun/29/ornith/#atom-everything"
     },
     "dee0e41112de64d958c028e113757c0acc228943": {
       "kind": "Blog",
