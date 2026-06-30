@@ -49,7 +49,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "6252b589a588",
-      "last_seen_at": "2026-06-29T20:10:07.954200",
+      "last_seen_at": "2026-06-30T12:00:38.096430",
       "title": "Claude Code Overview",
       "updated_at": null
     },
@@ -175,7 +175,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "df4ba5a18750",
-      "last_seen_at": "2026-06-29T20:10:07.954200",
+      "last_seen_at": "2026-06-30T12:00:38.096430",
       "title": "Claude Code Tutorials",
       "updated_at": null
     },
@@ -214,7 +214,7 @@
         "Usage policy"
       ],
       "content_hash": "1d0cd2f3a49d",
-      "last_seen_at": "2026-06-29T20:10:07.954200",
+      "last_seen_at": "2026-06-30T12:00:38.096430",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-06-26T12:04:38.973334"
     }
@@ -233,6 +233,13 @@
       "source": "FastAPI Releases",
       "title": "0.138.0",
       "url": "https://github.com/fastapi/fastapi/releases/tag/0.138.0"
+    },
+    "05e22dbecb91aa3cff2578acdfc9d3913c2895fd": {
+      "kind": "Blog",
+      "sent_at": "2026-06-30T12:05:14.072710",
+      "source": "Microsoft Research",
+      "title": "Memora: A Harmonic Memory Representation Balancing Abstraction and Specificity",
+      "url": "https://www.microsoft.com/en-us/research/blog/memora-a-harmonic-memory-representation-balancing-abstraction-and-specificity/"
     },
     "0678f3da3b80c6c2b06e0cc01e633cad4c18a473": {
       "kind": "Paper",
@@ -366,6 +373,13 @@
       "source": "Simon Willison",
       "title": "If Claude Fable stops helping you, you'll never know",
       "url": "https://simonwillison.net/2026/Jun/10/if-claude-fable-stops-helping-you/#atom-everything"
+    },
+    "4b728f0656b24dfdaee4d6692b7d934c03dbec36": {
+      "kind": "Blog",
+      "sent_at": "2026-06-30T12:05:14.072710",
+      "source": "Supabase Engineering",
+      "title": "Agentic Coding on Supabase with OpenCode OpenCode integrates with Supabase. Connect your agent to your database, Edge Functions, and logs. MCP setup is configured automatically. Author: Eric Kharitonashvili Published 30 June 2026 \u00b7 2 minute read",
+      "url": "https://supabase.com/blog/agentic-coding-on-supabase-with-opencode"
     },
     "4d0d26f4045f6f252c2c10b466f13d2a41ba2b8d": {
       "kind": "Blog",
@@ -612,6 +626,13 @@
       "title": "Build your own vulnerability harness",
       "url": "https://blog.cloudflare.com/build-your-own-vulnerability-harness/"
     },
+    "c61270286fbfb10780af79e07d688db75226cdd9": {
+      "kind": "Paper",
+      "sent_at": "2026-06-30T12:05:14.072710",
+      "source": "arXiv",
+      "title": "TraceLab: Characterizing Coding Agent Workloads for LLM Serving",
+      "url": "http://arxiv.org/abs/2606.30560v1"
+    },
     "c8eff483a3a740aefcf98519ab516385b47a7d02": {
       "kind": "Blog",
       "sent_at": "2026-06-10T21:56:22.813035",
@@ -726,6 +747,7 @@
     "https://claude.com/blog/how-anthropic-uses-claude-gtm-engineering": "2026-06-13T12:04:57.026480",
     "https://claude.com/blog/how-coderabbit-used-claude-to-build-an-agent-orchestration-system": "2026-06-16T12:05:28.721454",
     "https://claude.com/blog/introducing-dynamic-workflows-in-claude-code": "2026-06-15T12:04:39.740414",
+    "https://claude.com/blog/introducing-the-claude-apps-gateway": "2026-06-30T12:05:14.072822",
     "https://claude.com/blog/lessons-from-building-claude-code-how-we-use-skills": "2026-06-14T12:03:39.567586",
     "https://claude.com/blog/meet-the-winners-of-built-with-opus-4-7-claude-code-hackathon": "2026-06-16T12:05:28.721454",
     "https://claude.com/blog/meet-the-winners-of-our-claude-opus-4-8-build-day-hackathon": "2026-06-18T12:32:27.608101",
