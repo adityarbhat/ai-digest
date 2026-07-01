@@ -49,7 +49,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "6252b589a588",
-      "last_seen_at": "2026-06-30T12:00:38.096430",
+      "last_seen_at": "2026-07-01T12:01:22.887566",
       "title": "Claude Code Overview",
       "updated_at": null
     },
@@ -175,7 +175,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "df4ba5a18750",
-      "last_seen_at": "2026-06-30T12:00:38.096430",
+      "last_seen_at": "2026-07-01T12:01:22.887566",
       "title": "Claude Code Tutorials",
       "updated_at": null
     },
@@ -214,7 +214,7 @@
         "Usage policy"
       ],
       "content_hash": "1d0cd2f3a49d",
-      "last_seen_at": "2026-06-30T12:00:38.096430",
+      "last_seen_at": "2026-07-01T12:01:22.887566",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-06-26T12:04:38.973334"
     }
@@ -226,6 +226,13 @@
       "source": "Slack Engineering",
       "title": "Agentic Testing: Where Agents Fit in the E2E Testing Stack",
       "url": "https://slack.engineering/agentic-testing-where-agents-fit-in-the-e2e-testing-stack/"
+    },
+    "0223f560ec32fde97e84f893649460e1b6f4cb27": {
+      "kind": "Blog",
+      "sent_at": "2026-07-01T12:05:30.267771",
+      "source": "Hacker News",
+      "title": "Claude Sonnet 5",
+      "url": "https://www.anthropic.com/news/claude-sonnet-5"
     },
     "04b030661d1c7c4bdff8336e0ec86bc0d2dd64c4": {
       "kind": "Blog",
@@ -304,6 +311,13 @@
       "title": "0.137.2",
       "url": "https://github.com/fastapi/fastapi/releases/tag/0.137.2"
     },
+    "2344c4da26c6b77cc3450754cfd1cc772f4b3ca8": {
+      "kind": "Blog",
+      "sent_at": "2026-07-01T12:05:30.267771",
+      "source": "Microsoft Research",
+      "title": "SkillOpt: Agent skills as trainable parameters",
+      "url": "https://www.microsoft.com/en-us/research/blog/skillopt-agent-skills-as-trainable-parameters/"
+    },
     "284177c0015e0342c872734fdae86d57ecbb7ce6": {
       "kind": "Blog",
       "sent_at": "2026-06-11T12:05:24.795435",
@@ -359,6 +373,13 @@
       "source": "Cloudflare Blog",
       "title": "Bringing more agent harnesses and frameworks to Cloudflare, starting with Flue",
       "url": "https://blog.cloudflare.com/agents-platform-flue-sdk/"
+    },
+    "45d78dfd45537df8fa73d82dca5ce790ec4f646e": {
+      "kind": "Blog",
+      "sent_at": "2026-07-01T12:05:30.267771",
+      "source": "Simon Willison",
+      "title": "Have your agent record video demos of its work with shot-scraper video",
+      "url": "https://simonwillison.net/2026/Jun/30/shot-scraper-video/#atom-everything"
     },
     "491a1b3ae8b4a18dac2c00ae7c4d8d99a37031d8": {
       "kind": "Blog",
@@ -542,6 +563,13 @@
       "title": "Where Do CoT Training Gains Land in LLM based Agents?",
       "url": "http://arxiv.org/abs/2606.26935v1"
     },
+    "87a57188c4577acb5960a0022bcb0bab9225f5a2": {
+      "kind": "Paper",
+      "sent_at": "2026-07-01T12:05:30.267771",
+      "source": "arXiv",
+      "title": "ACE: Pluggable Adaptive Context Elasticizer across Agents",
+      "url": "http://arxiv.org/abs/2606.31564v1"
+    },
     "8f5f73a05a9a61bb4cbb4b5a464f33c8ae2447ac": {
       "kind": "Blog",
       "sent_at": "2026-06-16T12:05:28.721333",
@@ -569,6 +597,13 @@
       "source": "Simon Willison",
       "title": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5",
       "url": "https://simonwillison.net/2026/Jun/13/us-government-directive-to-suspend-access/#atom-everything"
+    },
+    "9f79f01648693b09690392bc217cf7b4044f5f3c": {
+      "kind": "Blog",
+      "sent_at": "2026-07-01T12:05:30.267771",
+      "source": "Simon Willison",
+      "title": "What's new in Claude Sonnet 5",
+      "url": "https://simonwillison.net/2026/Jun/30/claude-sonnet-5/#atom-everything"
     },
     "a6a8d3b1130ee5dd33319565b58a2d9d8294c798": {
       "kind": "Blog",
@@ -661,6 +696,13 @@
       "title": "Ornith-1.0: Self-Scaffolding LLMs for Agentic Coding",
       "url": "https://simonwillison.net/2026/Jun/29/ornith/#atom-everything"
     },
+    "db19f73773d78287528f13bfa37ac96f6a5f993c": {
+      "kind": "Blog",
+      "sent_at": "2026-07-01T12:05:30.267771",
+      "source": "Hacker News",
+      "title": "Claude Code is steganographically marking requests",
+      "url": "https://thereallo.dev/blog/claude-code-prompt-steganography"
+    },
     "dee0e41112de64d958c028e113757c0acc228943": {
       "kind": "Blog",
       "sent_at": "2026-06-12T12:05:10.310793",
@@ -742,6 +784,7 @@
     "https://claude.com/blog/claude-managed-agents-updates": "2026-06-10T21:37:31.151750",
     "https://claude.com/blog/connectors-for-everyday-life": "2026-06-10T21:56:22.813265",
     "https://claude.com/blog/enterprise-managed-auth": "2026-06-19T12:32:01.945543",
+    "https://claude.com/blog/getting-started-with-loops": "2026-07-01T12:05:30.267914",
     "https://claude.com/blog/harnessing-claudes-intelligence": "2026-06-11T12:05:24.795564",
     "https://claude.com/blog/how-anthropic-enables-self-service-data-analytics-with-claude": "2026-06-13T12:04:57.026480",
     "https://claude.com/blog/how-anthropic-uses-claude-gtm-engineering": "2026-06-13T12:04:57.026480",
@@ -769,6 +812,7 @@
     "https://openai.com/index/gpt-5-immunology-mystery": "2026-06-24T12:04:31.769763",
     "https://openai.com/index/helping-build-shared-standards-for-advanced-ai": "2026-06-24T12:04:31.769763",
     "https://openai.com/index/how-agents-are-transforming-work": "2026-06-25T12:04:58.851134",
+    "https://openai.com/index/how-chatgpt-adoption-has-expanded": "2026-07-01T12:05:30.267914",
     "https://openai.com/index/improving-health-intelligence-in-chatgpt": "2026-06-19T12:32:01.945543",
     "https://openai.com/index/introducing-openai-partner-network": "2026-06-15T12:04:39.740414",
     "https://openai.com/index/lseg": "2026-06-10T21:37:31.151750",
