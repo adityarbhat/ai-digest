@@ -49,7 +49,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "6252b589a588",
-      "last_seen_at": "2026-07-01T12:01:22.887566",
+      "last_seen_at": "2026-07-02T12:01:29.908035",
       "title": "Claude Code Overview",
       "updated_at": null
     },
@@ -175,7 +175,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "df4ba5a18750",
-      "last_seen_at": "2026-07-01T12:01:22.887566",
+      "last_seen_at": "2026-07-02T12:01:29.908035",
       "title": "Claude Code Tutorials",
       "updated_at": null
     },
@@ -214,7 +214,7 @@
         "Usage policy"
       ],
       "content_hash": "1d0cd2f3a49d",
-      "last_seen_at": "2026-07-01T12:01:22.887566",
+      "last_seen_at": "2026-07-02T12:01:29.908035",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-06-26T12:04:38.973334"
     }
@@ -269,6 +269,13 @@
       "title": "AI Agent Identity and Permission Challenges: How Uber and Auth0 Are Rethinking Access Control",
       "url": "https://www.infoq.com/news/2026/06/ai-agent-identity-uber-auth0/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Architecture-news"
     },
+    "0d778fa8872c11af313540927cd34ba584167c66": {
+      "kind": "Blog",
+      "sent_at": "2026-07-02T12:05:08.091435",
+      "source": "FastAPI Releases",
+      "title": "0.139.0",
+      "url": "https://github.com/fastapi/fastapi/releases/tag/0.139.0"
+    },
     "0fb195b57e36cf7b393c4169a50db3148a579793": {
       "kind": "Blog",
       "sent_at": "2026-06-29T12:04:09.335029",
@@ -303,6 +310,13 @@
       "source": "arXiv",
       "title": "The Unfireable Safety Kernel: Execution-Time AI Alignment for AI Agents and Other Escapable AI Systems",
       "url": "http://arxiv.org/abs/2606.26057v1"
+    },
+    "18b40ff7b2295ee3159a5dcbdd3f4341aa8a175a": {
+      "kind": "Blog",
+      "sent_at": "2026-07-02T12:05:08.091435",
+      "source": "Cloudflare Blog",
+      "title": "Announcing the Monetization Gateway: charge for any resource behind Cloudflare via x402",
+      "url": "https://blog.cloudflare.com/monetization-gateway/"
     },
     "1a9fdae985a6b7d06969943c33bae0769096d768": {
       "kind": "Blog",
@@ -761,11 +775,13 @@
     }
   },
   "watchlist_seen": {
+    "https://blog.cloudflare.com/agentic-internet-bot-report/": "2026-07-02T12:05:08.091556",
     "https://blog.cloudflare.com/celebrating-12-years-of-project-galileo/": "2026-06-19T12:32:01.945543",
     "https://blog.cloudflare.com/cloudflare-one-stack/": "2026-06-18T12:32:27.608101",
     "https://blog.cloudflare.com/dmarc-management-ga/": "2026-06-17T12:05:14.337520",
     "https://blog.cloudflare.com/ensemble-ai-talent-joins-cloudflare/": "2026-06-16T12:05:28.721454",
     "https://blog.cloudflare.com/hyper-bug/": "2026-06-23T12:04:50.588874",
+    "https://blog.cloudflare.com/making-ai-search-smarter/": "2026-07-02T12:05:08.091556",
     "https://blog.cloudflare.com/oauth-for-all/": "2026-06-25T12:04:58.851134",
     "https://blog.cloudflare.com/post-quantum-eo-2026/": "2026-06-24T12:04:31.769763",
     "https://blog.cloudflare.com/private-origins-dns-routing/": "2026-06-10T21:37:31.151750",
@@ -834,10 +850,12 @@
     "https://www.anthropic.com/news/chris-olah-pope-leo-encyclical": "2026-06-20T12:32:09.900860",
     "https://www.anthropic.com/news/claude-corps": "2026-06-17T12:05:14.337520",
     "https://www.anthropic.com/news/claude-opus-4-8": "2026-06-20T12:32:09.900860",
+    "https://www.anthropic.com/news/claude-science-ai-workbench": "2026-07-02T12:05:08.091556",
     "https://www.anthropic.com/news/dxc-anthropic-alliance": "2026-06-21T12:31:23.180324",
     "https://www.anthropic.com/news/expanding-project-glasswing": "2026-06-17T12:05:14.337520",
     "https://www.anthropic.com/news/fable-mythos-access": "2026-06-17T12:05:14.337520",
     "https://www.anthropic.com/news/introducing-claude-tag": "2026-06-26T12:04:38.973471",
+    "https://www.anthropic.com/news/redeploying-fable-5": "2026-07-02T12:05:08.091556",
     "https://www.anthropic.com/news/seoul-office-partnerships-korean-ai-ecosystem": "2026-06-20T12:32:09.900860",
     "https://www.anthropic.com/news/services-track-partner-hub": "2026-06-22T12:31:28.939282",
     "https://www.anthropic.com/news/tcs-anthropic-partnership": "2026-06-21T12:31:23.180324"
