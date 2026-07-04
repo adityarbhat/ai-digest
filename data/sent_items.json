@@ -49,7 +49,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "6252b589a588",
-      "last_seen_at": "2026-07-03T12:03:34.396525",
+      "last_seen_at": "2026-07-04T12:01:11.159390",
       "title": "Claude Code Overview",
       "updated_at": null
     },
@@ -175,7 +175,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "df4ba5a18750",
-      "last_seen_at": "2026-07-03T12:03:34.396525",
+      "last_seen_at": "2026-07-04T12:01:11.159390",
       "title": "Claude Code Tutorials",
       "updated_at": null
     },
@@ -214,7 +214,7 @@
         "Usage policy"
       ],
       "content_hash": "1d0cd2f3a49d",
-      "last_seen_at": "2026-07-03T12:03:34.396525",
+      "last_seen_at": "2026-07-04T12:01:11.159390",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-06-26T12:04:38.973334"
     }
@@ -325,6 +325,13 @@
       "title": "0.137.2",
       "url": "https://github.com/fastapi/fastapi/releases/tag/0.137.2"
     },
+    "1b1d1a5beb98c437fd3be9871d4d4c4b03ed3508": {
+      "kind": "Blog",
+      "sent_at": "2026-07-04T12:04:29.778804",
+      "source": "Hacker News",
+      "title": "The Safari MCP server for web developers",
+      "url": "https://webkit.org/blog/18136/introducing-the-safari-mcp-server-for-web-developers/"
+    },
     "2344c4da26c6b77cc3450754cfd1cc772f4b3ca8": {
       "kind": "Blog",
       "sent_at": "2026-07-01T12:05:30.267771",
@@ -381,6 +388,13 @@
       "title": "The Spec Growth Engine: Spec-Anchored, Code-Coupled, Drift-Enforced Architecture for AI-Assisted Software Development",
       "url": "http://arxiv.org/abs/2606.27045v1"
     },
+    "36418da90c64c66c1bbdefc597930bcc1d809df9": {
+      "kind": "Paper",
+      "sent_at": "2026-07-04T12:04:29.778804",
+      "source": "arXiv",
+      "title": "Steerability via constraints: a substrate for scalable oversight of coding agents",
+      "url": "http://arxiv.org/abs/2607.02389v1"
+    },
     "41d1cfbc618596a9f222e42fa1f2db9d705f6fef": {
       "kind": "Blog",
       "sent_at": "2026-06-18T12:32:27.607873",
@@ -436,6 +450,13 @@
       "source": "Simon Willison",
       "title": "simonw/browser-compat-db",
       "url": "https://simonwillison.net/2026/Jun/24/browser-compat-db/#atom-everything"
+    },
+    "56102d0a4ebddd9e2a70bab7289224bf89a60adb": {
+      "kind": "Blog",
+      "sent_at": "2026-07-04T12:04:29.778804",
+      "source": "Simon Willison",
+      "title": "Fable's judgement",
+      "url": "https://simonwillison.net/2026/Jul/3/judgement/#atom-everything"
     },
     "5703f2b38c06efb491ebed7f97321ca9cc62eccc": {
       "kind": "Blog",
@@ -883,6 +904,7 @@
     "https://www.anthropic.com/news/dxc-anthropic-alliance": "2026-06-21T12:31:23.180324",
     "https://www.anthropic.com/news/expanding-project-glasswing": "2026-06-17T12:05:14.337520",
     "https://www.anthropic.com/news/fable-mythos-access": "2026-06-17T12:05:14.337520",
+    "https://www.anthropic.com/news/fable-safeguards-jailbreak-framework": "2026-07-04T12:04:29.778934",
     "https://www.anthropic.com/news/introducing-claude-tag": "2026-06-26T12:04:38.973471",
     "https://www.anthropic.com/news/redeploying-fable-5": "2026-07-02T12:05:08.091556",
     "https://www.anthropic.com/news/seoul-office-partnerships-korean-ai-ecosystem": "2026-06-20T12:32:09.900860",
