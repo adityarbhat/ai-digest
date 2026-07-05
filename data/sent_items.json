@@ -49,7 +49,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "6252b589a588",
-      "last_seen_at": "2026-07-04T12:01:11.159390",
+      "last_seen_at": "2026-07-05T12:00:54.590629",
       "title": "Claude Code Overview",
       "updated_at": null
     },
@@ -175,7 +175,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "df4ba5a18750",
-      "last_seen_at": "2026-07-04T12:01:11.159390",
+      "last_seen_at": "2026-07-05T12:00:54.590629",
       "title": "Claude Code Tutorials",
       "updated_at": null
     },
@@ -214,7 +214,7 @@
         "Usage policy"
       ],
       "content_hash": "1d0cd2f3a49d",
-      "last_seen_at": "2026-07-04T12:01:11.159390",
+      "last_seen_at": "2026-07-05T12:00:54.590629",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-06-26T12:04:38.973334"
     }
@@ -682,6 +682,13 @@
       "title": "AOHP: An Open-Source OS-Level Agent Harness for Personalized, Efficient and Secure Interaction",
       "url": "http://arxiv.org/abs/2606.23449v1"
     },
+    "adf0016601053d097c605fba9eabbfe6571a3c74": {
+      "kind": "Blog",
+      "sent_at": "2026-07-05T12:04:17.804719",
+      "source": "Hacker News",
+      "title": "Potential session/cache leakage between workspace instances or consumer accounts",
+      "url": "https://github.com/anthropics/claude-code/issues/74066"
+    },
     "ae7dfc3b387ef4c2c5b2d4299922b3c645720d86": {
       "kind": "Blog",
       "sent_at": "2026-06-26T12:04:38.973334",
@@ -807,6 +814,13 @@
       "source": "Claude Blog",
       "title": "Agent identity in Claude Tag: a new access model for autonomous, team-wide AI",
       "url": "https://claude.com/blog/agent-identity-access-model"
+    },
+    "f505485453bf6f1e9e392f0d4b8c947a08e87ec6": {
+      "kind": "Blog",
+      "sent_at": "2026-07-05T12:04:17.804719",
+      "source": "Simon Willison",
+      "title": "Better Models: Worse Tools",
+      "url": "https://simonwillison.net/2026/Jul/4/better-models-worse-tools/#atom-everything"
     },
     "fc7e5dbf308a75d415ed687f027f92ff1a442f57": {
       "kind": "Blog",
