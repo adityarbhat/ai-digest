@@ -49,7 +49,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "6252b589a588",
-      "last_seen_at": "2026-07-07T12:01:29.658749",
+      "last_seen_at": "2026-07-08T12:01:04.858104",
       "title": "Claude Code Overview",
       "updated_at": null
     },
@@ -175,7 +175,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "df4ba5a18750",
-      "last_seen_at": "2026-07-07T12:01:29.658749",
+      "last_seen_at": "2026-07-08T12:01:04.858104",
       "title": "Claude Code Tutorials",
       "updated_at": null
     },
@@ -214,7 +214,7 @@
         "Usage policy"
       ],
       "content_hash": "1d0cd2f3a49d",
-      "last_seen_at": "2026-07-07T12:01:29.658749",
+      "last_seen_at": "2026-07-08T12:01:04.858104",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-06-26T12:04:38.973334"
     }
@@ -619,6 +619,13 @@
       "title": "Where Do CoT Training Gains Land in LLM based Agents?",
       "url": "http://arxiv.org/abs/2606.26935v1"
     },
+    "8556cd9bcc213b8d6b08fec3bcd3432fa01e206e": {
+      "kind": "Blog",
+      "sent_at": "2026-07-08T12:04:45.896561",
+      "source": "BAIR Blog",
+      "title": "Intelligence is Free, Now What? <br> Data Systems for, of, and by Agents",
+      "url": "http://bair.berkeley.edu/blog/2026/07/07/intelligence-is-free-now-what/"
+    },
     "87a57188c4577acb5960a0022bcb0bab9225f5a2": {
       "kind": "Paper",
       "sent_at": "2026-07-01T12:05:30.267771",
@@ -822,6 +829,13 @@
       "title": "Agent identity in Claude Tag: a new access model for autonomous, team-wide AI",
       "url": "https://claude.com/blog/agent-identity-access-model"
     },
+    "e8a5734b45e72ae9471d96500cdffb790bd1c817": {
+      "kind": "Paper",
+      "sent_at": "2026-07-08T12:04:45.896561",
+      "source": "arXiv",
+      "title": "An Experimental Design Approach to Evaluating Agentic AI's Autonomous Model Discovery",
+      "url": "http://arxiv.org/abs/2607.06413v1"
+    },
     "f505485453bf6f1e9e392f0d4b8c947a08e87ec6": {
       "kind": "Blog",
       "sent_at": "2026-07-05T12:04:17.804719",
@@ -847,6 +861,7 @@
   "watchlist_seen": {
     "https://blog.cloudflare.com/agentic-internet-bot-report/": "2026-07-02T12:05:08.091556",
     "https://blog.cloudflare.com/celebrating-12-years-of-project-galileo/": "2026-06-19T12:32:01.945543",
+    "https://blog.cloudflare.com/cloudflare-joins-uk-cyber-resilience-pledge/": "2026-07-08T12:04:45.896685",
     "https://blog.cloudflare.com/cloudflare-one-stack/": "2026-06-18T12:32:27.608101",
     "https://blog.cloudflare.com/dmarc-management-ga/": "2026-06-17T12:05:14.337520",
     "https://blog.cloudflare.com/ensemble-ai-talent-joins-cloudflare/": "2026-06-16T12:05:28.721454",
@@ -862,6 +877,7 @@
     "https://claude.com/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code": "2026-06-15T12:04:39.740414",
     "https://claude.com/blog/artifacts-in-claude-code": "2026-06-19T12:32:01.945543",
     "https://claude.com/blog/best-practices-for-getting-started-with-claude-cowork": "2026-06-14T12:03:39.567586",
+    "https://claude.com/blog/bringing-claude-code-and-claude-cowork-to-government": "2026-07-08T12:04:45.896685",
     "https://claude.com/blog/building-effective-human-agent-teams": "2026-06-25T12:04:58.851134",
     "https://claude.com/blog/claude-builds-visuals": "2026-06-12T12:05:10.310953",
     "https://claude.com/blog/claude-code-desktop-redesign": "2026-06-10T21:56:22.813265",
@@ -870,7 +886,9 @@
     "https://claude.com/blog/claude-managed-agents": "2026-06-11T12:05:24.795564",
     "https://claude.com/blog/claude-managed-agents-memory": "2026-06-10T21:56:22.813265",
     "https://claude.com/blog/claude-managed-agents-updates": "2026-06-10T21:37:31.151750",
+    "https://claude.com/blog/claude-model-and-effort-level-in-claude-code": "2026-07-08T12:04:45.896685",
     "https://claude.com/blog/connectors-for-everyday-life": "2026-06-10T21:56:22.813265",
+    "https://claude.com/blog/cowork-web-mobile": "2026-07-08T12:04:45.896685",
     "https://claude.com/blog/enterprise-managed-auth": "2026-06-19T12:32:01.945543",
     "https://claude.com/blog/getting-started-with-loops": "2026-07-01T12:05:30.267914",
     "https://claude.com/blog/giving-admins-more-visibility-and-control-over-claude-usage-and-spend": "2026-07-03T12:07:02.942510",
