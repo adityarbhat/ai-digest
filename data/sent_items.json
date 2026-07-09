@@ -49,7 +49,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "6252b589a588",
-      "last_seen_at": "2026-07-08T12:01:04.858104",
+      "last_seen_at": "2026-07-09T12:01:11.711029",
       "title": "Claude Code Overview",
       "updated_at": null
     },
@@ -175,7 +175,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "df4ba5a18750",
-      "last_seen_at": "2026-07-08T12:01:04.858104",
+      "last_seen_at": "2026-07-09T12:01:11.711029",
       "title": "Claude Code Tutorials",
       "updated_at": null
     },
@@ -214,7 +214,7 @@
         "Usage policy"
       ],
       "content_hash": "1d0cd2f3a49d",
-      "last_seen_at": "2026-07-08T12:01:04.858104",
+      "last_seen_at": "2026-07-09T12:01:11.711029",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-06-26T12:04:38.973334"
     }
@@ -261,6 +261,13 @@
       "source": "Simon Willison",
       "title": "Claude Fable is relentlessly proactive",
       "url": "https://simonwillison.net/2026/Jun/11/fable-is-relentlessly-proactive/#atom-everything"
+    },
+    "0c806c20acb9ae31e4100ae04e60747427830901": {
+      "kind": "Blog",
+      "sent_at": "2026-07-09T12:04:55.179506",
+      "source": "HuggingFace",
+      "title": "Data for Agents",
+      "url": "https://huggingface.co/blog/nvidia/open-data-for-agents"
     },
     "0cabb66a0b2b65fc2a15ad3b17dcda41046a64a3": {
       "kind": "Blog",
@@ -682,6 +689,13 @@
       "title": "Using DSPy to evaluate and improve Datasette Agent's SQL system prompts",
       "url": "https://simonwillison.net/2026/Jul/2/dspy-datasette-agent-prompts/#atom-everything"
     },
+    "a12268b3d8ff94d1636da8bce1290b4d7b6336ba": {
+      "kind": "Paper",
+      "sent_at": "2026-07-09T12:04:55.179506",
+      "source": "arXiv",
+      "title": "The Harness Effect: How Orchestration Design Sets the Token Economics of Enterprise Agentic AI",
+      "url": "http://arxiv.org/abs/2607.06906v1"
+    },
     "a6a8d3b1130ee5dd33319565b58a2d9d8294c798": {
       "kind": "Blog",
       "sent_at": "2026-06-26T12:04:38.973334",
@@ -702,6 +716,13 @@
       "source": "Hacker News",
       "title": "Potential session/cache leakage between workspace instances or consumer accounts",
       "url": "https://github.com/anthropics/claude-code/issues/74066"
+    },
+    "ae40ed63a33fc58313f58a0e6caf28927079ac1c": {
+      "kind": "Blog",
+      "sent_at": "2026-07-09T12:04:55.179506",
+      "source": "Supabase Engineering",
+      "title": "Searchable field-level encryption on Supabase with CipherStash Add field-level encryption to your Supabase project with CipherStash. Searchable ciphertext, zero-knowledge key management, and no schema changes required. Author: Bil Harmer Published 9 July 2026 \u00b7 4 minute read",
+      "url": "https://supabase.com/blog/searchable-field-level-encryption-with-cipherstash"
     },
     "ae7dfc3b387ef4c2c5b2d4299922b3c645720d86": {
       "kind": "Blog",
@@ -780,6 +801,13 @@
       "title": "Ornith-1.0: Self-Scaffolding LLMs for Agentic Coding",
       "url": "https://simonwillison.net/2026/Jun/29/ornith/#atom-everything"
     },
+    "cecdcf9dc8af6c97ac8ef3acec2d0a5337b80250": {
+      "kind": "Blog",
+      "sent_at": "2026-07-09T12:04:55.179506",
+      "source": "GitHub Engineering",
+      "title": "Automating cross-repo documentation with GitHub Agentic Workflows",
+      "url": "https://github.blog/ai-and-ml/github-copilot/automating-cross-repo-documentation-with-github-agentic-workflows/"
+    },
     "db19f73773d78287528f13bfa37ac96f6a5f993c": {
       "kind": "Blog",
       "sent_at": "2026-07-01T12:05:30.267771",
@@ -836,6 +864,13 @@
       "title": "An Experimental Design Approach to Evaluating Agentic AI's Autonomous Model Discovery",
       "url": "http://arxiv.org/abs/2607.06413v1"
     },
+    "ed25778591b6b6e0745c2c7be379ebba4d2474c2": {
+      "kind": "Blog",
+      "sent_at": "2026-07-09T12:04:55.179506",
+      "source": "Microsoft Research",
+      "title": "Flint: A visualization language for the AI era",
+      "url": "https://www.microsoft.com/en-us/research/blog/flint-a-visualization-language-for-the-ai-era/"
+    },
     "f505485453bf6f1e9e392f0d4b8c947a08e87ec6": {
       "kind": "Blog",
       "sent_at": "2026-07-05T12:04:17.804719",
@@ -867,6 +902,7 @@
     "https://blog.cloudflare.com/ensemble-ai-talent-joins-cloudflare/": "2026-06-16T12:05:28.721454",
     "https://blog.cloudflare.com/hyper-bug/": "2026-06-23T12:04:50.588874",
     "https://blog.cloudflare.com/making-ai-search-smarter/": "2026-07-02T12:05:08.091556",
+    "https://blog.cloudflare.com/meerkat-introduction/": "2026-07-09T12:04:55.179644",
     "https://blog.cloudflare.com/oauth-for-all/": "2026-06-25T12:04:58.851134",
     "https://blog.cloudflare.com/post-quantum-eo-2026/": "2026-06-24T12:04:31.769763",
     "https://blog.cloudflare.com/private-origins-dns-routing/": "2026-06-10T21:37:31.151750",
@@ -895,7 +931,9 @@
     "https://claude.com/blog/harnessing-claudes-intelligence": "2026-06-11T12:05:24.795564",
     "https://claude.com/blog/how-anthropic-enables-self-service-data-analytics-with-claude": "2026-06-13T12:04:57.026480",
     "https://claude.com/blog/how-anthropic-uses-claude-gtm-engineering": "2026-06-13T12:04:57.026480",
+    "https://claude.com/blog/how-anthropics-marketing-operations-team-uses-claude-cowork-to-automate-reporting-and-campaign-builds": "2026-07-09T12:04:55.179644",
     "https://claude.com/blog/how-coderabbit-used-claude-to-build-an-agent-orchestration-system": "2026-06-16T12:05:28.721454",
+    "https://claude.com/blog/how-people-are-using-claude-cowork": "2026-07-09T12:04:55.179644",
     "https://claude.com/blog/introducing-dynamic-workflows-in-claude-code": "2026-06-15T12:04:39.740414",
     "https://claude.com/blog/introducing-the-claude-apps-gateway": "2026-06-30T12:05:14.072822",
     "https://claude.com/blog/lessons-from-building-claude-code-how-we-use-skills": "2026-06-14T12:03:39.567586",
@@ -910,18 +948,21 @@
     "https://claude.com/blog/the-full-claude-desktop-experience-on-aws-google-cloud-and-microsoft-foundry": "2026-06-23T12:04:50.588874",
     "https://claude.com/blog/using-llms-to-secure-source-code": "2026-06-15T12:04:39.740414",
     "https://claude.com/blog/whats-new-in-claude-managed-agents": "2026-06-12T12:05:10.310953",
+    "https://claude.com/blog/working-at-the-frontier-how-thomson-reuters-builds-ai-for-high--stakes-professional-work": "2026-07-09T12:04:55.179644",
     "https://claude.com/blog/workload-identity-federation": "2026-06-18T12:32:27.608101",
     "https://openai.com/index/academy-courses-applying-ai-at-work": "2026-06-13T12:04:57.026480",
     "https://openai.com/index/ai-chemist-improves-reaction": "2026-06-18T12:32:27.608101",
     "https://openai.com/index/chatgpt-enterprise-spend-controls": "2026-06-19T12:32:01.945543",
     "https://openai.com/index/daybreak-securing-the-world": "2026-06-23T12:04:50.588874",
     "https://openai.com/index/diagnose-rare-childhood-diseases": "2026-06-19T12:32:01.945543",
+    "https://openai.com/index/government-national-security-partnerships": "2026-07-09T12:04:55.179644",
     "https://openai.com/index/gpt-5-immunology-mystery": "2026-06-24T12:04:31.769763",
     "https://openai.com/index/helping-build-shared-standards-for-advanced-ai": "2026-06-24T12:04:31.769763",
     "https://openai.com/index/how-agents-are-transforming-work": "2026-06-25T12:04:58.851134",
     "https://openai.com/index/how-chatgpt-adoption-has-expanded": "2026-07-01T12:05:30.267914",
     "https://openai.com/index/improving-health-intelligence-in-chatgpt": "2026-06-19T12:32:01.945543",
     "https://openai.com/index/introducing-openai-partner-network": "2026-06-15T12:04:39.740414",
+    "https://openai.com/index/k-12-educators-practical-skills": "2026-07-09T12:04:55.179644",
     "https://openai.com/index/lseg": "2026-06-10T21:37:31.151750",
     "https://openai.com/index/mapping-ai-jobs-transition-eu": "2026-06-29T12:04:09.335154",
     "https://openai.com/index/nextdoor": "2026-06-10T21:37:31.151750",
@@ -933,6 +974,7 @@
     "https://openai.com/index/prc-linked-influence-operations-ai-debates": "2026-06-10T21:37:31.151750",
     "https://openai.com/index/preply": "2026-06-12T12:05:10.310953",
     "https://openai.com/index/samsung-electronics-chatgpt-codex-deployment": "2026-06-22T12:31:28.939282",
+    "https://openai.com/index/separating-signal-from-noise-coding-evaluations": "2026-07-09T12:04:55.179644",
     "https://openai.com/index/supporting-eu-trustworthy-ai-ecosystem": "2026-06-11T12:05:24.795564",
     "https://openai.com/index/using-codex-to-simulate-black-holes": "2026-06-11T12:05:24.795564",
     "https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack": "2026-06-22T12:31:28.939282",
