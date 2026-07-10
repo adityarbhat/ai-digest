@@ -49,7 +49,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "6252b589a588",
-      "last_seen_at": "2026-07-09T12:01:11.711029",
+      "last_seen_at": "2026-07-10T12:01:14.872622",
       "title": "Claude Code Overview",
       "updated_at": null
     },
@@ -175,7 +175,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "df4ba5a18750",
-      "last_seen_at": "2026-07-09T12:01:11.711029",
+      "last_seen_at": "2026-07-10T12:01:14.872622",
       "title": "Claude Code Tutorials",
       "updated_at": null
     },
@@ -214,7 +214,7 @@
         "Usage policy"
       ],
       "content_hash": "1d0cd2f3a49d",
-      "last_seen_at": "2026-07-09T12:01:11.711029",
+      "last_seen_at": "2026-07-10T12:01:14.872622",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-06-26T12:04:38.973334"
     }
@@ -339,6 +339,13 @@
       "title": "The Safari MCP server for web developers",
       "url": "https://webkit.org/blog/18136/introducing-the-safari-mcp-server-for-web-developers/"
     },
+    "1f73cfc6fc962dfcc5b35e04f2fa0fd3e867e982": {
+      "kind": "Paper",
+      "sent_at": "2026-07-10T12:05:13.840520",
+      "source": "arXiv",
+      "title": "GitLake: Git-for-data for the agentic lakehouse",
+      "url": "http://arxiv.org/abs/2607.08319v1"
+    },
     "2344c4da26c6b77cc3450754cfd1cc772f4b3ca8": {
       "kind": "Blog",
       "sent_at": "2026-07-01T12:05:30.267771",
@@ -380,6 +387,13 @@
       "source": "Hacker News",
       "title": "The text in Claude Code\u2019s \u201cExtended Thinking\u201d output",
       "url": "https://patrickmccanna.net/the-text-in-claude-codes-extended-thinking-output-is-not-authentic/"
+    },
+    "2e765d10a429de9dd07916b21e33e0e9f4a05570": {
+      "kind": "Blog",
+      "sent_at": "2026-07-10T12:05:13.840520",
+      "source": "Neon Blog",
+      "title": "Introducing the New Neon API Command",
+      "url": "https://neon.com/blog/introducing-neon-api-command"
     },
     "2f6581ea473f7fc9daf78c4702d37fb84475beaa": {
       "kind": "Paper",
@@ -506,6 +520,13 @@
       "source": "Simon Willison",
       "title": "Quoting Jon Udell",
       "url": "https://simonwillison.net/2026/Jun/28/jon-udell/#atom-everything"
+    },
+    "5fc60c835f05debdbb2b47d2c31377ad33b9c52a": {
+      "kind": "Blog",
+      "sent_at": "2026-07-10T12:05:13.840520",
+      "source": "Simon Willison",
+      "title": "The new GPT-5.6 family: Luna, Terra, Sol",
+      "url": "https://simonwillison.net/2026/Jul/9/gpt-5-6/#atom-everything"
     },
     "600e39d914feff0bc6406357bb707489c8c59fda": {
       "kind": "Paper",
@@ -808,6 +829,13 @@
       "title": "Automating cross-repo documentation with GitHub Agentic Workflows",
       "url": "https://github.blog/ai-and-ml/github-copilot/automating-cross-repo-documentation-with-github-agentic-workflows/"
     },
+    "d0d53aa3d004c8da7fecd94c2c581262ba5d616c": {
+      "kind": "Blog",
+      "sent_at": "2026-07-10T12:05:13.840520",
+      "source": "Hacker News",
+      "title": "Muse Spark 1.1",
+      "url": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/"
+    },
     "db19f73773d78287528f13bfa37ac96f6a5f993c": {
       "kind": "Blog",
       "sent_at": "2026-07-01T12:05:30.267771",
@@ -903,6 +931,7 @@
     "https://blog.cloudflare.com/hyper-bug/": "2026-06-23T12:04:50.588874",
     "https://blog.cloudflare.com/making-ai-search-smarter/": "2026-07-02T12:05:08.091556",
     "https://blog.cloudflare.com/meerkat-introduction/": "2026-07-09T12:04:55.179644",
+    "https://blog.cloudflare.com/ml-dsa-will-have-to-do/": "2026-07-10T12:05:13.840666",
     "https://blog.cloudflare.com/oauth-for-all/": "2026-06-25T12:04:58.851134",
     "https://blog.cloudflare.com/post-quantum-eo-2026/": "2026-06-24T12:04:31.769763",
     "https://blog.cloudflare.com/private-origins-dns-routing/": "2026-06-10T21:37:31.151750",
@@ -953,9 +982,12 @@
     "https://openai.com/index/academy-courses-applying-ai-at-work": "2026-06-13T12:04:57.026480",
     "https://openai.com/index/ai-chemist-improves-reaction": "2026-06-18T12:32:27.608101",
     "https://openai.com/index/chatgpt-enterprise-spend-controls": "2026-06-19T12:32:01.945543",
+    "https://openai.com/index/chatgpt-for-your-most-ambitious-work": "2026-07-10T12:05:13.840666",
     "https://openai.com/index/daybreak-securing-the-world": "2026-06-23T12:04:50.588874",
     "https://openai.com/index/diagnose-rare-childhood-diseases": "2026-06-19T12:32:01.945543",
     "https://openai.com/index/government-national-security-partnerships": "2026-07-09T12:04:55.179644",
+    "https://openai.com/index/gpt-5-6": "2026-07-10T12:05:13.840666",
+    "https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot": "2026-07-10T12:05:13.840666",
     "https://openai.com/index/gpt-5-immunology-mystery": "2026-06-24T12:04:31.769763",
     "https://openai.com/index/helping-build-shared-standards-for-advanced-ai": "2026-06-24T12:04:31.769763",
     "https://openai.com/index/how-agents-are-transforming-work": "2026-06-25T12:04:58.851134",
@@ -980,6 +1012,7 @@
     "https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack": "2026-06-22T12:31:28.939282",
     "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy": "2026-06-22T12:31:28.939282",
     "https://www.anthropic.com/news/anthropic-public-record": "2026-06-21T12:31:23.180324",
+    "https://www.anthropic.com/news/ben-bernanke": "2026-07-10T12:05:13.840666",
     "https://www.anthropic.com/news/chris-olah-pope-leo-encyclical": "2026-06-20T12:32:09.900860",
     "https://www.anthropic.com/news/claude-corps": "2026-06-17T12:05:14.337520",
     "https://www.anthropic.com/news/claude-opus-4-8": "2026-06-20T12:32:09.900860",
@@ -988,10 +1021,12 @@
     "https://www.anthropic.com/news/expanding-project-glasswing": "2026-06-17T12:05:14.337520",
     "https://www.anthropic.com/news/fable-mythos-access": "2026-06-17T12:05:14.337520",
     "https://www.anthropic.com/news/fable-safeguards-jailbreak-framework": "2026-07-04T12:04:29.778934",
+    "https://www.anthropic.com/news/hard-questions": "2026-07-10T12:05:13.840666",
     "https://www.anthropic.com/news/introducing-claude-tag": "2026-06-26T12:04:38.973471",
     "https://www.anthropic.com/news/redeploying-fable-5": "2026-07-02T12:05:08.091556",
     "https://www.anthropic.com/news/seoul-office-partnerships-korean-ai-ecosystem": "2026-06-20T12:32:09.900860",
     "https://www.anthropic.com/news/services-track-partner-hub": "2026-06-22T12:31:28.939282",
-    "https://www.anthropic.com/news/tcs-anthropic-partnership": "2026-06-21T12:31:23.180324"
+    "https://www.anthropic.com/news/tcs-anthropic-partnership": "2026-06-21T12:31:23.180324",
+    "https://www.anthropic.com/news/ust-claude": "2026-07-10T12:05:13.840666"
   }
 }
