@@ -49,7 +49,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "6252b589a588",
-      "last_seen_at": "2026-07-10T12:01:14.872622",
+      "last_seen_at": "2026-07-11T12:01:00.050418",
       "title": "Claude Code Overview",
       "updated_at": null
     },
@@ -175,7 +175,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "df4ba5a18750",
-      "last_seen_at": "2026-07-10T12:01:14.872622",
+      "last_seen_at": "2026-07-11T12:01:00.050418",
       "title": "Claude Code Tutorials",
       "updated_at": null
     },
@@ -214,7 +214,7 @@
         "Usage policy"
       ],
       "content_hash": "1d0cd2f3a49d",
-      "last_seen_at": "2026-07-10T12:01:14.872622",
+      "last_seen_at": "2026-07-11T12:01:00.050418",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-06-26T12:04:38.973334"
     }
@@ -338,6 +338,13 @@
       "source": "Hacker News",
       "title": "The Safari MCP server for web developers",
       "url": "https://webkit.org/blog/18136/introducing-the-safari-mcp-server-for-web-developers/"
+    },
+    "1b90056df9ec04f974ce8bb842d84af5e1e32264": {
+      "kind": "Blog",
+      "sent_at": "2026-07-11T12:04:14.686786",
+      "source": "GitHub Engineering",
+      "title": "Better tools made Copilot code review worse. Here\u2019s how we actually improved it.",
+      "url": "https://github.blog/ai-and-ml/github-copilot/better-tools-made-copilot-code-review-worse-heres-how-we-actually-improved-it/"
     },
     "1f73cfc6fc962dfcc5b35e04f2fa0fd3e867e982": {
       "kind": "Paper",
@@ -899,6 +906,13 @@
       "title": "Flint: A visualization language for the AI era",
       "url": "https://www.microsoft.com/en-us/research/blog/flint-a-visualization-language-for-the-ai-era/"
     },
+    "f3e66fb300bc9cddcc4b948182ccec4ee5e05415": {
+      "kind": "Paper",
+      "sent_at": "2026-07-11T12:04:14.686786",
+      "source": "arXiv",
+      "title": "Token-Flow Firewall: Semantic Runtime Auditing for Persistent AI Agents",
+      "url": "http://arxiv.org/abs/2607.08395v1"
+    },
     "f505485453bf6f1e9e392f0d4b8c947a08e87ec6": {
       "kind": "Blog",
       "sent_at": "2026-07-05T12:04:17.804719",
@@ -937,6 +951,7 @@
     "https://blog.cloudflare.com/private-origins-dns-routing/": "2026-06-10T21:37:31.151750",
     "https://blog.cloudflare.com/rollbacks-for-workflows/": "2026-06-26T12:04:38.973471",
     "https://blog.cloudflare.com/scaling-security-scans/": "2026-06-13T12:04:57.026480",
+    "https://blog.cloudflare.com/smart-tiered-cache-for-public-clouds/": "2026-07-11T12:04:14.686912",
     "https://blog.cloudflare.com/workers-cache/": "2026-07-07T12:05:38.996055",
     "https://claude.com/blog/a-field-guide-to-claude-fable-finding-your-unknowns": "2026-07-07T12:05:38.996055",
     "https://claude.com/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code": "2026-06-15T12:04:39.740414",
@@ -977,6 +992,7 @@
     "https://claude.com/blog/the-full-claude-desktop-experience-on-aws-google-cloud-and-microsoft-foundry": "2026-06-23T12:04:50.588874",
     "https://claude.com/blog/using-llms-to-secure-source-code": "2026-06-15T12:04:39.740414",
     "https://claude.com/blog/whats-new-in-claude-managed-agents": "2026-06-12T12:05:10.310953",
+    "https://claude.com/blog/working-at-the-frontier-how-cognition-trusts-claude-fable-5-to-work-through-the-night": "2026-07-11T12:04:14.686912",
     "https://claude.com/blog/working-at-the-frontier-how-thomson-reuters-builds-ai-for-high--stakes-professional-work": "2026-07-09T12:04:55.179644",
     "https://claude.com/blog/workload-identity-federation": "2026-06-18T12:32:27.608101",
     "https://openai.com/index/academy-courses-applying-ai-at-work": "2026-06-13T12:04:57.026480",
