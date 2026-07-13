@@ -49,7 +49,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "6252b589a588",
-      "last_seen_at": "2026-07-12T12:01:54.279543",
+      "last_seen_at": "2026-07-13T12:00:44.710028",
       "title": "Claude Code Overview",
       "updated_at": null
     },
@@ -175,7 +175,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "df4ba5a18750",
-      "last_seen_at": "2026-07-12T12:01:54.279543",
+      "last_seen_at": "2026-07-13T12:00:44.710028",
       "title": "Claude Code Tutorials",
       "updated_at": null
     },
@@ -214,7 +214,7 @@
         "Usage policy"
       ],
       "content_hash": "1d0cd2f3a49d",
-      "last_seen_at": "2026-07-12T12:01:54.279543",
+      "last_seen_at": "2026-07-13T12:00:44.710028",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-06-26T12:04:38.973334"
     }
@@ -745,6 +745,13 @@
       "title": "AOHP: An Open-Source OS-Level Agent Harness for Personalized, Efficient and Secure Interaction",
       "url": "http://arxiv.org/abs/2606.23449v1"
     },
+    "aa61ae7dc32a500c9f19f5e1b5aa49372fd6d5f9": {
+      "kind": "Blog",
+      "sent_at": "2026-07-13T12:03:56.424213",
+      "source": "Hacker News",
+      "title": "Claude Code sends 33k tokens before reading the prompt; OpenCode sends 7k",
+      "url": "https://systima.ai/blog/claude-code-vs-opencode-token-overhead"
+    },
     "adf0016601053d097c605fba9eabbfe6571a3c74": {
       "kind": "Blog",
       "sent_at": "2026-07-05T12:04:17.804719",
@@ -912,6 +919,13 @@
       "source": "Microsoft Research",
       "title": "Flint: A visualization language for the AI era",
       "url": "https://www.microsoft.com/en-us/research/blog/flint-a-visualization-language-for-the-ai-era/"
+    },
+    "f2ee4bfabe04e5945d8b91796c3638edab1b212b": {
+      "kind": "Blog",
+      "sent_at": "2026-07-13T12:03:56.424213",
+      "source": "Hacker News",
+      "title": "Migrating a production AI agent to GPT-5.6: 2.2x faster, 27% cheaper",
+      "url": "https://ploy.ai/blog/migrating-a-production-ai-agent-to-gpt-5-6"
     },
     "f3e66fb300bc9cddcc4b948182ccec4ee5e05415": {
       "kind": "Paper",
