@@ -49,7 +49,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "6252b589a588",
-      "last_seen_at": "2026-07-13T12:00:44.710028",
+      "last_seen_at": "2026-07-14T12:01:09.320297",
       "title": "Claude Code Overview",
       "updated_at": null
     },
@@ -138,7 +138,7 @@
         "\u200b Work with images",
         "Add an image to the conversation",
         "Drag and drop an image into the Claude Code window",
-        "Copy an image and paste it into the CLI with ctrl+v (Do not use cmd+v)",
+        "Copy an image and paste it into the CLI with Ctrl+V. On macOS, Cmd+V also works in iTerm2.",
         "Provide an image path to Claude. E.g., \u201cAnalyze this image: /path/to/your/image.png\u201d",
         "Ask Claude to analyze the image",
         "Use images for context",
@@ -174,10 +174,10 @@
         "Extend Claude Code",
         "Was this page helpful?"
       ],
-      "content_hash": "df4ba5a18750",
-      "last_seen_at": "2026-07-13T12:00:44.710028",
+      "content_hash": "02cd0d728190",
+      "last_seen_at": "2026-07-14T12:04:51.246654",
       "title": "Claude Code Tutorials",
-      "updated_at": null
+      "updated_at": "2026-07-14T12:04:51.246654"
     },
     "https://docs.anthropic.com/en/release-notes/overview": {
       "blocks": [
@@ -214,7 +214,7 @@
         "Usage policy"
       ],
       "content_hash": "1d0cd2f3a49d",
-      "last_seen_at": "2026-07-13T12:00:44.710028",
+      "last_seen_at": "2026-07-14T12:01:09.320297",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-06-26T12:04:38.973334"
     }
@@ -479,6 +479,13 @@
       "title": "simonw/browser-compat-db",
       "url": "https://simonwillison.net/2026/Jun/24/browser-compat-db/#atom-everything"
     },
+    "5525445d8f694329a84ddaa639a653d20e8fee0c": {
+      "kind": "Blog",
+      "sent_at": "2026-07-14T12:04:51.246654",
+      "source": "Anthropic Docs",
+      "title": "Claude Code Tutorials",
+      "url": "https://docs.anthropic.com/en/docs/claude-code/tutorials"
+    },
     "56102d0a4ebddd9e2a70bab7289224bf89a60adb": {
       "kind": "Blog",
       "sent_at": "2026-07-04T12:04:29.778804",
@@ -618,6 +625,13 @@
       "source": "Hacker News",
       "title": "DeepSeek open-sources inference optimizations with 60\u201385% faster generation [pdf]",
       "url": "https://github.com/deepseek-ai/DeepSpec/blob/main/DSpark_paper.pdf"
+    },
+    "712a2dd08a34e7d0f5b951d9b738446db58e1a69": {
+      "kind": "Paper",
+      "sent_at": "2026-07-14T12:04:51.246654",
+      "source": "arXiv",
+      "title": "Agentic Routing: The Harness-Native Data Flywheel",
+      "url": "http://arxiv.org/abs/2607.11399v1"
     },
     "73819eb8132de55e3150c09d1d4bbd4da212242b": {
       "kind": "Blog",
@@ -787,6 +801,13 @@
       "title": "ProvenanceGuard: Source-Aware Factuality Verification for MCP-Based LLM Agents",
       "url": "http://arxiv.org/abs/2606.18037v1"
     },
+    "bc0df7079a9f395f0561adcbce0bb0af9228a12e": {
+      "kind": "Blog",
+      "sent_at": "2026-07-14T12:04:51.246654",
+      "source": "Neon Blog",
+      "title": "Introducing @neon/sdk, our new TypeScript client for the Neon API",
+      "url": "https://neon.com/blog/neon-sdk"
+    },
     "c0c6ee04b6bd5c9949a46187f84de7066a03e8e0": {
       "kind": "Blog",
       "sent_at": "2026-06-13T12:04:57.026355",
@@ -856,6 +877,13 @@
       "source": "Hacker News",
       "title": "Muse Spark 1.1",
       "url": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/"
+    },
+    "d3dbd70d787f761e2627f95b435debaece63ffec": {
+      "kind": "Blog",
+      "sent_at": "2026-07-14T12:04:51.246654",
+      "source": "Martin Fowler",
+      "title": "Fragments: July 13",
+      "url": "https://martinfowler.com/fragments/2026-07-13.html"
     },
     "db19f73773d78287528f13bfa37ac96f6a5f993c": {
       "kind": "Blog",
@@ -954,6 +982,13 @@
       "source": "Hacker News",
       "title": "AI agent runs amok in Fedora and elsewhere",
       "url": "https://lwn.net/SubscriberLink/1077035/c7e7c14fbd60fae9/"
+    },
+    "ff455be7002eafc4db4cc2b045f1c65bbd9699a2": {
+      "kind": "Blog",
+      "sent_at": "2026-07-14T12:04:51.246654",
+      "source": "Simon Willison",
+      "title": "datasette code-frequency chart on GitHub",
+      "url": "https://simonwillison.net/2026/Jul/13/datasette-code-frequency/#atom-everything"
     }
   },
   "watchlist_seen": {
@@ -964,6 +999,7 @@
     "https://blog.cloudflare.com/dmarc-management-ga/": "2026-06-17T12:05:14.337520",
     "https://blog.cloudflare.com/ensemble-ai-talent-joins-cloudflare/": "2026-06-16T12:05:28.721454",
     "https://blog.cloudflare.com/hyper-bug/": "2026-06-23T12:04:50.588874",
+    "https://blog.cloudflare.com/introducing-precursor/": "2026-07-14T12:04:51.246812",
     "https://blog.cloudflare.com/making-ai-search-smarter/": "2026-07-02T12:05:08.091556",
     "https://blog.cloudflare.com/meerkat-introduction/": "2026-07-09T12:04:55.179644",
     "https://blog.cloudflare.com/ml-dsa-will-have-to-do/": "2026-07-10T12:05:13.840666",
@@ -1014,6 +1050,7 @@
     "https://claude.com/blog/using-llms-to-secure-source-code": "2026-06-15T12:04:39.740414",
     "https://claude.com/blog/whats-new-in-claude-managed-agents": "2026-06-12T12:05:10.310953",
     "https://claude.com/blog/working-at-the-frontier-how-cognition-trusts-claude-fable-5-to-work-through-the-night": "2026-07-11T12:04:14.686912",
+    "https://claude.com/blog/working-at-the-frontier-how-hebbia-builds-ai-for-financial-diligence-that-cant-miss-a-detail": "2026-07-14T12:04:51.246812",
     "https://claude.com/blog/working-at-the-frontier-how-thomson-reuters-builds-ai-for-high--stakes-professional-work": "2026-07-09T12:04:55.179644",
     "https://claude.com/blog/workload-identity-federation": "2026-06-18T12:32:27.608101",
     "https://openai.com/index/academy-courses-applying-ai-at-work": "2026-06-13T12:04:57.026480",
