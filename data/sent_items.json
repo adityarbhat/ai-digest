@@ -43,15 +43,16 @@
         "Quickstart : walk through your first real task, from exploring a codebase to committing a fix",
         "Store instructions and memories : give Claude persistent instructions with CLAUDE.md files and auto memory",
         "Common workflows and best practices : patterns for getting the most out of Claude Code",
+        "A harness for every task : how the Claude Code team uses dynamic workflows to orchestrate subagents at scale",
         "Settings : customize Claude Code for your workflow",
         "Troubleshooting : solutions for common issues",
         "code.claude.com : demos, pricing, and product details",
         "Was this page helpful?"
       ],
-      "content_hash": "6252b589a588",
-      "last_seen_at": "2026-07-14T12:01:09.320297",
+      "content_hash": "436fe74405b7",
+      "last_seen_at": "2026-07-15T12:06:44.768708",
       "title": "Claude Code Overview",
-      "updated_at": null
+      "updated_at": "2026-07-15T12:06:44.768708"
     },
     "https://docs.anthropic.com/en/docs/claude-code/tutorials": {
       "blocks": [
@@ -175,7 +176,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "02cd0d728190",
-      "last_seen_at": "2026-07-14T12:04:51.246654",
+      "last_seen_at": "2026-07-15T12:02:21.704006",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-07-14T12:04:51.246654"
     },
@@ -214,7 +215,7 @@
         "Usage policy"
       ],
       "content_hash": "1d0cd2f3a49d",
-      "last_seen_at": "2026-07-14T12:01:09.320297",
+      "last_seen_at": "2026-07-15T12:02:21.704006",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-06-26T12:04:38.973334"
     }
@@ -296,6 +297,13 @@
       "source": "arXiv",
       "title": "Claw-SWE-Bench: A Benchmark for Evaluating OpenClaw-style Agent Harnesses on Coding Tasks",
       "url": "http://arxiv.org/abs/2606.12344v1"
+    },
+    "11ce22c4ab7db7cd67502f26ed1cff97a34da985": {
+      "kind": "Blog",
+      "sent_at": "2026-07-15T12:06:44.768708",
+      "source": "Simon Willison",
+      "title": "Quoting Armin Ronacher",
+      "url": "https://simonwillison.net/2026/Jul/14/armin-ronacher/#atom-everything"
     },
     "12183572aebcbc927552bdba46431a16b5496af7": {
       "kind": "Blog",
@@ -409,6 +417,13 @@
       "title": "Why Multi-Step Tool-Use Reinforcement Learning Collapses and How Supervisory Signals Fix It",
       "url": "http://arxiv.org/abs/2606.26027v1"
     },
+    "3001b897e50f3ff7329d8cfd7a261f23500dda3a": {
+      "kind": "Paper",
+      "sent_at": "2026-07-15T12:06:44.768708",
+      "source": "arXiv",
+      "title": "Track, Rank, Crack: Epistemic Working Memory Scales Multi-Hop Reasoning in Language Agents",
+      "url": "http://arxiv.org/abs/2607.12267v1"
+    },
     "357356894b7ec189b70170529ebdeacbdea8f33a": {
       "kind": "Paper",
       "sent_at": "2026-06-26T12:04:38.973334",
@@ -422,6 +437,13 @@
       "source": "arXiv",
       "title": "Steerability via constraints: a substrate for scalable oversight of coding agents",
       "url": "http://arxiv.org/abs/2607.02389v1"
+    },
+    "3b175dd1938e21cd9c200cef7df3e863a9afd3ff": {
+      "kind": "Paper",
+      "sent_at": "2026-07-15T12:06:44.768708",
+      "source": "arXiv",
+      "title": "Who Grades the Grader? Co-Evolving Evaluation Metrics and Skills for Self-Improving LLM Agents",
+      "url": "http://arxiv.org/abs/2607.12790v1"
     },
     "41d1cfbc618596a9f222e42fa1f2db9d705f6fef": {
       "kind": "Blog",
@@ -478,6 +500,13 @@
       "source": "Simon Willison",
       "title": "simonw/browser-compat-db",
       "url": "https://simonwillison.net/2026/Jun/24/browser-compat-db/#atom-everything"
+    },
+    "53b35577b479def74e4d1370a9b12c9d9e71f2b0": {
+      "kind": "Blog",
+      "sent_at": "2026-07-15T12:06:44.768708",
+      "source": "OpenAI",
+      "title": "How to manage AI investments in the agentic era",
+      "url": "https://openai.com/index/managing-ai-investments-in-agentic-era"
     },
     "5525445d8f694329a84ddaa639a653d20e8fee0c": {
       "kind": "Blog",
@@ -808,6 +837,13 @@
       "title": "Introducing @neon/sdk, our new TypeScript client for the Neon API",
       "url": "https://neon.com/blog/neon-sdk"
     },
+    "bdb7100fcdf54bfc3940d952dd5bd2e2d3066314": {
+      "kind": "Blog",
+      "sent_at": "2026-07-15T12:06:44.768708",
+      "source": "Anthropic Docs",
+      "title": "Claude Code Overview",
+      "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
+    },
     "c0c6ee04b6bd5c9949a46187f84de7066a03e8e0": {
       "kind": "Blog",
       "sent_at": "2026-06-13T12:04:57.026355",
@@ -989,6 +1025,13 @@
       "source": "Simon Willison",
       "title": "datasette code-frequency chart on GitHub",
       "url": "https://simonwillison.net/2026/Jul/13/datasette-code-frequency/#atom-everything"
+    },
+    "fff2ef8bbf94f3a74deb2133455209f7aa13b1a4": {
+      "kind": "Blog",
+      "sent_at": "2026-07-15T12:06:44.768708",
+      "source": "Martin Fowler",
+      "title": "DSLs Enable Reliable Use of LLMs",
+      "url": "https://martinfowler.com/articles/llm-and-dsls.html"
     }
   },
   "watchlist_seen": {
@@ -997,6 +1040,7 @@
     "https://blog.cloudflare.com/cloudflare-joins-uk-cyber-resilience-pledge/": "2026-07-08T12:04:45.896685",
     "https://blog.cloudflare.com/cloudflare-one-stack/": "2026-06-18T12:32:27.608101",
     "https://blog.cloudflare.com/dmarc-management-ga/": "2026-06-17T12:05:14.337520",
+    "https://blog.cloudflare.com/dnssec-nta-ede-33/": "2026-07-15T12:06:44.768871",
     "https://blog.cloudflare.com/ensemble-ai-talent-joins-cloudflare/": "2026-06-16T12:05:28.721454",
     "https://blog.cloudflare.com/hyper-bug/": "2026-06-23T12:04:50.588874",
     "https://blog.cloudflare.com/introducing-precursor/": "2026-07-14T12:04:51.246812",
@@ -1088,8 +1132,10 @@
     "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy": "2026-06-22T12:31:28.939282",
     "https://www.anthropic.com/news/anthropic-public-record": "2026-06-21T12:31:23.180324",
     "https://www.anthropic.com/news/ben-bernanke": "2026-07-10T12:05:13.840666",
+    "https://www.anthropic.com/news/canadian-ai-research": "2026-07-15T12:06:44.768871",
     "https://www.anthropic.com/news/chris-olah-pope-leo-encyclical": "2026-06-20T12:32:09.900860",
     "https://www.anthropic.com/news/claude-corps": "2026-06-17T12:05:14.337520",
+    "https://www.anthropic.com/news/claude-for-teachers": "2026-07-15T12:06:44.768871",
     "https://www.anthropic.com/news/claude-opus-4-8": "2026-06-20T12:32:09.900860",
     "https://www.anthropic.com/news/claude-science-ai-workbench": "2026-07-02T12:05:08.091556",
     "https://www.anthropic.com/news/dxc-anthropic-alliance": "2026-06-21T12:31:23.180324",
