@@ -50,7 +50,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "436fe74405b7",
-      "last_seen_at": "2026-07-15T12:06:44.768708",
+      "last_seen_at": "2026-07-16T12:00:41.176121",
       "title": "Claude Code Overview",
       "updated_at": "2026-07-15T12:06:44.768708"
     },
@@ -176,7 +176,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "02cd0d728190",
-      "last_seen_at": "2026-07-15T12:02:21.704006",
+      "last_seen_at": "2026-07-16T12:00:41.176121",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-07-14T12:04:51.246654"
     },
@@ -215,7 +215,7 @@
         "Usage policy"
       ],
       "content_hash": "1d0cd2f3a49d",
-      "last_seen_at": "2026-07-15T12:02:21.704006",
+      "last_seen_at": "2026-07-16T12:00:41.176121",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-06-26T12:04:38.973334"
     }
@@ -354,12 +354,26 @@
       "title": "Better tools made Copilot code review worse. Here\u2019s how we actually improved it.",
       "url": "https://github.blog/ai-and-ml/github-copilot/better-tools-made-copilot-code-review-worse-heres-how-we-actually-improved-it/"
     },
+    "1d3544fd2c28d9bb1b6ff9478493726a752a2781": {
+      "kind": "Paper",
+      "sent_at": "2026-07-16T12:04:28.413025",
+      "source": "arXiv",
+      "title": "CAVA: Canonical Action Verification and Attestation for Runtime Governance of Agentic AI Systems",
+      "url": "http://arxiv.org/abs/2607.13716v1"
+    },
     "1f73cfc6fc962dfcc5b35e04f2fa0fd3e867e982": {
       "kind": "Paper",
       "sent_at": "2026-07-10T12:05:13.840520",
       "source": "arXiv",
       "title": "GitLake: Git-for-data for the agentic lakehouse",
       "url": "http://arxiv.org/abs/2607.08319v1"
+    },
+    "20ac0d5e386aef6d3e12a95b698effaf874216a5": {
+      "kind": "Blog",
+      "sent_at": "2026-07-16T12:04:28.413025",
+      "source": "Simon Willison",
+      "title": "Mermaid to Unicode box art (grok-mermaid)",
+      "url": "https://simonwillison.net/2026/Jul/16/grok-mermaid/#atom-everything"
     },
     "2344c4da26c6b77cc3450754cfd1cc772f4b3ca8": {
       "kind": "Blog",
@@ -479,6 +493,13 @@
       "source": "Supabase Engineering",
       "title": "Agentic Coding on Supabase with OpenCode OpenCode integrates with Supabase. Connect your agent to your database, Edge Functions, and logs. MCP setup is configured automatically. Author: Eric Kharitonashvili Published 30 June 2026 \u00b7 2 minute read",
       "url": "https://supabase.com/blog/agentic-coding-on-supabase-with-opencode"
+    },
+    "4cd15b3b3ef6e47dd1fe148a09cf218a13c8f079": {
+      "kind": "Blog",
+      "sent_at": "2026-07-16T12:04:28.413025",
+      "source": "Neon Blog",
+      "title": "Test out the Neon backend: Object Storage, Functions, and AI Gateway are beta",
+      "url": "https://neon.com/blog/neon-backend-is-beta"
     },
     "4d0d26f4045f6f252c2c10b466f13d2a41ba2b8d": {
       "kind": "Blog",
@@ -760,6 +781,13 @@
       "title": "What's new in Claude Sonnet 5",
       "url": "https://simonwillison.net/2026/Jun/30/claude-sonnet-5/#atom-everything"
     },
+    "a0175822bd744fdee4fb61ad128cc34177f7fa08": {
+      "kind": "Paper",
+      "sent_at": "2026-07-16T12:04:28.413025",
+      "source": "arXiv",
+      "title": "Set-shifting Behavioral Test for Harnessed Agents",
+      "url": "http://arxiv.org/abs/2607.13396v1"
+    },
     "a1040930408b2c4b306c7b8fec572446bd59ec28": {
       "kind": "Blog",
       "sent_at": "2026-07-03T12:07:02.942286",
@@ -815,6 +843,13 @@
       "source": "FastAPI Releases",
       "title": "0.138.1",
       "url": "https://github.com/fastapi/fastapi/releases/tag/0.138.1"
+    },
+    "b2dfedca7e2ddcf248751db0d9cb726187d53144": {
+      "kind": "Blog",
+      "sent_at": "2026-07-16T12:04:28.413025",
+      "source": "HuggingFace",
+      "title": "What building Shippy taught us about building agents",
+      "url": "https://huggingface.co/blog/allenai/shippy-tech-blog"
     },
     "b46f0d11f4652e15233545491434adbc2d9705f0": {
       "kind": "Blog",
@@ -1096,8 +1131,10 @@
     "https://claude.com/blog/working-at-the-frontier-how-cognition-trusts-claude-fable-5-to-work-through-the-night": "2026-07-11T12:04:14.686912",
     "https://claude.com/blog/working-at-the-frontier-how-hebbia-builds-ai-for-financial-diligence-that-cant-miss-a-detail": "2026-07-14T12:04:51.246812",
     "https://claude.com/blog/working-at-the-frontier-how-thomson-reuters-builds-ai-for-high--stakes-professional-work": "2026-07-09T12:04:55.179644",
+    "https://claude.com/blog/working-at-the-frontier-why-base44-trusts-claude-fable-5-with-their-most-challenging-engineering-work": "2026-07-16T12:04:28.413151",
     "https://claude.com/blog/workload-identity-federation": "2026-06-18T12:32:27.608101",
     "https://openai.com/index/academy-courses-applying-ai-at-work": "2026-06-13T12:04:57.026480",
+    "https://openai.com/index/advancing-ai-safety-through-state-and-federal-action": "2026-07-16T12:04:28.413151",
     "https://openai.com/index/ai-chemist-improves-reaction": "2026-06-18T12:32:27.608101",
     "https://openai.com/index/chatgpt-enterprise-spend-controls": "2026-06-19T12:32:01.945543",
     "https://openai.com/index/chatgpt-for-your-most-ambitious-work": "2026-07-10T12:05:13.840666",
@@ -1126,6 +1163,7 @@
     "https://openai.com/index/samsung-electronics-chatgpt-codex-deployment": "2026-06-22T12:31:28.939282",
     "https://openai.com/index/separating-signal-from-noise-coding-evaluations": "2026-07-09T12:04:55.179644",
     "https://openai.com/index/supporting-eu-trustworthy-ai-ecosystem": "2026-06-11T12:05:24.795564",
+    "https://openai.com/index/unlocking-self-improvement-gpt-red": "2026-07-16T12:04:28.413151",
     "https://openai.com/index/using-codex-to-simulate-black-holes": "2026-06-11T12:05:24.795564",
     "https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack": "2026-06-22T12:31:28.939282",
     "https://www.anthropic.com/news/alberta-government-claude-cybersecurity": "2026-07-12T12:04:53.647602",
