@@ -50,7 +50,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "436fe74405b7",
-      "last_seen_at": "2026-07-16T12:00:41.176121",
+      "last_seen_at": "2026-07-17T12:01:26.363606",
       "title": "Claude Code Overview",
       "updated_at": "2026-07-15T12:06:44.768708"
     },
@@ -154,6 +154,7 @@
         "Reference a directory",
         "Reference MCP resources",
         "File paths can be relative or absolute",
+        "Type @ to open a path suggestion menu, then press Enter or Tab to accept the highlighted path and Enter again to send the message",
         "@ file references add CLAUDE.md in the file\u2019s directory and parent directories to context",
         "Directory references show file listings, not contents",
         "You can reference multiple files in a single message (for example, \u201c@file1.js and @file2.js\u201d)",
@@ -175,10 +176,10 @@
         "Extend Claude Code",
         "Was this page helpful?"
       ],
-      "content_hash": "02cd0d728190",
-      "last_seen_at": "2026-07-16T12:00:41.176121",
+      "content_hash": "972aeef7bce5",
+      "last_seen_at": "2026-07-17T12:05:04.882361",
       "title": "Claude Code Tutorials",
-      "updated_at": "2026-07-14T12:04:51.246654"
+      "updated_at": "2026-07-17T12:05:04.882361"
     },
     "https://docs.anthropic.com/en/release-notes/overview": {
       "blocks": [
@@ -215,7 +216,7 @@
         "Usage policy"
       ],
       "content_hash": "1d0cd2f3a49d",
-      "last_seen_at": "2026-07-16T12:00:41.176121",
+      "last_seen_at": "2026-07-17T12:01:26.363606",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-06-26T12:04:38.973334"
     }
@@ -732,6 +733,13 @@
       "title": "Intelligence is Free, Now What? <br> Data Systems for, of, and by Agents",
       "url": "http://bair.berkeley.edu/blog/2026/07/07/intelligence-is-free-now-what/"
     },
+    "875bf4a1137db8b1c9c0066b1d83ace248571cc1": {
+      "kind": "Paper",
+      "sent_at": "2026-07-17T12:05:04.882361",
+      "source": "arXiv",
+      "title": "Proof-or-Stop: Don't Trust the Agent, Trust the Evidence -- Loop Engineering for Verifiable Evidence-Gated Lifecycle Control",
+      "url": "http://arxiv.org/abs/2607.14890v1"
+    },
     "87a57188c4577acb5960a0022bcb0bab9225f5a2": {
       "kind": "Paper",
       "sent_at": "2026-07-01T12:05:30.267771",
@@ -766,6 +774,13 @@
       "source": "Simon Willison",
       "title": "llm-coding-agent 0.1a0",
       "url": "https://simonwillison.net/2026/Jul/2/llm-coding-agent/#atom-everything"
+    },
+    "987ae004f896e5ce9cac897c7808155e372470a0": {
+      "kind": "Blog",
+      "sent_at": "2026-07-17T12:05:04.882361",
+      "source": "Simon Willison",
+      "title": "Quoting Thibault Sottiaux",
+      "url": "https://simonwillison.net/2026/Jul/16/bad-codex-bug/#atom-everything"
     },
     "9ca73bf56e567f138560e014ff5877b09939ffcd": {
       "kind": "Blog",
@@ -808,6 +823,13 @@
       "source": "Dropbox Tech",
       "title": "How we used DSPy to turn AI evaluations into better responses in Dash chat",
       "url": "https://dropbox.tech/machine-learning/how-we-turned-ai-evaluations-into-better-responses-in-dash-chat"
+    },
+    "a9c1ccf58870124ef3fbc054f59165a82bde0276": {
+      "kind": "Blog",
+      "sent_at": "2026-07-17T12:05:04.882361",
+      "source": "Anthropic Docs",
+      "title": "Claude Code Tutorials",
+      "url": "https://docs.anthropic.com/en/docs/claude-code/tutorials"
     },
     "a9e51196b75cfcc52c541c7f87916c6a93d3545f": {
       "kind": "Paper",
@@ -1040,6 +1062,13 @@
       "title": "Better Models: Worse Tools",
       "url": "https://simonwillison.net/2026/Jul/4/better-models-worse-tools/#atom-everything"
     },
+    "f8de57a996e4dd74a5af487ad3d0abfecf1f9405": {
+      "kind": "Paper",
+      "sent_at": "2026-07-17T12:05:04.882361",
+      "source": "arXiv",
+      "title": "MCPEvol-Bench: Benchmarking LLM Agent Performance Across Dynamic Evolutions of MCP Servers",
+      "url": "http://arxiv.org/abs/2607.14642v1"
+    },
     "fc7e5dbf308a75d415ed687f027f92ff1a442f57": {
       "kind": "Blog",
       "sent_at": "2026-06-17T12:05:14.337381",
@@ -1091,6 +1120,7 @@
     "https://blog.cloudflare.com/workers-cache/": "2026-07-07T12:05:38.996055",
     "https://claude.com/blog/a-field-guide-to-claude-fable-finding-your-unknowns": "2026-07-07T12:05:38.996055",
     "https://claude.com/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code": "2026-06-15T12:04:39.740414",
+    "https://claude.com/blog/ai-code-migration": "2026-07-17T12:05:04.882495",
     "https://claude.com/blog/artifacts-in-claude-code": "2026-06-19T12:32:01.945543",
     "https://claude.com/blog/best-practices-for-getting-started-with-claude-cowork": "2026-06-14T12:03:39.567586",
     "https://claude.com/blog/bringing-claude-code-and-claude-cowork-to-government": "2026-07-08T12:04:45.896685",
@@ -1132,6 +1162,7 @@
     "https://claude.com/blog/working-at-the-frontier-how-hebbia-builds-ai-for-financial-diligence-that-cant-miss-a-detail": "2026-07-14T12:04:51.246812",
     "https://claude.com/blog/working-at-the-frontier-how-thomson-reuters-builds-ai-for-high--stakes-professional-work": "2026-07-09T12:04:55.179644",
     "https://claude.com/blog/working-at-the-frontier-why-base44-trusts-claude-fable-5-with-their-most-challenging-engineering-work": "2026-07-16T12:04:28.413151",
+    "https://claude.com/blog/working-with-claude-fable-5-in-claude-cowork": "2026-07-17T12:05:04.882495",
     "https://claude.com/blog/workload-identity-federation": "2026-06-18T12:32:27.608101",
     "https://openai.com/index/academy-courses-applying-ai-at-work": "2026-06-13T12:04:57.026480",
     "https://openai.com/index/advancing-ai-safety-through-state-and-federal-action": "2026-07-16T12:04:28.413151",
@@ -1165,6 +1196,7 @@
     "https://openai.com/index/supporting-eu-trustworthy-ai-ecosystem": "2026-06-11T12:05:24.795564",
     "https://openai.com/index/unlocking-self-improvement-gpt-red": "2026-07-16T12:04:28.413151",
     "https://openai.com/index/using-codex-to-simulate-black-holes": "2026-06-11T12:05:24.795564",
+    "https://openai.com/index/why-teens-deserve-access-safe-ai": "2026-07-17T12:05:04.882495",
     "https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack": "2026-06-22T12:31:28.939282",
     "https://www.anthropic.com/news/alberta-government-claude-cybersecurity": "2026-07-12T12:04:53.647602",
     "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy": "2026-06-22T12:31:28.939282",
