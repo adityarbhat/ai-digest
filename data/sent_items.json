@@ -35,7 +35,7 @@
         "Work from anywhere",
         "Step away from your desk and keep working from your phone or any browser with Remote Control",
         "Message Dispatch a task from your phone and open the Desktop session it creates",
-        "Kick off a long-running task on the web or iOS app , then pull it into your terminal with claude --teleport . Teleport requires a claude.ai subscription.",
+        "Kick off a long-running task on the web or the Claude mobile app , then pull it into your terminal with claude --teleport . Teleport requires a claude.ai subscription.",
         "Hand off a terminal session to the Desktop app with /desktop for visual diff review",
         "Route tasks from team chat: mention @Claude in Slack with a bug report and get a pull request back",
         "\u200b Use Claude Code everywhere",
@@ -49,10 +49,10 @@
         "code.claude.com : demos, pricing, and product details",
         "Was this page helpful?"
       ],
-      "content_hash": "436fe74405b7",
-      "last_seen_at": "2026-07-17T12:01:26.363606",
+      "content_hash": "92076d99d594",
+      "last_seen_at": "2026-07-18T12:04:41.977423",
       "title": "Claude Code Overview",
-      "updated_at": "2026-07-15T12:06:44.768708"
+      "updated_at": "2026-07-18T12:04:41.977423"
     },
     "https://docs.anthropic.com/en/docs/claude-code/tutorials": {
       "blocks": [
@@ -177,7 +177,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "972aeef7bce5",
-      "last_seen_at": "2026-07-17T12:05:04.882361",
+      "last_seen_at": "2026-07-18T12:01:19.724704",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-07-17T12:05:04.882361"
     },
@@ -216,7 +216,7 @@
         "Usage policy"
       ],
       "content_hash": "1d0cd2f3a49d",
-      "last_seen_at": "2026-07-17T12:01:26.363606",
+      "last_seen_at": "2026-07-18T12:01:19.724704",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-06-26T12:04:38.973334"
     }
@@ -382,6 +382,13 @@
       "source": "Microsoft Research",
       "title": "SkillOpt: Agent skills as trainable parameters",
       "url": "https://www.microsoft.com/en-us/research/blog/skillopt-agent-skills-as-trainable-parameters/"
+    },
+    "27ebae18f6fbdd9fe92363219c62b2305f180f96": {
+      "kind": "Blog",
+      "sent_at": "2026-07-18T12:04:41.977423",
+      "source": "Simon Willison",
+      "title": "Claude make Fable 5 permanent",
+      "url": "https://simonwillison.net/2026/Jul/18/claude-make-fable-5-permanent/#atom-everything"
     },
     "284177c0015e0342c872734fdae86d57ecbb7ce6": {
       "kind": "Blog",
@@ -691,6 +698,13 @@
       "title": "Temporary Cloudflare Accounts for AI agents",
       "url": "https://blog.cloudflare.com/temporary-accounts/"
     },
+    "7ed997d50e6ddb6631562f47a2b131bc64fd79ff": {
+      "kind": "Blog",
+      "sent_at": "2026-07-18T12:04:41.977423",
+      "source": "GitHub Engineering",
+      "title": "The cost of saying yes has changed",
+      "url": "https://github.blog/engineering/the-cost-of-saying-yes-has-changed/"
+    },
     "7f45f0f7074041d2d4e5724337ba251636a6bf96": {
       "kind": "Blog",
       "sent_at": "2026-06-15T12:04:39.740295",
@@ -845,6 +859,13 @@
       "title": "Claude Code sends 33k tokens before reading the prompt; OpenCode sends 7k",
       "url": "https://systima.ai/blog/claude-code-vs-opencode-token-overhead"
     },
+    "ad9cba1eac649259004080938514a95b8d31eda4": {
+      "kind": "Blog",
+      "sent_at": "2026-07-18T12:04:41.977423",
+      "source": "Netflix TechBlog",
+      "title": "In-House LLM Serving at Netflix",
+      "url": "https://netflixtechblog.com/in-house-llm-serving-at-netflix-a5a8e799ea2c?source=rss----2615bd06b42e---4"
+    },
     "adf0016601053d097c605fba9eabbfe6571a3c74": {
       "kind": "Blog",
       "sent_at": "2026-07-05T12:04:17.804719",
@@ -887,6 +908,13 @@
       "title": "ProvenanceGuard: Source-Aware Factuality Verification for MCP-Based LLM Agents",
       "url": "http://arxiv.org/abs/2606.18037v1"
     },
+    "ba00c5b451b2e45cd77726c6cca09f30e84a89b1": {
+      "kind": "Blog",
+      "sent_at": "2026-07-18T12:04:41.977423",
+      "source": "Anthropic Docs",
+      "title": "Claude Code Overview",
+      "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
+    },
     "bc0df7079a9f395f0561adcbce0bb0af9228a12e": {
       "kind": "Blog",
       "sent_at": "2026-07-14T12:04:51.246654",
@@ -908,6 +936,13 @@
       "title": "Shipping psql without psql: a pure-TypeScript Postgres client in neonctl",
       "url": "https://neon.com/blog/shipping-psql-without-psql"
     },
+    "c1716a896bfd223af4cede8b7aad12a198eb7ee8": {
+      "kind": "Paper",
+      "sent_at": "2026-07-18T12:04:41.977423",
+      "source": "arXiv",
+      "title": "Setup Complete, Now You Are Compromised: Weaponizing Setup Instructions Against AI Coding Agents",
+      "url": "http://arxiv.org/abs/2607.15143v1"
+    },
     "c22eb6bf9d7744c1dd57d595aacc2d39678e0525": {
       "kind": "Blog",
       "sent_at": "2026-06-29T20:13:12.936686",
@@ -928,6 +963,13 @@
       "source": "arXiv",
       "title": "TraceLab: Characterizing Coding Agent Workloads for LLM Serving",
       "url": "http://arxiv.org/abs/2606.30560v1"
+    },
+    "c7f3f73bca9e2683a650c68b6c7a3e7164cc0dc6": {
+      "kind": "Paper",
+      "sent_at": "2026-07-18T12:04:41.977423",
+      "source": "arXiv",
+      "title": "Bridge Evidence: Static Retrieval Utility Does Not Predict Causal Utility in Multi-Step Agentic Search",
+      "url": "http://arxiv.org/abs/2607.15253v1"
     },
     "c8eff483a3a740aefcf98519ab516385b47a7d02": {
       "kind": "Blog",
@@ -1117,6 +1159,7 @@
     "https://blog.cloudflare.com/rollbacks-for-workflows/": "2026-06-26T12:04:38.973471",
     "https://blog.cloudflare.com/scaling-security-scans/": "2026-06-13T12:04:57.026480",
     "https://blog.cloudflare.com/smart-tiered-cache-for-public-clouds/": "2026-07-11T12:04:14.686912",
+    "https://blog.cloudflare.com/wordpress-vulnerabilities/": "2026-07-18T12:04:41.977625",
     "https://blog.cloudflare.com/workers-cache/": "2026-07-07T12:05:38.996055",
     "https://claude.com/blog/a-field-guide-to-claude-fable-finding-your-unknowns": "2026-07-07T12:05:38.996055",
     "https://claude.com/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code": "2026-06-15T12:04:39.740414",
@@ -1125,6 +1168,7 @@
     "https://claude.com/blog/best-practices-for-getting-started-with-claude-cowork": "2026-06-14T12:03:39.567586",
     "https://claude.com/blog/bringing-claude-code-and-claude-cowork-to-government": "2026-07-08T12:04:45.896685",
     "https://claude.com/blog/building-effective-human-agent-teams": "2026-06-25T12:04:58.851134",
+    "https://claude.com/blog/ciso-guide-to-agentic-ai": "2026-07-18T12:04:41.977625",
     "https://claude.com/blog/claude-builds-visuals": "2026-06-12T12:05:10.310953",
     "https://claude.com/blog/claude-code-desktop-redesign": "2026-06-10T21:56:22.813265",
     "https://claude.com/blog/claude-design-stays-on-brand-for-daily-work": "2026-06-18T12:32:27.608101",
@@ -1158,12 +1202,14 @@
     "https://claude.com/blog/the-full-claude-desktop-experience-on-aws-google-cloud-and-microsoft-foundry": "2026-06-23T12:04:50.588874",
     "https://claude.com/blog/using-llms-to-secure-source-code": "2026-06-15T12:04:39.740414",
     "https://claude.com/blog/whats-new-in-claude-managed-agents": "2026-06-12T12:05:10.310953",
+    "https://claude.com/blog/working-at-the-frontier-cursor": "2026-07-18T12:04:41.977625",
     "https://claude.com/blog/working-at-the-frontier-how-cognition-trusts-claude-fable-5-to-work-through-the-night": "2026-07-11T12:04:14.686912",
     "https://claude.com/blog/working-at-the-frontier-how-hebbia-builds-ai-for-financial-diligence-that-cant-miss-a-detail": "2026-07-14T12:04:51.246812",
     "https://claude.com/blog/working-at-the-frontier-how-thomson-reuters-builds-ai-for-high--stakes-professional-work": "2026-07-09T12:04:55.179644",
     "https://claude.com/blog/working-at-the-frontier-why-base44-trusts-claude-fable-5-with-their-most-challenging-engineering-work": "2026-07-16T12:04:28.413151",
     "https://claude.com/blog/working-with-claude-fable-5-in-claude-cowork": "2026-07-17T12:05:04.882495",
     "https://claude.com/blog/workload-identity-federation": "2026-06-18T12:32:27.608101",
+    "https://openai.com/index/a-scorecard-for-the-ai-age": "2026-07-18T12:04:41.977625",
     "https://openai.com/index/academy-courses-applying-ai-at-work": "2026-06-13T12:04:57.026480",
     "https://openai.com/index/advancing-ai-safety-through-state-and-federal-action": "2026-07-16T12:04:28.413151",
     "https://openai.com/index/ai-chemist-improves-reaction": "2026-06-18T12:32:27.608101",
