@@ -36,7 +36,7 @@
         "Step away from your desk and keep working from your phone or any browser with Remote Control",
         "Message Dispatch a task from your phone and open the Desktop session it creates",
         "Kick off a long-running task on the web or the Claude mobile app , then pull it into your terminal with claude --teleport . Teleport requires a claude.ai subscription.",
-        "Hand off a terminal session to the Desktop app with /desktop for visual diff review",
+        "Run /desktop to continue your current terminal session in the Desktop app , where you can review diffs visually. Available on macOS and x64 Windows.",
         "Route tasks from team chat: mention @Claude in Slack with a bug report and get a pull request back",
         "\u200b Use Claude Code everywhere",
         "\u200b Next steps",
@@ -49,10 +49,10 @@
         "code.claude.com : demos, pricing, and product details",
         "Was this page helpful?"
       ],
-      "content_hash": "92076d99d594",
-      "last_seen_at": "2026-07-18T12:04:41.977423",
+      "content_hash": "c3b2932b714a",
+      "last_seen_at": "2026-07-19T12:05:03.399857",
       "title": "Claude Code Overview",
-      "updated_at": "2026-07-18T12:04:41.977423"
+      "updated_at": "2026-07-19T12:05:03.399857"
     },
     "https://docs.anthropic.com/en/docs/claude-code/tutorials": {
       "blocks": [
@@ -177,7 +177,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "972aeef7bce5",
-      "last_seen_at": "2026-07-18T12:01:19.724704",
+      "last_seen_at": "2026-07-19T12:01:52.927405",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-07-17T12:05:04.882361"
     },
@@ -216,7 +216,7 @@
         "Usage policy"
       ],
       "content_hash": "1d0cd2f3a49d",
-      "last_seen_at": "2026-07-18T12:01:19.724704",
+      "last_seen_at": "2026-07-19T12:01:52.927405",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-06-26T12:04:38.973334"
     }
@@ -466,6 +466,13 @@
       "source": "arXiv",
       "title": "Who Grades the Grader? Co-Evolving Evaluation Metrics and Skills for Self-Improving LLM Agents",
       "url": "http://arxiv.org/abs/2607.12790v1"
+    },
+    "3d3e9ebc48c42b308e4bb4612cc76719ff63b223": {
+      "kind": "Blog",
+      "sent_at": "2026-07-19T12:05:03.399857",
+      "source": "Hacker News",
+      "title": "Setting up your spare Mac for Claude Code to control, a step-by-step guide",
+      "url": "https://ykdojo.github.io/claude-controls-mac/"
     },
     "41d1cfbc618596a9f222e42fa1f2db9d705f6fef": {
       "kind": "Blog",
@@ -859,6 +866,13 @@
       "title": "Claude Code sends 33k tokens before reading the prompt; OpenCode sends 7k",
       "url": "https://systima.ai/blog/claude-code-vs-opencode-token-overhead"
     },
+    "abde5f6940b35107e81762cb43edfea83c11b770": {
+      "kind": "Blog",
+      "sent_at": "2026-07-19T12:05:03.399857",
+      "source": "Anthropic Docs",
+      "title": "Claude Code Overview",
+      "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
+    },
     "ad9cba1eac649259004080938514a95b8d31eda4": {
       "kind": "Blog",
       "sent_at": "2026-07-18T12:04:41.977423",
@@ -956,6 +970,13 @@
       "source": "Cloudflare Blog",
       "title": "Build your own vulnerability harness",
       "url": "https://blog.cloudflare.com/build-your-own-vulnerability-harness/"
+    },
+    "c4b731ba43fb33c423d19cd9be37089dbc18657a": {
+      "kind": "Blog",
+      "sent_at": "2026-07-19T12:05:03.399857",
+      "source": "Simon Willison",
+      "title": "Claude Code uses Bun written in Rust now",
+      "url": "https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust/#atom-everything"
     },
     "c61270286fbfb10780af79e07d688db75226cdd9": {
       "kind": "Paper",
