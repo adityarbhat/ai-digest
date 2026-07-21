@@ -50,7 +50,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "c3b2932b714a",
-      "last_seen_at": "2026-07-20T12:01:36.996057",
+      "last_seen_at": "2026-07-21T12:01:04.044363",
       "title": "Claude Code Overview",
       "updated_at": "2026-07-19T12:05:03.399857"
     },
@@ -177,7 +177,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "972aeef7bce5",
-      "last_seen_at": "2026-07-20T12:01:36.996057",
+      "last_seen_at": "2026-07-21T12:01:04.044363",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-07-17T12:05:04.882361"
     },
@@ -216,7 +216,7 @@
         "Usage policy"
       ],
       "content_hash": "1d0cd2f3a49d",
-      "last_seen_at": "2026-07-20T12:01:36.996057",
+      "last_seen_at": "2026-07-21T12:01:04.044363",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-06-26T12:04:38.973334"
     }
@@ -754,6 +754,13 @@
       "title": "Intelligence is Free, Now What? <br> Data Systems for, of, and by Agents",
       "url": "http://bair.berkeley.edu/blog/2026/07/07/intelligence-is-free-now-what/"
     },
+    "859a37862ecfb9f8a3b9e372abc3895e9415fc47": {
+      "kind": "Paper",
+      "sent_at": "2026-07-21T12:04:54.370859",
+      "source": "arXiv",
+      "title": "Autoresearch with Coding Agents: Generalizers and Metric-Maximizers on Quran Recitation Data",
+      "url": "http://arxiv.org/abs/2607.18064v1"
+    },
     "875bf4a1137db8b1c9c0066b1d83ace248571cc1": {
       "kind": "Paper",
       "sent_at": "2026-07-17T12:05:04.882361",
@@ -929,12 +936,26 @@
       "title": "Claude Code Overview",
       "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
     },
+    "bc0372996f34847f4489e4d5af16230ffa97822e": {
+      "kind": "Blog",
+      "sent_at": "2026-07-21T12:04:54.370859",
+      "source": "Simon Willison",
+      "title": "Reverse-engineering is cheap now",
+      "url": "https://simonwillison.net/2026/Jul/20/cheap-reverse-engineering/#atom-everything"
+    },
     "bc0df7079a9f395f0561adcbce0bb0af9228a12e": {
       "kind": "Blog",
       "sent_at": "2026-07-14T12:04:51.246654",
       "source": "Neon Blog",
       "title": "Introducing @neon/sdk, our new TypeScript client for the Neon API",
       "url": "https://neon.com/blog/neon-sdk"
+    },
+    "bc6b94aed4d44b78b875e7f4d8b7f7f280aed57c": {
+      "kind": "Paper",
+      "sent_at": "2026-07-21T12:04:54.370859",
+      "source": "arXiv",
+      "title": "Is Progressive Disclosure All You Need for Long-Context Agents?",
+      "url": "http://arxiv.org/abs/2607.17598v1"
     },
     "bdb7100fcdf54bfc3940d952dd5bd2e2d3066314": {
       "kind": "Blog",
@@ -1118,6 +1139,13 @@
       "title": "Token-Flow Firewall: Semantic Runtime Auditing for Persistent AI Agents",
       "url": "http://arxiv.org/abs/2607.08395v1"
     },
+    "f487384614a34623c65faa96feb4f162451f1b40": {
+      "kind": "Blog",
+      "sent_at": "2026-07-21T12:04:54.370859",
+      "source": "Hacker News",
+      "title": "Kimi K3, Qwen 3.8, and Anthropic's (Potential) Unravelling",
+      "url": "https://www.emergingtrajectories.com/lh/frontier-lab-economics/"
+    },
     "f505485453bf6f1e9e392f0d4b8c947a08e87ec6": {
       "kind": "Blog",
       "sent_at": "2026-07-05T12:04:17.804719",
@@ -1170,6 +1198,7 @@
     "https://blog.cloudflare.com/dnssec-nta-ede-33/": "2026-07-15T12:06:44.768871",
     "https://blog.cloudflare.com/ensemble-ai-talent-joins-cloudflare/": "2026-06-16T12:05:28.721454",
     "https://blog.cloudflare.com/hyper-bug/": "2026-06-23T12:04:50.588874",
+    "https://blog.cloudflare.com/internal-dns/": "2026-07-21T12:04:54.370956",
     "https://blog.cloudflare.com/introducing-precursor/": "2026-07-14T12:04:51.246812",
     "https://blog.cloudflare.com/making-ai-search-smarter/": "2026-07-02T12:05:08.091556",
     "https://blog.cloudflare.com/meerkat-introduction/": "2026-07-09T12:04:55.179644",
@@ -1227,6 +1256,7 @@
     "https://claude.com/blog/working-at-the-frontier-how-cognition-trusts-claude-fable-5-to-work-through-the-night": "2026-07-11T12:04:14.686912",
     "https://claude.com/blog/working-at-the-frontier-how-hebbia-builds-ai-for-financial-diligence-that-cant-miss-a-detail": "2026-07-14T12:04:51.246812",
     "https://claude.com/blog/working-at-the-frontier-how-thomson-reuters-builds-ai-for-high--stakes-professional-work": "2026-07-09T12:04:55.179644",
+    "https://claude.com/blog/working-at-the-frontier-rakuten": "2026-07-21T12:04:54.370956",
     "https://claude.com/blog/working-at-the-frontier-why-base44-trusts-claude-fable-5-with-their-most-challenging-engineering-work": "2026-07-16T12:04:28.413151",
     "https://claude.com/blog/working-with-claude-fable-5-in-claude-cowork": "2026-07-17T12:05:04.882495",
     "https://claude.com/blog/workload-identity-federation": "2026-06-18T12:32:27.608101",
@@ -1258,6 +1288,7 @@
     "https://openai.com/index/patch-the-planet": "2026-06-23T12:04:50.588874",
     "https://openai.com/index/prc-linked-influence-operations-ai-debates": "2026-06-10T21:37:31.151750",
     "https://openai.com/index/preply": "2026-06-12T12:05:10.310953",
+    "https://openai.com/index/safety-alignment-long-horizon-models": "2026-07-21T12:04:54.370956",
     "https://openai.com/index/samsung-electronics-chatgpt-codex-deployment": "2026-06-22T12:31:28.939282",
     "https://openai.com/index/separating-signal-from-noise-coding-evaluations": "2026-07-09T12:04:55.179644",
     "https://openai.com/index/supporting-eu-trustworthy-ai-ecosystem": "2026-06-11T12:05:24.795564",
