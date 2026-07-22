@@ -50,7 +50,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "c3b2932b714a",
-      "last_seen_at": "2026-07-21T12:01:04.044363",
+      "last_seen_at": "2026-07-22T12:02:39.996077",
       "title": "Claude Code Overview",
       "updated_at": "2026-07-19T12:05:03.399857"
     },
@@ -177,7 +177,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "972aeef7bce5",
-      "last_seen_at": "2026-07-21T12:01:04.044363",
+      "last_seen_at": "2026-07-22T12:02:39.996077",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-07-17T12:05:04.882361"
     },
@@ -216,7 +216,7 @@
         "Usage policy"
       ],
       "content_hash": "1d0cd2f3a49d",
-      "last_seen_at": "2026-07-21T12:01:04.044363",
+      "last_seen_at": "2026-07-22T12:02:39.996077",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-06-26T12:04:38.973334"
     }
@@ -530,6 +530,13 @@
       "title": "Quoting Sean Lynch",
       "url": "https://simonwillison.net/2026/Jun/19/sean-lynch/#atom-everything"
     },
+    "4f35c335ae29db9a0c026a20e2a950ffb6188ed3": {
+      "kind": "Paper",
+      "sent_at": "2026-07-22T12:06:38.269493",
+      "source": "arXiv",
+      "title": "Graph-Based Agentic AI with LangGraph: Workflow Pathways for Long-Running Stateful Business Processes",
+      "url": "http://arxiv.org/abs/2607.19297v1"
+    },
     "52ddfb34a989093123abea1950bb9a02baf77cde": {
       "kind": "Blog",
       "sent_at": "2026-06-25T12:04:58.851017",
@@ -704,6 +711,13 @@
       "source": "Cloudflare Blog",
       "title": "Temporary Cloudflare Accounts for AI agents",
       "url": "https://blog.cloudflare.com/temporary-accounts/"
+    },
+    "7bc9c70db152789373f7f6e7f57e4616c01e2d47": {
+      "kind": "Paper",
+      "sent_at": "2026-07-22T12:06:38.269493",
+      "source": "arXiv",
+      "title": "Agents in the Wild: Where Research Meets Deployment",
+      "url": "http://arxiv.org/abs/2607.19336v1"
     },
     "7ed997d50e6ddb6631562f47a2b131bc64fd79ff": {
       "kind": "Blog",
@@ -1027,6 +1041,13 @@
       "title": "Build real agentic apps using CUGA: two dozen working examples on a lightweight harness",
       "url": "https://huggingface.co/blog/ibm-research/cuga-apps"
     },
+    "ca819bc60aba296049475a770b131238cd0ab520": {
+      "kind": "Blog",
+      "sent_at": "2026-07-22T12:06:38.269493",
+      "source": "Google DeepMind",
+      "title": "Introducing Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber",
+      "url": "https://deepmind.google/blog/introducing-gemini-36-flash-35-flash-lite-and-35-flash-cyber/"
+    },
     "cb2882bab7c16a4b33046c9c9b0403ee3fcfebcf": {
       "kind": "Blog",
       "sent_at": "2026-06-12T12:05:10.310793",
@@ -1075,6 +1096,13 @@
       "source": "Hacker News",
       "title": "Anthropic apologizes for invisible Claude Fable guardrails",
       "url": "https://www.theverge.com/ai-artificial-intelligence/948280/anthropic-claude-fable-invisible-distillation-guardrail"
+    },
+    "df8df70439c0ef5336c6b7e77c111e72c84efae8": {
+      "kind": "Blog",
+      "sent_at": "2026-07-22T12:06:38.269493",
+      "source": "Simon Willison",
+      "title": "A Fireside Chat with Cat and Thariq from the Claude Code team",
+      "url": "https://simonwillison.net/2026/Jul/21/cat-and-thariq/#atom-everything"
     },
     "e12aae9b505f24d70453eaae083d2f31f61f936a": {
       "kind": "Blog",
@@ -1190,6 +1218,7 @@
     }
   },
   "watchlist_seen": {
+    "https://blog.cloudflare.com/2026-world-cup-internet-traffic/": "2026-07-22T12:06:38.269628",
     "https://blog.cloudflare.com/agentic-internet-bot-report/": "2026-07-02T12:05:08.091556",
     "https://blog.cloudflare.com/celebrating-12-years-of-project-galileo/": "2026-06-19T12:32:01.945543",
     "https://blog.cloudflare.com/cloudflare-joins-uk-cyber-resilience-pledge/": "2026-07-08T12:04:45.896685",
@@ -1234,9 +1263,11 @@
     "https://claude.com/blog/giving-admins-more-visibility-and-control-over-claude-usage-and-spend": "2026-07-03T12:07:02.942510",
     "https://claude.com/blog/harnessing-claudes-intelligence": "2026-06-11T12:05:24.795564",
     "https://claude.com/blog/how-anthropic-enables-self-service-data-analytics-with-claude": "2026-06-13T12:04:57.026480",
+    "https://claude.com/blog/how-anthropic-secures-its-ai-native-software-development-lifecycle": "2026-07-22T12:06:38.269628",
     "https://claude.com/blog/how-anthropic-uses-claude-gtm-engineering": "2026-06-13T12:04:57.026480",
     "https://claude.com/blog/how-anthropics-marketing-operations-team-uses-claude-cowork-to-automate-reporting-and-campaign-builds": "2026-07-09T12:04:55.179644",
     "https://claude.com/blog/how-coderabbit-used-claude-to-build-an-agent-orchestration-system": "2026-06-16T12:05:28.721454",
+    "https://claude.com/blog/how-datadog-built-a-universal-machine-tool-for-claude-code": "2026-07-22T12:06:38.269628",
     "https://claude.com/blog/how-people-are-using-claude-cowork": "2026-07-09T12:04:55.179644",
     "https://claude.com/blog/introducing-dynamic-workflows-in-claude-code": "2026-06-15T12:04:39.740414",
     "https://claude.com/blog/introducing-the-claude-apps-gateway": "2026-06-30T12:05:14.072822",
@@ -1275,7 +1306,9 @@
     "https://openai.com/index/helping-build-shared-standards-for-advanced-ai": "2026-06-24T12:04:31.769763",
     "https://openai.com/index/how-agents-are-transforming-work": "2026-06-25T12:04:58.851134",
     "https://openai.com/index/how-chatgpt-adoption-has-expanded": "2026-07-01T12:05:30.267914",
+    "https://openai.com/index/hugging-face-model-evaluation-security-incident": "2026-07-22T12:06:38.269628",
     "https://openai.com/index/improving-health-intelligence-in-chatgpt": "2026-06-19T12:32:01.945543",
+    "https://openai.com/index/introducing-chatgpt-small-business-program": "2026-07-22T12:06:38.269628",
     "https://openai.com/index/introducing-openai-partner-network": "2026-06-15T12:04:39.740414",
     "https://openai.com/index/k-12-educators-practical-skills": "2026-07-09T12:04:55.179644",
     "https://openai.com/index/lseg": "2026-06-10T21:37:31.151750",
