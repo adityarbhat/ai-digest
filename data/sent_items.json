@@ -50,7 +50,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "c3b2932b714a",
-      "last_seen_at": "2026-07-22T12:02:39.996077",
+      "last_seen_at": "2026-07-23T12:01:04.282660",
       "title": "Claude Code Overview",
       "updated_at": "2026-07-19T12:05:03.399857"
     },
@@ -177,7 +177,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "972aeef7bce5",
-      "last_seen_at": "2026-07-22T12:02:39.996077",
+      "last_seen_at": "2026-07-23T12:01:04.282660",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-07-17T12:05:04.882361"
     },
@@ -216,7 +216,7 @@
         "Usage policy"
       ],
       "content_hash": "1d0cd2f3a49d",
-      "last_seen_at": "2026-07-22T12:02:39.996077",
+      "last_seen_at": "2026-07-23T12:01:04.282660",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-06-26T12:04:38.973334"
     }
@@ -362,6 +362,13 @@
       "title": "CAVA: Canonical Action Verification and Attestation for Runtime Governance of Agentic AI Systems",
       "url": "http://arxiv.org/abs/2607.13716v1"
     },
+    "1dec59c340b92f4d6920513e094ba01ac1300550": {
+      "kind": "Paper",
+      "sent_at": "2026-07-23T12:05:27.517520",
+      "source": "arXiv",
+      "title": "CodeRescue: Budget-Calibrated Recovery Routing for Coding Agents",
+      "url": "http://arxiv.org/abs/2607.19338v1"
+    },
     "1f73cfc6fc962dfcc5b35e04f2fa0fd3e867e982": {
       "kind": "Paper",
       "sent_at": "2026-07-10T12:05:13.840520",
@@ -375,6 +382,13 @@
       "source": "Simon Willison",
       "title": "Mermaid to Unicode box art (grok-mermaid)",
       "url": "https://simonwillison.net/2026/Jul/16/grok-mermaid/#atom-everything"
+    },
+    "22b109c4d141cc3ad2e2a6760853297e037b7e5a": {
+      "kind": "Blog",
+      "sent_at": "2026-07-23T12:05:27.517520",
+      "source": "Simon Willison",
+      "title": "Quoting Thomas Ptacek",
+      "url": "https://simonwillison.net/2026/Jul/22/thomas-ptacek/#atom-everything"
     },
     "2344c4da26c6b77cc3450754cfd1cc772f4b3ca8": {
       "kind": "Blog",
@@ -866,6 +880,13 @@
       "title": "How we used DSPy to turn AI evaluations into better responses in Dash chat",
       "url": "https://dropbox.tech/machine-learning/how-we-turned-ai-evaluations-into-better-responses-in-dash-chat"
     },
+    "a89eb3ec74500282e6d87fd8b8e0e582da49d3e2": {
+      "kind": "Blog",
+      "sent_at": "2026-07-23T12:05:27.517520",
+      "source": "Hacker News",
+      "title": "The startup's Postgres survival guide",
+      "url": "https://hatchet.run/blog/postgres-survival-guide"
+    },
     "a9c1ccf58870124ef3fbc054f59165a82bde0276": {
       "kind": "Blog",
       "sent_at": "2026-07-17T12:05:04.882361",
@@ -1247,6 +1268,7 @@
     "https://claude.com/blog/best-practices-for-getting-started-with-claude-cowork": "2026-06-14T12:03:39.567586",
     "https://claude.com/blog/bringing-claude-code-and-claude-cowork-to-government": "2026-07-08T12:04:45.896685",
     "https://claude.com/blog/building-effective-human-agent-teams": "2026-06-25T12:04:58.851134",
+    "https://claude.com/blog/building-verification-loops-in-claude-code-with-skills": "2026-07-23T12:05:27.517628",
     "https://claude.com/blog/ciso-guide-to-agentic-ai": "2026-07-18T12:04:41.977625",
     "https://claude.com/blog/claude-builds-visuals": "2026-06-12T12:05:10.310953",
     "https://claude.com/blog/claude-code-desktop-redesign": "2026-06-10T21:56:22.813265",
@@ -1268,6 +1290,7 @@
     "https://claude.com/blog/how-anthropics-marketing-operations-team-uses-claude-cowork-to-automate-reporting-and-campaign-builds": "2026-07-09T12:04:55.179644",
     "https://claude.com/blog/how-coderabbit-used-claude-to-build-an-agent-orchestration-system": "2026-06-16T12:05:28.721454",
     "https://claude.com/blog/how-datadog-built-a-universal-machine-tool-for-claude-code": "2026-07-22T12:06:38.269628",
+    "https://claude.com/blog/how-outtake-built-a-cyber-investigator-on-claude": "2026-07-23T12:05:27.517628",
     "https://claude.com/blog/how-people-are-using-claude-cowork": "2026-07-09T12:04:55.179644",
     "https://claude.com/blog/introducing-dynamic-workflows-in-claude-code": "2026-06-15T12:04:39.740414",
     "https://claude.com/blog/introducing-the-claude-apps-gateway": "2026-06-30T12:05:14.072822",
@@ -1294,7 +1317,9 @@
     "https://openai.com/index/a-scorecard-for-the-ai-age": "2026-07-18T12:04:41.977625",
     "https://openai.com/index/academy-courses-applying-ai-at-work": "2026-06-13T12:04:57.026480",
     "https://openai.com/index/advancing-ai-safety-through-state-and-federal-action": "2026-07-16T12:04:28.413151",
+    "https://openai.com/index/advancing-the-next-era-of-national-science": "2026-07-23T12:05:27.517628",
     "https://openai.com/index/ai-chemist-improves-reaction": "2026-06-18T12:32:27.608101",
+    "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community": "2026-07-23T12:05:27.517628",
     "https://openai.com/index/chatgpt-enterprise-spend-controls": "2026-06-19T12:32:01.945543",
     "https://openai.com/index/chatgpt-for-your-most-ambitious-work": "2026-07-10T12:05:13.840666",
     "https://openai.com/index/daybreak-securing-the-world": "2026-06-23T12:04:50.588874",
@@ -1306,6 +1331,7 @@
     "https://openai.com/index/helping-build-shared-standards-for-advanced-ai": "2026-06-24T12:04:31.769763",
     "https://openai.com/index/how-agents-are-transforming-work": "2026-06-25T12:04:58.851134",
     "https://openai.com/index/how-chatgpt-adoption-has-expanded": "2026-07-01T12:05:30.267914",
+    "https://openai.com/index/how-news-organizations-are-using-ai": "2026-07-23T12:05:27.517628",
     "https://openai.com/index/hugging-face-model-evaluation-security-incident": "2026-07-22T12:06:38.269628",
     "https://openai.com/index/improving-health-intelligence-in-chatgpt": "2026-06-19T12:32:01.945543",
     "https://openai.com/index/introducing-chatgpt-small-business-program": "2026-07-22T12:06:38.269628",
