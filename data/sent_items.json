@@ -50,7 +50,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "c3b2932b714a",
-      "last_seen_at": "2026-07-23T12:01:04.282660",
+      "last_seen_at": "2026-07-24T12:01:53.393010",
       "title": "Claude Code Overview",
       "updated_at": "2026-07-19T12:05:03.399857"
     },
@@ -177,7 +177,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "972aeef7bce5",
-      "last_seen_at": "2026-07-23T12:01:04.282660",
+      "last_seen_at": "2026-07-24T12:01:53.393010",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-07-17T12:05:04.882361"
     },
@@ -216,7 +216,7 @@
         "Usage policy"
       ],
       "content_hash": "1d0cd2f3a49d",
-      "last_seen_at": "2026-07-23T12:01:04.282660",
+      "last_seen_at": "2026-07-24T12:01:53.393010",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-06-26T12:04:38.973334"
     }
@@ -235,6 +235,13 @@
       "source": "Hacker News",
       "title": "Claude Sonnet 5",
       "url": "https://www.anthropic.com/news/claude-sonnet-5"
+    },
+    "04953570a75083d4ddbc65fba8a1273b5d3051d4": {
+      "kind": "Blog",
+      "sent_at": "2026-07-24T12:06:54.831851",
+      "source": "Neon Blog",
+      "title": "My agent cloned GitHub (sort of) using the Neon backend",
+      "url": "https://neon.com/blog/my-agent-cloned-github-using-the-neon-backend"
     },
     "04b030661d1c7c4bdff8336e0ec86bc0d2dd64c4": {
       "kind": "Blog",
@@ -396,6 +403,13 @@
       "source": "Microsoft Research",
       "title": "SkillOpt: Agent skills as trainable parameters",
       "url": "https://www.microsoft.com/en-us/research/blog/skillopt-agent-skills-as-trainable-parameters/"
+    },
+    "23afc1b2cbfa00b82def205d0656ac98a7e7ecfc": {
+      "kind": "Paper",
+      "sent_at": "2026-07-24T12:06:54.831851",
+      "source": "arXiv",
+      "title": "ICAE-Bench: Evaluating Coding Agents as Interactive Project Builders",
+      "url": "http://arxiv.org/abs/2607.21217v1"
     },
     "27ebae18f6fbdd9fe92363219c62b2305f180f96": {
       "kind": "Blog",
@@ -803,6 +817,13 @@
       "title": "ACE: Pluggable Adaptive Context Elasticizer across Agents",
       "url": "http://arxiv.org/abs/2606.31564v1"
     },
+    "8d6038215a23b82595a3877f0057faeb6da7b571": {
+      "kind": "Blog",
+      "sent_at": "2026-07-24T12:06:54.831851",
+      "source": "Grab Engineering",
+      "title": "Agent platform (Part 1): How we help Grab build and run AI agents at scale",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5UeVRNSVJzM3kzUnVPVmxrSjBWNlREOUt5RGxaLUNPRG91TzN1NFZUckl3aVhKUmRMYWtvVXM2WXZPN1JHWVFIMHgyT2NKbHNoWHJOT2gwOU5EN1hXX1JmSlY3U0ZBNE40ZkZVYnZBU3ZWdUlFc1hiczgxdmU?oc=5"
+    },
     "8f5f73a05a9a61bb4cbb4b5a464f33c8ae2447ac": {
       "kind": "Blog",
       "sent_at": "2026-06-16T12:05:28.721333",
@@ -816,6 +837,13 @@
       "source": "arXiv",
       "title": "Assessing Automated Prompt Injection Attacks in Agentic Environments",
       "url": "http://arxiv.org/abs/2606.10525v1"
+    },
+    "9690777f2576ad50046f21224c4a3d251cb79434": {
+      "kind": "Paper",
+      "sent_at": "2026-07-24T12:06:54.831851",
+      "source": "arXiv",
+      "title": "Agentic Context Management: Solving Agent Memory and Cost by Treating Them as Lifecycle and Architecture Problems",
+      "url": "http://arxiv.org/abs/2607.21503v1"
     },
     "96b069622f74633473414b949ba0b96ec691b0d9": {
       "kind": "Blog",
@@ -1104,6 +1132,13 @@
       "title": "Fragments: July 13",
       "url": "https://martinfowler.com/fragments/2026-07-13.html"
     },
+    "d861e4fc462b5dc3f344634e89365d1d78f14554": {
+      "kind": "Blog",
+      "sent_at": "2026-07-24T12:06:54.831851",
+      "source": "Hacker News",
+      "title": "Why Software Factories Fail (or: harness engineering is not enough)",
+      "url": "https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/wsff.md"
+    },
     "db19f73773d78287528f13bfa37ac96f6a5f993c": {
       "kind": "Blog",
       "sent_at": "2026-07-01T12:05:30.267771",
@@ -1124,6 +1159,13 @@
       "source": "Simon Willison",
       "title": "A Fireside Chat with Cat and Thariq from the Claude Code team",
       "url": "https://simonwillison.net/2026/Jul/21/cat-and-thariq/#atom-everything"
+    },
+    "e09c0eff4973d4d8994cc49d24dd87b7508d8206": {
+      "kind": "Blog",
+      "sent_at": "2026-07-24T12:06:54.831851",
+      "source": "Hacker News",
+      "title": "OpenAI\u2019s accidental attack against Hugging Face is science fiction that happened",
+      "url": "https://simonwillison.net/2026/Jul/22/openai-cyberattack/"
     },
     "e12aae9b505f24d70453eaae083d2f31f61f936a": {
       "kind": "Blog",
@@ -1159,6 +1201,13 @@
       "source": "Claude Blog",
       "title": "Agent identity in Claude Tag: a new access model for autonomous, team-wide AI",
       "url": "https://claude.com/blog/agent-identity-access-model"
+    },
+    "e879bd7f7be07148b50b99794bb51c0962644d29": {
+      "kind": "Blog",
+      "sent_at": "2026-07-24T12:06:54.831851",
+      "source": "Simon Willison",
+      "title": "The first known runaway AI agent - or a very bad marketing stunt?",
+      "url": "https://simonwillison.net/2026/Jul/23/the-first-known-runaway-ai-agent/#atom-everything"
     },
     "e8a5734b45e72ae9471d96500cdffb790bd1c817": {
       "kind": "Paper",
@@ -1249,6 +1298,7 @@
     "https://blog.cloudflare.com/ensemble-ai-talent-joins-cloudflare/": "2026-06-16T12:05:28.721454",
     "https://blog.cloudflare.com/hyper-bug/": "2026-06-23T12:04:50.588874",
     "https://blog.cloudflare.com/internal-dns/": "2026-07-21T12:04:54.370956",
+    "https://blog.cloudflare.com/introducing-cache-response-rules/": "2026-07-24T12:06:54.832037",
     "https://blog.cloudflare.com/introducing-precursor/": "2026-07-14T12:04:51.246812",
     "https://blog.cloudflare.com/making-ai-search-smarter/": "2026-07-02T12:05:08.091556",
     "https://blog.cloudflare.com/meerkat-introduction/": "2026-07-09T12:04:55.179644",
@@ -1281,6 +1331,7 @@
     "https://claude.com/blog/connectors-for-everyday-life": "2026-06-10T21:56:22.813265",
     "https://claude.com/blog/cowork-web-mobile": "2026-07-08T12:04:45.896685",
     "https://claude.com/blog/enterprise-managed-auth": "2026-06-19T12:32:01.945543",
+    "https://claude.com/blog/four-role-based-claude-certifications": "2026-07-24T12:06:54.832037",
     "https://claude.com/blog/getting-started-with-loops": "2026-07-01T12:05:30.267914",
     "https://claude.com/blog/giving-admins-more-visibility-and-control-over-claude-usage-and-spend": "2026-07-03T12:07:02.942510",
     "https://claude.com/blog/harnessing-claudes-intelligence": "2026-06-11T12:05:24.795564",
@@ -1304,6 +1355,7 @@
     "https://claude.com/blog/steering-claude-code-skills-hooks-rules-subagents-and-more": "2026-06-19T12:32:01.945543",
     "https://claude.com/blog/the-claude-cowork-product-guide": "2026-06-13T12:04:57.026480",
     "https://claude.com/blog/the-full-claude-desktop-experience-on-aws-google-cloud-and-microsoft-foundry": "2026-06-23T12:04:50.588874",
+    "https://claude.com/blog/think-through-hard-problems-in-voice-mode": "2026-07-24T12:06:54.832037",
     "https://claude.com/blog/using-llms-to-secure-source-code": "2026-06-15T12:04:39.740414",
     "https://claude.com/blog/whats-new-in-claude-managed-agents": "2026-06-12T12:05:10.310953",
     "https://claude.com/blog/working-at-the-frontier-cursor": "2026-07-18T12:04:41.977625",
