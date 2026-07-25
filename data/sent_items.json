@@ -50,7 +50,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "c3b2932b714a",
-      "last_seen_at": "2026-07-24T12:01:53.393010",
+      "last_seen_at": "2026-07-25T12:00:59.616333",
       "title": "Claude Code Overview",
       "updated_at": "2026-07-19T12:05:03.399857"
     },
@@ -177,7 +177,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "972aeef7bce5",
-      "last_seen_at": "2026-07-24T12:01:53.393010",
+      "last_seen_at": "2026-07-25T12:00:59.616333",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-07-17T12:05:04.882361"
     },
@@ -187,9 +187,10 @@
         "AI agents",
         "Code modernization",
         "Customer support",
-        "Education",
         "Financial services",
         "Government",
+        "Higher education",
+        "K-12 teachers",
         "Life sciences",
         "Partners",
         "Claude on AWS",
@@ -215,10 +216,10 @@
         "Terms of service: Consumer",
         "Usage policy"
       ],
-      "content_hash": "1d0cd2f3a49d",
-      "last_seen_at": "2026-07-24T12:01:53.393010",
+      "content_hash": "c3942e16ce32",
+      "last_seen_at": "2026-07-25T12:04:37.529583",
       "title": "Anthropic Release Notes",
-      "updated_at": "2026-06-26T12:04:38.973334"
+      "updated_at": "2026-07-25T12:04:37.529583"
     }
   },
   "sent": {
@@ -291,6 +292,13 @@
       "source": "FastAPI Releases",
       "title": "0.139.0",
       "url": "https://github.com/fastapi/fastapi/releases/tag/0.139.0"
+    },
+    "0d7870320f12ed6c1ac841cc4fd09410527afa30": {
+      "kind": "Blog",
+      "sent_at": "2026-07-25T12:04:37.529583",
+      "source": "Hacker News",
+      "title": "Claude Opus 5",
+      "url": "https://www.anthropic.com/news/claude-opus-5"
     },
     "0fb195b57e36cf7b393c4169a50db3148a579793": {
       "kind": "Blog",
@@ -515,6 +523,13 @@
       "source": "Simon Willison",
       "title": "Have your agent record video demos of its work with shot-scraper video",
       "url": "https://simonwillison.net/2026/Jun/30/shot-scraper-video/#atom-everything"
+    },
+    "46d6aecc738b508c7e3df2c19334ef67546e95c0": {
+      "kind": "Blog",
+      "sent_at": "2026-07-25T12:04:37.529583",
+      "source": "Simon Willison",
+      "title": "Introducing Claude Opus 5",
+      "url": "https://simonwillison.net/2026/Jul/24/introducing-claude-opus-5/#atom-everything"
     },
     "491a1b3ae8b4a18dac2c00ae7c4d8d99a37031d8": {
       "kind": "Blog",
@@ -866,6 +881,13 @@
       "title": "Quoting Thibault Sottiaux",
       "url": "https://simonwillison.net/2026/Jul/16/bad-codex-bug/#atom-everything"
     },
+    "9c5ce25da43cad33b5688731dbf09b0012ea81b3": {
+      "kind": "Paper",
+      "sent_at": "2026-07-25T12:04:37.529583",
+      "source": "arXiv",
+      "title": "OpenForgeRL: Train Harness-native Agents in Any Environment",
+      "url": "http://arxiv.org/abs/2607.21557v1"
+    },
     "9ca73bf56e567f138560e014ff5877b09939ffcd": {
       "kind": "Blog",
       "sent_at": "2026-06-13T12:04:57.026355",
@@ -1181,6 +1203,13 @@
       "title": "Automating SKILL.md Generation for Computer-Using Agents via Interaction Trajectory Mining",
       "url": "http://arxiv.org/abs/2606.20363v1"
     },
+    "e503ea12a4c42b3463ae4e1d90ff94773d61ae63": {
+      "kind": "Blog",
+      "sent_at": "2026-07-25T12:04:37.529583",
+      "source": "Anthropic Docs",
+      "title": "Anthropic Release Notes",
+      "url": "https://docs.anthropic.com/en/release-notes/overview"
+    },
     "e598720370c80294cf3aa599898f8e30846afa91": {
       "kind": "Paper",
       "sent_at": "2026-06-12T12:05:10.310793",
@@ -1215,6 +1244,13 @@
       "source": "arXiv",
       "title": "An Experimental Design Approach to Evaluating Agentic AI's Autonomous Model Discovery",
       "url": "http://arxiv.org/abs/2607.06413v1"
+    },
+    "ecd538801d3442ec757eaca5a6d9892aee0e47fb": {
+      "kind": "Blog",
+      "sent_at": "2026-07-25T12:04:37.529583",
+      "source": "Hacker News",
+      "title": "Claude Cookbook",
+      "url": "https://platform.claude.com/cookbook/"
     },
     "ed25778591b6b6e0745c2c7be379ebba4d2474c2": {
       "kind": "Blog",
@@ -1290,6 +1326,7 @@
   "watchlist_seen": {
     "https://blog.cloudflare.com/2026-world-cup-internet-traffic/": "2026-07-22T12:06:38.269628",
     "https://blog.cloudflare.com/agentic-internet-bot-report/": "2026-07-02T12:05:08.091556",
+    "https://blog.cloudflare.com/bgp-origin-attribute/": "2026-07-25T12:04:37.529743",
     "https://blog.cloudflare.com/celebrating-12-years-of-project-galileo/": "2026-06-19T12:32:01.945543",
     "https://blog.cloudflare.com/cloudflare-joins-uk-cyber-resilience-pledge/": "2026-07-08T12:04:45.896685",
     "https://blog.cloudflare.com/cloudflare-one-stack/": "2026-06-18T12:32:27.608101",
@@ -1328,6 +1365,7 @@
     "https://claude.com/blog/claude-managed-agents-memory": "2026-06-10T21:56:22.813265",
     "https://claude.com/blog/claude-managed-agents-updates": "2026-06-10T21:37:31.151750",
     "https://claude.com/blog/claude-model-and-effort-level-in-claude-code": "2026-07-08T12:04:45.896685",
+    "https://claude.com/blog/claude-models-explained-choosing-the-best-model-for-your-use-case": "2026-07-25T12:04:37.529743",
     "https://claude.com/blog/connectors-for-everyday-life": "2026-06-10T21:56:22.813265",
     "https://claude.com/blog/cowork-web-mobile": "2026-07-08T12:04:45.896685",
     "https://claude.com/blog/enterprise-managed-auth": "2026-06-19T12:32:01.945543",
@@ -1343,6 +1381,7 @@
     "https://claude.com/blog/how-datadog-built-a-universal-machine-tool-for-claude-code": "2026-07-22T12:06:38.269628",
     "https://claude.com/blog/how-outtake-built-a-cyber-investigator-on-claude": "2026-07-23T12:05:27.517628",
     "https://claude.com/blog/how-people-are-using-claude-cowork": "2026-07-09T12:04:55.179644",
+    "https://claude.com/blog/how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-building-them": "2026-07-25T12:04:37.529743",
     "https://claude.com/blog/introducing-dynamic-workflows-in-claude-code": "2026-06-15T12:04:39.740414",
     "https://claude.com/blog/introducing-the-claude-apps-gateway": "2026-06-30T12:05:14.072822",
     "https://claude.com/blog/lessons-from-building-claude-code-how-we-use-skills": "2026-06-14T12:03:39.567586",
@@ -1355,6 +1394,7 @@
     "https://claude.com/blog/steering-claude-code-skills-hooks-rules-subagents-and-more": "2026-06-19T12:32:01.945543",
     "https://claude.com/blog/the-claude-cowork-product-guide": "2026-06-13T12:04:57.026480",
     "https://claude.com/blog/the-full-claude-desktop-experience-on-aws-google-cloud-and-microsoft-foundry": "2026-06-23T12:04:50.588874",
+    "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models": "2026-07-25T12:04:37.529743",
     "https://claude.com/blog/think-through-hard-problems-in-voice-mode": "2026-07-24T12:06:54.832037",
     "https://claude.com/blog/using-llms-to-secure-source-code": "2026-06-15T12:04:39.740414",
     "https://claude.com/blog/whats-new-in-claude-managed-agents": "2026-06-12T12:05:10.310953",
