@@ -50,7 +50,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "c3b2932b714a",
-      "last_seen_at": "2026-07-26T12:01:13.868973",
+      "last_seen_at": "2026-07-27T12:01:39.655668",
       "title": "Claude Code Overview",
       "updated_at": "2026-07-19T12:05:03.399857"
     },
@@ -177,7 +177,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "972aeef7bce5",
-      "last_seen_at": "2026-07-26T12:01:13.868973",
+      "last_seen_at": "2026-07-27T12:01:39.655668",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-07-17T12:05:04.882361"
     },
@@ -217,7 +217,7 @@
         "Usage policy"
       ],
       "content_hash": "c3942e16ce32",
-      "last_seen_at": "2026-07-26T12:01:13.868973",
+      "last_seen_at": "2026-07-27T12:01:39.655668",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-07-25T12:04:37.529583"
     }
@@ -306,13 +306,6 @@
       "source": "Hacker News",
       "title": "GLM 5.2 beats Claude in our benchmarks",
       "url": "https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/"
-    },
-    "0ffbcc1a418e9a75f6a364314be6a1a4f8fbb377": {
-      "kind": "Paper",
-      "sent_at": "2026-06-11T12:05:24.795435",
-      "source": "arXiv",
-      "title": "Claw-SWE-Bench: A Benchmark for Evaluating OpenClaw-style Agent Harnesses on Coding Tasks",
-      "url": "http://arxiv.org/abs/2606.12344v1"
     },
     "11ce22c4ab7db7cd67502f26ed1cff97a34da985": {
       "kind": "Blog",
@@ -425,13 +418,6 @@
       "source": "Simon Willison",
       "title": "Claude make Fable 5 permanent",
       "url": "https://simonwillison.net/2026/Jul/18/claude-make-fable-5-permanent/#atom-everything"
-    },
-    "284177c0015e0342c872734fdae86d57ecbb7ce6": {
-      "kind": "Blog",
-      "sent_at": "2026-06-11T12:05:24.795435",
-      "source": "Hacker News",
-      "title": "AWS Bedrock to require sharing data with Anthropic for Mythos and future models",
-      "url": "https://news.ycombinator.com/item?id=48473166"
     },
     "2b0040d39ca672fb782477a642131cd09982bc31": {
       "kind": "Blog",
@@ -601,13 +587,6 @@
       "title": "Fable's judgement",
       "url": "https://simonwillison.net/2026/Jul/3/judgement/#atom-everything"
     },
-    "5703f2b38c06efb491ebed7f97321ca9cc62eccc": {
-      "kind": "Blog",
-      "sent_at": "2026-06-11T12:05:24.795435",
-      "source": "Simon Willison",
-      "title": "datasette-agent 0.2a0",
-      "url": "https://simonwillison.net/2026/Jun/10/datasette-agent/#atom-everything"
-    },
     "57dce45338c7ece786fe2c1e019b3c9805b96172": {
       "kind": "Paper",
       "sent_at": "2026-06-23T12:04:50.588756",
@@ -705,13 +684,6 @@
       "source": "OpenAI",
       "title": "Previewing GPT-5.6 Sol: a next-generation model",
       "url": "https://openai.com/index/previewing-gpt-5-6-sol"
-    },
-    "6f3473eb3f463b666f19bcbeb6c144f9e7ca07c2": {
-      "kind": "Blog",
-      "sent_at": "2026-06-11T12:05:24.795435",
-      "source": "Simon Willison",
-      "title": "Anthropic Walks Back Policy That Could Have \u2018Sabotaged\u2019 AI Researchers Using Claude",
-      "url": "https://simonwillison.net/2026/Jun/11/anthropic-walks-back-policy/#atom-everything"
     },
     "6f3745f910d935000ba51767f1853a7d25db21de": {
       "kind": "Blog",
@@ -1259,13 +1231,6 @@
       "title": "Building Reliable Agentic AI Systems",
       "url": "https://martinfowler.com/articles/reliable-llm-bayer.html"
     },
-    "fe5a589bbf6ddacceefed5d499e1ed4b5bdee8e1": {
-      "kind": "Blog",
-      "sent_at": "2026-06-11T12:05:24.795435",
-      "source": "Hacker News",
-      "title": "AI agent runs amok in Fedora and elsewhere",
-      "url": "https://lwn.net/SubscriberLink/1077035/c7e7c14fbd60fae9/"
-    },
     "ff455be7002eafc4db4cc2b045f1c65bbd9699a2": {
       "kind": "Blog",
       "sent_at": "2026-07-14T12:04:51.246654",
@@ -1315,18 +1280,19 @@
     "https://claude.com/blog/building-verification-loops-in-claude-code-with-skills": "2026-07-23T12:05:27.517628",
     "https://claude.com/blog/ciso-guide-to-agentic-ai": "2026-07-18T12:04:41.977625",
     "https://claude.com/blog/claude-builds-visuals": "2026-06-12T12:05:10.310953",
+    "https://claude.com/blog/claude-code-desktop-redesign": "2026-07-27T12:04:48.798191",
     "https://claude.com/blog/claude-design-stays-on-brand-for-daily-work": "2026-06-18T12:32:27.608101",
     "https://claude.com/blog/claude-for-foundation-models": "2026-07-26T12:04:25.368996",
-    "https://claude.com/blog/claude-managed-agents": "2026-06-11T12:05:24.795564",
+    "https://claude.com/blog/claude-managed-agents-memory": "2026-07-27T12:04:48.798191",
     "https://claude.com/blog/claude-managed-agents-updates": "2026-07-26T12:04:25.368996",
     "https://claude.com/blog/claude-model-and-effort-level-in-claude-code": "2026-07-08T12:04:45.896685",
     "https://claude.com/blog/claude-models-explained-choosing-the-best-model-for-your-use-case": "2026-07-25T12:04:37.529743",
+    "https://claude.com/blog/connectors-for-everyday-life": "2026-07-27T12:04:48.798191",
     "https://claude.com/blog/cowork-web-mobile": "2026-07-08T12:04:45.896685",
     "https://claude.com/blog/enterprise-managed-auth": "2026-06-19T12:32:01.945543",
     "https://claude.com/blog/four-role-based-claude-certifications": "2026-07-24T12:06:54.832037",
     "https://claude.com/blog/getting-started-with-loops": "2026-07-01T12:05:30.267914",
     "https://claude.com/blog/giving-admins-more-visibility-and-control-over-claude-usage-and-spend": "2026-07-03T12:07:02.942510",
-    "https://claude.com/blog/harnessing-claudes-intelligence": "2026-06-11T12:05:24.795564",
     "https://claude.com/blog/how-anthropic-enables-self-service-data-analytics-with-claude": "2026-06-13T12:04:57.026480",
     "https://claude.com/blog/how-anthropic-secures-its-ai-native-software-development-lifecycle": "2026-07-22T12:06:38.269628",
     "https://claude.com/blog/how-anthropic-uses-claude-gtm-engineering": "2026-06-13T12:04:57.026480",
@@ -1343,7 +1309,6 @@
     "https://claude.com/blog/meet-the-winners-of-our-claude-opus-4-8-build-day-hackathon": "2026-06-18T12:32:27.608101",
     "https://claude.com/blog/new-in-claude-managed-agents": "2026-07-26T12:04:25.368996",
     "https://claude.com/blog/observability-for-developers-building-connectors": "2026-06-12T12:05:10.310953",
-    "https://claude.com/blog/preparing-your-security-program-for-ai-accelerated-offense": "2026-06-11T12:05:24.795564",
     "https://claude.com/blog/running-an-ai-native-engineering-org": "2026-06-14T12:03:39.567586",
     "https://claude.com/blog/steering-claude-code-skills-hooks-rules-subagents-and-more": "2026-06-19T12:32:01.945543",
     "https://claude.com/blog/the-claude-cowork-product-guide": "2026-06-13T12:04:57.026480",
@@ -1376,6 +1341,7 @@
     "https://openai.com/index/gpt-5-immunology-mystery": "2026-06-24T12:04:31.769763",
     "https://openai.com/index/helping-build-shared-standards-for-advanced-ai": "2026-06-24T12:04:31.769763",
     "https://openai.com/index/how-agents-are-transforming-work": "2026-06-25T12:04:58.851134",
+    "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work": "2026-07-27T12:04:48.798191",
     "https://openai.com/index/how-chatgpt-adoption-has-expanded": "2026-07-01T12:05:30.267914",
     "https://openai.com/index/how-news-organizations-are-using-ai": "2026-07-23T12:05:27.517628",
     "https://openai.com/index/hugging-face-model-evaluation-security-incident": "2026-07-22T12:06:38.269628",
@@ -1386,15 +1352,12 @@
     "https://openai.com/index/mapping-ai-jobs-transition-eu": "2026-06-29T12:04:09.335154",
     "https://openai.com/index/omio": "2026-06-23T12:04:50.588874",
     "https://openai.com/index/openai-broadcom-jalapeno-inference-chip": "2026-06-25T12:04:58.851134",
-    "https://openai.com/index/openai-on-oracle-cloud": "2026-06-11T12:05:24.795564",
     "https://openai.com/index/patch-the-planet": "2026-06-23T12:04:50.588874",
     "https://openai.com/index/preply": "2026-06-12T12:05:10.310953",
     "https://openai.com/index/safety-alignment-long-horizon-models": "2026-07-21T12:04:54.370956",
     "https://openai.com/index/samsung-electronics-chatgpt-codex-deployment": "2026-06-22T12:31:28.939282",
     "https://openai.com/index/separating-signal-from-noise-coding-evaluations": "2026-07-09T12:04:55.179644",
-    "https://openai.com/index/supporting-eu-trustworthy-ai-ecosystem": "2026-06-11T12:05:24.795564",
     "https://openai.com/index/unlocking-self-improvement-gpt-red": "2026-07-16T12:04:28.413151",
-    "https://openai.com/index/using-codex-to-simulate-black-holes": "2026-06-11T12:05:24.795564",
     "https://openai.com/index/why-teens-deserve-access-safe-ai": "2026-07-17T12:05:04.882495",
     "https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack": "2026-06-22T12:31:28.939282",
     "https://www.anthropic.com/news/alberta-government-claude-cybersecurity": "2026-07-12T12:04:53.647602",
