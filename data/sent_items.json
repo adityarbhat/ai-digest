@@ -36,7 +36,7 @@
         "Step away from your desk and keep working from your phone or any browser with Remote Control",
         "Message Dispatch a task from your phone and open the Desktop session it creates",
         "Kick off a long-running task on the web or the Claude mobile app , then pull it into your terminal with claude --teleport . Teleport requires a claude.ai subscription.",
-        "Run /desktop to continue your current terminal session in the Desktop app , where you can review diffs visually. Available on macOS and x64 Windows.",
+        "Run /desktop to continue your current terminal session in the Desktop app , where you can review diffs visually. The /desktop handoff requires a claude.ai subscription. Available on macOS and x64 Windows.",
         "Route tasks from team chat: mention @Claude in Slack with a bug report and get a pull request back",
         "\u200b Use Claude Code everywhere",
         "\u200b Next steps",
@@ -49,10 +49,10 @@
         "code.claude.com : demos, pricing, and product details",
         "Was this page helpful?"
       ],
-      "content_hash": "c3b2932b714a",
-      "last_seen_at": "2026-07-28T12:01:10.915901",
+      "content_hash": "f2899c809c4d",
+      "last_seen_at": "2026-07-29T12:05:05.943419",
       "title": "Claude Code Overview",
-      "updated_at": "2026-07-19T12:05:03.399857"
+      "updated_at": "2026-07-29T12:05:05.943419"
     },
     "https://docs.anthropic.com/en/docs/claude-code/tutorials": {
       "blocks": [
@@ -177,7 +177,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "972aeef7bce5",
-      "last_seen_at": "2026-07-28T12:01:10.915901",
+      "last_seen_at": "2026-07-29T12:01:09.284887",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-07-17T12:05:04.882361"
     },
@@ -217,7 +217,7 @@
         "Usage policy"
       ],
       "content_hash": "c3942e16ce32",
-      "last_seen_at": "2026-07-28T12:01:10.915901",
+      "last_seen_at": "2026-07-29T12:01:09.284887",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-07-25T12:04:37.529583"
     }
@@ -538,6 +538,13 @@
       "title": "Introducing computer use in Gemini 3.5 Flash",
       "url": "https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash/"
     },
+    "4e0a71f5b2961d29b75db962aa4ac49a8f44cec4": {
+      "kind": "Blog",
+      "sent_at": "2026-07-29T12:05:05.943419",
+      "source": "Airbnb Engineering",
+      "title": "Eval-driven development: Lessons from evaluating GenAI at scale",
+      "url": "https://medium.com/airbnb-engineering/eval-driven-development-lessons-from-evaluating-genai-at-scale-e817e5ae5788?source=rss----53c7c27702d5--ai"
+    },
     "4f0d0178db1fd26655e4f50482fb14fe8dbc0e6e": {
       "kind": "Blog",
       "sent_at": "2026-06-20T12:32:09.900722",
@@ -657,12 +664,12 @@
       "title": "SING: Synthetic Intention Graph for Scalable Active Tool Discovery in LLM Agents",
       "url": "http://arxiv.org/abs/2606.16591v1"
     },
-    "6a5bc69c0d4249f4bdcfec3ea1fe834cdc5e187e": {
+    "6b330b75d6b338e585eea7fc14f4e02e20078a3f": {
       "kind": "Paper",
-      "sent_at": "2026-06-13T12:04:57.026355",
+      "sent_at": "2026-07-29T12:05:05.943419",
       "source": "arXiv",
-      "title": "HyperTool: Beyond Step-Wise Tool Calls for Tool-Augmented Agents",
-      "url": "http://arxiv.org/abs/2606.13663v1"
+      "title": "A Control System, a Dataset, and a Recipe for Making Frozen LLM Agents Learn a Domain",
+      "url": "http://arxiv.org/abs/2607.25415v1"
     },
     "6b636dc57332b455b8f20106aa0dd3682b7f8fd9": {
       "kind": "Blog",
@@ -678,6 +685,13 @@
       "title": "DeepSeek open-sources inference optimizations with 60\u201385% faster generation [pdf]",
       "url": "https://github.com/deepseek-ai/DeepSpec/blob/main/DSpark_paper.pdf"
     },
+    "71041eb8a8c775faa419534fc7e38a6a72791eca": {
+      "kind": "Blog",
+      "sent_at": "2026-07-29T12:05:05.943419",
+      "source": "Martin Fowler",
+      "title": "The Orchestrator's Tax",
+      "url": "https://martinfowler.com/articles/orchestrator-tax.html"
+    },
     "712a2dd08a34e7d0f5b951d9b738446db58e1a69": {
       "kind": "Paper",
       "sent_at": "2026-07-14T12:04:51.246654",
@@ -691,6 +705,13 @@
       "source": "Cloudflare Blog",
       "title": "Temporary Cloudflare Accounts for AI agents",
       "url": "https://blog.cloudflare.com/temporary-accounts/"
+    },
+    "75c3cacc0f27ce15127ad248eb14bb394a301030": {
+      "kind": "Paper",
+      "sent_at": "2026-07-29T12:05:05.943419",
+      "source": "arXiv",
+      "title": "HANDBOOK.md: A Benchmark for Long-Context Agentic Instruction Following",
+      "url": "http://arxiv.org/abs/2607.25398v1"
     },
     "7bc9c70db152789373f7f6e7f57e4616c01e2d47": {
       "kind": "Paper",
@@ -706,19 +727,19 @@
       "title": "The cost of saying yes has changed",
       "url": "https://github.blog/engineering/the-cost-of-saying-yes-has-changed/"
     },
+    "7f1d8f8e10e520c355949a4fb6bdc0d0dc74563f": {
+      "kind": "Blog",
+      "sent_at": "2026-07-29T12:05:05.943419",
+      "source": "Simon Willison",
+      "title": "Discovering cryptographic weaknesses with Claude",
+      "url": "https://simonwillison.net/2026/Jul/28/discovering-cryptographic-weaknesses-with-claude/#atom-everything"
+    },
     "7f45f0f7074041d2d4e5724337ba251636a6bf96": {
       "kind": "Blog",
       "sent_at": "2026-06-15T12:04:39.740295",
       "source": "Hacker News",
       "title": "Don't trust large context windows",
       "url": "https://garrit.xyz/posts/2026-05-06-dont-trust-large-context-windows"
-    },
-    "80310fdd56e5ccd1087fabcd8bf721fa7abfbb95": {
-      "kind": "Paper",
-      "sent_at": "2026-06-13T12:04:57.026355",
-      "source": "arXiv",
-      "title": "Understanding the Rejection of Fixes Generated by Agentic Pull Requests -- Insights from the AIDev Dataset",
-      "url": "http://arxiv.org/abs/2606.13468v1"
     },
     "81a444686e2f6962769112b85498a12ea04c0876": {
       "kind": "Blog",
@@ -810,13 +831,6 @@
       "source": "arXiv",
       "title": "OpenForgeRL: Train Harness-native Agents in Any Environment",
       "url": "http://arxiv.org/abs/2607.21557v1"
-    },
-    "9ca73bf56e567f138560e014ff5877b09939ffcd": {
-      "kind": "Blog",
-      "sent_at": "2026-06-13T12:04:57.026355",
-      "source": "Simon Willison",
-      "title": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5",
-      "url": "https://simonwillison.net/2026/Jun/13/us-government-directive-to-suspend-access/#atom-everything"
     },
     "9f349159ac945dc48077254a4d6e54c34fc01523": {
       "kind": "Blog",
@@ -923,6 +937,13 @@
       "title": "0.138.1",
       "url": "https://github.com/fastapi/fastapi/releases/tag/0.138.1"
     },
+    "afc09e36ed5afcdfb5fd74ed03a622b98d24c6fc": {
+      "kind": "Blog",
+      "sent_at": "2026-07-29T12:05:05.943419",
+      "source": "FastAPI Releases",
+      "title": "0.140.11",
+      "url": "https://github.com/fastapi/fastapi/releases/tag/0.140.11"
+    },
     "b2dfedca7e2ddcf248751db0d9cb726187d53144": {
       "kind": "Blog",
       "sent_at": "2026-07-16T12:04:28.413025",
@@ -985,13 +1006,6 @@
       "source": "Anthropic Docs",
       "title": "Claude Code Overview",
       "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
-    },
-    "c0c6ee04b6bd5c9949a46187f84de7066a03e8e0": {
-      "kind": "Blog",
-      "sent_at": "2026-06-13T12:04:57.026355",
-      "source": "Neon Blog",
-      "title": "Shipping psql without psql: a pure-TypeScript Postgres client in neonctl",
-      "url": "https://neon.com/blog/shipping-psql-without-psql"
     },
     "c1716a896bfd223af4cede8b7aad12a198eb7ee8": {
       "kind": "Paper",
@@ -1104,6 +1118,13 @@
       "source": "Hacker News",
       "title": "OpenAI\u2019s accidental attack against Hugging Face is science fiction that happened",
       "url": "https://simonwillison.net/2026/Jul/22/openai-cyberattack/"
+    },
+    "e0cfc747dd81ba214ab4327aaa7aabf121660097": {
+      "kind": "Blog",
+      "sent_at": "2026-07-29T12:05:05.943419",
+      "source": "Anthropic Docs",
+      "title": "Claude Code Overview",
+      "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
     },
     "e12aae9b505f24d70453eaae083d2f31f61f936a": {
       "kind": "Blog",
@@ -1252,8 +1273,8 @@
     "https://blog.cloudflare.com/oauth-for-all/": "2026-06-25T12:04:58.851134",
     "https://blog.cloudflare.com/open-sourcing-our-privacy-proxy-cli/": "2026-07-28T12:04:39.015678",
     "https://blog.cloudflare.com/post-quantum-eo-2026/": "2026-06-24T12:04:31.769763",
+    "https://blog.cloudflare.com/q2-2026-internet-disruption-summary/": "2026-07-29T12:05:05.943566",
     "https://blog.cloudflare.com/rollbacks-for-workflows/": "2026-06-26T12:04:38.973471",
-    "https://blog.cloudflare.com/scaling-security-scans/": "2026-06-13T12:04:57.026480",
     "https://blog.cloudflare.com/smart-tiered-cache-for-public-clouds/": "2026-07-11T12:04:14.686912",
     "https://blog.cloudflare.com/wordpress-vulnerabilities/": "2026-07-18T12:04:41.977625",
     "https://blog.cloudflare.com/workers-cache/": "2026-07-07T12:05:38.996055",
@@ -1261,8 +1282,8 @@
     "https://claude.com/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code": "2026-06-15T12:04:39.740414",
     "https://claude.com/blog/ai-code-migration": "2026-07-17T12:05:04.882495",
     "https://claude.com/blog/artifacts-in-claude-code": "2026-06-19T12:32:01.945543",
-    "https://claude.com/blog/best-practices-for-getting-started-with-claude-cowork": "2026-06-14T12:03:39.567586",
     "https://claude.com/blog/bringing-claude-code-and-claude-cowork-to-government": "2026-07-08T12:04:45.896685",
+    "https://claude.com/blog/bringing-mcp-2026-07-28-to-claude": "2026-07-29T12:05:05.943566",
     "https://claude.com/blog/building-effective-human-agent-teams": "2026-06-25T12:04:58.851134",
     "https://claude.com/blog/building-verification-loops-in-claude-code-with-skills": "2026-07-23T12:05:27.517628",
     "https://claude.com/blog/ciso-guide-to-agentic-ai": "2026-07-18T12:04:41.977625",
@@ -1281,9 +1302,7 @@
     "https://claude.com/blog/getting-started-with-loops": "2026-07-01T12:05:30.267914",
     "https://claude.com/blog/giving-admins-more-visibility-and-control-over-claude-usage-and-spend": "2026-07-03T12:07:02.942510",
     "https://claude.com/blog/harnessing-claudes-intelligence": "2026-07-28T12:04:39.015678",
-    "https://claude.com/blog/how-anthropic-enables-self-service-data-analytics-with-claude": "2026-06-13T12:04:57.026480",
     "https://claude.com/blog/how-anthropic-secures-its-ai-native-software-development-lifecycle": "2026-07-22T12:06:38.269628",
-    "https://claude.com/blog/how-anthropic-uses-claude-gtm-engineering": "2026-06-13T12:04:57.026480",
     "https://claude.com/blog/how-anthropics-marketing-operations-team-uses-claude-cowork-to-automate-reporting-and-campaign-builds": "2026-07-09T12:04:55.179644",
     "https://claude.com/blog/how-coderabbit-used-claude-to-build-an-agent-orchestration-system": "2026-06-16T12:05:28.721454",
     "https://claude.com/blog/how-datadog-built-a-universal-machine-tool-for-claude-code": "2026-07-22T12:06:38.269628",
@@ -1292,14 +1311,11 @@
     "https://claude.com/blog/how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-building-them": "2026-07-25T12:04:37.529743",
     "https://claude.com/blog/introducing-dynamic-workflows-in-claude-code": "2026-06-15T12:04:39.740414",
     "https://claude.com/blog/introducing-the-claude-apps-gateway": "2026-06-30T12:05:14.072822",
-    "https://claude.com/blog/lessons-from-building-claude-code-how-we-use-skills": "2026-06-14T12:03:39.567586",
     "https://claude.com/blog/meet-the-winners-of-built-with-opus-4-7-claude-code-hackathon": "2026-06-16T12:05:28.721454",
     "https://claude.com/blog/meet-the-winners-of-our-claude-opus-4-8-build-day-hackathon": "2026-06-18T12:32:27.608101",
     "https://claude.com/blog/new-in-claude-managed-agents": "2026-07-26T12:04:25.368996",
     "https://claude.com/blog/preparing-your-security-program-for-ai-accelerated-offense": "2026-07-28T12:04:39.015678",
-    "https://claude.com/blog/running-an-ai-native-engineering-org": "2026-06-14T12:03:39.567586",
     "https://claude.com/blog/steering-claude-code-skills-hooks-rules-subagents-and-more": "2026-06-19T12:32:01.945543",
-    "https://claude.com/blog/the-claude-cowork-product-guide": "2026-06-13T12:04:57.026480",
     "https://claude.com/blog/the-full-claude-desktop-experience-on-aws-google-cloud-and-microsoft-foundry": "2026-06-23T12:04:50.588874",
     "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models": "2026-07-25T12:04:37.529743",
     "https://claude.com/blog/think-through-hard-problems-in-voice-mode": "2026-07-24T12:06:54.832037",
@@ -1313,7 +1329,6 @@
     "https://claude.com/blog/working-with-claude-fable-5-in-claude-cowork": "2026-07-17T12:05:04.882495",
     "https://claude.com/blog/workload-identity-federation": "2026-06-18T12:32:27.608101",
     "https://openai.com/index/a-scorecard-for-the-ai-age": "2026-07-18T12:04:41.977625",
-    "https://openai.com/index/academy-courses-applying-ai-at-work": "2026-06-13T12:04:57.026480",
     "https://openai.com/index/advancing-ai-safety-through-state-and-federal-action": "2026-07-16T12:04:28.413151",
     "https://openai.com/index/advancing-the-next-era-of-national-science": "2026-07-23T12:05:27.517628",
     "https://openai.com/index/ai-chemist-improves-reaction": "2026-06-18T12:32:27.608101",
@@ -1342,6 +1357,7 @@
     "https://openai.com/index/patch-the-planet": "2026-06-23T12:04:50.588874",
     "https://openai.com/index/safety-alignment-long-horizon-models": "2026-07-21T12:04:54.370956",
     "https://openai.com/index/samsung-electronics-chatgpt-codex-deployment": "2026-06-22T12:31:28.939282",
+    "https://openai.com/index/scientific-computing-agentic-ai": "2026-07-29T12:05:05.943566",
     "https://openai.com/index/separating-signal-from-noise-coding-evaluations": "2026-07-09T12:04:55.179644",
     "https://openai.com/index/unlocking-self-improvement-gpt-red": "2026-07-16T12:04:28.413151",
     "https://openai.com/index/why-teens-deserve-access-safe-ai": "2026-07-17T12:05:04.882495",
