@@ -50,7 +50,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "f2899c809c4d",
-      "last_seen_at": "2026-07-29T12:05:05.943419",
+      "last_seen_at": "2026-07-30T12:01:19.532058",
       "title": "Claude Code Overview",
       "updated_at": "2026-07-29T12:05:05.943419"
     },
@@ -177,7 +177,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "972aeef7bce5",
-      "last_seen_at": "2026-07-29T12:01:09.284887",
+      "last_seen_at": "2026-07-30T12:01:19.532058",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-07-17T12:05:04.882361"
     },
@@ -217,7 +217,7 @@
         "Usage policy"
       ],
       "content_hash": "c3942e16ce32",
-      "last_seen_at": "2026-07-29T12:01:09.284887",
+      "last_seen_at": "2026-07-30T12:01:19.532058",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-07-25T12:04:37.529583"
     }
@@ -412,6 +412,13 @@
       "title": "Claude make Fable 5 permanent",
       "url": "https://simonwillison.net/2026/Jul/18/claude-make-fable-5-permanent/#atom-everything"
     },
+    "2afc78fbb41c418e41376b4466c4ec4c54ddbe21": {
+      "kind": "Blog",
+      "sent_at": "2026-07-30T12:05:12.814703",
+      "source": "Hacker News",
+      "title": "Handbook.md shows that long policy documents do not reliably govern agents",
+      "url": "https://arxiv.org/abs/2607.25398"
+    },
     "2b0040d39ca672fb782477a642131cd09982bc31": {
       "kind": "Blog",
       "sent_at": "2026-06-26T12:04:38.973334",
@@ -517,6 +524,13 @@
       "title": "Anthropic Release Notes",
       "url": "https://docs.anthropic.com/en/release-notes/overview"
     },
+    "4ae3df8586ec0ed64055229b7c4b29e306097dd0": {
+      "kind": "Blog",
+      "sent_at": "2026-07-30T12:05:12.814703",
+      "source": "FastAPI Releases",
+      "title": "0.141.0",
+      "url": "https://github.com/fastapi/fastapi/releases/tag/0.141.0"
+    },
     "4b728f0656b24dfdaee4d6692b7d934c03dbec36": {
       "kind": "Blog",
       "sent_at": "2026-06-30T12:05:14.072710",
@@ -572,6 +586,13 @@
       "source": "OpenAI",
       "title": "How to manage AI investments in the agentic era",
       "url": "https://openai.com/index/managing-ai-investments-in-agentic-era"
+    },
+    "54ca777d322dfb2694c20b0e4db9e4725c4b2b2b": {
+      "kind": "Blog",
+      "sent_at": "2026-07-30T12:05:12.814703",
+      "source": "Simon Willison",
+      "title": "Adding a custom MCP server to Claude and ChatGPT",
+      "url": "https://simonwillison.net/2026/Jul/29/mcp-in-claude-and-chatgpt/#atom-everything"
     },
     "5525445d8f694329a84ddaa639a653d20e8fee0c": {
       "kind": "Blog",
@@ -734,13 +755,6 @@
       "title": "Discovering cryptographic weaknesses with Claude",
       "url": "https://simonwillison.net/2026/Jul/28/discovering-cryptographic-weaknesses-with-claude/#atom-everything"
     },
-    "7f45f0f7074041d2d4e5724337ba251636a6bf96": {
-      "kind": "Blog",
-      "sent_at": "2026-06-15T12:04:39.740295",
-      "source": "Hacker News",
-      "title": "Don't trust large context windows",
-      "url": "https://garrit.xyz/posts/2026-05-06-dont-trust-large-context-windows"
-    },
     "81a444686e2f6962769112b85498a12ea04c0876": {
       "kind": "Blog",
       "sent_at": "2026-07-03T12:07:02.942286",
@@ -867,6 +881,13 @@
       "title": "The Harness Effect: How Orchestration Design Sets the Token Economics of Enterprise Agentic AI",
       "url": "http://arxiv.org/abs/2607.06906v1"
     },
+    "a4fd6d6ad13d4229708e9083826b2ab02da2779d": {
+      "kind": "Paper",
+      "sent_at": "2026-07-30T12:05:12.814703",
+      "source": "arXiv",
+      "title": "Living-Harness Is an Interactive-Agent Evolver",
+      "url": "http://arxiv.org/abs/2607.26598v1"
+    },
     "a6a8d3b1130ee5dd33319565b58a2d9d8294c798": {
       "kind": "Blog",
       "sent_at": "2026-06-26T12:04:38.973334",
@@ -950,13 +971,6 @@
       "source": "HuggingFace",
       "title": "What building Shippy taught us about building agents",
       "url": "https://huggingface.co/blog/allenai/shippy-tech-blog"
-    },
-    "b46f0d11f4652e15233545491434adbc2d9705f0": {
-      "kind": "Blog",
-      "sent_at": "2026-06-15T12:04:39.740295",
-      "source": "Neon Blog",
-      "title": "Introducing neon.ts: infrastructure as code for your Neon projects",
-      "url": "https://neon.com/blog/introducing-neon-ts"
     },
     "b634d2cba8fe74eec9ce118330cc391054f4d55e": {
       "kind": "Paper",
@@ -1272,6 +1286,7 @@
     "https://blog.cloudflare.com/ml-dsa-will-have-to-do/": "2026-07-10T12:05:13.840666",
     "https://blog.cloudflare.com/oauth-for-all/": "2026-06-25T12:04:58.851134",
     "https://blog.cloudflare.com/open-sourcing-our-privacy-proxy-cli/": "2026-07-28T12:04:39.015678",
+    "https://blog.cloudflare.com/post-quantum-authentication-to-origins/": "2026-07-30T12:05:12.814865",
     "https://blog.cloudflare.com/post-quantum-eo-2026/": "2026-06-24T12:04:31.769763",
     "https://blog.cloudflare.com/q2-2026-internet-disruption-summary/": "2026-07-29T12:05:05.943566",
     "https://blog.cloudflare.com/rollbacks-for-workflows/": "2026-06-26T12:04:38.973471",
@@ -1279,7 +1294,6 @@
     "https://blog.cloudflare.com/wordpress-vulnerabilities/": "2026-07-18T12:04:41.977625",
     "https://blog.cloudflare.com/workers-cache/": "2026-07-07T12:05:38.996055",
     "https://claude.com/blog/a-field-guide-to-claude-fable-finding-your-unknowns": "2026-07-07T12:05:38.996055",
-    "https://claude.com/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code": "2026-06-15T12:04:39.740414",
     "https://claude.com/blog/ai-code-migration": "2026-07-17T12:05:04.882495",
     "https://claude.com/blog/artifacts-in-claude-code": "2026-06-19T12:32:01.945543",
     "https://claude.com/blog/bringing-claude-code-and-claude-cowork-to-government": "2026-07-08T12:04:45.896685",
@@ -1309,7 +1323,6 @@
     "https://claude.com/blog/how-outtake-built-a-cyber-investigator-on-claude": "2026-07-23T12:05:27.517628",
     "https://claude.com/blog/how-people-are-using-claude-cowork": "2026-07-09T12:04:55.179644",
     "https://claude.com/blog/how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-building-them": "2026-07-25T12:04:37.529743",
-    "https://claude.com/blog/introducing-dynamic-workflows-in-claude-code": "2026-06-15T12:04:39.740414",
     "https://claude.com/blog/introducing-the-claude-apps-gateway": "2026-06-30T12:05:14.072822",
     "https://claude.com/blog/meet-the-winners-of-built-with-opus-4-7-claude-code-hackathon": "2026-06-16T12:05:28.721454",
     "https://claude.com/blog/meet-the-winners-of-our-claude-opus-4-8-build-day-hackathon": "2026-06-18T12:32:27.608101",
@@ -1319,7 +1332,6 @@
     "https://claude.com/blog/the-full-claude-desktop-experience-on-aws-google-cloud-and-microsoft-foundry": "2026-06-23T12:04:50.588874",
     "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models": "2026-07-25T12:04:37.529743",
     "https://claude.com/blog/think-through-hard-problems-in-voice-mode": "2026-07-24T12:06:54.832037",
-    "https://claude.com/blog/using-llms-to-secure-source-code": "2026-06-15T12:04:39.740414",
     "https://claude.com/blog/working-at-the-frontier-cursor": "2026-07-18T12:04:41.977625",
     "https://claude.com/blog/working-at-the-frontier-how-cognition-trusts-claude-fable-5-to-work-through-the-night": "2026-07-11T12:04:14.686912",
     "https://claude.com/blog/working-at-the-frontier-how-hebbia-builds-ai-for-financial-diligence-that-cant-miss-a-detail": "2026-07-14T12:04:51.246812",
@@ -1334,6 +1346,7 @@
     "https://openai.com/index/ai-chemist-improves-reaction": "2026-06-18T12:32:27.608101",
     "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community": "2026-07-23T12:05:27.517628",
     "https://openai.com/index/chatgpt-enterprise-spend-controls": "2026-06-19T12:32:01.945543",
+    "https://openai.com/index/chatgpt-for-academic-researchers": "2026-07-30T12:05:12.814865",
     "https://openai.com/index/chatgpt-for-your-most-ambitious-work": "2026-07-10T12:05:13.840666",
     "https://openai.com/index/daybreak-securing-the-world": "2026-06-23T12:04:50.588874",
     "https://openai.com/index/diagnose-rare-childhood-diseases": "2026-06-19T12:32:01.945543",
@@ -1346,10 +1359,10 @@
     "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work": "2026-07-27T12:04:48.798191",
     "https://openai.com/index/how-chatgpt-adoption-has-expanded": "2026-07-01T12:05:30.267914",
     "https://openai.com/index/how-news-organizations-are-using-ai": "2026-07-23T12:05:27.517628",
+    "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores": "2026-07-30T12:05:12.814865",
     "https://openai.com/index/hugging-face-model-evaluation-security-incident": "2026-07-22T12:06:38.269628",
     "https://openai.com/index/improving-health-intelligence-in-chatgpt": "2026-06-19T12:32:01.945543",
     "https://openai.com/index/introducing-chatgpt-small-business-program": "2026-07-22T12:06:38.269628",
-    "https://openai.com/index/introducing-openai-partner-network": "2026-06-15T12:04:39.740414",
     "https://openai.com/index/k-12-educators-practical-skills": "2026-07-09T12:04:55.179644",
     "https://openai.com/index/mapping-ai-jobs-transition-eu": "2026-06-29T12:04:09.335154",
     "https://openai.com/index/omio": "2026-06-23T12:04:50.588874",
@@ -1364,6 +1377,7 @@
     "https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack": "2026-06-22T12:31:28.939282",
     "https://www.anthropic.com/news/alberta-government-claude-cybersecurity": "2026-07-12T12:04:53.647602",
     "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy": "2026-06-22T12:31:28.939282",
+    "https://www.anthropic.com/news/anthropic-economic-index-connector": "2026-07-30T12:05:12.814865",
     "https://www.anthropic.com/news/anthropic-public-record": "2026-06-21T12:31:23.180324",
     "https://www.anthropic.com/news/ben-bernanke": "2026-07-10T12:05:13.840666",
     "https://www.anthropic.com/news/canadian-ai-research": "2026-07-15T12:06:44.768871",
@@ -1372,7 +1386,9 @@
     "https://www.anthropic.com/news/claude-for-teachers": "2026-07-15T12:06:44.768871",
     "https://www.anthropic.com/news/claude-opus-4-8": "2026-06-20T12:32:09.900860",
     "https://www.anthropic.com/news/claude-science-ai-workbench": "2026-07-02T12:05:08.091556",
+    "https://www.anthropic.com/news/cognizant-anthropic": "2026-07-30T12:05:12.814865",
     "https://www.anthropic.com/news/dxc-anthropic-alliance": "2026-06-21T12:31:23.180324",
+    "https://www.anthropic.com/news/economic-futures-research-fund-agenda": "2026-07-30T12:05:12.814865",
     "https://www.anthropic.com/news/expanding-project-glasswing": "2026-06-17T12:05:14.337520",
     "https://www.anthropic.com/news/fable-mythos-access": "2026-06-17T12:05:14.337520",
     "https://www.anthropic.com/news/fable-safeguards-jailbreak-framework": "2026-07-04T12:04:29.778934",
