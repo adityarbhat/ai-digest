@@ -50,7 +50,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "f2899c809c4d",
-      "last_seen_at": "2026-07-31T12:01:22.389051",
+      "last_seen_at": "2026-08-01T12:01:13.049331",
       "title": "Claude Code Overview",
       "updated_at": "2026-07-29T12:05:05.943419"
     },
@@ -177,7 +177,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "972aeef7bce5",
-      "last_seen_at": "2026-07-31T12:01:22.389051",
+      "last_seen_at": "2026-08-01T12:01:13.049331",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-07-17T12:05:04.882361"
     },
@@ -217,7 +217,7 @@
         "Usage policy"
       ],
       "content_hash": "c3942e16ce32",
-      "last_seen_at": "2026-07-31T12:01:22.389051",
+      "last_seen_at": "2026-08-01T12:01:13.049331",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-07-25T12:04:37.529583"
     }
@@ -286,6 +286,13 @@
       "title": "Claude Opus 5",
       "url": "https://www.anthropic.com/news/claude-opus-5"
     },
+    "0fab0f7886e11fa27e7c57f69b344995cb4be864": {
+      "kind": "Blog",
+      "sent_at": "2026-08-01T12:04:59.132580",
+      "source": "Simon Willison",
+      "title": "smevals - a small eval suite for evaluating models, prompts, and harnesses",
+      "url": "https://simonwillison.net/2026/Jul/31/smevals/#atom-everything"
+    },
     "0fb195b57e36cf7b393c4169a50db3148a579793": {
       "kind": "Blog",
       "sent_at": "2026-06-29T12:04:09.335029",
@@ -341,6 +348,13 @@
       "source": "Cloudflare Blog",
       "title": "Announcing the Monetization Gateway: charge for any resource behind Cloudflare via x402",
       "url": "https://blog.cloudflare.com/monetization-gateway/"
+    },
+    "198cb83728b3aa6bdf946d946a346f404582ea4e": {
+      "kind": "Blog",
+      "sent_at": "2026-08-01T12:04:59.132580",
+      "source": "Hacker News",
+      "title": "DeepSeek V4 Flash 0731 Intelligence, Performance and Price Analysis",
+      "url": "https://artificialanalysis.ai/models/deepseek-v4-flash"
     },
     "1a9fdae985a6b7d06969943c33bae0769096d768": {
       "kind": "Blog",
@@ -502,6 +516,13 @@
       "source": "Hacker News",
       "title": "Setting up your spare Mac for Claude Code to control, a step-by-step guide",
       "url": "https://ykdojo.github.io/claude-controls-mac/"
+    },
+    "3df0a833ea016126d3be51c863d3c11391ba0e48": {
+      "kind": "Blog",
+      "sent_at": "2026-08-01T12:04:59.132580",
+      "source": "Simon Willison",
+      "title": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "url": "https://simonwillison.net/2026/Jul/31/deepseek-v4-flash-0731/#atom-everything"
     },
     "41d1cfbc618596a9f222e42fa1f2db9d705f6fef": {
       "kind": "Blog",
@@ -804,6 +825,13 @@
       "title": "Autoresearch with Coding Agents: Generalizers and Metric-Maximizers on Quran Recitation Data",
       "url": "http://arxiv.org/abs/2607.18064v1"
     },
+    "8756bffe44500c8fca0d0786b7a7a7f4c37f0eaf": {
+      "kind": "Blog",
+      "sent_at": "2026-08-01T12:04:59.132580",
+      "source": "Render Blog",
+      "title": "Company August 02, 2026 AssemblyAI: A voice agent can fail without throwing an error Hazal Mestci",
+      "url": "https://render.com/blog/assemblyai-a-voice-agent-can-fail-without-throwing-an-error"
+    },
     "875bf4a1137db8b1c9c0066b1d83ace248571cc1": {
       "kind": "Paper",
       "sent_at": "2026-07-17T12:05:04.882361",
@@ -1000,6 +1028,13 @@
       "title": "ProvenanceGuard: Source-Aware Factuality Verification for MCP-Based LLM Agents",
       "url": "http://arxiv.org/abs/2606.18037v1"
     },
+    "b79581fec43ae0221fa6da291f287d63577cf828": {
+      "kind": "Paper",
+      "sent_at": "2026-08-01T12:04:59.132580",
+      "source": "arXiv",
+      "title": "Qwen-UI-Agent Technical Report: Toward Next-Generation Real-World Centric Foundation GUI Agents",
+      "url": "http://arxiv.org/abs/2607.28227v1"
+    },
     "ba00c5b451b2e45cd77726c6cca09f30e84a89b1": {
       "kind": "Blog",
       "sent_at": "2026-07-18T12:04:41.977423",
@@ -1020,6 +1055,13 @@
       "source": "Neon Blog",
       "title": "Introducing @neon/sdk, our new TypeScript client for the Neon API",
       "url": "https://neon.com/blog/neon-sdk"
+    },
+    "bc4d73f4213f69a7545b6eb5f53273e333556b6e": {
+      "kind": "Blog",
+      "sent_at": "2026-08-01T12:04:59.132580",
+      "source": "Hacker News",
+      "title": "qm \u2013 Multiplayer agent harness for work",
+      "url": "https://github.com/yc-software/qm"
     },
     "bc6b94aed4d44b78b875e7f4d8b7f7f280aed57c": {
       "kind": "Paper",
@@ -1252,6 +1294,13 @@
       "title": "Better Models: Worse Tools",
       "url": "https://simonwillison.net/2026/Jul/4/better-models-worse-tools/#atom-everything"
     },
+    "f79f0e253ba4c4c92755b98650f7c89afa3e0d49": {
+      "kind": "Paper",
+      "sent_at": "2026-08-01T12:04:59.132580",
+      "source": "arXiv",
+      "title": "ORCA-bench: How Ready Are Language Model Agents for Oncall?",
+      "url": "http://arxiv.org/abs/2607.28545v1"
+    },
     "f8de57a996e4dd74a5af487ad3d0abfecf1f9405": {
       "kind": "Paper",
       "sent_at": "2026-07-17T12:05:04.882361",
@@ -1305,6 +1354,7 @@
     "https://blog.cloudflare.com/making-ai-search-smarter/": "2026-07-02T12:05:08.091556",
     "https://blog.cloudflare.com/meerkat-introduction/": "2026-07-09T12:04:55.179644",
     "https://blog.cloudflare.com/ml-dsa-will-have-to-do/": "2026-07-10T12:05:13.840666",
+    "https://blog.cloudflare.com/moq-relays/": "2026-08-01T12:04:59.132717",
     "https://blog.cloudflare.com/oauth-for-all/": "2026-06-25T12:04:58.851134",
     "https://blog.cloudflare.com/open-sourcing-our-privacy-proxy-cli/": "2026-07-28T12:04:39.015678",
     "https://blog.cloudflare.com/post-quantum-authentication-to-origins/": "2026-07-30T12:05:12.814865",
@@ -1365,6 +1415,7 @@
     "https://openai.com/index/advancing-the-next-era-of-national-science": "2026-07-23T12:05:27.517628",
     "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6": "2026-07-31T12:05:43.151129",
     "https://openai.com/index/ai-chemist-improves-reaction": "2026-06-18T12:32:27.608101",
+    "https://openai.com/index/building-abundant-intelligence": "2026-08-01T12:04:59.132717",
     "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community": "2026-07-23T12:05:27.517628",
     "https://openai.com/index/chatgpt-enterprise-spend-controls": "2026-06-19T12:32:01.945543",
     "https://openai.com/index/chatgpt-for-academic-researchers": "2026-07-30T12:05:12.814865",
@@ -1393,6 +1444,7 @@
     "https://openai.com/index/samsung-electronics-chatgpt-codex-deployment": "2026-06-22T12:31:28.939282",
     "https://openai.com/index/scientific-computing-agentic-ai": "2026-07-29T12:05:05.943566",
     "https://openai.com/index/separating-signal-from-noise-coding-evaluations": "2026-07-09T12:04:55.179644",
+    "https://openai.com/index/ten-advances-in-mathematics": "2026-08-01T12:04:59.132717",
     "https://openai.com/index/unlocking-self-improvement-gpt-red": "2026-07-16T12:04:28.413151",
     "https://openai.com/index/why-teens-deserve-access-safe-ai": "2026-07-17T12:05:04.882495",
     "https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack": "2026-06-22T12:31:28.939282",
