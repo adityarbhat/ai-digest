@@ -50,7 +50,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "f2899c809c4d",
-      "last_seen_at": "2026-08-01T12:01:13.049331",
+      "last_seen_at": "2026-08-02T12:01:28.151756",
       "title": "Claude Code Overview",
       "updated_at": "2026-07-29T12:05:05.943419"
     },
@@ -177,7 +177,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "972aeef7bce5",
-      "last_seen_at": "2026-08-01T12:01:13.049331",
+      "last_seen_at": "2026-08-02T12:01:28.151756",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-07-17T12:05:04.882361"
     },
@@ -217,7 +217,7 @@
         "Usage policy"
       ],
       "content_hash": "c3942e16ce32",
-      "last_seen_at": "2026-08-01T12:01:13.049331",
+      "last_seen_at": "2026-08-02T12:01:28.151756",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-07-25T12:04:37.529583"
     }
@@ -447,13 +447,6 @@
       "title": "Anthropic Release Notes",
       "url": "https://docs.anthropic.com/en/release-notes/overview"
     },
-    "2b7ecb3e94b0d96c6e0937e77df2ff32440bed0a": {
-      "kind": "Paper",
-      "sent_at": "2026-06-17T12:05:14.337381",
-      "source": "arXiv",
-      "title": "A Framework for Evaluating Agentic Skills at Scale",
-      "url": "http://arxiv.org/abs/2606.17819v1"
-    },
     "2bd3cfcb2688c8d99357b6b45e81021708ecae0b": {
       "kind": "Blog",
       "sent_at": "2026-06-23T12:04:50.588756",
@@ -544,13 +537,6 @@
       "source": "Simon Willison",
       "title": "Introducing Claude Opus 5",
       "url": "https://simonwillison.net/2026/Jul/24/introducing-claude-opus-5/#atom-everything"
-    },
-    "491a1b3ae8b4a18dac2c00ae7c4d8d99a37031d8": {
-      "kind": "Blog",
-      "sent_at": "2026-06-17T12:05:14.337381",
-      "source": "Anthropic Docs",
-      "title": "Anthropic Release Notes",
-      "url": "https://docs.anthropic.com/en/release-notes/overview"
     },
     "4ae3df8586ec0ed64055229b7c4b29e306097dd0": {
       "kind": "Blog",
@@ -705,6 +691,13 @@
       "source": "arXiv",
       "title": "ToolFailBench: Diagnosing Tool-Use Failures in LLM Agents",
       "url": "http://arxiv.org/abs/2607.04686v1"
+    },
+    "60d5f4a47a6219a40f4d34e4164255c8136c5c5e": {
+      "kind": "Blog",
+      "sent_at": "2026-08-02T12:05:07.253243",
+      "source": "Simon Willison",
+      "title": "datasette-apps 0.2a0",
+      "url": "https://simonwillison.net/2026/Aug/1/datasette-apps/#atom-everything"
     },
     "633073db66e3b02ac0af09bf4d76414e6a9c7e6d": {
       "kind": "Blog",
@@ -1021,13 +1014,6 @@
       "title": "What building Shippy taught us about building agents",
       "url": "https://huggingface.co/blog/allenai/shippy-tech-blog"
     },
-    "b634d2cba8fe74eec9ce118330cc391054f4d55e": {
-      "kind": "Paper",
-      "sent_at": "2026-06-17T12:05:14.337381",
-      "source": "arXiv",
-      "title": "ProvenanceGuard: Source-Aware Factuality Verification for MCP-Based LLM Agents",
-      "url": "http://arxiv.org/abs/2606.18037v1"
-    },
     "b79581fec43ae0221fa6da291f287d63577cf828": {
       "kind": "Paper",
       "sent_at": "2026-08-01T12:04:59.132580",
@@ -1308,13 +1294,6 @@
       "title": "MCPEvol-Bench: Benchmarking LLM Agent Performance Across Dynamic Evolutions of MCP Servers",
       "url": "http://arxiv.org/abs/2607.14642v1"
     },
-    "fc7e5dbf308a75d415ed687f027f92ff1a442f57": {
-      "kind": "Blog",
-      "sent_at": "2026-06-17T12:05:14.337381",
-      "source": "Martin Fowler",
-      "title": "Building Reliable Agentic AI Systems",
-      "url": "https://martinfowler.com/articles/reliable-llm-bayer.html"
-    },
     "fcd078f882eb6d2a289dffaf70c76b4d9cd019d0": {
       "kind": "Blog",
       "sent_at": "2026-07-28T12:04:39.015571",
@@ -1345,7 +1324,6 @@
     "https://blog.cloudflare.com/celebrating-12-years-of-project-galileo/": "2026-06-19T12:32:01.945543",
     "https://blog.cloudflare.com/cloudflare-joins-uk-cyber-resilience-pledge/": "2026-07-08T12:04:45.896685",
     "https://blog.cloudflare.com/cloudflare-one-stack/": "2026-06-18T12:32:27.608101",
-    "https://blog.cloudflare.com/dmarc-management-ga/": "2026-06-17T12:05:14.337520",
     "https://blog.cloudflare.com/dnssec-nta-ede-33/": "2026-07-15T12:06:44.768871",
     "https://blog.cloudflare.com/hyper-bug/": "2026-06-23T12:04:50.588874",
     "https://blog.cloudflare.com/internal-dns/": "2026-07-21T12:04:54.370956",
@@ -1455,7 +1433,6 @@
     "https://www.anthropic.com/news/ben-bernanke": "2026-07-10T12:05:13.840666",
     "https://www.anthropic.com/news/canadian-ai-research": "2026-07-15T12:06:44.768871",
     "https://www.anthropic.com/news/chris-olah-pope-leo-encyclical": "2026-06-20T12:32:09.900860",
-    "https://www.anthropic.com/news/claude-corps": "2026-06-17T12:05:14.337520",
     "https://www.anthropic.com/news/claude-for-teachers": "2026-07-15T12:06:44.768871",
     "https://www.anthropic.com/news/claude-opus-4-8": "2026-06-20T12:32:09.900860",
     "https://www.anthropic.com/news/claude-science-ai-workbench": "2026-07-02T12:05:08.091556",
@@ -1463,8 +1440,6 @@
     "https://www.anthropic.com/news/donation-public-first-action": "2026-07-31T12:05:43.151129",
     "https://www.anthropic.com/news/dxc-anthropic-alliance": "2026-06-21T12:31:23.180324",
     "https://www.anthropic.com/news/economic-futures-research-fund-agenda": "2026-07-30T12:05:12.814865",
-    "https://www.anthropic.com/news/expanding-project-glasswing": "2026-06-17T12:05:14.337520",
-    "https://www.anthropic.com/news/fable-mythos-access": "2026-06-17T12:05:14.337520",
     "https://www.anthropic.com/news/fable-safeguards-jailbreak-framework": "2026-07-04T12:04:29.778934",
     "https://www.anthropic.com/news/hard-questions": "2026-07-10T12:05:13.840666",
     "https://www.anthropic.com/news/introducing-claude-tag": "2026-06-26T12:04:38.973471",
