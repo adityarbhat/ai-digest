@@ -50,7 +50,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "f2899c809c4d",
-      "last_seen_at": "2026-08-02T12:01:28.151756",
+      "last_seen_at": "2026-08-03T12:01:22.876164",
       "title": "Claude Code Overview",
       "updated_at": "2026-07-29T12:05:05.943419"
     },
@@ -177,7 +177,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "972aeef7bce5",
-      "last_seen_at": "2026-08-02T12:01:28.151756",
+      "last_seen_at": "2026-08-03T12:01:22.876164",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-07-17T12:05:04.882361"
     },
@@ -217,7 +217,7 @@
         "Usage policy"
       ],
       "content_hash": "c3942e16ce32",
-      "last_seen_at": "2026-08-02T12:01:28.151756",
+      "last_seen_at": "2026-08-03T12:01:22.876164",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-07-25T12:04:37.529583"
     }
@@ -251,26 +251,12 @@
       "title": "Memora: A Harmonic Memory Representation Balancing Abstraction and Specificity",
       "url": "https://www.microsoft.com/en-us/research/blog/memora-a-harmonic-memory-representation-balancing-abstraction-and-specificity/"
     },
-    "0678f3da3b80c6c2b06e0cc01e633cad4c18a473": {
-      "kind": "Paper",
-      "sent_at": "2026-06-18T12:32:27.607873",
-      "source": "arXiv",
-      "title": "CEO-Bench: Can Agents Play the Long Game?",
-      "url": "http://arxiv.org/abs/2606.18543v1"
-    },
     "0c806c20acb9ae31e4100ae04e60747427830901": {
       "kind": "Blog",
       "sent_at": "2026-07-09T12:04:55.179506",
       "source": "HuggingFace",
       "title": "Data for Agents",
       "url": "https://huggingface.co/blog/nvidia/open-data-for-agents"
-    },
-    "0cabb66a0b2b65fc2a15ad3b17dcda41046a64a3": {
-      "kind": "Blog",
-      "sent_at": "2026-06-18T12:32:27.607873",
-      "source": "InfoQ Architecture News",
-      "title": "AI Agent Identity and Permission Challenges: How Uber and Auth0 Are Rethinking Access Control",
-      "url": "https://www.infoq.com/news/2026/06/ai-agent-identity-uber-auth0/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Architecture-news"
     },
     "0d778fa8872c11af313540927cd34ba584167c66": {
       "kind": "Blog",
@@ -355,13 +341,6 @@
       "source": "Hacker News",
       "title": "DeepSeek V4 Flash 0731 Intelligence, Performance and Price Analysis",
       "url": "https://artificialanalysis.ai/models/deepseek-v4-flash"
-    },
-    "1a9fdae985a6b7d06969943c33bae0769096d768": {
-      "kind": "Blog",
-      "sent_at": "2026-06-18T12:32:27.607873",
-      "source": "FastAPI Releases",
-      "title": "0.137.2",
-      "url": "https://github.com/fastapi/fastapi/releases/tag/0.137.2"
     },
     "1b1d1a5beb98c437fd3be9871d4d4c4b03ed3508": {
       "kind": "Blog",
@@ -517,13 +496,6 @@
       "title": "deepseek-ai/DeepSeek-V4-Flash-0731",
       "url": "https://simonwillison.net/2026/Jul/31/deepseek-v4-flash-0731/#atom-everything"
     },
-    "41d1cfbc618596a9f222e42fa1f2db9d705f6fef": {
-      "kind": "Blog",
-      "sent_at": "2026-06-18T12:32:27.607873",
-      "source": "Cloudflare Blog",
-      "title": "Bringing more agent harnesses and frameworks to Cloudflare, starting with Flue",
-      "url": "https://blog.cloudflare.com/agents-platform-flue-sdk/"
-    },
     "45d78dfd45537df8fa73d82dca5ce790ec4f646e": {
       "kind": "Blog",
       "sent_at": "2026-07-01T12:05:30.267771",
@@ -656,13 +628,6 @@
       "source": "arXiv",
       "title": "A Process Harness for Uplifting Legacy Workflows to Agentic BPM: Design and Realization in CUGA FLO",
       "url": "http://arxiv.org/abs/2606.27188v1"
-    },
-    "5a4b35771a9603aaab5ea56fef7c6c3bc8be67f9": {
-      "kind": "Paper",
-      "sent_at": "2026-06-18T12:32:27.607873",
-      "source": "arXiv",
-      "title": "VISUALSKILL: Multimodal Skills for Computer-Use Agents",
-      "url": "http://arxiv.org/abs/2606.18448v1"
     },
     "5cc8fd3c95ee1c4042437eac544a5e4b79d28fdb": {
       "kind": "Blog",
@@ -1319,11 +1284,11 @@
   "watchlist_seen": {
     "https://blog.cloudflare.com/2026-world-cup-internet-traffic/": "2026-07-22T12:06:38.269628",
     "https://blog.cloudflare.com/agentic-internet-bot-report/": "2026-07-02T12:05:08.091556",
+    "https://blog.cloudflare.com/agents-week-welcome/": "2026-08-03T12:04:34.120253",
     "https://blog.cloudflare.com/bgp-origin-attribute/": "2026-07-25T12:04:37.529743",
     "https://blog.cloudflare.com/cdnjs-dev-platform-migration/": "2026-07-31T12:05:43.151129",
     "https://blog.cloudflare.com/celebrating-12-years-of-project-galileo/": "2026-06-19T12:32:01.945543",
     "https://blog.cloudflare.com/cloudflare-joins-uk-cyber-resilience-pledge/": "2026-07-08T12:04:45.896685",
-    "https://blog.cloudflare.com/cloudflare-one-stack/": "2026-06-18T12:32:27.608101",
     "https://blog.cloudflare.com/dnssec-nta-ede-33/": "2026-07-15T12:06:44.768871",
     "https://blog.cloudflare.com/hyper-bug/": "2026-06-23T12:04:50.588874",
     "https://blog.cloudflare.com/internal-dns/": "2026-07-21T12:04:54.370956",
@@ -1351,7 +1316,6 @@
     "https://claude.com/blog/building-verification-loops-in-claude-code-with-skills": "2026-07-23T12:05:27.517628",
     "https://claude.com/blog/ciso-guide-to-agentic-ai": "2026-07-18T12:04:41.977625",
     "https://claude.com/blog/claude-code-desktop-redesign": "2026-07-27T12:04:48.798191",
-    "https://claude.com/blog/claude-design-stays-on-brand-for-daily-work": "2026-06-18T12:32:27.608101",
     "https://claude.com/blog/claude-for-foundation-models": "2026-07-26T12:04:25.368996",
     "https://claude.com/blog/claude-managed-agents": "2026-07-28T12:04:39.015678",
     "https://claude.com/blog/claude-managed-agents-memory": "2026-07-27T12:04:48.798191",
@@ -1372,7 +1336,6 @@
     "https://claude.com/blog/how-people-are-using-claude-cowork": "2026-07-09T12:04:55.179644",
     "https://claude.com/blog/how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-building-them": "2026-07-25T12:04:37.529743",
     "https://claude.com/blog/introducing-the-claude-apps-gateway": "2026-06-30T12:05:14.072822",
-    "https://claude.com/blog/meet-the-winners-of-our-claude-opus-4-8-build-day-hackathon": "2026-06-18T12:32:27.608101",
     "https://claude.com/blog/new-in-claude-managed-agents": "2026-07-26T12:04:25.368996",
     "https://claude.com/blog/preparing-your-security-program-for-ai-accelerated-offense": "2026-07-28T12:04:39.015678",
     "https://claude.com/blog/steering-claude-code-skills-hooks-rules-subagents-and-more": "2026-06-19T12:32:01.945543",
@@ -1386,13 +1349,11 @@
     "https://claude.com/blog/working-at-the-frontier-rakuten": "2026-07-21T12:04:54.370956",
     "https://claude.com/blog/working-at-the-frontier-why-base44-trusts-claude-fable-5-with-their-most-challenging-engineering-work": "2026-07-16T12:04:28.413151",
     "https://claude.com/blog/working-with-claude-fable-5-in-claude-cowork": "2026-07-17T12:05:04.882495",
-    "https://claude.com/blog/workload-identity-federation": "2026-06-18T12:32:27.608101",
     "https://openai.com/index/a-scorecard-for-the-ai-age": "2026-07-18T12:04:41.977625",
     "https://openai.com/index/advancing-ai-safety-through-state-and-federal-action": "2026-07-16T12:04:28.413151",
     "https://openai.com/index/advancing-responsible-ai-across-europe": "2026-07-31T12:05:43.151129",
     "https://openai.com/index/advancing-the-next-era-of-national-science": "2026-07-23T12:05:27.517628",
     "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6": "2026-07-31T12:05:43.151129",
-    "https://openai.com/index/ai-chemist-improves-reaction": "2026-06-18T12:32:27.608101",
     "https://openai.com/index/building-abundant-intelligence": "2026-08-01T12:04:59.132717",
     "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community": "2026-07-23T12:05:27.517628",
     "https://openai.com/index/chatgpt-enterprise-spend-controls": "2026-06-19T12:32:01.945543",
