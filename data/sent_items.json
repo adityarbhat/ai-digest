@@ -50,7 +50,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "f2899c809c4d",
-      "last_seen_at": "2026-08-04T12:01:15.817314",
+      "last_seen_at": "2026-08-05T12:01:36.055424",
       "title": "Claude Code Overview",
       "updated_at": "2026-07-29T12:05:05.943419"
     },
@@ -177,7 +177,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "972aeef7bce5",
-      "last_seen_at": "2026-08-04T12:01:15.817314",
+      "last_seen_at": "2026-08-05T12:01:36.055424",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-07-17T12:05:04.882361"
     },
@@ -217,7 +217,7 @@
         "Usage policy"
       ],
       "content_hash": "c3942e16ce32",
-      "last_seen_at": "2026-08-04T12:01:15.817314",
+      "last_seen_at": "2026-08-05T12:01:36.055424",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-07-25T12:04:37.529583"
     }
@@ -250,13 +250,6 @@
       "source": "Neon Blog",
       "title": "My agent cloned GitHub (sort of) using the Neon backend",
       "url": "https://neon.com/blog/my-agent-cloned-github-using-the-neon-backend"
-    },
-    "04b030661d1c7c4bdff8336e0ec86bc0d2dd64c4": {
-      "kind": "Blog",
-      "sent_at": "2026-06-20T12:32:09.900722",
-      "source": "FastAPI Releases",
-      "title": "0.138.0",
-      "url": "https://github.com/fastapi/fastapi/releases/tag/0.138.0"
     },
     "05e22dbecb91aa3cff2578acdfc9d3913c2895fd": {
       "kind": "Blog",
@@ -573,13 +566,6 @@
       "title": "Eval-driven development: Lessons from evaluating GenAI at scale",
       "url": "https://medium.com/airbnb-engineering/eval-driven-development-lessons-from-evaluating-genai-at-scale-e817e5ae5788?source=rss----53c7c27702d5--ai"
     },
-    "4f0d0178db1fd26655e4f50482fb14fe8dbc0e6e": {
-      "kind": "Blog",
-      "sent_at": "2026-06-20T12:32:09.900722",
-      "source": "Simon Willison",
-      "title": "Quoting Sean Lynch",
-      "url": "https://simonwillison.net/2026/Jun/19/sean-lynch/#atom-everything"
-    },
     "4f35c335ae29db9a0c026a20e2a950ffb6188ed3": {
       "kind": "Paper",
       "sent_at": "2026-07-22T12:06:38.269493",
@@ -699,6 +685,13 @@
       "title": "OPFS + Pyodide test harness",
       "url": "https://simonwillison.net/2026/Jun/23/opfs-pyodide/#atom-everything"
     },
+    "65d2c94569c34dc5de47a52238ea2ff9f9c70f71": {
+      "kind": "Blog",
+      "sent_at": "2026-08-05T12:05:25.893072",
+      "source": "Cloudflare Blog",
+      "title": "How we built a software factory to drive Astro\u2019s GitHub issue count to zero",
+      "url": "https://blog.cloudflare.com/astro-issue-triage/"
+    },
     "6ac0d8f98914bc1405c51bc83929ec3d7c379b95": {
       "kind": "Blog",
       "sent_at": "2026-07-31T12:05:43.150980",
@@ -748,19 +741,19 @@
       "title": "Agentic Routing: The Harness-Native Data Flywheel",
       "url": "http://arxiv.org/abs/2607.11399v1"
     },
-    "73819eb8132de55e3150c09d1d4bbd4da212242b": {
-      "kind": "Blog",
-      "sent_at": "2026-06-20T12:32:09.900722",
-      "source": "Cloudflare Blog",
-      "title": "Temporary Cloudflare Accounts for AI agents",
-      "url": "https://blog.cloudflare.com/temporary-accounts/"
-    },
     "75c3cacc0f27ce15127ad248eb14bb394a301030": {
       "kind": "Paper",
       "sent_at": "2026-07-29T12:05:05.943419",
       "source": "arXiv",
       "title": "HANDBOOK.md: A Benchmark for Long-Context Agentic Instruction Following",
       "url": "http://arxiv.org/abs/2607.25398v1"
+    },
+    "7b468afe01f795295af500e0b1e9a387b643dcff": {
+      "kind": "Blog",
+      "sent_at": "2026-08-05T12:05:25.893072",
+      "source": "Simon Willison",
+      "title": "llm-anthropic 0.26",
+      "url": "https://simonwillison.net/2026/Aug/4/llm-anthropic/#atom-everything"
     },
     "7bc9c70db152789373f7f6e7f57e4616c01e2d47": {
       "kind": "Paper",
@@ -845,6 +838,13 @@
       "source": "Grab Engineering",
       "title": "Agent platform (Part 1): How we help Grab build and run AI agents at scale",
       "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5UeVRNSVJzM3kzUnVPVmxrSjBWNlREOUt5RGxaLUNPRG91TzN1NFZUckl3aVhKUmRMYWtvVXM2WXZPN1JHWVFIMHgyT2NKbHNoWHJOT2gwOU5EN1hXX1JmSlY3U0ZBNE40ZkZVYnZBU3ZWdUlFc1hiczgxdmU?oc=5"
+    },
+    "90ee8a9848cb6a801a2b231cb321e269bfb3ba71": {
+      "kind": "Blog",
+      "sent_at": "2026-08-05T12:05:25.893072",
+      "source": "Simon Willison",
+      "title": "New release of LLM adds support for reasoning traces, OpenAI Responses, server-side tools, and smarter logging",
+      "url": "https://simonwillison.net/2026/Aug/4/new-release-of-llm/#atom-everything"
     },
     "9690777f2576ad50046f21224c4a3d251cb79434": {
       "kind": "Paper",
@@ -978,6 +978,13 @@
       "source": "Netflix TechBlog",
       "title": "In-House LLM Serving at Netflix",
       "url": "https://netflixtechblog.com/in-house-llm-serving-at-netflix-a5a8e799ea2c?source=rss----2615bd06b42e---4"
+    },
+    "adbd84d9bd28f5cc4869ad1ab3f95f637e3ea73a": {
+      "kind": "Blog",
+      "sent_at": "2026-08-05T12:05:25.893072",
+      "source": "GitHub Engineering",
+      "title": "Turn one giant AI-generated pull request to a reviewable stack",
+      "url": "https://github.blog/engineering/turn-one-giant-ai-generated-pull-request-to-a-reviewable-stack/"
     },
     "adf0016601053d097c605fba9eabbfe6571a3c74": {
       "kind": "Blog",
@@ -1196,6 +1203,13 @@
       "title": "Anthropic Release Notes",
       "url": "https://docs.anthropic.com/en/release-notes/overview"
     },
+    "e61c825a7e9ed00246782c1dafee5b2a5238e5db": {
+      "kind": "Blog",
+      "sent_at": "2026-08-05T12:05:25.893072",
+      "source": "Hacker News",
+      "title": "Harness engineering for self-improvement",
+      "url": "https://lilianweng.github.io/posts/2026-07-04-harness/"
+    },
     "e74320f6d0015e17f329491bc923af38dbc3c65a": {
       "kind": "Blog",
       "sent_at": "2026-06-24T12:04:31.769597",
@@ -1311,11 +1325,13 @@
   },
   "watchlist_seen": {
     "https://blog.cloudflare.com/2026-world-cup-internet-traffic/": "2026-07-22T12:06:38.269628",
+    "https://blog.cloudflare.com/agent-development-lifecycle/": "2026-08-05T12:05:25.893222",
     "https://blog.cloudflare.com/agentic-internet-bot-report/": "2026-07-02T12:05:08.091556",
     "https://blog.cloudflare.com/agents-week-welcome/": "2026-08-03T12:04:34.120253",
     "https://blog.cloudflare.com/bgp-origin-attribute/": "2026-07-25T12:04:37.529743",
     "https://blog.cloudflare.com/billable-usage-api/": "2026-08-04T12:05:16.424928",
     "https://blog.cloudflare.com/cdnjs-dev-platform-migration/": "2026-07-31T12:05:43.151129",
+    "https://blog.cloudflare.com/ci-workflows/": "2026-08-05T12:05:25.893222",
     "https://blog.cloudflare.com/cloudflare-computer/": "2026-08-04T12:05:16.424928",
     "https://blog.cloudflare.com/cloudflare-joins-uk-cyber-resilience-pledge/": "2026-07-08T12:04:45.896685",
     "https://blog.cloudflare.com/dnssec-nta-ede-33/": "2026-07-15T12:06:44.768871",
@@ -1335,9 +1351,11 @@
     "https://blog.cloudflare.com/q2-2026-internet-disruption-summary/": "2026-07-29T12:05:05.943566",
     "https://blog.cloudflare.com/rollbacks-for-workflows/": "2026-06-26T12:04:38.973471",
     "https://blog.cloudflare.com/smart-tiered-cache-for-public-clouds/": "2026-07-11T12:04:14.686912",
+    "https://blog.cloudflare.com/wallets/": "2026-08-05T12:05:25.893222",
     "https://blog.cloudflare.com/wordpress-vulnerabilities/": "2026-07-18T12:04:41.977625",
     "https://blog.cloudflare.com/workers-cache/": "2026-07-07T12:05:38.996055",
     "https://claude.com/blog/a-field-guide-to-claude-fable-finding-your-unknowns": "2026-07-07T12:05:38.996055",
+    "https://claude.com/blog/a-guide-to-cost-visibility-and-control-in-claude": "2026-08-05T12:05:25.893222",
     "https://claude.com/blog/ai-code-migration": "2026-07-17T12:05:04.882495",
     "https://claude.com/blog/artifacts-in-claude-code": "2026-08-04T12:05:16.424928",
     "https://claude.com/blog/bringing-claude-code-and-claude-cowork-to-government": "2026-07-08T12:04:45.896685",
@@ -1411,6 +1429,7 @@
     "https://openai.com/index/scientific-computing-agentic-ai": "2026-07-29T12:05:05.943566",
     "https://openai.com/index/separating-signal-from-noise-coding-evaluations": "2026-07-09T12:04:55.179644",
     "https://openai.com/index/ten-advances-in-mathematics": "2026-08-01T12:04:59.132717",
+    "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models": "2026-08-05T12:05:25.893222",
     "https://openai.com/index/unlocking-self-improvement-gpt-red": "2026-07-16T12:04:28.413151",
     "https://openai.com/index/why-teens-deserve-access-safe-ai": "2026-07-17T12:05:04.882495",
     "https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack": "2026-06-22T12:31:28.939282",
@@ -1420,9 +1439,7 @@
     "https://www.anthropic.com/news/anthropic-public-record": "2026-06-21T12:31:23.180324",
     "https://www.anthropic.com/news/ben-bernanke": "2026-07-10T12:05:13.840666",
     "https://www.anthropic.com/news/canadian-ai-research": "2026-07-15T12:06:44.768871",
-    "https://www.anthropic.com/news/chris-olah-pope-leo-encyclical": "2026-06-20T12:32:09.900860",
     "https://www.anthropic.com/news/claude-for-teachers": "2026-07-15T12:06:44.768871",
-    "https://www.anthropic.com/news/claude-opus-4-8": "2026-06-20T12:32:09.900860",
     "https://www.anthropic.com/news/claude-science-ai-workbench": "2026-07-02T12:05:08.091556",
     "https://www.anthropic.com/news/cognizant-anthropic": "2026-07-30T12:05:12.814865",
     "https://www.anthropic.com/news/donation-public-first-action": "2026-07-31T12:05:43.151129",
@@ -1435,7 +1452,6 @@
     "https://www.anthropic.com/news/rare-disease-research-grants": "2026-07-31T12:05:43.151129",
     "https://www.anthropic.com/news/redeploying-fable-5": "2026-07-02T12:05:08.091556",
     "https://www.anthropic.com/news/reflect-with-claude": "2026-07-12T12:04:53.647602",
-    "https://www.anthropic.com/news/seoul-office-partnerships-korean-ai-ecosystem": "2026-06-20T12:32:09.900860",
     "https://www.anthropic.com/news/services-track-partner-hub": "2026-06-22T12:31:28.939282",
     "https://www.anthropic.com/news/tcs-anthropic-partnership": "2026-06-21T12:31:23.180324",
     "https://www.anthropic.com/news/ust-claude": "2026-07-10T12:05:13.840666"
