@@ -50,7 +50,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "f2899c809c4d",
-      "last_seen_at": "2026-08-05T12:01:36.055424",
+      "last_seen_at": "2026-08-06T12:01:07.925589",
       "title": "Claude Code Overview",
       "updated_at": "2026-07-29T12:05:05.943419"
     },
@@ -177,7 +177,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "972aeef7bce5",
-      "last_seen_at": "2026-08-05T12:01:36.055424",
+      "last_seen_at": "2026-08-06T12:01:07.925589",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-07-17T12:05:04.882361"
     },
@@ -217,7 +217,7 @@
         "Usage policy"
       ],
       "content_hash": "c3942e16ce32",
-      "last_seen_at": "2026-08-05T12:01:36.055424",
+      "last_seen_at": "2026-08-06T12:01:07.925589",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-07-25T12:04:37.529583"
     }
@@ -307,6 +307,13 @@
       "title": "Quoting Armin Ronacher",
       "url": "https://simonwillison.net/2026/Jul/14/armin-ronacher/#atom-everything"
     },
+    "11efb81118370c1137b12aea532f9eea21d36cc1": {
+      "kind": "Paper",
+      "sent_at": "2026-08-06T12:05:02.260439",
+      "source": "arXiv",
+      "title": "Scrouting: Cost-Aware Routing of Coding Agents by Scouting the Repository First",
+      "url": "http://arxiv.org/abs/2608.04804v1"
+    },
     "12183572aebcbc927552bdba46431a16b5496af7": {
       "kind": "Blog",
       "sent_at": "2026-06-22T12:31:28.939182",
@@ -334,6 +341,13 @@
       "source": "FastAPI Releases",
       "title": "0.140.8",
       "url": "https://github.com/fastapi/fastapi/releases/tag/0.140.8"
+    },
+    "1561de5ea8e0991c16a84bb4315a8c7b72435b42": {
+      "kind": "Blog",
+      "sent_at": "2026-08-06T12:05:02.260439",
+      "source": "Simon Willison",
+      "title": "One-shotting a Raccoon Heist game using Claude Fable 5",
+      "url": "https://simonwillison.net/2026/Aug/5/raccoon-heist/#atom-everything"
     },
     "18b40ff7b2295ee3159a5dcbdd3f4341aa8a175a": {
       "kind": "Blog",
@@ -411,6 +425,13 @@
       "source": "arXiv",
       "title": "ICAE-Bench: Evaluating Coding Agents as Interactive Project Builders",
       "url": "http://arxiv.org/abs/2607.21217v1"
+    },
+    "26e291e409d89d3d0c4dd877a85a7f2c254c5c30": {
+      "kind": "Blog",
+      "sent_at": "2026-08-06T12:05:02.260439",
+      "source": "Neon Blog",
+      "title": "How Castform + Neon Beats Frontier Models on Price and Efficiency",
+      "url": "https://neon.com/blog/how-castform-neon-beats-frontier-models-on-price-and-efficiency"
     },
     "27ebae18f6fbdd9fe92363219c62b2305f180f96": {
       "kind": "Blog",
@@ -495,6 +516,13 @@
       "source": "arXiv",
       "title": "Who Grades the Grader? Co-Evolving Evaluation Metrics and Skills for Self-Improving LLM Agents",
       "url": "http://arxiv.org/abs/2607.12790v1"
+    },
+    "3bb41b08022edd5a69d9014b49090236b4c77184": {
+      "kind": "Blog",
+      "sent_at": "2026-08-06T12:05:02.260439",
+      "source": "Simon Willison",
+      "title": "Introducing Muse Code and Muse Spark 1.2",
+      "url": "https://simonwillison.net/2026/Aug/5/muse-code-and-muse-spark-12/#atom-everything"
     },
     "3d3e9ebc48c42b308e4bb4612cc76719ff63b223": {
       "kind": "Blog",
@@ -775,6 +803,13 @@
       "source": "Simon Willison",
       "title": "Discovering cryptographic weaknesses with Claude",
       "url": "https://simonwillison.net/2026/Jul/28/discovering-cryptographic-weaknesses-with-claude/#atom-everything"
+    },
+    "8183ac2c9c0456026120c0fb59876b145e866c2f": {
+      "kind": "Blog",
+      "sent_at": "2026-08-06T12:05:02.260439",
+      "source": "Cloudflare Blog",
+      "title": "Catching rogue AI behavior with identity-aware analytics",
+      "url": "https://blog.cloudflare.com/identity-aware-ai-gateway/"
     },
     "81a444686e2f6962769112b85498a12ea04c0876": {
       "kind": "Blog",
@@ -1168,6 +1203,13 @@
       "title": "Claude Code is steganographically marking requests",
       "url": "https://thereallo.dev/blog/claude-code-prompt-steganography"
     },
+    "de1d0f7b8da39888a2120e1aaf8088902945add9": {
+      "kind": "Blog",
+      "sent_at": "2026-08-06T12:05:02.260439",
+      "source": "Cloudflare Blog",
+      "title": "WriteGuard: fine-grained controls for MCP Servers",
+      "url": "https://blog.cloudflare.com/mcp-portal-writeguard-private-beta/"
+    },
     "df8df70439c0ef5336c6b7e77c111e72c84efae8": {
       "kind": "Blog",
       "sent_at": "2026-07-22T12:06:38.269493",
@@ -1252,6 +1294,13 @@
       "title": "Flint: A visualization language for the AI era",
       "url": "https://www.microsoft.com/en-us/research/blog/flint-a-visualization-language-for-the-ai-era/"
     },
+    "f156332fef406ea88b8fa59e8882e27ed594fc29": {
+      "kind": "Paper",
+      "sent_at": "2026-08-06T12:05:02.260439",
+      "source": "arXiv",
+      "title": "Architectural Implications of Agentic AI Workflows",
+      "url": "http://arxiv.org/abs/2608.04458v1"
+    },
     "f2ee4bfabe04e5945d8b91796c3638edab1b212b": {
       "kind": "Blog",
       "sent_at": "2026-07-13T12:03:56.424213",
@@ -1334,8 +1383,10 @@
     "https://blog.cloudflare.com/ci-workflows/": "2026-08-05T12:05:25.893222",
     "https://blog.cloudflare.com/cloudflare-computer/": "2026-08-04T12:05:16.424928",
     "https://blog.cloudflare.com/cloudflare-joins-uk-cyber-resilience-pledge/": "2026-07-08T12:04:45.896685",
+    "https://blog.cloudflare.com/cloudflare-sase-sse-gartner-magic-quadrants-2026/": "2026-08-06T12:05:02.260633",
     "https://blog.cloudflare.com/dnssec-nta-ede-33/": "2026-07-15T12:06:44.768871",
     "https://blog.cloudflare.com/grpc-workers/": "2026-08-04T12:05:16.424928",
+    "https://blog.cloudflare.com/how-we-use-ai-with-cloudflare-os/": "2026-08-06T12:05:02.260633",
     "https://blog.cloudflare.com/hyper-bug/": "2026-06-23T12:04:50.588874",
     "https://blog.cloudflare.com/internal-dns/": "2026-07-21T12:04:54.370956",
     "https://blog.cloudflare.com/introducing-cache-response-rules/": "2026-07-24T12:06:54.832037",
@@ -1351,6 +1402,7 @@
     "https://blog.cloudflare.com/q2-2026-internet-disruption-summary/": "2026-07-29T12:05:05.943566",
     "https://blog.cloudflare.com/rollbacks-for-workflows/": "2026-06-26T12:04:38.973471",
     "https://blog.cloudflare.com/smart-tiered-cache-for-public-clouds/": "2026-07-11T12:04:14.686912",
+    "https://blog.cloudflare.com/the-agent-access-model/": "2026-08-06T12:05:02.260633",
     "https://blog.cloudflare.com/wallets/": "2026-08-05T12:05:25.893222",
     "https://blog.cloudflare.com/wordpress-vulnerabilities/": "2026-07-18T12:04:41.977625",
     "https://blog.cloudflare.com/workers-cache/": "2026-07-07T12:05:38.996055",
@@ -1364,6 +1416,7 @@
     "https://claude.com/blog/building-verification-loops-in-claude-code-with-skills": "2026-07-23T12:05:27.517628",
     "https://claude.com/blog/ciso-guide-to-agentic-ai": "2026-07-18T12:04:41.977625",
     "https://claude.com/blog/claude-code-desktop-redesign": "2026-07-27T12:04:48.798191",
+    "https://claude.com/blog/claude-enterprise-inference-hooks": "2026-08-06T12:05:02.260633",
     "https://claude.com/blog/claude-for-foundation-models": "2026-07-26T12:04:25.368996",
     "https://claude.com/blog/claude-managed-agents": "2026-07-28T12:04:39.015678",
     "https://claude.com/blog/claude-managed-agents-memory": "2026-07-27T12:04:48.798191",
@@ -1436,14 +1489,12 @@
     "https://www.anthropic.com/news/alberta-government-claude-cybersecurity": "2026-07-12T12:04:53.647602",
     "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy": "2026-06-22T12:31:28.939282",
     "https://www.anthropic.com/news/anthropic-economic-index-connector": "2026-07-30T12:05:12.814865",
-    "https://www.anthropic.com/news/anthropic-public-record": "2026-06-21T12:31:23.180324",
     "https://www.anthropic.com/news/ben-bernanke": "2026-07-10T12:05:13.840666",
     "https://www.anthropic.com/news/canadian-ai-research": "2026-07-15T12:06:44.768871",
     "https://www.anthropic.com/news/claude-for-teachers": "2026-07-15T12:06:44.768871",
     "https://www.anthropic.com/news/claude-science-ai-workbench": "2026-07-02T12:05:08.091556",
     "https://www.anthropic.com/news/cognizant-anthropic": "2026-07-30T12:05:12.814865",
     "https://www.anthropic.com/news/donation-public-first-action": "2026-07-31T12:05:43.151129",
-    "https://www.anthropic.com/news/dxc-anthropic-alliance": "2026-06-21T12:31:23.180324",
     "https://www.anthropic.com/news/economic-futures-research-fund-agenda": "2026-07-30T12:05:12.814865",
     "https://www.anthropic.com/news/fable-safeguards-jailbreak-framework": "2026-07-04T12:04:29.778934",
     "https://www.anthropic.com/news/hard-questions": "2026-07-10T12:05:13.840666",
@@ -1453,7 +1504,6 @@
     "https://www.anthropic.com/news/redeploying-fable-5": "2026-07-02T12:05:08.091556",
     "https://www.anthropic.com/news/reflect-with-claude": "2026-07-12T12:04:53.647602",
     "https://www.anthropic.com/news/services-track-partner-hub": "2026-06-22T12:31:28.939282",
-    "https://www.anthropic.com/news/tcs-anthropic-partnership": "2026-06-21T12:31:23.180324",
     "https://www.anthropic.com/news/ust-claude": "2026-07-10T12:05:13.840666"
   }
 }
