@@ -50,7 +50,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "b3d0c3d5bc44",
-      "last_seen_at": "2026-08-07T12:04:54.040151",
+      "last_seen_at": "2026-08-08T12:00:55.799658",
       "title": "Claude Code Overview",
       "updated_at": "2026-08-07T12:04:54.040151"
     },
@@ -177,7 +177,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "972aeef7bce5",
-      "last_seen_at": "2026-08-07T12:01:20.790549",
+      "last_seen_at": "2026-08-08T12:00:55.799658",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-07-17T12:05:04.882361"
     },
@@ -217,7 +217,7 @@
         "Usage policy"
       ],
       "content_hash": "c3942e16ce32",
-      "last_seen_at": "2026-08-07T12:01:20.790549",
+      "last_seen_at": "2026-08-08T12:00:55.799658",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-07-25T12:04:37.529583"
     }
@@ -257,6 +257,13 @@
       "source": "Microsoft Research",
       "title": "Memora: A Harmonic Memory Representation Balancing Abstraction and Specificity",
       "url": "https://www.microsoft.com/en-us/research/blog/memora-a-harmonic-memory-representation-balancing-abstraction-and-specificity/"
+    },
+    "0b50a4c4d02a8d13f52390424247bb79547af809": {
+      "kind": "Blog",
+      "sent_at": "2026-08-08T12:05:05.404802",
+      "source": "Hacker News",
+      "title": "Making Postgres 300x faster for analytics: batching, operator fusion, and SIMD",
+      "url": "https://malisper.me/how-we-made-postgres-hundreds-of-times-faster-the-query-engine/"
     },
     "0c806c20acb9ae31e4100ae04e60747427830901": {
       "kind": "Blog",
@@ -425,6 +432,13 @@
       "source": "arXiv",
       "title": "ICAE-Bench: Evaluating Coding Agents as Interactive Project Builders",
       "url": "http://arxiv.org/abs/2607.21217v1"
+    },
+    "245411751184b6cc03adc551b05c6edda1aa1a08": {
+      "kind": "Blog",
+      "sent_at": "2026-08-08T12:05:05.404802",
+      "source": "Hacker News",
+      "title": "DeepSeek V4 Flash 0731",
+      "url": "https://arcprize.org/results/deepseek-v4-flash-0731"
     },
     "26e291e409d89d3d0c4dd877a85a7f2c254c5c30": {
       "kind": "Blog",
@@ -713,13 +727,6 @@
       "title": "datasette-apps 0.2a0",
       "url": "https://simonwillison.net/2026/Aug/1/datasette-apps/#atom-everything"
     },
-    "633073db66e3b02ac0af09bf4d76414e6a9c7e6d": {
-      "kind": "Blog",
-      "sent_at": "2026-06-24T12:04:31.769597",
-      "source": "Simon Willison",
-      "title": "OPFS + Pyodide test harness",
-      "url": "https://simonwillison.net/2026/Jun/23/opfs-pyodide/#atom-everything"
-    },
     "64bc67c948b91660669d308ffffbbfbbeb82adbb": {
       "kind": "Blog",
       "sent_at": "2026-08-07T12:04:54.040151",
@@ -789,6 +796,13 @@
       "source": "arXiv",
       "title": "HANDBOOK.md: A Benchmark for Long-Context Agentic Instruction Following",
       "url": "http://arxiv.org/abs/2607.25398v1"
+    },
+    "78e38ae168937fa3280c941a1480a7346b08aa46": {
+      "kind": "Paper",
+      "sent_at": "2026-08-08T12:05:05.404802",
+      "source": "arXiv",
+      "title": "Comparative Approaches to Agent Retrieval over Large Skill Libraries",
+      "url": "http://arxiv.org/abs/2608.06196v1"
     },
     "7b468afe01f795295af500e0b1e9a387b643dcff": {
       "kind": "Blog",
@@ -922,6 +936,13 @@
       "source": "Simon Willison",
       "title": "Quoting Thibault Sottiaux",
       "url": "https://simonwillison.net/2026/Jul/16/bad-codex-bug/#atom-everything"
+    },
+    "9981e716804cab1fb3cb0ebc4142fe5799c39146": {
+      "kind": "Blog",
+      "sent_at": "2026-08-08T12:05:05.404802",
+      "source": "Simon Willison",
+      "title": "Moonlight & Mayhem (Raccoon Heist by Codex + GPT-5.6 Sol Ultra)",
+      "url": "https://simonwillison.net/2026/Aug/7/moonlight-mayhem/#atom-everything"
     },
     "9c5ce25da43cad33b5688731dbf09b0012ea81b3": {
       "kind": "Paper",
@@ -1133,6 +1154,13 @@
       "title": "Claude in Microsoft Foundry is now generally available",
       "url": "https://claude.com/blog/claude-in-microsoft-foundry"
     },
+    "c28ac92b55c398e25ba7d61f3439b3fc1555690a": {
+      "kind": "Blog",
+      "sent_at": "2026-08-08T12:05:05.404802",
+      "source": "OpenAI",
+      "title": "Responding to the next frontier of critical cyber capabilities",
+      "url": "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities"
+    },
     "c4b731ba43fb33c423d19cd9be37089dbc18657a": {
       "kind": "Blog",
       "sent_at": "2026-07-19T12:05:03.399857",
@@ -1153,13 +1181,6 @@
       "source": "arXiv",
       "title": "Bridge Evidence: Static Retrieval Utility Does Not Predict Causal Utility in Multi-Step Agentic Search",
       "url": "http://arxiv.org/abs/2607.15253v1"
-    },
-    "ca1a74173cf3ecfe8f171091001fb2e880863389": {
-      "kind": "Blog",
-      "sent_at": "2026-06-24T12:04:31.769597",
-      "source": "HuggingFace",
-      "title": "Build real agentic apps using CUGA: two dozen working examples on a lightweight harness",
-      "url": "https://huggingface.co/blog/ibm-research/cuga-apps"
     },
     "ca819bc60aba296049475a770b131238cd0ab520": {
       "kind": "Blog",
@@ -1258,13 +1279,6 @@
       "source": "Hacker News",
       "title": "Harness engineering for self-improvement",
       "url": "https://lilianweng.github.io/posts/2026-07-04-harness/"
-    },
-    "e74320f6d0015e17f329491bc923af38dbc3c65a": {
-      "kind": "Blog",
-      "sent_at": "2026-06-24T12:04:31.769597",
-      "source": "Claude Blog",
-      "title": "Agent identity in Claude Tag: a new access model for autonomous, team-wide AI",
-      "url": "https://claude.com/blog/agent-identity-access-model"
     },
     "e879bd7f7be07148b50b99794bb51c0962644d29": {
       "kind": "Blog",
@@ -1393,12 +1407,15 @@
     "https://blog.cloudflare.com/cloudflare-computer/": "2026-08-04T12:05:16.424928",
     "https://blog.cloudflare.com/cloudflare-joins-uk-cyber-resilience-pledge/": "2026-07-08T12:04:45.896685",
     "https://blog.cloudflare.com/cloudflare-sase-sse-gartner-magic-quadrants-2026/": "2026-08-06T12:05:02.260633",
+    "https://blog.cloudflare.com/community-program-refresh/": "2026-08-08T12:05:05.404940",
     "https://blog.cloudflare.com/dnssec-nta-ede-33/": "2026-07-15T12:06:44.768871",
+    "https://blog.cloudflare.com/good-and-bad-agentic-behaviors/": "2026-08-08T12:05:05.404940",
     "https://blog.cloudflare.com/grpc-workers/": "2026-08-04T12:05:16.424928",
     "https://blog.cloudflare.com/how-we-use-ai-with-cloudflare-os/": "2026-08-06T12:05:02.260633",
     "https://blog.cloudflare.com/internal-dns/": "2026-07-21T12:04:54.370956",
     "https://blog.cloudflare.com/introducing-cache-response-rules/": "2026-07-24T12:06:54.832037",
     "https://blog.cloudflare.com/introducing-precursor/": "2026-07-14T12:04:51.246812",
+    "https://blog.cloudflare.com/introducing-radar-researcher/": "2026-08-08T12:05:05.404940",
     "https://blog.cloudflare.com/making-ai-search-smarter/": "2026-07-02T12:05:08.091556",
     "https://blog.cloudflare.com/mcp-v2/": "2026-08-07T12:04:54.040292",
     "https://blog.cloudflare.com/meerkat-introduction/": "2026-07-09T12:04:55.179644",
@@ -1407,7 +1424,6 @@
     "https://blog.cloudflare.com/oauth-for-all/": "2026-06-25T12:04:58.851134",
     "https://blog.cloudflare.com/open-sourcing-our-privacy-proxy-cli/": "2026-07-28T12:04:39.015678",
     "https://blog.cloudflare.com/post-quantum-authentication-to-origins/": "2026-07-30T12:05:12.814865",
-    "https://blog.cloudflare.com/post-quantum-eo-2026/": "2026-06-24T12:04:31.769763",
     "https://blog.cloudflare.com/q2-2026-internet-disruption-summary/": "2026-07-29T12:05:05.943566",
     "https://blog.cloudflare.com/rollbacks-for-workflows/": "2026-06-26T12:04:38.973471",
     "https://blog.cloudflare.com/smart-tiered-cache-for-public-clouds/": "2026-07-11T12:04:14.686912",
@@ -1419,6 +1435,8 @@
     "https://claude.com/blog/a-guide-to-cost-visibility-and-control-in-claude": "2026-08-05T12:05:25.893222",
     "https://claude.com/blog/ai-code-migration": "2026-07-17T12:05:04.882495",
     "https://claude.com/blog/artifacts-in-claude-code": "2026-08-04T12:05:16.424928",
+    "https://claude.com/blog/auto-mode-default-in-claude-code": "2026-08-08T12:05:05.404940",
+    "https://claude.com/blog/auto-mode-in-production": "2026-08-08T12:05:05.404940",
     "https://claude.com/blog/bringing-claude-code-and-claude-cowork-to-government": "2026-07-08T12:04:45.896685",
     "https://claude.com/blog/bringing-mcp-2026-07-28-to-claude": "2026-07-29T12:05:05.943566",
     "https://claude.com/blog/building-effective-human-agent-teams": "2026-06-25T12:04:58.851134",
@@ -1472,8 +1490,6 @@
     "https://openai.com/index/government-national-security-partnerships": "2026-07-09T12:04:55.179644",
     "https://openai.com/index/gpt-5-6": "2026-07-10T12:05:13.840666",
     "https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot": "2026-07-10T12:05:13.840666",
-    "https://openai.com/index/gpt-5-immunology-mystery": "2026-06-24T12:04:31.769763",
-    "https://openai.com/index/helping-build-shared-standards-for-advanced-ai": "2026-06-24T12:04:31.769763",
     "https://openai.com/index/how-agents-are-transforming-work": "2026-06-25T12:04:58.851134",
     "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work": "2026-07-27T12:04:48.798191",
     "https://openai.com/index/how-chatgpt-adoption-has-expanded": "2026-07-01T12:05:30.267914",
