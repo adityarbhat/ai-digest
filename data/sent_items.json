@@ -50,7 +50,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "b3d0c3d5bc44",
-      "last_seen_at": "2026-08-08T12:00:55.799658",
+      "last_seen_at": "2026-08-09T12:01:29.313472",
       "title": "Claude Code Overview",
       "updated_at": "2026-08-07T12:04:54.040151"
     },
@@ -177,7 +177,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "972aeef7bce5",
-      "last_seen_at": "2026-08-08T12:00:55.799658",
+      "last_seen_at": "2026-08-09T12:01:29.313472",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-07-17T12:05:04.882361"
     },
@@ -217,7 +217,7 @@
         "Usage policy"
       ],
       "content_hash": "c3942e16ce32",
-      "last_seen_at": "2026-08-08T12:00:55.799658",
+      "last_seen_at": "2026-08-09T12:01:29.313472",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-07-25T12:04:37.529583"
     }
@@ -348,6 +348,13 @@
       "source": "Simon Willison",
       "title": "One-shotting a Raccoon Heist game using Claude Fable 5",
       "url": "https://simonwillison.net/2026/Aug/5/raccoon-heist/#atom-everything"
+    },
+    "157925afc7b61255a8a66b4ca56b5cd8199f124a": {
+      "kind": "Blog",
+      "sent_at": "2026-08-09T12:04:40.116774",
+      "source": "Simon Willison",
+      "title": "Auto mode is now the default in Claude Code for Pro, Max, and Team plans",
+      "url": "https://simonwillison.net/2026/Aug/8/auto-mode/#atom-everything"
     },
     "18b40ff7b2295ee3159a5dcbdd3f4341aa8a175a": {
       "kind": "Blog",
@@ -1315,6 +1322,13 @@
       "title": "Flint: A visualization language for the AI era",
       "url": "https://www.microsoft.com/en-us/research/blog/flint-a-visualization-language-for-the-ai-era/"
     },
+    "ed2fddef3d3e844643c42d5d01e16cd2669522e5": {
+      "kind": "Blog",
+      "sent_at": "2026-08-09T12:04:40.116774",
+      "source": "Hacker News",
+      "title": "Shopify replaced Redis with MySQL for inventory reservations\u2013and it scaled",
+      "url": "https://shopify.engineering/scaling-inventory-reservations"
+    },
     "f156332fef406ea88b8fa59e8882e27ed594fc29": {
       "kind": "Paper",
       "sent_at": "2026-08-06T12:05:02.260439",
@@ -1510,6 +1524,7 @@
     "https://openai.com/index/unlocking-self-improvement-gpt-red": "2026-07-16T12:04:28.413151",
     "https://openai.com/index/why-teens-deserve-access-safe-ai": "2026-07-17T12:05:04.882495",
     "https://www.anthropic.com/news/alberta-government-claude-cybersecurity": "2026-07-12T12:04:53.647602",
+    "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy": "2026-08-09T12:04:40.116881",
     "https://www.anthropic.com/news/anthropic-economic-index-connector": "2026-07-30T12:05:12.814865",
     "https://www.anthropic.com/news/ben-bernanke": "2026-07-10T12:05:13.840666",
     "https://www.anthropic.com/news/canadian-ai-research": "2026-07-15T12:06:44.768871",
@@ -1520,11 +1535,13 @@
     "https://www.anthropic.com/news/economic-futures-research-fund-agenda": "2026-07-30T12:05:12.814865",
     "https://www.anthropic.com/news/fable-safeguards-jailbreak-framework": "2026-07-04T12:04:29.778934",
     "https://www.anthropic.com/news/hard-questions": "2026-07-10T12:05:13.840666",
+    "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards": "2026-08-09T12:04:40.116881",
     "https://www.anthropic.com/news/introducing-claude-tag": "2026-06-26T12:04:38.973471",
     "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals": "2026-07-31T12:05:43.151129",
     "https://www.anthropic.com/news/rare-disease-research-grants": "2026-07-31T12:05:43.151129",
     "https://www.anthropic.com/news/redeploying-fable-5": "2026-07-02T12:05:08.091556",
     "https://www.anthropic.com/news/reflect-with-claude": "2026-07-12T12:04:53.647602",
+    "https://www.anthropic.com/news/tino-cuellar": "2026-08-09T12:04:40.116881",
     "https://www.anthropic.com/news/ust-claude": "2026-07-10T12:05:13.840666"
   }
 }
