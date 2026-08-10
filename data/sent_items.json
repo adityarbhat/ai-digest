@@ -50,7 +50,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "b3d0c3d5bc44",
-      "last_seen_at": "2026-08-09T12:01:29.313472",
+      "last_seen_at": "2026-08-10T12:00:49.704244",
       "title": "Claude Code Overview",
       "updated_at": "2026-08-07T12:04:54.040151"
     },
@@ -177,7 +177,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "972aeef7bce5",
-      "last_seen_at": "2026-08-09T12:01:29.313472",
+      "last_seen_at": "2026-08-10T12:00:49.704244",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-07-17T12:05:04.882361"
     },
@@ -217,7 +217,7 @@
         "Usage policy"
       ],
       "content_hash": "c3942e16ce32",
-      "last_seen_at": "2026-08-09T12:01:29.313472",
+      "last_seen_at": "2026-08-10T12:00:49.704244",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-07-25T12:04:37.529583"
     }
@@ -327,13 +327,6 @@
       "source": "Hacker News",
       "title": "U.S. allows Anthropic to release Mythos AI to \u2018trusted\u2019 US organizations",
       "url": "https://www.semafor.com/article/06/27/2026/us-releases-powerful-anthropic-model-mythos-to-some-us-companies"
-    },
-    "14a805b0a010f8ac76cf7cadf91e20b4c31505da": {
-      "kind": "Paper",
-      "sent_at": "2026-06-25T12:04:58.851017",
-      "source": "arXiv",
-      "title": "The Unfireable Safety Kernel: Execution-Time AI Alignment for AI Agents and Other Escapable AI Systems",
-      "url": "http://arxiv.org/abs/2606.26057v1"
     },
     "155b36d5a70eb479bab7c5d26bc34c7119e13d07": {
       "kind": "Blog",
@@ -482,13 +475,6 @@
       "title": "Introducing the New Neon API Command",
       "url": "https://neon.com/blog/introducing-neon-api-command"
     },
-    "2f6581ea473f7fc9daf78c4702d37fb84475beaa": {
-      "kind": "Paper",
-      "sent_at": "2026-06-25T12:04:58.851017",
-      "source": "arXiv",
-      "title": "Why Multi-Step Tool-Use Reinforcement Learning Collapses and How Supervisory Signals Fix It",
-      "url": "http://arxiv.org/abs/2606.26027v1"
-    },
     "3001b897e50f3ff7329d8cfd7a261f23500dda3a": {
       "kind": "Paper",
       "sent_at": "2026-07-15T12:06:44.768708",
@@ -608,13 +594,6 @@
       "title": "Test out the Neon backend: Object Storage, Functions, and AI Gateway are beta",
       "url": "https://neon.com/blog/neon-backend-is-beta"
     },
-    "4d0d26f4045f6f252c2c10b466f13d2a41ba2b8d": {
-      "kind": "Blog",
-      "sent_at": "2026-06-25T12:04:58.851017",
-      "source": "Google DeepMind",
-      "title": "Introducing computer use in Gemini 3.5 Flash",
-      "url": "https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash/"
-    },
     "4e0a71f5b2961d29b75db962aa4ac49a8f44cec4": {
       "kind": "Blog",
       "sent_at": "2026-07-29T12:05:05.943419",
@@ -635,13 +614,6 @@
       "source": "arXiv",
       "title": "DataClawEval: A Benchmark for Data Engineering Agents in Real Industrial Harness",
       "url": "http://arxiv.org/abs/2607.28033v1"
-    },
-    "52ddfb34a989093123abea1950bb9a02baf77cde": {
-      "kind": "Blog",
-      "sent_at": "2026-06-25T12:04:58.851017",
-      "source": "Simon Willison",
-      "title": "simonw/browser-compat-db",
-      "url": "https://simonwillison.net/2026/Jun/24/browser-compat-db/#atom-everything"
     },
     "53b35577b479def74e4d1370a9b12c9d9e71f2b0": {
       "kind": "Blog",
@@ -1435,7 +1407,6 @@
     "https://blog.cloudflare.com/meerkat-introduction/": "2026-07-09T12:04:55.179644",
     "https://blog.cloudflare.com/ml-dsa-will-have-to-do/": "2026-07-10T12:05:13.840666",
     "https://blog.cloudflare.com/moq-relays/": "2026-08-01T12:04:59.132717",
-    "https://blog.cloudflare.com/oauth-for-all/": "2026-06-25T12:04:58.851134",
     "https://blog.cloudflare.com/open-sourcing-our-privacy-proxy-cli/": "2026-07-28T12:04:39.015678",
     "https://blog.cloudflare.com/post-quantum-authentication-to-origins/": "2026-07-30T12:05:12.814865",
     "https://blog.cloudflare.com/q2-2026-internet-disruption-summary/": "2026-07-29T12:05:05.943566",
@@ -1453,7 +1424,6 @@
     "https://claude.com/blog/auto-mode-in-production": "2026-08-08T12:05:05.404940",
     "https://claude.com/blog/bringing-claude-code-and-claude-cowork-to-government": "2026-07-08T12:04:45.896685",
     "https://claude.com/blog/bringing-mcp-2026-07-28-to-claude": "2026-07-29T12:05:05.943566",
-    "https://claude.com/blog/building-effective-human-agent-teams": "2026-06-25T12:04:58.851134",
     "https://claude.com/blog/building-verification-loops-in-claude-code-with-skills": "2026-07-23T12:05:27.517628",
     "https://claude.com/blog/ciso-guide-to-agentic-ai": "2026-07-18T12:04:41.977625",
     "https://claude.com/blog/claude-code-desktop-redesign": "2026-07-27T12:04:48.798191",
@@ -1504,7 +1474,6 @@
     "https://openai.com/index/government-national-security-partnerships": "2026-07-09T12:04:55.179644",
     "https://openai.com/index/gpt-5-6": "2026-07-10T12:05:13.840666",
     "https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot": "2026-07-10T12:05:13.840666",
-    "https://openai.com/index/how-agents-are-transforming-work": "2026-06-25T12:04:58.851134",
     "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work": "2026-07-27T12:04:48.798191",
     "https://openai.com/index/how-chatgpt-adoption-has-expanded": "2026-07-01T12:05:30.267914",
     "https://openai.com/index/how-news-organizations-are-using-ai": "2026-07-23T12:05:27.517628",
@@ -1515,7 +1484,6 @@
     "https://openai.com/index/k-12-educators-practical-skills": "2026-07-09T12:04:55.179644",
     "https://openai.com/index/mapping-ai-jobs-transition-eu": "2026-06-29T12:04:09.335154",
     "https://openai.com/index/openai-and-apa-partner-to-advance-responsible-ai": "2026-08-07T12:04:54.040292",
-    "https://openai.com/index/openai-broadcom-jalapeno-inference-chip": "2026-06-25T12:04:58.851134",
     "https://openai.com/index/safety-alignment-long-horizon-models": "2026-07-21T12:04:54.370956",
     "https://openai.com/index/scientific-computing-agentic-ai": "2026-07-29T12:05:05.943566",
     "https://openai.com/index/separating-signal-from-noise-coding-evaluations": "2026-07-09T12:04:55.179644",
