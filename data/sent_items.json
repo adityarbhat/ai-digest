@@ -50,7 +50,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "b3d0c3d5bc44",
-      "last_seen_at": "2026-08-12T12:01:19.170815",
+      "last_seen_at": "2026-08-13T12:00:57.454239",
       "title": "Claude Code Overview",
       "updated_at": "2026-08-07T12:04:54.040151"
     },
@@ -177,7 +177,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "972aeef7bce5",
-      "last_seen_at": "2026-08-12T12:01:19.170815",
+      "last_seen_at": "2026-08-13T12:00:57.454239",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-07-17T12:05:04.882361"
     },
@@ -217,7 +217,7 @@
         "Usage policy"
       ],
       "content_hash": "c3942e16ce32",
-      "last_seen_at": "2026-08-12T12:01:19.170815",
+      "last_seen_at": "2026-08-13T12:00:57.454239",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-08-11T12:05:03.934043"
     }
@@ -306,13 +306,6 @@
       "source": "Simon Willison",
       "title": "smevals - a small eval suite for evaluating models, prompts, and harnesses",
       "url": "https://simonwillison.net/2026/Jul/31/smevals/#atom-everything"
-    },
-    "0fb195b57e36cf7b393c4169a50db3148a579793": {
-      "kind": "Blog",
-      "sent_at": "2026-06-29T12:04:09.335029",
-      "source": "Hacker News",
-      "title": "GLM 5.2 beats Claude in our benchmarks",
-      "url": "https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/"
     },
     "11337413cb0bf3d0d1056a19008fb799212edcb3": {
       "kind": "Blog",
@@ -552,6 +545,13 @@
       "title": "deepseek-ai/DeepSeek-V4-Flash-0731",
       "url": "https://simonwillison.net/2026/Jul/31/deepseek-v4-flash-0731/#atom-everything"
     },
+    "42e7305da0379ae8dc58479eb55d6e401652c10b": {
+      "kind": "Paper",
+      "sent_at": "2026-08-13T12:05:04.688836",
+      "source": "arXiv",
+      "title": "Diagnosis Before Recovery: Turning Agent Failures into Selective Self-Correction",
+      "url": "http://arxiv.org/abs/2608.11772v1"
+    },
     "45d78dfd45537df8fa73d82dca5ce790ec4f646e": {
       "kind": "Blog",
       "sent_at": "2026-07-01T12:05:30.267771",
@@ -622,6 +622,13 @@
       "title": "DataClawEval: A Benchmark for Data Engineering Agents in Real Industrial Harness",
       "url": "http://arxiv.org/abs/2607.28033v1"
     },
+    "5220b75f89f38e822d8d25545e5ef2b1ddfc7cf6": {
+      "kind": "Blog",
+      "sent_at": "2026-08-13T12:05:04.688836",
+      "source": "Simon Willison",
+      "title": "DeepSeek V4 Pro 0813 (on OpenRouter)",
+      "url": "https://simonwillison.net/2026/Aug/12/deepseek-v4-pro-0813/"
+    },
     "53b35577b479def74e4d1370a9b12c9d9e71f2b0": {
       "kind": "Blog",
       "sent_at": "2026-07-15T12:06:44.768708",
@@ -657,6 +664,13 @@
       "title": "Agent Skill to Force Docs in ASD-STE100 Simplified Technical English",
       "url": "https://github.com/AminBlg/SimpleEnglish"
     },
+    "57c631d4c702975c63ac8e9e613099b27fefcc03": {
+      "kind": "Blog",
+      "sent_at": "2026-08-13T12:05:04.688836",
+      "source": "Neon Blog",
+      "title": "Neon Functions: backend logic next to your data",
+      "url": "https://neon.com/blog/neon-functions-backend-logic-next-to-your-data"
+    },
     "57fd3d350a6f0c7aae89aaa1168973bb7c0c71fd": {
       "kind": "Blog",
       "sent_at": "2026-07-03T12:07:02.942286",
@@ -677,13 +691,6 @@
       "source": "Hacker News",
       "title": "We scaled PgBouncer to 4x throughput",
       "url": "https://clickhouse.com/blog/pgbouncer-clickhouse-managed-postgres"
-    },
-    "5eafa775c2f968e1832513ad46e464505a92d9f0": {
-      "kind": "Blog",
-      "sent_at": "2026-06-29T12:04:09.335029",
-      "source": "Simon Willison",
-      "title": "Quoting Jon Udell",
-      "url": "https://simonwillison.net/2026/Jun/28/jon-udell/#atom-everything"
     },
     "5fc60c835f05debdbb2b47d2c31377ad33b9c52a": {
       "kind": "Blog",
@@ -881,6 +888,13 @@
       "title": "New release of LLM adds support for reasoning traces, OpenAI Responses, server-side tools, and smarter logging",
       "url": "https://simonwillison.net/2026/Aug/4/new-release-of-llm/#atom-everything"
     },
+    "955a03f1de36015a82d1a59cbcbd273e84330e93": {
+      "kind": "Blog",
+      "sent_at": "2026-08-13T12:05:04.688836",
+      "source": "AWS Architecture Blog",
+      "title": "Reducing Text2SQL latency with parameterized query templates",
+      "url": "https://aws.amazon.com/blogs/architecture/reducing-text2sql-latency-with-parameterized-query-templates/"
+    },
     "9690777f2576ad50046f21224c4a3d251cb79434": {
       "kind": "Paper",
       "sent_at": "2026-07-24T12:06:54.831851",
@@ -908,6 +922,13 @@
       "source": "Simon Willison",
       "title": "Moonlight & Mayhem (Raccoon Heist by Codex + GPT-5.6 Sol Ultra)",
       "url": "https://simonwillison.net/2026/Aug/7/moonlight-mayhem/#atom-everything"
+    },
+    "99a4289dba513157b37155eb0f9c62766c652568": {
+      "kind": "Blog",
+      "sent_at": "2026-08-13T12:05:04.688836",
+      "source": "Simon Willison",
+      "title": "alchemy-utils 0.1a0",
+      "url": "https://simonwillison.net/2026/Aug/12/alchemy-utils/"
     },
     "9a257332bd17f2d42c87f48f70ab2c8919af4943": {
       "kind": "Blog",
@@ -1090,6 +1111,13 @@
       "source": "arXiv",
       "title": "Is Progressive Disclosure All You Need for Long-Context Agents?",
       "url": "http://arxiv.org/abs/2607.17598v1"
+    },
+    "bcd4cf7862f533d4d56613f6dfc0a69847e4a861": {
+      "kind": "Blog",
+      "sent_at": "2026-08-13T12:05:04.688836",
+      "source": "OpenAI",
+      "title": "From assistance to execution: How enterprises put AI to work",
+      "url": "https://openai.com/index/how-enterprises-put-ai-to-work"
     },
     "bd20c47df7b83a3da837410920d37c0e8bef5baa": {
       "kind": "Blog",
@@ -1466,6 +1494,7 @@
     "https://claude.com/blog/claude-models-explained-choosing-the-best-model-for-your-use-case": "2026-07-25T12:04:37.529743",
     "https://claude.com/blog/compliance-api-cowork-and-claude-code": "2026-08-12T12:05:24.276883",
     "https://claude.com/blog/connectors-for-everyday-life": "2026-07-27T12:04:48.798191",
+    "https://claude.com/blog/cowork-chrome-side-panel": "2026-08-13T12:05:04.688988",
     "https://claude.com/blog/cowork-web-mobile": "2026-07-08T12:04:45.896685",
     "https://claude.com/blog/four-role-based-claude-certifications": "2026-07-24T12:06:54.832037",
     "https://claude.com/blog/getting-started-with-loops": "2026-07-01T12:05:30.267914",
@@ -1516,7 +1545,6 @@
     "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt": "2026-08-07T12:04:54.040292",
     "https://openai.com/index/introducing-chatgpt-small-business-program": "2026-07-22T12:06:38.269628",
     "https://openai.com/index/k-12-educators-practical-skills": "2026-07-09T12:04:55.179644",
-    "https://openai.com/index/mapping-ai-jobs-transition-eu": "2026-06-29T12:04:09.335154",
     "https://openai.com/index/model-ml": "2026-08-11T12:05:03.934309",
     "https://openai.com/index/openai-and-apa-partner-to-advance-responsible-ai": "2026-08-07T12:04:54.040292",
     "https://openai.com/index/responsible-ai-infrastructure-texas": "2026-08-11T12:05:03.934309",
