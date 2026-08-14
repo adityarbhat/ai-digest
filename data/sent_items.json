@@ -50,7 +50,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "b3d0c3d5bc44",
-      "last_seen_at": "2026-08-13T12:00:57.454239",
+      "last_seen_at": "2026-08-14T12:01:05.919235",
       "title": "Claude Code Overview",
       "updated_at": "2026-08-07T12:04:54.040151"
     },
@@ -177,7 +177,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "972aeef7bce5",
-      "last_seen_at": "2026-08-13T12:00:57.454239",
+      "last_seen_at": "2026-08-14T12:01:05.919235",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-07-17T12:05:04.882361"
     },
@@ -217,7 +217,7 @@
         "Usage policy"
       ],
       "content_hash": "c3942e16ce32",
-      "last_seen_at": "2026-08-13T12:00:57.454239",
+      "last_seen_at": "2026-08-14T12:01:05.919235",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-08-11T12:05:03.934043"
     }
@@ -257,13 +257,6 @@
       "source": "Neon Blog",
       "title": "My agent cloned GitHub (sort of) using the Neon backend",
       "url": "https://neon.com/blog/my-agent-cloned-github-using-the-neon-backend"
-    },
-    "05e22dbecb91aa3cff2578acdfc9d3913c2895fd": {
-      "kind": "Blog",
-      "sent_at": "2026-06-30T12:05:14.072710",
-      "source": "Microsoft Research",
-      "title": "Memora: A Harmonic Memory Representation Balancing Abstraction and Specificity",
-      "url": "https://www.microsoft.com/en-us/research/blog/memora-a-harmonic-memory-representation-balancing-abstraction-and-specificity/"
     },
     "0aa4e0f9e665d7739b7be2bb6434e72d4a2fc249": {
       "kind": "Blog",
@@ -327,6 +320,13 @@
       "source": "arXiv",
       "title": "Scrouting: Cost-Aware Routing of Coding Agents by Scouting the Repository First",
       "url": "http://arxiv.org/abs/2608.04804v1"
+    },
+    "12c01676e33dbb9fe31f2827171d2c4fa87ea6c5": {
+      "kind": "Blog",
+      "sent_at": "2026-08-14T12:05:20.144897",
+      "source": "Weights & Biases",
+      "title": "I built a research agent that reads the internet so I don\u2019t have to. Then I plugged it into my wiki.",
+      "url": "https://wandb.ai/Lorenzo-Team/can-it-run-doom/reports/I-built-a-research-agent-that-reads-the-internet-so-I-don-t-have-to-Then-I-plugged-it-into-my-wiki---VmlldzoxNzY3NjY2MA"
     },
     "155b36d5a70eb479bab7c5d26bc34c7119e13d07": {
       "kind": "Blog",
@@ -503,6 +503,20 @@
       "title": "Introducing Kitesurf: The agent-first browser that runs in V8 isolates on Cloudflare Workers",
       "url": "https://blog.cloudflare.com/kitesurf/"
     },
+    "36bda5d0f293bdcc415b502d1c22a45807fee8a6": {
+      "kind": "Paper",
+      "sent_at": "2026-08-14T12:05:20.144897",
+      "source": "arXiv",
+      "title": "RippleMem: From Isolated Retrieval to Associative Recollection for Long-Term Agent Memory",
+      "url": "http://arxiv.org/abs/2608.13334v1"
+    },
+    "382d450753e94d8fe9c757008a3b47b5523a6340": {
+      "kind": "Blog",
+      "sent_at": "2026-08-14T12:05:20.144897",
+      "source": "Hacker News",
+      "title": "Gemini 3.7 Flash",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/"
+    },
     "3b0872c46ae10ddbd5076dffa641ee530e87357a": {
       "kind": "Blog",
       "sent_at": "2026-07-26T12:04:25.368884",
@@ -545,6 +559,13 @@
       "title": "deepseek-ai/DeepSeek-V4-Flash-0731",
       "url": "https://simonwillison.net/2026/Jul/31/deepseek-v4-flash-0731/#atom-everything"
     },
+    "41f23cc8d17867e7309d9f641429bbdb8f8693f3": {
+      "kind": "Blog",
+      "sent_at": "2026-08-14T12:05:20.144897",
+      "source": "Neon Blog",
+      "title": "Neon skills landed in the Vercel CLI",
+      "url": "https://neon.com/blog/neon-skills-landed-in-the-vercel-cli"
+    },
     "42e7305da0379ae8dc58479eb55d6e401652c10b": {
       "kind": "Paper",
       "sent_at": "2026-08-13T12:05:04.688836",
@@ -586,13 +607,6 @@
       "source": "FastAPI Releases",
       "title": "0.141.0",
       "url": "https://github.com/fastapi/fastapi/releases/tag/0.141.0"
-    },
-    "4b728f0656b24dfdaee4d6692b7d934c03dbec36": {
-      "kind": "Blog",
-      "sent_at": "2026-06-30T12:05:14.072710",
-      "source": "Supabase Engineering",
-      "title": "Agentic Coding on Supabase with OpenCode OpenCode integrates with Supabase. Connect your agent to your database, Edge Functions, and logs. MCP setup is configured automatically. Author: Eric Kharitonashvili Published 30 June 2026 \u00b7 2 minute read",
-      "url": "https://supabase.com/blog/agentic-coding-on-supabase-with-opencode"
     },
     "4cd15b3b3ef6e47dd1fe148a09cf218a13c8f079": {
       "kind": "Blog",
@@ -1147,13 +1161,6 @@
       "title": "Setup Complete, Now You Are Compromised: Weaponizing Setup Instructions Against AI Coding Agents",
       "url": "http://arxiv.org/abs/2607.15143v1"
     },
-    "c22eb6bf9d7744c1dd57d595aacc2d39678e0525": {
-      "kind": "Blog",
-      "sent_at": "2026-06-29T20:13:12.936686",
-      "source": "Claude Blog",
-      "title": "Claude in Microsoft Foundry is now generally available",
-      "url": "https://claude.com/blog/claude-in-microsoft-foundry"
-    },
     "c28ac92b55c398e25ba7d61f3439b3fc1555690a": {
       "kind": "Blog",
       "sent_at": "2026-08-08T12:05:05.404802",
@@ -1168,13 +1175,6 @@
       "title": "Claude Code uses Bun written in Rust now",
       "url": "https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust/#atom-everything"
     },
-    "c61270286fbfb10780af79e07d688db75226cdd9": {
-      "kind": "Paper",
-      "sent_at": "2026-06-30T12:05:14.072710",
-      "source": "arXiv",
-      "title": "TraceLab: Characterizing Coding Agent Workloads for LLM Serving",
-      "url": "http://arxiv.org/abs/2606.30560v1"
-    },
     "c7f3f73bca9e2683a650c68b6c7a3e7164cc0dc6": {
       "kind": "Paper",
       "sent_at": "2026-07-18T12:04:41.977423",
@@ -1188,13 +1188,6 @@
       "source": "Google DeepMind",
       "title": "Introducing Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber",
       "url": "https://deepmind.google/blog/introducing-gemini-36-flash-35-flash-lite-and-35-flash-cyber/"
-    },
-    "ccff3f3809a032c2f37bf673237f0cabe23b7509": {
-      "kind": "Blog",
-      "sent_at": "2026-06-29T20:13:12.936686",
-      "source": "Simon Willison",
-      "title": "Ornith-1.0: Self-Scaffolding LLMs for Agentic Coding",
-      "url": "https://simonwillison.net/2026/Jun/29/ornith/#atom-everything"
     },
     "cecdcf9dc8af6c97ac8ef3acec2d0a5337b80250": {
       "kind": "Blog",
@@ -1244,6 +1237,13 @@
       "source": "Hacker News",
       "title": "Claude Code is steganographically marking requests",
       "url": "https://thereallo.dev/blog/claude-code-prompt-steganography"
+    },
+    "dc1688a0432f817a8712dbb45e3c7224f805982d": {
+      "kind": "Blog",
+      "sent_at": "2026-08-14T12:05:20.144897",
+      "source": "Hacker News",
+      "title": "DeepSeek Harness developer preview",
+      "url": "https://deepseek.com/harness/en/"
     },
     "de1d0f7b8da39888a2120e1aaf8088902945add9": {
       "kind": "Blog",
@@ -1427,6 +1427,13 @@
       "title": "datasette code-frequency chart on GitHub",
       "url": "https://simonwillison.net/2026/Jul/13/datasette-code-frequency/#atom-everything"
     },
+    "ffb7474fffddbc041f8daf7e79813ce080407b03": {
+      "kind": "Paper",
+      "sent_at": "2026-08-14T12:05:20.144897",
+      "source": "arXiv",
+      "title": "Beyond Final Scores: A Systematic Evaluation of Agents for Long-Horizon AI Research and Development",
+      "url": "http://arxiv.org/abs/2608.13417v1"
+    },
     "fff2ef8bbf94f3a74deb2133455209f7aa13b1a4": {
       "kind": "Blog",
       "sent_at": "2026-07-15T12:06:44.768708",
@@ -1446,6 +1453,7 @@
     "https://blog.cloudflare.com/bgp-origin-attribute/": "2026-07-25T12:04:37.529743",
     "https://blog.cloudflare.com/billable-usage-api/": "2026-08-04T12:05:16.424928",
     "https://blog.cloudflare.com/cdnjs-dev-platform-migration/": "2026-07-31T12:05:43.151129",
+    "https://blog.cloudflare.com/certificate-transparency-monitoring-ga/": "2026-08-14T12:05:20.145013",
     "https://blog.cloudflare.com/ci-workflows/": "2026-08-05T12:05:25.893222",
     "https://blog.cloudflare.com/cloudflare-computer/": "2026-08-04T12:05:16.424928",
     "https://blog.cloudflare.com/cloudflare-joins-uk-cyber-resilience-pledge/": "2026-07-08T12:04:45.896685",
@@ -1471,6 +1479,7 @@
     "https://blog.cloudflare.com/q2-2026-internet-disruption-summary/": "2026-07-29T12:05:05.943566",
     "https://blog.cloudflare.com/smart-tiered-cache-for-public-clouds/": "2026-07-11T12:04:14.686912",
     "https://blog.cloudflare.com/the-agent-access-model/": "2026-08-06T12:05:02.260633",
+    "https://blog.cloudflare.com/total-eclipse-internet-traffic-iceland-spain-portugal/": "2026-08-14T12:05:20.145013",
     "https://blog.cloudflare.com/wallets/": "2026-08-05T12:05:25.893222",
     "https://blog.cloudflare.com/wordpress-vulnerabilities/": "2026-07-18T12:04:41.977625",
     "https://blog.cloudflare.com/workers-cache/": "2026-07-07T12:05:38.996055",
@@ -1492,6 +1501,7 @@
     "https://claude.com/blog/claude-managed-agents-updates": "2026-07-26T12:04:25.368996",
     "https://claude.com/blog/claude-model-and-effort-level-in-claude-code": "2026-07-08T12:04:45.896685",
     "https://claude.com/blog/claude-models-explained-choosing-the-best-model-for-your-use-case": "2026-07-25T12:04:37.529743",
+    "https://claude.com/blog/claude-tag-now-reads-even-more-of-the-room": "2026-08-14T12:05:20.145013",
     "https://claude.com/blog/compliance-api-cowork-and-claude-code": "2026-08-12T12:05:24.276883",
     "https://claude.com/blog/connectors-for-everyday-life": "2026-07-27T12:04:48.798191",
     "https://claude.com/blog/cowork-chrome-side-panel": "2026-08-13T12:05:04.688988",
@@ -1504,14 +1514,15 @@
     "https://claude.com/blog/how-anthropics-business-development-team-uses-claude-to-run-inbound-and-outbound-at-scale": "2026-08-11T12:05:03.934309",
     "https://claude.com/blog/how-anthropics-marketing-operations-team-uses-claude-cowork-to-automate-reporting-and-campaign-builds": "2026-07-09T12:04:55.179644",
     "https://claude.com/blog/how-datadog-built-a-universal-machine-tool-for-claude-code": "2026-07-22T12:06:38.269628",
+    "https://claude.com/blog/how-jetbrains-evaluates-and-deploys-claude-fable-5": "2026-08-14T12:05:20.145013",
     "https://claude.com/blog/how-outtake-built-a-cyber-investigator-on-claude": "2026-07-23T12:05:27.517628",
     "https://claude.com/blog/how-people-are-using-claude-cowork": "2026-07-09T12:04:55.179644",
     "https://claude.com/blog/how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-building-them": "2026-07-25T12:04:37.529743",
-    "https://claude.com/blog/introducing-the-claude-apps-gateway": "2026-06-30T12:05:14.072822",
     "https://claude.com/blog/millennium-and-anthropic-are-building-a-digital-risk-analyst-with-claude": "2026-08-07T12:04:54.040292",
     "https://claude.com/blog/new-in-claude-managed-agents": "2026-07-26T12:04:25.368996",
     "https://claude.com/blog/preparing-your-security-program-for-ai-accelerated-offense": "2026-07-28T12:04:39.015678",
     "https://claude.com/blog/run-claude-code-sessions-on-your-own-compute": "2026-08-07T12:04:54.040292",
+    "https://claude.com/blog/self-service-data-analytics-in-slack-how-anthropic-deploys-claude-tag-for-ad-hoc-questions": "2026-08-14T12:05:20.145013",
     "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models": "2026-07-25T12:04:37.529743",
     "https://claude.com/blog/think-through-hard-problems-in-voice-mode": "2026-07-24T12:06:54.832037",
     "https://claude.com/blog/working-at-the-frontier-cursor": "2026-07-18T12:04:41.977625",
@@ -1527,12 +1538,14 @@
     "https://openai.com/index/advancing-the-next-era-of-national-science": "2026-07-23T12:05:27.517628",
     "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6": "2026-07-31T12:05:43.151129",
     "https://openai.com/index/apple-is-getting-this-wrong": "2026-08-04T12:05:16.424928",
+    "https://openai.com/index/builders-guide-to-gpt-5-6": "2026-08-14T12:05:20.145013",
     "https://openai.com/index/building-abundant-intelligence": "2026-08-01T12:04:59.132717",
     "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community": "2026-07-23T12:05:27.517628",
     "https://openai.com/index/building-an-ai-native-finance-function": "2026-08-11T12:05:03.934309",
     "https://openai.com/index/chatgpt-for-academic-researchers": "2026-07-30T12:05:12.814865",
     "https://openai.com/index/chatgpt-for-your-most-ambitious-work": "2026-07-10T12:05:13.840666",
     "https://openai.com/index/continuous-voice-interaction-with-gpt-live": "2026-08-04T12:05:16.424928",
+    "https://openai.com/index/dali-rajic-chief-revenue-officer": "2026-08-14T12:05:20.145013",
     "https://openai.com/index/daybreak-models-are-now-available-on-aws": "2026-08-12T12:05:24.276883",
     "https://openai.com/index/government-national-security-partnerships": "2026-07-09T12:04:55.179644",
     "https://openai.com/index/gpt-5-6": "2026-07-10T12:05:13.840666",
@@ -1547,6 +1560,7 @@
     "https://openai.com/index/k-12-educators-practical-skills": "2026-07-09T12:04:55.179644",
     "https://openai.com/index/model-ml": "2026-08-11T12:05:03.934309",
     "https://openai.com/index/openai-and-apa-partner-to-advance-responsible-ai": "2026-08-07T12:04:54.040292",
+    "https://openai.com/index/previewing-ultrafast": "2026-08-14T12:05:20.145013",
     "https://openai.com/index/responsible-ai-infrastructure-texas": "2026-08-11T12:05:03.934309",
     "https://openai.com/index/safety-alignment-long-horizon-models": "2026-07-21T12:04:54.370956",
     "https://openai.com/index/scientific-computing-agentic-ai": "2026-07-29T12:05:05.943566",
