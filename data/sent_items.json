@@ -50,7 +50,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "b3d0c3d5bc44",
-      "last_seen_at": "2026-08-14T12:01:05.919235",
+      "last_seen_at": "2026-08-15T12:01:07.166928",
       "title": "Claude Code Overview",
       "updated_at": "2026-08-07T12:04:54.040151"
     },
@@ -177,7 +177,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "972aeef7bce5",
-      "last_seen_at": "2026-08-14T12:01:05.919235",
+      "last_seen_at": "2026-08-15T12:01:07.166928",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-07-17T12:05:04.882361"
     },
@@ -217,7 +217,7 @@
         "Usage policy"
       ],
       "content_hash": "c3942e16ce32",
-      "last_seen_at": "2026-08-14T12:01:05.919235",
+      "last_seen_at": "2026-08-15T12:01:07.166928",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-08-11T12:05:03.934043"
     }
@@ -902,6 +902,13 @@
       "title": "New release of LLM adds support for reasoning traces, OpenAI Responses, server-side tools, and smarter logging",
       "url": "https://simonwillison.net/2026/Aug/4/new-release-of-llm/#atom-everything"
     },
+    "92270a261e2e71adad3ea74c6f81554f1072a8b5": {
+      "kind": "Paper",
+      "sent_at": "2026-08-15T12:04:35.309386",
+      "source": "arXiv",
+      "title": "MARC v1: An Open-Source Multi-Agent Framework for Clinical AI Reasoning and Coordination",
+      "url": "http://arxiv.org/abs/2608.13476v1"
+    },
     "955a03f1de36015a82d1a59cbcbd273e84330e93": {
       "kind": "Blog",
       "sent_at": "2026-08-13T12:05:04.688836",
@@ -1160,6 +1167,13 @@
       "source": "arXiv",
       "title": "Setup Complete, Now You Are Compromised: Weaponizing Setup Instructions Against AI Coding Agents",
       "url": "http://arxiv.org/abs/2607.15143v1"
+    },
+    "c250c4ee9182cec8e639f35d9fe49fee83381016": {
+      "kind": "Paper",
+      "sent_at": "2026-08-15T12:04:35.309386",
+      "source": "arXiv",
+      "title": "Vero: Can AI Agents Build Formally Verified Software Repositories?",
+      "url": "http://arxiv.org/abs/2608.13522v1"
     },
     "c28ac92b55c398e25ba7d61f3439b3fc1555690a": {
       "kind": "Blog",
@@ -1470,6 +1484,7 @@
     "https://blog.cloudflare.com/introducing-precursor/": "2026-07-14T12:04:51.246812",
     "https://blog.cloudflare.com/introducing-radar-researcher/": "2026-08-08T12:05:05.404940",
     "https://blog.cloudflare.com/making-ai-search-smarter/": "2026-07-02T12:05:08.091556",
+    "https://blog.cloudflare.com/mcp-security-updates/": "2026-08-15T12:04:35.309514",
     "https://blog.cloudflare.com/mcp-v2/": "2026-08-07T12:04:54.040292",
     "https://blog.cloudflare.com/meerkat-introduction/": "2026-07-09T12:04:55.179644",
     "https://blog.cloudflare.com/ml-dsa-will-have-to-do/": "2026-07-10T12:05:13.840666",
@@ -1483,6 +1498,7 @@
     "https://blog.cloudflare.com/wallets/": "2026-08-05T12:05:25.893222",
     "https://blog.cloudflare.com/wordpress-vulnerabilities/": "2026-07-18T12:04:41.977625",
     "https://blog.cloudflare.com/workers-cache/": "2026-07-07T12:05:38.996055",
+    "https://blog.cloudflare.com/workers-protected-by-access/": "2026-08-15T12:04:35.309514",
     "https://claude.com/blog/a-field-guide-to-claude-fable-finding-your-unknowns": "2026-07-07T12:05:38.996055",
     "https://claude.com/blog/a-guide-to-cost-visibility-and-control-in-claude": "2026-08-05T12:05:25.893222",
     "https://claude.com/blog/ai-code-migration": "2026-07-17T12:05:04.882495",
@@ -1518,6 +1534,7 @@
     "https://claude.com/blog/how-outtake-built-a-cyber-investigator-on-claude": "2026-07-23T12:05:27.517628",
     "https://claude.com/blog/how-people-are-using-claude-cowork": "2026-07-09T12:04:55.179644",
     "https://claude.com/blog/how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-building-them": "2026-07-25T12:04:37.529743",
+    "https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions": "2026-08-15T12:04:35.309514",
     "https://claude.com/blog/millennium-and-anthropic-are-building-a-digital-risk-analyst-with-claude": "2026-08-07T12:04:54.040292",
     "https://claude.com/blog/new-in-claude-managed-agents": "2026-07-26T12:04:25.368996",
     "https://claude.com/blog/preparing-your-security-program-for-ai-accelerated-offense": "2026-07-28T12:04:39.015678",
