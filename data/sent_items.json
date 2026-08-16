@@ -50,7 +50,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "b3d0c3d5bc44",
-      "last_seen_at": "2026-08-15T12:01:07.166928",
+      "last_seen_at": "2026-08-16T12:01:38.238503",
       "title": "Claude Code Overview",
       "updated_at": "2026-08-07T12:04:54.040151"
     },
@@ -177,7 +177,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "972aeef7bce5",
-      "last_seen_at": "2026-08-15T12:01:07.166928",
+      "last_seen_at": "2026-08-16T12:01:38.238503",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-07-17T12:05:04.882361"
     },
@@ -217,7 +217,7 @@
         "Usage policy"
       ],
       "content_hash": "c3942e16ce32",
-      "last_seen_at": "2026-08-15T12:01:07.166928",
+      "last_seen_at": "2026-08-16T12:01:38.238503",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-08-11T12:05:03.934043"
     }
@@ -229,13 +229,6 @@
       "source": "AWS Architecture Blog",
       "title": "Scaling patterns for self-organizing multi-agent clusters with Kiro",
       "url": "https://aws.amazon.com/blogs/architecture/scaling-patterns-for-self-organizing-multi-agent-clusters-with-kiro/"
-    },
-    "0223f560ec32fde97e84f893649460e1b6f4cb27": {
-      "kind": "Blog",
-      "sent_at": "2026-07-01T12:05:30.267771",
-      "source": "Hacker News",
-      "title": "Claude Sonnet 5",
-      "url": "https://www.anthropic.com/news/claude-sonnet-5"
     },
     "024ec6cf7e2beae39226d5f3ddcf05817c69b917": {
       "kind": "Blog",
@@ -426,13 +419,6 @@
       "title": "Quoting Thomas Ptacek",
       "url": "https://simonwillison.net/2026/Jul/22/thomas-ptacek/#atom-everything"
     },
-    "2344c4da26c6b77cc3450754cfd1cc772f4b3ca8": {
-      "kind": "Blog",
-      "sent_at": "2026-07-01T12:05:30.267771",
-      "source": "Microsoft Research",
-      "title": "SkillOpt: Agent skills as trainable parameters",
-      "url": "https://www.microsoft.com/en-us/research/blog/skillopt-agent-skills-as-trainable-parameters/"
-    },
     "23afc1b2cbfa00b82def205d0656ac98a7e7ecfc": {
       "kind": "Paper",
       "sent_at": "2026-07-24T12:06:54.831851",
@@ -572,13 +558,6 @@
       "source": "arXiv",
       "title": "Diagnosis Before Recovery: Turning Agent Failures into Selective Self-Correction",
       "url": "http://arxiv.org/abs/2608.11772v1"
-    },
-    "45d78dfd45537df8fa73d82dca5ce790ec4f646e": {
-      "kind": "Blog",
-      "sent_at": "2026-07-01T12:05:30.267771",
-      "source": "Simon Willison",
-      "title": "Have your agent record video demos of its work with shot-scraper video",
-      "url": "https://simonwillison.net/2026/Jun/30/shot-scraper-video/#atom-everything"
     },
     "46d5dd427b4992ff40cab1840cfb9f0bc36d2485": {
       "kind": "Paper",
@@ -874,13 +853,6 @@
       "title": "Proof-or-Stop: Don't Trust the Agent, Trust the Evidence -- Loop Engineering for Verifiable Evidence-Gated Lifecycle Control",
       "url": "http://arxiv.org/abs/2607.14890v1"
     },
-    "87a57188c4577acb5960a0022bcb0bab9225f5a2": {
-      "kind": "Paper",
-      "sent_at": "2026-07-01T12:05:30.267771",
-      "source": "arXiv",
-      "title": "ACE: Pluggable Adaptive Context Elasticizer across Agents",
-      "url": "http://arxiv.org/abs/2606.31564v1"
-    },
     "89db51549b8b46db509940880c342bdcdc893fba": {
       "kind": "Paper",
       "sent_at": "2026-08-11T12:05:03.934043",
@@ -937,6 +909,13 @@
       "title": "Quoting Thibault Sottiaux",
       "url": "https://simonwillison.net/2026/Jul/16/bad-codex-bug/#atom-everything"
     },
+    "98942281a29989295af11c65042c08000044b5f4": {
+      "kind": "Blog",
+      "sent_at": "2026-08-16T12:04:46.299267",
+      "source": "Hacker News",
+      "title": "Auto-research with codex: How I achieved a 232x Faster Kernel",
+      "url": "https://sankalp.bearblog.dev/autoresearch/"
+    },
     "9981e716804cab1fb3cb0ebc4142fe5799c39146": {
       "kind": "Blog",
       "sent_at": "2026-08-08T12:05:05.404802",
@@ -978,13 +957,6 @@
       "source": "Anthropic Docs",
       "title": "Anthropic Release Notes",
       "url": "https://docs.anthropic.com/en/release-notes/overview"
-    },
-    "9f79f01648693b09690392bc217cf7b4044f5f3c": {
-      "kind": "Blog",
-      "sent_at": "2026-07-01T12:05:30.267771",
-      "source": "Simon Willison",
-      "title": "What's new in Claude Sonnet 5",
-      "url": "https://simonwillison.net/2026/Jun/30/claude-sonnet-5/#atom-everything"
     },
     "a0175822bd744fdee4fb61ad128cc34177f7fa08": {
       "kind": "Paper",
@@ -1244,13 +1216,6 @@
       "source": "Hacker News",
       "title": "Why Software Factories Fail (or: harness engineering is not enough)",
       "url": "https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/wsff.md"
-    },
-    "db19f73773d78287528f13bfa37ac96f6a5f993c": {
-      "kind": "Blog",
-      "sent_at": "2026-07-01T12:05:30.267771",
-      "source": "Hacker News",
-      "title": "Claude Code is steganographically marking requests",
-      "url": "https://thereallo.dev/blog/claude-code-prompt-steganography"
     },
     "dc1688a0432f817a8712dbb45e3c7224f805982d": {
       "kind": "Blog",
@@ -1523,7 +1488,6 @@
     "https://claude.com/blog/cowork-chrome-side-panel": "2026-08-13T12:05:04.688988",
     "https://claude.com/blog/cowork-web-mobile": "2026-07-08T12:04:45.896685",
     "https://claude.com/blog/four-role-based-claude-certifications": "2026-07-24T12:06:54.832037",
-    "https://claude.com/blog/getting-started-with-loops": "2026-07-01T12:05:30.267914",
     "https://claude.com/blog/giving-admins-more-visibility-and-control-over-claude-usage-and-spend": "2026-07-03T12:07:02.942510",
     "https://claude.com/blog/harnessing-claudes-intelligence": "2026-07-28T12:04:39.015678",
     "https://claude.com/blog/how-anthropic-secures-its-ai-native-software-development-lifecycle": "2026-07-22T12:06:38.269628",
@@ -1568,7 +1532,6 @@
     "https://openai.com/index/gpt-5-6": "2026-07-10T12:05:13.840666",
     "https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot": "2026-07-10T12:05:13.840666",
     "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work": "2026-07-27T12:04:48.798191",
-    "https://openai.com/index/how-chatgpt-adoption-has-expanded": "2026-07-01T12:05:30.267914",
     "https://openai.com/index/how-news-organizations-are-using-ai": "2026-07-23T12:05:27.517628",
     "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores": "2026-07-30T12:05:12.814865",
     "https://openai.com/index/hugging-face-model-evaluation-security-incident": "2026-07-22T12:06:38.269628",
@@ -1594,6 +1557,8 @@
     "https://www.anthropic.com/news/canadian-ai-research": "2026-07-15T12:06:44.768871",
     "https://www.anthropic.com/news/claude-for-teachers": "2026-07-15T12:06:44.768871",
     "https://www.anthropic.com/news/claude-science-ai-workbench": "2026-07-02T12:05:08.091556",
+    "https://www.anthropic.com/news/claude-sonnet-5": "2026-08-16T12:04:46.299365",
+    "https://www.anthropic.com/news/claude-text-watermark": "2026-08-16T12:04:46.299365",
     "https://www.anthropic.com/news/cognizant-anthropic": "2026-07-30T12:05:12.814865",
     "https://www.anthropic.com/news/donation-public-first-action": "2026-07-31T12:05:43.151129",
     "https://www.anthropic.com/news/economic-futures-research-fund-agenda": "2026-07-30T12:05:12.814865",
