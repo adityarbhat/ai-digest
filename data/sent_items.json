@@ -50,7 +50,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "b3d0c3d5bc44",
-      "last_seen_at": "2026-08-16T12:01:38.238503",
+      "last_seen_at": "2026-08-17T12:01:44.949537",
       "title": "Claude Code Overview",
       "updated_at": "2026-08-07T12:04:54.040151"
     },
@@ -177,7 +177,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "972aeef7bce5",
-      "last_seen_at": "2026-08-16T12:01:38.238503",
+      "last_seen_at": "2026-08-17T12:01:44.949537",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-07-17T12:05:04.882361"
     },
@@ -217,7 +217,7 @@
         "Usage policy"
       ],
       "content_hash": "c3942e16ce32",
-      "last_seen_at": "2026-08-16T12:01:38.238503",
+      "last_seen_at": "2026-08-17T12:01:44.949537",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-08-11T12:05:03.934043"
     }
@@ -271,13 +271,6 @@
       "source": "HuggingFace",
       "title": "Data for Agents",
       "url": "https://huggingface.co/blog/nvidia/open-data-for-agents"
-    },
-    "0d778fa8872c11af313540927cd34ba584167c66": {
-      "kind": "Blog",
-      "sent_at": "2026-07-02T12:05:08.091435",
-      "source": "FastAPI Releases",
-      "title": "0.139.0",
-      "url": "https://github.com/fastapi/fastapi/releases/tag/0.139.0"
     },
     "0d7870320f12ed6c1ac841cc4fd09410527afa30": {
       "kind": "Blog",
@@ -341,13 +334,6 @@
       "source": "Simon Willison",
       "title": "Auto mode is now the default in Claude Code for Pro, Max, and Team plans",
       "url": "https://simonwillison.net/2026/Aug/8/auto-mode/#atom-everything"
-    },
-    "18b40ff7b2295ee3159a5dcbdd3f4341aa8a175a": {
-      "kind": "Blog",
-      "sent_at": "2026-07-02T12:05:08.091435",
-      "source": "Cloudflare Blog",
-      "title": "Announcing the Monetization Gateway: charge for any resource behind Cloudflare via x402",
-      "url": "https://blog.cloudflare.com/monetization-gateway/"
     },
     "198cb83728b3aa6bdf946d946a346f404582ea4e": {
       "kind": "Blog",
@@ -860,6 +846,13 @@
       "title": "SWE-Bench ProMax: Benchmarking Agents on Large-Scale Multilingual Code Refactoring",
       "url": "http://arxiv.org/abs/2608.09802v1"
     },
+    "8b1bca6a1cf89ec1301e792f3c18aaf089827077": {
+      "kind": "Blog",
+      "sent_at": "2026-08-17T12:05:16.445119",
+      "source": "Hacker News",
+      "title": "Patterns and problems in emerging multi-agent systems",
+      "url": "https://www.anthropic.com/research/multiagent-systems"
+    },
     "8d6038215a23b82595a3877f0057faeb6da7b571": {
       "kind": "Blog",
       "sent_at": "2026-07-24T12:06:54.831851",
@@ -1069,6 +1062,13 @@
       "source": "arXiv",
       "title": "Qwen-UI-Agent Technical Report: Toward Next-Generation Real-World Centric Foundation GUI Agents",
       "url": "http://arxiv.org/abs/2607.28227v1"
+    },
+    "b9a1ca29814f7f4590ab11a669b37b9fd45ddd61": {
+      "kind": "Blog",
+      "sent_at": "2026-08-17T12:05:16.445119",
+      "source": "Hacker News",
+      "title": "Claude: System Prompts",
+      "url": "https://platform.claude.com/docs/en/release-notes/system-prompts"
     },
     "ba00c5b451b2e45cd77726c6cca09f30e84a89b1": {
       "kind": "Blog",
@@ -1425,7 +1425,6 @@
     "https://blog.cloudflare.com/2026-world-cup-internet-traffic/": "2026-07-22T12:06:38.269628",
     "https://blog.cloudflare.com/aeo/": "2026-08-07T12:04:54.040292",
     "https://blog.cloudflare.com/agent-development-lifecycle/": "2026-08-05T12:05:25.893222",
-    "https://blog.cloudflare.com/agentic-internet-bot-report/": "2026-07-02T12:05:08.091556",
     "https://blog.cloudflare.com/agents-week-review-august-2026/": "2026-08-11T12:05:03.934309",
     "https://blog.cloudflare.com/agents-week-welcome/": "2026-08-03T12:04:34.120253",
     "https://blog.cloudflare.com/ai-search-easier/": "2026-08-07T12:04:54.040292",
@@ -1448,7 +1447,6 @@
     "https://blog.cloudflare.com/introducing-cache-response-rules/": "2026-07-24T12:06:54.832037",
     "https://blog.cloudflare.com/introducing-precursor/": "2026-07-14T12:04:51.246812",
     "https://blog.cloudflare.com/introducing-radar-researcher/": "2026-08-08T12:05:05.404940",
-    "https://blog.cloudflare.com/making-ai-search-smarter/": "2026-07-02T12:05:08.091556",
     "https://blog.cloudflare.com/mcp-security-updates/": "2026-08-15T12:04:35.309514",
     "https://blog.cloudflare.com/mcp-v2/": "2026-08-07T12:04:54.040292",
     "https://blog.cloudflare.com/meerkat-introduction/": "2026-07-09T12:04:55.179644",
@@ -1539,6 +1537,7 @@
     "https://openai.com/index/introducing-chatgpt-small-business-program": "2026-07-22T12:06:38.269628",
     "https://openai.com/index/k-12-educators-practical-skills": "2026-07-09T12:04:55.179644",
     "https://openai.com/index/model-ml": "2026-08-11T12:05:03.934309",
+    "https://openai.com/index/new-policy-ideas-for-the-intelligence-age": "2026-08-17T12:05:16.445311",
     "https://openai.com/index/openai-and-apa-partner-to-advance-responsible-ai": "2026-08-07T12:04:54.040292",
     "https://openai.com/index/previewing-ultrafast": "2026-08-14T12:05:20.145013",
     "https://openai.com/index/responsible-ai-infrastructure-texas": "2026-08-11T12:05:03.934309",
@@ -1556,7 +1555,6 @@
     "https://www.anthropic.com/news/ben-bernanke": "2026-07-10T12:05:13.840666",
     "https://www.anthropic.com/news/canadian-ai-research": "2026-07-15T12:06:44.768871",
     "https://www.anthropic.com/news/claude-for-teachers": "2026-07-15T12:06:44.768871",
-    "https://www.anthropic.com/news/claude-science-ai-workbench": "2026-07-02T12:05:08.091556",
     "https://www.anthropic.com/news/claude-sonnet-5": "2026-08-16T12:04:46.299365",
     "https://www.anthropic.com/news/claude-text-watermark": "2026-08-16T12:04:46.299365",
     "https://www.anthropic.com/news/cognizant-anthropic": "2026-07-30T12:05:12.814865",
@@ -1567,7 +1565,7 @@
     "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards": "2026-08-09T12:04:40.116881",
     "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals": "2026-07-31T12:05:43.151129",
     "https://www.anthropic.com/news/rare-disease-research-grants": "2026-07-31T12:05:43.151129",
-    "https://www.anthropic.com/news/redeploying-fable-5": "2026-07-02T12:05:08.091556",
+    "https://www.anthropic.com/news/redeploying-fable-5": "2026-08-17T12:05:16.445311",
     "https://www.anthropic.com/news/reflect-with-claude": "2026-07-12T12:04:53.647602",
     "https://www.anthropic.com/news/tino-cuellar": "2026-08-09T12:04:40.116881",
     "https://www.anthropic.com/news/ust-claude": "2026-07-10T12:05:13.840666"
