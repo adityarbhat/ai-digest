@@ -50,7 +50,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "b3d0c3d5bc44",
-      "last_seen_at": "2026-08-18T12:01:31.626855",
+      "last_seen_at": "2026-08-19T12:01:21.364906",
       "title": "Claude Code Overview",
       "updated_at": "2026-08-07T12:04:54.040151"
     },
@@ -177,7 +177,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "972aeef7bce5",
-      "last_seen_at": "2026-08-18T12:01:31.626855",
+      "last_seen_at": "2026-08-19T12:01:21.364906",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-07-17T12:05:04.882361"
     },
@@ -217,7 +217,7 @@
         "Usage policy"
       ],
       "content_hash": "c3942e16ce32",
-      "last_seen_at": "2026-08-18T12:01:31.626855",
+      "last_seen_at": "2026-08-19T12:01:21.364906",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-08-11T12:05:03.934043"
     }
@@ -496,6 +496,13 @@
       "title": "Gemini 3.7 Flash",
       "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/"
     },
+    "38d0dd98efa686223b89a7123a5e0cf8cf5d1f63": {
+      "kind": "Blog",
+      "sent_at": "2026-08-19T12:05:01.971052",
+      "source": "HuggingFace",
+      "title": "How Much Memory Does Your Agent Actually Need?",
+      "url": "https://huggingface.co/blog/ibm-research/altk-evolve-hmm"
+    },
     "3b0872c46ae10ddbd5076dffa641ee530e87357a": {
       "kind": "Blog",
       "sent_at": "2026-07-26T12:04:25.368884",
@@ -649,6 +656,13 @@
       "source": "Neon Blog",
       "title": "Neon Functions: backend logic next to your data",
       "url": "https://neon.com/blog/neon-functions-backend-logic-next-to-your-data"
+    },
+    "59576b5bb4459283f32fcfdb3565196600f49665": {
+      "kind": "Blog",
+      "sent_at": "2026-08-19T12:05:01.971052",
+      "source": "Neon Blog",
+      "title": "Query Neon backend logs",
+      "url": "https://neon.com/blog/query-neon-backend-logs"
     },
     "5beb5956b9b19ff8cf27379be697385bc76bcc4e": {
       "kind": "Blog",
@@ -1007,13 +1021,6 @@
       "title": "Turn one giant AI-generated pull request to a reviewable stack",
       "url": "https://github.blog/engineering/turn-one-giant-ai-generated-pull-request-to-a-reviewable-stack/"
     },
-    "adf0016601053d097c605fba9eabbfe6571a3c74": {
-      "kind": "Blog",
-      "sent_at": "2026-07-05T12:04:17.804719",
-      "source": "Hacker News",
-      "title": "Potential session/cache leakage between workspace instances or consumer accounts",
-      "url": "https://github.com/anthropics/claude-code/issues/74066"
-    },
     "ae40ed63a33fc58313f58a0e6caf28927079ac1c": {
       "kind": "Blog",
       "sent_at": "2026-07-09T12:04:55.179506",
@@ -1343,13 +1350,6 @@
       "title": "Kimi K3, Qwen 3.8, and Anthropic's (Potential) Unravelling",
       "url": "https://www.emergingtrajectories.com/lh/frontier-lab-economics/"
     },
-    "f505485453bf6f1e9e392f0d4b8c947a08e87ec6": {
-      "kind": "Blog",
-      "sent_at": "2026-07-05T12:04:17.804719",
-      "source": "Simon Willison",
-      "title": "Better Models: Worse Tools",
-      "url": "https://simonwillison.net/2026/Jul/4/better-models-worse-tools/#atom-everything"
-    },
     "f79f0e253ba4c4c92755b98650f7c89afa3e0d49": {
       "kind": "Paper",
       "sent_at": "2026-08-01T12:04:59.132580",
@@ -1441,6 +1441,7 @@
     "https://blog.cloudflare.com/open-sourcing-our-privacy-proxy-cli/": "2026-07-28T12:04:39.015678",
     "https://blog.cloudflare.com/post-quantum-authentication-to-origins/": "2026-07-30T12:05:12.814865",
     "https://blog.cloudflare.com/q2-2026-internet-disruption-summary/": "2026-07-29T12:05:05.943566",
+    "https://blog.cloudflare.com/rfc9234-bgp-role-model/": "2026-08-19T12:05:01.971172",
     "https://blog.cloudflare.com/smart-tiered-cache-for-public-clouds/": "2026-07-11T12:04:14.686912",
     "https://blog.cloudflare.com/the-agent-access-model/": "2026-08-06T12:05:02.260633",
     "https://blog.cloudflare.com/total-eclipse-internet-traffic-iceland-spain-portugal/": "2026-08-14T12:05:20.145013",
@@ -1450,6 +1451,7 @@
     "https://blog.cloudflare.com/workers-protected-by-access/": "2026-08-15T12:04:35.309514",
     "https://claude.com/blog/a-field-guide-to-claude-fable-finding-your-unknowns": "2026-07-07T12:05:38.996055",
     "https://claude.com/blog/a-guide-to-cost-visibility-and-control-in-claude": "2026-08-05T12:05:25.893222",
+    "https://claude.com/blog/ai-ci-cd-on-call": "2026-08-19T12:05:01.971172",
     "https://claude.com/blog/ai-code-migration": "2026-07-17T12:05:04.882495",
     "https://claude.com/blog/artifacts-in-claude-code": "2026-08-04T12:05:16.424928",
     "https://claude.com/blog/auto-mode-default-in-claude-code": "2026-08-08T12:05:05.404940",
@@ -1488,6 +1490,7 @@
     "https://claude.com/blog/preparing-your-security-program-for-ai-accelerated-offense": "2026-07-28T12:04:39.015678",
     "https://claude.com/blog/run-claude-code-sessions-on-your-own-compute": "2026-08-07T12:04:54.040292",
     "https://claude.com/blog/self-service-data-analytics-in-slack-how-anthropic-deploys-claude-tag-for-ad-hoc-questions": "2026-08-14T12:05:20.145013",
+    "https://claude.com/blog/the-claude-science-product-guide": "2026-08-19T12:05:01.971172",
     "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models": "2026-07-25T12:04:37.529743",
     "https://claude.com/blog/think-through-hard-problems-in-voice-mode": "2026-07-24T12:06:54.832037",
     "https://claude.com/blog/working-at-the-frontier-cursor": "2026-07-18T12:04:41.977625",
@@ -1507,6 +1510,7 @@
     "https://openai.com/index/building-abundant-intelligence": "2026-08-01T12:04:59.132717",
     "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community": "2026-07-23T12:05:27.517628",
     "https://openai.com/index/building-an-ai-native-finance-function": "2026-08-11T12:05:03.934309",
+    "https://openai.com/index/chatgpt-ads-expands-across-europe": "2026-08-19T12:05:01.971172",
     "https://openai.com/index/chatgpt-for-academic-researchers": "2026-07-30T12:05:12.814865",
     "https://openai.com/index/chatgpt-for-teens": "2026-08-18T12:05:26.170377",
     "https://openai.com/index/chatgpt-for-your-most-ambitious-work": "2026-07-10T12:05:13.840666",
@@ -1527,11 +1531,13 @@
     "https://openai.com/index/new-policy-ideas-for-the-intelligence-age": "2026-08-17T12:05:16.445311",
     "https://openai.com/index/openai-and-apa-partner-to-advance-responsible-ai": "2026-08-07T12:04:54.040292",
     "https://openai.com/index/openai-joins-ports-pike-project": "2026-08-18T12:05:26.170377",
+    "https://openai.com/index/pacing-model-development-cyber-capabilities": "2026-08-19T12:05:01.971172",
     "https://openai.com/index/previewing-ultrafast": "2026-08-14T12:05:20.145013",
     "https://openai.com/index/responsible-ai-infrastructure-texas": "2026-08-11T12:05:03.934309",
     "https://openai.com/index/safety-alignment-long-horizon-models": "2026-07-21T12:04:54.370956",
     "https://openai.com/index/scientific-computing-agentic-ai": "2026-07-29T12:05:05.943566",
     "https://openai.com/index/separating-signal-from-noise-coding-evaluations": "2026-07-09T12:04:55.179644",
+    "https://openai.com/index/strengthening-democratic-oversight-in-national-security": "2026-08-19T12:05:01.971172",
     "https://openai.com/index/ten-advances-in-mathematics": "2026-08-01T12:04:59.132717",
     "https://openai.com/index/testing-ads-in-chatgpt": "2026-08-12T12:05:24.276883",
     "https://openai.com/index/the-defenders-window": "2026-08-18T12:05:26.170377",
