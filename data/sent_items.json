@@ -50,7 +50,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "b3d0c3d5bc44",
-      "last_seen_at": "2026-08-19T12:01:21.364906",
+      "last_seen_at": "2026-08-20T12:01:08.261541",
       "title": "Claude Code Overview",
       "updated_at": "2026-08-07T12:04:54.040151"
     },
@@ -177,7 +177,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "972aeef7bce5",
-      "last_seen_at": "2026-08-19T12:01:21.364906",
+      "last_seen_at": "2026-08-20T12:01:08.261541",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-07-17T12:05:04.882361"
     },
@@ -217,7 +217,7 @@
         "Usage policy"
       ],
       "content_hash": "c3942e16ce32",
-      "last_seen_at": "2026-08-19T12:01:21.364906",
+      "last_seen_at": "2026-08-20T12:01:08.261541",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-08-11T12:05:03.934043"
     }
@@ -447,6 +447,13 @@
       "title": "Claude make Fable 5 permanent",
       "url": "https://simonwillison.net/2026/Jul/18/claude-make-fable-5-permanent/#atom-everything"
     },
+    "2929a0a48a55c2a924d4c762101bd59574a039ec": {
+      "kind": "Blog",
+      "sent_at": "2026-08-20T12:05:09.139017",
+      "source": "Martin Fowler",
+      "title": "Citizens Build, Agents Execute, Experts Govern",
+      "url": "https://martinfowler.com/rachels-ramblings/citizens-agents-experts.html"
+    },
     "2afc78fbb41c418e41376b4466c4ec4c54ddbe21": {
       "kind": "Blog",
       "sent_at": "2026-07-30T12:05:12.814703",
@@ -460,6 +467,13 @@
       "source": "Neon Blog",
       "title": "Introducing the New Neon API Command",
       "url": "https://neon.com/blog/introducing-neon-api-command"
+    },
+    "30016bda0a834dc2b9cce27aefecbfca58028925": {
+      "kind": "Paper",
+      "sent_at": "2026-08-20T12:05:09.139017",
+      "source": "arXiv",
+      "title": "ComponentBench: Diagnosing Component-Level Failures in Computer-Use Agents",
+      "url": "http://arxiv.org/abs/2608.18307v1"
     },
     "3001b897e50f3ff7329d8cfd7a261f23500dda3a": {
       "kind": "Paper",
@@ -608,6 +622,13 @@
       "title": "Graph-Based Agentic AI with LangGraph: Workflow Pathways for Long-Running Stateful Business Processes",
       "url": "http://arxiv.org/abs/2607.19297v1"
     },
+    "4f8b5b2dd3ba7545c39090c853aa5751ac2534d7": {
+      "kind": "Blog",
+      "sent_at": "2026-08-20T12:05:09.139017",
+      "source": "Simon Willison",
+      "title": "smolmachines / smolvm as a sandbox for untrusted Python & JavaScript",
+      "url": "https://simonwillison.net/2026/Aug/19/smolmachines-untrusted-sandbox/"
+    },
     "51a9599f28fc1f8596200aad174c8c541c9e6c8b": {
       "kind": "Paper",
       "sent_at": "2026-07-31T12:05:43.150980",
@@ -642,6 +663,13 @@
       "source": "Anthropic Docs",
       "title": "Claude Code Tutorials",
       "url": "https://docs.anthropic.com/en/docs/claude-code/tutorials"
+    },
+    "5533ed7f37adfd9da6989121d3c85e7367d840c2": {
+      "kind": "Blog",
+      "sent_at": "2026-08-20T12:05:09.139017",
+      "source": "Simon Willison",
+      "title": "Conceptual integrity and counting lines of code",
+      "url": "https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code/"
     },
     "570042aaba2969c8570ea32951be93a3de1815f8": {
       "kind": "Blog",
@@ -1224,6 +1252,13 @@
       "title": "A Fireside Chat with Cat and Thariq from the Claude Code team",
       "url": "https://simonwillison.net/2026/Jul/21/cat-and-thariq/#atom-everything"
     },
+    "e03b26a3358daf9da0343207f62ab25fbea38951": {
+      "kind": "Paper",
+      "sent_at": "2026-08-20T12:05:09.139017",
+      "source": "arXiv",
+      "title": "LEDGER: Claim-to-Evidence Trace Graphs for Auditing LLM Agents",
+      "url": "http://arxiv.org/abs/2608.18398v1"
+    },
     "e09c0eff4973d4d8994cc49d24dd87b7508d8206": {
       "kind": "Blog",
       "sent_at": "2026-07-24T12:06:54.831851",
@@ -1378,6 +1413,13 @@
       "title": "MCPEvol-Bench: Benchmarking LLM Agent Performance Across Dynamic Evolutions of MCP Servers",
       "url": "http://arxiv.org/abs/2607.14642v1"
     },
+    "fc10e23380944a687673a435919c47ec90024b22": {
+      "kind": "Blog",
+      "sent_at": "2026-08-20T12:05:09.139017",
+      "source": "Hacker News",
+      "title": "PostgreSQL for Everything",
+      "url": "https://www.raphaelbauer.com:443/posts/postgresql-everything/"
+    },
     "fcd078f882eb6d2a289dffaf70c76b4d9cd019d0": {
       "kind": "Blog",
       "sent_at": "2026-07-28T12:04:39.015571",
@@ -1441,6 +1483,7 @@
     "https://blog.cloudflare.com/open-sourcing-our-privacy-proxy-cli/": "2026-07-28T12:04:39.015678",
     "https://blog.cloudflare.com/post-quantum-authentication-to-origins/": "2026-07-30T12:05:12.814865",
     "https://blog.cloudflare.com/q2-2026-internet-disruption-summary/": "2026-07-29T12:05:05.943566",
+    "https://blog.cloudflare.com/revisiting-spectre-attacks-on-workers/": "2026-08-20T12:05:09.139167",
     "https://blog.cloudflare.com/rfc9234-bgp-role-model/": "2026-08-19T12:05:01.971172",
     "https://blog.cloudflare.com/smart-tiered-cache-for-public-clouds/": "2026-07-11T12:04:14.686912",
     "https://blog.cloudflare.com/the-agent-access-model/": "2026-08-06T12:05:02.260633",
@@ -1493,6 +1536,7 @@
     "https://claude.com/blog/the-claude-science-product-guide": "2026-08-19T12:05:01.971172",
     "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models": "2026-07-25T12:04:37.529743",
     "https://claude.com/blog/think-through-hard-problems-in-voice-mode": "2026-07-24T12:06:54.832037",
+    "https://claude.com/blog/turning-conversation-into-knowledge-how-slack-builds-human-agent-teams": "2026-08-20T12:05:09.139167",
     "https://claude.com/blog/working-at-the-frontier-cursor": "2026-07-18T12:04:41.977625",
     "https://claude.com/blog/working-at-the-frontier-how-cognition-trusts-claude-fable-5-to-work-through-the-night": "2026-07-11T12:04:14.686912",
     "https://claude.com/blog/working-at-the-frontier-how-hebbia-builds-ai-for-financial-diligence-that-cant-miss-a-detail": "2026-07-14T12:04:51.246812",
@@ -1529,10 +1573,12 @@
     "https://openai.com/index/k-12-educators-practical-skills": "2026-07-09T12:04:55.179644",
     "https://openai.com/index/model-ml": "2026-08-11T12:05:03.934309",
     "https://openai.com/index/new-policy-ideas-for-the-intelligence-age": "2026-08-17T12:05:16.445311",
+    "https://openai.com/index/offering-zero-data-retention-for-frontier-models": "2026-08-20T12:05:09.139167",
     "https://openai.com/index/openai-and-apa-partner-to-advance-responsible-ai": "2026-08-07T12:04:54.040292",
     "https://openai.com/index/openai-joins-ports-pike-project": "2026-08-18T12:05:26.170377",
     "https://openai.com/index/pacing-model-development-cyber-capabilities": "2026-08-19T12:05:01.971172",
     "https://openai.com/index/previewing-ultrafast": "2026-08-14T12:05:20.145013",
+    "https://openai.com/index/replit": "2026-08-20T12:05:09.139167",
     "https://openai.com/index/responsible-ai-infrastructure-texas": "2026-08-11T12:05:03.934309",
     "https://openai.com/index/safety-alignment-long-horizon-models": "2026-07-21T12:04:54.370956",
     "https://openai.com/index/scientific-computing-agentic-ai": "2026-07-29T12:05:05.943566",
