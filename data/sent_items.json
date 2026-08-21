@@ -50,7 +50,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "b3d0c3d5bc44",
-      "last_seen_at": "2026-08-20T12:01:08.261541",
+      "last_seen_at": "2026-08-21T12:00:58.168081",
       "title": "Claude Code Overview",
       "updated_at": "2026-08-07T12:04:54.040151"
     },
@@ -177,7 +177,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "972aeef7bce5",
-      "last_seen_at": "2026-08-20T12:01:08.261541",
+      "last_seen_at": "2026-08-21T12:00:58.168081",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-07-17T12:05:04.882361"
     },
@@ -217,7 +217,7 @@
         "Usage policy"
       ],
       "content_hash": "c3942e16ce32",
-      "last_seen_at": "2026-08-20T12:01:08.261541",
+      "last_seen_at": "2026-08-21T12:00:58.168081",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-08-11T12:05:03.934043"
     }
@@ -573,6 +573,13 @@
       "title": "Diagnosis Before Recovery: Turning Agent Failures into Selective Self-Correction",
       "url": "http://arxiv.org/abs/2608.11772v1"
     },
+    "465828d82f04d8bd6338fdf985304465b92ca59c": {
+      "kind": "Blog",
+      "sent_at": "2026-08-21T12:05:15.075633",
+      "source": "Hacker News",
+      "title": "Show HN: Huzzah \u2013 a novel approach to coding with AI",
+      "url": "https://www.danielvaughn.dev/posts/huzzah/"
+    },
     "46d5dd427b4992ff40cab1840cfb9f0bc36d2485": {
       "kind": "Paper",
       "sent_at": "2026-08-04T12:05:16.424733",
@@ -839,6 +846,13 @@
       "title": "Echoverse: Deep, evolving environments for computer-use agents",
       "url": "https://www.microsoft.com/en-us/research/blog/echoverse-deep-evolving-environments-for-computer-use-agents/"
     },
+    "83fc31902e095aff199d264309fea2fb686f4993": {
+      "kind": "Paper",
+      "sent_at": "2026-08-21T12:05:15.075633",
+      "source": "arXiv",
+      "title": "Optimal Skill Selection for LLM Agents with Provable Bicriteria Guarantees",
+      "url": "http://arxiv.org/abs/2608.19993v1"
+    },
     "84cfafa4ca7fa3aa4557a5034da51f7be7b56a6e": {
       "kind": "Blog",
       "sent_at": "2026-08-07T12:04:54.040151",
@@ -873,6 +887,13 @@
       "source": "arXiv",
       "title": "Proof-or-Stop: Don't Trust the Agent, Trust the Evidence -- Loop Engineering for Verifiable Evidence-Gated Lifecycle Control",
       "url": "http://arxiv.org/abs/2607.14890v1"
+    },
+    "8811334ebd7086b12df1d278160193574973f275": {
+      "kind": "Blog",
+      "sent_at": "2026-08-21T12:05:15.075633",
+      "source": "Neon Blog",
+      "title": "Open-weight models are fast on Neon AI Gateway. Here's why",
+      "url": "https://neon.com/blog/open-weight-models-are-fast-on-neon-ai-gateway"
     },
     "89db51549b8b46db509940880c342bdcdc893fba": {
       "kind": "Paper",
@@ -1486,6 +1507,7 @@
     "https://blog.cloudflare.com/revisiting-spectre-attacks-on-workers/": "2026-08-20T12:05:09.139167",
     "https://blog.cloudflare.com/rfc9234-bgp-role-model/": "2026-08-19T12:05:01.971172",
     "https://blog.cloudflare.com/smart-tiered-cache-for-public-clouds/": "2026-07-11T12:04:14.686912",
+    "https://blog.cloudflare.com/task-based-oauth-consent/": "2026-08-21T12:05:15.075760",
     "https://blog.cloudflare.com/the-agent-access-model/": "2026-08-06T12:05:02.260633",
     "https://blog.cloudflare.com/total-eclipse-internet-traffic-iceland-spain-portugal/": "2026-08-14T12:05:20.145013",
     "https://blog.cloudflare.com/wallets/": "2026-08-05T12:05:25.893222",
@@ -1496,6 +1518,7 @@
     "https://claude.com/blog/a-guide-to-cost-visibility-and-control-in-claude": "2026-08-05T12:05:25.893222",
     "https://claude.com/blog/ai-ci-cd-on-call": "2026-08-19T12:05:01.971172",
     "https://claude.com/blog/ai-code-migration": "2026-07-17T12:05:04.882495",
+    "https://claude.com/blog/anthropics-approach-to-teaching-and-learning-ai": "2026-08-21T12:05:15.075760",
     "https://claude.com/blog/artifacts-in-claude-code": "2026-08-04T12:05:16.424928",
     "https://claude.com/blog/auto-mode-default-in-claude-code": "2026-08-08T12:05:05.404940",
     "https://claude.com/blog/auto-mode-in-production": "2026-08-08T12:05:05.404940",
@@ -1504,6 +1527,7 @@
     "https://claude.com/blog/building-verification-loops-in-claude-code-with-skills": "2026-07-23T12:05:27.517628",
     "https://claude.com/blog/ciso-guide-to-agentic-ai": "2026-07-18T12:04:41.977625",
     "https://claude.com/blog/claude-code-desktop-redesign": "2026-07-27T12:04:48.798191",
+    "https://claude.com/blog/claude-code-guide-for-startups": "2026-08-21T12:05:15.075760",
     "https://claude.com/blog/claude-enterprise-inference-hooks": "2026-08-06T12:05:02.260633",
     "https://claude.com/blog/claude-for-foundation-models": "2026-07-26T12:04:25.368996",
     "https://claude.com/blog/claude-managed-agents": "2026-07-28T12:04:39.015678",
@@ -1524,6 +1548,7 @@
     "https://claude.com/blog/how-anthropics-marketing-operations-team-uses-claude-cowork-to-automate-reporting-and-campaign-builds": "2026-07-09T12:04:55.179644",
     "https://claude.com/blog/how-datadog-built-a-universal-machine-tool-for-claude-code": "2026-07-22T12:06:38.269628",
     "https://claude.com/blog/how-jetbrains-evaluates-and-deploys-claude-fable-5": "2026-08-14T12:05:20.145013",
+    "https://claude.com/blog/how-monday-com-transformed-its-platform-into-an-agent-first-product-where-humans-and-agents-collaborate": "2026-08-21T12:05:15.075760",
     "https://claude.com/blog/how-outtake-built-a-cyber-investigator-on-claude": "2026-07-23T12:05:27.517628",
     "https://claude.com/blog/how-people-are-using-claude-cowork": "2026-07-09T12:04:55.179644",
     "https://claude.com/blog/how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-building-them": "2026-07-25T12:04:37.529743",
