@@ -20,13 +20,14 @@
         "macOS (Intel and Apple Silicon)",
         "Windows (x64)",
         "Windows ARM64",
+        "On Ubuntu or Debian, where the app is in beta, install it with apt by following the Linux install instructions",
         "\u200b What you can do",
         "Automate the work you keep putting off",
         "Build features and fix bugs",
         "Create commits and pull requests",
         "Connect your tools with MCP",
         "Customize with instructions, skills, and hooks",
-        "Run agent teams and build custom agents",
+        "Run agents in parallel and build custom agents",
         "Pipe, script, and automate with the CLI",
         "Schedule recurring tasks",
         "Routines run in the cloud, so they keep running even when your computer is off. They can also trigger on API calls or GitHub events. Create them from the web, the Desktop app, or by running /schedule in the CLI.",
@@ -49,10 +50,10 @@
         "code.claude.com : demos, pricing, and product details",
         "Was this page helpful?"
       ],
-      "content_hash": "b3d0c3d5bc44",
-      "last_seen_at": "2026-08-21T12:00:58.168081",
+      "content_hash": "8a3827f0fab4",
+      "last_seen_at": "2026-08-22T12:05:37.902560",
       "title": "Claude Code Overview",
-      "updated_at": "2026-08-07T12:04:54.040151"
+      "updated_at": "2026-08-22T12:05:37.902560"
     },
     "https://docs.anthropic.com/en/docs/claude-code/tutorials": {
       "blocks": [
@@ -139,7 +140,7 @@
         "\u200b Work with images",
         "Add an image to the conversation",
         "Drag and drop an image into the Claude Code window",
-        "Copy an image and paste it into the CLI with Ctrl+V. On macOS, Cmd+V also works in iTerm2.",
+        "Copy an image and paste it into the CLI with Ctrl+V , or with Alt+V on Windows and WSL",
         "Provide an image path to Claude. E.g., \u201cAnalyze this image: /path/to/your/image.png\u201d",
         "Ask Claude to analyze the image",
         "Use images for context",
@@ -176,10 +177,10 @@
         "Extend Claude Code",
         "Was this page helpful?"
       ],
-      "content_hash": "972aeef7bce5",
-      "last_seen_at": "2026-08-21T12:00:58.168081",
+      "content_hash": "d701c5964c25",
+      "last_seen_at": "2026-08-22T12:05:37.902560",
       "title": "Claude Code Tutorials",
-      "updated_at": "2026-07-17T12:05:04.882361"
+      "updated_at": "2026-08-22T12:05:37.902560"
     },
     "https://docs.anthropic.com/en/release-notes/overview": {
       "blocks": [
@@ -217,7 +218,7 @@
         "Usage policy"
       ],
       "content_hash": "c3942e16ce32",
-      "last_seen_at": "2026-08-21T12:00:58.168081",
+      "last_seen_at": "2026-08-22T12:01:50.710178",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-08-11T12:05:03.934043"
     }
@@ -299,6 +300,13 @@
       "source": "Simon Willison",
       "title": "smevals - a small eval suite for evaluating models, prompts, and harnesses",
       "url": "https://simonwillison.net/2026/Jul/31/smevals/#atom-everything"
+    },
+    "11096b759ce8c8a30d2166f6c11aba6a62b75516": {
+      "kind": "Paper",
+      "sent_at": "2026-08-22T12:05:37.902560",
+      "source": "arXiv",
+      "title": "From Agent Behaviour to Agent-Friendly Documentation: An Empirical Study of How Coding Agents Discover, Read, and Write Technical Documentation",
+      "url": "http://arxiv.org/abs/2608.20195v1"
     },
     "11337413cb0bf3d0d1056a19008fb799212edcb3": {
       "kind": "Blog",
@@ -720,13 +728,6 @@
       "title": "The new GPT-5.6 family: Luna, Terra, Sol",
       "url": "https://simonwillison.net/2026/Jul/9/gpt-5-6/#atom-everything"
     },
-    "600e39d914feff0bc6406357bb707489c8c59fda": {
-      "kind": "Paper",
-      "sent_at": "2026-07-07T12:05:38.995972",
-      "source": "arXiv",
-      "title": "ToolFailBench: Diagnosing Tool-Use Failures in LLM Agents",
-      "url": "http://arxiv.org/abs/2607.04686v1"
-    },
     "60d5f4a47a6219a40f4d34e4164255c8136c5c5e": {
       "kind": "Blog",
       "sent_at": "2026-08-02T12:05:07.253243",
@@ -860,13 +861,6 @@
       "title": "Supabase is now a connector on Perplexity Computer Supabase is now a connector on Perplexity Computer. Query your Postgres data, look up users, and invoke Edge Functions from a Perplexity chat. Author: Natalie Roberge Published 7 August 2026 \u00b7 2 minute read",
       "url": "https://supabase.com/blog/supabase-is-now-a-connector-on-perplexity-computer"
     },
-    "8556cd9bcc213b8d6b08fec3bcd3432fa01e206e": {
-      "kind": "Blog",
-      "sent_at": "2026-07-08T12:04:45.896561",
-      "source": "BAIR Blog",
-      "title": "Intelligence is Free, Now What? <br> Data Systems for, of, and by Agents",
-      "url": "http://bair.berkeley.edu/blog/2026/07/07/intelligence-is-free-now-what/"
-    },
     "859a37862ecfb9f8a3b9e372abc3895e9415fc47": {
       "kind": "Paper",
       "sent_at": "2026-07-21T12:04:54.370859",
@@ -937,12 +931,26 @@
       "title": "Reducing Text2SQL latency with parameterized query templates",
       "url": "https://aws.amazon.com/blogs/architecture/reducing-text2sql-latency-with-parameterized-query-templates/"
     },
+    "9595db1d29a5c1368a7e91fec06ebfdbb3e28316": {
+      "kind": "Paper",
+      "sent_at": "2026-08-22T12:05:37.902560",
+      "source": "arXiv",
+      "title": "The Third Restructuring of Software Form: From the Three-Tier Architecture to Storage, Models, and Agents",
+      "url": "http://arxiv.org/abs/2608.20201v1"
+    },
     "9690777f2576ad50046f21224c4a3d251cb79434": {
       "kind": "Paper",
       "sent_at": "2026-07-24T12:06:54.831851",
       "source": "arXiv",
       "title": "Agentic Context Management: Solving Agent Memory and Cost by Treating Them as Lifecycle and Architecture Problems",
       "url": "http://arxiv.org/abs/2607.21503v1"
+    },
+    "96ed7f9894b35c2ab3196416a2e1a0281579f477": {
+      "kind": "Blog",
+      "sent_at": "2026-08-22T12:05:37.902560",
+      "source": "Anthropic Docs",
+      "title": "Claude Code Tutorials",
+      "url": "https://docs.anthropic.com/en/docs/claude-code/tutorials"
     },
     "987ae004f896e5ce9cac897c7808155e372470a0": {
       "kind": "Blog",
@@ -957,6 +965,13 @@
       "source": "Hacker News",
       "title": "Auto-research with codex: How I achieved a 232x Faster Kernel",
       "url": "https://sankalp.bearblog.dev/autoresearch/"
+    },
+    "992fccbd1cbb65fba5d4ad11aeb89261a4b50755": {
+      "kind": "Blog",
+      "sent_at": "2026-08-22T12:05:37.902560",
+      "source": "Anthropic Docs",
+      "title": "Claude Code Overview",
+      "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
     },
     "9981e716804cab1fb3cb0ebc4142fe5799c39146": {
       "kind": "Blog",
@@ -1161,6 +1176,13 @@
       "title": "Claude Code Overview",
       "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
     },
+    "bed7c3e90c9bd98e7e68a4ef9783a173f1748015": {
+      "kind": "Blog",
+      "sent_at": "2026-08-22T12:05:37.902560",
+      "source": "Simon Willison",
+      "title": "Stop Making TUIs",
+      "url": "https://simonwillison.net/2026/Aug/21/stop-making-tuis/"
+    },
     "bef4f2f415ee6ce51fa3f42b9d2742cdcefd681e": {
       "kind": "Blog",
       "sent_at": "2026-08-11T12:05:03.934043",
@@ -1322,13 +1344,6 @@
       "title": "The first known runaway AI agent - or a very bad marketing stunt?",
       "url": "https://simonwillison.net/2026/Jul/23/the-first-known-runaway-ai-agent/#atom-everything"
     },
-    "e8a5734b45e72ae9471d96500cdffb790bd1c817": {
-      "kind": "Paper",
-      "sent_at": "2026-07-08T12:04:45.896561",
-      "source": "arXiv",
-      "title": "An Experimental Design Approach to Evaluating Agentic AI's Autonomous Model Discovery",
-      "url": "http://arxiv.org/abs/2607.06413v1"
-    },
     "e8dcd1bae8fed53e5e81c9a75c30a22b88f166eb": {
       "kind": "Blog",
       "sent_at": "2026-07-28T12:04:39.015571",
@@ -1479,11 +1494,11 @@
     "https://blog.cloudflare.com/ai-search-easier/": "2026-08-07T12:04:54.040292",
     "https://blog.cloudflare.com/bgp-origin-attribute/": "2026-07-25T12:04:37.529743",
     "https://blog.cloudflare.com/billable-usage-api/": "2026-08-04T12:05:16.424928",
+    "https://blog.cloudflare.com/bot-preference-sync/": "2026-08-22T12:05:37.902741",
     "https://blog.cloudflare.com/cdnjs-dev-platform-migration/": "2026-07-31T12:05:43.151129",
     "https://blog.cloudflare.com/certificate-transparency-monitoring-ga/": "2026-08-14T12:05:20.145013",
     "https://blog.cloudflare.com/ci-workflows/": "2026-08-05T12:05:25.893222",
     "https://blog.cloudflare.com/cloudflare-computer/": "2026-08-04T12:05:16.424928",
-    "https://blog.cloudflare.com/cloudflare-joins-uk-cyber-resilience-pledge/": "2026-07-08T12:04:45.896685",
     "https://blog.cloudflare.com/cloudflare-sase-sse-gartner-magic-quadrants-2026/": "2026-08-06T12:05:02.260633",
     "https://blog.cloudflare.com/community-program-refresh/": "2026-08-08T12:05:05.404940",
     "https://blog.cloudflare.com/ddos-threat-report-2026-h1/": "2026-08-12T12:05:24.276883",
@@ -1512,9 +1527,7 @@
     "https://blog.cloudflare.com/total-eclipse-internet-traffic-iceland-spain-portugal/": "2026-08-14T12:05:20.145013",
     "https://blog.cloudflare.com/wallets/": "2026-08-05T12:05:25.893222",
     "https://blog.cloudflare.com/wordpress-vulnerabilities/": "2026-07-18T12:04:41.977625",
-    "https://blog.cloudflare.com/workers-cache/": "2026-07-07T12:05:38.996055",
     "https://blog.cloudflare.com/workers-protected-by-access/": "2026-08-15T12:04:35.309514",
-    "https://claude.com/blog/a-field-guide-to-claude-fable-finding-your-unknowns": "2026-07-07T12:05:38.996055",
     "https://claude.com/blog/a-guide-to-cost-visibility-and-control-in-claude": "2026-08-05T12:05:25.893222",
     "https://claude.com/blog/ai-ci-cd-on-call": "2026-08-19T12:05:01.971172",
     "https://claude.com/blog/ai-code-migration": "2026-07-17T12:05:04.882495",
@@ -1522,7 +1535,7 @@
     "https://claude.com/blog/artifacts-in-claude-code": "2026-08-04T12:05:16.424928",
     "https://claude.com/blog/auto-mode-default-in-claude-code": "2026-08-08T12:05:05.404940",
     "https://claude.com/blog/auto-mode-in-production": "2026-08-08T12:05:05.404940",
-    "https://claude.com/blog/bringing-claude-code-and-claude-cowork-to-government": "2026-07-08T12:04:45.896685",
+    "https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders": "2026-08-22T12:05:37.902741",
     "https://claude.com/blog/bringing-mcp-2026-07-28-to-claude": "2026-07-29T12:05:05.943566",
     "https://claude.com/blog/building-verification-loops-in-claude-code-with-skills": "2026-07-23T12:05:27.517628",
     "https://claude.com/blog/ciso-guide-to-agentic-ai": "2026-07-18T12:04:41.977625",
@@ -1533,13 +1546,12 @@
     "https://claude.com/blog/claude-managed-agents": "2026-07-28T12:04:39.015678",
     "https://claude.com/blog/claude-managed-agents-memory": "2026-07-27T12:04:48.798191",
     "https://claude.com/blog/claude-managed-agents-updates": "2026-07-26T12:04:25.368996",
-    "https://claude.com/blog/claude-model-and-effort-level-in-claude-code": "2026-07-08T12:04:45.896685",
     "https://claude.com/blog/claude-models-explained-choosing-the-best-model-for-your-use-case": "2026-07-25T12:04:37.529743",
     "https://claude.com/blog/claude-tag-now-reads-even-more-of-the-room": "2026-08-14T12:05:20.145013",
     "https://claude.com/blog/compliance-api-cowork-and-claude-code": "2026-08-12T12:05:24.276883",
+    "https://claude.com/blog/computer-use-skills-api-files-api": "2026-08-22T12:05:37.902741",
     "https://claude.com/blog/connectors-for-everyday-life": "2026-07-27T12:04:48.798191",
     "https://claude.com/blog/cowork-chrome-side-panel": "2026-08-13T12:05:04.688988",
-    "https://claude.com/blog/cowork-web-mobile": "2026-07-08T12:04:45.896685",
     "https://claude.com/blog/four-role-based-claude-certifications": "2026-07-24T12:06:54.832037",
     "https://claude.com/blog/harnessing-claudes-intelligence": "2026-07-28T12:04:39.015678",
     "https://claude.com/blog/how-abc-legal-turned-every-employee-into-a-builder-with-claude-managed-agents": "2026-08-18T12:05:26.170377",
@@ -1558,6 +1570,7 @@
     "https://claude.com/blog/preparing-your-security-program-for-ai-accelerated-offense": "2026-07-28T12:04:39.015678",
     "https://claude.com/blog/run-claude-code-sessions-on-your-own-compute": "2026-08-07T12:04:54.040292",
     "https://claude.com/blog/self-service-data-analytics-in-slack-how-anthropic-deploys-claude-tag-for-ad-hoc-questions": "2026-08-14T12:05:20.145013",
+    "https://claude.com/blog/the-ai-native-sdlc-playbook": "2026-08-22T12:05:37.902741",
     "https://claude.com/blog/the-claude-science-product-guide": "2026-08-19T12:05:01.971172",
     "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models": "2026-07-25T12:04:37.529743",
     "https://claude.com/blog/think-through-hard-problems-in-voice-mode": "2026-07-24T12:06:54.832037",
