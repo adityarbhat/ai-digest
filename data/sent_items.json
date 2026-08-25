@@ -51,7 +51,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "8a3827f0fab4",
-      "last_seen_at": "2026-08-24T12:02:42.570103",
+      "last_seen_at": "2026-08-25T12:01:35.454485",
       "title": "Claude Code Overview",
       "updated_at": "2026-08-22T12:05:37.902560"
     },
@@ -178,7 +178,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "d701c5964c25",
-      "last_seen_at": "2026-08-24T12:02:42.570103",
+      "last_seen_at": "2026-08-25T12:01:35.454485",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-08-22T12:05:37.902560"
     },
@@ -218,7 +218,7 @@
         "Usage policy"
       ],
       "content_hash": "c3942e16ce32",
-      "last_seen_at": "2026-08-24T12:02:42.570103",
+      "last_seen_at": "2026-08-25T12:01:35.454485",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-08-11T12:05:03.934043"
     }
@@ -363,13 +363,6 @@
       "source": "Hacker News",
       "title": "DeepSeek V4 Flash 0731 Intelligence, Performance and Price Analysis",
       "url": "https://artificialanalysis.ai/models/deepseek-v4-flash"
-    },
-    "1b90056df9ec04f974ce8bb842d84af5e1e32264": {
-      "kind": "Blog",
-      "sent_at": "2026-07-11T12:04:14.686786",
-      "source": "GitHub Engineering",
-      "title": "Better tools made Copilot code review worse. Here\u2019s how we actually improved it.",
-      "url": "https://github.blog/ai-and-ml/github-copilot/better-tools-made-copilot-code-review-worse-heres-how-we-actually-improved-it/"
     },
     "1d3544fd2c28d9bb1b6ff9478493726a752a2781": {
       "kind": "Paper",
@@ -545,6 +538,13 @@
       "source": "Simon Willison",
       "title": "deepseek-ai/DeepSeek-V4-Flash-0731",
       "url": "https://simonwillison.net/2026/Jul/31/deepseek-v4-flash-0731/#atom-everything"
+    },
+    "4176b9ec21c881b9744dfc83916ffab22c8fdc5f": {
+      "kind": "Blog",
+      "sent_at": "2026-08-25T12:05:53.812983",
+      "source": "Neon Blog",
+      "title": "WAL + S3: Lakebase storage for the era of agents",
+      "url": "https://neon.com/blog/wal-s3-lakebase-storage-for-the-era-of-agents"
     },
     "41f23cc8d17867e7309d9f641429bbdb8f8693f3": {
       "kind": "Blog",
@@ -728,6 +728,13 @@
       "title": "More than just code review",
       "url": "https://simonwillison.net/2026/Aug/22/more-than-just-code-review/"
     },
+    "65aa628410909388f9e708af7ce1abf7e81de2b4": {
+      "kind": "Paper",
+      "sent_at": "2026-08-25T12:05:53.812983",
+      "source": "arXiv",
+      "title": "Signal or Noise? A Benchmark Study of Agent Skills in Web Development",
+      "url": "http://arxiv.org/abs/2608.23067v1"
+    },
     "65d2c94569c34dc5de47a52238ea2ff9f9c70f71": {
       "kind": "Blog",
       "sent_at": "2026-08-05T12:05:25.893072",
@@ -896,6 +903,13 @@
       "title": "Agent platform (Part 1): How we help Grab build and run AI agents at scale",
       "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5UeVRNSVJzM3kzUnVPVmxrSjBWNlREOUt5RGxaLUNPRG91TzN1NFZUckl3aVhKUmRMYWtvVXM2WXZPN1JHWVFIMHgyT2NKbHNoWHJOT2gwOU5EN1hXX1JmSlY3U0ZBNE40ZkZVYnZBU3ZWdUlFc1hiczgxdmU?oc=5"
     },
+    "8e452eebade16960f1224d0b801194d56291d4cb": {
+      "kind": "Paper",
+      "sent_at": "2026-08-25T12:05:53.812983",
+      "source": "arXiv",
+      "title": "SkillAlchemy: Open-World Agent Skill Creation",
+      "url": "http://arxiv.org/abs/2608.23417v1"
+    },
     "90ee8a9848cb6a801a2b231cb321e269bfb3ba71": {
       "kind": "Blog",
       "sent_at": "2026-08-05T12:05:25.893072",
@@ -1000,6 +1014,13 @@
       "source": "Anthropic Docs",
       "title": "Anthropic Release Notes",
       "url": "https://docs.anthropic.com/en/release-notes/overview"
+    },
+    "9f94e91d08fb1c643a56055794374a0e0e258672": {
+      "kind": "Blog",
+      "sent_at": "2026-08-25T12:05:53.812983",
+      "source": "Simon Willison",
+      "title": "llm-anthropic 0.27",
+      "url": "https://simonwillison.net/2026/Aug/24/llm-anthropic/"
     },
     "a0175822bd744fdee4fb61ad128cc34177f7fa08": {
       "kind": "Paper",
@@ -1372,13 +1393,6 @@
       "title": "Migrating a production AI agent to GPT-5.6: 2.2x faster, 27% cheaper",
       "url": "https://ploy.ai/blog/migrating-a-production-ai-agent-to-gpt-5-6"
     },
-    "f3e66fb300bc9cddcc4b948182ccec4ee5e05415": {
-      "kind": "Paper",
-      "sent_at": "2026-07-11T12:04:14.686786",
-      "source": "arXiv",
-      "title": "Token-Flow Firewall: Semantic Runtime Auditing for Persistent AI Agents",
-      "url": "http://arxiv.org/abs/2607.08395v1"
-    },
     "f487384614a34623c65faa96feb4f162451f1b40": {
       "kind": "Blog",
       "sent_at": "2026-07-21T12:04:54.370859",
@@ -1463,6 +1477,7 @@
     "https://blog.cloudflare.com/cdnjs-dev-platform-migration/": "2026-07-31T12:05:43.151129",
     "https://blog.cloudflare.com/certificate-transparency-monitoring-ga/": "2026-08-14T12:05:20.145013",
     "https://blog.cloudflare.com/ci-workflows/": "2026-08-05T12:05:25.893222",
+    "https://blog.cloudflare.com/cloudflare-blog-uses-emdash/": "2026-08-25T12:05:53.813101",
     "https://blog.cloudflare.com/cloudflare-computer/": "2026-08-04T12:05:16.424928",
     "https://blog.cloudflare.com/cloudflare-sase-sse-gartner-magic-quadrants-2026/": "2026-08-06T12:05:02.260633",
     "https://blog.cloudflare.com/community-program-refresh/": "2026-08-08T12:05:05.404940",
@@ -1484,7 +1499,6 @@
     "https://blog.cloudflare.com/q2-2026-internet-disruption-summary/": "2026-07-29T12:05:05.943566",
     "https://blog.cloudflare.com/revisiting-spectre-attacks-on-workers/": "2026-08-20T12:05:09.139167",
     "https://blog.cloudflare.com/rfc9234-bgp-role-model/": "2026-08-19T12:05:01.971172",
-    "https://blog.cloudflare.com/smart-tiered-cache-for-public-clouds/": "2026-07-11T12:04:14.686912",
     "https://blog.cloudflare.com/task-based-oauth-consent/": "2026-08-21T12:05:15.075760",
     "https://blog.cloudflare.com/the-agent-access-model/": "2026-08-06T12:05:02.260633",
     "https://blog.cloudflare.com/total-eclipse-internet-traffic-iceland-spain-portugal/": "2026-08-14T12:05:20.145013",
@@ -1518,6 +1532,7 @@
     "https://claude.com/blog/four-role-based-claude-certifications": "2026-07-24T12:06:54.832037",
     "https://claude.com/blog/harnessing-claudes-intelligence": "2026-07-28T12:04:39.015678",
     "https://claude.com/blog/how-abc-legal-turned-every-employee-into-a-builder-with-claude-managed-agents": "2026-08-18T12:05:26.170377",
+    "https://claude.com/blog/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep": "2026-08-25T12:05:53.813101",
     "https://claude.com/blog/how-anthropic-secures-its-ai-native-software-development-lifecycle": "2026-07-22T12:06:38.269628",
     "https://claude.com/blog/how-anthropics-business-development-team-uses-claude-to-run-inbound-and-outbound-at-scale": "2026-08-11T12:05:03.934309",
     "https://claude.com/blog/how-datadog-built-a-universal-machine-tool-for-claude-code": "2026-07-22T12:06:38.269628",
@@ -1537,7 +1552,6 @@
     "https://claude.com/blog/think-through-hard-problems-in-voice-mode": "2026-07-24T12:06:54.832037",
     "https://claude.com/blog/turning-conversation-into-knowledge-how-slack-builds-human-agent-teams": "2026-08-20T12:05:09.139167",
     "https://claude.com/blog/working-at-the-frontier-cursor": "2026-07-18T12:04:41.977625",
-    "https://claude.com/blog/working-at-the-frontier-how-cognition-trusts-claude-fable-5-to-work-through-the-night": "2026-07-11T12:04:14.686912",
     "https://claude.com/blog/working-at-the-frontier-how-hebbia-builds-ai-for-financial-diligence-that-cant-miss-a-detail": "2026-07-14T12:04:51.246812",
     "https://claude.com/blog/working-at-the-frontier-rakuten": "2026-07-21T12:04:54.370956",
     "https://claude.com/blog/working-at-the-frontier-why-base44-trusts-claude-fable-5-with-their-most-challenging-engineering-work": "2026-07-16T12:04:28.413151",
@@ -1558,6 +1572,8 @@
     "https://openai.com/index/continuous-voice-interaction-with-gpt-live": "2026-08-04T12:05:16.424928",
     "https://openai.com/index/dali-rajic-chief-revenue-officer": "2026-08-14T12:05:20.145013",
     "https://openai.com/index/daybreak-models-are-now-available-on-aws": "2026-08-12T12:05:24.276883",
+    "https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia": "2026-08-25T12:05:53.813101",
+    "https://openai.com/index/gpt-5-6-in-kiro": "2026-08-25T12:05:53.813101",
     "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work": "2026-07-27T12:04:48.798191",
     "https://openai.com/index/how-news-organizations-are-using-ai": "2026-07-23T12:05:27.517628",
     "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores": "2026-07-30T12:05:12.814865",
