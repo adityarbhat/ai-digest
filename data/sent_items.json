@@ -51,7 +51,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "8a3827f0fab4",
-      "last_seen_at": "2026-08-25T12:01:35.454485",
+      "last_seen_at": "2026-08-26T12:01:16.583878",
       "title": "Claude Code Overview",
       "updated_at": "2026-08-22T12:05:37.902560"
     },
@@ -178,7 +178,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "d701c5964c25",
-      "last_seen_at": "2026-08-25T12:01:35.454485",
+      "last_seen_at": "2026-08-26T12:01:16.583878",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-08-22T12:05:37.902560"
     },
@@ -218,7 +218,7 @@
         "Usage policy"
       ],
       "content_hash": "c3942e16ce32",
-      "last_seen_at": "2026-08-25T12:01:35.454485",
+      "last_seen_at": "2026-08-26T12:01:16.583878",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-08-11T12:05:03.934043"
     }
@@ -349,6 +349,13 @@
       "source": "Simon Willison",
       "title": "Auto mode is now the default in Claude Code for Pro, Max, and Team plans",
       "url": "https://simonwillison.net/2026/Aug/8/auto-mode/#atom-everything"
+    },
+    "167296c7b42fb29eda41ecfbdd954ec900fbde5d": {
+      "kind": "Paper",
+      "sent_at": "2026-08-26T12:07:42.286686",
+      "source": "arXiv",
+      "title": "Paritok-4B: Intent-Conditioned Context Compression for Coding Agents",
+      "url": "http://arxiv.org/abs/2608.24188v1"
     },
     "16ca573e9f50b2d03bdf5f3544b8288e31120a24": {
       "kind": "Blog",
@@ -546,6 +553,13 @@
       "title": "WAL + S3: Lakebase storage for the era of agents",
       "url": "https://neon.com/blog/wal-s3-lakebase-storage-for-the-era-of-agents"
     },
+    "41b117726c0780e43396081dcd09313fe8d707a2": {
+      "kind": "Blog",
+      "sent_at": "2026-08-26T12:07:42.286686",
+      "source": "Neon Blog",
+      "title": "Just landed in the Neon CLI",
+      "url": "https://neon.com/blog/just-landed-in-the-neon-cli"
+    },
     "41f23cc8d17867e7309d9f641429bbdb8f8693f3": {
       "kind": "Blog",
       "sent_at": "2026-08-14T12:05:20.144897",
@@ -699,13 +713,6 @@
       "source": "Hacker News",
       "title": "Humans missed 1 in 3 threats approving AI agent commands across 40k game runs",
       "url": "https://scalex.dev/blog/ai-agent-permissions-stats/"
-    },
-    "5cc8fd3c95ee1c4042437eac544a5e4b79d28fdb": {
-      "kind": "Blog",
-      "sent_at": "2026-07-12T12:04:53.647529",
-      "source": "Hacker News",
-      "title": "We scaled PgBouncer to 4x throughput",
-      "url": "https://clickhouse.com/blog/pgbouncer-clickhouse-managed-postgres"
     },
     "60d5f4a47a6219a40f4d34e4164255c8136c5c5e": {
       "kind": "Blog",
@@ -1232,6 +1239,13 @@
       "title": "Quoting Drew Breunig",
       "url": "https://simonwillison.net/2026/Aug/23/drew-breunig/"
     },
+    "d2fd3b9b8d18e2b1a13026af6d7a09591f6729c0": {
+      "kind": "Paper",
+      "sent_at": "2026-08-26T12:07:42.286686",
+      "source": "arXiv",
+      "title": "PeakBench: Benchmarking Resource-Aware Tool Invocation in LLM Agents",
+      "url": "http://arxiv.org/abs/2608.24509v1"
+    },
     "d3dbd70d787f761e2627f95b435debaece63ffec": {
       "kind": "Blog",
       "sent_at": "2026-07-14T12:04:51.246654",
@@ -1512,6 +1526,7 @@
     "https://claude.com/blog/artifacts-in-claude-code": "2026-08-04T12:05:16.424928",
     "https://claude.com/blog/auto-mode-default-in-claude-code": "2026-08-08T12:05:05.404940",
     "https://claude.com/blog/auto-mode-in-production": "2026-08-08T12:05:05.404940",
+    "https://claude.com/blog/bain-company-joins-the-claude-partner-network-as-a-global-premier-partner": "2026-08-26T12:07:42.286813",
     "https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders": "2026-08-22T12:05:37.902741",
     "https://claude.com/blog/bringing-mcp-2026-07-28-to-claude": "2026-07-29T12:05:05.943566",
     "https://claude.com/blog/building-verification-loops-in-claude-code-with-skills": "2026-07-23T12:05:27.517628",
@@ -1525,6 +1540,7 @@
     "https://claude.com/blog/claude-managed-agents-updates": "2026-07-26T12:04:25.368996",
     "https://claude.com/blog/claude-models-explained-choosing-the-best-model-for-your-use-case": "2026-07-25T12:04:37.529743",
     "https://claude.com/blog/claude-tag-now-reads-even-more-of-the-room": "2026-08-14T12:05:20.145013",
+    "https://claude.com/blog/claudes-memory-works-everywhere-and-you-decide-whats-in-it": "2026-08-26T12:07:42.286813",
     "https://claude.com/blog/compliance-api-cowork-and-claude-code": "2026-08-12T12:05:24.276883",
     "https://claude.com/blog/computer-use-skills-api-files-api": "2026-08-22T12:05:37.902741",
     "https://claude.com/blog/connectors-for-everyday-life": "2026-07-27T12:04:48.798191",
@@ -1580,6 +1596,8 @@
     "https://openai.com/index/hugging-face-model-evaluation-security-incident": "2026-07-22T12:06:38.269628",
     "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt": "2026-08-07T12:04:54.040292",
     "https://openai.com/index/introducing-chatgpt-small-business-program": "2026-07-22T12:06:38.269628",
+    "https://openai.com/index/jalapeno-first-results": "2026-08-26T12:07:42.286813",
+    "https://openai.com/index/loveholidays": "2026-08-26T12:07:42.286813",
     "https://openai.com/index/model-ml": "2026-08-11T12:05:03.934309",
     "https://openai.com/index/new-policy-ideas-for-the-intelligence-age": "2026-08-17T12:05:16.445311",
     "https://openai.com/index/offering-zero-data-retention-for-frontier-models": "2026-08-20T12:05:09.139167",
@@ -1595,10 +1613,10 @@
     "https://openai.com/index/ten-advances-in-mathematics": "2026-08-01T12:04:59.132717",
     "https://openai.com/index/testing-ads-in-chatgpt": "2026-08-12T12:05:24.276883",
     "https://openai.com/index/the-defenders-window": "2026-08-18T12:05:26.170377",
+    "https://openai.com/index/the-full-stack-behind-abundant-intelligence": "2026-08-26T12:07:42.286813",
     "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models": "2026-08-05T12:05:25.893222",
     "https://openai.com/index/unlocking-self-improvement-gpt-red": "2026-07-16T12:04:28.413151",
     "https://openai.com/index/why-teens-deserve-access-safe-ai": "2026-07-17T12:05:04.882495",
-    "https://www.anthropic.com/news/alberta-government-claude-cybersecurity": "2026-07-12T12:04:53.647602",
     "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy": "2026-08-09T12:04:40.116881",
     "https://www.anthropic.com/news/anthropic-economic-index-connector": "2026-07-30T12:05:12.814865",
     "https://www.anthropic.com/news/canadian-ai-research": "2026-07-15T12:06:44.768871",
@@ -1612,7 +1630,6 @@
     "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals": "2026-07-31T12:05:43.151129",
     "https://www.anthropic.com/news/rare-disease-research-grants": "2026-07-31T12:05:43.151129",
     "https://www.anthropic.com/news/redeploying-fable-5": "2026-08-17T12:05:16.445311",
-    "https://www.anthropic.com/news/reflect-with-claude": "2026-07-12T12:04:53.647602",
     "https://www.anthropic.com/news/tino-cuellar": "2026-08-09T12:04:40.116881"
   }
 }
