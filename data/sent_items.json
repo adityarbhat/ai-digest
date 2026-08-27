@@ -51,7 +51,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "8a3827f0fab4",
-      "last_seen_at": "2026-08-26T12:01:16.583878",
+      "last_seen_at": "2026-08-27T12:02:47.658029",
       "title": "Claude Code Overview",
       "updated_at": "2026-08-22T12:05:37.902560"
     },
@@ -178,7 +178,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "d701c5964c25",
-      "last_seen_at": "2026-08-26T12:01:16.583878",
+      "last_seen_at": "2026-08-27T12:02:47.658029",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-08-22T12:05:37.902560"
     },
@@ -218,7 +218,7 @@
         "Usage policy"
       ],
       "content_hash": "c3942e16ce32",
-      "last_seen_at": "2026-08-26T12:01:16.583878",
+      "last_seen_at": "2026-08-27T12:02:47.658029",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-08-11T12:05:03.934043"
     }
@@ -448,6 +448,13 @@
       "title": "Citizens Build, Agents Execute, Experts Govern",
       "url": "https://martinfowler.com/rachels-ramblings/citizens-agents-experts.html"
     },
+    "2acc979b3c884993fd34803ae662bd5c5bb54999": {
+      "kind": "Blog",
+      "sent_at": "2026-08-27T12:09:26.449490",
+      "source": "Booking.com Engineering",
+      "title": "Beyond the Dashboard: Accelerating Real-Time Intelligence in the Age of AI",
+      "url": "https://medium.com/booking-com-development/beyond-the-dashboard-accelerating-real-time-intelligence-in-the-age-of-ai-6f1f0f9c123f?source=rss----1c36c35f9c76---4"
+    },
     "2afc78fbb41c418e41376b4466c4ec4c54ddbe21": {
       "kind": "Blog",
       "sent_at": "2026-07-30T12:05:12.814703",
@@ -574,6 +581,13 @@
       "title": "Diagnosis Before Recovery: Turning Agent Failures into Selective Self-Correction",
       "url": "http://arxiv.org/abs/2608.11772v1"
     },
+    "4312ac0d1289f58e8186f7b87a762fbc0757693e": {
+      "kind": "Paper",
+      "sent_at": "2026-08-27T12:09:26.449490",
+      "source": "arXiv",
+      "title": "EVOMAL: Self-Poisoning in Self-Evolving Coding Agents",
+      "url": "http://arxiv.org/abs/2608.25776v1"
+    },
     "465828d82f04d8bd6338fdf985304465b92ca59c": {
       "kind": "Blog",
       "sent_at": "2026-08-21T12:05:15.075633",
@@ -693,6 +707,13 @@
       "title": "Agent Skill to Force Docs in ASD-STE100 Simplified Technical English",
       "url": "https://github.com/AminBlg/SimpleEnglish"
     },
+    "57c50badf1a390fba655f151156af4e5e87025c9": {
+      "kind": "Blog",
+      "sent_at": "2026-08-27T12:09:26.449490",
+      "source": "AWS Architecture Blog",
+      "title": "Closing the AI agent trust gap with graduated autonomy",
+      "url": "https://aws.amazon.com/blogs/architecture/closing-the-ai-agent-trust-gap-with-graduated-autonomy/"
+    },
     "57c631d4c702975c63ac8e9e613099b27fefcc03": {
       "kind": "Blog",
       "sent_at": "2026-08-13T12:05:04.688836",
@@ -797,6 +818,13 @@
       "source": "arXiv",
       "title": "HANDBOOK.md: A Benchmark for Long-Context Agentic Instruction Following",
       "url": "http://arxiv.org/abs/2607.25398v1"
+    },
+    "77d7fea8f6ba245152a5b5486a8f080e90729aac": {
+      "kind": "Paper",
+      "sent_at": "2026-08-27T12:09:26.449490",
+      "source": "arXiv",
+      "title": "Trace Integrity for LLM Data Agents: A Vision for Auditable Structured Reasoning in Real-World Systems",
+      "url": "http://arxiv.org/abs/2608.26036v1"
     },
     "78e38ae168937fa3280c941a1480a7346b08aa46": {
       "kind": "Paper",
@@ -1064,13 +1092,6 @@
       "title": "Claude Code Tutorials",
       "url": "https://docs.anthropic.com/en/docs/claude-code/tutorials"
     },
-    "aa61ae7dc32a500c9f19f5e1b5aa49372fd6d5f9": {
-      "kind": "Blog",
-      "sent_at": "2026-07-13T12:03:56.424213",
-      "source": "Hacker News",
-      "title": "Claude Code sends 33k tokens before reading the prompt; OpenCode sends 7k",
-      "url": "https://systima.ai/blog/claude-code-vs-opencode-token-overhead"
-    },
     "abde5f6940b35107e81762cb43edfea83c11b770": {
       "kind": "Blog",
       "sent_at": "2026-07-19T12:05:03.399857",
@@ -1217,6 +1238,13 @@
       "source": "Simon Willison",
       "title": "Claude Code uses Bun written in Rust now",
       "url": "https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust/#atom-everything"
+    },
+    "c6903e2dfd4bf43ab962c667f7418c8f430c8c55": {
+      "kind": "Blog",
+      "sent_at": "2026-08-27T12:09:26.449490",
+      "source": "MIT Tech Review",
+      "title": "The inside story on why OpenAI agents hacked Hugging Face",
+      "url": "https://www.technologyreview.com/2026/08/26/1143013/the-inside-story-on-why-openai-agents-hacked-hugging-face/"
     },
     "c7f3f73bca9e2683a650c68b6c7a3e7164cc0dc6": {
       "kind": "Paper",
@@ -1400,13 +1428,6 @@
       "title": "SHE: Trajectory-driven Safety Harness Evolution for LLM Agents",
       "url": "http://arxiv.org/abs/2608.09885v1"
     },
-    "f2ee4bfabe04e5945d8b91796c3638edab1b212b": {
-      "kind": "Blog",
-      "sent_at": "2026-07-13T12:03:56.424213",
-      "source": "Hacker News",
-      "title": "Migrating a production AI agent to GPT-5.6: 2.2x faster, 27% cheaper",
-      "url": "https://ploy.ai/blog/migrating-a-production-ai-agent-to-gpt-5-6"
-    },
     "f487384614a34623c65faa96feb4f162451f1b40": {
       "kind": "Blog",
       "sent_at": "2026-07-21T12:04:54.370859",
@@ -1535,6 +1556,7 @@
     "https://claude.com/blog/claude-code-guide-for-startups": "2026-08-21T12:05:15.075760",
     "https://claude.com/blog/claude-enterprise-inference-hooks": "2026-08-06T12:05:02.260633",
     "https://claude.com/blog/claude-for-foundation-models": "2026-07-26T12:04:25.368996",
+    "https://claude.com/blog/claude-in-chrome-generally-available": "2026-08-27T12:09:26.449619",
     "https://claude.com/blog/claude-managed-agents": "2026-07-28T12:04:39.015678",
     "https://claude.com/blog/claude-managed-agents-memory": "2026-07-27T12:04:48.798191",
     "https://claude.com/blog/claude-managed-agents-updates": "2026-07-26T12:04:25.368996",
@@ -1544,6 +1566,7 @@
     "https://claude.com/blog/compliance-api-cowork-and-claude-code": "2026-08-12T12:05:24.276883",
     "https://claude.com/blog/computer-use-skills-api-files-api": "2026-08-22T12:05:37.902741",
     "https://claude.com/blog/connectors-for-everyday-life": "2026-07-27T12:04:48.798191",
+    "https://claude.com/blog/cowork-built-in-browser": "2026-08-27T12:09:26.449619",
     "https://claude.com/blog/cowork-chrome-side-panel": "2026-08-13T12:05:04.688988",
     "https://claude.com/blog/four-role-based-claude-certifications": "2026-07-24T12:06:54.832037",
     "https://claude.com/blog/harnessing-claudes-intelligence": "2026-07-28T12:04:39.015678",
@@ -1556,6 +1579,7 @@
     "https://claude.com/blog/how-monday-com-transformed-its-platform-into-an-agent-first-product-where-humans-and-agents-collaborate": "2026-08-21T12:05:15.075760",
     "https://claude.com/blog/how-outtake-built-a-cyber-investigator-on-claude": "2026-07-23T12:05:27.517628",
     "https://claude.com/blog/how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-building-them": "2026-07-25T12:04:37.529743",
+    "https://claude.com/blog/how-warp-builds-self-improving-agents-on-claude": "2026-08-27T12:09:26.449619",
     "https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions": "2026-08-15T12:04:35.309514",
     "https://claude.com/blog/millennium-and-anthropic-are-building-a-digital-risk-analyst-with-claude": "2026-08-07T12:04:54.040292",
     "https://claude.com/blog/new-in-claude-managed-agents": "2026-07-26T12:04:25.368996",
@@ -1578,6 +1602,7 @@
     "https://openai.com/index/advancing-the-next-era-of-national-science": "2026-07-23T12:05:27.517628",
     "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6": "2026-07-31T12:05:43.151129",
     "https://openai.com/index/apple-is-getting-this-wrong": "2026-08-04T12:05:16.424928",
+    "https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts": "2026-08-27T12:09:26.449619",
     "https://openai.com/index/builders-guide-to-gpt-5-6": "2026-08-14T12:05:20.145013",
     "https://openai.com/index/building-abundant-intelligence": "2026-08-01T12:04:59.132717",
     "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community": "2026-07-23T12:05:27.517628",
@@ -1589,6 +1614,7 @@
     "https://openai.com/index/dali-rajic-chief-revenue-officer": "2026-08-14T12:05:20.145013",
     "https://openai.com/index/daybreak-models-are-now-available-on-aws": "2026-08-12T12:05:24.276883",
     "https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia": "2026-08-25T12:05:53.813101",
+    "https://openai.com/index/expanding-our-presence-in-brazil": "2026-08-27T12:09:26.449619",
     "https://openai.com/index/gpt-5-6-in-kiro": "2026-08-25T12:05:53.813101",
     "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work": "2026-07-27T12:04:48.798191",
     "https://openai.com/index/how-news-organizations-are-using-ai": "2026-07-23T12:05:27.517628",
