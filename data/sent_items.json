@@ -51,7 +51,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "8a3827f0fab4",
-      "last_seen_at": "2026-08-27T12:02:47.658029",
+      "last_seen_at": "2026-08-28T12:01:10.836257",
       "title": "Claude Code Overview",
       "updated_at": "2026-08-22T12:05:37.902560"
     },
@@ -178,7 +178,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "d701c5964c25",
-      "last_seen_at": "2026-08-27T12:02:47.658029",
+      "last_seen_at": "2026-08-28T12:01:10.836257",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-08-22T12:05:37.902560"
     },
@@ -218,7 +218,7 @@
         "Usage policy"
       ],
       "content_hash": "c3942e16ce32",
-      "last_seen_at": "2026-08-27T12:02:47.658029",
+      "last_seen_at": "2026-08-28T12:01:10.836257",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-08-11T12:05:03.934043"
     }
@@ -609,6 +609,13 @@
       "title": "Introducing Claude Opus 5",
       "url": "https://simonwillison.net/2026/Jul/24/introducing-claude-opus-5/#atom-everything"
     },
+    "46dd39aabde13c536ae58e7c6929ddc8b1da8a9d": {
+      "kind": "Blog",
+      "sent_at": "2026-08-28T12:07:21.899909",
+      "source": "Martin Fowler",
+      "title": "Making Your Data Ready for Agentic AI",
+      "url": "https://martinfowler.com/articles/making-data-ready-for-agentic-ai.html"
+    },
     "47beb3f42234a61733c9e939714fe787d64880d1": {
       "kind": "Blog",
       "sent_at": "2026-08-11T12:05:03.934043",
@@ -685,13 +692,6 @@
       "source": "Simon Willison",
       "title": "Adding a custom MCP server to Claude and ChatGPT",
       "url": "https://simonwillison.net/2026/Jul/29/mcp-in-claude-and-chatgpt/#atom-everything"
-    },
-    "5525445d8f694329a84ddaa639a653d20e8fee0c": {
-      "kind": "Blog",
-      "sent_at": "2026-07-14T12:04:51.246654",
-      "source": "Anthropic Docs",
-      "title": "Claude Code Tutorials",
-      "url": "https://docs.anthropic.com/en/docs/claude-code/tutorials"
     },
     "5533ed7f37adfd9da6989121d3c85e7367d840c2": {
       "kind": "Blog",
@@ -798,19 +798,19 @@
       "title": "The Orchestrator's Tax",
       "url": "https://martinfowler.com/articles/orchestrator-tax.html"
     },
-    "712a2dd08a34e7d0f5b951d9b738446db58e1a69": {
-      "kind": "Paper",
-      "sent_at": "2026-07-14T12:04:51.246654",
-      "source": "arXiv",
-      "title": "Agentic Routing: The Harness-Native Data Flywheel",
-      "url": "http://arxiv.org/abs/2607.11399v1"
-    },
     "71c5781a8cbdd261c249d609fa9b56fca90dff65": {
       "kind": "Blog",
       "sent_at": "2026-08-18T12:05:26.170179",
       "source": "Neon Blog",
       "title": "LLMs belong in your backend",
       "url": "https://neon.com/blog/llms-belong-in-your-backend"
+    },
+    "756244098b69232a7cc2a26da66c18a99da73b59": {
+      "kind": "Blog",
+      "sent_at": "2026-08-28T12:07:21.899909",
+      "source": "Google DeepMind",
+      "title": "Piloting the world's first double-blind AI evaluations",
+      "url": "https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/"
     },
     "75c3cacc0f27ce15127ad248eb14bb394a301030": {
       "kind": "Paper",
@@ -1036,6 +1036,13 @@
       "title": "OpenForgeRL: Train Harness-native Agents in Any Environment",
       "url": "http://arxiv.org/abs/2607.21557v1"
     },
+    "9e4cfc70ee9a221ea3481bd39441beec73e25e34": {
+      "kind": "Blog",
+      "sent_at": "2026-08-28T12:07:21.899909",
+      "source": "Simon Willison",
+      "title": "Breaking Claude Code Opus 5 Auto Mode",
+      "url": "https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/"
+    },
     "9f349159ac945dc48077254a4d6e54c34fc01523": {
       "kind": "Blog",
       "sent_at": "2026-07-26T12:04:25.368884",
@@ -1084,6 +1091,13 @@
       "source": "Neon Blog",
       "title": "CommSync Runs Text, Vector, and Hybrid Search on Postgres with Lakebase Search",
       "url": "https://neon.com/blog/commsync-runs-text-vector-and-hybrid-search-on-postgres-with-lakebase-search"
+    },
+    "a98b574014362123a0d6c4901df005f33f048653": {
+      "kind": "Paper",
+      "sent_at": "2026-08-28T12:07:21.899909",
+      "source": "arXiv",
+      "title": "Persona-Execution Separation: An Architecture Pattern for Evolving LLM Agents under Execution Audit",
+      "url": "http://arxiv.org/abs/2608.27427v1"
     },
     "a9c1ccf58870124ef3fbc054f59165a82bde0276": {
       "kind": "Blog",
@@ -1155,13 +1169,6 @@
       "title": "Reverse-engineering is cheap now",
       "url": "https://simonwillison.net/2026/Jul/20/cheap-reverse-engineering/#atom-everything"
     },
-    "bc0df7079a9f395f0561adcbce0bb0af9228a12e": {
-      "kind": "Blog",
-      "sent_at": "2026-07-14T12:04:51.246654",
-      "source": "Neon Blog",
-      "title": "Introducing @neon/sdk, our new TypeScript client for the Neon API",
-      "url": "https://neon.com/blog/neon-sdk"
-    },
     "bc4d73f4213f69a7545b6eb5f53273e333556b6e": {
       "kind": "Blog",
       "sent_at": "2026-08-01T12:04:59.132580",
@@ -1210,6 +1217,13 @@
       "source": "Martin Fowler",
       "title": "TDD inside the agent loop - theater or actual value?",
       "url": "https://martinfowler.com/articles/exploring-gen-ai/tdd-in-the-agent-loop.html"
+    },
+    "bf06e3e99d680ee7c4d6561cb73b2778eb7441ad": {
+      "kind": "Paper",
+      "sent_at": "2026-08-28T12:07:21.899909",
+      "source": "arXiv",
+      "title": "FaulT-Bench: Towards Benchmarking Network Troubleshooting LLM Agents under Unreliable User Tickets",
+      "url": "http://arxiv.org/abs/2608.27021v1"
     },
     "c1716a896bfd223af4cede8b7aad12a198eb7ee8": {
       "kind": "Paper",
@@ -1273,13 +1287,6 @@
       "source": "arXiv",
       "title": "PeakBench: Benchmarking Resource-Aware Tool Invocation in LLM Agents",
       "url": "http://arxiv.org/abs/2608.24509v1"
-    },
-    "d3dbd70d787f761e2627f95b435debaece63ffec": {
-      "kind": "Blog",
-      "sent_at": "2026-07-14T12:04:51.246654",
-      "source": "Martin Fowler",
-      "title": "Fragments: July 13",
-      "url": "https://martinfowler.com/fragments/2026-07-13.html"
     },
     "d4f44bcc1e7b751864b676b436ceb42e9c8b3486": {
       "kind": "Blog",
@@ -1477,13 +1484,6 @@
       "title": "Benchmarking Opus 5 on SlopCodeBench",
       "url": "https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/benchmarking-opus-5-on-slop-code-bench.md"
     },
-    "ff455be7002eafc4db4cc2b045f1c65bbd9699a2": {
-      "kind": "Blog",
-      "sent_at": "2026-07-14T12:04:51.246654",
-      "source": "Simon Willison",
-      "title": "datasette code-frequency chart on GitHub",
-      "url": "https://simonwillison.net/2026/Jul/13/datasette-code-frequency/#atom-everything"
-    },
     "ffb7474fffddbc041f8daf7e79813ce080407b03": {
       "kind": "Paper",
       "sent_at": "2026-08-14T12:05:20.144897",
@@ -1517,6 +1517,7 @@
     "https://blog.cloudflare.com/cloudflare-sase-sse-gartner-magic-quadrants-2026/": "2026-08-06T12:05:02.260633",
     "https://blog.cloudflare.com/community-program-refresh/": "2026-08-08T12:05:05.404940",
     "https://blog.cloudflare.com/ddos-threat-report-2026-h1/": "2026-08-12T12:05:24.276883",
+    "https://blog.cloudflare.com/dns-cache-memory-optimization-1111/": "2026-08-28T12:07:21.900041",
     "https://blog.cloudflare.com/dnssec-nta-ede-33/": "2026-07-15T12:06:44.768871",
     "https://blog.cloudflare.com/fedramp-class-d-certification/": "2026-08-11T12:05:03.934309",
     "https://blog.cloudflare.com/good-and-bad-agentic-behaviors/": "2026-08-08T12:05:05.404940",
@@ -1524,7 +1525,6 @@
     "https://blog.cloudflare.com/how-we-use-ai-with-cloudflare-os/": "2026-08-06T12:05:02.260633",
     "https://blog.cloudflare.com/internal-dns/": "2026-07-21T12:04:54.370956",
     "https://blog.cloudflare.com/introducing-cache-response-rules/": "2026-07-24T12:06:54.832037",
-    "https://blog.cloudflare.com/introducing-precursor/": "2026-07-14T12:04:51.246812",
     "https://blog.cloudflare.com/introducing-radar-researcher/": "2026-08-08T12:05:05.404940",
     "https://blog.cloudflare.com/mcp-security-updates/": "2026-08-15T12:04:35.309514",
     "https://blog.cloudflare.com/mcp-v2/": "2026-08-07T12:04:54.040292",
@@ -1592,7 +1592,6 @@
     "https://claude.com/blog/think-through-hard-problems-in-voice-mode": "2026-07-24T12:06:54.832037",
     "https://claude.com/blog/turning-conversation-into-knowledge-how-slack-builds-human-agent-teams": "2026-08-20T12:05:09.139167",
     "https://claude.com/blog/working-at-the-frontier-cursor": "2026-07-18T12:04:41.977625",
-    "https://claude.com/blog/working-at-the-frontier-how-hebbia-builds-ai-for-financial-diligence-that-cant-miss-a-detail": "2026-07-14T12:04:51.246812",
     "https://claude.com/blog/working-at-the-frontier-rakuten": "2026-07-21T12:04:54.370956",
     "https://claude.com/blog/working-at-the-frontier-why-base44-trusts-claude-fable-5-with-their-most-challenging-engineering-work": "2026-07-16T12:04:28.413151",
     "https://claude.com/blog/working-with-claude-fable-5-in-claude-cowork": "2026-07-17T12:05:04.882495",
@@ -1652,10 +1651,13 @@
     "https://www.anthropic.com/news/cognizant-anthropic": "2026-07-30T12:05:12.814865",
     "https://www.anthropic.com/news/donation-public-first-action": "2026-07-31T12:05:43.151129",
     "https://www.anthropic.com/news/economic-futures-research-fund-agenda": "2026-07-30T12:05:12.814865",
+    "https://www.anthropic.com/news/expanding-support-for-scientists": "2026-08-28T12:07:21.900041",
     "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards": "2026-08-09T12:04:40.116881",
     "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals": "2026-07-31T12:05:43.151129",
+    "https://www.anthropic.com/news/model-hardware-standard-research-preview": "2026-08-28T12:07:21.900041",
     "https://www.anthropic.com/news/rare-disease-research-grants": "2026-07-31T12:05:43.151129",
     "https://www.anthropic.com/news/redeploying-fable-5": "2026-08-17T12:05:16.445311",
-    "https://www.anthropic.com/news/tino-cuellar": "2026-08-09T12:04:40.116881"
+    "https://www.anthropic.com/news/tino-cuellar": "2026-08-09T12:04:40.116881",
+    "https://www.anthropic.com/news/wellbeing-research-grants": "2026-08-28T12:07:21.900041"
   }
 }
