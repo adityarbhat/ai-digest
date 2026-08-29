@@ -44,16 +44,16 @@
         "Quickstart : walk through your first real task, from exploring a codebase to committing a fix",
         "Store instructions and memories : give Claude persistent instructions with CLAUDE.md files and auto memory",
         "Common workflows and best practices : patterns for getting the most out of Claude Code",
-        "A harness for every task : how the Claude Code team uses dynamic workflows to orchestrate subagents at scale",
+        "A harness for every task : how the Claude Code team uses dynamic workflows to orchestrate many subagents at once",
         "Settings : customize Claude Code for your workflow",
         "Troubleshooting : solutions for common issues",
         "code.claude.com : demos, pricing, and product details",
         "Was this page helpful?"
       ],
-      "content_hash": "8a3827f0fab4",
-      "last_seen_at": "2026-08-28T12:01:10.836257",
+      "content_hash": "a060ba0e9231",
+      "last_seen_at": "2026-08-29T12:07:07.220173",
       "title": "Claude Code Overview",
-      "updated_at": "2026-08-22T12:05:37.902560"
+      "updated_at": "2026-08-29T12:07:07.220173"
     },
     "https://docs.anthropic.com/en/docs/claude-code/tutorials": {
       "blocks": [
@@ -178,7 +178,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "d701c5964c25",
-      "last_seen_at": "2026-08-28T12:01:10.836257",
+      "last_seen_at": "2026-08-29T12:01:09.312166",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-08-22T12:05:37.902560"
     },
@@ -218,7 +218,7 @@
         "Usage policy"
       ],
       "content_hash": "c3942e16ce32",
-      "last_seen_at": "2026-08-28T12:01:10.836257",
+      "last_seen_at": "2026-08-29T12:01:09.312166",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-08-11T12:05:03.934043"
     }
@@ -307,13 +307,6 @@
       "source": "Hacker News",
       "title": "DeepSeek-V4-Flash Update",
       "url": "https://api-docs.deepseek.com/updates/"
-    },
-    "11ce22c4ab7db7cd67502f26ed1cff97a34da985": {
-      "kind": "Blog",
-      "sent_at": "2026-07-15T12:06:44.768708",
-      "source": "Simon Willison",
-      "title": "Quoting Armin Ronacher",
-      "url": "https://simonwillison.net/2026/Jul/14/armin-ronacher/#atom-everything"
     },
     "11efb81118370c1137b12aea532f9eea21d36cc1": {
       "kind": "Paper",
@@ -469,13 +462,6 @@
       "title": "ComponentBench: Diagnosing Component-Level Failures in Computer-Use Agents",
       "url": "http://arxiv.org/abs/2608.18307v1"
     },
-    "3001b897e50f3ff7329d8cfd7a261f23500dda3a": {
-      "kind": "Paper",
-      "sent_at": "2026-07-15T12:06:44.768708",
-      "source": "arXiv",
-      "title": "Track, Rank, Crack: Epistemic Working Memory Scales Multi-Hop Reasoning in Language Agents",
-      "url": "http://arxiv.org/abs/2607.12267v1"
-    },
     "344f6951029eb02db725649315306ffc9a4d6b33": {
       "kind": "Blog",
       "sent_at": "2026-08-04T12:05:16.424733",
@@ -517,13 +503,6 @@
       "source": "Simon Willison",
       "title": "Quoting Boris Cherny",
       "url": "https://simonwillison.net/2026/Jul/25/boris-cherny/#atom-everything"
-    },
-    "3b175dd1938e21cd9c200cef7df3e863a9afd3ff": {
-      "kind": "Paper",
-      "sent_at": "2026-07-15T12:06:44.768708",
-      "source": "arXiv",
-      "title": "Who Grades the Grader? Co-Evolving Evaluation Metrics and Skills for Self-Improving LLM Agents",
-      "url": "http://arxiv.org/abs/2607.12790v1"
     },
     "3bb41b08022edd5a69d9014b49090236b4c77184": {
       "kind": "Blog",
@@ -679,13 +658,6 @@
       "title": "DeepSeek V4 Pro 0813 (on OpenRouter)",
       "url": "https://simonwillison.net/2026/Aug/12/deepseek-v4-pro-0813/"
     },
-    "53b35577b479def74e4d1370a9b12c9d9e71f2b0": {
-      "kind": "Blog",
-      "sent_at": "2026-07-15T12:06:44.768708",
-      "source": "OpenAI",
-      "title": "How to manage AI investments in the agentic era",
-      "url": "https://openai.com/index/managing-ai-investments-in-agentic-era"
-    },
     "54ca777d322dfb2694c20b0e4db9e4725c4b2b2b": {
       "kind": "Blog",
       "sent_at": "2026-07-30T12:05:12.814703",
@@ -769,6 +741,13 @@
       "source": "Cloudflare Blog",
       "title": "How we built a software factory to drive Astro\u2019s GitHub issue count to zero",
       "url": "https://blog.cloudflare.com/astro-issue-triage/"
+    },
+    "6732541e6d4d360178ac2c74e0f1f8a87fe44cff": {
+      "kind": "Blog",
+      "sent_at": "2026-08-29T12:07:07.220173",
+      "source": "Anthropic Docs",
+      "title": "Claude Code Overview",
+      "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
     },
     "6ac0d8f98914bc1405c51bc83929ec3d7c379b95": {
       "kind": "Blog",
@@ -867,6 +846,13 @@
       "source": "Cloudflare Blog",
       "title": "Catching rogue AI behavior with identity-aware analytics",
       "url": "https://blog.cloudflare.com/identity-aware-ai-gateway/"
+    },
+    "82e10891687d4b94de2c79713617f714028c1c3b": {
+      "kind": "Paper",
+      "sent_at": "2026-08-29T12:07:07.220173",
+      "source": "arXiv",
+      "title": "When Tool Outputs Become Commands: Separating Action Induction from Runtime Authorization in Tool-Augmented LLM Agents",
+      "url": "http://arxiv.org/abs/2608.27146v1"
     },
     "83d0c8466b2b53022d341264ebd340386322a019": {
       "kind": "Blog",
@@ -1197,13 +1183,6 @@
       "title": "Our position on open-weights models",
       "url": "https://www.anthropic.com/news/position-open-weights-models"
     },
-    "bdb7100fcdf54bfc3940d952dd5bd2e2d3066314": {
-      "kind": "Blog",
-      "sent_at": "2026-07-15T12:06:44.768708",
-      "source": "Anthropic Docs",
-      "title": "Claude Code Overview",
-      "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
-    },
     "bed7c3e90c9bd98e7e68a4ef9783a173f1748015": {
       "kind": "Blog",
       "sent_at": "2026-08-22T12:05:37.902560",
@@ -1490,13 +1469,6 @@
       "source": "arXiv",
       "title": "Beyond Final Scores: A Systematic Evaluation of Agents for Long-Horizon AI Research and Development",
       "url": "http://arxiv.org/abs/2608.13417v1"
-    },
-    "fff2ef8bbf94f3a74deb2133455209f7aa13b1a4": {
-      "kind": "Blog",
-      "sent_at": "2026-07-15T12:06:44.768708",
-      "source": "Martin Fowler",
-      "title": "DSLs Enable Reliable Use of LLMs",
-      "url": "https://martinfowler.com/articles/llm-and-dsls.html"
     }
   },
   "watchlist_seen": {
@@ -1509,6 +1481,7 @@
     "https://blog.cloudflare.com/bgp-origin-attribute/": "2026-07-25T12:04:37.529743",
     "https://blog.cloudflare.com/billable-usage-api/": "2026-08-04T12:05:16.424928",
     "https://blog.cloudflare.com/bot-preference-sync/": "2026-08-22T12:05:37.902741",
+    "https://blog.cloudflare.com/botbase-for-operators/": "2026-08-29T12:07:07.220267",
     "https://blog.cloudflare.com/cdnjs-dev-platform-migration/": "2026-07-31T12:05:43.151129",
     "https://blog.cloudflare.com/certificate-transparency-monitoring-ga/": "2026-08-14T12:05:20.145013",
     "https://blog.cloudflare.com/ci-workflows/": "2026-08-05T12:05:25.893222",
@@ -1518,7 +1491,6 @@
     "https://blog.cloudflare.com/community-program-refresh/": "2026-08-08T12:05:05.404940",
     "https://blog.cloudflare.com/ddos-threat-report-2026-h1/": "2026-08-12T12:05:24.276883",
     "https://blog.cloudflare.com/dns-cache-memory-optimization-1111/": "2026-08-28T12:07:21.900041",
-    "https://blog.cloudflare.com/dnssec-nta-ede-33/": "2026-07-15T12:06:44.768871",
     "https://blog.cloudflare.com/fedramp-class-d-certification/": "2026-08-11T12:05:03.934309",
     "https://blog.cloudflare.com/good-and-bad-agentic-behaviors/": "2026-08-08T12:05:05.404940",
     "https://blog.cloudflare.com/grpc-workers/": "2026-08-04T12:05:16.424928",
@@ -1556,6 +1528,7 @@
     "https://claude.com/blog/claude-code-guide-for-startups": "2026-08-21T12:05:15.075760",
     "https://claude.com/blog/claude-enterprise-inference-hooks": "2026-08-06T12:05:02.260633",
     "https://claude.com/blog/claude-for-foundation-models": "2026-07-26T12:04:25.368996",
+    "https://claude.com/blog/claude-for-teachers-now-available-for-schools-and-districts": "2026-08-29T12:07:07.220267",
     "https://claude.com/blog/claude-in-chrome-generally-available": "2026-08-27T12:09:26.449619",
     "https://claude.com/blog/claude-managed-agents": "2026-07-28T12:04:39.015678",
     "https://claude.com/blog/claude-managed-agents-memory": "2026-07-27T12:04:48.798191",
@@ -1572,6 +1545,7 @@
     "https://claude.com/blog/harnessing-claudes-intelligence": "2026-07-28T12:04:39.015678",
     "https://claude.com/blog/how-abc-legal-turned-every-employee-into-a-builder-with-claude-managed-agents": "2026-08-18T12:05:26.170377",
     "https://claude.com/blog/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep": "2026-08-25T12:05:53.813101",
+    "https://claude.com/blog/how-anthropic-employees-use-claude-tag": "2026-08-29T12:07:07.220267",
     "https://claude.com/blog/how-anthropic-secures-its-ai-native-software-development-lifecycle": "2026-07-22T12:06:38.269628",
     "https://claude.com/blog/how-anthropics-business-development-team-uses-claude-to-run-inbound-and-outbound-at-scale": "2026-08-11T12:05:03.934309",
     "https://claude.com/blog/how-datadog-built-a-universal-machine-tool-for-claude-code": "2026-07-22T12:06:38.269628",
@@ -1628,6 +1602,7 @@
     "https://openai.com/index/offering-zero-data-retention-for-frontier-models": "2026-08-20T12:05:09.139167",
     "https://openai.com/index/openai-and-apa-partner-to-advance-responsible-ai": "2026-08-07T12:04:54.040292",
     "https://openai.com/index/openai-joins-ports-pike-project": "2026-08-18T12:05:26.170377",
+    "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex": "2026-08-29T12:07:07.220267",
     "https://openai.com/index/pacing-model-development-cyber-capabilities": "2026-08-19T12:05:01.971172",
     "https://openai.com/index/previewing-ultrafast": "2026-08-14T12:05:20.145013",
     "https://openai.com/index/replit": "2026-08-20T12:05:09.139167",
@@ -1644,8 +1619,6 @@
     "https://openai.com/index/why-teens-deserve-access-safe-ai": "2026-07-17T12:05:04.882495",
     "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy": "2026-08-09T12:04:40.116881",
     "https://www.anthropic.com/news/anthropic-economic-index-connector": "2026-07-30T12:05:12.814865",
-    "https://www.anthropic.com/news/canadian-ai-research": "2026-07-15T12:06:44.768871",
-    "https://www.anthropic.com/news/claude-for-teachers": "2026-07-15T12:06:44.768871",
     "https://www.anthropic.com/news/claude-sonnet-5": "2026-08-16T12:04:46.299365",
     "https://www.anthropic.com/news/claude-text-watermark": "2026-08-16T12:04:46.299365",
     "https://www.anthropic.com/news/cognizant-anthropic": "2026-07-30T12:05:12.814865",
