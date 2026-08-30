@@ -51,7 +51,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "a060ba0e9231",
-      "last_seen_at": "2026-08-29T12:07:07.220173",
+      "last_seen_at": "2026-08-30T12:00:43.324644",
       "title": "Claude Code Overview",
       "updated_at": "2026-08-29T12:07:07.220173"
     },
@@ -178,7 +178,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "d701c5964c25",
-      "last_seen_at": "2026-08-29T12:01:09.312166",
+      "last_seen_at": "2026-08-30T12:00:43.324644",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-08-22T12:05:37.902560"
     },
@@ -218,7 +218,7 @@
         "Usage policy"
       ],
       "content_hash": "c3942e16ce32",
-      "last_seen_at": "2026-08-29T12:01:09.312166",
+      "last_seen_at": "2026-08-30T12:00:43.324644",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-08-11T12:05:03.934043"
     }
@@ -364,13 +364,6 @@
       "title": "DeepSeek V4 Flash 0731 Intelligence, Performance and Price Analysis",
       "url": "https://artificialanalysis.ai/models/deepseek-v4-flash"
     },
-    "1d3544fd2c28d9bb1b6ff9478493726a752a2781": {
-      "kind": "Paper",
-      "sent_at": "2026-07-16T12:04:28.413025",
-      "source": "arXiv",
-      "title": "CAVA: Canonical Action Verification and Attestation for Runtime Governance of Agentic AI Systems",
-      "url": "http://arxiv.org/abs/2607.13716v1"
-    },
     "1dec59c340b92f4d6920513e094ba01ac1300550": {
       "kind": "Paper",
       "sent_at": "2026-07-23T12:05:27.517520",
@@ -384,13 +377,6 @@
       "source": "Cloudflare Blog",
       "title": "Give any website a WebMCP interface",
       "url": "https://blog.cloudflare.com/webmcp/"
-    },
-    "20ac0d5e386aef6d3e12a95b698effaf874216a5": {
-      "kind": "Blog",
-      "sent_at": "2026-07-16T12:04:28.413025",
-      "source": "Simon Willison",
-      "title": "Mermaid to Unicode box art (grok-mermaid)",
-      "url": "https://simonwillison.net/2026/Jul/16/grok-mermaid/#atom-everything"
     },
     "229180da473b57507315a17ddea2e0fd8c117a29": {
       "kind": "Blog",
@@ -615,13 +601,6 @@
       "source": "Hacker News",
       "title": "What Is a Harness?",
       "url": "https://earendil.com/posts/what-is-a-harness/"
-    },
-    "4cd15b3b3ef6e47dd1fe148a09cf218a13c8f079": {
-      "kind": "Blog",
-      "sent_at": "2026-07-16T12:04:28.413025",
-      "source": "Neon Blog",
-      "title": "Test out the Neon backend: Object Storage, Functions, and AI Gateway are beta",
-      "url": "https://neon.com/blog/neon-backend-is-beta"
     },
     "4e0a71f5b2961d29b75db962aa4ac49a8f44cec4": {
       "kind": "Blog",
@@ -1050,13 +1029,6 @@
       "title": "llm-anthropic 0.27",
       "url": "https://simonwillison.net/2026/Aug/24/llm-anthropic/"
     },
-    "a0175822bd744fdee4fb61ad128cc34177f7fa08": {
-      "kind": "Paper",
-      "sent_at": "2026-07-16T12:04:28.413025",
-      "source": "arXiv",
-      "title": "Set-shifting Behavioral Test for Harnessed Agents",
-      "url": "http://arxiv.org/abs/2607.13396v1"
-    },
     "a4fd6d6ad13d4229708e9083826b2ab02da2779d": {
       "kind": "Paper",
       "sent_at": "2026-07-30T12:05:12.814703",
@@ -1119,13 +1091,6 @@
       "source": "FastAPI Releases",
       "title": "0.140.11",
       "url": "https://github.com/fastapi/fastapi/releases/tag/0.140.11"
-    },
-    "b2dfedca7e2ddcf248751db0d9cb726187d53144": {
-      "kind": "Blog",
-      "sent_at": "2026-07-16T12:04:28.413025",
-      "source": "HuggingFace",
-      "title": "What building Shippy taught us about building agents",
-      "url": "https://huggingface.co/blog/allenai/shippy-tech-blog"
     },
     "b79581fec43ae0221fa6da291f287d63577cf828": {
       "kind": "Paper",
@@ -1567,10 +1532,8 @@
     "https://claude.com/blog/turning-conversation-into-knowledge-how-slack-builds-human-agent-teams": "2026-08-20T12:05:09.139167",
     "https://claude.com/blog/working-at-the-frontier-cursor": "2026-07-18T12:04:41.977625",
     "https://claude.com/blog/working-at-the-frontier-rakuten": "2026-07-21T12:04:54.370956",
-    "https://claude.com/blog/working-at-the-frontier-why-base44-trusts-claude-fable-5-with-their-most-challenging-engineering-work": "2026-07-16T12:04:28.413151",
     "https://claude.com/blog/working-with-claude-fable-5-in-claude-cowork": "2026-07-17T12:05:04.882495",
     "https://openai.com/index/a-scorecard-for-the-ai-age": "2026-07-18T12:04:41.977625",
-    "https://openai.com/index/advancing-ai-safety-through-state-and-federal-action": "2026-07-16T12:04:28.413151",
     "https://openai.com/index/advancing-responsible-ai-across-europe": "2026-07-31T12:05:43.151129",
     "https://openai.com/index/advancing-the-next-era-of-national-science": "2026-07-23T12:05:27.517628",
     "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6": "2026-07-31T12:05:43.151129",
@@ -1615,7 +1578,6 @@
     "https://openai.com/index/the-defenders-window": "2026-08-18T12:05:26.170377",
     "https://openai.com/index/the-full-stack-behind-abundant-intelligence": "2026-08-26T12:07:42.286813",
     "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models": "2026-08-05T12:05:25.893222",
-    "https://openai.com/index/unlocking-self-improvement-gpt-red": "2026-07-16T12:04:28.413151",
     "https://openai.com/index/why-teens-deserve-access-safe-ai": "2026-07-17T12:05:04.882495",
     "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy": "2026-08-09T12:04:40.116881",
     "https://www.anthropic.com/news/anthropic-economic-index-connector": "2026-07-30T12:05:12.814865",
