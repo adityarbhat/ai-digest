@@ -51,7 +51,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "a060ba0e9231",
-      "last_seen_at": "2026-08-30T12:00:43.324644",
+      "last_seen_at": "2026-08-31T12:00:47.488993",
       "title": "Claude Code Overview",
       "updated_at": "2026-08-29T12:07:07.220173"
     },
@@ -178,7 +178,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "d701c5964c25",
-      "last_seen_at": "2026-08-30T12:00:43.324644",
+      "last_seen_at": "2026-08-31T12:00:47.488993",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-08-22T12:05:37.902560"
     },
@@ -218,7 +218,7 @@
         "Usage policy"
       ],
       "content_hash": "c3942e16ce32",
-      "last_seen_at": "2026-08-30T12:00:43.324644",
+      "last_seen_at": "2026-08-31T12:00:47.488993",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-08-11T12:05:03.934043"
     }
@@ -819,6 +819,13 @@
       "title": "Discovering cryptographic weaknesses with Claude",
       "url": "https://simonwillison.net/2026/Jul/28/discovering-cryptographic-weaknesses-with-claude/#atom-everything"
     },
+    "7f538dfb4842e300cdbe35064aa62aea04a34c6d": {
+      "kind": "Blog",
+      "sent_at": "2026-08-31T12:06:21.634118",
+      "source": "Hacker News",
+      "title": "Claude Session URL appended to commit messages and PR descriptions by default",
+      "url": "https://github.com/anthropics/claude-code/issues/66504"
+    },
     "8183ac2c9c0456026120c0fb59876b145e866c2f": {
       "kind": "Blog",
       "sent_at": "2026-08-06T12:05:02.260439",
@@ -867,13 +874,6 @@
       "source": "Render Blog",
       "title": "Company August 02, 2026 AssemblyAI: A voice agent can fail without throwing an error Hazal Mestci",
       "url": "https://render.com/blog/assemblyai-a-voice-agent-can-fail-without-throwing-an-error"
-    },
-    "875bf4a1137db8b1c9c0066b1d83ace248571cc1": {
-      "kind": "Paper",
-      "sent_at": "2026-07-17T12:05:04.882361",
-      "source": "arXiv",
-      "title": "Proof-or-Stop: Don't Trust the Agent, Trust the Evidence -- Loop Engineering for Verifiable Evidence-Gated Lifecycle Control",
-      "url": "http://arxiv.org/abs/2607.14890v1"
     },
     "8811334ebd7086b12df1d278160193574973f275": {
       "kind": "Blog",
@@ -951,13 +951,6 @@
       "source": "Anthropic Docs",
       "title": "Claude Code Tutorials",
       "url": "https://docs.anthropic.com/en/docs/claude-code/tutorials"
-    },
-    "987ae004f896e5ce9cac897c7808155e372470a0": {
-      "kind": "Blog",
-      "sent_at": "2026-07-17T12:05:04.882361",
-      "source": "Simon Willison",
-      "title": "Quoting Thibault Sottiaux",
-      "url": "https://simonwillison.net/2026/Jul/16/bad-codex-bug/#atom-everything"
     },
     "98942281a29989295af11c65042c08000044b5f4": {
       "kind": "Blog",
@@ -1056,13 +1049,6 @@
       "source": "arXiv",
       "title": "Persona-Execution Separation: An Architecture Pattern for Evolving LLM Agents under Execution Audit",
       "url": "http://arxiv.org/abs/2608.27427v1"
-    },
-    "a9c1ccf58870124ef3fbc054f59165a82bde0276": {
-      "kind": "Blog",
-      "sent_at": "2026-07-17T12:05:04.882361",
-      "source": "Anthropic Docs",
-      "title": "Claude Code Tutorials",
-      "url": "https://docs.anthropic.com/en/docs/claude-code/tutorials"
     },
     "abde5f6940b35107e81762cb43edfea83c11b770": {
       "kind": "Blog",
@@ -1407,13 +1393,6 @@
       "title": "Stealing Reasoning Traces from Proprietary LLM APIs",
       "url": "https://simonwillison.net/2026/Aug/11/stealing-reasoning-traces/#atom-everything"
     },
-    "f8de57a996e4dd74a5af487ad3d0abfecf1f9405": {
-      "kind": "Paper",
-      "sent_at": "2026-07-17T12:05:04.882361",
-      "source": "arXiv",
-      "title": "MCPEvol-Bench: Benchmarking LLM Agent Performance Across Dynamic Evolutions of MCP Servers",
-      "url": "http://arxiv.org/abs/2607.14642v1"
-    },
     "fc10e23380944a687673a435919c47ec90024b22": {
       "kind": "Blog",
       "sent_at": "2026-08-20T12:05:09.139017",
@@ -1479,7 +1458,6 @@
     "https://blog.cloudflare.com/workers-protected-by-access/": "2026-08-15T12:04:35.309514",
     "https://claude.com/blog/a-guide-to-cost-visibility-and-control-in-claude": "2026-08-05T12:05:25.893222",
     "https://claude.com/blog/ai-ci-cd-on-call": "2026-08-19T12:05:01.971172",
-    "https://claude.com/blog/ai-code-migration": "2026-07-17T12:05:04.882495",
     "https://claude.com/blog/anthropics-approach-to-teaching-and-learning-ai": "2026-08-21T12:05:15.075760",
     "https://claude.com/blog/artifacts-in-claude-code": "2026-08-04T12:05:16.424928",
     "https://claude.com/blog/auto-mode-default-in-claude-code": "2026-08-08T12:05:05.404940",
@@ -1532,7 +1510,6 @@
     "https://claude.com/blog/turning-conversation-into-knowledge-how-slack-builds-human-agent-teams": "2026-08-20T12:05:09.139167",
     "https://claude.com/blog/working-at-the-frontier-cursor": "2026-07-18T12:04:41.977625",
     "https://claude.com/blog/working-at-the-frontier-rakuten": "2026-07-21T12:04:54.370956",
-    "https://claude.com/blog/working-with-claude-fable-5-in-claude-cowork": "2026-07-17T12:05:04.882495",
     "https://openai.com/index/a-scorecard-for-the-ai-age": "2026-07-18T12:04:41.977625",
     "https://openai.com/index/advancing-responsible-ai-across-europe": "2026-07-31T12:05:43.151129",
     "https://openai.com/index/advancing-the-next-era-of-national-science": "2026-07-23T12:05:27.517628",
@@ -1578,7 +1555,6 @@
     "https://openai.com/index/the-defenders-window": "2026-08-18T12:05:26.170377",
     "https://openai.com/index/the-full-stack-behind-abundant-intelligence": "2026-08-26T12:07:42.286813",
     "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models": "2026-08-05T12:05:25.893222",
-    "https://openai.com/index/why-teens-deserve-access-safe-ai": "2026-07-17T12:05:04.882495",
     "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy": "2026-08-09T12:04:40.116881",
     "https://www.anthropic.com/news/anthropic-economic-index-connector": "2026-07-30T12:05:12.814865",
     "https://www.anthropic.com/news/claude-sonnet-5": "2026-08-16T12:04:46.299365",
