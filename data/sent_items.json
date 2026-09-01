@@ -51,7 +51,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "a060ba0e9231",
-      "last_seen_at": "2026-08-31T12:00:47.488993",
+      "last_seen_at": "2026-09-01T12:01:12.951729",
       "title": "Claude Code Overview",
       "updated_at": "2026-08-29T12:07:07.220173"
     },
@@ -178,7 +178,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "d701c5964c25",
-      "last_seen_at": "2026-08-31T12:00:47.488993",
+      "last_seen_at": "2026-09-01T12:01:12.951729",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-08-22T12:05:37.902560"
     },
@@ -218,7 +218,7 @@
         "Usage policy"
       ],
       "content_hash": "c3942e16ce32",
-      "last_seen_at": "2026-08-31T12:00:47.488993",
+      "last_seen_at": "2026-09-01T12:01:12.951729",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-08-11T12:05:03.934043"
     }
@@ -413,13 +413,6 @@
       "title": "How Castform + Neon Beats Frontier Models on Price and Efficiency",
       "url": "https://neon.com/blog/how-castform-neon-beats-frontier-models-on-price-and-efficiency"
     },
-    "27ebae18f6fbdd9fe92363219c62b2305f180f96": {
-      "kind": "Blog",
-      "sent_at": "2026-07-18T12:04:41.977423",
-      "source": "Simon Willison",
-      "title": "Claude make Fable 5 permanent",
-      "url": "https://simonwillison.net/2026/Jul/18/claude-make-fable-5-permanent/#atom-everything"
-    },
     "2929a0a48a55c2a924d4c762101bd59574a039ec": {
       "kind": "Blog",
       "sent_at": "2026-08-20T12:05:09.139017",
@@ -454,6 +447,13 @@
       "source": "InfoQ Architecture Articles",
       "title": "Article: Enabling Evolutionary Architecture Through the Preservation of Change Locality",
       "url": "https://www.infoq.com/articles/evolutionary-architecture-change-locality/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Architecture-articles"
+    },
+    "34da11b1abba483ade5efab37e0fb553e1aa0d14": {
+      "kind": "Paper",
+      "sent_at": "2026-09-01T12:07:21.810335",
+      "source": "arXiv",
+      "title": "SkillZip Pro: Execution-Aware Dynamic Compression of Progressively Loaded Skills for Self-Evolving Agents",
+      "url": "http://arxiv.org/abs/2608.30785v1"
     },
     "369a5c66cfcb747d20317ecf10169d27ffec8304": {
       "kind": "Blog",
@@ -679,6 +679,13 @@
       "title": "Query Neon backend logs",
       "url": "https://neon.com/blog/query-neon-backend-logs"
     },
+    "5975f6bd29c7d2245aca5231af2a0ee47db040c4": {
+      "kind": "Blog",
+      "sent_at": "2026-09-01T12:07:21.810335",
+      "source": "Simon Willison",
+      "title": "Introducing wrapture",
+      "url": "https://simonwillison.net/2026/Aug/31/introducing-wrapture/"
+    },
     "5beb5956b9b19ff8cf27379be697385bc76bcc4e": {
       "kind": "Blog",
       "sent_at": "2026-08-07T12:04:54.040151",
@@ -763,6 +770,13 @@
       "title": "LLMs belong in your backend",
       "url": "https://neon.com/blog/llms-belong-in-your-backend"
     },
+    "7220f730119fec32eb62e0b7163a866f57836370": {
+      "kind": "Blog",
+      "sent_at": "2026-09-01T12:07:21.810335",
+      "source": "Hacker News",
+      "title": "Breaking Claude Code Opus 5 Auto Mode",
+      "url": "https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode/"
+    },
     "756244098b69232a7cc2a26da66c18a99da73b59": {
       "kind": "Blog",
       "sent_at": "2026-08-28T12:07:21.899909",
@@ -804,13 +818,6 @@
       "source": "arXiv",
       "title": "Agents in the Wild: Where Research Meets Deployment",
       "url": "http://arxiv.org/abs/2607.19336v1"
-    },
-    "7ed997d50e6ddb6631562f47a2b131bc64fd79ff": {
-      "kind": "Blog",
-      "sent_at": "2026-07-18T12:04:41.977423",
-      "source": "GitHub Engineering",
-      "title": "The cost of saying yes has changed",
-      "url": "https://github.blog/engineering/the-cost-of-saying-yes-has-changed/"
     },
     "7f1d8f8e10e520c355949a4fb6bdc0d0dc74563f": {
       "kind": "Blog",
@@ -1057,13 +1064,6 @@
       "title": "Claude Code Overview",
       "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
     },
-    "ad9cba1eac649259004080938514a95b8d31eda4": {
-      "kind": "Blog",
-      "sent_at": "2026-07-18T12:04:41.977423",
-      "source": "Netflix TechBlog",
-      "title": "In-House LLM Serving at Netflix",
-      "url": "https://netflixtechblog.com/in-house-llm-serving-at-netflix-a5a8e799ea2c?source=rss----2615bd06b42e---4"
-    },
     "adbd84d9bd28f5cc4869ad1ab3f95f637e3ea73a": {
       "kind": "Blog",
       "sent_at": "2026-08-05T12:05:25.893072",
@@ -1091,13 +1091,6 @@
       "source": "Hacker News",
       "title": "Claude: System Prompts",
       "url": "https://platform.claude.com/docs/en/release-notes/system-prompts"
-    },
-    "ba00c5b451b2e45cd77726c6cca09f30e84a89b1": {
-      "kind": "Blog",
-      "sent_at": "2026-07-18T12:04:41.977423",
-      "source": "Anthropic Docs",
-      "title": "Claude Code Overview",
-      "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
     },
     "bc0372996f34847f4489e4d5af16230ffa97822e": {
       "kind": "Blog",
@@ -1155,13 +1148,6 @@
       "title": "FaulT-Bench: Towards Benchmarking Network Troubleshooting LLM Agents under Unreliable User Tickets",
       "url": "http://arxiv.org/abs/2608.27021v1"
     },
-    "c1716a896bfd223af4cede8b7aad12a198eb7ee8": {
-      "kind": "Paper",
-      "sent_at": "2026-07-18T12:04:41.977423",
-      "source": "arXiv",
-      "title": "Setup Complete, Now You Are Compromised: Weaponizing Setup Instructions Against AI Coding Agents",
-      "url": "http://arxiv.org/abs/2607.15143v1"
-    },
     "c250c4ee9182cec8e639f35d9fe49fee83381016": {
       "kind": "Paper",
       "sent_at": "2026-08-15T12:04:35.309386",
@@ -1189,13 +1175,6 @@
       "source": "MIT Tech Review",
       "title": "The inside story on why OpenAI agents hacked Hugging Face",
       "url": "https://www.technologyreview.com/2026/08/26/1143013/the-inside-story-on-why-openai-agents-hacked-hugging-face/"
-    },
-    "c7f3f73bca9e2683a650c68b6c7a3e7164cc0dc6": {
-      "kind": "Paper",
-      "sent_at": "2026-07-18T12:04:41.977423",
-      "source": "arXiv",
-      "title": "Bridge Evidence: Static Retrieval Utility Does Not Predict Causal Utility in Multi-Step Agentic Search",
-      "url": "http://arxiv.org/abs/2607.15253v1"
     },
     "ca819bc60aba296049475a770b131238cd0ab520": {
       "kind": "Blog",
@@ -1372,6 +1351,13 @@
       "title": "Kimi K3, Qwen 3.8, and Anthropic's (Potential) Unravelling",
       "url": "https://www.emergingtrajectories.com/lh/frontier-lab-economics/"
     },
+    "f77525c37f5300732c037966242b570ba7b949e7": {
+      "kind": "Blog",
+      "sent_at": "2026-09-01T12:07:21.810335",
+      "source": "Neon Blog",
+      "title": "Autoscaling Lakebase Postgres",
+      "url": "https://neon.com/blog/autoscaling-lakebase-postgres"
+    },
     "f79f0e253ba4c4c92755b98650f7c89afa3e0d49": {
       "kind": "Paper",
       "sent_at": "2026-08-01T12:04:59.132580",
@@ -1440,6 +1426,7 @@
     "https://blog.cloudflare.com/grpc-workers/": "2026-08-04T12:05:16.424928",
     "https://blog.cloudflare.com/how-we-use-ai-with-cloudflare-os/": "2026-08-06T12:05:02.260633",
     "https://blog.cloudflare.com/internal-dns/": "2026-07-21T12:04:54.370956",
+    "https://blog.cloudflare.com/introducing-adaptive-intelligence/": "2026-09-01T12:07:21.810485",
     "https://blog.cloudflare.com/introducing-cache-response-rules/": "2026-07-24T12:06:54.832037",
     "https://blog.cloudflare.com/introducing-radar-researcher/": "2026-08-08T12:05:05.404940",
     "https://blog.cloudflare.com/mcp-security-updates/": "2026-08-15T12:04:35.309514",
@@ -1454,7 +1441,6 @@
     "https://blog.cloudflare.com/the-agent-access-model/": "2026-08-06T12:05:02.260633",
     "https://blog.cloudflare.com/total-eclipse-internet-traffic-iceland-spain-portugal/": "2026-08-14T12:05:20.145013",
     "https://blog.cloudflare.com/wallets/": "2026-08-05T12:05:25.893222",
-    "https://blog.cloudflare.com/wordpress-vulnerabilities/": "2026-07-18T12:04:41.977625",
     "https://blog.cloudflare.com/workers-protected-by-access/": "2026-08-15T12:04:35.309514",
     "https://claude.com/blog/a-guide-to-cost-visibility-and-control-in-claude": "2026-08-05T12:05:25.893222",
     "https://claude.com/blog/ai-ci-cd-on-call": "2026-08-19T12:05:01.971172",
@@ -1466,7 +1452,6 @@
     "https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders": "2026-08-22T12:05:37.902741",
     "https://claude.com/blog/bringing-mcp-2026-07-28-to-claude": "2026-07-29T12:05:05.943566",
     "https://claude.com/blog/building-verification-loops-in-claude-code-with-skills": "2026-07-23T12:05:27.517628",
-    "https://claude.com/blog/ciso-guide-to-agentic-ai": "2026-07-18T12:04:41.977625",
     "https://claude.com/blog/claude-code-desktop-redesign": "2026-07-27T12:04:48.798191",
     "https://claude.com/blog/claude-code-guide-for-startups": "2026-08-21T12:05:15.075760",
     "https://claude.com/blog/claude-enterprise-inference-hooks": "2026-08-06T12:05:02.260633",
@@ -1508,9 +1493,7 @@
     "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models": "2026-07-25T12:04:37.529743",
     "https://claude.com/blog/think-through-hard-problems-in-voice-mode": "2026-07-24T12:06:54.832037",
     "https://claude.com/blog/turning-conversation-into-knowledge-how-slack-builds-human-agent-teams": "2026-08-20T12:05:09.139167",
-    "https://claude.com/blog/working-at-the-frontier-cursor": "2026-07-18T12:04:41.977625",
     "https://claude.com/blog/working-at-the-frontier-rakuten": "2026-07-21T12:04:54.370956",
-    "https://openai.com/index/a-scorecard-for-the-ai-age": "2026-07-18T12:04:41.977625",
     "https://openai.com/index/advancing-responsible-ai-across-europe": "2026-07-31T12:05:43.151129",
     "https://openai.com/index/advancing-the-next-era-of-national-science": "2026-07-23T12:05:27.517628",
     "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6": "2026-07-31T12:05:43.151129",
@@ -1527,6 +1510,7 @@
     "https://openai.com/index/dali-rajic-chief-revenue-officer": "2026-08-14T12:05:20.145013",
     "https://openai.com/index/daybreak-models-are-now-available-on-aws": "2026-08-12T12:05:24.276883",
     "https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia": "2026-08-25T12:05:53.813101",
+    "https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads": "2026-09-01T12:07:21.810485",
     "https://openai.com/index/expanding-our-presence-in-brazil": "2026-08-27T12:09:26.449619",
     "https://openai.com/index/gpt-5-6-in-kiro": "2026-08-25T12:05:53.813101",
     "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work": "2026-07-27T12:04:48.798191",
@@ -1550,6 +1534,7 @@
     "https://openai.com/index/safety-alignment-long-horizon-models": "2026-07-21T12:04:54.370956",
     "https://openai.com/index/scientific-computing-agentic-ai": "2026-07-29T12:05:05.943566",
     "https://openai.com/index/strengthening-democratic-oversight-in-national-security": "2026-08-19T12:05:01.971172",
+    "https://openai.com/index/supporting-california-bill-advance-ai-youth-safety": "2026-09-01T12:07:21.810485",
     "https://openai.com/index/ten-advances-in-mathematics": "2026-08-01T12:04:59.132717",
     "https://openai.com/index/testing-ads-in-chatgpt": "2026-08-12T12:05:24.276883",
     "https://openai.com/index/the-defenders-window": "2026-08-18T12:05:26.170377",
@@ -1563,6 +1548,7 @@
     "https://www.anthropic.com/news/donation-public-first-action": "2026-07-31T12:05:43.151129",
     "https://www.anthropic.com/news/economic-futures-research-fund-agenda": "2026-07-30T12:05:12.814865",
     "https://www.anthropic.com/news/expanding-support-for-scientists": "2026-08-28T12:07:21.900041",
+    "https://www.anthropic.com/news/improving-alignment-security-efforts": "2026-09-01T12:07:21.810485",
     "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards": "2026-08-09T12:04:40.116881",
     "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals": "2026-07-31T12:05:43.151129",
     "https://www.anthropic.com/news/model-hardware-standard-research-preview": "2026-08-28T12:07:21.900041",
