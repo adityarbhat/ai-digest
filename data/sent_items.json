@@ -51,7 +51,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "a060ba0e9231",
-      "last_seen_at": "2026-09-01T12:01:12.951729",
+      "last_seen_at": "2026-09-02T12:01:29.840486",
       "title": "Claude Code Overview",
       "updated_at": "2026-08-29T12:07:07.220173"
     },
@@ -178,7 +178,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "d701c5964c25",
-      "last_seen_at": "2026-09-01T12:01:12.951729",
+      "last_seen_at": "2026-09-02T12:01:29.840486",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-08-22T12:05:37.902560"
     },
@@ -218,7 +218,7 @@
         "Usage policy"
       ],
       "content_hash": "c3942e16ce32",
-      "last_seen_at": "2026-09-01T12:01:12.951729",
+      "last_seen_at": "2026-09-02T12:01:29.840486",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-08-11T12:05:03.934043"
     }
@@ -497,13 +497,6 @@
       "title": "Introducing Muse Code and Muse Spark 1.2",
       "url": "https://simonwillison.net/2026/Aug/5/muse-code-and-muse-spark-12/#atom-everything"
     },
-    "3d3e9ebc48c42b308e4bb4612cc76719ff63b223": {
-      "kind": "Blog",
-      "sent_at": "2026-07-19T12:05:03.399857",
-      "source": "Hacker News",
-      "title": "Setting up your spare Mac for Claude Code to control, a step-by-step guide",
-      "url": "https://ykdojo.github.io/claude-controls-mac/"
-    },
     "3d50885e80342488954218c3f7bf8ad68abd8712": {
       "kind": "Blog",
       "sent_at": "2026-08-07T12:04:54.040151",
@@ -735,6 +728,13 @@
       "title": "Claude Code Overview",
       "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
     },
+    "68fafb22b3d2a0d863b3926cee4595a13d2c97c1": {
+      "kind": "Blog",
+      "sent_at": "2026-09-02T12:07:46.364496",
+      "source": "OpenAI",
+      "title": "How AI-native companies turn workflows into operating capability",
+      "url": "https://openai.com/index/ai-native-company-workflows"
+    },
     "6ac0d8f98914bc1405c51bc83929ec3d7c379b95": {
       "kind": "Blog",
       "sent_at": "2026-07-31T12:05:43.150980",
@@ -819,6 +819,13 @@
       "title": "Agents in the Wild: Where Research Meets Deployment",
       "url": "http://arxiv.org/abs/2607.19336v1"
     },
+    "7ded64522b0463845ff4cbdfbfc4ef83577150a3": {
+      "kind": "Blog",
+      "sent_at": "2026-09-02T12:07:46.364496",
+      "source": "Simon Willison",
+      "title": "Claude Fable 5.1 made me a really nice animated pelican",
+      "url": "https://simonwillison.net/2026/Sep/1/claude-fable-5-1/"
+    },
     "7f1d8f8e10e520c355949a4fb6bdc0d0dc74563f": {
       "kind": "Blog",
       "sent_at": "2026-07-29T12:05:05.943419",
@@ -832,6 +839,13 @@
       "source": "Hacker News",
       "title": "Claude Session URL appended to commit messages and PR descriptions by default",
       "url": "https://github.com/anthropics/claude-code/issues/66504"
+    },
+    "815c74ce5b386e17f64964bf6d6f5903471720ea": {
+      "kind": "Paper",
+      "sent_at": "2026-09-02T12:07:46.364496",
+      "source": "arXiv",
+      "title": "AgentFactory: Towards Automated Agentic System Design and Optimization",
+      "url": "http://arxiv.org/abs/2609.01045v1"
     },
     "8183ac2c9c0456026120c0fb59876b145e866c2f": {
       "kind": "Blog",
@@ -945,6 +959,13 @@
       "title": "The Third Restructuring of Software Form: From the Three-Tier Architecture to Storage, Models, and Agents",
       "url": "http://arxiv.org/abs/2608.20201v1"
     },
+    "964ff81fde7b1db71ce329da4ab445076e343ece": {
+      "kind": "Blog",
+      "sent_at": "2026-09-02T12:07:46.364496",
+      "source": "Hacker News",
+      "title": "Claude Fable 5.1 and Claude Mythos 5.1",
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+    },
     "9690777f2576ad50046f21224c4a3d251cb79434": {
       "kind": "Paper",
       "sent_at": "2026-07-24T12:06:54.831851",
@@ -1029,6 +1050,13 @@
       "title": "llm-anthropic 0.27",
       "url": "https://simonwillison.net/2026/Aug/24/llm-anthropic/"
     },
+    "a4fd5b1aae5aae3b6db2b7ecdc9aa4ab09f052ba": {
+      "kind": "Blog",
+      "sent_at": "2026-09-02T12:07:46.364496",
+      "source": "AWS Architecture Blog",
+      "title": "MCP went stateless: Is your AWS MCP server deployment well-architected?",
+      "url": "https://aws.amazon.com/blogs/architecture/mcp-went-stateless-is-your-aws-mcp-server-deployment-well-architected/"
+    },
     "a4fd6d6ad13d4229708e9083826b2ab02da2779d": {
       "kind": "Paper",
       "sent_at": "2026-07-30T12:05:12.814703",
@@ -1056,13 +1084,6 @@
       "source": "arXiv",
       "title": "Persona-Execution Separation: An Architecture Pattern for Evolving LLM Agents under Execution Audit",
       "url": "http://arxiv.org/abs/2608.27427v1"
-    },
-    "abde5f6940b35107e81762cb43edfea83c11b770": {
-      "kind": "Blog",
-      "sent_at": "2026-07-19T12:05:03.399857",
-      "source": "Anthropic Docs",
-      "title": "Claude Code Overview",
-      "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
     },
     "adbd84d9bd28f5cc4869ad1ab3f95f637e3ea73a": {
       "kind": "Blog",
@@ -1162,13 +1183,6 @@
       "title": "Responding to the next frontier of critical cyber capabilities",
       "url": "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities"
     },
-    "c4b731ba43fb33c423d19cd9be37089dbc18657a": {
-      "kind": "Blog",
-      "sent_at": "2026-07-19T12:05:03.399857",
-      "source": "Simon Willison",
-      "title": "Claude Code uses Bun written in Rust now",
-      "url": "https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust/#atom-everything"
-    },
     "c6903e2dfd4bf43ab962c667f7418c8f430c8c55": {
       "kind": "Blog",
       "sent_at": "2026-08-27T12:09:26.449490",
@@ -1203,6 +1217,13 @@
       "source": "Hacker News",
       "title": "Software development with AI is starting to feel like cooking steak",
       "url": "https://blog.sydorets.com/en/posts/almost-no-skill-required-to-cook-a-steak/"
+    },
+    "d56fb3e61e46a6626143605520d95b9438613d3b": {
+      "kind": "Blog",
+      "sent_at": "2026-09-02T12:07:46.364496",
+      "source": "Simon Willison",
+      "title": "datasette-mcp 0.2",
+      "url": "https://simonwillison.net/2026/Sep/1/datasette-mcp/"
     },
     "d80706827e8008a30897bf56140024f2776313c7": {
       "kind": "Blog",
@@ -1344,6 +1365,13 @@
       "title": "SHE: Trajectory-driven Safety Harness Evolution for LLM Agents",
       "url": "http://arxiv.org/abs/2608.09885v1"
     },
+    "f433a8048051f99df634d6a33beff91a7e4e91c5": {
+      "kind": "Blog",
+      "sent_at": "2026-09-02T12:07:46.364496",
+      "source": "InfoQ Architecture News",
+      "title": "Cloudflare Adds Optional OAuth Scopes, Letting Developers Mark What Users May Decline",
+      "url": "https://www.infoq.com/news/2026/09/cloudflare-optional-oauth-scopes/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Architecture-news"
+    },
     "f487384614a34623c65faa96feb4f162451f1b40": {
       "kind": "Blog",
       "sent_at": "2026-07-21T12:04:54.370859",
@@ -1386,6 +1414,13 @@
       "title": "PostgreSQL for Everything",
       "url": "https://www.raphaelbauer.com:443/posts/postgresql-everything/"
     },
+    "fc9210fd3ec785442344294908c03cfec6333bd2": {
+      "kind": "Blog",
+      "sent_at": "2026-09-02T12:07:46.364496",
+      "source": "Google DeepMind",
+      "title": "Introducing agentic video understanding with Gemini",
+      "url": "https://deepmind.google/blog/introducing-agentic-video-in-gemini/"
+    },
     "fcd078f882eb6d2a289dffaf70c76b4d9cd019d0": {
       "kind": "Blog",
       "sent_at": "2026-07-28T12:04:39.015571",
@@ -1412,6 +1447,7 @@
     "https://blog.cloudflare.com/billable-usage-api/": "2026-08-04T12:05:16.424928",
     "https://blog.cloudflare.com/bot-preference-sync/": "2026-08-22T12:05:37.902741",
     "https://blog.cloudflare.com/botbase-for-operators/": "2026-08-29T12:07:07.220267",
+    "https://blog.cloudflare.com/cache-transcoding/": "2026-09-02T12:07:46.364695",
     "https://blog.cloudflare.com/cdnjs-dev-platform-migration/": "2026-07-31T12:05:43.151129",
     "https://blog.cloudflare.com/certificate-transparency-monitoring-ga/": "2026-08-14T12:05:20.145013",
     "https://blog.cloudflare.com/ci-workflows/": "2026-08-05T12:05:25.893222",
@@ -1504,6 +1540,7 @@
     "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community": "2026-07-23T12:05:27.517628",
     "https://openai.com/index/building-an-ai-native-finance-function": "2026-08-11T12:05:03.934309",
     "https://openai.com/index/chatgpt-ads-expands-across-europe": "2026-08-19T12:05:01.971172",
+    "https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources": "2026-09-02T12:07:46.364695",
     "https://openai.com/index/chatgpt-for-academic-researchers": "2026-07-30T12:05:12.814865",
     "https://openai.com/index/chatgpt-for-teens": "2026-08-18T12:05:26.170377",
     "https://openai.com/index/continuous-voice-interaction-with-gpt-live": "2026-08-04T12:05:16.424928",
@@ -1528,6 +1565,7 @@
     "https://openai.com/index/openai-joins-ports-pike-project": "2026-08-18T12:05:26.170377",
     "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex": "2026-08-29T12:07:07.220267",
     "https://openai.com/index/pacing-model-development-cyber-capabilities": "2026-08-19T12:05:01.971172",
+    "https://openai.com/index/path-to-astra": "2026-09-02T12:07:46.364695",
     "https://openai.com/index/previewing-ultrafast": "2026-08-14T12:05:20.145013",
     "https://openai.com/index/replit": "2026-08-20T12:05:09.139167",
     "https://openai.com/index/responsible-ai-infrastructure-texas": "2026-08-11T12:05:03.934309",
@@ -1547,6 +1585,7 @@
     "https://www.anthropic.com/news/cognizant-anthropic": "2026-07-30T12:05:12.814865",
     "https://www.anthropic.com/news/donation-public-first-action": "2026-07-31T12:05:43.151129",
     "https://www.anthropic.com/news/economic-futures-research-fund-agenda": "2026-07-30T12:05:12.814865",
+    "https://www.anthropic.com/news/enterprise-frontier-safeguards": "2026-09-02T12:07:46.364695",
     "https://www.anthropic.com/news/expanding-support-for-scientists": "2026-08-28T12:07:21.900041",
     "https://www.anthropic.com/news/improving-alignment-security-efforts": "2026-09-01T12:07:21.810485",
     "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards": "2026-08-09T12:04:40.116881",
