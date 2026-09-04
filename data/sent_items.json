@@ -51,7 +51,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "a060ba0e9231",
-      "last_seen_at": "2026-09-03T12:01:09.029785",
+      "last_seen_at": "2026-09-04T12:01:24.922515",
       "title": "Claude Code Overview",
       "updated_at": "2026-08-29T12:07:07.220173"
     },
@@ -178,7 +178,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "d701c5964c25",
-      "last_seen_at": "2026-09-03T12:01:09.029785",
+      "last_seen_at": "2026-09-04T12:01:24.922515",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-08-22T12:05:37.902560"
     },
@@ -346,7 +346,7 @@
         "Fast mode (research preview) now supports Claude Opus 4.7. Set speed: \"fast\" with model: \"claude-opus-4-7\" and the fast-mode-2026-02-01 beta header for significantly faster output token generation at premium pricing. Pricing, rate limits, and access are the same as for Opus 4.6 fast mode; interested customers should join the waitlist ."
       ],
       "content_hash": "e81f61eee2ff",
-      "last_seen_at": "2026-09-03T12:07:26.434240",
+      "last_seen_at": "2026-09-04T12:01:24.922515",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-09-03T12:07:26.434240"
     }
@@ -457,6 +457,13 @@
       "title": "I built a research agent that reads the internet so I don\u2019t have to. Then I plugged it into my wiki.",
       "url": "https://wandb.ai/Lorenzo-Team/can-it-run-doom/reports/I-built-a-research-agent-that-reads-the-internet-so-I-don-t-have-to-Then-I-plugged-it-into-my-wiki---VmlldzoxNzY3NjY2MA"
     },
+    "13cf36e8ba3d25dbf7cf9b2e1eb533c397cbe8f6": {
+      "kind": "Blog",
+      "sent_at": "2026-09-04T12:07:47.114559",
+      "source": "Spotify Engineering",
+      "title": "Portal by Spotify cut my Claude Code token usage by 90%",
+      "url": "https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90/"
+    },
     "155b36d5a70eb479bab7c5d26bc34c7119e13d07": {
       "kind": "Blog",
       "sent_at": "2026-07-28T12:04:39.015571",
@@ -547,6 +554,13 @@
       "source": "Neon Blog",
       "title": "How Castform + Neon Beats Frontier Models on Price and Efficiency",
       "url": "https://neon.com/blog/how-castform-neon-beats-frontier-models-on-price-and-efficiency"
+    },
+    "27629458812a4274a36263be0cdc92dc4de20a3b": {
+      "kind": "Blog",
+      "sent_at": "2026-09-04T12:07:47.114559",
+      "source": "Simon Willison",
+      "title": "GPT\u20116 Astra",
+      "url": "https://simonwillison.net/2026/Sep/3/gpt6-astra/"
     },
     "2929a0a48a55c2a924d4c762101bd59574a039ec": {
       "kind": "Blog",
@@ -771,6 +785,13 @@
       "source": "Simon Willison",
       "title": "DeepSeek V4 Pro 0813 (on OpenRouter)",
       "url": "https://simonwillison.net/2026/Aug/12/deepseek-v4-pro-0813/"
+    },
+    "54011073675172385bcf11cf8b55f62530344e71": {
+      "kind": "Blog",
+      "sent_at": "2026-09-04T12:07:47.114559",
+      "source": "Instacart Engineering",
+      "title": "Agentic Machine Learning Modeling at Instacart",
+      "url": "https://tech.instacart.com/agentic-machine-learning-modeling-at-instacart-fb3ecd295ee7?source=rss----587883b5d2ee---4"
     },
     "54ca777d322dfb2694c20b0e4db9e4725c4b2b2b": {
       "kind": "Blog",
@@ -1038,13 +1059,6 @@
       "title": "Supabase is now a connector on Perplexity Computer Supabase is now a connector on Perplexity Computer. Query your Postgres data, look up users, and invoke Edge Functions from a Perplexity chat. Author: Natalie Roberge Published 7 August 2026 \u00b7 2 minute read",
       "url": "https://supabase.com/blog/supabase-is-now-a-connector-on-perplexity-computer"
     },
-    "859a37862ecfb9f8a3b9e372abc3895e9415fc47": {
-      "kind": "Paper",
-      "sent_at": "2026-07-21T12:04:54.370859",
-      "source": "arXiv",
-      "title": "Autoresearch with Coding Agents: Generalizers and Metric-Maximizers on Quran Recitation Data",
-      "url": "http://arxiv.org/abs/2607.18064v1"
-    },
     "8756bffe44500c8fca0d0786b7a7a7f4c37f0eaf": {
       "kind": "Blog",
       "sent_at": "2026-08-01T12:04:59.132580",
@@ -1100,6 +1114,13 @@
       "source": "arXiv",
       "title": "MARC v1: An Open-Source Multi-Agent Framework for Clinical AI Reasoning and Coordination",
       "url": "http://arxiv.org/abs/2608.13476v1"
+    },
+    "92c169de9cdcefd549762aeed5a67aeed334f05b": {
+      "kind": "Paper",
+      "sent_at": "2026-09-04T12:07:47.114559",
+      "source": "arXiv",
+      "title": "Terminal-Universe: Turning Agent Trajectories into Scalable Terminal Environments",
+      "url": "http://arxiv.org/abs/2609.04148v1"
     },
     "955a03f1de36015a82d1a59cbcbd273e84330e93": {
       "kind": "Blog",
@@ -1283,26 +1304,12 @@
       "title": "Claude: System Prompts",
       "url": "https://platform.claude.com/docs/en/release-notes/system-prompts"
     },
-    "bc0372996f34847f4489e4d5af16230ffa97822e": {
-      "kind": "Blog",
-      "sent_at": "2026-07-21T12:04:54.370859",
-      "source": "Simon Willison",
-      "title": "Reverse-engineering is cheap now",
-      "url": "https://simonwillison.net/2026/Jul/20/cheap-reverse-engineering/#atom-everything"
-    },
     "bc4d73f4213f69a7545b6eb5f53273e333556b6e": {
       "kind": "Blog",
       "sent_at": "2026-08-01T12:04:59.132580",
       "source": "Hacker News",
       "title": "qm \u2013 Multiplayer agent harness for work",
       "url": "https://github.com/yc-software/qm"
-    },
-    "bc6b94aed4d44b78b875e7f4d8b7f7f280aed57c": {
-      "kind": "Paper",
-      "sent_at": "2026-07-21T12:04:54.370859",
-      "source": "arXiv",
-      "title": "Is Progressive Disclosure All You Need for Long-Context Agents?",
-      "url": "http://arxiv.org/abs/2607.17598v1"
     },
     "bcd4cf7862f533d4d56613f6dfc0a69847e4a861": {
       "kind": "Blog",
@@ -1556,13 +1563,6 @@
       "title": "Cloudflare Adds Optional OAuth Scopes, Letting Developers Mark What Users May Decline",
       "url": "https://www.infoq.com/news/2026/09/cloudflare-optional-oauth-scopes/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Architecture-news"
     },
-    "f487384614a34623c65faa96feb4f162451f1b40": {
-      "kind": "Blog",
-      "sent_at": "2026-07-21T12:04:54.370859",
-      "source": "Hacker News",
-      "title": "Kimi K3, Qwen 3.8, and Anthropic's (Potential) Unravelling",
-      "url": "https://www.emergingtrajectories.com/lh/frontier-lab-economics/"
-    },
     "f77525c37f5300732c037966242b570ba7b949e7": {
       "kind": "Blog",
       "sent_at": "2026-09-01T12:07:21.810335",
@@ -1645,7 +1645,6 @@
     "https://blog.cloudflare.com/good-and-bad-agentic-behaviors/": "2026-08-08T12:05:05.404940",
     "https://blog.cloudflare.com/grpc-workers/": "2026-08-04T12:05:16.424928",
     "https://blog.cloudflare.com/how-we-use-ai-with-cloudflare-os/": "2026-08-06T12:05:02.260633",
-    "https://blog.cloudflare.com/internal-dns/": "2026-07-21T12:04:54.370956",
     "https://blog.cloudflare.com/introducing-adaptive-intelligence/": "2026-09-01T12:07:21.810485",
     "https://blog.cloudflare.com/introducing-cache-response-rules/": "2026-07-24T12:06:54.832037",
     "https://blog.cloudflare.com/introducing-radar-researcher/": "2026-08-08T12:05:05.404940",
@@ -1660,6 +1659,7 @@
     "https://blog.cloudflare.com/task-based-oauth-consent/": "2026-08-21T12:05:15.075760",
     "https://blog.cloudflare.com/the-agent-access-model/": "2026-08-06T12:05:02.260633",
     "https://blog.cloudflare.com/total-eclipse-internet-traffic-iceland-spain-portugal/": "2026-08-14T12:05:20.145013",
+    "https://blog.cloudflare.com/vulnerability-discovery-remediation/": "2026-09-04T12:07:47.114718",
     "https://blog.cloudflare.com/wallets/": "2026-08-05T12:05:25.893222",
     "https://blog.cloudflare.com/workers-protected-by-access/": "2026-08-15T12:04:35.309514",
     "https://claude.com/blog/a-guide-to-cost-visibility-and-control-in-claude": "2026-08-05T12:05:25.893222",
@@ -1715,7 +1715,6 @@
     "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models": "2026-07-25T12:04:37.529743",
     "https://claude.com/blog/think-through-hard-problems-in-voice-mode": "2026-07-24T12:06:54.832037",
     "https://claude.com/blog/turning-conversation-into-knowledge-how-slack-builds-human-agent-teams": "2026-08-20T12:05:09.139167",
-    "https://claude.com/blog/working-at-the-frontier-rakuten": "2026-07-21T12:04:54.370956",
     "https://openai.com/index/advancing-responsible-ai-across-europe": "2026-07-31T12:05:43.151129",
     "https://openai.com/index/advancing-the-next-era-of-national-science": "2026-07-23T12:05:27.517628",
     "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6": "2026-07-31T12:05:43.151129",
@@ -1732,6 +1731,7 @@
     "https://openai.com/index/chatgpt-for-teens": "2026-08-18T12:05:26.170377",
     "https://openai.com/index/continuous-voice-interaction-with-gpt-live": "2026-08-04T12:05:16.424928",
     "https://openai.com/index/dali-rajic-chief-revenue-officer": "2026-08-14T12:05:20.145013",
+    "https://openai.com/index/daybreak-for-frontline-defenders": "2026-09-04T12:07:47.114718",
     "https://openai.com/index/daybreak-models-are-now-available-on-aws": "2026-08-12T12:05:24.276883",
     "https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia": "2026-08-25T12:05:53.813101",
     "https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads": "2026-09-01T12:07:21.810485",
@@ -1744,6 +1744,7 @@
     "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt": "2026-08-07T12:04:54.040292",
     "https://openai.com/index/introducing-chatgpt-small-business-program": "2026-07-22T12:06:38.269628",
     "https://openai.com/index/jalapeno-first-results": "2026-08-26T12:07:42.286813",
+    "https://openai.com/index/legora-financial-statement-review-with-astra": "2026-09-04T12:07:47.114718",
     "https://openai.com/index/loveholidays": "2026-08-26T12:07:42.286813",
     "https://openai.com/index/model-ml": "2026-08-11T12:05:03.934309",
     "https://openai.com/index/new-policy-ideas-for-the-intelligence-age": "2026-08-17T12:05:16.445311",
@@ -1753,10 +1754,10 @@
     "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex": "2026-08-29T12:07:07.220267",
     "https://openai.com/index/pacing-model-development-cyber-capabilities": "2026-08-19T12:05:01.971172",
     "https://openai.com/index/path-to-astra": "2026-09-02T12:07:46.364695",
+    "https://openai.com/index/playco-game-prototyping-with-astra": "2026-09-04T12:07:47.114718",
     "https://openai.com/index/previewing-ultrafast": "2026-08-14T12:05:20.145013",
     "https://openai.com/index/replit": "2026-08-20T12:05:09.139167",
     "https://openai.com/index/responsible-ai-infrastructure-texas": "2026-08-11T12:05:03.934309",
-    "https://openai.com/index/safety-alignment-long-horizon-models": "2026-07-21T12:04:54.370956",
     "https://openai.com/index/scientific-computing-agentic-ai": "2026-07-29T12:05:05.943566",
     "https://openai.com/index/strengthening-democratic-oversight-in-national-security": "2026-08-19T12:05:01.971172",
     "https://openai.com/index/supporting-california-bill-advance-ai-youth-safety": "2026-09-01T12:07:21.810485",
