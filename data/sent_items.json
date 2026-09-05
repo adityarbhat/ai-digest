@@ -51,7 +51,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "a060ba0e9231",
-      "last_seen_at": "2026-09-04T12:01:24.922515",
+      "last_seen_at": "2026-09-05T12:01:00.996806",
       "title": "Claude Code Overview",
       "updated_at": "2026-08-29T12:07:07.220173"
     },
@@ -178,7 +178,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "d701c5964c25",
-      "last_seen_at": "2026-09-04T12:01:24.922515",
+      "last_seen_at": "2026-09-05T12:01:00.996806",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-08-22T12:05:37.902560"
     },
@@ -189,6 +189,8 @@
         "The Claude Platform release notes list changes to the Claude API, the client SDKs, and the Claude Console, newest first.",
         "For release notes on Claude Apps, see the Release notes for Claude Apps in the Claude Help Center .",
         "For updates to Claude Code, see the complete CHANGELOG.md in the claude-code repository.",
+        "September 3, 2026 \ue09a",
+        "Version 1.30.0 of the ant CLI adds ant apply , which creates and updates agents, environments, skills, memory stores, and deployments from files in your repository. Describe each resource in a file, run ant apply , and approve the plan it prints. Commit the claude-lock.json lockfile it writes so that later runs, on your machine or in CI, update the same resources instead of creating new ones. See Manage resources as code with ant apply .",
         "September 1, 2026 \ue09a",
         "We've launched Claude Fable 5.1 ( claude-fable-5-1 ), the successor to Claude Fable 5 for long-running agentic coding, knowledge work, and research, alongside Claude Mythos 5.1 ( claude-mythos-5-1 ) for Project Glasswing participants. Both models support a 1M token context window by default, 128k max output tokens, and always-on adaptive thinking , at $10 / $50 USD per MTok, the same as Claude Fable 5, with cache reads cut to $0.25 per MTok. Claude Fable 5.1 is available on the Claude API, Claude in Amazon Bedrock , Claude Platform on AWS , Claude on Google Cloud , and Claude in Microsoft Foundry . See What's new in Claude Fable 5.1 for capabilities, API changes, and migration guidance.",
         "Prompt cache reads on Claude Fable 5.1 and Claude Mythos 5.1 cost $0.25 USD per million tokens: 0.025x the base input price, compared with 0.1x on other models. Cache writes are unchanged. See Prompt caching pricing .",
@@ -341,14 +343,12 @@
         "May 18, 2026 \ue09a",
         "The web search tool now returns richer SEC filing data, making it easier to ground financial research agents, earnings analysis, and due-diligence workflows in primary sources with citations.",
         "May 13, 2026 \ue09a",
-        "We've launched cache diagnostics in public beta. Pass diagnostics.previous_message_id on a Messages request and the API reports a cache_miss_reason explaining where the prompt cache prefix diverged from the previous turn. Include the cache-diagnosis-2026-04-07 beta header in your requests.",
-        "May 12, 2026 \ue09a",
-        "Fast mode (research preview) now supports Claude Opus 4.7. Set speed: \"fast\" with model: \"claude-opus-4-7\" and the fast-mode-2026-02-01 beta header for significantly faster output token generation at premium pricing. Pricing, rate limits, and access are the same as for Opus 4.6 fast mode; interested customers should join the waitlist ."
+        "We've launched cache diagnostics in public beta. Pass diagnostics.previous_message_id on a Messages request and the API reports a cache_miss_reason explaining where the prompt cache prefix diverged from the previous turn. Include the cache-diagnosis-2026-04-07 beta header in your requests."
       ],
-      "content_hash": "e81f61eee2ff",
-      "last_seen_at": "2026-09-04T12:01:24.922515",
+      "content_hash": "aa601d580d70",
+      "last_seen_at": "2026-09-05T12:06:59.205553",
       "title": "Anthropic Release Notes",
-      "updated_at": "2026-09-03T12:07:26.434240"
+      "updated_at": "2026-09-05T12:06:59.205553"
     }
   },
   "sent": {
@@ -751,19 +751,19 @@
       "title": "What Is a Harness?",
       "url": "https://earendil.com/posts/what-is-a-harness/"
     },
+    "4c7eb22d0ad1ffec9644b059c60bb1c2487568ba": {
+      "kind": "Paper",
+      "sent_at": "2026-09-05T12:06:59.205553",
+      "source": "arXiv",
+      "title": "A Blind Trust, the Bloody Thrust: When Attacker-Controlled Hook Updates Steer AI Agent Harnesses towards Malicious Behaviors",
+      "url": "http://arxiv.org/abs/2609.03884v1"
+    },
     "4e0a71f5b2961d29b75db962aa4ac49a8f44cec4": {
       "kind": "Blog",
       "sent_at": "2026-07-29T12:05:05.943419",
       "source": "Airbnb Engineering",
       "title": "Eval-driven development: Lessons from evaluating GenAI at scale",
       "url": "https://medium.com/airbnb-engineering/eval-driven-development-lessons-from-evaluating-genai-at-scale-e817e5ae5788?source=rss----53c7c27702d5--ai"
-    },
-    "4f35c335ae29db9a0c026a20e2a950ffb6188ed3": {
-      "kind": "Paper",
-      "sent_at": "2026-07-22T12:06:38.269493",
-      "source": "arXiv",
-      "title": "Graph-Based Agentic AI with LangGraph: Workflow Pathways for Long-Running Stateful Business Processes",
-      "url": "http://arxiv.org/abs/2607.19297v1"
     },
     "4f8b5b2dd3ba7545c39090c853aa5751ac2534d7": {
       "kind": "Blog",
@@ -842,6 +842,13 @@
       "title": "Introducing wrapture",
       "url": "https://simonwillison.net/2026/Aug/31/introducing-wrapture/"
     },
+    "5bab7daca22bc59db6ec5ec5c95d2710b7c3b127": {
+      "kind": "Blog",
+      "sent_at": "2026-09-05T12:06:59.205553",
+      "source": "Hacker News",
+      "title": "Formalizing Fermat's Last Theorem",
+      "url": "https://www.anthropic.com/research/formalizing-fermats-last-theorem"
+    },
     "5beb5956b9b19ff8cf27379be697385bc76bcc4e": {
       "kind": "Blog",
       "sent_at": "2026-08-07T12:04:54.040151",
@@ -919,6 +926,13 @@
       "title": "Orchard: An open framework for scalable agentic AI",
       "url": "https://www.microsoft.com/en-us/research/blog/orchard-an-open-framework-for-scalable-agentic-ai/"
     },
+    "6f6819aea27532df503eb74e6e2876b0bb06d410": {
+      "kind": "Paper",
+      "sent_at": "2026-09-05T12:06:59.205553",
+      "source": "arXiv",
+      "title": "SENTINEL-RL: Offloading Topological Reasoning from LLM Agents in the Security Operations Center",
+      "url": "http://arxiv.org/abs/2609.04159v1"
+    },
     "6fce6f6287224547a066ec3ddea48555631a7705": {
       "kind": "Blog",
       "sent_at": "2026-09-03T12:07:26.434240",
@@ -988,13 +1002,6 @@
       "source": "Simon Willison",
       "title": "llm-anthropic 0.26",
       "url": "https://simonwillison.net/2026/Aug/4/llm-anthropic/#atom-everything"
-    },
-    "7bc9c70db152789373f7f6e7f57e4616c01e2d47": {
-      "kind": "Paper",
-      "sent_at": "2026-07-22T12:06:38.269493",
-      "source": "arXiv",
-      "title": "Agents in the Wild: Where Research Meets Deployment",
-      "url": "http://arxiv.org/abs/2607.19336v1"
     },
     "7ded64522b0463845ff4cbdfbfc4ef83577150a3": {
       "kind": "Blog",
@@ -1367,13 +1374,6 @@
       "title": "The inside story on why OpenAI agents hacked Hugging Face",
       "url": "https://www.technologyreview.com/2026/08/26/1143013/the-inside-story-on-why-openai-agents-hacked-hugging-face/"
     },
-    "ca819bc60aba296049475a770b131238cd0ab520": {
-      "kind": "Blog",
-      "sent_at": "2026-07-22T12:06:38.269493",
-      "source": "Google DeepMind",
-      "title": "Introducing Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber",
-      "url": "https://deepmind.google/blog/introducing-gemini-36-flash-35-flash-lite-and-35-flash-cyber/"
-    },
     "cfc3dba828c4a8fd4db9debc6efea32709f2ae7f": {
       "kind": "Blog",
       "sent_at": "2026-08-24T12:06:03.904855",
@@ -1430,6 +1430,13 @@
       "title": "New MCP Roadmap",
       "url": "https://blog.modelcontextprotocol.io/posts/mcp-roadmap/"
     },
+    "dada85d69a0745068b310508872fbfb7532ce13b": {
+      "kind": "Blog",
+      "sent_at": "2026-09-05T12:06:59.205553",
+      "source": "Anthropic Docs",
+      "title": "Anthropic Release Notes",
+      "url": "https://docs.anthropic.com/en/release-notes/overview"
+    },
     "dc1688a0432f817a8712dbb45e3c7224f805982d": {
       "kind": "Blog",
       "sent_at": "2026-08-14T12:05:20.144897",
@@ -1450,13 +1457,6 @@
       "source": "arXiv",
       "title": "Efficient GUI Agents: A Systems Survey of Observation, Memory, Action, and Runtime Optimization",
       "url": "http://arxiv.org/abs/2609.02309v1"
-    },
-    "df8df70439c0ef5336c6b7e77c111e72c84efae8": {
-      "kind": "Blog",
-      "sent_at": "2026-07-22T12:06:38.269493",
-      "source": "Simon Willison",
-      "title": "A Fireside Chat with Cat and Thariq from the Claude Code team",
-      "url": "https://simonwillison.net/2026/Jul/21/cat-and-thariq/#atom-everything"
     },
     "e03b26a3358daf9da0343207f62ab25fbea38951": {
       "kind": "Paper",
@@ -1492,6 +1492,13 @@
       "source": "Hacker News",
       "title": "Harness engineering for self-improvement",
       "url": "https://lilianweng.github.io/posts/2026-07-04-harness/"
+    },
+    "e7869f6cd5a29f2f7b54635670704680437531c6": {
+      "kind": "Blog",
+      "sent_at": "2026-09-05T12:06:59.205553",
+      "source": "Neon Blog",
+      "title": "Comparing token economics across 42 AI models",
+      "url": "https://neon.com/blog/comparing-token-economics-across-42-ai-models"
     },
     "e812c5b4a4c3fb2dd40abdf7be22fad2aa4cd680": {
       "kind": "Blog",
@@ -1621,7 +1628,6 @@
     }
   },
   "watchlist_seen": {
-    "https://blog.cloudflare.com/2026-world-cup-internet-traffic/": "2026-07-22T12:06:38.269628",
     "https://blog.cloudflare.com/aeo/": "2026-08-07T12:04:54.040292",
     "https://blog.cloudflare.com/agent-development-lifecycle/": "2026-08-05T12:05:25.893222",
     "https://blog.cloudflare.com/agents-week-review-august-2026/": "2026-08-11T12:05:03.934309",
@@ -1695,9 +1701,7 @@
     "https://claude.com/blog/how-abc-legal-turned-every-employee-into-a-builder-with-claude-managed-agents": "2026-08-18T12:05:26.170377",
     "https://claude.com/blog/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep": "2026-08-25T12:05:53.813101",
     "https://claude.com/blog/how-anthropic-employees-use-claude-tag": "2026-08-29T12:07:07.220267",
-    "https://claude.com/blog/how-anthropic-secures-its-ai-native-software-development-lifecycle": "2026-07-22T12:06:38.269628",
     "https://claude.com/blog/how-anthropics-business-development-team-uses-claude-to-run-inbound-and-outbound-at-scale": "2026-08-11T12:05:03.934309",
-    "https://claude.com/blog/how-datadog-built-a-universal-machine-tool-for-claude-code": "2026-07-22T12:06:38.269628",
     "https://claude.com/blog/how-jetbrains-evaluates-and-deploys-claude-fable-5": "2026-08-14T12:05:20.145013",
     "https://claude.com/blog/how-monday-com-transformed-its-platform-into-an-agent-first-product-where-humans-and-agents-collaborate": "2026-08-21T12:05:15.075760",
     "https://claude.com/blog/how-outtake-built-a-cyber-investigator-on-claude": "2026-07-23T12:05:27.517628",
@@ -1740,9 +1744,7 @@
     "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work": "2026-07-27T12:04:48.798191",
     "https://openai.com/index/how-news-organizations-are-using-ai": "2026-07-23T12:05:27.517628",
     "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores": "2026-07-30T12:05:12.814865",
-    "https://openai.com/index/hugging-face-model-evaluation-security-incident": "2026-07-22T12:06:38.269628",
     "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt": "2026-08-07T12:04:54.040292",
-    "https://openai.com/index/introducing-chatgpt-small-business-program": "2026-07-22T12:06:38.269628",
     "https://openai.com/index/jalapeno-first-results": "2026-08-26T12:07:42.286813",
     "https://openai.com/index/legora-financial-statement-review-with-astra": "2026-09-04T12:07:47.114718",
     "https://openai.com/index/loveholidays": "2026-08-26T12:07:42.286813",
