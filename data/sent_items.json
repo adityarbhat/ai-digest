@@ -51,7 +51,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "a060ba0e9231",
-      "last_seen_at": "2026-09-05T12:01:00.996806",
+      "last_seen_at": "2026-09-06T12:01:36.771175",
       "title": "Claude Code Overview",
       "updated_at": "2026-08-29T12:07:07.220173"
     },
@@ -178,7 +178,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "d701c5964c25",
-      "last_seen_at": "2026-09-05T12:01:00.996806",
+      "last_seen_at": "2026-09-06T12:01:36.771175",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-08-22T12:05:37.902560"
     },
@@ -346,7 +346,7 @@
         "We've launched cache diagnostics in public beta. Pass diagnostics.previous_message_id on a Messages request and the API reports a cache_miss_reason explaining where the prompt cache prefix diverged from the previous turn. Include the cache-diagnosis-2026-04-07 beta header in your requests."
       ],
       "content_hash": "aa601d580d70",
-      "last_seen_at": "2026-09-05T12:06:59.205553",
+      "last_seen_at": "2026-09-06T12:01:36.771175",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-09-05T12:06:59.205553"
     }
@@ -506,13 +506,6 @@
       "title": "DeepSeek V4 Flash 0731 Intelligence, Performance and Price Analysis",
       "url": "https://artificialanalysis.ai/models/deepseek-v4-flash"
     },
-    "1dec59c340b92f4d6920513e094ba01ac1300550": {
-      "kind": "Paper",
-      "sent_at": "2026-07-23T12:05:27.517520",
-      "source": "arXiv",
-      "title": "CodeRescue: Budget-Calibrated Recovery Routing for Coding Agents",
-      "url": "http://arxiv.org/abs/2607.19338v1"
-    },
     "1f6424204a9a0d3840e8eb83ea4952db6fc8794a": {
       "kind": "Blog",
       "sent_at": "2026-08-07T12:04:54.040151",
@@ -526,13 +519,6 @@
       "source": "Neon Blog",
       "title": "Electric is joining team Neon at Databricks",
       "url": "https://neon.com/blog/electric-joins-neon"
-    },
-    "22b109c4d141cc3ad2e2a6760853297e037b7e5a": {
-      "kind": "Blog",
-      "sent_at": "2026-07-23T12:05:27.517520",
-      "source": "Simon Willison",
-      "title": "Quoting Thomas Ptacek",
-      "url": "https://simonwillison.net/2026/Jul/22/thomas-ptacek/#atom-everything"
     },
     "23afc1b2cbfa00b82def205d0656ac98a7e7ecfc": {
       "kind": "Paper",
@@ -1248,13 +1234,6 @@
       "title": "Living-Harness Is an Interactive-Agent Evolver",
       "url": "http://arxiv.org/abs/2607.26598v1"
     },
-    "a89eb3ec74500282e6d87fd8b8e0e582da49d3e2": {
-      "kind": "Blog",
-      "sent_at": "2026-07-23T12:05:27.517520",
-      "source": "Hacker News",
-      "title": "The startup's Postgres survival guide",
-      "url": "https://hatchet.run/blog/postgres-survival-guide"
-    },
     "a9500ad19247e271cbde6571e1a09ecd0ca65ebf": {
       "kind": "Blog",
       "sent_at": "2026-07-31T12:05:43.150980",
@@ -1677,7 +1656,6 @@
     "https://claude.com/blog/bain-company-joins-the-claude-partner-network-as-a-global-premier-partner": "2026-08-26T12:07:42.286813",
     "https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders": "2026-08-22T12:05:37.902741",
     "https://claude.com/blog/bringing-mcp-2026-07-28-to-claude": "2026-07-29T12:05:05.943566",
-    "https://claude.com/blog/building-verification-loops-in-claude-code-with-skills": "2026-07-23T12:05:27.517628",
     "https://claude.com/blog/claude-code-desktop-redesign": "2026-07-27T12:04:48.798191",
     "https://claude.com/blog/claude-code-guide-for-startups": "2026-08-21T12:05:15.075760",
     "https://claude.com/blog/claude-enterprise-inference-hooks": "2026-08-06T12:05:02.260633",
@@ -1704,7 +1682,6 @@
     "https://claude.com/blog/how-anthropics-business-development-team-uses-claude-to-run-inbound-and-outbound-at-scale": "2026-08-11T12:05:03.934309",
     "https://claude.com/blog/how-jetbrains-evaluates-and-deploys-claude-fable-5": "2026-08-14T12:05:20.145013",
     "https://claude.com/blog/how-monday-com-transformed-its-platform-into-an-agent-first-product-where-humans-and-agents-collaborate": "2026-08-21T12:05:15.075760",
-    "https://claude.com/blog/how-outtake-built-a-cyber-investigator-on-claude": "2026-07-23T12:05:27.517628",
     "https://claude.com/blog/how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-building-them": "2026-07-25T12:04:37.529743",
     "https://claude.com/blog/how-warp-builds-self-improving-agents-on-claude": "2026-08-27T12:09:26.449619",
     "https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions": "2026-08-15T12:04:35.309514",
@@ -1720,14 +1697,12 @@
     "https://claude.com/blog/think-through-hard-problems-in-voice-mode": "2026-07-24T12:06:54.832037",
     "https://claude.com/blog/turning-conversation-into-knowledge-how-slack-builds-human-agent-teams": "2026-08-20T12:05:09.139167",
     "https://openai.com/index/advancing-responsible-ai-across-europe": "2026-07-31T12:05:43.151129",
-    "https://openai.com/index/advancing-the-next-era-of-national-science": "2026-07-23T12:05:27.517628",
     "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6": "2026-07-31T12:05:43.151129",
     "https://openai.com/index/apple-is-getting-this-wrong": "2026-08-04T12:05:16.424928",
     "https://openai.com/index/atv-big-air-tour": "2026-09-03T12:07:26.434398",
     "https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts": "2026-08-27T12:09:26.449619",
     "https://openai.com/index/builders-guide-to-gpt-5-6": "2026-08-14T12:05:20.145013",
     "https://openai.com/index/building-abundant-intelligence": "2026-08-01T12:04:59.132717",
-    "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community": "2026-07-23T12:05:27.517628",
     "https://openai.com/index/building-an-ai-native-finance-function": "2026-08-11T12:05:03.934309",
     "https://openai.com/index/chatgpt-ads-expands-across-europe": "2026-08-19T12:05:01.971172",
     "https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources": "2026-09-02T12:07:46.364695",
@@ -1742,7 +1717,6 @@
     "https://openai.com/index/expanding-our-presence-in-brazil": "2026-08-27T12:09:26.449619",
     "https://openai.com/index/gpt-5-6-in-kiro": "2026-08-25T12:05:53.813101",
     "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work": "2026-07-27T12:04:48.798191",
-    "https://openai.com/index/how-news-organizations-are-using-ai": "2026-07-23T12:05:27.517628",
     "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores": "2026-07-30T12:05:12.814865",
     "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt": "2026-08-07T12:04:54.040292",
     "https://openai.com/index/jalapeno-first-results": "2026-08-26T12:07:42.286813",
