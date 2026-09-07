@@ -51,7 +51,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "a060ba0e9231",
-      "last_seen_at": "2026-09-06T12:01:36.771175",
+      "last_seen_at": "2026-09-07T12:02:48.891595",
       "title": "Claude Code Overview",
       "updated_at": "2026-08-29T12:07:07.220173"
     },
@@ -178,7 +178,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "d701c5964c25",
-      "last_seen_at": "2026-09-06T12:01:36.771175",
+      "last_seen_at": "2026-09-07T12:02:48.891595",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-08-22T12:05:37.902560"
     },
@@ -346,7 +346,7 @@
         "We've launched cache diagnostics in public beta. Pass diagnostics.previous_message_id on a Messages request and the API reports a cache_miss_reason explaining where the prompt cache prefix diverged from the previous turn. Include the cache-diagnosis-2026-04-07 beta header in your requests."
       ],
       "content_hash": "aa601d580d70",
-      "last_seen_at": "2026-09-06T12:01:36.771175",
+      "last_seen_at": "2026-09-07T12:02:48.891595",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-09-05T12:06:59.205553"
     }
@@ -372,13 +372,6 @@
       "source": "Neon Blog",
       "title": "Neon now has per-project permissions",
       "url": "https://neon.com/blog/neon-now-has-per-project-permissions"
-    },
-    "04953570a75083d4ddbc65fba8a1273b5d3051d4": {
-      "kind": "Blog",
-      "sent_at": "2026-07-24T12:06:54.831851",
-      "source": "Neon Blog",
-      "title": "My agent cloned GitHub (sort of) using the Neon backend",
-      "url": "https://neon.com/blog/my-agent-cloned-github-using-the-neon-backend"
     },
     "049e6700d3d298f24314543f24d96fe933dc500a": {
       "kind": "Paper",
@@ -520,13 +513,6 @@
       "title": "Electric is joining team Neon at Databricks",
       "url": "https://neon.com/blog/electric-joins-neon"
     },
-    "23afc1b2cbfa00b82def205d0656ac98a7e7ecfc": {
-      "kind": "Paper",
-      "sent_at": "2026-07-24T12:06:54.831851",
-      "source": "arXiv",
-      "title": "ICAE-Bench: Evaluating Coding Agents as Interactive Project Builders",
-      "url": "http://arxiv.org/abs/2607.21217v1"
-    },
     "245411751184b6cc03adc551b05c6edda1aa1a08": {
       "kind": "Blog",
       "sent_at": "2026-08-08T12:05:05.404802",
@@ -575,6 +561,13 @@
       "source": "arXiv",
       "title": "ComponentBench: Diagnosing Component-Level Failures in Computer-Use Agents",
       "url": "http://arxiv.org/abs/2608.18307v1"
+    },
+    "32c3b4ab7f727a916e69ef14d82f48a31629bb95": {
+      "kind": "Blog",
+      "sent_at": "2026-09-07T12:08:41.637193",
+      "source": "OpenAI",
+      "title": "Research acceleration: The view inside OpenAI",
+      "url": "https://openai.com/index/research-acceleration-view-inside-openai"
     },
     "344f6951029eb02db725649315306ffc9a4d6b33": {
       "kind": "Blog",
@@ -1080,13 +1073,6 @@
       "title": "Patterns and problems in emerging multi-agent systems",
       "url": "https://www.anthropic.com/research/multiagent-systems"
     },
-    "8d6038215a23b82595a3877f0057faeb6da7b571": {
-      "kind": "Blog",
-      "sent_at": "2026-07-24T12:06:54.831851",
-      "source": "Grab Engineering",
-      "title": "Agent platform (Part 1): How we help Grab build and run AI agents at scale",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5UeVRNSVJzM3kzUnVPVmxrSjBWNlREOUt5RGxaLUNPRG91TzN1NFZUckl3aVhKUmRMYWtvVXM2WXZPN1JHWVFIMHgyT2NKbHNoWHJOT2gwOU5EN1hXX1JmSlY3U0ZBNE40ZkZVYnZBU3ZWdUlFc1hiczgxdmU?oc=5"
-    },
     "8e452eebade16960f1224d0b801194d56291d4cb": {
       "kind": "Paper",
       "sent_at": "2026-08-25T12:05:53.812983",
@@ -1135,13 +1121,6 @@
       "source": "Hacker News",
       "title": "Claude Fable 5.1 and Claude Mythos 5.1",
       "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1"
-    },
-    "9690777f2576ad50046f21224c4a3d251cb79434": {
-      "kind": "Paper",
-      "sent_at": "2026-07-24T12:06:54.831851",
-      "source": "arXiv",
-      "title": "Agentic Context Management: Solving Agent Memory and Cost by Treating Them as Lifecycle and Architecture Problems",
-      "url": "http://arxiv.org/abs/2607.21503v1"
     },
     "96ed7f9894b35c2ab3196416a2e1a0281579f477": {
       "kind": "Blog",
@@ -1388,13 +1367,6 @@
       "title": "Delegating Engineering Work To Cloud-Based Agents",
       "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQU2Z6ZUUyMGZRTnEzVkJtOUNJT3F4NzB6V0swc1dwRW1lWUpkaUpOV0pGUzRNQTVZRGRhWEU2ZURLX1gwQVZLNjVkRmlLajltS0t4bjF5UXV3MXJxaEJsUlo0RFJ4bFNQelZ6b2ZOQ1c2bmJsd1Y3VWNBWXI2VHZWQV9KdkxlakJsem11ZVhB?oc=5"
     },
-    "d861e4fc462b5dc3f344634e89365d1d78f14554": {
-      "kind": "Blog",
-      "sent_at": "2026-07-24T12:06:54.831851",
-      "source": "Hacker News",
-      "title": "Why Software Factories Fail (or: harness engineering is not enough)",
-      "url": "https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/wsff.md"
-    },
     "d994d57bb189dfab703403330204331496ddac7e": {
       "kind": "Blog",
       "sent_at": "2026-09-03T12:07:26.434240",
@@ -1444,13 +1416,6 @@
       "title": "LEDGER: Claim-to-Evidence Trace Graphs for Auditing LLM Agents",
       "url": "http://arxiv.org/abs/2608.18398v1"
     },
-    "e09c0eff4973d4d8994cc49d24dd87b7508d8206": {
-      "kind": "Blog",
-      "sent_at": "2026-07-24T12:06:54.831851",
-      "source": "Hacker News",
-      "title": "OpenAI\u2019s accidental attack against Hugging Face is science fiction that happened",
-      "url": "https://simonwillison.net/2026/Jul/22/openai-cyberattack/"
-    },
     "e0cfc747dd81ba214ab4327aaa7aabf121660097": {
       "kind": "Blog",
       "sent_at": "2026-07-29T12:05:05.943419",
@@ -1485,13 +1450,6 @@
       "source": "Simon Willison",
       "title": "Introducing Muse Glimmer",
       "url": "https://simonwillison.net/2026/Aug/10/introducing-muse-glimmer/#atom-everything"
-    },
-    "e879bd7f7be07148b50b99794bb51c0962644d29": {
-      "kind": "Blog",
-      "sent_at": "2026-07-24T12:06:54.831851",
-      "source": "Simon Willison",
-      "title": "The first known runaway AI agent - or a very bad marketing stunt?",
-      "url": "https://simonwillison.net/2026/Jul/23/the-first-known-runaway-ai-agent/#atom-everything"
     },
     "e8dcd1bae8fed53e5e81c9a75c30a22b88f166eb": {
       "kind": "Blog",
@@ -1631,7 +1589,6 @@
     "https://blog.cloudflare.com/grpc-workers/": "2026-08-04T12:05:16.424928",
     "https://blog.cloudflare.com/how-we-use-ai-with-cloudflare-os/": "2026-08-06T12:05:02.260633",
     "https://blog.cloudflare.com/introducing-adaptive-intelligence/": "2026-09-01T12:07:21.810485",
-    "https://blog.cloudflare.com/introducing-cache-response-rules/": "2026-07-24T12:06:54.832037",
     "https://blog.cloudflare.com/introducing-radar-researcher/": "2026-08-08T12:05:05.404940",
     "https://blog.cloudflare.com/mcp-security-updates/": "2026-08-15T12:04:35.309514",
     "https://blog.cloudflare.com/mcp-v2/": "2026-08-07T12:04:54.040292",
@@ -1674,7 +1631,6 @@
     "https://claude.com/blog/connectors-for-everyday-life": "2026-07-27T12:04:48.798191",
     "https://claude.com/blog/cowork-built-in-browser": "2026-08-27T12:09:26.449619",
     "https://claude.com/blog/cowork-chrome-side-panel": "2026-08-13T12:05:04.688988",
-    "https://claude.com/blog/four-role-based-claude-certifications": "2026-07-24T12:06:54.832037",
     "https://claude.com/blog/harnessing-claudes-intelligence": "2026-07-28T12:04:39.015678",
     "https://claude.com/blog/how-abc-legal-turned-every-employee-into-a-builder-with-claude-managed-agents": "2026-08-18T12:05:26.170377",
     "https://claude.com/blog/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep": "2026-08-25T12:05:53.813101",
@@ -1694,10 +1650,10 @@
     "https://claude.com/blog/the-anatomy-of-effective-commerce-agents": "2026-09-03T12:07:26.434398",
     "https://claude.com/blog/the-claude-science-product-guide": "2026-08-19T12:05:01.971172",
     "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models": "2026-07-25T12:04:37.529743",
-    "https://claude.com/blog/think-through-hard-problems-in-voice-mode": "2026-07-24T12:06:54.832037",
     "https://claude.com/blog/turning-conversation-into-knowledge-how-slack-builds-human-agent-teams": "2026-08-20T12:05:09.139167",
     "https://openai.com/index/advancing-responsible-ai-across-europe": "2026-07-31T12:05:43.151129",
     "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6": "2026-07-31T12:05:43.151129",
+    "https://openai.com/index/an-alien-mind": "2026-09-07T12:08:41.637282",
     "https://openai.com/index/apple-is-getting-this-wrong": "2026-08-04T12:05:16.424928",
     "https://openai.com/index/atv-big-air-tour": "2026-09-03T12:07:26.434398",
     "https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts": "2026-08-27T12:09:26.449619",
@@ -1737,6 +1693,7 @@
     "https://openai.com/index/scientific-computing-agentic-ai": "2026-07-29T12:05:05.943566",
     "https://openai.com/index/strengthening-democratic-oversight-in-national-security": "2026-08-19T12:05:01.971172",
     "https://openai.com/index/supporting-california-bill-advance-ai-youth-safety": "2026-09-01T12:07:21.810485",
+    "https://openai.com/index/supporting-independent-journalism-in-ukraine": "2026-09-07T12:08:41.637282",
     "https://openai.com/index/ten-advances-in-mathematics": "2026-08-01T12:04:59.132717",
     "https://openai.com/index/testing-ads-in-chatgpt": "2026-08-12T12:05:24.276883",
     "https://openai.com/index/the-defenders-window": "2026-08-18T12:05:26.170377",
