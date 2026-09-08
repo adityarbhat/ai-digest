@@ -51,7 +51,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "a060ba0e9231",
-      "last_seen_at": "2026-09-07T12:02:48.891595",
+      "last_seen_at": "2026-09-08T12:01:37.028206",
       "title": "Claude Code Overview",
       "updated_at": "2026-08-29T12:07:07.220173"
     },
@@ -178,7 +178,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "d701c5964c25",
-      "last_seen_at": "2026-09-07T12:02:48.891595",
+      "last_seen_at": "2026-09-08T12:01:37.028206",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-08-22T12:05:37.902560"
     },
@@ -346,7 +346,7 @@
         "We've launched cache diagnostics in public beta. Pass diagnostics.previous_message_id on a Messages request and the API reports a cache_miss_reason explaining where the prompt cache prefix diverged from the previous turn. Include the cache-diagnosis-2026-04-07 beta header in your requests."
       ],
       "content_hash": "aa601d580d70",
-      "last_seen_at": "2026-09-07T12:02:48.891595",
+      "last_seen_at": "2026-09-08T12:01:37.028206",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-09-05T12:06:59.205553"
     }
@@ -400,13 +400,6 @@
       "source": "Hacker News",
       "title": "Making Postgres 300x faster for analytics: batching, operator fusion, and SIMD",
       "url": "https://malisper.me/how-we-made-postgres-hundreds-of-times-faster-the-query-engine/"
-    },
-    "0d7870320f12ed6c1ac841cc4fd09410527afa30": {
-      "kind": "Blog",
-      "sent_at": "2026-07-25T12:04:37.529583",
-      "source": "Hacker News",
-      "title": "Claude Opus 5",
-      "url": "https://www.anthropic.com/news/claude-opus-5"
     },
     "0eefbac2fe415527b2a254a809361ceca05a2e5d": {
       "kind": "Blog",
@@ -695,13 +688,6 @@
       "title": "Harness-R1: Learning to Edit Executable Runtime Harnesses from Agent Failure Trajectories",
       "url": "http://arxiv.org/abs/2608.02276v1"
     },
-    "46d6aecc738b508c7e3df2c19334ef67546e95c0": {
-      "kind": "Blog",
-      "sent_at": "2026-07-25T12:04:37.529583",
-      "source": "Simon Willison",
-      "title": "Introducing Claude Opus 5",
-      "url": "https://simonwillison.net/2026/Jul/24/introducing-claude-opus-5/#atom-everything"
-    },
     "46dd39aabde13c536ae58e7c6929ddc8b1da8a9d": {
       "kind": "Blog",
       "sent_at": "2026-08-28T12:07:21.899909",
@@ -820,6 +806,13 @@
       "source": "Simon Willison",
       "title": "Introducing wrapture",
       "url": "https://simonwillison.net/2026/Aug/31/introducing-wrapture/"
+    },
+    "5a3b9df656a8fc7010ad7e773ef8b5d2aa9d23cd": {
+      "kind": "Blog",
+      "sent_at": "2026-09-08T12:07:16.586830",
+      "source": "Simon Willison",
+      "title": "Video compressor",
+      "url": "https://simonwillison.net/2026/Sep/7/video-compressor/"
     },
     "5bab7daca22bc59db6ec5ec5c95d2710b7c3b127": {
       "kind": "Blog",
@@ -1164,13 +1157,6 @@
       "title": "Go is an ideal language for AI-assisted software engineering",
       "url": "https://developers.googleblog.com/why-go-is-an-ideal-language-for-ai-assisted-software-engineering/"
     },
-    "9c5ce25da43cad33b5688731dbf09b0012ea81b3": {
-      "kind": "Paper",
-      "sent_at": "2026-07-25T12:04:37.529583",
-      "source": "arXiv",
-      "title": "OpenForgeRL: Train Harness-native Agents in Any Environment",
-      "url": "http://arxiv.org/abs/2607.21557v1"
-    },
     "9e4cfc70ee9a221ea3481bd39441beec73e25e34": {
       "kind": "Blog",
       "sent_at": "2026-08-28T12:07:21.899909",
@@ -1423,13 +1409,6 @@
       "title": "Claude Code Overview",
       "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
     },
-    "e503ea12a4c42b3463ae4e1d90ff94773d61ae63": {
-      "kind": "Blog",
-      "sent_at": "2026-07-25T12:04:37.529583",
-      "source": "Anthropic Docs",
-      "title": "Anthropic Release Notes",
-      "url": "https://docs.anthropic.com/en/release-notes/overview"
-    },
     "e61c825a7e9ed00246782c1dafee5b2a5238e5db": {
       "kind": "Blog",
       "sent_at": "2026-08-05T12:05:25.893072",
@@ -1464,13 +1443,6 @@
       "source": "MIT Tech Review",
       "title": "We still don\u2019t know how people are really using AI",
       "url": "https://www.technologyreview.com/2026/08/18/1142226/how-people-use-ai/"
-    },
-    "ecd538801d3442ec757eaca5a6d9892aee0e47fb": {
-      "kind": "Blog",
-      "sent_at": "2026-07-25T12:04:37.529583",
-      "source": "Hacker News",
-      "title": "Claude Cookbook",
-      "url": "https://platform.claude.com/cookbook/"
     },
     "ed2fddef3d3e844643c42d5d01e16cd2669522e5": {
       "kind": "Blog",
@@ -1570,7 +1542,6 @@
     "https://blog.cloudflare.com/agents-week-review-august-2026/": "2026-08-11T12:05:03.934309",
     "https://blog.cloudflare.com/agents-week-welcome/": "2026-08-03T12:04:34.120253",
     "https://blog.cloudflare.com/ai-search-easier/": "2026-08-07T12:04:54.040292",
-    "https://blog.cloudflare.com/bgp-origin-attribute/": "2026-07-25T12:04:37.529743",
     "https://blog.cloudflare.com/billable-usage-api/": "2026-08-04T12:05:16.424928",
     "https://blog.cloudflare.com/bot-preference-sync/": "2026-08-22T12:05:37.902741",
     "https://blog.cloudflare.com/botbase-for-operators/": "2026-08-29T12:07:07.220267",
@@ -1623,7 +1594,6 @@
     "https://claude.com/blog/claude-managed-agents": "2026-07-28T12:04:39.015678",
     "https://claude.com/blog/claude-managed-agents-memory": "2026-07-27T12:04:48.798191",
     "https://claude.com/blog/claude-managed-agents-updates": "2026-07-26T12:04:25.368996",
-    "https://claude.com/blog/claude-models-explained-choosing-the-best-model-for-your-use-case": "2026-07-25T12:04:37.529743",
     "https://claude.com/blog/claude-tag-now-reads-even-more-of-the-room": "2026-08-14T12:05:20.145013",
     "https://claude.com/blog/claudes-memory-works-everywhere-and-you-decide-whats-in-it": "2026-08-26T12:07:42.286813",
     "https://claude.com/blog/compliance-api-cowork-and-claude-code": "2026-08-12T12:05:24.276883",
@@ -1638,7 +1608,6 @@
     "https://claude.com/blog/how-anthropics-business-development-team-uses-claude-to-run-inbound-and-outbound-at-scale": "2026-08-11T12:05:03.934309",
     "https://claude.com/blog/how-jetbrains-evaluates-and-deploys-claude-fable-5": "2026-08-14T12:05:20.145013",
     "https://claude.com/blog/how-monday-com-transformed-its-platform-into-an-agent-first-product-where-humans-and-agents-collaborate": "2026-08-21T12:05:15.075760",
-    "https://claude.com/blog/how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-building-them": "2026-07-25T12:04:37.529743",
     "https://claude.com/blog/how-warp-builds-self-improving-agents-on-claude": "2026-08-27T12:09:26.449619",
     "https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions": "2026-08-15T12:04:35.309514",
     "https://claude.com/blog/millennium-and-anthropic-are-building-a-digital-risk-analyst-with-claude": "2026-08-07T12:04:54.040292",
@@ -1649,7 +1618,6 @@
     "https://claude.com/blog/the-ai-native-sdlc-playbook": "2026-08-22T12:05:37.902741",
     "https://claude.com/blog/the-anatomy-of-effective-commerce-agents": "2026-09-03T12:07:26.434398",
     "https://claude.com/blog/the-claude-science-product-guide": "2026-08-19T12:05:01.971172",
-    "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models": "2026-07-25T12:04:37.529743",
     "https://claude.com/blog/turning-conversation-into-knowledge-how-slack-builds-human-agent-teams": "2026-08-20T12:05:09.139167",
     "https://openai.com/index/advancing-responsible-ai-across-europe": "2026-07-31T12:05:43.151129",
     "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6": "2026-07-31T12:05:43.151129",
