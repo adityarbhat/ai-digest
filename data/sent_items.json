@@ -51,7 +51,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "a060ba0e9231",
-      "last_seen_at": "2026-09-08T12:01:37.028206",
+      "last_seen_at": "2026-09-09T12:01:28.991354",
       "title": "Claude Code Overview",
       "updated_at": "2026-08-29T12:07:07.220173"
     },
@@ -178,7 +178,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "d701c5964c25",
-      "last_seen_at": "2026-09-08T12:01:37.028206",
+      "last_seen_at": "2026-09-09T12:01:28.991354",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-08-22T12:05:37.902560"
     },
@@ -346,7 +346,7 @@
         "We've launched cache diagnostics in public beta. Pass diagnostics.previous_message_id on a Messages request and the API reports a cache_miss_reason explaining where the prompt cache prefix diverged from the previous turn. Include the cache-diagnosis-2026-04-07 beta header in your requests."
       ],
       "content_hash": "aa601d580d70",
-      "last_seen_at": "2026-09-08T12:01:37.028206",
+      "last_seen_at": "2026-09-09T12:01:28.991354",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-09-05T12:06:59.205553"
     }
@@ -604,13 +604,6 @@
       "title": "How Much Memory Does Your Agent Actually Need?",
       "url": "https://huggingface.co/blog/ibm-research/altk-evolve-hmm"
     },
-    "3b0872c46ae10ddbd5076dffa641ee530e87357a": {
-      "kind": "Blog",
-      "sent_at": "2026-07-26T12:04:25.368884",
-      "source": "Simon Willison",
-      "title": "Quoting Boris Cherny",
-      "url": "https://simonwillison.net/2026/Jul/25/boris-cherny/#atom-everything"
-    },
     "3bb41b08022edd5a69d9014b49090236b4c77184": {
       "kind": "Blog",
       "sent_at": "2026-08-06T12:05:02.260439",
@@ -631,6 +624,13 @@
       "source": "Simon Willison",
       "title": "deepseek-ai/DeepSeek-V4-Flash-0731",
       "url": "https://simonwillison.net/2026/Jul/31/deepseek-v4-flash-0731/#atom-everything"
+    },
+    "3fc8dba9f713e46156a2abe4364ed891a26456c1": {
+      "kind": "Blog",
+      "sent_at": "2026-09-09T12:07:47.102858",
+      "source": "Hacker News",
+      "title": "I-have-ADHD: A skill to stop coding agents from burying the answer",
+      "url": "https://github.com/ayghri/i-have-adhd"
     },
     "4036e7d0f8be7c671d39e1ce86a33a026ea95463": {
       "kind": "Blog",
@@ -827,6 +827,13 @@
       "source": "Hacker News",
       "title": "Humans missed 1 in 3 threats approving AI agent commands across 40k game runs",
       "url": "https://scalex.dev/blog/ai-agent-permissions-stats/"
+    },
+    "600e0602f78b7c27e368a65e80b6b10d4f9d5d80": {
+      "kind": "Blog",
+      "sent_at": "2026-09-09T12:07:47.102858",
+      "source": "MIT Tech Review",
+      "title": "What OpenAI\u2019s latest controversy tells us about the future of math",
+      "url": "https://www.technologyreview.com/2026/09/08/1143747/what-openais-latest-controversy-tells-us-about-the-future-of-math/"
     },
     "60d5f4a47a6219a40f4d34e4164255c8136c5c5e": {
       "kind": "Blog",
@@ -1122,6 +1129,13 @@
       "title": "Claude Code Tutorials",
       "url": "https://docs.anthropic.com/en/docs/claude-code/tutorials"
     },
+    "97e3f60c27d69bb617e0bf9dc71fca65c22ffa7a": {
+      "kind": "Paper",
+      "sent_at": "2026-09-09T12:07:47.102858",
+      "source": "arXiv",
+      "title": "ExecCritic: Learn to Test, Test to Improve for Coding Agents",
+      "url": "http://arxiv.org/abs/2609.09133v1"
+    },
     "98942281a29989295af11c65042c08000044b5f4": {
       "kind": "Blog",
       "sent_at": "2026-08-16T12:04:46.299267",
@@ -1163,13 +1177,6 @@
       "source": "Simon Willison",
       "title": "Breaking Claude Code Opus 5 Auto Mode",
       "url": "https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/"
-    },
-    "9f349159ac945dc48077254a4d6e54c34fc01523": {
-      "kind": "Blog",
-      "sent_at": "2026-07-26T12:04:25.368884",
-      "source": "Hacker News",
-      "title": "The new rules of context engineering for Claude 5 generation models",
-      "url": "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models"
     },
     "9f639a82a85aa7162ea104c734c27d2ada4f09c8": {
       "kind": "Blog",
@@ -1542,6 +1549,7 @@
     "https://blog.cloudflare.com/agents-week-review-august-2026/": "2026-08-11T12:05:03.934309",
     "https://blog.cloudflare.com/agents-week-welcome/": "2026-08-03T12:04:34.120253",
     "https://blog.cloudflare.com/ai-search-easier/": "2026-08-07T12:04:54.040292",
+    "https://blog.cloudflare.com/automatic-key-exchange-for-origins/": "2026-09-09T12:07:47.103026",
     "https://blog.cloudflare.com/billable-usage-api/": "2026-08-04T12:05:16.424928",
     "https://blog.cloudflare.com/bot-preference-sync/": "2026-08-22T12:05:37.902741",
     "https://blog.cloudflare.com/botbase-for-operators/": "2026-08-29T12:07:07.220267",
@@ -1588,12 +1596,10 @@
     "https://claude.com/blog/claude-code-guide-for-startups": "2026-08-21T12:05:15.075760",
     "https://claude.com/blog/claude-enterprise-inference-hooks": "2026-08-06T12:05:02.260633",
     "https://claude.com/blog/claude-for-commerce-agents": "2026-09-03T12:07:26.434398",
-    "https://claude.com/blog/claude-for-foundation-models": "2026-07-26T12:04:25.368996",
     "https://claude.com/blog/claude-for-teachers-now-available-for-schools-and-districts": "2026-08-29T12:07:07.220267",
     "https://claude.com/blog/claude-in-chrome-generally-available": "2026-08-27T12:09:26.449619",
     "https://claude.com/blog/claude-managed-agents": "2026-07-28T12:04:39.015678",
     "https://claude.com/blog/claude-managed-agents-memory": "2026-07-27T12:04:48.798191",
-    "https://claude.com/blog/claude-managed-agents-updates": "2026-07-26T12:04:25.368996",
     "https://claude.com/blog/claude-tag-now-reads-even-more-of-the-room": "2026-08-14T12:05:20.145013",
     "https://claude.com/blog/claudes-memory-works-everywhere-and-you-decide-whats-in-it": "2026-08-26T12:07:42.286813",
     "https://claude.com/blog/compliance-api-cowork-and-claude-code": "2026-08-12T12:05:24.276883",
@@ -1611,8 +1617,8 @@
     "https://claude.com/blog/how-warp-builds-self-improving-agents-on-claude": "2026-08-27T12:09:26.449619",
     "https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions": "2026-08-15T12:04:35.309514",
     "https://claude.com/blog/millennium-and-anthropic-are-building-a-digital-risk-analyst-with-claude": "2026-08-07T12:04:54.040292",
-    "https://claude.com/blog/new-in-claude-managed-agents": "2026-07-26T12:04:25.368996",
     "https://claude.com/blog/preparing-your-security-program-for-ai-accelerated-offense": "2026-07-28T12:04:39.015678",
+    "https://claude.com/blog/reducing-cost-and-improving-performance-with-claude-platform": "2026-09-09T12:07:47.103026",
     "https://claude.com/blog/run-claude-code-sessions-on-your-own-compute": "2026-08-07T12:04:54.040292",
     "https://claude.com/blog/self-service-data-analytics-in-slack-how-anthropic-deploys-claude-tag-for-ad-hoc-questions": "2026-08-14T12:05:20.145013",
     "https://claude.com/blog/the-ai-native-sdlc-playbook": "2026-08-22T12:05:37.902741",
@@ -1643,10 +1649,12 @@
     "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work": "2026-07-27T12:04:48.798191",
     "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores": "2026-07-30T12:05:12.814865",
     "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt": "2026-08-07T12:04:54.040292",
+    "https://openai.com/index/introducing-chatgpt-images-2-5": "2026-09-09T12:07:47.103026",
     "https://openai.com/index/jalapeno-first-results": "2026-08-26T12:07:42.286813",
     "https://openai.com/index/legora-financial-statement-review-with-astra": "2026-09-04T12:07:47.114718",
     "https://openai.com/index/loveholidays": "2026-08-26T12:07:42.286813",
     "https://openai.com/index/model-ml": "2026-08-11T12:05:03.934309",
+    "https://openai.com/index/navier-stokes-solution": "2026-09-09T12:07:47.103026",
     "https://openai.com/index/new-policy-ideas-for-the-intelligence-age": "2026-08-17T12:05:16.445311",
     "https://openai.com/index/offering-zero-data-retention-for-frontier-models": "2026-08-20T12:05:09.139167",
     "https://openai.com/index/openai-and-apa-partner-to-advance-responsible-ai": "2026-08-07T12:04:54.040292",
@@ -1666,6 +1674,7 @@
     "https://openai.com/index/testing-ads-in-chatgpt": "2026-08-12T12:05:24.276883",
     "https://openai.com/index/the-defenders-window": "2026-08-18T12:05:26.170377",
     "https://openai.com/index/the-full-stack-behind-abundant-intelligence": "2026-08-26T12:07:42.286813",
+    "https://openai.com/index/the-work-now-within-reach": "2026-09-09T12:07:47.103026",
     "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models": "2026-08-05T12:05:25.893222",
     "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy": "2026-08-09T12:04:40.116881",
     "https://www.anthropic.com/news/anthropic-economic-index-connector": "2026-07-30T12:05:12.814865",
