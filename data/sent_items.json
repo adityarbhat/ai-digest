@@ -51,7 +51,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "a060ba0e9231",
-      "last_seen_at": "2026-09-10T12:01:31.845148",
+      "last_seen_at": "2026-09-11T12:02:26.275123",
       "title": "Claude Code Overview",
       "updated_at": "2026-08-29T12:07:07.220173"
     },
@@ -178,7 +178,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "d701c5964c25",
-      "last_seen_at": "2026-09-10T12:01:31.845148",
+      "last_seen_at": "2026-09-11T12:02:26.275123",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-08-22T12:05:37.902560"
     },
@@ -189,6 +189,9 @@
         "The Claude Platform release notes list changes to the Claude API, the client SDKs, and the Claude Console, newest first.",
         "For release notes on Claude Apps, see the Release notes for Claude Apps in the Claude Help Center .",
         "For updates to Claude Code, see the complete CHANGELOG.md in the claude-code repository.",
+        "September 10, 2026 \ue09a",
+        "Claude Managed Agents permission policies now include auto : the server evaluates each agent or MCP tool call and runs it, denies it, or pauses for your approval. agent.tool_use and agent.mcp_tool_use events report how each call was evaluated in an evaluation field alongside evaluated_permission . See Let the server evaluate each call with auto .",
+        "The ant CLI adds ant beta:sessions connect , which attaches your terminal to a Claude Managed Agents session. You can follow the session live, send messages, and allow or deny tool calls that are waiting for approval. Pass --web to serve the Claude Console's session viewer locally and open the session there instead. See Connect to a Managed Agents session from your terminal .",
         "September 3, 2026 \ue09a",
         "Version 1.30.0 of the ant CLI adds ant apply , which creates and updates agents, environments, skills, memory stores, and deployments from files in your repository. Describe each resource in a file, run ant apply , and approve the plan it prints. Commit the claude-lock.json lockfile it writes so that later runs, on your machine or in CI, update the same resources instead of creating new ones. See Manage resources as code with ant apply .",
         "Per-message effort changes, in beta, are also available on Google Cloud for Claude Fable 5.1, Claude Mythos 5.1, and Claude Opus 5, with the same mid-conversation-output-config-2026-07-01 beta header.",
@@ -340,15 +343,12 @@
         "MCP tunnels is now available as a research preview, so you can connect to MCP servers in your private network.",
         "Self-hosted sandboxes are now available for Claude Managed Agents, as an alternative to running tool execution in Anthropic's infrastructure. See Self-hosted sandboxes .",
         "With Claude Managed Agents, you can now update the agent's MCP server and tool configurations associated with an active session.",
-        "With Claude Managed Agents, large outputs from agent_toolset and MCP tools exceeding 100K characters (about 25K tokens) are now automatically spilled to a file in the sandbox. The model receives a truncated preview with the file path and can read the full content from there.",
-        "May 18, 2026 \ue09a",
-        "The web search tool now returns richer SEC filing data, making it easier to ground financial research agents, earnings analysis, and due-diligence workflows in primary sources with citations.",
-        "May 13, 2026 \ue09a"
+        "With Claude Managed Agents, large outputs from agent_toolset and MCP tools exceeding 100K characters (about 25K tokens) are now automatically spilled to a file in the sandbox. The model receives a truncated preview with the file path and can read the full content from there."
       ],
-      "content_hash": "c4eda2bb4a20",
-      "last_seen_at": "2026-09-10T12:08:06.867051",
+      "content_hash": "020e1118a6ff",
+      "last_seen_at": "2026-09-11T12:08:35.817868",
       "title": "Anthropic Release Notes",
-      "updated_at": "2026-09-10T12:08:06.867051"
+      "updated_at": "2026-09-11T12:08:35.817868"
     }
   },
   "sent": {
@@ -449,13 +449,6 @@
       "source": "Spotify Engineering",
       "title": "Portal by Spotify cut my Claude Code token usage by 90%",
       "url": "https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90/"
-    },
-    "155b36d5a70eb479bab7c5d26bc34c7119e13d07": {
-      "kind": "Blog",
-      "sent_at": "2026-07-28T12:04:39.015571",
-      "source": "FastAPI Releases",
-      "title": "0.140.8",
-      "url": "https://github.com/fastapi/fastapi/releases/tag/0.140.8"
     },
     "1561de5ea8e0991c16a84bb4315a8c7b72435b42": {
       "kind": "Blog",
@@ -737,6 +730,13 @@
       "title": "Eval-driven development: Lessons from evaluating GenAI at scale",
       "url": "https://medium.com/airbnb-engineering/eval-driven-development-lessons-from-evaluating-genai-at-scale-e817e5ae5788?source=rss----53c7c27702d5--ai"
     },
+    "4ee270e7ef3db706950fb8ab7949e2e3a3738eed": {
+      "kind": "Blog",
+      "sent_at": "2026-09-11T12:08:35.817868",
+      "source": "Anthropic Docs",
+      "title": "Anthropic Release Notes",
+      "url": "https://docs.anthropic.com/en/release-notes/overview"
+    },
     "4f8b5b2dd3ba7545c39090c853aa5751ac2534d7": {
       "kind": "Blog",
       "sent_at": "2026-08-20T12:05:09.139017",
@@ -785,6 +785,13 @@
       "source": "Hacker News",
       "title": "Agent Skill to Force Docs in ASD-STE100 Simplified Technical English",
       "url": "https://github.com/AminBlg/SimpleEnglish"
+    },
+    "5773d6ef3bef0f8d5a452fe036e03a5e35e3cf0f": {
+      "kind": "Blog",
+      "sent_at": "2026-09-11T12:08:35.817868",
+      "source": "Neon Blog",
+      "title": "Claimable Neon: Provisioned by agents, claimed by humans",
+      "url": "https://neon.com/blog/an-agent-provisions-a-neon-backend-a-human-claims-it-later"
     },
     "57c50badf1a390fba655f151156af4e5e87025c9": {
       "kind": "Blog",
@@ -1227,6 +1234,13 @@
       "title": "Living-Harness Is an Interactive-Agent Evolver",
       "url": "http://arxiv.org/abs/2607.26598v1"
     },
+    "a8f2199eb4cba0ebddfdf39d574688862bb65aa2": {
+      "kind": "Blog",
+      "sent_at": "2026-09-11T12:08:35.817868",
+      "source": "Hacker News",
+      "title": "DeepSeek v4.1 Flash",
+      "url": "https://twitter.com/deepseek_ai/status/2097930608790167907"
+    },
     "a9500ad19247e271cbde6571e1a09ecd0ca65ebf": {
       "kind": "Blog",
       "sent_at": "2026-07-31T12:05:43.150980",
@@ -1303,13 +1317,6 @@
       "source": "OpenAI",
       "title": "From assistance to execution: How enterprises put AI to work",
       "url": "https://openai.com/index/how-enterprises-put-ai-to-work"
-    },
-    "bd20c47df7b83a3da837410920d37c0e8bef5baa": {
-      "kind": "Blog",
-      "sent_at": "2026-07-28T12:04:39.015571",
-      "source": "Hacker News",
-      "title": "Our position on open-weights models",
-      "url": "https://www.anthropic.com/news/position-open-weights-models"
     },
     "bed7c3e90c9bd98e7e68a4ef9783a173f1748015": {
       "kind": "Blog",
@@ -1472,19 +1479,19 @@
       "title": "Introducing Muse Glimmer",
       "url": "https://simonwillison.net/2026/Aug/10/introducing-muse-glimmer/#atom-everything"
     },
-    "e8dcd1bae8fed53e5e81c9a75c30a22b88f166eb": {
-      "kind": "Blog",
-      "sent_at": "2026-07-28T12:04:39.015571",
-      "source": "Hacker News",
-      "title": "PGSimCity - How PostgreSQL Works",
-      "url": "https://nikolays.github.io/PGSimCity/"
-    },
     "ea55a8c68624f9e0653b8978691f25850d81d73e": {
       "kind": "Blog",
       "sent_at": "2026-08-18T12:05:26.170179",
       "source": "MIT Tech Review",
       "title": "We still don\u2019t know how people are really using AI",
       "url": "https://www.technologyreview.com/2026/08/18/1142226/how-people-use-ai/"
+    },
+    "eb4614a57d646002e865081f9b45bf1f126280fa": {
+      "kind": "Paper",
+      "sent_at": "2026-09-11T12:08:35.817868",
+      "source": "arXiv",
+      "title": "T1: Terminal Agent Reinforcement Learning for Long-Horizon Tasks",
+      "url": "http://arxiv.org/abs/2609.11042v1"
     },
     "ed2fddef3d3e844643c42d5d01e16cd2669522e5": {
       "kind": "Blog",
@@ -1563,13 +1570,6 @@
       "title": "Introducing agentic video understanding with Gemini",
       "url": "https://deepmind.google/blog/introducing-agentic-video-in-gemini/"
     },
-    "fcd078f882eb6d2a289dffaf70c76b4d9cd019d0": {
-      "kind": "Blog",
-      "sent_at": "2026-07-28T12:04:39.015571",
-      "source": "Hacker News",
-      "title": "Benchmarking Opus 5 on SlopCodeBench",
-      "url": "https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/benchmarking-opus-5-on-slop-code-bench.md"
-    },
     "ffb7474fffddbc041f8daf7e79813ce080407b03": {
       "kind": "Paper",
       "sent_at": "2026-08-14T12:05:20.144897",
@@ -1607,8 +1607,8 @@
     "https://blog.cloudflare.com/mcp-security-updates/": "2026-08-15T12:04:35.309514",
     "https://blog.cloudflare.com/mcp-v2/": "2026-08-07T12:04:54.040292",
     "https://blog.cloudflare.com/moq-relays/": "2026-08-01T12:04:59.132717",
-    "https://blog.cloudflare.com/open-sourcing-our-privacy-proxy-cli/": "2026-07-28T12:04:39.015678",
     "https://blog.cloudflare.com/post-quantum-authentication-to-origins/": "2026-07-30T12:05:12.814865",
+    "https://blog.cloudflare.com/post-quantum-dnssec-1111/": "2026-09-11T12:08:35.817997",
     "https://blog.cloudflare.com/q2-2026-internet-disruption-summary/": "2026-07-29T12:05:05.943566",
     "https://blog.cloudflare.com/revisiting-spectre-attacks-on-workers/": "2026-08-20T12:05:09.139167",
     "https://blog.cloudflare.com/rfc9234-bgp-role-model/": "2026-08-19T12:05:01.971172",
@@ -1628,21 +1628,22 @@
     "https://claude.com/blog/bain-company-joins-the-claude-partner-network-as-a-global-premier-partner": "2026-08-26T12:07:42.286813",
     "https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders": "2026-08-22T12:05:37.902741",
     "https://claude.com/blog/bringing-mcp-2026-07-28-to-claude": "2026-07-29T12:05:05.943566",
+    "https://claude.com/blog/claude-code-desktop-redesign": "2026-09-11T12:08:35.817997",
     "https://claude.com/blog/claude-code-guide-for-startups": "2026-08-21T12:05:15.075760",
     "https://claude.com/blog/claude-enterprise-inference-hooks": "2026-08-06T12:05:02.260633",
     "https://claude.com/blog/claude-for-commerce-agents": "2026-09-03T12:07:26.434398",
     "https://claude.com/blog/claude-for-foundation-models": "2026-09-10T12:08:06.867270",
     "https://claude.com/blog/claude-for-teachers-now-available-for-schools-and-districts": "2026-08-29T12:07:07.220267",
     "https://claude.com/blog/claude-in-chrome-generally-available": "2026-08-27T12:09:26.449619",
-    "https://claude.com/blog/claude-managed-agents": "2026-07-28T12:04:39.015678",
+    "https://claude.com/blog/claude-managed-agents-memory": "2026-09-11T12:08:35.817997",
     "https://claude.com/blog/claude-managed-agents-updates": "2026-09-10T12:08:06.867270",
     "https://claude.com/blog/claude-tag-now-reads-even-more-of-the-room": "2026-08-14T12:05:20.145013",
     "https://claude.com/blog/claudes-memory-works-everywhere-and-you-decide-whats-in-it": "2026-08-26T12:07:42.286813",
     "https://claude.com/blog/compliance-api-cowork-and-claude-code": "2026-08-12T12:05:24.276883",
     "https://claude.com/blog/computer-use-skills-api-files-api": "2026-08-22T12:05:37.902741",
+    "https://claude.com/blog/connectors-for-everyday-life": "2026-09-11T12:08:35.817997",
     "https://claude.com/blog/cowork-built-in-browser": "2026-08-27T12:09:26.449619",
     "https://claude.com/blog/cowork-chrome-side-panel": "2026-08-13T12:05:04.688988",
-    "https://claude.com/blog/harnessing-claudes-intelligence": "2026-07-28T12:04:39.015678",
     "https://claude.com/blog/how-abc-legal-turned-every-employee-into-a-builder-with-claude-managed-agents": "2026-08-18T12:05:26.170377",
     "https://claude.com/blog/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep": "2026-08-25T12:05:53.813101",
     "https://claude.com/blog/how-anthropic-employees-use-claude-tag": "2026-08-29T12:07:07.220267",
@@ -1653,7 +1654,6 @@
     "https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions": "2026-08-15T12:04:35.309514",
     "https://claude.com/blog/millennium-and-anthropic-are-building-a-digital-risk-analyst-with-claude": "2026-08-07T12:04:54.040292",
     "https://claude.com/blog/new-in-claude-managed-agents": "2026-09-10T12:08:06.867270",
-    "https://claude.com/blog/preparing-your-security-program-for-ai-accelerated-offense": "2026-07-28T12:04:39.015678",
     "https://claude.com/blog/reducing-cost-and-improving-performance-with-claude-platform": "2026-09-09T12:07:47.103026",
     "https://claude.com/blog/run-claude-code-sessions-on-your-own-compute": "2026-08-07T12:04:54.040292",
     "https://claude.com/blog/self-service-data-analytics-in-slack-how-anthropic-deploys-claude-tag-for-ad-hoc-questions": "2026-08-14T12:05:20.145013",
@@ -1685,6 +1685,7 @@
     "https://openai.com/index/gpt-5-6-in-kiro": "2026-08-25T12:05:53.813101",
     "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores": "2026-07-30T12:05:12.814865",
     "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt": "2026-08-07T12:04:54.040292",
+    "https://openai.com/index/introducing-chatgpt-financial-services": "2026-09-11T12:08:35.817997",
     "https://openai.com/index/introducing-chatgpt-images-2-5": "2026-09-09T12:07:47.103026",
     "https://openai.com/index/jalapeno-first-results": "2026-08-26T12:07:42.286813",
     "https://openai.com/index/legora-financial-statement-review-with-astra": "2026-09-04T12:07:47.114718",
@@ -1701,6 +1702,7 @@
     "https://openai.com/index/paul-christiano-joins-openai-foundation-board": "2026-09-10T12:08:06.867270",
     "https://openai.com/index/playco-game-prototyping-with-astra": "2026-09-04T12:07:47.114718",
     "https://openai.com/index/previewing-ultrafast": "2026-08-14T12:05:20.145013",
+    "https://openai.com/index/put-data-to-work": "2026-09-11T12:08:35.817997",
     "https://openai.com/index/replit": "2026-08-20T12:05:09.139167",
     "https://openai.com/index/responsible-ai-infrastructure-texas": "2026-08-11T12:05:03.934309",
     "https://openai.com/index/scientific-computing-agentic-ai": "2026-07-29T12:05:05.943566",
@@ -1713,6 +1715,7 @@
     "https://openai.com/index/the-full-stack-behind-abundant-intelligence": "2026-08-26T12:07:42.286813",
     "https://openai.com/index/the-work-now-within-reach": "2026-09-09T12:07:47.103026",
     "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models": "2026-08-05T12:05:25.893222",
+    "https://openai.com/index/using-codex-chatgpt-to-search-for-new-antimicrobials": "2026-09-11T12:08:35.817997",
     "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy": "2026-08-09T12:04:40.116881",
     "https://www.anthropic.com/news/anthropic-economic-index-connector": "2026-07-30T12:05:12.814865",
     "https://www.anthropic.com/news/claude-sonnet-5": "2026-08-16T12:04:46.299365",
