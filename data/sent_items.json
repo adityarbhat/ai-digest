@@ -51,7 +51,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "a060ba0e9231",
-      "last_seen_at": "2026-09-12T12:02:12.949896",
+      "last_seen_at": "2026-09-13T12:01:27.536813",
       "title": "Claude Code Overview",
       "updated_at": "2026-08-29T12:07:07.220173"
     },
@@ -178,7 +178,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "d701c5964c25",
-      "last_seen_at": "2026-09-12T12:02:12.949896",
+      "last_seen_at": "2026-09-13T12:01:27.536813",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-08-22T12:05:37.902560"
     },
@@ -346,7 +346,7 @@
         "With Claude Managed Agents, large outputs from agent_toolset and MCP tools exceeding 100K characters (about 25K tokens) are now automatically spilled to a file in the sandbox. The model receives a truncated preview with the file path and can read the full content from there."
       ],
       "content_hash": "020e1118a6ff",
-      "last_seen_at": "2026-09-12T12:02:12.949896",
+      "last_seen_at": "2026-09-13T12:01:27.536813",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-09-11T12:08:35.817868"
     }
@@ -548,13 +548,6 @@
       "title": "Beyond the Dashboard: Accelerating Real-Time Intelligence in the Age of AI",
       "url": "https://medium.com/booking-com-development/beyond-the-dashboard-accelerating-real-time-intelligence-in-the-age-of-ai-6f1f0f9c123f?source=rss----1c36c35f9c76---4"
     },
-    "2afc78fbb41c418e41376b4466c4ec4c54ddbe21": {
-      "kind": "Blog",
-      "sent_at": "2026-07-30T12:05:12.814703",
-      "source": "Hacker News",
-      "title": "Handbook.md shows that long policy documents do not reliably govern agents",
-      "url": "https://arxiv.org/abs/2607.25398"
-    },
     "30016bda0a834dc2b9cce27aefecbfca58028925": {
       "kind": "Paper",
       "sent_at": "2026-08-20T12:05:09.139017",
@@ -716,19 +709,19 @@
       "title": "Docker Sandboxes \u2013 Disposable, isolated sandboxes for AI agents",
       "url": "https://www.docker.com/products/docker-sandboxes/"
     },
-    "4ae3df8586ec0ed64055229b7c4b29e306097dd0": {
-      "kind": "Blog",
-      "sent_at": "2026-07-30T12:05:12.814703",
-      "source": "FastAPI Releases",
-      "title": "0.141.0",
-      "url": "https://github.com/fastapi/fastapi/releases/tag/0.141.0"
-    },
     "4b0e98d5d8ea06b4986f3947a926213c53dc8d89": {
       "kind": "Blog",
       "sent_at": "2026-08-24T12:06:03.904855",
       "source": "Hacker News",
       "title": "What Is a Harness?",
       "url": "https://earendil.com/posts/what-is-a-harness/"
+    },
+    "4bc695297c2e15d251c913132d5383f5b3f62447": {
+      "kind": "Blog",
+      "sent_at": "2026-09-13T12:07:17.595128",
+      "source": "Hacker News",
+      "title": "Real-SWE: Benchmarking AI models on private, real-world, enterprise codebases",
+      "url": "https://withspecific.com/benchmarks/real-swe"
     },
     "4c7eb22d0ad1ffec9644b059c60bb1c2487568ba": {
       "kind": "Paper",
@@ -778,13 +771,6 @@
       "source": "Instacart Engineering",
       "title": "Agentic Machine Learning Modeling at Instacart",
       "url": "https://tech.instacart.com/agentic-machine-learning-modeling-at-instacart-fb3ecd295ee7?source=rss----587883b5d2ee---4"
-    },
-    "54ca777d322dfb2694c20b0e4db9e4725c4b2b2b": {
-      "kind": "Blog",
-      "sent_at": "2026-07-30T12:05:12.814703",
-      "source": "Simon Willison",
-      "title": "Adding a custom MCP server to Claude and ChatGPT",
-      "url": "https://simonwillison.net/2026/Jul/29/mcp-in-claude-and-chatgpt/#atom-everything"
     },
     "5533ed7f37adfd9da6989121d3c85e7367d840c2": {
       "kind": "Blog",
@@ -1213,13 +1199,6 @@
       "title": "MCP went stateless: Is your AWS MCP server deployment well-architected?",
       "url": "https://aws.amazon.com/blogs/architecture/mcp-went-stateless-is-your-aws-mcp-server-deployment-well-architected/"
     },
-    "a4fd6d6ad13d4229708e9083826b2ab02da2779d": {
-      "kind": "Paper",
-      "sent_at": "2026-07-30T12:05:12.814703",
-      "source": "arXiv",
-      "title": "Living-Harness Is an Interactive-Agent Evolver",
-      "url": "http://arxiv.org/abs/2607.26598v1"
-    },
     "a8f2199eb4cba0ebddfdf39d574688862bb65aa2": {
       "kind": "Blog",
       "sent_at": "2026-09-11T12:08:35.817868",
@@ -1587,7 +1566,6 @@
     "https://blog.cloudflare.com/mcp-security-updates/": "2026-08-15T12:04:35.309514",
     "https://blog.cloudflare.com/mcp-v2/": "2026-08-07T12:04:54.040292",
     "https://blog.cloudflare.com/moq-relays/": "2026-08-01T12:04:59.132717",
-    "https://blog.cloudflare.com/post-quantum-authentication-to-origins/": "2026-07-30T12:05:12.814865",
     "https://blog.cloudflare.com/post-quantum-dnssec-1111/": "2026-09-11T12:08:35.817997",
     "https://blog.cloudflare.com/revisiting-spectre-attacks-on-workers/": "2026-08-20T12:05:09.139167",
     "https://blog.cloudflare.com/rfc9234-bgp-role-model/": "2026-08-19T12:05:01.971172",
@@ -1654,7 +1632,6 @@
     "https://openai.com/index/building-an-ai-native-finance-function": "2026-08-11T12:05:03.934309",
     "https://openai.com/index/chatgpt-ads-expands-across-europe": "2026-08-19T12:05:01.971172",
     "https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources": "2026-09-02T12:07:46.364695",
-    "https://openai.com/index/chatgpt-for-academic-researchers": "2026-07-30T12:05:12.814865",
     "https://openai.com/index/chatgpt-for-teens": "2026-08-18T12:05:26.170377",
     "https://openai.com/index/continuous-voice-interaction-with-gpt-live": "2026-08-04T12:05:16.424928",
     "https://openai.com/index/dali-rajic-chief-revenue-officer": "2026-08-14T12:05:20.145013",
@@ -1664,7 +1641,6 @@
     "https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads": "2026-09-01T12:07:21.810485",
     "https://openai.com/index/expanding-our-presence-in-brazil": "2026-08-27T12:09:26.449619",
     "https://openai.com/index/gpt-5-6-in-kiro": "2026-08-25T12:05:53.813101",
-    "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores": "2026-07-30T12:05:12.814865",
     "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt": "2026-08-07T12:04:54.040292",
     "https://openai.com/index/introducing-chatgpt-financial-services": "2026-09-11T12:08:35.817997",
     "https://openai.com/index/introducing-chatgpt-images-2-5": "2026-09-09T12:07:47.103026",
@@ -1697,18 +1673,17 @@
     "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models": "2026-08-05T12:05:25.893222",
     "https://openai.com/index/using-codex-chatgpt-to-search-for-new-antimicrobials": "2026-09-11T12:08:35.817997",
     "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy": "2026-08-09T12:04:40.116881",
-    "https://www.anthropic.com/news/anthropic-economic-index-connector": "2026-07-30T12:05:12.814865",
+    "https://www.anthropic.com/news/claude-opus-5": "2026-09-13T12:07:17.595222",
     "https://www.anthropic.com/news/claude-sonnet-5": "2026-08-16T12:04:46.299365",
     "https://www.anthropic.com/news/claude-text-watermark": "2026-08-16T12:04:46.299365",
-    "https://www.anthropic.com/news/cognizant-anthropic": "2026-07-30T12:05:12.814865",
     "https://www.anthropic.com/news/donation-public-first-action": "2026-07-31T12:05:43.151129",
-    "https://www.anthropic.com/news/economic-futures-research-fund-agenda": "2026-07-30T12:05:12.814865",
     "https://www.anthropic.com/news/enterprise-frontier-safeguards": "2026-09-02T12:07:46.364695",
     "https://www.anthropic.com/news/expanding-support-for-scientists": "2026-08-28T12:07:21.900041",
     "https://www.anthropic.com/news/improving-alignment-security-efforts": "2026-09-01T12:07:21.810485",
     "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards": "2026-08-09T12:04:40.116881",
     "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals": "2026-07-31T12:05:43.151129",
     "https://www.anthropic.com/news/model-hardware-standard-research-preview": "2026-08-28T12:07:21.900041",
+    "https://www.anthropic.com/news/position-open-weights-models": "2026-09-13T12:07:17.595222",
     "https://www.anthropic.com/news/rare-disease-research-grants": "2026-07-31T12:05:43.151129",
     "https://www.anthropic.com/news/redeploying-fable-5": "2026-08-17T12:05:16.445311",
     "https://www.anthropic.com/news/tino-cuellar": "2026-08-09T12:04:40.116881",
