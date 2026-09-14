@@ -51,7 +51,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "a060ba0e9231",
-      "last_seen_at": "2026-09-13T12:01:27.536813",
+      "last_seen_at": "2026-09-14T12:01:09.514755",
       "title": "Claude Code Overview",
       "updated_at": "2026-08-29T12:07:07.220173"
     },
@@ -178,7 +178,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "d701c5964c25",
-      "last_seen_at": "2026-09-13T12:01:27.536813",
+      "last_seen_at": "2026-09-14T12:01:09.514755",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-08-22T12:05:37.902560"
     },
@@ -346,7 +346,7 @@
         "With Claude Managed Agents, large outputs from agent_toolset and MCP tools exceeding 100K characters (about 25K tokens) are now automatically spilled to a file in the sandbox. The model receives a truncated preview with the file path and can read the full content from there."
       ],
       "content_hash": "020e1118a6ff",
-      "last_seen_at": "2026-09-13T12:01:27.536813",
+      "last_seen_at": "2026-09-14T12:01:09.514755",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-09-11T12:08:35.817868"
     }
@@ -421,13 +421,6 @@
       "source": "arXiv",
       "title": "From Agent Behaviour to Agent-Friendly Documentation: An Empirical Study of How Coding Agents Discover, Read, and Write Technical Documentation",
       "url": "http://arxiv.org/abs/2608.20195v1"
-    },
-    "11337413cb0bf3d0d1056a19008fb799212edcb3": {
-      "kind": "Blog",
-      "sent_at": "2026-07-31T12:05:43.150980",
-      "source": "Hacker News",
-      "title": "DeepSeek-V4-Flash Update",
-      "url": "https://api-docs.deepseek.com/updates/"
     },
     "11efb81118370c1137b12aea532f9eea21d36cc1": {
       "kind": "Paper",
@@ -744,13 +737,6 @@
       "title": "smolmachines / smolvm as a sandbox for untrusted Python & JavaScript",
       "url": "https://simonwillison.net/2026/Aug/19/smolmachines-untrusted-sandbox/"
     },
-    "51a9599f28fc1f8596200aad174c8c541c9e6c8b": {
-      "kind": "Paper",
-      "sent_at": "2026-07-31T12:05:43.150980",
-      "source": "arXiv",
-      "title": "DataClawEval: A Benchmark for Data Engineering Agents in Real Industrial Harness",
-      "url": "http://arxiv.org/abs/2607.28033v1"
-    },
     "5220b75f89f38e822d8d25545e5ef2b1ddfc7cf6": {
       "kind": "Blog",
       "sent_at": "2026-08-13T12:05:04.688836",
@@ -778,13 +764,6 @@
       "source": "Simon Willison",
       "title": "Conceptual integrity and counting lines of code",
       "url": "https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code/"
-    },
-    "570042aaba2969c8570ea32951be93a3de1815f8": {
-      "kind": "Blog",
-      "sent_at": "2026-07-31T12:05:43.150980",
-      "source": "Hacker News",
-      "title": "Agent Skill to Force Docs in ASD-STE100 Simplified Technical English",
-      "url": "https://github.com/AminBlg/SimpleEnglish"
     },
     "5773d6ef3bef0f8d5a452fe036e03a5e35e3cf0f": {
       "kind": "Blog",
@@ -898,13 +877,6 @@
       "title": "How AI-native companies turn workflows into operating capability",
       "url": "https://openai.com/index/ai-native-company-workflows"
     },
-    "6ac0d8f98914bc1405c51bc83929ec3d7c379b95": {
-      "kind": "Blog",
-      "sent_at": "2026-07-31T12:05:43.150980",
-      "source": "Simon Willison",
-      "title": "Investigating three real-world incidents in our cybersecurity evaluations",
-      "url": "https://simonwillison.net/2026/Jul/30/three-real-world-incidents/#atom-everything"
-    },
     "6de8aeee706803461876fedb17b2c52802b51d89": {
       "kind": "Blog",
       "sent_at": "2026-08-04T12:05:16.424733",
@@ -1016,13 +988,6 @@
       "source": "arXiv",
       "title": "When Tool Outputs Become Commands: Separating Action Induction from Runtime Authorization in Tool-Augmented LLM Agents",
       "url": "http://arxiv.org/abs/2608.27146v1"
-    },
-    "83d0c8466b2b53022d341264ebd340386322a019": {
-      "kind": "Blog",
-      "sent_at": "2026-07-31T12:05:43.150980",
-      "source": "Microsoft Research",
-      "title": "Echoverse: Deep, evolving environments for computer-use agents",
-      "url": "https://www.microsoft.com/en-us/research/blog/echoverse-deep-evolving-environments-for-computer-use-agents/"
     },
     "83fc31902e095aff199d264309fea2fb686f4993": {
       "kind": "Paper",
@@ -1205,13 +1170,6 @@
       "source": "Hacker News",
       "title": "DeepSeek v4.1 Flash",
       "url": "https://twitter.com/deepseek_ai/status/2097930608790167907"
-    },
-    "a9500ad19247e271cbde6571e1a09ecd0ca65ebf": {
-      "kind": "Blog",
-      "sent_at": "2026-07-31T12:05:43.150980",
-      "source": "Neon Blog",
-      "title": "CommSync Runs Text, Vector, and Hybrid Search on Postgres with Lakebase Search",
-      "url": "https://neon.com/blog/commsync-runs-text-vector-and-hybrid-search-on-postgres-with-lakebase-search"
     },
     "a98b574014362123a0d6c4901df005f33f048653": {
       "kind": "Paper",
@@ -1437,6 +1395,13 @@
       "title": "Introducing Muse Glimmer",
       "url": "https://simonwillison.net/2026/Aug/10/introducing-muse-glimmer/#atom-everything"
     },
+    "e9a1e417227e2b087441f3d52a4f5a2770d43bf1": {
+      "kind": "Blog",
+      "sent_at": "2026-09-14T12:06:48.369827",
+      "source": "Simon Willison",
+      "title": "commit-rewriter 0.1",
+      "url": "https://simonwillison.net/2026/Sep/14/commit-rewriter/"
+    },
     "ea55a8c68624f9e0653b8978691f25850d81d73e": {
       "kind": "Blog",
       "sent_at": "2026-08-18T12:05:26.170179",
@@ -1548,7 +1513,6 @@
     "https://blog.cloudflare.com/botbase-for-operators/": "2026-08-29T12:07:07.220267",
     "https://blog.cloudflare.com/cache-transcoding/": "2026-09-02T12:07:46.364695",
     "https://blog.cloudflare.com/casb-policies/": "2026-09-12T12:07:44.504914",
-    "https://blog.cloudflare.com/cdnjs-dev-platform-migration/": "2026-07-31T12:05:43.151129",
     "https://blog.cloudflare.com/certificate-transparency-monitoring-ga/": "2026-08-14T12:05:20.145013",
     "https://blog.cloudflare.com/ci-workflows/": "2026-08-05T12:05:25.893222",
     "https://blog.cloudflare.com/cloudflare-blog-uses-emdash/": "2026-08-25T12:05:53.813101",
@@ -1620,8 +1584,6 @@
     "https://claude.com/blog/the-claude-science-product-guide": "2026-08-19T12:05:01.971172",
     "https://claude.com/blog/turning-conversation-into-knowledge-how-slack-builds-human-agent-teams": "2026-08-20T12:05:09.139167",
     "https://claude.com/blog/what-1-000-small-business-owners-taught-us-about-ai": "2026-09-12T12:07:44.504914",
-    "https://openai.com/index/advancing-responsible-ai-across-europe": "2026-07-31T12:05:43.151129",
-    "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6": "2026-07-31T12:05:43.151129",
     "https://openai.com/index/ai-policy-window": "2026-09-10T12:08:06.867270",
     "https://openai.com/index/an-alien-mind": "2026-09-07T12:08:41.637282",
     "https://openai.com/index/apple-is-getting-this-wrong": "2026-08-04T12:05:16.424928",
@@ -1676,15 +1638,12 @@
     "https://www.anthropic.com/news/claude-opus-5": "2026-09-13T12:07:17.595222",
     "https://www.anthropic.com/news/claude-sonnet-5": "2026-08-16T12:04:46.299365",
     "https://www.anthropic.com/news/claude-text-watermark": "2026-08-16T12:04:46.299365",
-    "https://www.anthropic.com/news/donation-public-first-action": "2026-07-31T12:05:43.151129",
     "https://www.anthropic.com/news/enterprise-frontier-safeguards": "2026-09-02T12:07:46.364695",
     "https://www.anthropic.com/news/expanding-support-for-scientists": "2026-08-28T12:07:21.900041",
     "https://www.anthropic.com/news/improving-alignment-security-efforts": "2026-09-01T12:07:21.810485",
     "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards": "2026-08-09T12:04:40.116881",
-    "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals": "2026-07-31T12:05:43.151129",
     "https://www.anthropic.com/news/model-hardware-standard-research-preview": "2026-08-28T12:07:21.900041",
     "https://www.anthropic.com/news/position-open-weights-models": "2026-09-13T12:07:17.595222",
-    "https://www.anthropic.com/news/rare-disease-research-grants": "2026-07-31T12:05:43.151129",
     "https://www.anthropic.com/news/redeploying-fable-5": "2026-08-17T12:05:16.445311",
     "https://www.anthropic.com/news/tino-cuellar": "2026-08-09T12:04:40.116881",
     "https://www.anthropic.com/news/wellbeing-research-grants": "2026-08-28T12:07:21.900041"
