@@ -36,7 +36,7 @@
         "Work from anywhere",
         "Step away from your desk and keep working from your phone or any browser with Remote Control",
         "Message Dispatch a task from your phone and open the Desktop session it creates",
-        "Kick off a long-running task on the web or the Claude mobile app , then pull it into your terminal with claude --teleport . Teleport requires a claude.ai subscription.",
+        "Start a long-running task on the web or the Claude mobile app , then pull it into your terminal with claude --teleport . Teleport requires a claude.ai subscription.",
         "Run /desktop to continue your current terminal session in the Desktop app , where you can review diffs visually. The /desktop handoff requires a claude.ai subscription. Available on macOS and x64 Windows.",
         "Route tasks from team chat: mention @Claude in Slack with a bug report and get a pull request back",
         "\u200b Use Claude Code everywhere",
@@ -50,10 +50,10 @@
         "code.claude.com : demos, pricing, and product details",
         "Was this page helpful?"
       ],
-      "content_hash": "a060ba0e9231",
-      "last_seen_at": "2026-09-15T12:01:18.598799",
+      "content_hash": "66eeb260dbf5",
+      "last_seen_at": "2026-09-16T12:09:07.980449",
       "title": "Claude Code Overview",
-      "updated_at": "2026-08-29T12:07:07.220173"
+      "updated_at": "2026-09-16T12:09:07.980449"
     },
     "https://docs.anthropic.com/en/docs/claude-code/tutorials": {
       "blocks": [
@@ -178,7 +178,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "d701c5964c25",
-      "last_seen_at": "2026-09-15T12:01:18.598799",
+      "last_seen_at": "2026-09-16T12:02:49.732946",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-08-22T12:05:37.902560"
     },
@@ -189,6 +189,8 @@
         "The Claude Platform release notes list changes to the Claude API, the client SDKs, and the Claude Console, newest first.",
         "For release notes on Claude Apps, see the Release notes for Claude Apps in the Claude Help Center .",
         "For updates to Claude Code, see the complete CHANGELOG.md in the claude-code repository.",
+        "September 14, 2026 \ue09a",
+        "The Messages API can now compact a conversation on demand on the Claude API, in beta with the compact-2026-09-04 beta header. Send the top-level compaction parameter, and the API returns a signed compaction block that summarizes the messages you sent. On later requests, send that block first, in place of those messages. You choose when to compact, the request can run in the background, and you can keep recent turns word for word after the summary. On models with preserved thinking, the thinking in those kept turns can stay valid.",
         "September 10, 2026 \ue09a",
         "Claude Managed Agents permission policies now include auto : the server evaluates each agent or MCP tool call and runs it, denies it, or pauses for your approval. agent.tool_use and agent.mcp_tool_use events report how each call was evaluated in an evaluation field alongside evaluated_permission . See Let the server evaluate each call with auto .",
         "The ant CLI adds ant beta:sessions connect , which attaches your terminal to a Claude Managed Agents session. You can follow the session live, send messages, and allow or deny tool calls that are waiting for approval. Pass --web to serve the Claude Console's session viewer locally and open the session there instead. See Connect to a Managed Agents session from your terminal .",
@@ -341,14 +343,12 @@
         "The Messages API response now includes usage.output_tokens_details.thinking_tokens , reporting how many of the billed output tokens were extended thinking. When streaming, the breakdown appears only on the final message_delta event. No beta header is required.",
         "May 19, 2026 \ue09a",
         "MCP tunnels is now available as a research preview, so you can connect to MCP servers in your private network.",
-        "Self-hosted sandboxes are now available for Claude Managed Agents, as an alternative to running tool execution in Anthropic's infrastructure. See Self-hosted sandboxes .",
-        "With Claude Managed Agents, you can now update the agent's MCP server and tool configurations associated with an active session.",
-        "With Claude Managed Agents, large outputs from agent_toolset and MCP tools exceeding 100K characters (about 25K tokens) are now automatically spilled to a file in the sandbox. The model receives a truncated preview with the file path and can read the full content from there."
+        "Self-hosted sandboxes are now available for Claude Managed Agents, as an alternative to running tool execution in Anthropic's infrastructure. See Self-hosted sandboxes ."
       ],
-      "content_hash": "020e1118a6ff",
-      "last_seen_at": "2026-09-15T12:01:18.598799",
+      "content_hash": "1923581cea4d",
+      "last_seen_at": "2026-09-16T12:09:07.980449",
       "title": "Anthropic Release Notes",
-      "updated_at": "2026-09-11T12:08:35.817868"
+      "updated_at": "2026-09-16T12:09:07.980449"
     }
   },
   "sent": {
@@ -800,19 +800,26 @@
       "title": "Humans missed 1 in 3 threats approving AI agent commands across 40k game runs",
       "url": "https://scalex.dev/blog/ai-agent-permissions-stats/"
     },
+    "5c6499d1de4a2644968aa2703cd05f724da6265b": {
+      "kind": "Blog",
+      "sent_at": "2026-09-16T12:09:07.980449",
+      "source": "HuggingFace",
+      "title": "Your Agent Aced the Task. Will It Do It Again?",
+      "url": "https://huggingface.co/blog/ibm-research/altk-evolve-consistency"
+    },
+    "5d535f9c0e3066b22f67f98f9e3a5a81d486185e": {
+      "kind": "Blog",
+      "sent_at": "2026-09-16T12:09:07.980449",
+      "source": "Anthropic Docs",
+      "title": "Claude Code Overview",
+      "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
+    },
     "600e0602f78b7c27e368a65e80b6b10d4f9d5d80": {
       "kind": "Blog",
       "sent_at": "2026-09-09T12:07:47.102858",
       "source": "MIT Tech Review",
       "title": "What OpenAI\u2019s latest controversy tells us about the future of math",
       "url": "https://www.technologyreview.com/2026/09/08/1143747/what-openais-latest-controversy-tells-us-about-the-future-of-math/"
-    },
-    "60d5f4a47a6219a40f4d34e4164255c8136c5c5e": {
-      "kind": "Blog",
-      "sent_at": "2026-08-02T12:05:07.253243",
-      "source": "Simon Willison",
-      "title": "datasette-apps 0.2a0",
-      "url": "https://simonwillison.net/2026/Aug/1/datasette-apps/#atom-everything"
     },
     "64bc67c948b91660669d308ffffbbfbbeb82adbb": {
       "kind": "Blog",
@@ -968,6 +975,13 @@
       "title": "Catching rogue AI behavior with identity-aware analytics",
       "url": "https://blog.cloudflare.com/identity-aware-ai-gateway/"
     },
+    "82d5a9fe27adffe16ad357ed22e76eca9de0215d": {
+      "kind": "Blog",
+      "sent_at": "2026-09-16T12:09:07.980449",
+      "source": "Anthropic Docs",
+      "title": "Anthropic Release Notes",
+      "url": "https://docs.anthropic.com/en/release-notes/overview"
+    },
     "82e10891687d4b94de2c79713617f714028c1c3b": {
       "kind": "Paper",
       "sent_at": "2026-08-29T12:07:07.220173",
@@ -988,6 +1002,13 @@
       "source": "Supabase Engineering",
       "title": "Supabase is now a connector on Perplexity Computer Supabase is now a connector on Perplexity Computer. Query your Postgres data, look up users, and invoke Edge Functions from a Perplexity chat. Author: Natalie Roberge Published 7 August 2026 \u00b7 2 minute read",
       "url": "https://supabase.com/blog/supabase-is-now-a-connector-on-perplexity-computer"
+    },
+    "87336ed8dc2a5d505e47fb0ab62ef9f6e16cc6e8": {
+      "kind": "Paper",
+      "sent_at": "2026-09-16T12:09:07.980449",
+      "source": "arXiv",
+      "title": "Protocol-Preserving Context Trimming for Agentic Workflows: Benefits, Failure Regimes, and Budget Guardrails",
+      "url": "http://arxiv.org/abs/2609.16461v1"
     },
     "8811334ebd7086b12df1d278160193574973f275": {
       "kind": "Blog",
@@ -1276,6 +1297,13 @@
       "title": "PeakBench: Benchmarking Resource-Aware Tool Invocation in LLM Agents",
       "url": "http://arxiv.org/abs/2608.24509v1"
     },
+    "d4a138a91c735605a733587a890ebcf93971fd92": {
+      "kind": "Blog",
+      "sent_at": "2026-09-16T12:09:07.980449",
+      "source": "Airbnb Engineering",
+      "title": "Beyond the model: Engineering AI infra with scientific judgement",
+      "url": "https://medium.com/airbnb-engineering/beyond-the-model-engineering-ai-infra-with-scientific-judgement-371316d43261?source=rss----53c7c27702d5--ai"
+    },
     "d4f44bcc1e7b751864b676b436ceb42e9c8b3486": {
       "kind": "Blog",
       "sent_at": "2026-08-07T12:04:54.040151",
@@ -1467,6 +1495,7 @@
     }
   },
   "watchlist_seen": {
+    "https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/": "2026-09-16T12:09:07.980580",
     "https://blog.cloudflare.com/aeo/": "2026-08-07T12:04:54.040292",
     "https://blog.cloudflare.com/agent-development-lifecycle/": "2026-08-05T12:05:25.893222",
     "https://blog.cloudflare.com/agents-week-review-august-2026/": "2026-08-11T12:05:03.934309",
@@ -1502,6 +1531,7 @@
     "https://blog.cloudflare.com/total-eclipse-internet-traffic-iceland-spain-portugal/": "2026-08-14T12:05:20.145013",
     "https://blog.cloudflare.com/vulnerability-discovery-remediation/": "2026-09-04T12:07:47.114718",
     "https://blog.cloudflare.com/wallets/": "2026-08-05T12:05:25.893222",
+    "https://blog.cloudflare.com/workers-granular-authorization/": "2026-09-16T12:09:07.980580",
     "https://blog.cloudflare.com/workers-module-registry-nodejs/": "2026-09-10T12:08:06.867270",
     "https://blog.cloudflare.com/workers-protected-by-access/": "2026-08-15T12:04:35.309514",
     "https://claude.com/blog/a-guide-to-cost-visibility-and-control-in-claude": "2026-08-05T12:05:25.893222",
@@ -1513,12 +1543,14 @@
     "https://claude.com/blog/auto-mode-in-production": "2026-08-08T12:05:05.404940",
     "https://claude.com/blog/bain-company-joins-the-claude-partner-network-as-a-global-premier-partner": "2026-08-26T12:07:42.286813",
     "https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders": "2026-08-22T12:05:37.902741",
+    "https://claude.com/blog/building-an-ai-native-revenue-organization": "2026-09-16T12:09:07.980580",
     "https://claude.com/blog/claude-code-desktop-redesign": "2026-09-11T12:08:35.817997",
     "https://claude.com/blog/claude-code-guide-for-startups": "2026-08-21T12:05:15.075760",
     "https://claude.com/blog/claude-enterprise-inference-hooks": "2026-08-06T12:05:02.260633",
     "https://claude.com/blog/claude-for-commerce-agents": "2026-09-03T12:07:26.434398",
     "https://claude.com/blog/claude-for-financial-advisors": "2026-09-15T12:07:57.999528",
     "https://claude.com/blog/claude-for-foundation-models": "2026-09-10T12:08:06.867270",
+    "https://claude.com/blog/claude-for-small-business-launches-new-workflows-integrations-and-training-programs": "2026-09-16T12:09:07.980580",
     "https://claude.com/blog/claude-for-teachers-now-available-for-schools-and-districts": "2026-08-29T12:07:07.220267",
     "https://claude.com/blog/claude-in-chrome-generally-available": "2026-08-27T12:09:26.449619",
     "https://claude.com/blog/claude-managed-agents-memory": "2026-09-11T12:08:35.817997",
@@ -1544,6 +1576,7 @@
     "https://claude.com/blog/preparing-your-security-program-for-ai-accelerated-offense": "2026-09-12T12:07:44.504914",
     "https://claude.com/blog/reducing-cost-and-improving-performance-with-claude-platform": "2026-09-09T12:07:47.103026",
     "https://claude.com/blog/run-claude-code-sessions-on-your-own-compute": "2026-08-07T12:04:54.040292",
+    "https://claude.com/blog/salesforce-in-claude": "2026-09-16T12:09:07.980580",
     "https://claude.com/blog/self-service-data-analytics-in-slack-how-anthropic-deploys-claude-tag-for-ad-hoc-questions": "2026-08-14T12:05:20.145013",
     "https://claude.com/blog/t-rowe-price-brings-more-of-claude-to-its-investment-process": "2026-09-12T12:07:44.504914",
     "https://claude.com/blog/the-ai-native-sdlc-playbook": "2026-08-22T12:05:37.902741",
