@@ -51,7 +51,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "66eeb260dbf5",
-      "last_seen_at": "2026-09-16T12:09:07.980449",
+      "last_seen_at": "2026-09-17T12:06:31.914497",
       "title": "Claude Code Overview",
       "updated_at": "2026-09-16T12:09:07.980449"
     },
@@ -178,7 +178,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "d701c5964c25",
-      "last_seen_at": "2026-09-16T12:02:49.732946",
+      "last_seen_at": "2026-09-17T12:06:31.914497",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-08-22T12:05:37.902560"
     },
@@ -193,7 +193,7 @@
         "The Messages API can now compact a conversation on demand on the Claude API, in beta with the compact-2026-09-04 beta header. Send the top-level compaction parameter, and the API returns a signed compaction block that summarizes the messages you sent. On later requests, send that block first, in place of those messages. You choose when to compact, the request can run in the background, and you can keep recent turns word for word after the summary. On models with preserved thinking, the thinking in those kept turns can stay valid.",
         "September 10, 2026 \ue09a",
         "Claude Managed Agents permission policies now include auto : the server evaluates each agent or MCP tool call and runs it, denies it, or pauses for your approval. agent.tool_use and agent.mcp_tool_use events report how each call was evaluated in an evaluation field alongside evaluated_permission . See Let the server evaluate each call with auto .",
-        "The ant CLI adds ant beta:sessions connect , which attaches your terminal to a Claude Managed Agents session. You can follow the session live, send messages, and allow or deny tool calls that are waiting for approval. Pass --web to serve the Claude Console's session viewer locally and open the session there instead. See Connect to a Managed Agents session from your terminal .",
+        "Version 1.32.0 of the ant CLI adds ant beta:sessions connect , which attaches your terminal to a Claude Managed Agents session. You can follow the session live, send messages, and allow or deny tool calls that are waiting for approval. Pass --web to serve the Claude Console's session viewer locally and open the session there instead. See Connect to a Managed Agents session from your terminal .",
         "September 3, 2026 \ue09a",
         "Version 1.30.0 of the ant CLI adds ant apply , which creates and updates agents, environments, skills, memory stores, and deployments from files in your repository. Describe each resource in a file, run ant apply , and approve the plan it prints. Commit the claude-lock.json lockfile it writes so that later runs, on your machine or in CI, update the same resources instead of creating new ones. See Manage resources as code with ant apply .",
         "Per-message effort changes, in beta, are also available on Google Cloud for Claude Fable 5.1, Claude Mythos 5.1, and Claude Opus 5, with the same mid-conversation-output-config-2026-07-01 beta header.",
@@ -345,10 +345,10 @@
         "MCP tunnels is now available as a research preview, so you can connect to MCP servers in your private network.",
         "Self-hosted sandboxes are now available for Claude Managed Agents, as an alternative to running tool execution in Anthropic's infrastructure. See Self-hosted sandboxes ."
       ],
-      "content_hash": "1923581cea4d",
-      "last_seen_at": "2026-09-16T12:09:07.980449",
+      "content_hash": "47502c30b143",
+      "last_seen_at": "2026-09-17T12:13:02.409095",
       "title": "Anthropic Release Notes",
-      "updated_at": "2026-09-16T12:09:07.980449"
+      "updated_at": "2026-09-17T12:13:02.409095"
     }
   },
   "sent": {
@@ -477,6 +477,20 @@
       "source": "Cloudflare Blog",
       "title": "Give any website a WebMCP interface",
       "url": "https://blog.cloudflare.com/webmcp/"
+    },
+    "1fcbe86f8ab5e7cbb26d2f10a6b6684888ba7332": {
+      "kind": "Blog",
+      "sent_at": "2026-09-17T12:13:02.409095",
+      "source": "Martin Fowler",
+      "title": "Fragments: September 16",
+      "url": "https://martinfowler.com/fragments/2026-09-16.html"
+    },
+    "2174300967a8c7637d833ded86682d1cb1b4186d": {
+      "kind": "Blog",
+      "sent_at": "2026-09-17T12:13:02.409095",
+      "source": "DoorDash Engineering",
+      "title": "Inside Vera, DoorDash\u2019s Data Agent",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1PZXM5Y3hsaDhiYW13OXd1SGU4ekRRTnZhdmRRQ2NteFZ2X0JqVmw2U09LbzZrOU8xV2pzUVduMHFqak1MV3NXdTFva1g5R2VOc0NYYUpIaTA5ZEpaRjAyMU5KZkpDd2JKLURkM3RBSG1DWVZzekt3?oc=5"
     },
     "229180da473b57507315a17ddea2e0fd8c117a29": {
       "kind": "Blog",
@@ -799,6 +813,13 @@
       "source": "Hacker News",
       "title": "Humans missed 1 in 3 threats approving AI agent commands across 40k game runs",
       "url": "https://scalex.dev/blog/ai-agent-permissions-stats/"
+    },
+    "5bef1a8a68dae2121b00518fe30f64dc032f5ef6": {
+      "kind": "Paper",
+      "sent_at": "2026-09-17T12:13:02.409095",
+      "source": "arXiv",
+      "title": "Compositional Policy Violations: When Step-Level Compliance Fails In Agentic AI Workflows",
+      "url": "http://arxiv.org/abs/2609.18820v1"
     },
     "5c6499d1de4a2644968aa2703cd05f724da6265b": {
       "kind": "Blog",
@@ -1192,6 +1213,13 @@
       "title": "Turn one giant AI-generated pull request to a reviewable stack",
       "url": "https://github.blog/engineering/turn-one-giant-ai-generated-pull-request-to-a-reviewable-stack/"
     },
+    "b13e55301093869de8e6b6b90f88c7dfb771c233": {
+      "kind": "Paper",
+      "sent_at": "2026-09-17T12:13:02.409095",
+      "source": "arXiv",
+      "title": "Beyond Outcomes: Dual-View Relational Learning for Efficient Agent Benchmarking",
+      "url": "http://arxiv.org/abs/2609.18909v1"
+    },
     "b353974952677338d136eb7822093ed97503348c": {
       "kind": "Blog",
       "sent_at": "2026-09-03T12:07:26.434240",
@@ -1212,6 +1240,13 @@
       "source": "Hacker News",
       "title": "Claude: System Prompts",
       "url": "https://platform.claude.com/docs/en/release-notes/system-prompts"
+    },
+    "b9e3434a9e070f5c54fcdef9d1babb9b1272d848": {
+      "kind": "Blog",
+      "sent_at": "2026-09-17T12:13:02.409095",
+      "source": "Hacker News",
+      "title": "Training a 4B model to produce 81% faster query plans than Postgres",
+      "url": "https://rohanbansal.com/qorl"
     },
     "ba4a4b3e87bca2e49537580b409e60ac589e9db1": {
       "kind": "Blog",
@@ -1416,6 +1451,13 @@
       "title": "T1: Terminal Agent Reinforcement Learning for Long-Horizon Tasks",
       "url": "http://arxiv.org/abs/2609.11042v1"
     },
+    "ec11af8c19c8ac75f31c9b2db55425b8439e88b6": {
+      "kind": "Blog",
+      "sent_at": "2026-09-17T12:13:02.409095",
+      "source": "Anthropic Docs",
+      "title": "Anthropic Release Notes",
+      "url": "https://docs.anthropic.com/en/release-notes/overview"
+    },
     "ed2fddef3d3e844643c42d5d01e16cd2669522e5": {
       "kind": "Blog",
       "sent_at": "2026-08-09T12:04:40.116774",
@@ -1443,6 +1485,13 @@
       "source": "arXiv",
       "title": "SHE: Trajectory-driven Safety Harness Evolution for LLM Agents",
       "url": "http://arxiv.org/abs/2608.09885v1"
+    },
+    "f3991f4d3e2ac74188d88ad43199d9ec02e8c48b": {
+      "kind": "Blog",
+      "sent_at": "2026-09-17T12:13:02.409095",
+      "source": "Simon Willison",
+      "title": "Claude Cowork and chat are now one Claude",
+      "url": "https://simonwillison.net/2026/Sep/16/one-claude/"
     },
     "f433a8048051f99df634d6a33beff91a7e4e91c5": {
       "kind": "Blog",
@@ -1499,7 +1548,6 @@
     "https://blog.cloudflare.com/aeo/": "2026-08-07T12:04:54.040292",
     "https://blog.cloudflare.com/agent-development-lifecycle/": "2026-08-05T12:05:25.893222",
     "https://blog.cloudflare.com/agents-week-review-august-2026/": "2026-08-11T12:05:03.934309",
-    "https://blog.cloudflare.com/agents-week-welcome/": "2026-08-03T12:04:34.120253",
     "https://blog.cloudflare.com/ai-search-easier/": "2026-08-07T12:04:54.040292",
     "https://blog.cloudflare.com/automatic-key-exchange-for-origins/": "2026-09-09T12:07:47.103026",
     "https://blog.cloudflare.com/billable-usage-api/": "2026-08-04T12:05:16.424928",
@@ -1509,6 +1557,7 @@
     "https://blog.cloudflare.com/casb-policies/": "2026-09-12T12:07:44.504914",
     "https://blog.cloudflare.com/certificate-transparency-monitoring-ga/": "2026-08-14T12:05:20.145013",
     "https://blog.cloudflare.com/ci-workflows/": "2026-08-05T12:05:25.893222",
+    "https://blog.cloudflare.com/client-side-security-finds-4-malicious-campaigns/": "2026-09-17T12:13:02.409327",
     "https://blog.cloudflare.com/cloudflare-blog-uses-emdash/": "2026-08-25T12:05:53.813101",
     "https://blog.cloudflare.com/cloudflare-computer/": "2026-08-04T12:05:16.424928",
     "https://blog.cloudflare.com/cloudflare-sase-sse-gartner-magic-quadrants-2026/": "2026-08-06T12:05:02.260633",
@@ -1562,6 +1611,8 @@
     "https://claude.com/blog/connectors-for-everyday-life": "2026-09-11T12:08:35.817997",
     "https://claude.com/blog/cowork-built-in-browser": "2026-08-27T12:09:26.449619",
     "https://claude.com/blog/cowork-chrome-side-panel": "2026-08-13T12:05:04.688988",
+    "https://claude.com/blog/cowork-is-now-claude": "2026-09-17T12:13:02.409327",
+    "https://claude.com/blog/deploying-ai-from-pilot-to-production": "2026-09-17T12:13:02.409327",
     "https://claude.com/blog/how-abc-legal-turned-every-employee-into-a-builder-with-claude-managed-agents": "2026-08-18T12:05:26.170377",
     "https://claude.com/blog/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep": "2026-08-25T12:05:53.813101",
     "https://claude.com/blog/how-anthropic-employees-use-claude-tag": "2026-08-29T12:07:07.220267",
@@ -1603,6 +1654,8 @@
     "https://openai.com/index/expanding-our-presence-in-brazil": "2026-08-27T12:09:26.449619",
     "https://openai.com/index/fyxer": "2026-09-15T12:07:57.999528",
     "https://openai.com/index/gpt-5-6-in-kiro": "2026-08-25T12:05:53.813101",
+    "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life": "2026-09-17T12:13:02.409327",
+    "https://openai.com/index/how-to-connect-ai-usage-to-business-value": "2026-09-17T12:13:02.409327",
     "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt": "2026-08-07T12:04:54.040292",
     "https://openai.com/index/introducing-chatgpt-financial-services": "2026-09-11T12:08:35.817997",
     "https://openai.com/index/introducing-chatgpt-images-2-5": "2026-09-09T12:07:47.103026",
@@ -1622,6 +1675,7 @@
     "https://openai.com/index/playco-game-prototyping-with-astra": "2026-09-04T12:07:47.114718",
     "https://openai.com/index/previewing-ultrafast": "2026-08-14T12:05:20.145013",
     "https://openai.com/index/put-data-to-work": "2026-09-11T12:08:35.817997",
+    "https://openai.com/index/reimagining-advertising-with-ai": "2026-09-17T12:13:02.409327",
     "https://openai.com/index/replit": "2026-08-20T12:05:09.139167",
     "https://openai.com/index/responsible-ai-infrastructure-texas": "2026-08-11T12:05:03.934309",
     "https://openai.com/index/strengthening-democratic-oversight-in-national-security": "2026-08-19T12:05:01.971172",
