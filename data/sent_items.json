@@ -51,7 +51,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "66eeb260dbf5",
-      "last_seen_at": "2026-09-17T12:06:31.914497",
+      "last_seen_at": "2026-09-18T12:02:27.924761",
       "title": "Claude Code Overview",
       "updated_at": "2026-09-16T12:09:07.980449"
     },
@@ -178,7 +178,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "d701c5964c25",
-      "last_seen_at": "2026-09-17T12:06:31.914497",
+      "last_seen_at": "2026-09-18T12:02:27.924761",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-08-22T12:05:37.902560"
     },
@@ -189,6 +189,8 @@
         "The Claude Platform release notes list changes to the Claude API, the client SDKs, and the Claude Console, newest first.",
         "For release notes on Claude Apps, see the Release notes for Claude Apps in the Claude Help Center .",
         "For updates to Claude Code, see the complete CHANGELOG.md in the claude-code repository.",
+        "September 18, 2026 \ue09a",
+        "The Compliance API local session endpoints now also return transcripts of Claude in Chrome sessions ( product_surface value claude_in_chrome ), in beta for Claude Enterprise organizations, with your existing Compliance Access Key and the read:compliance_user_data scope. See Sessions on users' machines .",
         "September 14, 2026 \ue09a",
         "The Messages API can now compact a conversation on demand on the Claude API, in beta with the compact-2026-09-04 beta header. Send the top-level compaction parameter, and the API returns a signed compaction block that summarizes the messages you sent. On later requests, send that block first, in place of those messages. You choose when to compact, the request can run in the background, and you can keep recent turns word for word after the summary. On models with preserved thinking, the thinking in those kept turns can stay valid.",
         "September 10, 2026 \ue09a",
@@ -341,14 +343,12 @@
         "For updates to claude.ai, Cowork, Claude for Microsoft 365, and other Claude apps in this release, see the release notes for Claude Apps .",
         "May 27, 2026 \ue09a",
         "The Messages API response now includes usage.output_tokens_details.thinking_tokens , reporting how many of the billed output tokens were extended thinking. When streaming, the breakdown appears only on the final message_delta event. No beta header is required.",
-        "May 19, 2026 \ue09a",
-        "MCP tunnels is now available as a research preview, so you can connect to MCP servers in your private network.",
-        "Self-hosted sandboxes are now available for Claude Managed Agents, as an alternative to running tool execution in Anthropic's infrastructure. See Self-hosted sandboxes ."
+        "May 19, 2026 \ue09a"
       ],
-      "content_hash": "47502c30b143",
-      "last_seen_at": "2026-09-17T12:13:02.409095",
+      "content_hash": "1f954f5176b9",
+      "last_seen_at": "2026-09-18T12:06:23.571978",
       "title": "Anthropic Release Notes",
-      "updated_at": "2026-09-17T12:13:02.409095"
+      "updated_at": "2026-09-18T12:06:23.571978"
     }
   },
   "sent": {
@@ -358,20 +358,6 @@
       "source": "AWS Architecture Blog",
       "title": "Scaling patterns for self-organizing multi-agent clusters with Kiro",
       "url": "https://aws.amazon.com/blogs/architecture/scaling-patterns-for-self-organizing-multi-agent-clusters-with-kiro/"
-    },
-    "024ec6cf7e2beae39226d5f3ddcf05817c69b917": {
-      "kind": "Blog",
-      "sent_at": "2026-08-04T12:05:16.424733",
-      "source": "Simon Willison",
-      "title": "Quoting David Crawshaw's prompt",
-      "url": "https://simonwillison.net/2026/Aug/3/david-crawshaw/#atom-everything"
-    },
-    "02ad9dc4d487bb8e786cf35a5636115ec57e0743": {
-      "kind": "Blog",
-      "sent_at": "2026-08-04T12:05:16.424733",
-      "source": "Neon Blog",
-      "title": "Neon now has per-project permissions",
-      "url": "https://neon.com/blog/neon-now-has-per-project-permissions"
     },
     "049e6700d3d298f24314543f24d96fe933dc500a": {
       "kind": "Paper",
@@ -471,6 +457,13 @@
       "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users",
       "url": "https://openai.com/index/scaling-storage-one-billion-users-part-one"
     },
+    "1ef6e8235ecfd6e84f4b3f39e90f7c0c6c4368b6": {
+      "kind": "Blog",
+      "sent_at": "2026-09-18T12:06:23.571978",
+      "source": "Neon Blog",
+      "title": "The Neon backend is GA: a complete set of primitives so agents can build",
+      "url": "https://neon.com/blog/neon-backend-is-ga"
+    },
     "1f6424204a9a0d3840e8eb83ea4952db6fc8794a": {
       "kind": "Blog",
       "sent_at": "2026-08-07T12:04:54.040151",
@@ -554,13 +547,6 @@
       "source": "OpenAI",
       "title": "Research acceleration: The view inside OpenAI",
       "url": "https://openai.com/index/research-acceleration-view-inside-openai"
-    },
-    "344f6951029eb02db725649315306ffc9a4d6b33": {
-      "kind": "Blog",
-      "sent_at": "2026-08-04T12:05:16.424733",
-      "source": "InfoQ Architecture Articles",
-      "title": "Article: Enabling Evolutionary Architecture Through the Preservation of Change Locality",
-      "url": "https://www.infoq.com/articles/evolutionary-architecture-change-locality/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Architecture-articles"
     },
     "34da11b1abba483ade5efab37e0fb553e1aa0d14": {
       "kind": "Paper",
@@ -673,13 +659,6 @@
       "source": "Hacker News",
       "title": "Show HN: Huzzah \u2013 a novel approach to coding with AI",
       "url": "https://www.danielvaughn.dev/posts/huzzah/"
-    },
-    "46d5dd427b4992ff40cab1840cfb9f0bc36d2485": {
-      "kind": "Paper",
-      "sent_at": "2026-08-04T12:05:16.424733",
-      "source": "arXiv",
-      "title": "Harness-R1: Learning to Edit Executable Runtime Harnesses from Agent Failure Trajectories",
-      "url": "http://arxiv.org/abs/2608.02276v1"
     },
     "46dd39aabde13c536ae58e7c6929ddc8b1da8a9d": {
       "kind": "Blog",
@@ -883,13 +862,6 @@
       "source": "OpenAI",
       "title": "How AI-native companies turn workflows into operating capability",
       "url": "https://openai.com/index/ai-native-company-workflows"
-    },
-    "6de8aeee706803461876fedb17b2c52802b51d89": {
-      "kind": "Blog",
-      "sent_at": "2026-08-04T12:05:16.424733",
-      "source": "Microsoft Research",
-      "title": "Orchard: An open framework for scalable agentic AI",
-      "url": "https://www.microsoft.com/en-us/research/blog/orchard-an-open-framework-for-scalable-agentic-ai/"
     },
     "6f6819aea27532df503eb74e6e2876b0bb06d410": {
       "kind": "Paper",
@@ -1213,6 +1185,13 @@
       "title": "Turn one giant AI-generated pull request to a reviewable stack",
       "url": "https://github.blog/engineering/turn-one-giant-ai-generated-pull-request-to-a-reviewable-stack/"
     },
+    "b06e5d7ca683c88498d7a0db3421277a982eaf27": {
+      "kind": "Blog",
+      "sent_at": "2026-09-18T12:06:23.571978",
+      "source": "Simon Willison",
+      "title": "Self-generated prompt injections in compaction summaries",
+      "url": "https://simonwillison.net/2026/Sep/17/compaction-summaries/"
+    },
     "b13e55301093869de8e6b6b90f88c7dfb771c233": {
       "kind": "Paper",
       "sent_at": "2026-09-17T12:13:02.409095",
@@ -1233,6 +1212,13 @@
       "source": "arXiv",
       "title": "EarlyEval: Cheaper Agent Evaluation via Early Outcome Prediction",
       "url": "http://arxiv.org/abs/2609.02783v1"
+    },
+    "b77012a8da41ee5e22125915f22184e9a8be5de7": {
+      "kind": "Paper",
+      "sent_at": "2026-09-18T12:06:23.571978",
+      "source": "arXiv",
+      "title": "Quantifying Overclaiming Propensity in Frontier LLM Agents",
+      "url": "http://arxiv.org/abs/2609.20812v1"
     },
     "b9a1ca29814f7f4590ab11a669b37b9fd45ddd61": {
       "kind": "Blog",
@@ -1303,6 +1289,13 @@
       "source": "MIT Tech Review",
       "title": "The inside story on why OpenAI agents hacked Hugging Face",
       "url": "https://www.technologyreview.com/2026/08/26/1143013/the-inside-story-on-why-openai-agents-hacked-hugging-face/"
+    },
+    "cab7f0aa99208c248d3f76c0b0b50698b336897f": {
+      "kind": "Blog",
+      "sent_at": "2026-09-18T12:06:23.571978",
+      "source": "Anthropic Docs",
+      "title": "Anthropic Release Notes",
+      "url": "https://docs.anthropic.com/en/release-notes/overview"
     },
     "ced3623e1f19179bfe95191bab526ef045b3d2d5": {
       "kind": "Blog",
@@ -1437,6 +1430,13 @@
       "title": "commit-rewriter 0.1",
       "url": "https://simonwillison.net/2026/Sep/14/commit-rewriter/"
     },
+    "ea07db0088cf62d1b09504eb3df76040e0d46542": {
+      "kind": "Paper",
+      "sent_at": "2026-09-18T12:06:23.571978",
+      "source": "arXiv",
+      "title": "An Empirical Study of Harness Design for Coding Agents",
+      "url": "http://arxiv.org/abs/2609.20804v1"
+    },
     "ea55a8c68624f9e0653b8978691f25850d81d73e": {
       "kind": "Blog",
       "sent_at": "2026-08-18T12:05:26.170179",
@@ -1507,13 +1507,6 @@
       "title": "Autoscaling Lakebase Postgres",
       "url": "https://neon.com/blog/autoscaling-lakebase-postgres"
     },
-    "f7b2af9e10bbeff14925e7157abce0484eaa8d23": {
-      "kind": "Paper",
-      "sent_at": "2026-08-04T12:05:16.424733",
-      "source": "arXiv",
-      "title": "Before Reasoning Fails: Pre-Evidence Procedural Failures in Agentic RAG",
-      "url": "http://arxiv.org/abs/2608.02011v1"
-    },
     "f8580043d9be763efb29667d7ef1e49ba9c8dff5": {
       "kind": "Blog",
       "sent_at": "2026-08-12T12:05:24.276731",
@@ -1550,7 +1543,6 @@
     "https://blog.cloudflare.com/agents-week-review-august-2026/": "2026-08-11T12:05:03.934309",
     "https://blog.cloudflare.com/ai-search-easier/": "2026-08-07T12:04:54.040292",
     "https://blog.cloudflare.com/automatic-key-exchange-for-origins/": "2026-09-09T12:07:47.103026",
-    "https://blog.cloudflare.com/billable-usage-api/": "2026-08-04T12:05:16.424928",
     "https://blog.cloudflare.com/bot-preference-sync/": "2026-08-22T12:05:37.902741",
     "https://blog.cloudflare.com/botbase-for-operators/": "2026-08-29T12:07:07.220267",
     "https://blog.cloudflare.com/cache-transcoding/": "2026-09-02T12:07:46.364695",
@@ -1559,14 +1551,12 @@
     "https://blog.cloudflare.com/ci-workflows/": "2026-08-05T12:05:25.893222",
     "https://blog.cloudflare.com/client-side-security-finds-4-malicious-campaigns/": "2026-09-17T12:13:02.409327",
     "https://blog.cloudflare.com/cloudflare-blog-uses-emdash/": "2026-08-25T12:05:53.813101",
-    "https://blog.cloudflare.com/cloudflare-computer/": "2026-08-04T12:05:16.424928",
     "https://blog.cloudflare.com/cloudflare-sase-sse-gartner-magic-quadrants-2026/": "2026-08-06T12:05:02.260633",
     "https://blog.cloudflare.com/community-program-refresh/": "2026-08-08T12:05:05.404940",
     "https://blog.cloudflare.com/ddos-threat-report-2026-h1/": "2026-08-12T12:05:24.276883",
     "https://blog.cloudflare.com/dns-cache-memory-optimization-1111/": "2026-08-28T12:07:21.900041",
     "https://blog.cloudflare.com/fedramp-class-d-certification/": "2026-08-11T12:05:03.934309",
     "https://blog.cloudflare.com/good-and-bad-agentic-behaviors/": "2026-08-08T12:05:05.404940",
-    "https://blog.cloudflare.com/grpc-workers/": "2026-08-04T12:05:16.424928",
     "https://blog.cloudflare.com/how-we-use-ai-with-cloudflare-os/": "2026-08-06T12:05:02.260633",
     "https://blog.cloudflare.com/introducing-adaptive-intelligence/": "2026-09-01T12:07:21.810485",
     "https://blog.cloudflare.com/introducing-radar-researcher/": "2026-08-08T12:05:05.404940",
@@ -1587,7 +1577,6 @@
     "https://claude.com/blog/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic": "2026-09-15T12:07:57.999528",
     "https://claude.com/blog/ai-ci-cd-on-call": "2026-08-19T12:05:01.971172",
     "https://claude.com/blog/anthropics-approach-to-teaching-and-learning-ai": "2026-08-21T12:05:15.075760",
-    "https://claude.com/blog/artifacts-in-claude-code": "2026-08-04T12:05:16.424928",
     "https://claude.com/blog/auto-mode-default-in-claude-code": "2026-08-08T12:05:05.404940",
     "https://claude.com/blog/auto-mode-in-production": "2026-08-08T12:05:05.404940",
     "https://claude.com/blog/bain-company-joins-the-claude-partner-network-as-a-global-premier-partner": "2026-08-26T12:07:42.286813",
@@ -1625,6 +1614,7 @@
     "https://claude.com/blog/millennium-and-anthropic-are-building-a-digital-risk-analyst-with-claude": "2026-08-07T12:04:54.040292",
     "https://claude.com/blog/new-in-claude-managed-agents": "2026-09-10T12:08:06.867270",
     "https://claude.com/blog/preparing-your-security-program-for-ai-accelerated-offense": "2026-09-12T12:07:44.504914",
+    "https://claude.com/blog/projects-redesigned": "2026-09-18T12:06:23.572212",
     "https://claude.com/blog/reducing-cost-and-improving-performance-with-claude-platform": "2026-09-09T12:07:47.103026",
     "https://claude.com/blog/run-claude-code-sessions-on-your-own-compute": "2026-08-07T12:04:54.040292",
     "https://claude.com/blog/salesforce-in-claude": "2026-09-16T12:09:07.980580",
@@ -1635,9 +1625,9 @@
     "https://claude.com/blog/the-claude-science-product-guide": "2026-08-19T12:05:01.971172",
     "https://claude.com/blog/turning-conversation-into-knowledge-how-slack-builds-human-agent-teams": "2026-08-20T12:05:09.139167",
     "https://claude.com/blog/what-1-000-small-business-owners-taught-us-about-ai": "2026-09-12T12:07:44.504914",
+    "https://claude.com/blog/working-at-the-frontier-how-balyasny-asset-management-evaluates-and-governs-claude-fable-5": "2026-09-18T12:06:23.572212",
     "https://openai.com/index/ai-policy-window": "2026-09-10T12:08:06.867270",
     "https://openai.com/index/an-alien-mind": "2026-09-07T12:08:41.637282",
-    "https://openai.com/index/apple-is-getting-this-wrong": "2026-08-04T12:05:16.424928",
     "https://openai.com/index/atv-big-air-tour": "2026-09-03T12:07:26.434398",
     "https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts": "2026-08-27T12:09:26.449619",
     "https://openai.com/index/builders-guide-to-gpt-5-6": "2026-08-14T12:05:20.145013",
@@ -1645,7 +1635,7 @@
     "https://openai.com/index/chatgpt-ads-expands-across-europe": "2026-08-19T12:05:01.971172",
     "https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources": "2026-09-02T12:07:46.364695",
     "https://openai.com/index/chatgpt-for-teens": "2026-08-18T12:05:26.170377",
-    "https://openai.com/index/continuous-voice-interaction-with-gpt-live": "2026-08-04T12:05:16.424928",
+    "https://openai.com/index/cooley-gopublic": "2026-09-18T12:06:23.572212",
     "https://openai.com/index/dali-rajic-chief-revenue-officer": "2026-08-14T12:05:20.145013",
     "https://openai.com/index/daybreak-for-frontline-defenders": "2026-09-04T12:07:47.114718",
     "https://openai.com/index/daybreak-models-are-now-available-on-aws": "2026-08-12T12:05:24.276883",
