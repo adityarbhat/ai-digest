@@ -51,7 +51,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "66eeb260dbf5",
-      "last_seen_at": "2026-09-18T12:02:27.924761",
+      "last_seen_at": "2026-09-19T12:03:05.437114",
       "title": "Claude Code Overview",
       "updated_at": "2026-09-16T12:09:07.980449"
     },
@@ -178,7 +178,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "d701c5964c25",
-      "last_seen_at": "2026-09-18T12:02:27.924761",
+      "last_seen_at": "2026-09-19T12:03:05.437114",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-08-22T12:05:37.902560"
     },
@@ -346,7 +346,7 @@
         "May 19, 2026 \ue09a"
       ],
       "content_hash": "1f954f5176b9",
-      "last_seen_at": "2026-09-18T12:06:23.571978",
+      "last_seen_at": "2026-09-19T12:03:05.437114",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-09-18T12:06:23.571978"
     }
@@ -450,6 +450,13 @@
       "title": "Consistency is the new latency: AI at the data layer",
       "url": "https://aws.amazon.com/blogs/architecture/consistency-is-the-new-latency-ai-at-the-data-layer/"
     },
+    "1b1e446bc327ab17a37cadb6c098fd58af1eb167": {
+      "kind": "Paper",
+      "sent_at": "2026-09-19T12:06:29.356523",
+      "source": "arXiv",
+      "title": "RAFT: A Stateful Retrieval-Augmented Framework for Troubleshooting Agents",
+      "url": "http://arxiv.org/abs/2609.20754v1"
+    },
     "1c1c87992054669d91193023e96d2ba69ae12d09": {
       "kind": "Blog",
       "sent_at": "2026-09-12T12:07:44.504781",
@@ -470,6 +477,13 @@
       "source": "Cloudflare Blog",
       "title": "Give any website a WebMCP interface",
       "url": "https://blog.cloudflare.com/webmcp/"
+    },
+    "1f8960fc24c269775ad563fbe6cf57e43cac2065": {
+      "kind": "Blog",
+      "sent_at": "2026-09-19T12:06:29.356523",
+      "source": "Hacker News",
+      "title": "ZCode, the GLM coding agent, silently uploads your Git history",
+      "url": "https://tokenstead.ai/guides/zcode-silent-git-history-upload"
     },
     "1fcbe86f8ab5e7cbb26d2f10a6b6684888ba7332": {
       "kind": "Blog",
@@ -842,13 +856,6 @@
       "title": "Signal or Noise? A Benchmark Study of Agent Skills in Web Development",
       "url": "http://arxiv.org/abs/2608.23067v1"
     },
-    "65d2c94569c34dc5de47a52238ea2ff9f9c70f71": {
-      "kind": "Blog",
-      "sent_at": "2026-08-05T12:05:25.893072",
-      "source": "Cloudflare Blog",
-      "title": "How we built a software factory to drive Astro\u2019s GitHub issue count to zero",
-      "url": "https://blog.cloudflare.com/astro-issue-triage/"
-    },
     "6732541e6d4d360178ac2c74e0f1f8a87fe44cff": {
       "kind": "Blog",
       "sent_at": "2026-08-29T12:07:07.220173",
@@ -918,13 +925,6 @@
       "source": "arXiv",
       "title": "Comparative Approaches to Agent Retrieval over Large Skill Libraries",
       "url": "http://arxiv.org/abs/2608.06196v1"
-    },
-    "7b468afe01f795295af500e0b1e9a387b643dcff": {
-      "kind": "Blog",
-      "sent_at": "2026-08-05T12:05:25.893072",
-      "source": "Simon Willison",
-      "title": "llm-anthropic 0.26",
-      "url": "https://simonwillison.net/2026/Aug/4/llm-anthropic/#atom-everything"
     },
     "7dbbf4a2b76826944f04a59fc21ab2518815f3bc": {
       "kind": "Blog",
@@ -1037,13 +1037,6 @@
       "source": "Claude Blog",
       "title": "The AI-Native SDLC playbook",
       "url": "https://claude.com/blog/the-ai-native-sdlc-playbook"
-    },
-    "90ee8a9848cb6a801a2b231cb321e269bfb3ba71": {
-      "kind": "Blog",
-      "sent_at": "2026-08-05T12:05:25.893072",
-      "source": "Simon Willison",
-      "title": "New release of LLM adds support for reasoning traces, OpenAI Responses, server-side tools, and smarter logging",
-      "url": "https://simonwillison.net/2026/Aug/4/new-release-of-llm/#atom-everything"
     },
     "92270a261e2e71adad3ea74c6f81554f1072a8b5": {
       "kind": "Paper",
@@ -1178,12 +1171,19 @@
       "title": "Persona-Execution Separation: An Architecture Pattern for Evolving LLM Agents under Execution Audit",
       "url": "http://arxiv.org/abs/2608.27427v1"
     },
-    "adbd84d9bd28f5cc4869ad1ab3f95f637e3ea73a": {
+    "aba00e8df96919ebca6e5a07a8d78c4372a90b35": {
       "kind": "Blog",
-      "sent_at": "2026-08-05T12:05:25.893072",
-      "source": "GitHub Engineering",
-      "title": "Turn one giant AI-generated pull request to a reviewable stack",
-      "url": "https://github.blog/engineering/turn-one-giant-ai-generated-pull-request-to-a-reviewable-stack/"
+      "sent_at": "2026-09-19T12:06:29.356523",
+      "source": "Simon Willison",
+      "title": "Quoting Thariq Shihipar",
+      "url": "https://simonwillison.net/2026/Sep/18/thariq-shihipar/"
+    },
+    "ad1387b1a847212d26102f8c7655b20eeb483eeb": {
+      "kind": "Paper",
+      "sent_at": "2026-09-19T12:06:29.356523",
+      "source": "arXiv",
+      "title": "Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation",
+      "url": "http://arxiv.org/abs/2609.20822v1"
     },
     "b06e5d7ca683c88498d7a0db3421277a982eaf27": {
       "kind": "Blog",
@@ -1402,13 +1402,6 @@
       "title": "LEDGER: Claim-to-Evidence Trace Graphs for Auditing LLM Agents",
       "url": "http://arxiv.org/abs/2608.18398v1"
     },
-    "e61c825a7e9ed00246782c1dafee5b2a5238e5db": {
-      "kind": "Blog",
-      "sent_at": "2026-08-05T12:05:25.893072",
-      "source": "Hacker News",
-      "title": "Harness engineering for self-improvement",
-      "url": "https://lilianweng.github.io/posts/2026-07-04-harness/"
-    },
     "e7869f6cd5a29f2f7b54635670704680437531c6": {
       "kind": "Blog",
       "sent_at": "2026-09-05T12:06:59.205553",
@@ -1464,6 +1457,13 @@
       "source": "Hacker News",
       "title": "Shopify replaced Redis with MySQL for inventory reservations\u2013and it scaled",
       "url": "https://shopify.engineering/scaling-inventory-reservations"
+    },
+    "efc66d953fc0a7a329ebd8425c02195d046c7ca5": {
+      "kind": "Blog",
+      "sent_at": "2026-09-19T12:06:29.356523",
+      "source": "InfoQ Architecture Articles",
+      "title": "Article: Architecting Secure and Scalable Facial Verification Systems",
+      "url": "https://www.infoq.com/articles/secure-scalable-facial-verification/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Architecture-articles"
     },
     "f153a1440270f4a42faa79e198f079f9c8783d4f": {
       "kind": "Blog",
@@ -1539,7 +1539,6 @@
   "watchlist_seen": {
     "https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/": "2026-09-16T12:09:07.980580",
     "https://blog.cloudflare.com/aeo/": "2026-08-07T12:04:54.040292",
-    "https://blog.cloudflare.com/agent-development-lifecycle/": "2026-08-05T12:05:25.893222",
     "https://blog.cloudflare.com/agents-week-review-august-2026/": "2026-08-11T12:05:03.934309",
     "https://blog.cloudflare.com/ai-search-easier/": "2026-08-07T12:04:54.040292",
     "https://blog.cloudflare.com/automatic-key-exchange-for-origins/": "2026-09-09T12:07:47.103026",
@@ -1548,7 +1547,6 @@
     "https://blog.cloudflare.com/cache-transcoding/": "2026-09-02T12:07:46.364695",
     "https://blog.cloudflare.com/casb-policies/": "2026-09-12T12:07:44.504914",
     "https://blog.cloudflare.com/certificate-transparency-monitoring-ga/": "2026-08-14T12:05:20.145013",
-    "https://blog.cloudflare.com/ci-workflows/": "2026-08-05T12:05:25.893222",
     "https://blog.cloudflare.com/client-side-security-finds-4-malicious-campaigns/": "2026-09-17T12:13:02.409327",
     "https://blog.cloudflare.com/cloudflare-blog-uses-emdash/": "2026-08-25T12:05:53.813101",
     "https://blog.cloudflare.com/cloudflare-sase-sse-gartner-magic-quadrants-2026/": "2026-08-06T12:05:02.260633",
@@ -1565,18 +1563,18 @@
     "https://blog.cloudflare.com/post-quantum-dnssec-1111/": "2026-09-11T12:08:35.817997",
     "https://blog.cloudflare.com/revisiting-spectre-attacks-on-workers/": "2026-08-20T12:05:09.139167",
     "https://blog.cloudflare.com/rfc9234-bgp-role-model/": "2026-08-19T12:05:01.971172",
+    "https://blog.cloudflare.com/saving-100-tb-of-ram-with-math/": "2026-09-19T12:06:29.356704",
     "https://blog.cloudflare.com/task-based-oauth-consent/": "2026-08-21T12:05:15.075760",
     "https://blog.cloudflare.com/the-agent-access-model/": "2026-08-06T12:05:02.260633",
     "https://blog.cloudflare.com/total-eclipse-internet-traffic-iceland-spain-portugal/": "2026-08-14T12:05:20.145013",
     "https://blog.cloudflare.com/vulnerability-discovery-remediation/": "2026-09-04T12:07:47.114718",
-    "https://blog.cloudflare.com/wallets/": "2026-08-05T12:05:25.893222",
     "https://blog.cloudflare.com/workers-granular-authorization/": "2026-09-16T12:09:07.980580",
     "https://blog.cloudflare.com/workers-module-registry-nodejs/": "2026-09-10T12:08:06.867270",
     "https://blog.cloudflare.com/workers-protected-by-access/": "2026-08-15T12:04:35.309514",
-    "https://claude.com/blog/a-guide-to-cost-visibility-and-control-in-claude": "2026-08-05T12:05:25.893222",
     "https://claude.com/blog/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic": "2026-09-15T12:07:57.999528",
     "https://claude.com/blog/ai-ci-cd-on-call": "2026-08-19T12:05:01.971172",
     "https://claude.com/blog/anthropics-approach-to-teaching-and-learning-ai": "2026-08-21T12:05:15.075760",
+    "https://claude.com/blog/artifacts-in-claude-code": "2026-09-19T12:06:29.356704",
     "https://claude.com/blog/auto-mode-default-in-claude-code": "2026-08-08T12:05:05.404940",
     "https://claude.com/blog/auto-mode-in-production": "2026-08-08T12:05:05.404940",
     "https://claude.com/blog/bain-company-joins-the-claude-partner-network-as-a-global-premier-partner": "2026-08-26T12:07:42.286813",
@@ -1629,6 +1627,7 @@
     "https://openai.com/index/ai-policy-window": "2026-09-10T12:08:06.867270",
     "https://openai.com/index/an-alien-mind": "2026-09-07T12:08:41.637282",
     "https://openai.com/index/atv-big-air-tour": "2026-09-03T12:07:26.434398",
+    "https://openai.com/index/australian-youth-safety-blueprint": "2026-09-19T12:06:29.356704",
     "https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts": "2026-08-27T12:09:26.449619",
     "https://openai.com/index/builders-guide-to-gpt-5-6": "2026-08-14T12:05:20.145013",
     "https://openai.com/index/building-an-ai-native-finance-function": "2026-08-11T12:05:03.934309",
@@ -1675,7 +1674,6 @@
     "https://openai.com/index/the-defenders-window": "2026-08-18T12:05:26.170377",
     "https://openai.com/index/the-full-stack-behind-abundant-intelligence": "2026-08-26T12:07:42.286813",
     "https://openai.com/index/the-work-now-within-reach": "2026-09-09T12:07:47.103026",
-    "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models": "2026-08-05T12:05:25.893222",
     "https://openai.com/index/using-codex-chatgpt-to-search-for-new-antimicrobials": "2026-09-11T12:08:35.817997",
     "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy": "2026-08-09T12:04:40.116881",
     "https://www.anthropic.com/news/claude-opus-5": "2026-09-13T12:07:17.595222",
