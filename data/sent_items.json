@@ -51,7 +51,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "66eeb260dbf5",
-      "last_seen_at": "2026-09-19T12:03:05.437114",
+      "last_seen_at": "2026-09-20T12:01:51.497956",
       "title": "Claude Code Overview",
       "updated_at": "2026-09-16T12:09:07.980449"
     },
@@ -178,7 +178,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "d701c5964c25",
-      "last_seen_at": "2026-09-19T12:03:05.437114",
+      "last_seen_at": "2026-09-20T12:01:51.497956",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-08-22T12:05:37.902560"
     },
@@ -346,7 +346,7 @@
         "May 19, 2026 \ue09a"
       ],
       "content_hash": "1f954f5176b9",
-      "last_seen_at": "2026-09-19T12:03:05.437114",
+      "last_seen_at": "2026-09-20T12:01:51.497956",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-09-18T12:06:23.571978"
     }
@@ -401,13 +401,6 @@
       "title": "From Agent Behaviour to Agent-Friendly Documentation: An Empirical Study of How Coding Agents Discover, Read, and Write Technical Documentation",
       "url": "http://arxiv.org/abs/2608.20195v1"
     },
-    "11efb81118370c1137b12aea532f9eea21d36cc1": {
-      "kind": "Paper",
-      "sent_at": "2026-08-06T12:05:02.260439",
-      "source": "arXiv",
-      "title": "Scrouting: Cost-Aware Routing of Coding Agents by Scouting the Repository First",
-      "url": "http://arxiv.org/abs/2608.04804v1"
-    },
     "12c01676e33dbb9fe31f2827171d2c4fa87ea6c5": {
       "kind": "Blog",
       "sent_at": "2026-08-14T12:05:20.144897",
@@ -421,13 +414,6 @@
       "source": "Spotify Engineering",
       "title": "Portal by Spotify cut my Claude Code token usage by 90%",
       "url": "https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90/"
-    },
-    "1561de5ea8e0991c16a84bb4315a8c7b72435b42": {
-      "kind": "Blog",
-      "sent_at": "2026-08-06T12:05:02.260439",
-      "source": "Simon Willison",
-      "title": "One-shotting a Raccoon Heist game using Claude Fable 5",
-      "url": "https://simonwillison.net/2026/Aug/5/raccoon-heist/#atom-everything"
     },
     "157925afc7b61255a8a66b4ca56b5cd8199f124a": {
       "kind": "Blog",
@@ -513,13 +499,6 @@
       "title": "DeepSeek V4 Flash 0731",
       "url": "https://arcprize.org/results/deepseek-v4-flash-0731"
     },
-    "26e291e409d89d3d0c4dd877a85a7f2c254c5c30": {
-      "kind": "Blog",
-      "sent_at": "2026-08-06T12:05:02.260439",
-      "source": "Neon Blog",
-      "title": "How Castform + Neon Beats Frontier Models on Price and Efficiency",
-      "url": "https://neon.com/blog/how-castform-neon-beats-frontier-models-on-price-and-efficiency"
-    },
     "27629458812a4274a36263be0cdc92dc4de20a3b": {
       "kind": "Blog",
       "sent_at": "2026-09-04T12:07:47.114559",
@@ -596,13 +575,6 @@
       "source": "HuggingFace",
       "title": "How Much Memory Does Your Agent Actually Need?",
       "url": "https://huggingface.co/blog/ibm-research/altk-evolve-hmm"
-    },
-    "3bb41b08022edd5a69d9014b49090236b4c77184": {
-      "kind": "Blog",
-      "sent_at": "2026-08-06T12:05:02.260439",
-      "source": "Simon Willison",
-      "title": "Introducing Muse Code and Muse Spark 1.2",
-      "url": "https://simonwillison.net/2026/Aug/5/muse-code-and-muse-spark-12/#atom-everything"
     },
     "3d50885e80342488954218c3f7bf8ad68abd8712": {
       "kind": "Blog",
@@ -687,6 +659,13 @@
       "source": "Hacker News",
       "title": "Docker Sandboxes \u2013 Disposable, isolated sandboxes for AI agents",
       "url": "https://www.docker.com/products/docker-sandboxes/"
+    },
+    "49ee168bb532dec5e9e56fea4c5b8241cb5d442c": {
+      "kind": "Blog",
+      "sent_at": "2026-09-20T12:05:02.832939",
+      "source": "Hacker News",
+      "title": "Tin: full-text search for Postgres",
+      "url": "https://planetscale.com/blog/introducing-tin"
     },
     "4b0e98d5d8ea06b4986f3947a926213c53dc8d89": {
       "kind": "Blog",
@@ -960,13 +939,6 @@
       "source": "arXiv",
       "title": "AgentFactory: Towards Automated Agentic System Design and Optimization",
       "url": "http://arxiv.org/abs/2609.01045v1"
-    },
-    "8183ac2c9c0456026120c0fb59876b145e866c2f": {
-      "kind": "Blog",
-      "sent_at": "2026-08-06T12:05:02.260439",
-      "source": "Cloudflare Blog",
-      "title": "Catching rogue AI behavior with identity-aware analytics",
-      "url": "https://blog.cloudflare.com/identity-aware-ai-gateway/"
     },
     "82d5a9fe27adffe16ad357ed22e76eca9de0215d": {
       "kind": "Blog",
@@ -1381,13 +1353,6 @@
       "title": "DeepSeek Harness developer preview",
       "url": "https://deepseek.com/harness/en/"
     },
-    "de1d0f7b8da39888a2120e1aaf8088902945add9": {
-      "kind": "Blog",
-      "sent_at": "2026-08-06T12:05:02.260439",
-      "source": "Cloudflare Blog",
-      "title": "WriteGuard: fine-grained controls for MCP Servers",
-      "url": "https://blog.cloudflare.com/mcp-portal-writeguard-private-beta/"
-    },
     "deb5de4e773b925c412e83e68249c258c539bc51": {
       "kind": "Paper",
       "sent_at": "2026-09-03T12:07:26.434240",
@@ -1472,13 +1437,6 @@
       "title": "Auto mode is now the default in Claude Code",
       "url": "https://claude.com/blog/auto-mode-default-in-claude-code"
     },
-    "f156332fef406ea88b8fa59e8882e27ed594fc29": {
-      "kind": "Paper",
-      "sent_at": "2026-08-06T12:05:02.260439",
-      "source": "arXiv",
-      "title": "Architectural Implications of Agentic AI Workflows",
-      "url": "http://arxiv.org/abs/2608.04458v1"
-    },
     "f17eea5f4891f410443ec254ab9b2eb8399da26b": {
       "kind": "Paper",
       "sent_at": "2026-08-11T12:05:03.934043",
@@ -1549,13 +1507,11 @@
     "https://blog.cloudflare.com/certificate-transparency-monitoring-ga/": "2026-08-14T12:05:20.145013",
     "https://blog.cloudflare.com/client-side-security-finds-4-malicious-campaigns/": "2026-09-17T12:13:02.409327",
     "https://blog.cloudflare.com/cloudflare-blog-uses-emdash/": "2026-08-25T12:05:53.813101",
-    "https://blog.cloudflare.com/cloudflare-sase-sse-gartner-magic-quadrants-2026/": "2026-08-06T12:05:02.260633",
     "https://blog.cloudflare.com/community-program-refresh/": "2026-08-08T12:05:05.404940",
     "https://blog.cloudflare.com/ddos-threat-report-2026-h1/": "2026-08-12T12:05:24.276883",
     "https://blog.cloudflare.com/dns-cache-memory-optimization-1111/": "2026-08-28T12:07:21.900041",
     "https://blog.cloudflare.com/fedramp-class-d-certification/": "2026-08-11T12:05:03.934309",
     "https://blog.cloudflare.com/good-and-bad-agentic-behaviors/": "2026-08-08T12:05:05.404940",
-    "https://blog.cloudflare.com/how-we-use-ai-with-cloudflare-os/": "2026-08-06T12:05:02.260633",
     "https://blog.cloudflare.com/introducing-adaptive-intelligence/": "2026-09-01T12:07:21.810485",
     "https://blog.cloudflare.com/introducing-radar-researcher/": "2026-08-08T12:05:05.404940",
     "https://blog.cloudflare.com/mcp-security-updates/": "2026-08-15T12:04:35.309514",
@@ -1565,7 +1521,6 @@
     "https://blog.cloudflare.com/rfc9234-bgp-role-model/": "2026-08-19T12:05:01.971172",
     "https://blog.cloudflare.com/saving-100-tb-of-ram-with-math/": "2026-09-19T12:06:29.356704",
     "https://blog.cloudflare.com/task-based-oauth-consent/": "2026-08-21T12:05:15.075760",
-    "https://blog.cloudflare.com/the-agent-access-model/": "2026-08-06T12:05:02.260633",
     "https://blog.cloudflare.com/total-eclipse-internet-traffic-iceland-spain-portugal/": "2026-08-14T12:05:20.145013",
     "https://blog.cloudflare.com/vulnerability-discovery-remediation/": "2026-09-04T12:07:47.114718",
     "https://blog.cloudflare.com/workers-granular-authorization/": "2026-09-16T12:09:07.980580",
@@ -1582,7 +1537,6 @@
     "https://claude.com/blog/building-an-ai-native-revenue-organization": "2026-09-16T12:09:07.980580",
     "https://claude.com/blog/claude-code-desktop-redesign": "2026-09-11T12:08:35.817997",
     "https://claude.com/blog/claude-code-guide-for-startups": "2026-08-21T12:05:15.075760",
-    "https://claude.com/blog/claude-enterprise-inference-hooks": "2026-08-06T12:05:02.260633",
     "https://claude.com/blog/claude-for-commerce-agents": "2026-09-03T12:07:26.434398",
     "https://claude.com/blog/claude-for-financial-advisors": "2026-09-15T12:07:57.999528",
     "https://claude.com/blog/claude-for-foundation-models": "2026-09-10T12:08:06.867270",
@@ -1675,6 +1629,7 @@
     "https://openai.com/index/the-full-stack-behind-abundant-intelligence": "2026-08-26T12:07:42.286813",
     "https://openai.com/index/the-work-now-within-reach": "2026-09-09T12:07:47.103026",
     "https://openai.com/index/using-codex-chatgpt-to-search-for-new-antimicrobials": "2026-09-11T12:08:35.817997",
+    "https://www.anthropic.com/news/accenture-embedded-evaluation": "2026-09-20T12:05:02.833015",
     "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy": "2026-08-09T12:04:40.116881",
     "https://www.anthropic.com/news/claude-opus-5": "2026-09-13T12:07:17.595222",
     "https://www.anthropic.com/news/claude-sonnet-5": "2026-08-16T12:04:46.299365",
@@ -1683,6 +1638,7 @@
     "https://www.anthropic.com/news/expanding-support-for-scientists": "2026-08-28T12:07:21.900041",
     "https://www.anthropic.com/news/improving-alignment-security-efforts": "2026-09-01T12:07:21.810485",
     "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards": "2026-08-09T12:04:40.116881",
+    "https://www.anthropic.com/news/life-sciences-verification-program": "2026-09-20T12:05:02.833015",
     "https://www.anthropic.com/news/model-hardware-standard-research-preview": "2026-08-28T12:07:21.900041",
     "https://www.anthropic.com/news/position-open-weights-models": "2026-09-13T12:07:17.595222",
     "https://www.anthropic.com/news/redeploying-fable-5": "2026-08-17T12:05:16.445311",
