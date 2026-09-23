@@ -52,7 +52,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "7225cff402e9",
-      "last_seen_at": "2026-09-22T12:05:07.666618",
+      "last_seen_at": "2026-09-23T12:01:47.034451",
       "title": "Claude Code Overview",
       "updated_at": "2026-09-22T12:05:07.666618"
     },
@@ -142,7 +142,7 @@
         "Add an image to the conversation",
         "Drag and drop an image into the Claude Code window",
         "Copy an image and paste it into the CLI with Ctrl+V , or with Alt+V on Windows and WSL",
-        "Provide an image path to Claude. E.g., \u201cAnalyze this image: /path/to/your/image.png\u201d",
+        "Provide an image path to Claude, for example \u201cAnalyze this image: /path/to/your/image.png\u201d",
         "Ask Claude to analyze the image",
         "Use images for context",
         "Get code suggestions from visual content",
@@ -178,10 +178,10 @@
         "Extend Claude Code",
         "Was this page helpful?"
       ],
-      "content_hash": "d701c5964c25",
-      "last_seen_at": "2026-09-22T12:01:10.670612",
+      "content_hash": "b7abc76533bf",
+      "last_seen_at": "2026-09-23T12:06:19.094471",
       "title": "Claude Code Tutorials",
-      "updated_at": "2026-08-22T12:05:37.902560"
+      "updated_at": "2026-09-23T12:06:19.094471"
     },
     "https://docs.anthropic.com/en/release-notes/overview": {
       "blocks": [
@@ -190,6 +190,11 @@
         "The Claude Platform release notes list changes to the Claude API, the client SDKs, and the Claude Console, newest first.",
         "For release notes on Claude Apps, see the Release notes for Claude Apps in the Claude Help Center .",
         "For updates to Claude Code, see the complete CHANGELOG.md in the claude-code repository.",
+        "September 22, 2026 \ue09a",
+        "We've launched Claude Opus 5.5 ( claude-opus-5-5 ), a model for long-running agentic coding and knowledge work. It has a 1M token context window by default, 128k max output tokens, and always-on adaptive thinking , at $4 / $20 USD per MTok (Claude Opus 5 is $5 / $25). Claude Opus 5.5 is available on the Claude API, Claude in Amazon Bedrock , Claude Platform on AWS , Claude on Google Cloud , and Claude in Microsoft Foundry . See What's new in Claude Opus 5.5 for capabilities, API changes, and migration guidance.",
+        "On Claude Opus 5.5, thinking can't be disabled: thinking: {\"type\": \"disabled\"} and thinking: {\"type\": \"enabled\", ...} return a 400 error. Omit the thinking field and control thinking depth with the effort parameter . tool_choice types any and tool also return a 400 error, as on Claude Fable 5.1; use auto with strict tool use . On the Claude API and Google Cloud, computer use on this model requires the computer_toolset_20260801 toolset and the earlier computer_20251124 tool returns a 400 error; on Amazon Bedrock, computer_20251124 keeps working. See the migration guide .",
+        "Fast mode (research preview) is available for Claude Opus 5.5 on the Claude API.",
+        "Tools can now be defined inside a mid-conversation system message , in beta on the Claude API with the inline-tools-2026-09-15 beta header. A tool_addition block can carry the tool's full definition ( tool: {\"type\": \"tool_definition\", \"definition\": {...}} ), so you can add a tool, change its schema, or move a server tool to a newer version without editing tools or invalidating the prompt cache. The same header covers adding and removing tools by reference. With the MCP connector's mcp-client-2026-09-15 beta header as well, the definition can be an MCP toolset, and a response records each server's fetched tool list in an mcp_tool_listing block, which pins that list when you send it back.",
         "September 18, 2026 \ue09a",
         "The Compliance API local session endpoints now also return transcripts of Claude in Chrome sessions ( product_surface value claude_in_chrome ), in beta for Claude Enterprise organizations, with your existing Compliance Access Key and the read:compliance_user_data scope. See Sessions on users' machines .",
         "September 14, 2026 \ue09a",
@@ -339,17 +344,12 @@
         "Fast mode for Claude Opus 4.8 is available as a research preview on the Claude API only.",
         "Setting the sampling parameters temperature , top_p , or top_k to a non-default value returns a 400 error on Claude Opus 4.8, same as on Claude Opus 4.7. See the migration guide for details.",
         "In Claude Code, we've expanded Auto mode to more users for long-running tasks. See the Claude Code documentation .",
-        "In Claude Code, Max plan users now default to fast mode on Claude Opus 4.8. See the Claude Code documentation .",
-        "In Claude Code, Workflows are available as a research preview, letting you define and run multistep agentic plans. See the Claude Code documentation .",
-        "We've deprecated fast mode for Claude Opus 4.6, with removal approximately 30 days after launch. Migrate to fast mode for Claude Opus 4.8 or Claude Opus 4.7. Read more in Fast mode .",
-        "For updates to claude.ai, Cowork, Claude for Microsoft 365, and other Claude apps in this release, see the release notes for Claude Apps .",
-        "May 27, 2026 \ue09a",
-        "The Messages API response now includes usage.output_tokens_details.thinking_tokens , reporting how many of the billed output tokens were extended thinking. When streaming, the breakdown appears only on the final message_delta event. No beta header is required."
+        "In Claude Code, Max plan users now default to fast mode on Claude Opus 4.8. See the Claude Code documentation ."
       ],
-      "content_hash": "3552c745ff8e",
-      "last_seen_at": "2026-09-22T12:05:07.666618",
+      "content_hash": "5d6d69426865",
+      "last_seen_at": "2026-09-23T12:06:19.094471",
       "title": "Anthropic Release Notes",
-      "updated_at": "2026-09-22T12:05:07.666618"
+      "updated_at": "2026-09-23T12:06:19.094471"
     }
   },
   "sent": {
@@ -366,6 +366,13 @@
       "source": "arXiv",
       "title": "Executable Code Knowledge: Code as a Native, Validation-Carrying Knowledge Representation for AI Coding Agents",
       "url": "http://arxiv.org/abs/2608.16295v1"
+    },
+    "04ec494665784ce99f517106431ac81f375ca793": {
+      "kind": "Blog",
+      "sent_at": "2026-09-23T12:06:19.094471",
+      "source": "Anthropic Docs",
+      "title": "Anthropic Release Notes",
+      "url": "https://docs.anthropic.com/en/release-notes/overview"
     },
     "0972b6d44d88a8abc561a37b8108293daf02d0be": {
       "kind": "Blog",
@@ -408,13 +415,6 @@
       "source": "Spotify Engineering",
       "title": "Portal by Spotify cut my Claude Code token usage by 90%",
       "url": "https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90/"
-    },
-    "157925afc7b61255a8a66b4ca56b5cd8199f124a": {
-      "kind": "Blog",
-      "sent_at": "2026-08-09T12:04:40.116774",
-      "source": "Simon Willison",
-      "title": "Auto mode is now the default in Claude Code for Pro, Max, and Team plans",
-      "url": "https://simonwillison.net/2026/Aug/8/auto-mode/#atom-everything"
     },
     "167296c7b42fb29eda41ecfbdd954ec900fbde5d": {
       "kind": "Paper",
@@ -542,12 +542,26 @@
       "title": "Gemini 3.7 Flash",
       "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/"
     },
+    "3889dbaf67e10d47681f7e1387d55c8fd910fa8b": {
+      "kind": "Paper",
+      "sent_at": "2026-09-23T12:06:19.094471",
+      "source": "arXiv",
+      "title": "Grow the Harness, Not the Context: From Strategy-Free Scaffolds to Reusable Specialist Agents",
+      "url": "http://arxiv.org/abs/2609.26760v1"
+    },
     "38d0dd98efa686223b89a7123a5e0cf8cf5d1f63": {
       "kind": "Blog",
       "sent_at": "2026-08-19T12:05:01.971052",
       "source": "HuggingFace",
       "title": "How Much Memory Does Your Agent Actually Need?",
       "url": "https://huggingface.co/blog/ibm-research/altk-evolve-hmm"
+    },
+    "3d98965b71ed77b0601190a63f1ec7a0f541caac": {
+      "kind": "Paper",
+      "sent_at": "2026-09-23T12:06:19.094471",
+      "source": "arXiv",
+      "title": "CliffCompaction: Cost-Efficient Compaction for Long-Horizon Coding Agents",
+      "url": "http://arxiv.org/abs/2609.26779v1"
     },
     "3f10477060d76a261c04178a956b3fbb95bc4d1a": {
       "kind": "Blog",
@@ -632,6 +646,13 @@
       "source": "Hacker News",
       "title": "Tin: full-text search for Postgres",
       "url": "https://planetscale.com/blog/introducing-tin"
+    },
+    "4a2296303aa15e7576f5305efd605303419382f4": {
+      "kind": "Blog",
+      "sent_at": "2026-09-23T12:06:19.094471",
+      "source": "OpenAI",
+      "title": "Introducing GPT-6 Sol and Luna",
+      "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna"
     },
     "4b0e98d5d8ea06b4986f3947a926213c53dc8d89": {
       "kind": "Blog",
@@ -815,6 +836,13 @@
       "title": "How AI-native companies turn workflows into operating capability",
       "url": "https://openai.com/index/ai-native-company-workflows"
     },
+    "6bcfd1ac2890db2696f3da50fa67e5aefa04889a": {
+      "kind": "Blog",
+      "sent_at": "2026-09-23T12:06:19.094471",
+      "source": "Anthropic Docs",
+      "title": "Claude Code Tutorials",
+      "url": "https://docs.anthropic.com/en/docs/claude-code/tutorials"
+    },
     "6f6819aea27532df503eb74e6e2876b0bb06d410": {
       "kind": "Paper",
       "sent_at": "2026-09-05T12:06:59.205553",
@@ -849,6 +877,13 @@
       "source": "HuggingFace",
       "title": "Give Your Coding Agents a Memory You Own",
       "url": "https://huggingface.co/blog/funes"
+    },
+    "74e3d6e5f7061819c389e6c0b5c8de6eb6dfbe14": {
+      "kind": "Blog",
+      "sent_at": "2026-09-23T12:06:19.094471",
+      "source": "OpenAI",
+      "title": "Parallel cut research time and cost in half with GPT\u20116 Astra",
+      "url": "https://openai.com/index/parallel-cuts-time-and-cost-with-astra"
     },
     "756244098b69232a7cc2a26da66c18a99da73b59": {
       "kind": "Blog",
@@ -961,6 +996,13 @@
       "source": "Hacker News",
       "title": "Patterns and problems in emerging multi-agent systems",
       "url": "https://www.anthropic.com/research/multiagent-systems"
+    },
+    "8d6ba6e8236c63e7f0f3e7216c3cd52cc169f3db": {
+      "kind": "Blog",
+      "sent_at": "2026-09-23T12:06:19.094471",
+      "source": "Simon Willison",
+      "title": "Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price war",
+      "url": "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/"
     },
     "8e452eebade16960f1224d0b801194d56291d4cb": {
       "kind": "Paper",
@@ -1228,6 +1270,13 @@
       "title": "Evolving Pinterest\u2019s Embedding Retrieval Platform",
       "url": "https://medium.com/pinterest-engineering/evolving-pinterests-embedding-retrieval-platform-aede4e831e01?source=rss----4c5a5f6279b6---4"
     },
+    "cf77b45aa789d9ea494c5e6d166b8096551ba321": {
+      "kind": "Blog",
+      "sent_at": "2026-09-23T12:06:19.094471",
+      "source": "Hacker News",
+      "title": "Claude Opus 5.5",
+      "url": "https://www.anthropic.com/claude-opus-5-5"
+    },
     "cfc3dba828c4a8fd4db9debc6efea32709f2ae7f": {
       "kind": "Blog",
       "sent_at": "2026-08-24T12:06:03.904855",
@@ -1262,6 +1311,13 @@
       "source": "Simon Willison",
       "title": "datasette-mcp 0.2",
       "url": "https://simonwillison.net/2026/Sep/1/datasette-mcp/"
+    },
+    "d7ac59ae0532d6e009ea8eff247cc7bee9aa133d": {
+      "kind": "Blog",
+      "sent_at": "2026-09-23T12:06:19.094471",
+      "source": "OpenAI",
+      "title": "Better prompt caching for GPT-6",
+      "url": "https://openai.com/index/better-prompt-caching-for-gpt-6"
     },
     "d80706827e8008a30897bf56140024f2776313c7": {
       "kind": "Blog",
@@ -1375,13 +1431,6 @@
       "title": "Anthropic Release Notes",
       "url": "https://docs.anthropic.com/en/release-notes/overview"
     },
-    "ed2fddef3d3e844643c42d5d01e16cd2669522e5": {
-      "kind": "Blog",
-      "sent_at": "2026-08-09T12:04:40.116774",
-      "source": "Hacker News",
-      "title": "Shopify replaced Redis with MySQL for inventory reservations\u2013and it scaled",
-      "url": "https://shopify.engineering/scaling-inventory-reservations"
-    },
     "efc66d953fc0a7a329ebd8425c02195d046c7ca5": {
       "kind": "Blog",
       "sent_at": "2026-09-19T12:06:29.356523",
@@ -1490,7 +1539,9 @@
     "https://blog.cloudflare.com/saving-100-tb-of-ram-with-math/": "2026-09-19T12:06:29.356704",
     "https://blog.cloudflare.com/task-based-oauth-consent/": "2026-08-21T12:05:15.075760",
     "https://blog.cloudflare.com/total-eclipse-internet-traffic-iceland-spain-portugal/": "2026-08-14T12:05:20.145013",
+    "https://blog.cloudflare.com/vary-support/": "2026-09-23T12:06:19.094636",
     "https://blog.cloudflare.com/vulnerability-discovery-remediation/": "2026-09-04T12:07:47.114718",
+    "https://blog.cloudflare.com/worker-previews/": "2026-09-23T12:06:19.094636",
     "https://blog.cloudflare.com/workers-granular-authorization/": "2026-09-16T12:09:07.980580",
     "https://blog.cloudflare.com/workers-module-registry-nodejs/": "2026-09-10T12:08:06.867270",
     "https://blog.cloudflare.com/workers-protected-by-access/": "2026-08-15T12:04:35.309514",
@@ -1541,6 +1592,7 @@
     "https://claude.com/blog/the-claude-science-product-guide": "2026-08-19T12:05:01.971172",
     "https://claude.com/blog/turning-conversation-into-knowledge-how-slack-builds-human-agent-teams": "2026-08-20T12:05:09.139167",
     "https://claude.com/blog/what-1-000-small-business-owners-taught-us-about-ai": "2026-09-12T12:07:44.504914",
+    "https://claude.com/blog/what-a-task-costs-on-opus-5-5": "2026-09-23T12:06:19.094636",
     "https://claude.com/blog/working-at-the-frontier-how-balyasny-asset-management-evaluates-and-governs-claude-fable-5": "2026-09-18T12:06:23.572212",
     "https://openai.com/index/advisory-group-on-mathematics-and-ai": "2026-09-22T12:05:07.666789",
     "https://openai.com/index/ai-policy-window": "2026-09-10T12:08:06.867270",
@@ -1563,6 +1615,7 @@
     "https://openai.com/index/expanding-our-presence-in-brazil": "2026-08-27T12:09:26.449619",
     "https://openai.com/index/fyxer": "2026-09-15T12:07:57.999528",
     "https://openai.com/index/gpt-5-6-in-kiro": "2026-08-25T12:05:53.813101",
+    "https://openai.com/index/grab-openai-ai-skills-southeast-asia": "2026-09-23T12:06:19.094636",
     "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life": "2026-09-17T12:13:02.409327",
     "https://openai.com/index/higgsfield-from-prompt-to-production-with-astra": "2026-09-22T12:05:07.666789",
     "https://openai.com/index/how-to-connect-ai-usage-to-business-value": "2026-09-17T12:13:02.409327",
@@ -1595,19 +1648,16 @@
     "https://openai.com/index/the-work-now-within-reach": "2026-09-09T12:07:47.103026",
     "https://openai.com/index/using-codex-chatgpt-to-search-for-new-antimicrobials": "2026-09-11T12:08:35.817997",
     "https://www.anthropic.com/news/accenture-embedded-evaluation": "2026-09-20T12:05:02.833015",
-    "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy": "2026-08-09T12:04:40.116881",
     "https://www.anthropic.com/news/claude-opus-5": "2026-09-13T12:07:17.595222",
     "https://www.anthropic.com/news/claude-sonnet-5": "2026-08-16T12:04:46.299365",
     "https://www.anthropic.com/news/claude-text-watermark": "2026-08-16T12:04:46.299365",
     "https://www.anthropic.com/news/enterprise-frontier-safeguards": "2026-09-02T12:07:46.364695",
     "https://www.anthropic.com/news/expanding-support-for-scientists": "2026-08-28T12:07:21.900041",
     "https://www.anthropic.com/news/improving-alignment-security-efforts": "2026-09-01T12:07:21.810485",
-    "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards": "2026-08-09T12:04:40.116881",
     "https://www.anthropic.com/news/life-sciences-verification-program": "2026-09-20T12:05:02.833015",
     "https://www.anthropic.com/news/model-hardware-standard-research-preview": "2026-08-28T12:07:21.900041",
     "https://www.anthropic.com/news/position-open-weights-models": "2026-09-13T12:07:17.595222",
     "https://www.anthropic.com/news/redeploying-fable-5": "2026-08-17T12:05:16.445311",
-    "https://www.anthropic.com/news/tino-cuellar": "2026-08-09T12:04:40.116881",
     "https://www.anthropic.com/news/wellbeing-research-grants": "2026-08-28T12:07:21.900041"
   }
 }
