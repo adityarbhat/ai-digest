@@ -52,7 +52,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "7225cff402e9",
-      "last_seen_at": "2026-09-23T12:01:47.034451",
+      "last_seen_at": "2026-09-24T12:02:27.778941",
       "title": "Claude Code Overview",
       "updated_at": "2026-09-22T12:05:07.666618"
     },
@@ -179,7 +179,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "b7abc76533bf",
-      "last_seen_at": "2026-09-23T12:06:19.094471",
+      "last_seen_at": "2026-09-24T12:02:27.778941",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-09-23T12:06:19.094471"
     },
@@ -347,7 +347,7 @@
         "In Claude Code, Max plan users now default to fast mode on Claude Opus 4.8. See the Claude Code documentation ."
       ],
       "content_hash": "5d6d69426865",
-      "last_seen_at": "2026-09-23T12:06:19.094471",
+      "last_seen_at": "2026-09-24T12:02:27.778941",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-09-23T12:06:19.094471"
     }
@@ -548,6 +548,13 @@
       "source": "arXiv",
       "title": "Grow the Harness, Not the Context: From Strategy-Free Scaffolds to Reusable Specialist Agents",
       "url": "http://arxiv.org/abs/2609.26760v1"
+    },
+    "38bd6c8e7a8ac757214c7fe502ae2f669069099a": {
+      "kind": "Blog",
+      "sent_at": "2026-09-24T12:06:34.843935",
+      "source": "Hacker News",
+      "title": "Claude Code reads AGENTS.md only when telemetry is on [fixed]",
+      "url": "https://blog.szypowi.cz/p/claude-code-reads-agents.md-only-when-telemetry-is-on/"
     },
     "38d0dd98efa686223b89a7123a5e0cf8cf5d1f63": {
       "kind": "Blog",
@@ -905,6 +912,13 @@
       "source": "arXiv",
       "title": "RRSI: Regularized Recursive Self-Improvement of Agent Harnesses",
       "url": "http://arxiv.org/abs/2609.24972v1"
+    },
+    "7812bc42b64c1822e07330cd2a7978c4109a6833": {
+      "kind": "Paper",
+      "sent_at": "2026-09-24T12:06:34.843935",
+      "source": "arXiv",
+      "title": "Guides That Cause Actions: An Offline Study of Guide-Action Mutual Reinforcement in Multimodal Web Agents",
+      "url": "http://arxiv.org/abs/2609.27353v1"
     },
     "7dbbf4a2b76826944f04a59fc21ab2518815f3bc": {
       "kind": "Blog",
@@ -1562,6 +1576,7 @@
     "https://claude.com/blog/claude-in-chrome-generally-available": "2026-08-27T12:09:26.449619",
     "https://claude.com/blog/claude-managed-agents-memory": "2026-09-11T12:08:35.817997",
     "https://claude.com/blog/claude-managed-agents-updates": "2026-09-10T12:08:06.867270",
+    "https://claude.com/blog/claude-marketplace": "2026-09-24T12:06:34.844018",
     "https://claude.com/blog/claude-tag-now-reads-even-more-of-the-room": "2026-08-14T12:05:20.145013",
     "https://claude.com/blog/claudes-memory-works-everywhere-and-you-decide-whats-in-it": "2026-08-26T12:07:42.286813",
     "https://claude.com/blog/compliance-api-cowork-and-claude-code": "2026-08-12T12:05:24.276883",
@@ -1575,9 +1590,11 @@
     "https://claude.com/blog/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep": "2026-08-25T12:05:53.813101",
     "https://claude.com/blog/how-anthropic-employees-use-claude-tag": "2026-08-29T12:07:07.220267",
     "https://claude.com/blog/how-anthropics-business-development-team-uses-claude-to-run-inbound-and-outbound-at-scale": "2026-08-11T12:05:03.934309",
+    "https://claude.com/blog/how-coderabbit-power-digital-and-thoughtspot-scale-with-snowflake-and-vercel-on-claude-marketplace": "2026-09-24T12:06:34.844018",
     "https://claude.com/blog/how-healthcare-organizations-use-claude-tag": "2026-09-15T12:07:57.999528",
     "https://claude.com/blog/how-jetbrains-evaluates-and-deploys-claude-fable-5": "2026-08-14T12:05:20.145013",
     "https://claude.com/blog/how-monday-com-transformed-its-platform-into-an-agent-first-product-where-humans-and-agents-collaborate": "2026-08-21T12:05:15.075760",
+    "https://claude.com/blog/how-to-prepare-for-ai-driven-code-modernization-projects": "2026-09-24T12:06:34.844018",
     "https://claude.com/blog/how-warp-builds-self-improving-agents-on-claude": "2026-08-27T12:09:26.449619",
     "https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions": "2026-08-15T12:04:35.309514",
     "https://claude.com/blog/new-in-claude-managed-agents": "2026-09-10T12:08:06.867270",
@@ -1628,6 +1645,7 @@
     "https://openai.com/index/navier-stokes-solution": "2026-09-09T12:07:47.103026",
     "https://openai.com/index/new-policy-ideas-for-the-intelligence-age": "2026-08-17T12:05:16.445311",
     "https://openai.com/index/offering-zero-data-retention-for-frontier-models": "2026-08-20T12:05:09.139167",
+    "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense": "2026-09-24T12:06:34.844018",
     "https://openai.com/index/openai-joins-ports-pike-project": "2026-08-18T12:05:26.170377",
     "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex": "2026-08-29T12:07:07.220267",
     "https://openai.com/index/pacing-model-development-cyber-capabilities": "2026-08-19T12:05:01.971172",
@@ -1639,6 +1657,7 @@
     "https://openai.com/index/reimagining-advertising-with-ai": "2026-09-17T12:13:02.409327",
     "https://openai.com/index/replit": "2026-08-20T12:05:09.139167",
     "https://openai.com/index/responsible-ai-infrastructure-texas": "2026-08-11T12:05:03.934309",
+    "https://openai.com/index/sam-altman-un-security-council-remarks": "2026-09-24T12:06:34.844018",
     "https://openai.com/index/strengthening-democratic-oversight-in-national-security": "2026-08-19T12:05:01.971172",
     "https://openai.com/index/supporting-california-bill-advance-ai-youth-safety": "2026-09-01T12:07:21.810485",
     "https://openai.com/index/supporting-independent-journalism-in-ukraine": "2026-09-07T12:08:41.637282",
@@ -1646,6 +1665,7 @@
     "https://openai.com/index/the-defenders-window": "2026-08-18T12:05:26.170377",
     "https://openai.com/index/the-full-stack-behind-abundant-intelligence": "2026-08-26T12:07:42.286813",
     "https://openai.com/index/the-work-now-within-reach": "2026-09-09T12:07:47.103026",
+    "https://openai.com/index/two-years-of-openai-academy": "2026-09-24T12:06:34.844018",
     "https://openai.com/index/using-codex-chatgpt-to-search-for-new-antimicrobials": "2026-09-11T12:08:35.817997",
     "https://www.anthropic.com/news/accenture-embedded-evaluation": "2026-09-20T12:05:02.833015",
     "https://www.anthropic.com/news/claude-opus-5": "2026-09-13T12:07:17.595222",
