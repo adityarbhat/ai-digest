@@ -52,7 +52,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "7225cff402e9",
-      "last_seen_at": "2026-09-24T12:02:27.778941",
+      "last_seen_at": "2026-09-25T12:01:14.802301",
       "title": "Claude Code Overview",
       "updated_at": "2026-09-22T12:05:07.666618"
     },
@@ -179,7 +179,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "b7abc76533bf",
-      "last_seen_at": "2026-09-24T12:02:27.778941",
+      "last_seen_at": "2026-09-25T12:01:14.802301",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-09-23T12:06:19.094471"
     },
@@ -190,12 +190,17 @@
         "The Claude Platform release notes list changes to the Claude API, the client SDKs, and the Claude Console, newest first.",
         "For release notes on Claude Apps, see the Release notes for Claude Apps in the Claude Help Center .",
         "For updates to Claude Code, see the complete CHANGELOG.md in the claude-code repository.",
+        "September 24, 2026 \ue09a",
+        "We're expanding which refusals are billed to include refusals that arrive before any output when stop_details.category is \"bio\" , \"frontier_llm\" , or \"reasoning_extraction\" , the categories where we measure low volumes of false positives. Mid-stream refusals were already billed. The newly billed refusals are charged like any other request, at the rates of the model that ran it. Refusals before any output in other categories are still not billed, and fallback credit is unchanged. This change applies on all platforms. See How refusals are billed .",
+        "September 23, 2026 \ue09a",
+        "Cache diagnostics is out of beta on the Claude API and no longer requires the cache-diagnosis-2026-04-07 beta header. Include the diagnostics object on a Messages request to opt in; requests that still send the header work as before. Responses from POST /v1/messages now always include the diagnostics field, which is null when the request did not include the diagnostics object.",
         "September 22, 2026 \ue09a",
         "We've launched Claude Opus 5.5 ( claude-opus-5-5 ), a model for long-running agentic coding and knowledge work. It has a 1M token context window by default, 128k max output tokens, and always-on adaptive thinking , at $4 / $20 USD per MTok (Claude Opus 5 is $5 / $25). Claude Opus 5.5 is available on the Claude API, Claude in Amazon Bedrock , Claude Platform on AWS , Claude on Google Cloud , and Claude in Microsoft Foundry . See What's new in Claude Opus 5.5 for capabilities, API changes, and migration guidance.",
         "On Claude Opus 5.5, thinking can't be disabled: thinking: {\"type\": \"disabled\"} and thinking: {\"type\": \"enabled\", ...} return a 400 error. Omit the thinking field and control thinking depth with the effort parameter . tool_choice types any and tool also return a 400 error, as on Claude Fable 5.1; use auto with strict tool use . On the Claude API and Google Cloud, computer use on this model requires the computer_toolset_20260801 toolset and the earlier computer_20251124 tool returns a 400 error; on Amazon Bedrock, computer_20251124 keeps working. See the migration guide .",
         "Fast mode (research preview) is available for Claude Opus 5.5 on the Claude API.",
         "Tools can now be defined inside a mid-conversation system message , in beta on the Claude API with the inline-tools-2026-09-15 beta header. A tool_addition block can carry the tool's full definition ( tool: {\"type\": \"tool_definition\", \"definition\": {...}} ), so you can add a tool, change its schema, or move a server tool to a newer version without editing tools or invalidating the prompt cache. The same header covers adding and removing tools by reference. With the MCP connector's mcp-client-2026-09-15 beta header as well, the definition can be an MCP toolset, and a response records each server's fetched tool list in an mcp_tool_listing block, which pins that list when you send it back.",
         "September 18, 2026 \ue09a",
+        "For cache diagnostics , a response to a request that sends the cache-diagnosis-2026-04-07 beta header now always includes the diagnostics field. The field is null when the request did not include the diagnostics object. Previously the field was omitted in that case.",
         "The Compliance API local session endpoints now also return transcripts of Claude in Chrome sessions ( product_surface value claude_in_chrome ), in beta for Claude Enterprise organizations, with your existing Compliance Access Key and the read:compliance_user_data scope. See Sessions on users' machines .",
         "September 14, 2026 \ue09a",
         "The Messages API can now compact a conversation on demand on the Claude API, in beta with the compact-2026-09-04 beta header. Send the top-level compaction parameter, and the API returns a signed compaction block that summarizes the messages you sent. On later requests, send that block first, in place of those messages. You choose when to compact, the request can run in the background, and you can keep recent turns word for word after the summary. On models with preserved thinking, the thinking in those kept turns can stay valid.",
@@ -203,6 +208,8 @@
         "September 10, 2026 \ue09a",
         "Claude Managed Agents permission policies now include auto : the server evaluates each agent or MCP tool call and runs it, denies it, or pauses for your approval. agent.tool_use and agent.mcp_tool_use events report how each call was evaluated in an evaluation field alongside evaluated_permission . See Let the server evaluate each call with auto .",
         "Version 1.32.0 of the ant CLI adds ant beta:sessions connect , which attaches your terminal to a Claude Managed Agents session. You can follow the session live, send messages, and allow or deny tool calls that are waiting for approval. Pass --web to serve the Claude Console's session viewer locally and open the session there instead. See Connect to a Managed Agents session from your terminal .",
+        "September 9, 2026 \ue09a",
+        "For cache diagnostics , the API now stores a request's fingerprint only when the request includes the diagnostics object. A request that sends only the cache-diagnosis-2026-04-07 beta header is still accepted, but no fingerprint is stored. A later turn that points previous_message_id at it reports previous_message_not_found . Include diagnostics on every turn, with \"previous_message_id\": null on the first.",
         "September 3, 2026 \ue09a",
         "Version 1.30.0 of the ant CLI adds ant apply , which creates and updates agents, environments, skills, memory stores, and deployments from files in your repository. Describe each resource in a file, run ant apply , and approve the plan it prints. Commit the claude-lock.json lockfile it writes so that later runs, on your machine or in CI, update the same resources instead of creating new ones. See Manage resources as code with ant apply .",
         "Per-message effort changes, in beta, are also available on Google Cloud for Claude Fable 5.1, Claude Mythos 5.1, and Claude Opus 5, with the same mid-conversation-output-config-2026-07-01 beta header.",
@@ -337,19 +344,12 @@
         "On Claude Opus 4.8, the effort parameter defaults to high across all surfaces, including Claude Code and the Messages API.",
         "On Claude Opus 4.8, the minimum cacheable prompt length for prompt caching is 1,024 tokens, lower than on Claude Opus 4.7.",
         "With adaptive thinking enabled, Claude Opus 4.8 triggers reasoning only when a turn needs it, reducing wasted thinking tokens compared to Claude Opus 4.7 at the same effort level.",
-        "Claude Opus 4.8 supports high-resolution image input (up to 2576 pixels on the long edge), same as Claude Opus 4.7.",
-        "Task budgets now support Claude Opus 4.8.",
-        "The advisor tool now supports Claude Opus 4.8.",
-        "Computer use now supports Claude Opus 4.8.",
-        "Fast mode for Claude Opus 4.8 is available as a research preview on the Claude API only.",
-        "Setting the sampling parameters temperature , top_p , or top_k to a non-default value returns a 400 error on Claude Opus 4.8, same as on Claude Opus 4.7. See the migration guide for details.",
-        "In Claude Code, we've expanded Auto mode to more users for long-running tasks. See the Claude Code documentation .",
-        "In Claude Code, Max plan users now default to fast mode on Claude Opus 4.8. See the Claude Code documentation ."
+        "Claude Opus 4.8 supports high-resolution image input (up to 2576 pixels on the long edge), same as Claude Opus 4.7."
       ],
-      "content_hash": "5d6d69426865",
-      "last_seen_at": "2026-09-24T12:02:27.778941",
+      "content_hash": "ebadfc77211c",
+      "last_seen_at": "2026-09-25T12:05:19.070788",
       "title": "Anthropic Release Notes",
-      "updated_at": "2026-09-23T12:06:19.094471"
+      "updated_at": "2026-09-25T12:05:19.070788"
     }
   },
   "sent": {
@@ -430,6 +430,20 @@
       "title": "Consistency is the new latency: AI at the data layer",
       "url": "https://aws.amazon.com/blogs/architecture/consistency-is-the-new-latency-ai-at-the-data-layer/"
     },
+    "17c2e5cbd953e424223d219b43d48517c533a9b5": {
+      "kind": "Paper",
+      "sent_at": "2026-09-25T12:05:19.070788",
+      "source": "arXiv",
+      "title": "Hard Stop: Kernel-Level Preemption and Containment for Rogue Agentic Execution",
+      "url": "http://arxiv.org/abs/2609.29808v1"
+    },
+    "198f8083f6900a7c282ab235221bde12d40af1f7": {
+      "kind": "Blog",
+      "sent_at": "2026-09-25T12:05:19.070788",
+      "source": "Anthropic Docs",
+      "title": "Anthropic Release Notes",
+      "url": "https://docs.anthropic.com/en/release-notes/overview"
+    },
     "1b1e446bc327ab17a37cadb6c098fd58af1eb167": {
       "kind": "Paper",
       "sent_at": "2026-09-19T12:06:29.356523",
@@ -506,6 +520,13 @@
       "source": "Booking.com Engineering",
       "title": "Beyond the Dashboard: Accelerating Real-Time Intelligence in the Age of AI",
       "url": "https://medium.com/booking-com-development/beyond-the-dashboard-accelerating-real-time-intelligence-in-the-age-of-ai-6f1f0f9c123f?source=rss----1c36c35f9c76---4"
+    },
+    "2fcf5a446e51d0308a67a297be40744969f31a5c": {
+      "kind": "Paper",
+      "sent_at": "2026-09-25T12:05:19.070788",
+      "source": "arXiv",
+      "title": "LLM Agents Can Easily Tamper With Their Own Traces",
+      "url": "http://arxiv.org/abs/2609.30266v1"
     },
     "30016bda0a834dc2b9cce27aefecbfca58028925": {
       "kind": "Paper",
@@ -639,13 +660,6 @@
       "source": "Martin Fowler",
       "title": "Making Your Data Ready for Agentic AI",
       "url": "https://martinfowler.com/articles/making-data-ready-for-agentic-ai.html"
-    },
-    "47beb3f42234a61733c9e939714fe787d64880d1": {
-      "kind": "Blog",
-      "sent_at": "2026-08-11T12:05:03.934043",
-      "source": "Hacker News",
-      "title": "Docker Sandboxes \u2013 Disposable, isolated sandboxes for AI agents",
-      "url": "https://www.docker.com/products/docker-sandboxes/"
     },
     "49ee168bb532dec5e9e56fea4c5b8241cb5d442c": {
       "kind": "Blog",
@@ -997,13 +1011,6 @@
       "title": "Custom domains for Neon Functions",
       "url": "https://neon.com/blog/custom-domains-for-neon-functions"
     },
-    "89db51549b8b46db509940880c342bdcdc893fba": {
-      "kind": "Paper",
-      "sent_at": "2026-08-11T12:05:03.934043",
-      "source": "arXiv",
-      "title": "SWE-Bench ProMax: Benchmarking Agents on Large-Scale Multilingual Code Refactoring",
-      "url": "http://arxiv.org/abs/2608.09802v1"
-    },
     "8b1bca6a1cf89ec1301e792f3c18aaf089827077": {
       "kind": "Blog",
       "sent_at": "2026-08-17T12:05:16.445119",
@@ -1123,13 +1130,6 @@
       "title": "Breaking Claude Code Opus 5 Auto Mode",
       "url": "https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/"
     },
-    "9f639a82a85aa7162ea104c734c27d2ada4f09c8": {
-      "kind": "Blog",
-      "sent_at": "2026-08-11T12:05:03.934043",
-      "source": "Anthropic Docs",
-      "title": "Anthropic Release Notes",
-      "url": "https://docs.anthropic.com/en/release-notes/overview"
-    },
     "9f94e91d08fb1c643a56055794374a0e0e258672": {
       "kind": "Blog",
       "sent_at": "2026-08-25T12:05:53.812983",
@@ -1241,13 +1241,6 @@
       "source": "Simon Willison",
       "title": "Stop Making TUIs",
       "url": "https://simonwillison.net/2026/Aug/21/stop-making-tuis/"
-    },
-    "bef4f2f415ee6ce51fa3f42b9d2742cdcefd681e": {
-      "kind": "Blog",
-      "sent_at": "2026-08-11T12:05:03.934043",
-      "source": "Martin Fowler",
-      "title": "TDD inside the agent loop - theater or actual value?",
-      "url": "https://martinfowler.com/articles/exploring-gen-ai/tdd-in-the-agent-loop.html"
     },
     "bf06e3e99d680ee7c4d6561cb73b2778eb7441ad": {
       "kind": "Paper",
@@ -1403,13 +1396,6 @@
       "title": "Comparing token economics across 42 AI models",
       "url": "https://neon.com/blog/comparing-token-economics-across-42-ai-models"
     },
-    "e812c5b4a4c3fb2dd40abdf7be22fad2aa4cd680": {
-      "kind": "Blog",
-      "sent_at": "2026-08-11T12:05:03.934043",
-      "source": "Simon Willison",
-      "title": "Introducing Muse Glimmer",
-      "url": "https://simonwillison.net/2026/Aug/10/introducing-muse-glimmer/#atom-everything"
-    },
     "e9a1e417227e2b087441f3d52a4f5a2770d43bf1": {
       "kind": "Blog",
       "sent_at": "2026-09-14T12:06:48.369827",
@@ -1451,20 +1437,6 @@
       "source": "InfoQ Architecture Articles",
       "title": "Article: Architecting Secure and Scalable Facial Verification Systems",
       "url": "https://www.infoq.com/articles/secure-scalable-facial-verification/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Architecture-articles"
-    },
-    "f153a1440270f4a42faa79e198f079f9c8783d4f": {
-      "kind": "Blog",
-      "sent_at": "2026-08-11T12:05:03.934043",
-      "source": "Hacker News",
-      "title": "Auto mode is now the default in Claude Code",
-      "url": "https://claude.com/blog/auto-mode-default-in-claude-code"
-    },
-    "f17eea5f4891f410443ec254ab9b2eb8399da26b": {
-      "kind": "Paper",
-      "sent_at": "2026-08-11T12:05:03.934043",
-      "source": "arXiv",
-      "title": "SHE: Trajectory-driven Safety Harness Evolution for LLM Agents",
-      "url": "http://arxiv.org/abs/2608.09885v1"
     },
     "f2244e3be9490c52ba257cbbae97d84c5e9cbb0b": {
       "kind": "Blog",
@@ -1532,7 +1504,6 @@
   },
   "watchlist_seen": {
     "https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/": "2026-09-16T12:09:07.980580",
-    "https://blog.cloudflare.com/agents-week-review-august-2026/": "2026-08-11T12:05:03.934309",
     "https://blog.cloudflare.com/automatic-key-exchange-for-origins/": "2026-09-09T12:07:47.103026",
     "https://blog.cloudflare.com/bot-preference-sync/": "2026-08-22T12:05:37.902741",
     "https://blog.cloudflare.com/botbase-for-operators/": "2026-08-29T12:07:07.220267",
@@ -1541,9 +1512,9 @@
     "https://blog.cloudflare.com/certificate-transparency-monitoring-ga/": "2026-08-14T12:05:20.145013",
     "https://blog.cloudflare.com/client-side-security-finds-4-malicious-campaigns/": "2026-09-17T12:13:02.409327",
     "https://blog.cloudflare.com/cloudflare-blog-uses-emdash/": "2026-08-25T12:05:53.813101",
+    "https://blog.cloudflare.com/containers-cross-tenant-vulnerability/": "2026-09-25T12:05:19.070930",
     "https://blog.cloudflare.com/ddos-threat-report-2026-h1/": "2026-08-12T12:05:24.276883",
     "https://blog.cloudflare.com/dns-cache-memory-optimization-1111/": "2026-08-28T12:07:21.900041",
-    "https://blog.cloudflare.com/fedramp-class-d-certification/": "2026-08-11T12:05:03.934309",
     "https://blog.cloudflare.com/introducing-adaptive-intelligence/": "2026-09-01T12:07:21.810485",
     "https://blog.cloudflare.com/mcp-security-updates/": "2026-08-15T12:04:35.309514",
     "https://blog.cloudflare.com/post-quantum-dnssec-1111/": "2026-09-11T12:08:35.817997",
@@ -1577,7 +1548,9 @@
     "https://claude.com/blog/claude-managed-agents-memory": "2026-09-11T12:08:35.817997",
     "https://claude.com/blog/claude-managed-agents-updates": "2026-09-10T12:08:06.867270",
     "https://claude.com/blog/claude-marketplace": "2026-09-24T12:06:34.844018",
+    "https://claude.com/blog/claude-opus-5-5-built-for-coding-sessions-that-use-more-context": "2026-09-25T12:05:19.070930",
     "https://claude.com/blog/claude-tag-now-reads-even-more-of-the-room": "2026-08-14T12:05:20.145013",
+    "https://claude.com/blog/claude-tag-now-supports-personal-connectors-in-channels": "2026-09-25T12:05:19.070930",
     "https://claude.com/blog/claudes-memory-works-everywhere-and-you-decide-whats-in-it": "2026-08-26T12:07:42.286813",
     "https://claude.com/blog/compliance-api-cowork-and-claude-code": "2026-08-12T12:05:24.276883",
     "https://claude.com/blog/computer-use-skills-api-files-api": "2026-08-22T12:05:37.902741",
@@ -1589,7 +1562,6 @@
     "https://claude.com/blog/how-abc-legal-turned-every-employee-into-a-builder-with-claude-managed-agents": "2026-08-18T12:05:26.170377",
     "https://claude.com/blog/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep": "2026-08-25T12:05:53.813101",
     "https://claude.com/blog/how-anthropic-employees-use-claude-tag": "2026-08-29T12:07:07.220267",
-    "https://claude.com/blog/how-anthropics-business-development-team-uses-claude-to-run-inbound-and-outbound-at-scale": "2026-08-11T12:05:03.934309",
     "https://claude.com/blog/how-coderabbit-power-digital-and-thoughtspot-scale-with-snowflake-and-vercel-on-claude-marketplace": "2026-09-24T12:06:34.844018",
     "https://claude.com/blog/how-healthcare-organizations-use-claude-tag": "2026-09-15T12:07:57.999528",
     "https://claude.com/blog/how-jetbrains-evaluates-and-deploys-claude-fable-5": "2026-08-14T12:05:20.145013",
@@ -1618,7 +1590,6 @@
     "https://openai.com/index/australian-youth-safety-blueprint": "2026-09-19T12:06:29.356704",
     "https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts": "2026-08-27T12:09:26.449619",
     "https://openai.com/index/builders-guide-to-gpt-5-6": "2026-08-14T12:05:20.145013",
-    "https://openai.com/index/building-an-ai-native-finance-function": "2026-08-11T12:05:03.934309",
     "https://openai.com/index/building-standards-next-phase-ai": "2026-09-22T12:05:07.666789",
     "https://openai.com/index/chatgpt-ads-expands-across-europe": "2026-08-19T12:05:01.971172",
     "https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources": "2026-09-02T12:07:46.364695",
@@ -1641,7 +1612,6 @@
     "https://openai.com/index/jalapeno-first-results": "2026-08-26T12:07:42.286813",
     "https://openai.com/index/legora-financial-statement-review-with-astra": "2026-09-04T12:07:47.114718",
     "https://openai.com/index/loveholidays": "2026-08-26T12:07:42.286813",
-    "https://openai.com/index/model-ml": "2026-08-11T12:05:03.934309",
     "https://openai.com/index/navier-stokes-solution": "2026-09-09T12:07:47.103026",
     "https://openai.com/index/new-policy-ideas-for-the-intelligence-age": "2026-08-17T12:05:16.445311",
     "https://openai.com/index/offering-zero-data-retention-for-frontier-models": "2026-08-20T12:05:09.139167",
@@ -1656,7 +1626,6 @@
     "https://openai.com/index/put-data-to-work": "2026-09-11T12:08:35.817997",
     "https://openai.com/index/reimagining-advertising-with-ai": "2026-09-17T12:13:02.409327",
     "https://openai.com/index/replit": "2026-08-20T12:05:09.139167",
-    "https://openai.com/index/responsible-ai-infrastructure-texas": "2026-08-11T12:05:03.934309",
     "https://openai.com/index/sam-altman-un-security-council-remarks": "2026-09-24T12:06:34.844018",
     "https://openai.com/index/strengthening-democratic-oversight-in-national-security": "2026-08-19T12:05:01.971172",
     "https://openai.com/index/supporting-california-bill-advance-ai-youth-safety": "2026-09-01T12:07:21.810485",
