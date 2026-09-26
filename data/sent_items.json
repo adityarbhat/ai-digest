@@ -52,7 +52,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "7225cff402e9",
-      "last_seen_at": "2026-09-25T12:01:14.802301",
+      "last_seen_at": "2026-09-26T12:01:57.729167",
       "title": "Claude Code Overview",
       "updated_at": "2026-09-22T12:05:07.666618"
     },
@@ -179,7 +179,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "b7abc76533bf",
-      "last_seen_at": "2026-09-25T12:01:14.802301",
+      "last_seen_at": "2026-09-26T12:01:57.729167",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-09-23T12:06:19.094471"
     },
@@ -191,7 +191,9 @@
         "For release notes on Claude Apps, see the Release notes for Claude Apps in the Claude Help Center .",
         "For updates to Claude Code, see the complete CHANGELOG.md in the claude-code repository.",
         "September 24, 2026 \ue09a",
-        "We're expanding which refusals are billed to include refusals that arrive before any output when stop_details.category is \"bio\" , \"frontier_llm\" , or \"reasoning_extraction\" , the categories where we measure low volumes of false positives. Mid-stream refusals were already billed. The newly billed refusals are charged like any other request, at the rates of the model that ran it. Refusals before any output in other categories are still not billed, and fallback credit is unchanged. This change applies on all platforms. See How refusals are billed .",
+        "We're resuming billing for refusals that arrive before any output when stop_details.category is \"bio\" , \"frontier_llm\" , or \"reasoning_extraction\" , the categories where we measure low volumes of false positives. Mid-stream refusals were already billed. Refusals billed under this change are charged like any other request, at the rates of the model that ran it. Refusals before any output in other categories are still not billed, and fallback credit is unchanged. This change applies on all platforms. See How refusals are billed .",
+        "The Compliance API local session endpoints are out of beta for Claude for Microsoft 365 sessions in Excel, PowerPoint, Word, and Outlook ( product_surface values beginning with office_agents ). See Sessions on users' machines .",
+        "The Compliance API Activity Feed no longer returns file names, project document names, or artifact titles. The filename and title fields on file, project document, and artifact activities are now always empty or omitted, including on activities recorded before this change. To look up a name or title by the ID on the activity, use a Compliance Access Key with the read:compliance_user_data scope. See Understand the Activity object .",
         "September 23, 2026 \ue09a",
         "Cache diagnostics is out of beta on the Claude API and no longer requires the cache-diagnosis-2026-04-07 beta header. Include the diagnostics object on a Messages request to opt in; requests that still send the header work as before. Responses from POST /v1/messages now always include the diagnostics field, which is null when the request did not include the diagnostics object.",
         "September 22, 2026 \ue09a",
@@ -318,7 +320,7 @@
         "June 10, 2026 \ue09a",
         "The GET /v1/environments/{id}/work endpoint, which lists pending work for a self-hosted sandbox , is now available on Claude Platform on AWS . See IAM actions for Claude Platform on AWS for the GetEnvironment action that authorizes it.",
         "June 9, 2026 \ue09a",
-        "We've launched Claude Fable 5 ( claude-fable-5 ), our most capable widely released model, alongside Claude Mythos 5 ( claude-mythos-5 ) for Project Glasswing participants. Both models support a 1M token context window by default, 128k max output tokens, and always-on adaptive thinking . See Introducing Claude Fable 5 and Claude Mythos 5 for capabilities, API changes, and availability.",
+        "We've launched Claude Fable 5 ( claude-fable-5 ), our most capable model open to all customers, alongside Claude Mythos 5 ( claude-mythos-5 ) for Project Glasswing participants. Both models support a 1M token context window by default, 128k max output tokens, and always-on adaptive thinking . See Introducing Claude Fable 5 and Claude Mythos 5 for capabilities, API changes, and availability.",
         "Claude Fable 5 and Claude Mythos 5 use the tokenizer introduced with Claude Opus 4.7. Compared to models before Claude Opus 4.7, the same text produces roughly 30% more tokens. The exact increase depends on the content and workload shape. Use the token counting API with model: \"claude-fable-5\" to measure your prompts under the new tokenizer.",
         "Claude Fable 5 runs safety classifiers on requests and during response generation. When a classifier declines a request, the Messages API returns stop_reason: \"refusal\" . You are not billed for a request refused before any output is generated. An opt-in fallbacks parameter (in beta on the Claude API and Claude Platform on AWS; not supported on the Message Batches API) re-runs refused requests on another model, billed at the fallback model's rates. See Handling stop reasons .",
         "The stop_details.category field on refusal responses now includes \"reasoning_extraction\" on Claude Fable 5, returned when a request is blocked under Anthropic's Terms of Service restrictions on reverse engineering or duplicating model outputs. The existing \"cyber\" and \"bio\" categories are unchanged. No beta header is required.",
@@ -338,28 +340,19 @@
         "May 29, 2026 \ue09a",
         "Claude Managed Agents webhooks , multiagent orchestration , and self-hosted sandboxes are now available on Claude Platform on AWS . See IAM actions for Claude Platform on AWS for the new IAM actions and the AnthropicSelfHostedEnvironmentAccess managed policy.",
         "May 28, 2026 \ue09a",
-        "We've launched Claude Opus 4.8 ( claude-opus-4-8 ), our most capable widely released model. Claude Opus 4.8 supports a 1M token context window by default on the Claude API, Amazon Bedrock, Google Cloud, and Microsoft Foundry, 128k max output tokens, and the same set of tools and platform features as Claude Opus 4.7. See the migration guide for baseline settings, features, and migration guidance.",
+        "We've launched Claude Opus 4.8 ( claude-opus-4-8 ), our most capable model. Claude Opus 4.8 supports a 1M token context window by default on the Claude API, Amazon Bedrock, Google Cloud, and Microsoft Foundry, 128k max output tokens, and the same set of tools and platform features as Claude Opus 4.7. See the migration guide for baseline settings, features, and migration guidance.",
         "We've launched mid-conversation system messages . On Claude Opus 4.8, you can send role: \"system\" messages after a user turn (subject to placement rules ) in the messages array, preserving prompt cache hits when instructions change during a long-running session. No beta header is required.",
         "The stop_details field on refusal responses is now publicly documented; it returns a category ( cyber , bio , or null ) and a human-readable explanation , so your application can route different classes of refusal to the right next step. No beta header is required.",
         "On Claude Opus 4.8, the effort parameter defaults to high across all surfaces, including Claude Code and the Messages API.",
-        "On Claude Opus 4.8, the minimum cacheable prompt length for prompt caching is 1,024 tokens, lower than on Claude Opus 4.7.",
-        "With adaptive thinking enabled, Claude Opus 4.8 triggers reasoning only when a turn needs it, reducing wasted thinking tokens compared to Claude Opus 4.7 at the same effort level.",
-        "Claude Opus 4.8 supports high-resolution image input (up to 2576 pixels on the long edge), same as Claude Opus 4.7."
+        "On Claude Opus 4.8, the minimum cacheable prompt length for prompt caching is 1,024 tokens, lower than on Claude Opus 4.7."
       ],
-      "content_hash": "ebadfc77211c",
-      "last_seen_at": "2026-09-25T12:05:19.070788",
+      "content_hash": "9513d9a28a63",
+      "last_seen_at": "2026-09-26T12:05:49.135583",
       "title": "Anthropic Release Notes",
-      "updated_at": "2026-09-25T12:05:19.070788"
+      "updated_at": "2026-09-26T12:05:49.135583"
     }
   },
   "sent": {
-    "00b0daa89aad2260acacf39be3b0d185e1f19cda": {
-      "kind": "Blog",
-      "sent_at": "2026-08-12T12:05:24.276731",
-      "source": "AWS Architecture Blog",
-      "title": "Scaling patterns for self-organizing multi-agent clusters with Kiro",
-      "url": "https://aws.amazon.com/blogs/architecture/scaling-patterns-for-self-organizing-multi-agent-clusters-with-kiro/"
-    },
     "049e6700d3d298f24314543f24d96fe933dc500a": {
       "kind": "Paper",
       "sent_at": "2026-08-18T12:05:26.170179",
@@ -380,13 +373,6 @@
       "source": "Martin Fowler",
       "title": "An Accidental Blackboard",
       "url": "https://martinfowler.com/articles/exploring-gen-ai/an-accidental-blackboard.html"
-    },
-    "0aa4e0f9e665d7739b7be2bb6434e72d4a2fc249": {
-      "kind": "Blog",
-      "sent_at": "2026-08-12T12:05:24.276731",
-      "source": "Render Blog",
-      "title": "Company August 16, 2026 Four minutes after midnight, Codex said the page was live Hazal Mestci",
-      "url": "https://render.com/blog/four-minutes-after-midnight-codex-said-the-page-was-live"
     },
     "0eefbac2fe415527b2a254a809361ceca05a2e5d": {
       "kind": "Blog",
@@ -486,13 +472,6 @@
       "title": "Inside Vera, DoorDash\u2019s Data Agent",
       "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1PZXM5Y3hsaDhiYW13OXd1SGU4ekRRTnZhdmRRQ2NteFZ2X0JqVmw2U09LbzZrOU8xV2pzUVduMHFqak1MV3NXdTFva1g5R2VOc0NYYUpIaTA5ZEpaRjAyMU5KZkpDd2JKLURkM3RBSG1DWVZzekt3?oc=5"
     },
-    "229180da473b57507315a17ddea2e0fd8c117a29": {
-      "kind": "Blog",
-      "sent_at": "2026-08-12T12:05:24.276731",
-      "source": "Neon Blog",
-      "title": "Electric is joining team Neon at Databricks",
-      "url": "https://neon.com/blog/electric-joins-neon"
-    },
     "27629458812a4274a36263be0cdc92dc4de20a3b": {
       "kind": "Blog",
       "sent_at": "2026-09-04T12:07:47.114559",
@@ -590,6 +569,13 @@
       "source": "arXiv",
       "title": "CliffCompaction: Cost-Efficient Compaction for Long-Horizon Coding Agents",
       "url": "http://arxiv.org/abs/2609.26779v1"
+    },
+    "3e48849c442afe567391840b54cb51cb04556699": {
+      "kind": "Blog",
+      "sent_at": "2026-09-26T12:05:49.135583",
+      "source": "Anthropic Docs",
+      "title": "Anthropic Release Notes",
+      "url": "https://docs.anthropic.com/en/release-notes/overview"
     },
     "3f10477060d76a261c04178a956b3fbb95bc4d1a": {
       "kind": "Blog",
@@ -878,6 +864,13 @@
       "title": "Claude's new system prompt really doesn't want to reproduce song lyrics",
       "url": "https://simonwillison.net/2026/Sep/2/claudes-new-system-prompt/"
     },
+    "707a18afd73999fca70d0e4f9cdc950e64afa171": {
+      "kind": "Paper",
+      "sent_at": "2026-09-26T12:05:49.135583",
+      "source": "arXiv",
+      "title": "Jev-Mobile: Jev as an Executor for Mobile GUI Agents",
+      "url": "http://arxiv.org/abs/2609.30186v1"
+    },
     "71c5781a8cbdd261c249d609fa9b56fca90dff65": {
       "kind": "Blog",
       "sent_at": "2026-08-18T12:05:26.170179",
@@ -1116,13 +1109,6 @@
       "title": "GPT-6 Astra: The next generation in intelligence for work",
       "url": "https://openai.com/index/gpt-6-astra-next-generation-work"
     },
-    "9a257332bd17f2d42c87f48f70ab2c8919af4943": {
-      "kind": "Blog",
-      "sent_at": "2026-08-12T12:05:24.276731",
-      "source": "Hacker News",
-      "title": "Go is an ideal language for AI-assisted software engineering",
-      "url": "https://developers.googleblog.com/why-go-is-an-ideal-language-for-ai-assisted-software-engineering/"
-    },
     "9e4cfc70ee9a221ea3481bd39441beec73e25e34": {
       "kind": "Blog",
       "sent_at": "2026-08-28T12:07:21.899909",
@@ -1326,13 +1312,6 @@
       "title": "Better prompt caching for GPT-6",
       "url": "https://openai.com/index/better-prompt-caching-for-gpt-6"
     },
-    "d80706827e8008a30897bf56140024f2776313c7": {
-      "kind": "Blog",
-      "sent_at": "2026-08-12T12:05:24.276731",
-      "source": "DoorDash Engineering",
-      "title": "Delegating Engineering Work To Cloud-Based Agents",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQU2Z6ZUUyMGZRTnEzVkJtOUNJT3F4NzB6V0swc1dwRW1lWUpkaUpOV0pGUzRNQTVZRGRhWEU2ZURLX1gwQVZLNjVkRmlLajltS0t4bjF5UXV3MXJxaEJsUlo0RFJ4bFNQelZ6b2ZOQ1c2bmJsd1Y3VWNBWXI2VHZWQV9KdkxlakJsem11ZVhB?oc=5"
-    },
     "d88172934ef3b3631f16a81d450bc5eb524be756": {
       "kind": "Blog",
       "sent_at": "2026-09-21T12:08:56.804324",
@@ -1473,13 +1452,6 @@
       "title": "Autoscaling Lakebase Postgres",
       "url": "https://neon.com/blog/autoscaling-lakebase-postgres"
     },
-    "f8580043d9be763efb29667d7ef1e49ba9c8dff5": {
-      "kind": "Blog",
-      "sent_at": "2026-08-12T12:05:24.276731",
-      "source": "Simon Willison",
-      "title": "Stealing Reasoning Traces from Proprietary LLM APIs",
-      "url": "https://simonwillison.net/2026/Aug/11/stealing-reasoning-traces/#atom-everything"
-    },
     "fc10e23380944a687673a435919c47ec90024b22": {
       "kind": "Blog",
       "sent_at": "2026-08-20T12:05:09.139017",
@@ -1513,7 +1485,6 @@
     "https://blog.cloudflare.com/client-side-security-finds-4-malicious-campaigns/": "2026-09-17T12:13:02.409327",
     "https://blog.cloudflare.com/cloudflare-blog-uses-emdash/": "2026-08-25T12:05:53.813101",
     "https://blog.cloudflare.com/containers-cross-tenant-vulnerability/": "2026-09-25T12:05:19.070930",
-    "https://blog.cloudflare.com/ddos-threat-report-2026-h1/": "2026-08-12T12:05:24.276883",
     "https://blog.cloudflare.com/dns-cache-memory-optimization-1111/": "2026-08-28T12:07:21.900041",
     "https://blog.cloudflare.com/introducing-adaptive-intelligence/": "2026-09-01T12:07:21.810485",
     "https://blog.cloudflare.com/mcp-security-updates/": "2026-08-15T12:04:35.309514",
@@ -1524,6 +1495,7 @@
     "https://blog.cloudflare.com/saving-100-tb-of-ram-with-math/": "2026-09-19T12:06:29.356704",
     "https://blog.cloudflare.com/task-based-oauth-consent/": "2026-08-21T12:05:15.075760",
     "https://blog.cloudflare.com/total-eclipse-internet-traffic-iceland-spain-portugal/": "2026-08-14T12:05:20.145013",
+    "https://blog.cloudflare.com/turnstile-spin/": "2026-09-26T12:05:49.135682",
     "https://blog.cloudflare.com/vary-support/": "2026-09-23T12:06:19.094636",
     "https://blog.cloudflare.com/vulnerability-discovery-remediation/": "2026-09-04T12:07:47.114718",
     "https://blog.cloudflare.com/worker-previews/": "2026-09-23T12:06:19.094636",
@@ -1536,6 +1508,7 @@
     "https://claude.com/blog/artifacts-in-claude-code": "2026-09-19T12:06:29.356704",
     "https://claude.com/blog/bain-company-joins-the-claude-partner-network-as-a-global-premier-partner": "2026-08-26T12:07:42.286813",
     "https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders": "2026-08-22T12:05:37.902741",
+    "https://claude.com/blog/build-plugins-for-claude": "2026-09-26T12:05:49.135682",
     "https://claude.com/blog/building-an-ai-native-revenue-organization": "2026-09-16T12:09:07.980580",
     "https://claude.com/blog/claude-code-desktop-redesign": "2026-09-11T12:08:35.817997",
     "https://claude.com/blog/claude-code-guide-for-startups": "2026-08-21T12:05:15.075760",
@@ -1552,7 +1525,6 @@
     "https://claude.com/blog/claude-tag-now-reads-even-more-of-the-room": "2026-08-14T12:05:20.145013",
     "https://claude.com/blog/claude-tag-now-supports-personal-connectors-in-channels": "2026-09-25T12:05:19.070930",
     "https://claude.com/blog/claudes-memory-works-everywhere-and-you-decide-whats-in-it": "2026-08-26T12:07:42.286813",
-    "https://claude.com/blog/compliance-api-cowork-and-claude-code": "2026-08-12T12:05:24.276883",
     "https://claude.com/blog/computer-use-skills-api-files-api": "2026-08-22T12:05:37.902741",
     "https://claude.com/blog/connectors-for-everyday-life": "2026-09-11T12:08:35.817997",
     "https://claude.com/blog/cowork-built-in-browser": "2026-08-27T12:09:26.449619",
@@ -1597,7 +1569,6 @@
     "https://openai.com/index/cooley-gopublic": "2026-09-18T12:06:23.572212",
     "https://openai.com/index/dali-rajic-chief-revenue-officer": "2026-08-14T12:05:20.145013",
     "https://openai.com/index/daybreak-for-frontline-defenders": "2026-09-04T12:07:47.114718",
-    "https://openai.com/index/daybreak-models-are-now-available-on-aws": "2026-08-12T12:05:24.276883",
     "https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia": "2026-08-25T12:05:53.813101",
     "https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads": "2026-09-01T12:07:21.810485",
     "https://openai.com/index/expanding-our-presence-in-brazil": "2026-08-27T12:09:26.449619",
@@ -1623,6 +1594,7 @@
     "https://openai.com/index/paul-christiano-joins-openai-foundation-board": "2026-09-10T12:08:06.867270",
     "https://openai.com/index/playco-game-prototyping-with-astra": "2026-09-04T12:07:47.114718",
     "https://openai.com/index/previewing-ultrafast": "2026-08-14T12:05:20.145013",
+    "https://openai.com/index/proaction": "2026-09-26T12:05:49.135682",
     "https://openai.com/index/put-data-to-work": "2026-09-11T12:08:35.817997",
     "https://openai.com/index/reimagining-advertising-with-ai": "2026-09-17T12:13:02.409327",
     "https://openai.com/index/replit": "2026-08-20T12:05:09.139167",
@@ -1630,7 +1602,6 @@
     "https://openai.com/index/strengthening-democratic-oversight-in-national-security": "2026-08-19T12:05:01.971172",
     "https://openai.com/index/supporting-california-bill-advance-ai-youth-safety": "2026-09-01T12:07:21.810485",
     "https://openai.com/index/supporting-independent-journalism-in-ukraine": "2026-09-07T12:08:41.637282",
-    "https://openai.com/index/testing-ads-in-chatgpt": "2026-08-12T12:05:24.276883",
     "https://openai.com/index/the-defenders-window": "2026-08-18T12:05:26.170377",
     "https://openai.com/index/the-full-stack-behind-abundant-intelligence": "2026-08-26T12:07:42.286813",
     "https://openai.com/index/the-work-now-within-reach": "2026-09-09T12:07:47.103026",
