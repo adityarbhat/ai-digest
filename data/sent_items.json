@@ -52,7 +52,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "7225cff402e9",
-      "last_seen_at": "2026-09-26T12:01:57.729167",
+      "last_seen_at": "2026-09-27T12:01:57.555668",
       "title": "Claude Code Overview",
       "updated_at": "2026-09-22T12:05:07.666618"
     },
@@ -179,7 +179,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "b7abc76533bf",
-      "last_seen_at": "2026-09-26T12:01:57.729167",
+      "last_seen_at": "2026-09-27T12:01:57.555668",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-09-23T12:06:19.094471"
     },
@@ -347,7 +347,7 @@
         "On Claude Opus 4.8, the minimum cacheable prompt length for prompt caching is 1,024 tokens, lower than on Claude Opus 4.7."
       ],
       "content_hash": "9513d9a28a63",
-      "last_seen_at": "2026-09-26T12:05:49.135583",
+      "last_seen_at": "2026-09-27T12:01:57.555668",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-09-26T12:05:49.135583"
     }
@@ -619,13 +619,6 @@
       "title": "Neon skills landed in the Vercel CLI",
       "url": "https://neon.com/blog/neon-skills-landed-in-the-vercel-cli"
     },
-    "42e7305da0379ae8dc58479eb55d6e401652c10b": {
-      "kind": "Paper",
-      "sent_at": "2026-08-13T12:05:04.688836",
-      "source": "arXiv",
-      "title": "Diagnosis Before Recovery: Turning Agent Failures into Selective Self-Correction",
-      "url": "http://arxiv.org/abs/2608.11772v1"
-    },
     "4312ac0d1289f58e8186f7b87a762fbc0757693e": {
       "kind": "Paper",
       "sent_at": "2026-08-27T12:09:26.449490",
@@ -696,13 +689,6 @@
       "title": "smolmachines / smolvm as a sandbox for untrusted Python & JavaScript",
       "url": "https://simonwillison.net/2026/Aug/19/smolmachines-untrusted-sandbox/"
     },
-    "5220b75f89f38e822d8d25545e5ef2b1ddfc7cf6": {
-      "kind": "Blog",
-      "sent_at": "2026-08-13T12:05:04.688836",
-      "source": "Simon Willison",
-      "title": "DeepSeek V4 Pro 0813 (on OpenRouter)",
-      "url": "https://simonwillison.net/2026/Aug/12/deepseek-v4-pro-0813/"
-    },
     "524d79138d3e53cc6365131a1b2550496dac00be": {
       "kind": "Blog",
       "sent_at": "2026-09-12T12:07:44.504781",
@@ -737,13 +723,6 @@
       "source": "AWS Architecture Blog",
       "title": "Closing the AI agent trust gap with graduated autonomy",
       "url": "https://aws.amazon.com/blogs/architecture/closing-the-ai-agent-trust-gap-with-graduated-autonomy/"
-    },
-    "57c631d4c702975c63ac8e9e613099b27fefcc03": {
-      "kind": "Blog",
-      "sent_at": "2026-08-13T12:05:04.688836",
-      "source": "Neon Blog",
-      "title": "Neon Functions: backend logic next to your data",
-      "url": "https://neon.com/blog/neon-functions-backend-logic-next-to-your-data"
     },
     "59576b5bb4459283f32fcfdb3565196600f49665": {
       "kind": "Blog",
@@ -1046,13 +1025,6 @@
       "title": "Terminal-Universe: Turning Agent Trajectories into Scalable Terminal Environments",
       "url": "http://arxiv.org/abs/2609.04148v1"
     },
-    "955a03f1de36015a82d1a59cbcbd273e84330e93": {
-      "kind": "Blog",
-      "sent_at": "2026-08-13T12:05:04.688836",
-      "source": "AWS Architecture Blog",
-      "title": "Reducing Text2SQL latency with parameterized query templates",
-      "url": "https://aws.amazon.com/blogs/architecture/reducing-text2sql-latency-with-parameterized-query-templates/"
-    },
     "9595db1d29a5c1368a7e91fec06ebfdbb3e28316": {
       "kind": "Paper",
       "sent_at": "2026-08-22T12:05:37.902560",
@@ -1094,13 +1066,6 @@
       "source": "Anthropic Docs",
       "title": "Claude Code Overview",
       "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
-    },
-    "99a4289dba513157b37155eb0f9c62766c652568": {
-      "kind": "Blog",
-      "sent_at": "2026-08-13T12:05:04.688836",
-      "source": "Simon Willison",
-      "title": "alchemy-utils 0.1a0",
-      "url": "https://simonwillison.net/2026/Aug/12/alchemy-utils/"
     },
     "99c66ecebeb22541030e27f64c17fd9ce3d5a763": {
       "kind": "Blog",
@@ -1214,12 +1179,12 @@
       "title": "Anthropic Release Notes",
       "url": "https://docs.anthropic.com/en/release-notes/overview"
     },
-    "bcd4cf7862f533d4d56613f6dfc0a69847e4a861": {
+    "bad7a956d596ed8f19c097a2a667c04f083fc7b3": {
       "kind": "Blog",
-      "sent_at": "2026-08-13T12:05:04.688836",
-      "source": "OpenAI",
-      "title": "From assistance to execution: How enterprises put AI to work",
-      "url": "https://openai.com/index/how-enterprises-put-ai-to-work"
+      "sent_at": "2026-09-27T12:05:14.092860",
+      "source": "Hacker News",
+      "title": "DeepSeek Elastic Compute (DSec)",
+      "url": "https://arxiv.org/abs/2609.22978"
     },
     "bed7c3e90c9bd98e7e68a4ef9783a173f1748015": {
       "kind": "Blog",
@@ -1528,7 +1493,6 @@
     "https://claude.com/blog/computer-use-skills-api-files-api": "2026-08-22T12:05:37.902741",
     "https://claude.com/blog/connectors-for-everyday-life": "2026-09-11T12:08:35.817997",
     "https://claude.com/blog/cowork-built-in-browser": "2026-08-27T12:09:26.449619",
-    "https://claude.com/blog/cowork-chrome-side-panel": "2026-08-13T12:05:04.688988",
     "https://claude.com/blog/cowork-is-now-claude": "2026-09-17T12:13:02.409327",
     "https://claude.com/blog/deploying-ai-from-pilot-to-production": "2026-09-17T12:13:02.409327",
     "https://claude.com/blog/how-abc-legal-turned-every-employee-into-a-builder-with-claude-managed-agents": "2026-08-18T12:05:26.170377",
@@ -1608,12 +1572,15 @@
     "https://openai.com/index/two-years-of-openai-academy": "2026-09-24T12:06:34.844018",
     "https://openai.com/index/using-codex-chatgpt-to-search-for-new-antimicrobials": "2026-09-11T12:08:35.817997",
     "https://www.anthropic.com/news/accenture-embedded-evaluation": "2026-09-20T12:05:02.833015",
+    "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy": "2026-09-27T12:05:14.092935",
+    "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system": "2026-09-27T12:05:14.092935",
     "https://www.anthropic.com/news/claude-opus-5": "2026-09-13T12:07:17.595222",
     "https://www.anthropic.com/news/claude-sonnet-5": "2026-08-16T12:04:46.299365",
     "https://www.anthropic.com/news/claude-text-watermark": "2026-08-16T12:04:46.299365",
     "https://www.anthropic.com/news/enterprise-frontier-safeguards": "2026-09-02T12:07:46.364695",
     "https://www.anthropic.com/news/expanding-support-for-scientists": "2026-08-28T12:07:21.900041",
     "https://www.anthropic.com/news/improving-alignment-security-efforts": "2026-09-01T12:07:21.810485",
+    "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards": "2026-09-27T12:05:14.092935",
     "https://www.anthropic.com/news/life-sciences-verification-program": "2026-09-20T12:05:02.833015",
     "https://www.anthropic.com/news/model-hardware-standard-research-preview": "2026-08-28T12:07:21.900041",
     "https://www.anthropic.com/news/position-open-weights-models": "2026-09-13T12:07:17.595222",
