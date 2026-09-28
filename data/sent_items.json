@@ -52,7 +52,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "7225cff402e9",
-      "last_seen_at": "2026-09-27T12:01:57.555668",
+      "last_seen_at": "2026-09-28T12:01:11.683819",
       "title": "Claude Code Overview",
       "updated_at": "2026-09-22T12:05:07.666618"
     },
@@ -179,7 +179,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "b7abc76533bf",
-      "last_seen_at": "2026-09-27T12:01:57.555668",
+      "last_seen_at": "2026-09-28T12:01:11.683819",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-09-23T12:06:19.094471"
     },
@@ -347,7 +347,7 @@
         "On Claude Opus 4.8, the minimum cacheable prompt length for prompt caching is 1,024 tokens, lower than on Claude Opus 4.7."
       ],
       "content_hash": "9513d9a28a63",
-      "last_seen_at": "2026-09-27T12:01:57.555668",
+      "last_seen_at": "2026-09-28T12:01:11.683819",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-09-26T12:05:49.135583"
     }
@@ -528,6 +528,13 @@
       "title": "SkillZip Pro: Execution-Aware Dynamic Compression of Progressively Loaded Skills for Self-Evolving Agents",
       "url": "http://arxiv.org/abs/2608.30785v1"
     },
+    "353cc1508e067a06efddac6008df772cea04ebb3": {
+      "kind": "Blog",
+      "sent_at": "2026-09-28T12:04:24.726383",
+      "source": "Simon Willison",
+      "title": "Quoting Muse AI Agent",
+      "url": "https://simonwillison.net/2026/Sep/28/muse-ai-agent/"
+    },
     "36bda5d0f293bdcc415b502d1c22a45807fee8a6": {
       "kind": "Paper",
       "sent_at": "2026-08-14T12:05:20.144897",
@@ -562,6 +569,13 @@
       "source": "HuggingFace",
       "title": "How Much Memory Does Your Agent Actually Need?",
       "url": "https://huggingface.co/blog/ibm-research/altk-evolve-hmm"
+    },
+    "3baf7a1c898a0f0ffc41d0f5d5945a800154f702": {
+      "kind": "Blog",
+      "sent_at": "2026-09-28T12:04:24.726383",
+      "source": "HuggingFace",
+      "title": "Holo4: powering generalist computer-use agents",
+      "url": "https://huggingface.co/blog/Hcompany/holo4"
     },
     "3d98965b71ed77b0601190a63f1ec7a0f541caac": {
       "kind": "Paper",
@@ -1449,6 +1463,7 @@
     "https://blog.cloudflare.com/certificate-transparency-monitoring-ga/": "2026-08-14T12:05:20.145013",
     "https://blog.cloudflare.com/client-side-security-finds-4-malicious-campaigns/": "2026-09-17T12:13:02.409327",
     "https://blog.cloudflare.com/cloudflare-blog-uses-emdash/": "2026-08-25T12:05:53.813101",
+    "https://blog.cloudflare.com/cloudflares-2026-annual-founders-letter/": "2026-09-28T12:04:24.726468",
     "https://blog.cloudflare.com/containers-cross-tenant-vulnerability/": "2026-09-25T12:05:19.070930",
     "https://blog.cloudflare.com/dns-cache-memory-optimization-1111/": "2026-08-28T12:07:21.900041",
     "https://blog.cloudflare.com/introducing-adaptive-intelligence/": "2026-09-01T12:07:21.810485",
