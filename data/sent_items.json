@@ -52,7 +52,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "7225cff402e9",
-      "last_seen_at": "2026-10-01T12:02:10.640637",
+      "last_seen_at": "2026-10-02T12:03:08.497285",
       "title": "Claude Code Overview",
       "updated_at": "2026-09-22T12:05:07.666618"
     },
@@ -179,7 +179,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "b7abc76533bf",
-      "last_seen_at": "2026-10-01T12:02:10.640637",
+      "last_seen_at": "2026-10-02T12:03:08.497285",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-09-23T12:06:19.094471"
     },
@@ -347,19 +347,12 @@
         "Claude Managed Agents webhooks , multiagent orchestration , and self-hosted sandboxes are now available on Claude Platform on AWS . See IAM actions for Claude Platform on AWS for the new IAM actions and the AnthropicSelfHostedEnvironmentAccess managed policy."
       ],
       "content_hash": "8e3a8382af4d",
-      "last_seen_at": "2026-10-01T12:06:07.828924",
+      "last_seen_at": "2026-10-02T12:03:08.497285",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-10-01T12:06:07.828924"
     }
   },
   "sent": {
-    "049e6700d3d298f24314543f24d96fe933dc500a": {
-      "kind": "Paper",
-      "sent_at": "2026-08-18T12:05:26.170179",
-      "source": "arXiv",
-      "title": "Executable Code Knowledge: Code as a Native, Validation-Carrying Knowledge Representation for AI Coding Agents",
-      "url": "http://arxiv.org/abs/2608.16295v1"
-    },
     "04ec494665784ce99f517106431ac81f375ca793": {
       "kind": "Blog",
       "sent_at": "2026-09-23T12:06:19.094471",
@@ -381,13 +374,6 @@
       "title": "Evolving our calendar assistant Reclaim to be AI-native without starting over",
       "url": "https://dropbox.tech/machine-learning/evolving-calendar-assistant-reclaim-to-be-ai-native"
     },
-    "0eefbac2fe415527b2a254a809361ceca05a2e5d": {
-      "kind": "Blog",
-      "sent_at": "2026-08-18T12:05:26.170179",
-      "source": "Hacker News",
-      "title": "AI-Generated GitHub Copilot \u201cAutofix\u201d Allowed Compromise of Snowflake's Jira",
-      "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug"
-    },
     "11096b759ce8c8a30d2166f6c11aba6a62b75516": {
       "kind": "Paper",
       "sent_at": "2026-08-22T12:05:37.902560",
@@ -408,13 +394,6 @@
       "source": "arXiv",
       "title": "Paritok-4B: Intent-Conditioned Context Compression for Coding Agents",
       "url": "http://arxiv.org/abs/2608.24188v1"
-    },
-    "16ca573e9f50b2d03bdf5f3544b8288e31120a24": {
-      "kind": "Blog",
-      "sent_at": "2026-08-18T12:05:26.170179",
-      "source": "AWS Architecture Blog",
-      "title": "Consistency is the new latency: AI at the data layer",
-      "url": "https://aws.amazon.com/blogs/architecture/consistency-is-the-new-latency-ai-at-the-data-layer/"
     },
     "17c2e5cbd953e424223d219b43d48517c533a9b5": {
       "kind": "Paper",
@@ -472,6 +451,13 @@
       "title": "Inside Vera, DoorDash\u2019s Data Agent",
       "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1PZXM5Y3hsaDhiYW13OXd1SGU4ekRRTnZhdmRRQ2NteFZ2X0JqVmw2U09LbzZrOU8xV2pzUVduMHFqak1MV3NXdTFva1g5R2VOc0NYYUpIaTA5ZEpaRjAyMU5KZkpDd2JKLURkM3RBSG1DWVZzekt3?oc=5"
     },
+    "22586d3388d81382fe0e52f3b3243d1affc871a4": {
+      "kind": "Blog",
+      "sent_at": "2026-10-02T12:07:26.758217",
+      "source": "HuggingFace",
+      "title": "AutoSynthData: Generating Training Data for Enterprise Agents",
+      "url": "https://huggingface.co/blog/ServiceNow-AI/autosynthdata"
+    },
     "27629458812a4274a36263be0cdc92dc4de20a3b": {
       "kind": "Blog",
       "sent_at": "2026-09-04T12:07:47.114559",
@@ -506,6 +492,13 @@
       "source": "Booking.com Engineering",
       "title": "Beyond the Dashboard: Accelerating Real-Time Intelligence in the Age of AI",
       "url": "https://medium.com/booking-com-development/beyond-the-dashboard-accelerating-real-time-intelligence-in-the-age-of-ai-6f1f0f9c123f?source=rss----1c36c35f9c76---4"
+    },
+    "2d3779b5f12457a0d7496bdf9b71f6299e648394": {
+      "kind": "Blog",
+      "sent_at": "2026-10-02T12:07:26.758217",
+      "source": "Neon Blog",
+      "title": "Announcing @neon/effect",
+      "url": "https://neon.com/blog/announcing-neon-effect"
     },
     "2fcf5a446e51d0308a67a297be40744969f31a5c": {
       "kind": "Paper",
@@ -885,13 +878,6 @@
       "title": "Jev-Mobile: Jev as an Executor for Mobile GUI Agents",
       "url": "http://arxiv.org/abs/2609.30186v1"
     },
-    "71c5781a8cbdd261c249d609fa9b56fca90dff65": {
-      "kind": "Blog",
-      "sent_at": "2026-08-18T12:05:26.170179",
-      "source": "Neon Blog",
-      "title": "LLMs belong in your backend",
-      "url": "https://neon.com/blog/llms-belong-in-your-backend"
-    },
     "7220f730119fec32eb62e0b7163a866f57836370": {
       "kind": "Blog",
       "sent_at": "2026-09-01T12:07:21.810335",
@@ -1228,6 +1214,13 @@
       "title": "DeepSeek Elastic Compute (DSec)",
       "url": "https://arxiv.org/abs/2609.22978"
     },
+    "bc2e768adaadeff772a71574fb24c9dbad599514": {
+      "kind": "Blog",
+      "sent_at": "2026-10-02T12:07:26.758217",
+      "source": "Hacker News",
+      "title": "DeepSeek Harness Desktop for macOS and Windows",
+      "url": "https://www.deepseek.com/en/harness/"
+    },
     "bc384e8280d7b02dbfdaa971bf6d9925f2b63aa0": {
       "kind": "Blog",
       "sent_at": "2026-09-29T12:05:14.873017",
@@ -1255,6 +1248,13 @@
       "source": "arXiv",
       "title": "FaulT-Bench: Towards Benchmarking Network Troubleshooting LLM Agents under Unreliable User Tickets",
       "url": "http://arxiv.org/abs/2608.27021v1"
+    },
+    "c0f733a8ab7123886692872609c2d3bf761b7bec": {
+      "kind": "Paper",
+      "sent_at": "2026-10-02T12:07:26.758217",
+      "source": "arXiv",
+      "title": "AutoCompact: Learning When to Compact Context in Long-Horizon Coding Agents",
+      "url": "http://arxiv.org/abs/2610.02163v1"
     },
     "c6903e2dfd4bf43ab962c667f7418c8f430c8c55": {
       "kind": "Blog",
@@ -1290,6 +1290,13 @@
       "source": "Pinterest Engineering",
       "title": "Evolving Pinterest\u2019s Embedding Retrieval Platform",
       "url": "https://medium.com/pinterest-engineering/evolving-pinterests-embedding-retrieval-platform-aede4e831e01?source=rss----4c5a5f6279b6---4"
+    },
+    "cf4e2bb79e911078216a549bc7d9e2f072daf818": {
+      "kind": "Blog",
+      "sent_at": "2026-10-02T12:07:26.758217",
+      "source": "Neon Blog",
+      "title": "pg_redact: Content-aware PII redaction with Jev, enforced in Postgres",
+      "url": "https://neon.com/blog/pg-redact-content-aware-pii-redaction-with-jev-enforced-in-postgres"
     },
     "cf77b45aa789d9ea494c5e6d166b8096551ba321": {
       "kind": "Blog",
@@ -1424,13 +1431,6 @@
       "title": "An Empirical Study of Harness Design for Coding Agents",
       "url": "http://arxiv.org/abs/2609.20804v1"
     },
-    "ea55a8c68624f9e0653b8978691f25850d81d73e": {
-      "kind": "Blog",
-      "sent_at": "2026-08-18T12:05:26.170179",
-      "source": "MIT Tech Review",
-      "title": "We still don\u2019t know how people are really using AI",
-      "url": "https://www.technologyreview.com/2026/08/18/1142226/how-people-use-ai/"
-    },
     "eb4614a57d646002e865081f9b45bf1f126280fa": {
       "kind": "Paper",
       "sent_at": "2026-09-11T12:08:35.817868",
@@ -1513,6 +1513,7 @@
     "https://blog.cloudflare.com/botbase-for-operators/": "2026-08-29T12:07:07.220267",
     "https://blog.cloudflare.com/cache-transcoding/": "2026-09-02T12:07:46.364695",
     "https://blog.cloudflare.com/casb-policies/": "2026-09-12T12:07:44.504914",
+    "https://blog.cloudflare.com/clef-decision-models/": "2026-10-02T12:07:26.758352",
     "https://blog.cloudflare.com/client-side-security-finds-4-malicious-campaigns/": "2026-09-17T12:13:02.409327",
     "https://blog.cloudflare.com/cloudflare-blog-uses-emdash/": "2026-08-25T12:05:53.813101",
     "https://blog.cloudflare.com/cloudflare-certificate-authority/": "2026-09-30T12:05:59.362753",
@@ -1528,6 +1529,7 @@
     "https://blog.cloudflare.com/revisiting-spectre-attacks-on-workers/": "2026-08-20T12:05:09.139167",
     "https://blog.cloudflare.com/rfc9234-bgp-role-model/": "2026-08-19T12:05:01.971172",
     "https://blog.cloudflare.com/saving-100-tb-of-ram-with-math/": "2026-09-19T12:06:29.356704",
+    "https://blog.cloudflare.com/sovereign-ai-choice-one-year-later/": "2026-10-02T12:07:26.758352",
     "https://blog.cloudflare.com/task-based-oauth-consent/": "2026-08-21T12:05:15.075760",
     "https://blog.cloudflare.com/turnstile-spin/": "2026-09-26T12:05:49.135682",
     "https://blog.cloudflare.com/vary-support/": "2026-09-23T12:06:19.094636",
@@ -1535,6 +1537,7 @@
     "https://blog.cloudflare.com/vulnerability-discovery-remediation/": "2026-09-04T12:07:47.114718",
     "https://blog.cloudflare.com/worker-previews/": "2026-09-23T12:06:19.094636",
     "https://blog.cloudflare.com/workers-granular-authorization/": "2026-09-16T12:09:07.980580",
+    "https://blog.cloudflare.com/workers-kv-instant/": "2026-10-02T12:07:26.758352",
     "https://blog.cloudflare.com/workers-module-registry-nodejs/": "2026-09-10T12:08:06.867270",
     "https://claude.com/blog/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic": "2026-09-15T12:07:57.999528",
     "https://claude.com/blog/agents-you-can-coach-how-asana-builds-human-agent-teams-with-claude": "2026-09-30T12:05:59.362753",
@@ -1547,6 +1550,7 @@
     "https://claude.com/blog/building-an-ai-native-revenue-organization": "2026-09-16T12:09:07.980580",
     "https://claude.com/blog/claude-code-desktop-redesign": "2026-09-11T12:08:35.817997",
     "https://claude.com/blog/claude-code-guide-for-startups": "2026-08-21T12:05:15.075760",
+    "https://claude.com/blog/claude-code-mods": "2026-10-02T12:07:26.758352",
     "https://claude.com/blog/claude-for-commerce-agents": "2026-09-03T12:07:26.434398",
     "https://claude.com/blog/claude-for-financial-advisors": "2026-09-15T12:07:57.999528",
     "https://claude.com/blog/claude-for-foundation-models": "2026-09-10T12:08:06.867270",
@@ -1566,7 +1570,6 @@
     "https://claude.com/blog/cowork-is-now-claude": "2026-09-17T12:13:02.409327",
     "https://claude.com/blog/deploying-ai-from-pilot-to-production": "2026-09-17T12:13:02.409327",
     "https://claude.com/blog/giving-companies-more-control-over-their-ai-agents-with-nvidia": "2026-09-29T12:05:14.873169",
-    "https://claude.com/blog/how-abc-legal-turned-every-employee-into-a-builder-with-claude-managed-agents": "2026-08-18T12:05:26.170377",
     "https://claude.com/blog/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep": "2026-08-25T12:05:53.813101",
     "https://claude.com/blog/how-anthropic-employees-use-claude-tag": "2026-08-29T12:07:07.220267",
     "https://claude.com/blog/how-anthropics-sales-team-rebuilt-inbound-with-claude-managed-agents": "2026-10-01T12:06:07.829111",
@@ -1590,6 +1593,7 @@
     "https://claude.com/blog/working-at-the-frontier-how-balyasny-asset-management-evaluates-and-governs-claude-fable-5": "2026-09-18T12:06:23.572212",
     "https://openai.com/index/advisory-group-on-mathematics-and-ai": "2026-09-22T12:05:07.666789",
     "https://openai.com/index/ai-policy-window": "2026-09-10T12:08:06.867270",
+    "https://openai.com/index/albertsons-reimagining-retail": "2026-10-02T12:07:26.758352",
     "https://openai.com/index/an-alien-mind": "2026-09-07T12:08:41.637282",
     "https://openai.com/index/atv-big-air-tour": "2026-09-03T12:07:26.434398",
     "https://openai.com/index/australian-youth-safety-blueprint": "2026-09-19T12:06:29.356704",
@@ -1597,7 +1601,6 @@
     "https://openai.com/index/building-standards-next-phase-ai": "2026-09-22T12:05:07.666789",
     "https://openai.com/index/chatgpt-ads-expands-across-europe": "2026-08-19T12:05:01.971172",
     "https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources": "2026-09-02T12:07:46.364695",
-    "https://openai.com/index/chatgpt-for-teens": "2026-08-18T12:05:26.170377",
     "https://openai.com/index/cooley-gopublic": "2026-09-18T12:06:23.572212",
     "https://openai.com/index/daybreak-for-frontline-defenders": "2026-09-04T12:07:47.114718",
     "https://openai.com/index/devday-2026-recap": "2026-09-30T12:05:59.362753",
@@ -1623,7 +1626,6 @@
     "https://openai.com/index/navier-stokes-solution": "2026-09-09T12:07:47.103026",
     "https://openai.com/index/offering-zero-data-retention-for-frontier-models": "2026-08-20T12:05:09.139167",
     "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense": "2026-09-24T12:06:34.844018",
-    "https://openai.com/index/openai-joins-ports-pike-project": "2026-08-18T12:05:26.170377",
     "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex": "2026-08-29T12:07:07.220267",
     "https://openai.com/index/pacing-model-development-cyber-capabilities": "2026-08-19T12:05:01.971172",
     "https://openai.com/index/path-to-astra": "2026-09-02T12:07:46.364695",
@@ -1637,7 +1639,7 @@
     "https://openai.com/index/strengthening-democratic-oversight-in-national-security": "2026-08-19T12:05:01.971172",
     "https://openai.com/index/supporting-california-bill-advance-ai-youth-safety": "2026-09-01T12:07:21.810485",
     "https://openai.com/index/supporting-independent-journalism-in-ukraine": "2026-09-07T12:08:41.637282",
-    "https://openai.com/index/the-defenders-window": "2026-08-18T12:05:26.170377",
+    "https://openai.com/index/the-eternal-complement": "2026-10-02T12:07:26.758352",
     "https://openai.com/index/the-full-stack-behind-abundant-intelligence": "2026-08-26T12:07:42.286813",
     "https://openai.com/index/the-work-now-within-reach": "2026-09-09T12:07:47.103026",
     "https://openai.com/index/towards-safety-cases-for-frontier-ai-training": "2026-09-29T12:05:14.873169",
