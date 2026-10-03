@@ -52,7 +52,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "7225cff402e9",
-      "last_seen_at": "2026-10-02T12:03:08.497285",
+      "last_seen_at": "2026-10-03T12:03:35.378039",
       "title": "Claude Code Overview",
       "updated_at": "2026-09-22T12:05:07.666618"
     },
@@ -179,7 +179,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "b7abc76533bf",
-      "last_seen_at": "2026-10-02T12:03:08.497285",
+      "last_seen_at": "2026-10-03T12:03:35.378039",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-09-23T12:06:19.094471"
     },
@@ -250,7 +250,7 @@
         "Agent Skills and the Skills API ( /v1/skills ) are out of beta on the Claude API. Requests no longer require the skills-2025-10-02 beta header, including Messages API requests that load Skills through the container parameter. Requests that still send the header continue to work unchanged. See Using Agent Skills with the API . To move an existing integration off the header, see Migrate from skills-2025-10-02 .",
         "The Admin API user-management endpoints for Claude Enterprise (claude.ai) organizations (members, invites, groups, and custom roles) are out of beta. The anthropic-beta: ce-user-management-2026-07-13 header is no longer required on group and custom-role requests; requests that still send it are accepted unchanged. See User management .",
         "You can now restrict which sites a Claude Managed Agents agent's web_search and web_fetch tools can reach. Set allowed_domains or blocked_domains on the tool's entry in the agent_toolset_20260401 configs array; web_fetch also accepts max_content_tokens and web_search accepts user_location . Each configs entry is identified by its name and typed by an optional type , and requests that pass only name , enabled , and permission_policy continue to work; in the typed SDKs, configs entries become per-tool types. See Restrict web search and web fetch domains .",
-        "Claude Managed Agents sessions that run in a self-hosted sandbox can now attach memory stores . The Python, TypeScript, and Go SDK workers download each attached store into the sandbox at its mount_path and sync the agent's changes back to the store. See Use memory stores .",
+        "Claude Managed Agents sessions that run in a self-hosted sandbox can now attach memory stores . The Python, TypeScript, and Go SDK workers download each attached store into the sandbox at its mount_path and sync the agent's changes back to the store. See Memory stores in self-hosted sandboxes .",
         "The session viewer in the Claude Console has been redesigned with a timeline minimap, a transcript grouped by model request, and an Inspector panel for session details and cost, raw events, per-tool statistics, mounted resources, and per-thread activity. See Console observability .",
         "August 18, 2026 \ue09a",
         "Workbench is now playground in the Claude Console. Playground supports every Messages API parameter and includes templates that demonstrate API features such as code execution and web search. It shows the full SDK request and the API response for each run, to help you understand the API and build with it. For more, see the Claude Help Center or try it at platform.claude.com/playground .",
@@ -346,10 +346,10 @@
         "May 29, 2026 \ue09a",
         "Claude Managed Agents webhooks , multiagent orchestration , and self-hosted sandboxes are now available on Claude Platform on AWS . See IAM actions for Claude Platform on AWS for the new IAM actions and the AnthropicSelfHostedEnvironmentAccess managed policy."
       ],
-      "content_hash": "8e3a8382af4d",
-      "last_seen_at": "2026-10-02T12:03:08.497285",
+      "content_hash": "5741388dfb11",
+      "last_seen_at": "2026-10-03T12:07:30.150012",
       "title": "Anthropic Release Notes",
-      "updated_at": "2026-10-01T12:06:07.828924"
+      "updated_at": "2026-10-03T12:07:30.150012"
     }
   },
   "sent": {
@@ -415,6 +415,13 @@
       "source": "arXiv",
       "title": "RAFT: A Stateful Retrieval-Augmented Framework for Troubleshooting Agents",
       "url": "http://arxiv.org/abs/2609.20754v1"
+    },
+    "1c08347f378f18ea4407ad4fea6824a192da57ed": {
+      "kind": "Blog",
+      "sent_at": "2026-10-03T12:07:30.150012",
+      "source": "Anthropic Docs",
+      "title": "Anthropic Release Notes",
+      "url": "https://docs.anthropic.com/en/release-notes/overview"
     },
     "1c1c87992054669d91193023e96d2ba69ae12d09": {
       "kind": "Blog",
@@ -514,6 +521,13 @@
       "title": "ComponentBench: Diagnosing Component-Level Failures in Computer-Use Agents",
       "url": "http://arxiv.org/abs/2608.18307v1"
     },
+    "3048d86371626f9750e74729a36df8aee3ff7eb2": {
+      "kind": "Blog",
+      "sent_at": "2026-10-03T12:07:30.150012",
+      "source": "Supabase Blog",
+      "title": "Scale without limits: Multigres, OrioleDB, and dbarena",
+      "url": "https://supabase.com/blog/select-2026-scale-without-limits"
+    },
     "32c3b4ab7f727a916e69ef14d82f48a31629bb95": {
       "kind": "Blog",
       "sent_at": "2026-09-07T12:08:41.637193",
@@ -548,13 +562,6 @@
       "source": "Hacker News",
       "title": "Claude Code reads AGENTS.md only when telemetry is on [fixed]",
       "url": "https://blog.szypowi.cz/p/claude-code-reads-agents.md-only-when-telemetry-is-on/"
-    },
-    "38d0dd98efa686223b89a7123a5e0cf8cf5d1f63": {
-      "kind": "Blog",
-      "sent_at": "2026-08-19T12:05:01.971052",
-      "source": "HuggingFace",
-      "title": "How Much Memory Does Your Agent Actually Need?",
-      "url": "https://huggingface.co/blog/ibm-research/altk-evolve-hmm"
     },
     "3baf7a1c898a0f0ffc41d0f5d5945a800154f702": {
       "kind": "Blog",
@@ -625,6 +632,13 @@
       "source": "arXiv",
       "title": "EVOMAL: Self-Poisoning in Self-Evolving Coding Agents",
       "url": "http://arxiv.org/abs/2608.25776v1"
+    },
+    "44e1e6cccf323e33fe26f82ac00919f56b7e0c9c": {
+      "kind": "Blog",
+      "sent_at": "2026-10-03T12:07:30.150012",
+      "source": "Neon Blog",
+      "title": "Generate embeddings with Neon AI Gateway",
+      "url": "https://neon.com/blog/generate-embeddings-with-neon-ai-gateway"
     },
     "465828d82f04d8bd6338fdf985304465b92ca59c": {
       "kind": "Blog",
@@ -731,13 +745,6 @@
       "title": "Closing the AI agent trust gap with graduated autonomy",
       "url": "https://aws.amazon.com/blogs/architecture/closing-the-ai-agent-trust-gap-with-graduated-autonomy/"
     },
-    "59576b5bb4459283f32fcfdb3565196600f49665": {
-      "kind": "Blog",
-      "sent_at": "2026-08-19T12:05:01.971052",
-      "source": "Neon Blog",
-      "title": "Query Neon backend logs",
-      "url": "https://neon.com/blog/query-neon-backend-logs"
-    },
     "5975f6bd29c7d2245aca5231af2a0ee47db040c4": {
       "kind": "Blog",
       "sent_at": "2026-09-01T12:07:21.810335",
@@ -815,6 +822,13 @@
       "title": "You said no MCP",
       "url": "https://earendil.com/posts/you-said-no-mcp/"
     },
+    "650f3677c97280f08cd6b847c68e64f626fddf1f": {
+      "kind": "Blog",
+      "sent_at": "2026-10-03T12:07:30.150012",
+      "source": "Supabase Blog",
+      "title": "Supabase is acquiring Turso",
+      "url": "https://supabase.com/blog/supabase-is-acquiring-turso"
+    },
     "659601936eb28699a1e3503050d710943f8c3413": {
       "kind": "Blog",
       "sent_at": "2026-08-23T12:05:31.586248",
@@ -857,6 +871,13 @@
       "title": "Claude Code Tutorials",
       "url": "https://docs.anthropic.com/en/docs/claude-code/tutorials"
     },
+    "6e3b629c34928d6ec6c8a6bcf37d76bdbcd08e30": {
+      "kind": "Paper",
+      "sent_at": "2026-10-03T12:07:30.150012",
+      "source": "arXiv",
+      "title": "Continuous Process-Level Evaluation for Evolving Enterprise AI Agent Skills",
+      "url": "http://arxiv.org/abs/2610.01833v1"
+    },
     "6f6819aea27532df503eb74e6e2876b0bb06d410": {
       "kind": "Paper",
       "sent_at": "2026-09-05T12:06:59.205553",
@@ -877,6 +898,13 @@
       "source": "arXiv",
       "title": "Jev-Mobile: Jev as an Executor for Mobile GUI Agents",
       "url": "http://arxiv.org/abs/2609.30186v1"
+    },
+    "709e9a493f86896b8c8d58c118a9b3a12b6681cc": {
+      "kind": "Blog",
+      "sent_at": "2026-10-03T12:07:30.150012",
+      "source": "Supabase Blog",
+      "title": "Operate with confidence",
+      "url": "https://supabase.com/blog/select-2026-operate-with-confidence"
     },
     "7220f730119fec32eb62e0b7163a866f57836370": {
       "kind": "Blog",
@@ -1032,6 +1060,13 @@
       "title": "SkillAlchemy: Open-World Agent Skill Creation",
       "url": "http://arxiv.org/abs/2608.23417v1"
     },
+    "904a67322ad13c6cd1d7da5bb436a600e3bd29c6": {
+      "kind": "Blog",
+      "sent_at": "2026-10-03T12:07:30.150012",
+      "source": "Neon Blog",
+      "title": "Neon gives you 100 projects for free, with 1 GB of Postgres storage each",
+      "url": "https://neon.com/blog/neon-free-plan-1-gb-per-project"
+    },
     "90813ac31a936b15dfe67d09c57ea35b517176ac": {
       "kind": "Blog",
       "sent_at": "2026-09-15T12:07:57.999391",
@@ -1115,6 +1150,13 @@
       "source": "AWS Architecture Blog",
       "title": "MCP went stateless: Is your AWS MCP server deployment well-architected?",
       "url": "https://aws.amazon.com/blogs/architecture/mcp-went-stateless-is-your-aws-mcp-server-deployment-well-architected/"
+    },
+    "a57ec048731d0ac330c35af2b182432c1d93a1f6": {
+      "kind": "Blog",
+      "sent_at": "2026-10-03T12:07:30.150012",
+      "source": "Supabase Blog",
+      "title": "Build anything: Supabase from code, and an MCP server for your app",
+      "url": "https://supabase.com/blog/select-2026-build-anything"
     },
     "a8f2199eb4cba0ebddfdf39d574688862bb65aa2": {
       "kind": "Blog",
@@ -1523,13 +1565,15 @@
     "https://blog.cloudflare.com/dns-cache-memory-optimization-1111/": "2026-08-28T12:07:21.900041",
     "https://blog.cloudflare.com/how-fast-is-the-web/": "2026-09-29T12:05:14.873169",
     "https://blog.cloudflare.com/introducing-adaptive-intelligence/": "2026-09-01T12:07:21.810485",
+    "https://blog.cloudflare.com/introducing-web-search-api/": "2026-10-03T12:07:30.150185",
+    "https://blog.cloudflare.com/one-observability-platform/": "2026-10-03T12:07:30.150185",
     "https://blog.cloudflare.com/post-quantum-dnssec-1111/": "2026-09-11T12:08:35.817997",
     "https://blog.cloudflare.com/python-workers-ga/": "2026-09-22T12:05:07.666789",
     "https://blog.cloudflare.com/real-time-issue-detection/": "2026-10-01T12:06:07.829111",
     "https://blog.cloudflare.com/revisiting-spectre-attacks-on-workers/": "2026-08-20T12:05:09.139167",
-    "https://blog.cloudflare.com/rfc9234-bgp-role-model/": "2026-08-19T12:05:01.971172",
     "https://blog.cloudflare.com/saving-100-tb-of-ram-with-math/": "2026-09-19T12:06:29.356704",
     "https://blog.cloudflare.com/sovereign-ai-choice-one-year-later/": "2026-10-02T12:07:26.758352",
+    "https://blog.cloudflare.com/streamline/": "2026-10-03T12:07:30.150185",
     "https://blog.cloudflare.com/task-based-oauth-consent/": "2026-08-21T12:05:15.075760",
     "https://blog.cloudflare.com/turnstile-spin/": "2026-09-26T12:05:49.135682",
     "https://blog.cloudflare.com/vary-support/": "2026-09-23T12:06:19.094636",
@@ -1541,7 +1585,6 @@
     "https://blog.cloudflare.com/workers-module-registry-nodejs/": "2026-09-10T12:08:06.867270",
     "https://claude.com/blog/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic": "2026-09-15T12:07:57.999528",
     "https://claude.com/blog/agents-you-can-coach-how-asana-builds-human-agent-teams-with-claude": "2026-09-30T12:05:59.362753",
-    "https://claude.com/blog/ai-ci-cd-on-call": "2026-08-19T12:05:01.971172",
     "https://claude.com/blog/anthropics-approach-to-teaching-and-learning-ai": "2026-08-21T12:05:15.075760",
     "https://claude.com/blog/artifacts-in-claude-code": "2026-09-19T12:06:29.356704",
     "https://claude.com/blog/bain-company-joins-the-claude-partner-network-as-a-global-premier-partner": "2026-08-26T12:07:42.286813",
@@ -1586,7 +1629,6 @@
     "https://claude.com/blog/t-rowe-price-brings-more-of-claude-to-its-investment-process": "2026-09-12T12:07:44.504914",
     "https://claude.com/blog/the-ai-native-sdlc-playbook": "2026-08-22T12:05:37.902741",
     "https://claude.com/blog/the-anatomy-of-effective-commerce-agents": "2026-09-03T12:07:26.434398",
-    "https://claude.com/blog/the-claude-science-product-guide": "2026-08-19T12:05:01.971172",
     "https://claude.com/blog/turning-conversation-into-knowledge-how-slack-builds-human-agent-teams": "2026-08-20T12:05:09.139167",
     "https://claude.com/blog/what-1-000-small-business-owners-taught-us-about-ai": "2026-09-12T12:07:44.504914",
     "https://claude.com/blog/what-a-task-costs-on-opus-5-5": "2026-09-23T12:06:19.094636",
@@ -1599,7 +1641,6 @@
     "https://openai.com/index/australian-youth-safety-blueprint": "2026-09-19T12:06:29.356704",
     "https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts": "2026-08-27T12:09:26.449619",
     "https://openai.com/index/building-standards-next-phase-ai": "2026-09-22T12:05:07.666789",
-    "https://openai.com/index/chatgpt-ads-expands-across-europe": "2026-08-19T12:05:01.971172",
     "https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources": "2026-09-02T12:07:46.364695",
     "https://openai.com/index/cooley-gopublic": "2026-09-18T12:06:23.572212",
     "https://openai.com/index/daybreak-for-frontline-defenders": "2026-09-04T12:07:47.114718",
@@ -1627,16 +1668,15 @@
     "https://openai.com/index/offering-zero-data-retention-for-frontier-models": "2026-08-20T12:05:09.139167",
     "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense": "2026-09-24T12:06:34.844018",
     "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex": "2026-08-29T12:07:07.220267",
-    "https://openai.com/index/pacing-model-development-cyber-capabilities": "2026-08-19T12:05:01.971172",
     "https://openai.com/index/path-to-astra": "2026-09-02T12:07:46.364695",
     "https://openai.com/index/paul-christiano-joins-openai-foundation-board": "2026-09-10T12:08:06.867270",
     "https://openai.com/index/playco-game-prototyping-with-astra": "2026-09-04T12:07:47.114718",
+    "https://openai.com/index/practical-guide-building-gpt-6": "2026-10-03T12:07:30.150185",
     "https://openai.com/index/proaction": "2026-09-26T12:05:49.135682",
     "https://openai.com/index/put-data-to-work": "2026-09-11T12:08:35.817997",
     "https://openai.com/index/reimagining-advertising-with-ai": "2026-09-17T12:13:02.409327",
     "https://openai.com/index/replit": "2026-08-20T12:05:09.139167",
     "https://openai.com/index/sam-altman-un-security-council-remarks": "2026-09-24T12:06:34.844018",
-    "https://openai.com/index/strengthening-democratic-oversight-in-national-security": "2026-08-19T12:05:01.971172",
     "https://openai.com/index/supporting-california-bill-advance-ai-youth-safety": "2026-09-01T12:07:21.810485",
     "https://openai.com/index/supporting-independent-journalism-in-ukraine": "2026-09-07T12:08:41.637282",
     "https://openai.com/index/the-eternal-complement": "2026-10-02T12:07:26.758352",
@@ -1648,6 +1688,7 @@
     "https://www.anthropic.com/news/accenture-embedded-evaluation": "2026-09-20T12:05:02.833015",
     "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy": "2026-09-27T12:05:14.092935",
     "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system": "2026-09-27T12:05:14.092935",
+    "https://www.anthropic.com/news/claude-frontier-academy": "2026-10-03T12:07:30.150185",
     "https://www.anthropic.com/news/claude-opus-5": "2026-09-13T12:07:17.595222",
     "https://www.anthropic.com/news/enterprise-frontier-safeguards": "2026-09-02T12:07:46.364695",
     "https://www.anthropic.com/news/expanding-support-for-scientists": "2026-08-28T12:07:21.900041",
