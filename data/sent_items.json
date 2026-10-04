@@ -52,7 +52,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "7225cff402e9",
-      "last_seen_at": "2026-10-03T12:03:35.378039",
+      "last_seen_at": "2026-10-04T12:02:24.270347",
       "title": "Claude Code Overview",
       "updated_at": "2026-09-22T12:05:07.666618"
     },
@@ -179,7 +179,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "b7abc76533bf",
-      "last_seen_at": "2026-10-03T12:03:35.378039",
+      "last_seen_at": "2026-10-04T12:02:24.270347",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-09-23T12:06:19.094471"
     },
@@ -347,7 +347,7 @@
         "Claude Managed Agents webhooks , multiagent orchestration , and self-hosted sandboxes are now available on Claude Platform on AWS . See IAM actions for Claude Platform on AWS for the new IAM actions and the AnthropicSelfHostedEnvironmentAccess managed policy."
       ],
       "content_hash": "5741388dfb11",
-      "last_seen_at": "2026-10-03T12:07:30.150012",
+      "last_seen_at": "2026-10-04T12:02:24.270347",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-10-03T12:07:30.150012"
     }
@@ -486,13 +486,6 @@
       "title": "DeepSeek launching v4.1 flash cheaper and more capable than v4 pro",
       "url": "https://news.ycombinator.com/item?id=49624603"
     },
-    "2929a0a48a55c2a924d4c762101bd59574a039ec": {
-      "kind": "Blog",
-      "sent_at": "2026-08-20T12:05:09.139017",
-      "source": "Martin Fowler",
-      "title": "Citizens Build, Agents Execute, Experts Govern",
-      "url": "https://martinfowler.com/rachels-ramblings/citizens-agents-experts.html"
-    },
     "2acc979b3c884993fd34803ae662bd5c5bb54999": {
       "kind": "Blog",
       "sent_at": "2026-08-27T12:09:26.449490",
@@ -507,19 +500,19 @@
       "title": "Announcing @neon/effect",
       "url": "https://neon.com/blog/announcing-neon-effect"
     },
+    "2e905802dbc570c3a9d6c1f9aee7d0365f12169d": {
+      "kind": "Blog",
+      "sent_at": "2026-10-04T12:05:40.601446",
+      "source": "Hacker News",
+      "title": "Getting the most out of Opus 5.5 in Claude and Claude Code",
+      "url": "https://claude.dev/blog/getting-the-most-out-of-opus-5-5/"
+    },
     "2fcf5a446e51d0308a67a297be40744969f31a5c": {
       "kind": "Paper",
       "sent_at": "2026-09-25T12:05:19.070788",
       "source": "arXiv",
       "title": "LLM Agents Can Easily Tamper With Their Own Traces",
       "url": "http://arxiv.org/abs/2609.30266v1"
-    },
-    "30016bda0a834dc2b9cce27aefecbfca58028925": {
-      "kind": "Paper",
-      "sent_at": "2026-08-20T12:05:09.139017",
-      "source": "arXiv",
-      "title": "ComponentBench: Diagnosing Component-Level Failures in Computer-Use Agents",
-      "url": "http://arxiv.org/abs/2608.18307v1"
     },
     "3048d86371626f9750e74729a36df8aee3ff7eb2": {
       "kind": "Blog",
@@ -696,13 +689,6 @@
       "title": "Anthropic Release Notes",
       "url": "https://docs.anthropic.com/en/release-notes/overview"
     },
-    "4f8b5b2dd3ba7545c39090c853aa5751ac2534d7": {
-      "kind": "Blog",
-      "sent_at": "2026-08-20T12:05:09.139017",
-      "source": "Simon Willison",
-      "title": "smolmachines / smolvm as a sandbox for untrusted Python & JavaScript",
-      "url": "https://simonwillison.net/2026/Aug/19/smolmachines-untrusted-sandbox/"
-    },
     "524d79138d3e53cc6365131a1b2550496dac00be": {
       "kind": "Blog",
       "sent_at": "2026-09-12T12:07:44.504781",
@@ -723,13 +709,6 @@
       "source": "Instacart Engineering",
       "title": "Agentic Machine Learning Modeling at Instacart",
       "url": "https://tech.instacart.com/agentic-machine-learning-modeling-at-instacart-fb3ecd295ee7?source=rss----587883b5d2ee---4"
-    },
-    "5533ed7f37adfd9da6989121d3c85e7367d840c2": {
-      "kind": "Blog",
-      "sent_at": "2026-08-20T12:05:09.139017",
-      "source": "Simon Willison",
-      "title": "Conceptual integrity and counting lines of code",
-      "url": "https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code/"
     },
     "5773d6ef3bef0f8d5a452fe036e03a5e35e3cf0f": {
       "kind": "Blog",
@@ -1025,6 +1004,13 @@
       "title": "Optimal Skill Selection for LLM Agents with Provable Bicriteria Guarantees",
       "url": "http://arxiv.org/abs/2608.19993v1"
     },
+    "84c11c83e20371a942c5ac09cf6ec103b3cdf97a": {
+      "kind": "Blog",
+      "sent_at": "2026-10-04T12:05:40.601446",
+      "source": "Simon Willison",
+      "title": "We're going to need default hard budget caps on pretty much everything",
+      "url": "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/"
+    },
     "87336ed8dc2a5d505e47fb0ab62ef9f6e16cc6e8": {
       "kind": "Paper",
       "sent_at": "2026-09-16T12:09:07.980449",
@@ -1192,6 +1178,13 @@
       "source": "arXiv",
       "title": "Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation",
       "url": "http://arxiv.org/abs/2609.20822v1"
+    },
+    "adc701f32dde5caf11dbbd8d4eba35fae7ec37a9": {
+      "kind": "Blog",
+      "sent_at": "2026-10-04T12:05:40.601446",
+      "source": "Hacker News",
+      "title": "Agents don't need memory, they need documentation",
+      "url": "https://liao.gg/blog/agents-dont-need-memory"
     },
     "b06e5d7ca683c88498d7a0db3421277a982eaf27": {
       "kind": "Blog",
@@ -1417,6 +1410,13 @@
       "title": "Anthropic Release Notes",
       "url": "https://docs.anthropic.com/en/release-notes/overview"
     },
+    "dafdb2cac5cf3b9167a51a0aa62f85f355a308e6": {
+      "kind": "Blog",
+      "sent_at": "2026-10-04T12:05:40.601446",
+      "source": "HuggingFace",
+      "title": "The Agent Said It Was Done. The Database Disagreed.",
+      "url": "https://huggingface.co/blog/microsoft/thinkingbox"
+    },
     "db86ceb0bb7bd4df885adce8a334776449501b2f": {
       "kind": "Paper",
       "sent_at": "2026-09-30T12:05:59.362606",
@@ -1437,13 +1437,6 @@
       "source": "Simon Willison",
       "title": "Quoting Matthew Green",
       "url": "https://simonwillison.net/2026/Oct/1/matthew-green/"
-    },
-    "e03b26a3358daf9da0343207f62ab25fbea38951": {
-      "kind": "Paper",
-      "sent_at": "2026-08-20T12:05:09.139017",
-      "source": "arXiv",
-      "title": "LEDGER: Claim-to-Evidence Trace Graphs for Auditing LLM Agents",
-      "url": "http://arxiv.org/abs/2608.18398v1"
     },
     "e351f333b6e1b45cf563aad81fcd162e24a0bb00": {
       "kind": "Blog",
@@ -1529,13 +1522,6 @@
       "title": "Autoscaling Lakebase Postgres",
       "url": "https://neon.com/blog/autoscaling-lakebase-postgres"
     },
-    "fc10e23380944a687673a435919c47ec90024b22": {
-      "kind": "Blog",
-      "sent_at": "2026-08-20T12:05:09.139017",
-      "source": "Hacker News",
-      "title": "PostgreSQL for Everything",
-      "url": "https://www.raphaelbauer.com:443/posts/postgresql-everything/"
-    },
     "fc9210fd3ec785442344294908c03cfec6333bd2": {
       "kind": "Blog",
       "sent_at": "2026-09-02T12:07:46.364496",
@@ -1570,7 +1556,6 @@
     "https://blog.cloudflare.com/post-quantum-dnssec-1111/": "2026-09-11T12:08:35.817997",
     "https://blog.cloudflare.com/python-workers-ga/": "2026-09-22T12:05:07.666789",
     "https://blog.cloudflare.com/real-time-issue-detection/": "2026-10-01T12:06:07.829111",
-    "https://blog.cloudflare.com/revisiting-spectre-attacks-on-workers/": "2026-08-20T12:05:09.139167",
     "https://blog.cloudflare.com/saving-100-tb-of-ram-with-math/": "2026-09-19T12:06:29.356704",
     "https://blog.cloudflare.com/sovereign-ai-choice-one-year-later/": "2026-10-02T12:07:26.758352",
     "https://blog.cloudflare.com/streamline/": "2026-10-03T12:07:30.150185",
@@ -1629,7 +1614,6 @@
     "https://claude.com/blog/t-rowe-price-brings-more-of-claude-to-its-investment-process": "2026-09-12T12:07:44.504914",
     "https://claude.com/blog/the-ai-native-sdlc-playbook": "2026-08-22T12:05:37.902741",
     "https://claude.com/blog/the-anatomy-of-effective-commerce-agents": "2026-09-03T12:07:26.434398",
-    "https://claude.com/blog/turning-conversation-into-knowledge-how-slack-builds-human-agent-teams": "2026-08-20T12:05:09.139167",
     "https://claude.com/blog/what-1-000-small-business-owners-taught-us-about-ai": "2026-09-12T12:07:44.504914",
     "https://claude.com/blog/what-a-task-costs-on-opus-5-5": "2026-09-23T12:06:19.094636",
     "https://claude.com/blog/working-at-the-frontier-how-balyasny-asset-management-evaluates-and-governs-claude-fable-5": "2026-09-18T12:06:23.572212",
@@ -1665,7 +1649,6 @@
     "https://openai.com/index/lenfest-ai-collaborative-expansion": "2026-09-29T12:05:14.873169",
     "https://openai.com/index/loveholidays": "2026-08-26T12:07:42.286813",
     "https://openai.com/index/navier-stokes-solution": "2026-09-09T12:07:47.103026",
-    "https://openai.com/index/offering-zero-data-retention-for-frontier-models": "2026-08-20T12:05:09.139167",
     "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense": "2026-09-24T12:06:34.844018",
     "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex": "2026-08-29T12:07:07.220267",
     "https://openai.com/index/path-to-astra": "2026-09-02T12:07:46.364695",
@@ -1675,7 +1658,6 @@
     "https://openai.com/index/proaction": "2026-09-26T12:05:49.135682",
     "https://openai.com/index/put-data-to-work": "2026-09-11T12:08:35.817997",
     "https://openai.com/index/reimagining-advertising-with-ai": "2026-09-17T12:13:02.409327",
-    "https://openai.com/index/replit": "2026-08-20T12:05:09.139167",
     "https://openai.com/index/sam-altman-un-security-council-remarks": "2026-09-24T12:06:34.844018",
     "https://openai.com/index/supporting-california-bill-advance-ai-youth-safety": "2026-09-01T12:07:21.810485",
     "https://openai.com/index/supporting-independent-journalism-in-ukraine": "2026-09-07T12:08:41.637282",
