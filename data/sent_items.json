@@ -52,7 +52,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "7225cff402e9",
-      "last_seen_at": "2026-10-05T12:03:12.911596",
+      "last_seen_at": "2026-10-06T12:01:38.842696",
       "title": "Claude Code Overview",
       "updated_at": "2026-09-22T12:05:07.666618"
     },
@@ -179,7 +179,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "b7abc76533bf",
-      "last_seen_at": "2026-10-05T12:03:12.911596",
+      "last_seen_at": "2026-10-06T12:01:38.842696",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-09-23T12:06:19.094471"
     },
@@ -190,6 +190,8 @@
         "The Claude Platform release notes list changes to the Claude API, the client SDKs, and the Claude Console, newest first.",
         "For release notes on Claude Apps, see the Release notes for Claude Apps in the Claude Help Center .",
         "For updates to Claude Code, see the complete CHANGELOG.md in the claude-code repository.",
+        "October 1, 2026 \ue09a",
+        "We've added a line field to the Models API . GET /v1/models and GET /v1/models/{model_id} now return the model line each model belongs to. Claude Opus 4.5 and Claude Opus 4.6 both report opus , for example. Use line to group models without parsing their IDs. line is null for a model that belongs to no line. See Using the Models API .",
         "September 30, 2026 \ue09a",
         "We announced the deprecation of the Claude Sonnet 4.5 model ( claude-sonnet-4-5-20250929 ), with retirement on the Claude API scheduled for November 30, 2026. We recommend migrating to Claude Sonnet 5.5 . Read more in Model deprecations .",
         "September 28, 2026 \ue09a",
@@ -342,14 +344,12 @@
         "We announced the deprecation of the Claude Opus 4.1 model ( claude-opus-4-1-20250805 ), with retirement on the Claude API scheduled for August 5, 2026. We recommend migrating to Claude Opus 4.8 . Read more in Model deprecations .",
         "June 2, 2026 \ue09a",
         "The advisor tool now supports a max_tokens parameter to cap the advisor model's output per call, reducing latency and output token cost for workloads that don't need full-length advisor responses. Set tools[].max_tokens on the advisor tool definition; see Capping advisor output .",
-        "On the Claude API, you are no longer billed for a request when it returns stop_reason: \"refusal\" without Claude having generated any output. See Streaming refusals for detecting and handling refusals.",
-        "May 29, 2026 \ue09a",
-        "Claude Managed Agents webhooks , multiagent orchestration , and self-hosted sandboxes are now available on Claude Platform on AWS . See IAM actions for Claude Platform on AWS for the new IAM actions and the AnthropicSelfHostedEnvironmentAccess managed policy."
+        "On the Claude API, you are no longer billed for a request when it returns stop_reason: \"refusal\" without Claude having generated any output. See Streaming refusals for detecting and handling refusals."
       ],
-      "content_hash": "5741388dfb11",
-      "last_seen_at": "2026-10-05T12:03:12.911596",
+      "content_hash": "a84a25f10591",
+      "last_seen_at": "2026-10-06T12:06:05.076757",
       "title": "Anthropic Release Notes",
-      "updated_at": "2026-10-03T12:07:30.150012"
+      "updated_at": "2026-10-06T12:06:05.076757"
     }
   },
   "sent": {
@@ -374,12 +374,12 @@
       "title": "Evolving our calendar assistant Reclaim to be AI-native without starting over",
       "url": "https://dropbox.tech/machine-learning/evolving-calendar-assistant-reclaim-to-be-ai-native"
     },
-    "11096b759ce8c8a30d2166f6c11aba6a62b75516": {
-      "kind": "Paper",
-      "sent_at": "2026-08-22T12:05:37.902560",
-      "source": "arXiv",
-      "title": "From Agent Behaviour to Agent-Friendly Documentation: An Empirical Study of How Coding Agents Discover, Read, and Write Technical Documentation",
-      "url": "http://arxiv.org/abs/2608.20195v1"
+    "1314ca6a47f2fd06752fba9e8a2cb1e782b4197f": {
+      "kind": "Blog",
+      "sent_at": "2026-10-06T12:06:05.076757",
+      "source": "Anthropic Docs",
+      "title": "Anthropic Release Notes",
+      "url": "https://docs.anthropic.com/en/release-notes/overview"
     },
     "13cf36e8ba3d25dbf7cf9b2e1eb533c397cbe8f6": {
       "kind": "Blog",
@@ -506,6 +506,13 @@
       "source": "Hacker News",
       "title": "Getting the most out of Opus 5.5 in Claude and Claude Code",
       "url": "https://claude.dev/blog/getting-the-most-out-of-opus-5-5/"
+    },
+    "2f410fa7dfa2a08d4d8bc4009d87e12954422a59": {
+      "kind": "Blog",
+      "sent_at": "2026-10-06T12:06:05.076757",
+      "source": "Simon Willison",
+      "title": "Quoting Felix Rieseberg",
+      "url": "https://simonwillison.net/2026/Oct/5/felix-rieseberg/"
     },
     "2fcf5a446e51d0308a67a297be40744969f31a5c": {
       "kind": "Paper",
@@ -787,6 +794,13 @@
       "title": "Article: High Availability Is Not Resilience: Why Cloud Systems Fail When It Matters Most",
       "url": "https://www.infoq.com/articles/high-availability-not-resilience-cloud/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Architecture-articles"
     },
+    "643889a193d1c8ae1b2a900715bf1a018bcfb811": {
+      "kind": "Paper",
+      "sent_at": "2026-10-06T12:06:05.076757",
+      "source": "arXiv",
+      "title": "Can Agent Harnesses and Inference Engines Hear Each Other? The HEAR Protocol for Agentic LLM Serving",
+      "url": "http://arxiv.org/abs/2610.06597v1"
+    },
     "64f2a8db36dd45d23f7f4b248c3f7a8a98ab21eb": {
       "kind": "Blog",
       "sent_at": "2026-10-01T12:06:07.828924",
@@ -1053,13 +1067,6 @@
       "title": "MCP Error Messages Written for Developers Hurt the Most Capable Agents Most",
       "url": "http://arxiv.org/abs/2609.35381v1"
     },
-    "9595db1d29a5c1368a7e91fec06ebfdbb3e28316": {
-      "kind": "Paper",
-      "sent_at": "2026-08-22T12:05:37.902560",
-      "source": "arXiv",
-      "title": "The Third Restructuring of Software Form: From the Three-Tier Architecture to Storage, Models, and Agents",
-      "url": "http://arxiv.org/abs/2608.20201v1"
-    },
     "964ff81fde7b1db71ce329da4ab445076e343ece": {
       "kind": "Blog",
       "sent_at": "2026-09-02T12:07:46.364496",
@@ -1067,26 +1074,12 @@
       "title": "Claude Fable 5.1 and Claude Mythos 5.1",
       "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1"
     },
-    "96ed7f9894b35c2ab3196416a2e1a0281579f477": {
-      "kind": "Blog",
-      "sent_at": "2026-08-22T12:05:37.902560",
-      "source": "Anthropic Docs",
-      "title": "Claude Code Tutorials",
-      "url": "https://docs.anthropic.com/en/docs/claude-code/tutorials"
-    },
     "97e3f60c27d69bb617e0bf9dc71fca65c22ffa7a": {
       "kind": "Paper",
       "sent_at": "2026-09-09T12:07:47.102858",
       "source": "arXiv",
       "title": "ExecCritic: Learn to Test, Test to Improve for Coding Agents",
       "url": "http://arxiv.org/abs/2609.09133v1"
-    },
-    "992fccbd1cbb65fba5d4ad11aeb89261a4b50755": {
-      "kind": "Blog",
-      "sent_at": "2026-08-22T12:05:37.902560",
-      "source": "Anthropic Docs",
-      "title": "Claude Code Overview",
-      "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
     },
     "99c66ecebeb22541030e27f64c17fd9ce3d5a763": {
       "kind": "Blog",
@@ -1242,13 +1235,6 @@
       "title": "Sonnet 5.5",
       "url": "https://www.anthropic.com/claude-sonnet-5-5"
     },
-    "bed7c3e90c9bd98e7e68a4ef9783a173f1748015": {
-      "kind": "Blog",
-      "sent_at": "2026-08-22T12:05:37.902560",
-      "source": "Simon Willison",
-      "title": "Stop Making TUIs",
-      "url": "https://simonwillison.net/2026/Aug/21/stop-making-tuis/"
-    },
     "bef6b6fb4b741f1336f304a4ed0f04f3bbbe74f9": {
       "kind": "Blog",
       "sent_at": "2026-09-29T12:05:14.873017",
@@ -1297,6 +1283,13 @@
       "source": "Neon Blog",
       "title": "Inside Skydive: building virtual coworkers, powered by Neon",
       "url": "https://neon.com/blog/inside-skydive-building-virtual-coworkers-powered-by-neon"
+    },
+    "cb77998bc27a79ccf167381f35ff06589bace066": {
+      "kind": "Blog",
+      "sent_at": "2026-10-06T12:06:05.076757",
+      "source": "Neon Blog",
+      "title": "Building a searchable photo library on the Neon backend with TanStack",
+      "url": "https://neon.com/blog/building-a-private-searchable-photo-library-on-the-neon-backend"
     },
     "ced3623e1f19179bfe95191bab526ef045b3d2d5": {
       "kind": "Blog",
@@ -1516,7 +1509,7 @@
     "https://blog.cloudflare.com/ai-era-framework/": "2026-09-30T12:05:59.362753",
     "https://blog.cloudflare.com/auto-router/": "2026-10-01T12:06:07.829111",
     "https://blog.cloudflare.com/automatic-key-exchange-for-origins/": "2026-09-09T12:07:47.103026",
-    "https://blog.cloudflare.com/bot-preference-sync/": "2026-08-22T12:05:37.902741",
+    "https://blog.cloudflare.com/birthday-week-2026-wrap-up/": "2026-10-06T12:06:05.076859",
     "https://blog.cloudflare.com/botbase-for-operators/": "2026-08-29T12:07:07.220267",
     "https://blog.cloudflare.com/cache-transcoding/": "2026-09-02T12:07:46.364695",
     "https://blog.cloudflare.com/casb-policies/": "2026-09-12T12:07:44.504914",
@@ -1532,6 +1525,7 @@
     "https://blog.cloudflare.com/introducing-adaptive-intelligence/": "2026-09-01T12:07:21.810485",
     "https://blog.cloudflare.com/introducing-web-search-api/": "2026-10-03T12:07:30.150185",
     "https://blog.cloudflare.com/one-observability-platform/": "2026-10-03T12:07:30.150185",
+    "https://blog.cloudflare.com/one-year-later-1111-interns/": "2026-10-06T12:06:05.076859",
     "https://blog.cloudflare.com/post-quantum-dnssec-1111/": "2026-09-11T12:08:35.817997",
     "https://blog.cloudflare.com/python-workers-ga/": "2026-09-22T12:05:07.666789",
     "https://blog.cloudflare.com/real-time-issue-detection/": "2026-10-01T12:06:07.829111",
@@ -1550,7 +1544,6 @@
     "https://claude.com/blog/agents-you-can-coach-how-asana-builds-human-agent-teams-with-claude": "2026-09-30T12:05:59.362753",
     "https://claude.com/blog/artifacts-in-claude-code": "2026-09-19T12:06:29.356704",
     "https://claude.com/blog/bain-company-joins-the-claude-partner-network-as-a-global-premier-partner": "2026-08-26T12:07:42.286813",
-    "https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders": "2026-08-22T12:05:37.902741",
     "https://claude.com/blog/build-plugins-for-claude": "2026-09-26T12:05:49.135682",
     "https://claude.com/blog/building-an-ai-native-revenue-organization": "2026-09-16T12:09:07.980580",
     "https://claude.com/blog/claude-code-desktop-redesign": "2026-09-11T12:08:35.817997",
@@ -1568,7 +1561,6 @@
     "https://claude.com/blog/claude-opus-5-5-built-for-coding-sessions-that-use-more-context": "2026-09-25T12:05:19.070930",
     "https://claude.com/blog/claude-tag-now-supports-personal-connectors-in-channels": "2026-09-25T12:05:19.070930",
     "https://claude.com/blog/claudes-memory-works-everywhere-and-you-decide-whats-in-it": "2026-08-26T12:07:42.286813",
-    "https://claude.com/blog/computer-use-skills-api-files-api": "2026-08-22T12:05:37.902741",
     "https://claude.com/blog/connectors-for-everyday-life": "2026-09-11T12:08:35.817997",
     "https://claude.com/blog/cowork-built-in-browser": "2026-08-27T12:09:26.449619",
     "https://claude.com/blog/cowork-is-now-claude": "2026-09-17T12:13:02.409327",
@@ -1578,6 +1570,7 @@
     "https://claude.com/blog/how-anthropic-employees-use-claude-tag": "2026-08-29T12:07:07.220267",
     "https://claude.com/blog/how-anthropics-sales-team-rebuilt-inbound-with-claude-managed-agents": "2026-10-01T12:06:07.829111",
     "https://claude.com/blog/how-coderabbit-power-digital-and-thoughtspot-scale-with-snowflake-and-vercel-on-claude-marketplace": "2026-09-24T12:06:34.844018",
+    "https://claude.com/blog/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk": "2026-10-06T12:06:05.076859",
     "https://claude.com/blog/how-healthcare-organizations-use-claude-tag": "2026-09-15T12:07:57.999528",
     "https://claude.com/blog/how-to-prepare-for-ai-driven-code-modernization-projects": "2026-09-24T12:06:34.844018",
     "https://claude.com/blog/how-warp-builds-self-improving-agents-on-claude": "2026-08-27T12:09:26.449619",
@@ -1587,7 +1580,6 @@
     "https://claude.com/blog/reducing-cost-and-improving-performance-with-claude-platform": "2026-09-09T12:07:47.103026",
     "https://claude.com/blog/salesforce-in-claude": "2026-09-16T12:09:07.980580",
     "https://claude.com/blog/t-rowe-price-brings-more-of-claude-to-its-investment-process": "2026-09-12T12:07:44.504914",
-    "https://claude.com/blog/the-ai-native-sdlc-playbook": "2026-08-22T12:05:37.902741",
     "https://claude.com/blog/the-anatomy-of-effective-commerce-agents": "2026-09-03T12:07:26.434398",
     "https://claude.com/blog/what-1-000-small-business-owners-taught-us-about-ai": "2026-09-12T12:07:44.504914",
     "https://claude.com/blog/what-a-task-costs-on-opus-5-5": "2026-09-23T12:06:19.094636",
@@ -1606,6 +1598,7 @@
     "https://openai.com/index/devday-2026-recap": "2026-09-30T12:05:59.362753",
     "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign": "2026-10-01T12:06:07.829111",
     "https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia": "2026-08-25T12:05:53.813101",
+    "https://openai.com/index/eu-text-provenance": "2026-10-06T12:06:05.076859",
     "https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads": "2026-09-01T12:07:21.810485",
     "https://openai.com/index/expanding-our-presence-in-brazil": "2026-08-27T12:09:26.449619",
     "https://openai.com/index/fyxer": "2026-09-15T12:07:57.999528",
