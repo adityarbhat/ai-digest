@@ -52,7 +52,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "7225cff402e9",
-      "last_seen_at": "2026-10-06T12:01:38.842696",
+      "last_seen_at": "2026-10-07T12:02:22.483790",
       "title": "Claude Code Overview",
       "updated_at": "2026-09-22T12:05:07.666618"
     },
@@ -179,7 +179,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "b7abc76533bf",
-      "last_seen_at": "2026-10-06T12:01:38.842696",
+      "last_seen_at": "2026-10-07T12:02:22.483790",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-09-23T12:06:19.094471"
     },
@@ -190,9 +190,12 @@
         "The Claude Platform release notes list changes to the Claude API, the client SDKs, and the Claude Console, newest first.",
         "For release notes on Claude Apps, see the Release notes for Claude Apps in the Claude Help Center .",
         "For updates to Claude Code, see the complete CHANGELOG.md in the claude-code repository.",
+        "October 5, 2026 \ue09a",
+        "We've added capabilities.thinking.types.disabled to the Models API . GET /v1/models and GET /v1/models/{model_id} now report whether each model accepts thinking: {type: \"disabled\"} , which turns thinking off. See Using the Models API .",
         "October 1, 2026 \ue09a",
         "We've added a line field to the Models API . GET /v1/models and GET /v1/models/{model_id} now return the model line each model belongs to. Claude Opus 4.5 and Claude Opus 4.6 both report opus , for example. Use line to group models without parsing their IDs. line is null for a model that belongs to no line. See Using the Models API .",
         "September 30, 2026 \ue09a",
+        "In Python SDK 1.10.0, TypeScript SDK 0.130.0, C# SDK 12.52.0, Go SDK 1.77.0, Java SDK 2.67.0, PHP SDK 0.53.0, Ruby SDK 1.75.0, and version 1.37.0 of the ant CLI, the Admin API methods for organization info, members, invites, workspaces, API keys, rate limits, service accounts, workload identity federation, customer-managed encryption keys, and compliance settings are out of beta: call them under client.organization and ant organization . These releases also keep client.beta.organization and ant beta:organization .",
         "We announced the deprecation of the Claude Sonnet 4.5 model ( claude-sonnet-4-5-20250929 ), with retirement on the Claude API scheduled for November 30, 2026. We recommend migrating to Claude Sonnet 5.5 . Read more in Model deprecations .",
         "September 28, 2026 \ue09a",
         "We've launched Claude Sonnet 5.5 ( claude-sonnet-5-5 ). It's available on the Claude API, Claude in Amazon Bedrock , Claude Platform on AWS , Claude on Google Cloud , and Claude in Microsoft Foundry . For its context window, output limits, and prices, see the Claude Sonnet 5.5 model page .",
@@ -251,7 +254,7 @@
         "The Files API is out of beta on the Claude API. Requests to the /v1/files endpoints, and Messages API requests that reference an uploaded file, no longer require the files-api-2025-04-14 beta header. Requests sent without the header use the current response format: file expiration (set expires_in_seconds when you upload a file; file objects report expires_at ), and page and next_page pagination plus an ids[] filter when you list files . /v1/files requests that still send the beta header keep working and return the previous response format. To move an existing integration off the header, see Migrate from files-api-2025-04-14 .",
         "Agent Skills and the Skills API ( /v1/skills ) are out of beta on the Claude API. Requests no longer require the skills-2025-10-02 beta header, including Messages API requests that load Skills through the container parameter. Requests that still send the header continue to work unchanged. See Using Agent Skills with the API . To move an existing integration off the header, see Migrate from skills-2025-10-02 .",
         "The Admin API user-management endpoints for Claude Enterprise (claude.ai) organizations (members, invites, groups, and custom roles) are out of beta. The anthropic-beta: ce-user-management-2026-07-13 header is no longer required on group and custom-role requests; requests that still send it are accepted unchanged. See User management .",
-        "You can now restrict which sites a Claude Managed Agents agent's web_search and web_fetch tools can reach. Set allowed_domains or blocked_domains on the tool's entry in the agent_toolset_20260401 configs array; web_fetch also accepts max_content_tokens and web_search accepts user_location . Each configs entry is identified by its name and typed by an optional type , and requests that pass only name , enabled , and permission_policy continue to work; in the typed SDKs, configs entries become per-tool types. See Restrict web search and web fetch domains .",
+        "You can now restrict which sites a Claude Managed Agents agent's web_search and web_fetch tools can reach. Set allowed_domains or blocked_domains on the tool's entry in the agent_toolset_20260401 configs array; web_fetch also accepts max_content_tokens and web_search accepts user_location . Each configs entry is identified by its name and typed by an optional type , and requests that pass only name , enabled , and permission_policy continue to work; in the typed SDKs, configs entries become per-tool types . See Restrict web search and web fetch domains .",
         "Claude Managed Agents sessions that run in a self-hosted sandbox can now attach memory stores . The Python, TypeScript, and Go SDK workers download each attached store into the sandbox at its mount_path and sync the agent's changes back to the store. See Memory stores in self-hosted sandboxes .",
         "The session viewer in the Claude Console has been redesigned with a timeline minimap, a transcript grouped by model request, and an Inspector panel for session details and cost, raw events, per-tool statistics, mounted resources, and per-thread activity. See Console observability .",
         "August 18, 2026 \ue09a",
@@ -341,15 +344,12 @@
         "The session.thread_* webhook events now include a session_thread_id field identifying the multiagent thread that triggered the event.",
         "We've released a Swift package in beta that adds Claude as a server-side LanguageModel in Apple's Foundation Models framework. Call Claude through the same LanguageModelSession API as Apple's on-device model on iOS 27, macOS 27, visionOS 27, and watchOS 27 (beta).",
         "June 5, 2026 \ue09a",
-        "We announced the deprecation of the Claude Opus 4.1 model ( claude-opus-4-1-20250805 ), with retirement on the Claude API scheduled for August 5, 2026. We recommend migrating to Claude Opus 4.8 . Read more in Model deprecations .",
-        "June 2, 2026 \ue09a",
-        "The advisor tool now supports a max_tokens parameter to cap the advisor model's output per call, reducing latency and output token cost for workloads that don't need full-length advisor responses. Set tools[].max_tokens on the advisor tool definition; see Capping advisor output .",
-        "On the Claude API, you are no longer billed for a request when it returns stop_reason: \"refusal\" without Claude having generated any output. See Streaming refusals for detecting and handling refusals."
+        "We announced the deprecation of the Claude Opus 4.1 model ( claude-opus-4-1-20250805 ), with retirement on the Claude API scheduled for August 5, 2026. We recommend migrating to Claude Opus 4.8 . Read more in Model deprecations ."
       ],
-      "content_hash": "a84a25f10591",
-      "last_seen_at": "2026-10-06T12:06:05.076757",
+      "content_hash": "708fcb5d27f8",
+      "last_seen_at": "2026-10-07T12:06:18.519554",
       "title": "Anthropic Release Notes",
-      "updated_at": "2026-10-06T12:06:05.076757"
+      "updated_at": "2026-10-07T12:06:18.519554"
     }
   },
   "sent": {
@@ -464,6 +464,13 @@
       "source": "HuggingFace",
       "title": "AutoSynthData: Generating Training Data for Enterprise Agents",
       "url": "https://huggingface.co/blog/ServiceNow-AI/autosynthdata"
+    },
+    "259f287ba3d3ec601bd7b4fd881e68b0218bef3a": {
+      "kind": "Paper",
+      "sent_at": "2026-10-07T12:06:18.519554",
+      "source": "arXiv",
+      "title": "EMHO: EMbodied Agent Harness Optimization via Experience Traces",
+      "url": "http://arxiv.org/abs/2610.08432v1"
     },
     "27629458812a4274a36263be0cdc92dc4de20a3b": {
       "kind": "Blog",
@@ -815,13 +822,6 @@
       "title": "Supabase is acquiring Turso",
       "url": "https://supabase.com/blog/supabase-is-acquiring-turso"
     },
-    "659601936eb28699a1e3503050d710943f8c3413": {
-      "kind": "Blog",
-      "sent_at": "2026-08-23T12:05:31.586248",
-      "source": "Simon Willison",
-      "title": "More than just code review",
-      "url": "https://simonwillison.net/2026/Aug/22/more-than-just-code-review/"
-    },
     "65aa628410909388f9e708af7ce1abf7e81de2b4": {
       "kind": "Paper",
       "sent_at": "2026-08-25T12:05:53.812983",
@@ -955,6 +955,13 @@
       "title": "Inside LuBot's database-per-tenant architecture",
       "url": "https://neon.com/blog/inside-lubots-database-per-tenant-architecture"
     },
+    "7de70c098fa8e3ce45423d8953522ce89440bbeb": {
+      "kind": "Blog",
+      "sent_at": "2026-10-07T12:06:18.519554",
+      "source": "OpenAI",
+      "title": "Advancing computer use with Ironclad",
+      "url": "https://openai.com/index/advancing-computer-use-with-ironclad"
+    },
     "7ded64522b0463845ff4cbdfbfc4ef83577150a3": {
       "kind": "Blog",
       "sent_at": "2026-09-02T12:07:46.364496",
@@ -1052,6 +1059,13 @@
       "source": "Claude Blog",
       "title": "The AI-Native SDLC playbook",
       "url": "https://claude.com/blog/the-ai-native-sdlc-playbook"
+    },
+    "91d47054dbcac54191f89c5e98209a545eb1d853": {
+      "kind": "Blog",
+      "sent_at": "2026-10-07T12:06:18.519554",
+      "source": "Anthropic Docs",
+      "title": "Anthropic Release Notes",
+      "url": "https://docs.anthropic.com/en/release-notes/overview"
     },
     "92c169de9cdcefd549762aeed5a67aeed334f05b": {
       "kind": "Paper",
@@ -1326,6 +1340,13 @@
       "title": "Improving Lakebase Postgres Compute Cache on Neon, Part 1",
       "url": "https://neon.com/blog/improving-lakebase-compute-cache-part-1"
     },
+    "d2d35d0e66cb864d91981e1736246f91f8dc5458": {
+      "kind": "Blog",
+      "sent_at": "2026-10-07T12:06:18.519554",
+      "source": "GitHub Engineering",
+      "title": "Building Git infrastructure for agent-scale development",
+      "url": "https://github.blog/engineering/architecture-optimization/building-git-infrastructure-for-agent-scale-development/"
+    },
     "d2fd3b9b8d18e2b1a13026af6d7a09591f6729c0": {
       "kind": "Paper",
       "sent_at": "2026-08-26T12:07:42.286686",
@@ -1367,13 +1388,6 @@
       "source": "GitHub Engineering",
       "title": "How we make AI coding more cost efficient without sacrificing task quality",
       "url": "https://github.blog/ai-and-ml/github-copilot/how-we-make-ai-coding-more-cost-efficient-without-sacrificing-task-quality/"
-    },
-    "dacbef62830ecc9b27ca0925faccdfdf093d5651": {
-      "kind": "Blog",
-      "sent_at": "2026-08-23T12:05:31.586248",
-      "source": "Hacker News",
-      "title": "New MCP Roadmap",
-      "url": "https://blog.modelcontextprotocol.io/posts/mcp-roadmap/"
     },
     "dada85d69a0745068b310508872fbfb7532ce13b": {
       "kind": "Blog",
@@ -1529,6 +1543,7 @@
     "https://blog.cloudflare.com/post-quantum-dnssec-1111/": "2026-09-11T12:08:35.817997",
     "https://blog.cloudflare.com/python-workers-ga/": "2026-09-22T12:05:07.666789",
     "https://blog.cloudflare.com/real-time-issue-detection/": "2026-10-01T12:06:07.829111",
+    "https://blog.cloudflare.com/root-ksk-2024-rollover/": "2026-10-07T12:06:18.519687",
     "https://blog.cloudflare.com/saving-100-tb-of-ram-with-math/": "2026-09-19T12:06:29.356704",
     "https://blog.cloudflare.com/sovereign-ai-choice-one-year-later/": "2026-10-02T12:07:26.758352",
     "https://blog.cloudflare.com/streamline/": "2026-10-03T12:07:30.150185",
@@ -1613,6 +1628,7 @@
     "https://openai.com/index/introducing-chatgpt-images-2-5": "2026-09-09T12:07:47.103026",
     "https://openai.com/index/introducing-gpt-6-1-sol": "2026-09-30T12:05:59.362753",
     "https://openai.com/index/jalapeno-first-results": "2026-08-26T12:07:42.286813",
+    "https://openai.com/index/jump-trading": "2026-10-07T12:06:18.519687",
     "https://openai.com/index/legora-financial-statement-review-with-astra": "2026-09-04T12:07:47.114718",
     "https://openai.com/index/lenfest-ai-collaborative-expansion": "2026-09-29T12:05:14.873169",
     "https://openai.com/index/loveholidays": "2026-08-26T12:07:42.286813",
@@ -1628,6 +1644,7 @@
     "https://openai.com/index/put-data-to-work": "2026-09-11T12:08:35.817997",
     "https://openai.com/index/reimagining-advertising-with-ai": "2026-09-17T12:13:02.409327",
     "https://openai.com/index/sam-altman-un-security-council-remarks": "2026-09-24T12:06:34.844018",
+    "https://openai.com/index/sharing-ai-progress-in-mathematics": "2026-10-07T12:06:18.519687",
     "https://openai.com/index/supporting-california-bill-advance-ai-youth-safety": "2026-09-01T12:07:21.810485",
     "https://openai.com/index/supporting-independent-journalism-in-ukraine": "2026-09-07T12:08:41.637282",
     "https://openai.com/index/the-eternal-complement": "2026-10-02T12:07:26.758352",
@@ -1641,6 +1658,7 @@
     "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system": "2026-09-27T12:05:14.092935",
     "https://www.anthropic.com/news/claude-frontier-academy": "2026-10-03T12:07:30.150185",
     "https://www.anthropic.com/news/claude-opus-5": "2026-09-13T12:07:17.595222",
+    "https://www.anthropic.com/news/cyber-verification-program": "2026-10-07T12:06:18.519687",
     "https://www.anthropic.com/news/enterprise-frontier-safeguards": "2026-09-02T12:07:46.364695",
     "https://www.anthropic.com/news/expanding-support-for-scientists": "2026-08-28T12:07:21.900041",
     "https://www.anthropic.com/news/improving-alignment-security-efforts": "2026-09-01T12:07:21.810485",
