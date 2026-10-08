@@ -52,7 +52,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "7225cff402e9",
-      "last_seen_at": "2026-10-07T12:02:22.483790",
+      "last_seen_at": "2026-10-08T12:02:02.535559",
       "title": "Claude Code Overview",
       "updated_at": "2026-09-22T12:05:07.666618"
     },
@@ -179,7 +179,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "b7abc76533bf",
-      "last_seen_at": "2026-10-07T12:02:22.483790",
+      "last_seen_at": "2026-10-08T12:02:02.535559",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-09-23T12:06:19.094471"
     },
@@ -190,10 +190,24 @@
         "The Claude Platform release notes list changes to the Claude API, the client SDKs, and the Claude Console, newest first.",
         "For release notes on Claude Apps, see the Release notes for Claude Apps in the Claude Help Center .",
         "For updates to Claude Code, see the complete CHANGELOG.md in the claude-code repository.",
+        "October 8, 2026 \ue09a",
+        "The Compliance API chat endpoints now also return chats from the unified Claude experience, in beta for Claude Enterprise organizations, with your existing Compliance Access Key. See Retrieve and delete chats, files, and projects .",
+        "October 7, 2026 \ue09a",
+        "We've lowered the price of prompt cache reads on Claude Sonnet 5.5 from $0.20 USD to $0.10 USD per million tokens: 0.05x the base input price instead of 0.1x. Cache writes and all other prices are unchanged. See Prompt caching pricing .",
+        "We've launched Claude Haiku 5.5 ( claude-haiku-5-5 ), our most capable model tuned for high-volume and latency-sensitive work. It has a 1M token context window , 128k max output tokens, and adaptive thinking with the effort parameter . It's available on the Claude API, Claude in Amazon Bedrock , Claude Platform on AWS , Claude on Google Cloud , and Claude in Microsoft Foundry . See What's new in Claude Haiku 5.5 .",
+        "Code written for Claude Haiku 4.5 can break on Claude Haiku 5.5. Manual extended thinking ( budget_tokens ) returns a 400 error, and adaptive thinking is on by default, so a response can begin with thinking blocks. The same text also counts as more tokens. See the migration guide . For model-specific prompting patterns, see Prompting Claude Haiku 5.5 .",
+        "The Python and TypeScript SDKs now include classes, in beta, for the browser use tool and the computer use tool . You subclass one and write one method per tool against your own browser or desktop automation. The SDK runs the tool loop, the URL and file policies you set for the browser, and your approval callback. See Browser and computer use with the SDK toolsets .",
+        "Claude Max and Team plans now include monthly API credits. To learn how to claim them, see API credits for Max and Team plans .",
+        "In Claude Managed Agents, a cloud environment with limited networking now also applies its allowed_hosts to the web_search and web_fetch tools. A web_fetch call for a URL on a host that allowed_hosts does not match returns a url_not_allowed error result to the agent. web_search omits results from such hosts. When allowed_hosts lists no hosts, neither tool returns a page or a search result. allow_package_managers and allow_mcp_servers add no hosts for these tools. To let the tools reach a host, add it to allowed_hosts , which also opens it to the sandbox. unrestricted networking and self-hosted environments do not limit these tools. See Environment networking .",
+        "With limited networking, creating a session fails with a 400 error when an enabled web tool's allowed_domains has an entry not within allowed_hosts . So does a session update that adds such an entry. An allowed_hosts entry matches one exact host unless it starts with *. , so docs.example.com is not within [\"example.com\"] . To fix the error, add the host to allowed_hosts or remove the entry from allowed_domains . See Restrict web search and web fetch domains .",
+        "In Claude Managed Agents, the web_fetch tool now fetches only URLs that have already appeared in the session, for example in the text of a user message, in a web_search result, or in a page that web_fetch returned earlier. This reduces the risk of data exfiltration. A URL that appears only in Claude's own output, the agent's system prompt, an attached document, or the output of a tool such as bash , read , or an MCP tool does not count: a web_fetch call for it returns a url_not_in_prior_context error result to the agent. To let the agent fetch a URL, send it in the text of a user.message event.",
+        "October 6, 2026 \ue09a",
+        "We've added capabilities.server_tools to the Models API . GET /v1/models and GET /v1/models/{model_id} now report whether each model accepts the web search and code execution tools. To check whether a model accepts the code execution tool, read capabilities.server_tools.code_execution . The top-level capabilities.code_execution reports whether code can call your request's other tools. See Using the Models API .",
         "October 5, 2026 \ue09a",
         "We've added capabilities.thinking.types.disabled to the Models API . GET /v1/models and GET /v1/models/{model_id} now report whether each model accepts thinking: {type: \"disabled\"} , which turns thinking off. See Using the Models API .",
         "October 1, 2026 \ue09a",
         "We've added a line field to the Models API . GET /v1/models and GET /v1/models/{model_id} now return the model line each model belongs to. Claude Opus 4.5 and Claude Opus 4.6 both report opus , for example. Use line to group models without parsing their IDs. line is null for a model that belongs to no line. See Using the Models API .",
+        "Dreams (research preview) now supports Claude Opus 5.5, Claude Fable 5.1, and Claude Sonnet 5.5. See Supported models .",
         "September 30, 2026 \ue09a",
         "In Python SDK 1.10.0, TypeScript SDK 0.130.0, C# SDK 12.52.0, Go SDK 1.77.0, Java SDK 2.67.0, PHP SDK 0.53.0, Ruby SDK 1.75.0, and version 1.37.0 of the ant CLI, the Admin API methods for organization info, members, invites, workspaces, API keys, rate limits, service accounts, workload identity federation, customer-managed encryption keys, and compliance settings are out of beta: call them under client.organization and ant organization . These releases also keep client.beta.organization and ant beta:organization .",
         "We announced the deprecation of the Claude Sonnet 4.5 model ( claude-sonnet-4-5-20250929 ), with retirement on the Claude API scheduled for November 30, 2026. We recommend migrating to Claude Sonnet 5.5 . Read more in Model deprecations .",
@@ -256,7 +270,7 @@
         "The Admin API user-management endpoints for Claude Enterprise (claude.ai) organizations (members, invites, groups, and custom roles) are out of beta. The anthropic-beta: ce-user-management-2026-07-13 header is no longer required on group and custom-role requests; requests that still send it are accepted unchanged. See User management .",
         "You can now restrict which sites a Claude Managed Agents agent's web_search and web_fetch tools can reach. Set allowed_domains or blocked_domains on the tool's entry in the agent_toolset_20260401 configs array; web_fetch also accepts max_content_tokens and web_search accepts user_location . Each configs entry is identified by its name and typed by an optional type , and requests that pass only name , enabled , and permission_policy continue to work; in the typed SDKs, configs entries become per-tool types . See Restrict web search and web fetch domains .",
         "Claude Managed Agents sessions that run in a self-hosted sandbox can now attach memory stores . The Python, TypeScript, and Go SDK workers download each attached store into the sandbox at its mount_path and sync the agent's changes back to the store. See Memory stores in self-hosted sandboxes .",
-        "The session viewer in the Claude Console has been redesigned with a timeline minimap, a transcript grouped by model request, and an Inspector panel for session details and cost, raw events, per-tool statistics, mounted resources, and per-thread activity. See Console observability .",
+        "The session viewer in the Claude Console has been redesigned with a timeline minimap, a transcript grouped by model request, and an Inspector panel for session details and cost, raw events, per-tool statistics, mounted resources, and per-thread activity. See Inspect a session in the Console .",
         "August 18, 2026 \ue09a",
         "Workbench is now playground in the Claude Console. Playground supports every Messages API parameter and includes templates that demonstrate API features such as code execution and web search. It shows the full SDK request and the API response for each run, to help you understand the API and build with it. For more, see the Claude Help Center or try it at platform.claude.com/playground .",
         "August 11, 2026 \ue09a",
@@ -330,26 +344,12 @@
         "The web search tool and web fetch tool now support web_search_20260318 and web_fetch_20260318 , adding a response_inclusion parameter to drop consumed result blocks from the API response for agentic workflows. No beta header is required.",
         "June 10, 2026 \ue09a",
         "The GET /v1/environments/{id}/work endpoint, which lists pending work for a self-hosted sandbox , is now available on Claude Platform on AWS . See IAM actions for Claude Platform on AWS for the GetEnvironment action that authorizes it.",
-        "June 9, 2026 \ue09a",
-        "We've launched Claude Fable 5 ( claude-fable-5 ), our most capable model open to all customers, alongside Claude Mythos 5 ( claude-mythos-5 ) for Project Glasswing participants. Both models support a 1M token context window by default, 128k max output tokens, and always-on adaptive thinking . See Introducing Claude Fable 5 and Claude Mythos 5 for capabilities, API changes, and availability.",
-        "Claude Fable 5 and Claude Mythos 5 use the tokenizer introduced with Claude Opus 4.7. Compared to models before Claude Opus 4.7, the same text produces roughly 30% more tokens. The exact increase depends on the content and workload shape. Use the token counting API with model: \"claude-fable-5\" to measure your prompts under the new tokenizer.",
-        "Claude Fable 5 runs safety classifiers on requests and during response generation. When a classifier declines a request, the Messages API returns stop_reason: \"refusal\" . You are not billed for a request refused before any output is generated. An opt-in fallbacks parameter (in beta on the Claude API and Claude Platform on AWS; not supported on the Message Batches API) re-runs refused requests on another model, billed at the fallback model's rates. See Handling stop reasons .",
-        "The stop_details.category field on refusal responses now includes \"reasoning_extraction\" on Claude Fable 5, returned when a request is blocked under Anthropic's Terms of Service restrictions on reverse engineering or duplicating model outputs. The existing \"cyber\" and \"bio\" categories are unchanged. No beta header is required.",
-        "On Claude Fable 5 and Claude Mythos 5, adaptive thinking is the only thinking mode: thinking: {\"type\": \"disabled\"} is not supported, and manual extended thinking budgets and assistant prefill are not supported (both return a 400 error). See Migrating from Claude Mythos Preview to Claude Mythos 5 .",
-        "On Claude Fable 5 and Claude Mythos 5, thinking.display defaults to \"omitted\" , the same as Claude Opus 4.8, Claude Opus 4.7, and Claude Mythos Preview; set display: \"summarized\" to receive readable thinking summaries. The raw chain of thought is never returned; pass thinking blocks back unchanged in multi-turn conversations on the same model. See Thinking output on Claude Fable 5 and Claude Mythos 5 .",
-        "Claude Fable 5 requires 30-day data retention and is not available under zero data retention. See Model-specific data retention requirements .",
-        "Claude Managed Agents now supports scheduled deployments , letting you run sessions on a cron schedule without managing your own scheduler.",
-        "Claude Managed Agents vaults now support environment variable credentials , so you can securely inject secrets into the agent's sandbox for CLIs, SDKs, and other services that authenticate through environment variables.",
-        "The Compliance API Activity Feed ( GET /v1/compliance/activities ) is now available on Claude Platform on AWS . See IAM actions for Claude Platform on AWS for the ListComplianceActivities action that authorizes it.",
-        "The session.thread_* webhook events now include a session_thread_id field identifying the multiagent thread that triggered the event.",
-        "We've released a Swift package in beta that adds Claude as a server-side LanguageModel in Apple's Foundation Models framework. Call Claude through the same LanguageModelSession API as Apple's on-device model on iOS 27, macOS 27, visionOS 27, and watchOS 27 (beta).",
-        "June 5, 2026 \ue09a",
-        "We announced the deprecation of the Claude Opus 4.1 model ( claude-opus-4-1-20250805 ), with retirement on the Claude API scheduled for August 5, 2026. We recommend migrating to Claude Opus 4.8 . Read more in Model deprecations ."
+        "June 9, 2026 \ue09a"
       ],
-      "content_hash": "708fcb5d27f8",
-      "last_seen_at": "2026-10-07T12:06:18.519554",
+      "content_hash": "d3570cd07067",
+      "last_seen_at": "2026-10-08T12:05:55.349327",
       "title": "Anthropic Release Notes",
-      "updated_at": "2026-10-07T12:06:18.519554"
+      "updated_at": "2026-10-08T12:05:55.349327"
     }
   },
   "sent": {
@@ -450,6 +450,13 @@
       "source": "Martin Fowler",
       "title": "Fragments: September 16",
       "url": "https://martinfowler.com/fragments/2026-09-16.html"
+    },
+    "2027720e7c5924096bcd339e0e6c8f2a9a8027bb": {
+      "kind": "Blog",
+      "sent_at": "2026-10-08T12:05:55.349327",
+      "source": "Microsoft Research",
+      "title": "Agent Lightning v1.0: A 3,500-Line Lightweight Agentic RL Framework for Training Agents with Real Harnesses",
+      "url": "https://www.microsoft.com/en-us/research/blog/agent-lightning-v1-0-a-3500-line-lightweight-agentic-rl-framework-for-training-agents-with-real-harnesses/"
     },
     "2174300967a8c7637d833ded86682d1cb1b4186d": {
       "kind": "Blog",
@@ -990,6 +997,13 @@
       "title": "Inside branch-based restores in Lakebase Postgres",
       "url": "https://neon.com/blog/inside-branch-based-restores-in-lakebase-postgres"
     },
+    "8103a052b49d49849ef0807d174d73ea409b29bb": {
+      "kind": "Paper",
+      "sent_at": "2026-10-08T12:05:55.349327",
+      "source": "arXiv",
+      "title": "CoTrace: Data Recipes for Training Terminal Agents with Harness-Model Co-Evolution",
+      "url": "http://arxiv.org/abs/2610.10426v1"
+    },
     "815c74ce5b386e17f64964bf6d6f5903471720ea": {
       "kind": "Paper",
       "sent_at": "2026-09-02T12:07:46.364496",
@@ -1193,6 +1207,13 @@
       "title": "Quoting Anthropic Frontier Red Team",
       "url": "https://simonwillison.net/2026/Sep/29/anthropic-frontier-red-team/"
     },
+    "b30c2a0cf81e33ace9baf987d59974a45f2cd0ae": {
+      "kind": "Blog",
+      "sent_at": "2026-10-08T12:05:55.349327",
+      "source": "Anthropic Docs",
+      "title": "Anthropic Release Notes",
+      "url": "https://docs.anthropic.com/en/release-notes/overview"
+    },
     "b353974952677338d136eb7822093ed97503348c": {
       "kind": "Blog",
       "sent_at": "2026-09-03T12:07:26.434240",
@@ -1389,6 +1410,13 @@
       "title": "How we make AI coding more cost efficient without sacrificing task quality",
       "url": "https://github.blog/ai-and-ml/github-copilot/how-we-make-ai-coding-more-cost-efficient-without-sacrificing-task-quality/"
     },
+    "da31a175863d9ab04aab84e98d0402fcc2328acd": {
+      "kind": "Blog",
+      "sent_at": "2026-10-08T12:05:55.349327",
+      "source": "Simon Willison",
+      "title": "Claude Haiku 5.5",
+      "url": "https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/"
+    },
     "dada85d69a0745068b310508872fbfb7532ce13b": {
       "kind": "Blog",
       "sent_at": "2026-09-05T12:06:59.205553",
@@ -1501,6 +1529,13 @@
       "title": "Cloudflare Adds Optional OAuth Scopes, Letting Developers Mark What Users May Decline",
       "url": "https://www.infoq.com/news/2026/09/cloudflare-optional-oauth-scopes/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Architecture-news"
     },
+    "f57bc353ab713d67c9f816b63bc061a9296b2e35": {
+      "kind": "Blog",
+      "sent_at": "2026-10-08T12:05:55.349327",
+      "source": "Neon Blog",
+      "title": "BM25 is only as good as your tokens",
+      "url": "https://neon.com/blog/bm25-is-only-as-good-as-your-tokens"
+    },
     "f77525c37f5300732c037966242b570ba7b949e7": {
       "kind": "Blog",
       "sent_at": "2026-09-01T12:07:21.810335",
@@ -1519,6 +1554,7 @@
   "watchlist_seen": {
     "https://blog.cloudflare.com/100-million-donations/": "2026-10-01T12:06:07.829111",
     "https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/": "2026-09-16T12:09:07.980580",
+    "https://blog.cloudflare.com/agentic-security-operations/": "2026-10-08T12:05:55.349500",
     "https://blog.cloudflare.com/ai-driven-cryptography-discovery/": "2026-09-30T12:05:59.362753",
     "https://blog.cloudflare.com/ai-era-framework/": "2026-09-30T12:05:59.362753",
     "https://blog.cloudflare.com/auto-router/": "2026-10-01T12:06:07.829111",
@@ -1642,6 +1678,7 @@
     "https://openai.com/index/practical-guide-building-gpt-6": "2026-10-03T12:07:30.150185",
     "https://openai.com/index/proaction": "2026-09-26T12:05:49.135682",
     "https://openai.com/index/put-data-to-work": "2026-09-11T12:08:35.817997",
+    "https://openai.com/index/radisson": "2026-10-08T12:05:55.349500",
     "https://openai.com/index/reimagining-advertising-with-ai": "2026-09-17T12:13:02.409327",
     "https://openai.com/index/sam-altman-un-security-council-remarks": "2026-09-24T12:06:34.844018",
     "https://openai.com/index/sharing-ai-progress-in-mathematics": "2026-10-07T12:06:18.519687",
