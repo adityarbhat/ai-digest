@@ -52,7 +52,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "7225cff402e9",
-      "last_seen_at": "2026-10-08T12:02:02.535559",
+      "last_seen_at": "2026-10-09T12:01:32.147061",
       "title": "Claude Code Overview",
       "updated_at": "2026-09-22T12:05:07.666618"
     },
@@ -163,7 +163,6 @@
         "\u200b Run Claude on a schedule",
         "\u200b Ask Claude about its capabilities",
         "\u200b Example questions",
-        "Claude always has access to the latest Claude Code documentation, regardless of the version you\u2019re using",
         "Ask specific questions to get detailed answers",
         "Claude can explain complex features like MCP integration, enterprise configurations, and advanced workflows",
         "\u200b Resume previous conversations",
@@ -178,10 +177,10 @@
         "Extend Claude Code",
         "Was this page helpful?"
       ],
-      "content_hash": "b7abc76533bf",
-      "last_seen_at": "2026-10-08T12:02:02.535559",
+      "content_hash": "f136b93947db",
+      "last_seen_at": "2026-10-09T12:04:52.188794",
       "title": "Claude Code Tutorials",
-      "updated_at": "2026-09-23T12:06:19.094471"
+      "updated_at": "2026-10-09T12:04:52.188794"
     },
     "https://docs.anthropic.com/en/release-notes/overview": {
       "blocks": [
@@ -347,7 +346,7 @@
         "June 9, 2026 \ue09a"
       ],
       "content_hash": "d3570cd07067",
-      "last_seen_at": "2026-10-08T12:05:55.349327",
+      "last_seen_at": "2026-10-09T12:01:32.147061",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-10-08T12:05:55.349327"
     }
@@ -563,6 +562,13 @@
       "title": "Quoting Muse AI Agent",
       "url": "https://simonwillison.net/2026/Sep/28/muse-ai-agent/"
     },
+    "3739c75d42509e077724db82d15840bb8a29d4ce": {
+      "kind": "Blog",
+      "sent_at": "2026-10-09T12:04:52.188794",
+      "source": "Anthropic Docs",
+      "title": "Claude Code Tutorials",
+      "url": "https://docs.anthropic.com/en/docs/claude-code/tutorials"
+    },
     "3889dbaf67e10d47681f7e1387d55c8fd910fa8b": {
       "kind": "Paper",
       "sent_at": "2026-09-23T12:06:19.094471",
@@ -640,6 +646,13 @@
       "title": "Just landed in the Neon CLI",
       "url": "https://neon.com/blog/just-landed-in-the-neon-cli"
     },
+    "4304f4222b60b9ef71816e4b547950784d5e836a": {
+      "kind": "Blog",
+      "sent_at": "2026-10-09T12:04:52.188794",
+      "source": "FastAPI Releases",
+      "title": "0.143.0",
+      "url": "https://github.com/fastapi/fastapi/releases/tag/0.143.0"
+    },
     "4312ac0d1289f58e8186f7b87a762fbc0757693e": {
       "kind": "Paper",
       "sent_at": "2026-08-27T12:09:26.449490",
@@ -674,13 +687,6 @@
       "source": "OpenAI",
       "title": "Introducing GPT-6 Sol and Luna",
       "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna"
-    },
-    "4b0e98d5d8ea06b4986f3947a926213c53dc8d89": {
-      "kind": "Blog",
-      "sent_at": "2026-08-24T12:06:03.904855",
-      "source": "Hacker News",
-      "title": "What Is a Harness?",
-      "url": "https://earendil.com/posts/what-is-a-harness/"
     },
     "4bc695297c2e15d251c913132d5383f5b3f62447": {
       "kind": "Blog",
@@ -856,6 +862,13 @@
       "source": "Neon Blog",
       "title": "How we systematically improved our reliability",
       "url": "https://neon.com/blog/how-we-systematically-improved-our-reliability"
+    },
+    "6b1143d290f2620e50f377c21a64ea6419d1e808": {
+      "kind": "Blog",
+      "sent_at": "2026-10-09T12:04:52.188794",
+      "source": "Hacker News",
+      "title": "Why isn't the industry freaking out about DeepSeek 4.1 Flash?",
+      "url": "https://www.dgt.is/blog/2026-10-07-deepseek-freek-out/"
     },
     "6bcfd1ac2890db2696f3da50fa67e5aefa04889a": {
       "kind": "Blog",
@@ -1347,13 +1360,6 @@
       "title": "Claude Opus 5.5",
       "url": "https://www.anthropic.com/claude-opus-5-5"
     },
-    "cfc3dba828c4a8fd4db9debc6efea32709f2ae7f": {
-      "kind": "Blog",
-      "sent_at": "2026-08-24T12:06:03.904855",
-      "source": "Simon Willison",
-      "title": "Quoting Drew Breunig",
-      "url": "https://simonwillison.net/2026/Aug/23/drew-breunig/"
-    },
     "d234b8974b81c6a4b2a07d88c19aad8756b8b779": {
       "kind": "Blog",
       "sent_at": "2026-09-10T12:08:06.867051",
@@ -1578,6 +1584,7 @@
     "https://blog.cloudflare.com/one-year-later-1111-interns/": "2026-10-06T12:06:05.076859",
     "https://blog.cloudflare.com/post-quantum-dnssec-1111/": "2026-09-11T12:08:35.817997",
     "https://blog.cloudflare.com/python-workers-ga/": "2026-09-22T12:05:07.666789",
+    "https://blog.cloudflare.com/radar-redesign/": "2026-10-09T12:04:52.188908",
     "https://blog.cloudflare.com/real-time-issue-detection/": "2026-10-01T12:06:07.829111",
     "https://blog.cloudflare.com/root-ksk-2024-rollover/": "2026-10-07T12:06:18.519687",
     "https://blog.cloudflare.com/saving-100-tb-of-ram-with-math/": "2026-09-19T12:06:29.356704",
@@ -1671,10 +1678,12 @@
     "https://openai.com/index/navier-stokes-solution": "2026-09-09T12:07:47.103026",
     "https://openai.com/index/new-chatgpt-ads-format-and-measurement": "2026-10-05T12:06:37.956034",
     "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense": "2026-09-24T12:06:34.844018",
+    "https://openai.com/index/oracle": "2026-10-09T12:04:52.188908",
     "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex": "2026-08-29T12:07:07.220267",
     "https://openai.com/index/path-to-astra": "2026-09-02T12:07:46.364695",
     "https://openai.com/index/paul-christiano-joins-openai-foundation-board": "2026-09-10T12:08:06.867270",
     "https://openai.com/index/playco-game-prototyping-with-astra": "2026-09-04T12:07:47.114718",
+    "https://openai.com/index/pollo-ai": "2026-10-09T12:04:52.188908",
     "https://openai.com/index/practical-guide-building-gpt-6": "2026-10-03T12:07:30.150185",
     "https://openai.com/index/proaction": "2026-09-26T12:05:49.135682",
     "https://openai.com/index/put-data-to-work": "2026-09-11T12:08:35.817997",
@@ -1682,6 +1691,7 @@
     "https://openai.com/index/reimagining-advertising-with-ai": "2026-09-17T12:13:02.409327",
     "https://openai.com/index/sam-altman-un-security-council-remarks": "2026-09-24T12:06:34.844018",
     "https://openai.com/index/sharing-ai-progress-in-mathematics": "2026-10-07T12:06:18.519687",
+    "https://openai.com/index/sophos": "2026-10-09T12:04:52.188908",
     "https://openai.com/index/supporting-california-bill-advance-ai-youth-safety": "2026-09-01T12:07:21.810485",
     "https://openai.com/index/supporting-independent-journalism-in-ukraine": "2026-09-07T12:08:41.637282",
     "https://openai.com/index/the-eternal-complement": "2026-10-02T12:07:26.758352",
@@ -1690,14 +1700,17 @@
     "https://openai.com/index/towards-safety-cases-for-frontier-ai-training": "2026-09-29T12:05:14.873169",
     "https://openai.com/index/two-years-of-openai-academy": "2026-09-24T12:06:34.844018",
     "https://openai.com/index/using-codex-chatgpt-to-search-for-new-antimicrobials": "2026-09-11T12:08:35.817997",
+    "https://www.anthropic.com/news/2026-usage-policy-update": "2026-10-09T12:04:52.188908",
     "https://www.anthropic.com/news/accenture-embedded-evaluation": "2026-09-20T12:05:02.833015",
     "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy": "2026-09-27T12:05:14.092935",
+    "https://www.anthropic.com/news/anthropic-cyber-mission": "2026-10-09T12:04:52.188908",
     "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system": "2026-09-27T12:05:14.092935",
     "https://www.anthropic.com/news/claude-frontier-academy": "2026-10-03T12:07:30.150185",
     "https://www.anthropic.com/news/claude-opus-5": "2026-09-13T12:07:17.595222",
     "https://www.anthropic.com/news/cyber-verification-program": "2026-10-07T12:06:18.519687",
     "https://www.anthropic.com/news/enterprise-frontier-safeguards": "2026-09-02T12:07:46.364695",
     "https://www.anthropic.com/news/expanding-support-for-scientists": "2026-08-28T12:07:21.900041",
+    "https://www.anthropic.com/news/genesis-mission-commitment": "2026-10-09T12:04:52.188908",
     "https://www.anthropic.com/news/improving-alignment-security-efforts": "2026-09-01T12:07:21.810485",
     "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards": "2026-09-27T12:05:14.092935",
     "https://www.anthropic.com/news/life-sciences-verification-program": "2026-09-20T12:05:02.833015",
