@@ -52,7 +52,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "7225cff402e9",
-      "last_seen_at": "2026-10-09T12:01:32.147061",
+      "last_seen_at": "2026-10-10T12:01:06.611950",
       "title": "Claude Code Overview",
       "updated_at": "2026-09-22T12:05:07.666618"
     },
@@ -178,7 +178,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "f136b93947db",
-      "last_seen_at": "2026-10-09T12:04:52.188794",
+      "last_seen_at": "2026-10-10T12:01:06.611950",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-10-09T12:04:52.188794"
     },
@@ -189,12 +189,15 @@
         "The Claude Platform release notes list changes to the Claude API, the client SDKs, and the Claude Console, newest first.",
         "For release notes on Claude Apps, see the Release notes for Claude Apps in the Claude Help Center .",
         "For updates to Claude Code, see the complete CHANGELOG.md in the claude-code repository.",
+        "October 9, 2026 \ue09a",
+        "You can now let a Claude Managed Agents agent use dynamic workflows , in beta with the managed-agents-2026-04-01 beta header. For work with many pieces, such as reviewing hundreds of documents, the agent can write a workflow. A workflow is a program that runs many agents in phases and combines their results. The server runs it in the background as a workflow run. To turn dynamic workflows on , set the agent's multiagent field to {\"type\": \"multiagent_20261001\", \"workflows\": {\"type\": \"enabled\"}} . To guide the agent, tell it in its system prompt when to start a run. Follow each run through workflow_run.* events on the session's event stream. See Workflow runs .",
         "October 8, 2026 \ue09a",
         "The Compliance API chat endpoints now also return chats from the unified Claude experience, in beta for Claude Enterprise organizations, with your existing Compliance Access Key. See Retrieve and delete chats, files, and projects .",
+        "The Compliance API can now download Claude Docs documents as Word files, in beta. See Retrieve files and artifacts .",
         "October 7, 2026 \ue09a",
         "We've lowered the price of prompt cache reads on Claude Sonnet 5.5 from $0.20 USD to $0.10 USD per million tokens: 0.05x the base input price instead of 0.1x. Cache writes and all other prices are unchanged. See Prompt caching pricing .",
         "We've launched Claude Haiku 5.5 ( claude-haiku-5-5 ), our most capable model tuned for high-volume and latency-sensitive work. It has a 1M token context window , 128k max output tokens, and adaptive thinking with the effort parameter . It's available on the Claude API, Claude in Amazon Bedrock , Claude Platform on AWS , Claude on Google Cloud , and Claude in Microsoft Foundry . See What's new in Claude Haiku 5.5 .",
-        "Code written for Claude Haiku 4.5 can break on Claude Haiku 5.5. Manual extended thinking ( budget_tokens ) returns a 400 error, and adaptive thinking is on by default, so a response can begin with thinking blocks. The same text also counts as more tokens. See the migration guide . For model-specific prompting patterns, see Prompting Claude Haiku 5.5 .",
+        "Code written for Claude Haiku 4.5 can break on Claude Haiku 5.5. Manual extended thinking ( budget_tokens ), the sampling parameters temperature , top_p , and top_k , and assistant message prefill can each return a 400 error. computer_20250124 also returns a 400 error: use the computer_toolset_20260801 toolset on the Claude API and Google Cloud, or computer_20251124 on Amazon Bedrock. A request that sends thinking blocks back after a change to system , tools , or earlier turns can also return a 400 error. On Amazon Bedrock, structured outputs aren't available for Claude Haiku 5.5. Adaptive thinking is on by default, so a response can begin with thinking blocks, and their text is omitted unless you set thinking.display to \"summarized\" . The same text also counts as more tokens. See the migration guide for each change. For model-specific prompting patterns, see Prompting Claude Haiku 5.5 .",
         "The Python and TypeScript SDKs now include classes, in beta, for the browser use tool and the computer use tool . You subclass one and write one method per tool against your own browser or desktop automation. The SDK runs the tool loop, the URL and file policies you set for the browser, and your approval callback. See Browser and computer use with the SDK toolsets .",
         "Claude Max and Team plans now include monthly API credits. To learn how to claim them, see API credits for Max and Team plans .",
         "In Claude Managed Agents, a cloud environment with limited networking now also applies its allowed_hosts to the web_search and web_fetch tools. A web_fetch call for a URL on a host that allowed_hosts does not match returns a url_not_allowed error result to the agent. web_search omits results from such hosts. When allowed_hosts lists no hosts, neither tool returns a page or a search result. allow_package_managers and allow_mcp_servers add no hosts for these tools. To let the tools reach a host, add it to allowed_hosts , which also opens it to the sandbox. unrestricted networking and self-hosted environments do not limit these tools. See Environment networking .",
@@ -340,15 +343,12 @@
         "We've retired the Claude Sonnet 4 model ( claude-sonnet-4-20250514 ) and the Claude Opus 4 model ( claude-opus-4-20250514 ). All requests to these models on the Claude API will now return an error. We recommend upgrading to Claude Sonnet 4.6 and Claude Opus 4.8 respectively. Researchers can request ongoing access through the External Researcher Access Program .",
         "June 11, 2026 \ue09a",
         "The code execution tool now supports code_execution_20260521 , which discloses the 90-second per-cell execution time limit in the tool description so Claude can budget long-running cells. No beta header is required.",
-        "The web search tool and web fetch tool now support web_search_20260318 and web_fetch_20260318 , adding a response_inclusion parameter to drop consumed result blocks from the API response for agentic workflows. No beta header is required.",
-        "June 10, 2026 \ue09a",
-        "The GET /v1/environments/{id}/work endpoint, which lists pending work for a self-hosted sandbox , is now available on Claude Platform on AWS . See IAM actions for Claude Platform on AWS for the GetEnvironment action that authorizes it.",
-        "June 9, 2026 \ue09a"
+        "The web search tool and web fetch tool now support web_search_20260318 and web_fetch_20260318 , adding a response_inclusion parameter to drop consumed result blocks from the API response for agentic workflows. No beta header is required."
       ],
-      "content_hash": "d3570cd07067",
-      "last_seen_at": "2026-10-09T12:01:32.147061",
+      "content_hash": "9294d8700e85",
+      "last_seen_at": "2026-10-10T12:04:47.946741",
       "title": "Anthropic Release Notes",
-      "updated_at": "2026-10-08T12:05:55.349327"
+      "updated_at": "2026-10-10T12:04:47.946741"
     }
   },
   "sent": {
@@ -632,13 +632,6 @@
       "title": "An Organizational Second Brain: Building an AI That Learns From Experts",
       "url": "https://engineering.fb.com/2026/09/02/ml-applications/organizational-second-brain-ai-learns-from-experts/"
     },
-    "4176b9ec21c881b9744dfc83916ffab22c8fdc5f": {
-      "kind": "Blog",
-      "sent_at": "2026-08-25T12:05:53.812983",
-      "source": "Neon Blog",
-      "title": "WAL + S3: Lakebase storage for the era of agents",
-      "url": "https://neon.com/blog/wal-s3-lakebase-storage-for-the-era-of-agents"
-    },
     "41b117726c0780e43396081dcd09313fe8d707a2": {
       "kind": "Blog",
       "sent_at": "2026-08-26T12:07:42.286686",
@@ -835,13 +828,6 @@
       "title": "Supabase is acquiring Turso",
       "url": "https://supabase.com/blog/supabase-is-acquiring-turso"
     },
-    "65aa628410909388f9e708af7ce1abf7e81de2b4": {
-      "kind": "Paper",
-      "sent_at": "2026-08-25T12:05:53.812983",
-      "source": "arXiv",
-      "title": "Signal or Noise? A Benchmark Study of Agent Skills in Web Development",
-      "url": "http://arxiv.org/abs/2608.23067v1"
-    },
     "6732541e6d4d360178ac2c74e0f1f8a87fe44cff": {
       "kind": "Blog",
       "sent_at": "2026-08-29T12:07:07.220173",
@@ -855,6 +841,13 @@
       "source": "OpenAI",
       "title": "How AI-native companies turn workflows into operating capability",
       "url": "https://openai.com/index/ai-native-company-workflows"
+    },
+    "6922db39f0c97919622ac1f690b98210bbf72f0a": {
+      "kind": "Blog",
+      "sent_at": "2026-10-10T12:04:47.946741",
+      "source": "HuggingFace",
+      "title": "Impactful scheduling for GPU clusters",
+      "url": "https://huggingface.co/blog/allenai/impactful-scheduling"
     },
     "69ac76234a777a99a252d105c0ac91a4afd68737": {
       "kind": "Blog",
@@ -968,6 +961,13 @@
       "title": "The problem is not AI code, but not knowing about system architecture or intent",
       "url": "https://www.ssp.sh/brain/the-problem-is-not-the-ai-code-but-nobody-knows-anything-anymore/"
     },
+    "7a90eeff233843f01ce4e49ece90c9564cae69fe": {
+      "kind": "Paper",
+      "sent_at": "2026-10-10T12:04:47.946741",
+      "source": "arXiv",
+      "title": "HarnessSQL: Harness-Native Training for SQL Agents in Realistic Database Environments",
+      "url": "http://arxiv.org/abs/2610.12274v1"
+    },
     "7dbbf4a2b76826944f04a59fc21ab2518815f3bc": {
       "kind": "Blog",
       "sent_at": "2026-09-15T12:07:57.999391",
@@ -1066,13 +1066,6 @@
       "title": "Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price war",
       "url": "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/"
     },
-    "8e452eebade16960f1224d0b801194d56291d4cb": {
-      "kind": "Paper",
-      "sent_at": "2026-08-25T12:05:53.812983",
-      "source": "arXiv",
-      "title": "SkillAlchemy: Open-World Agent Skill Creation",
-      "url": "http://arxiv.org/abs/2608.23417v1"
-    },
     "904a67322ad13c6cd1d7da5bb436a600e3bd29c6": {
       "kind": "Blog",
       "sent_at": "2026-10-03T12:07:30.150012",
@@ -1129,19 +1122,19 @@
       "title": "GPT-6 Astra: The next generation in intelligence for work",
       "url": "https://openai.com/index/gpt-6-astra-next-generation-work"
     },
+    "9a4e73807cc6a50b858174f9e9d8f2daefe9f92d": {
+      "kind": "Blog",
+      "sent_at": "2026-10-10T12:04:47.946741",
+      "source": "Hacker News",
+      "title": "Python 3.15",
+      "url": "https://www.python.org/downloads/release/python-3150/"
+    },
     "9e4cfc70ee9a221ea3481bd39441beec73e25e34": {
       "kind": "Blog",
       "sent_at": "2026-08-28T12:07:21.899909",
       "source": "Simon Willison",
       "title": "Breaking Claude Code Opus 5 Auto Mode",
       "url": "https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/"
-    },
-    "9f94e91d08fb1c643a56055794374a0e0e258672": {
-      "kind": "Blog",
-      "sent_at": "2026-08-25T12:05:53.812983",
-      "source": "Simon Willison",
-      "title": "llm-anthropic 0.27",
-      "url": "https://simonwillison.net/2026/Aug/24/llm-anthropic/"
     },
     "a4fd5b1aae5aae3b6db2b7ecdc9aa4ab09f052ba": {
       "kind": "Blog",
@@ -1282,6 +1275,13 @@
       "source": "Hacker News",
       "title": "Sonnet 5.5",
       "url": "https://www.anthropic.com/claude-sonnet-5-5"
+    },
+    "bd76ea32e318ee2dc9520a8629ea563afe4ecdc4": {
+      "kind": "Blog",
+      "sent_at": "2026-10-10T12:04:47.946741",
+      "source": "Anthropic Docs",
+      "title": "Anthropic Release Notes",
+      "url": "https://docs.anthropic.com/en/release-notes/overview"
     },
     "bef6b6fb4b741f1336f304a4ed0f04f3bbbe74f9": {
       "kind": "Blog",
@@ -1479,6 +1479,13 @@
       "title": "commit-rewriter 0.1",
       "url": "https://simonwillison.net/2026/Sep/14/commit-rewriter/"
     },
+    "e9b20ef847dc33fd9cd26f00c283dc9c398872e5": {
+      "kind": "Blog",
+      "sent_at": "2026-10-10T12:04:47.946741",
+      "source": "Hacker News",
+      "title": "Show HN: Let your AI agents paint big arrows, boxes and text on your screen",
+      "url": "https://github.com/franzenzenhofer/big-arrow-on-the-screen"
+    },
     "ea07db0088cf62d1b09504eb3df76040e0d46542": {
       "kind": "Paper",
       "sent_at": "2026-09-18T12:06:23.571978",
@@ -1570,12 +1577,13 @@
     "https://blog.cloudflare.com/cache-transcoding/": "2026-09-02T12:07:46.364695",
     "https://blog.cloudflare.com/casb-policies/": "2026-09-12T12:07:44.504914",
     "https://blog.cloudflare.com/clef-decision-models/": "2026-10-02T12:07:26.758352",
+    "https://blog.cloudflare.com/clef-faster-cheaper-multimodal/": "2026-10-10T12:04:47.946949",
     "https://blog.cloudflare.com/client-side-security-finds-4-malicious-campaigns/": "2026-09-17T12:13:02.409327",
-    "https://blog.cloudflare.com/cloudflare-blog-uses-emdash/": "2026-08-25T12:05:53.813101",
     "https://blog.cloudflare.com/cloudflare-certificate-authority/": "2026-09-30T12:05:59.362753",
     "https://blog.cloudflare.com/cloudflare-cf-cli-launch/": "2026-09-29T12:05:14.873169",
     "https://blog.cloudflare.com/cloudflares-2026-annual-founders-letter/": "2026-09-28T12:04:24.726468",
     "https://blog.cloudflare.com/containers-cross-tenant-vulnerability/": "2026-09-25T12:05:19.070930",
+    "https://blog.cloudflare.com/deno-joins-cloudflare/": "2026-10-10T12:04:47.946949",
     "https://blog.cloudflare.com/dns-cache-memory-optimization-1111/": "2026-08-28T12:07:21.900041",
     "https://blog.cloudflare.com/how-fast-is-the-web/": "2026-09-29T12:05:14.873169",
     "https://blog.cloudflare.com/introducing-adaptive-intelligence/": "2026-09-01T12:07:21.810485",
@@ -1598,6 +1606,7 @@
     "https://blog.cloudflare.com/workers-granular-authorization/": "2026-09-16T12:09:07.980580",
     "https://blog.cloudflare.com/workers-kv-instant/": "2026-10-02T12:07:26.758352",
     "https://blog.cloudflare.com/workers-module-registry-nodejs/": "2026-09-10T12:08:06.867270",
+    "https://blog.cloudflare.com/workers-on-demand-profiling/": "2026-10-10T12:04:47.946949",
     "https://claude.com/blog/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic": "2026-09-15T12:07:57.999528",
     "https://claude.com/blog/agents-you-can-coach-how-asana-builds-human-agent-teams-with-claude": "2026-09-30T12:05:59.362753",
     "https://claude.com/blog/artifacts-in-claude-code": "2026-09-19T12:06:29.356704",
@@ -1624,7 +1633,6 @@
     "https://claude.com/blog/cowork-is-now-claude": "2026-09-17T12:13:02.409327",
     "https://claude.com/blog/deploying-ai-from-pilot-to-production": "2026-09-17T12:13:02.409327",
     "https://claude.com/blog/giving-companies-more-control-over-their-ai-agents-with-nvidia": "2026-09-29T12:05:14.873169",
-    "https://claude.com/blog/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep": "2026-08-25T12:05:53.813101",
     "https://claude.com/blog/how-anthropic-employees-use-claude-tag": "2026-08-29T12:07:07.220267",
     "https://claude.com/blog/how-anthropics-sales-team-rebuilt-inbound-with-claude-managed-agents": "2026-10-01T12:06:07.829111",
     "https://claude.com/blog/how-coderabbit-power-digital-and-thoughtspot-scale-with-snowflake-and-vercel-on-claude-marketplace": "2026-09-24T12:06:34.844018",
@@ -1646,6 +1654,7 @@
     "https://openai.com/index/ai-policy-window": "2026-09-10T12:08:06.867270",
     "https://openai.com/index/albertsons-reimagining-retail": "2026-10-02T12:07:26.758352",
     "https://openai.com/index/an-alien-mind": "2026-09-07T12:08:41.637282",
+    "https://openai.com/index/asana-browser-agent": "2026-10-10T12:04:47.946949",
     "https://openai.com/index/atv-big-air-tour": "2026-09-03T12:07:26.434398",
     "https://openai.com/index/australian-youth-safety-blueprint": "2026-09-19T12:06:29.356704",
     "https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts": "2026-08-27T12:09:26.449619",
@@ -1655,12 +1664,10 @@
     "https://openai.com/index/daybreak-for-frontline-defenders": "2026-09-04T12:07:47.114718",
     "https://openai.com/index/devday-2026-recap": "2026-09-30T12:05:59.362753",
     "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign": "2026-10-01T12:06:07.829111",
-    "https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia": "2026-08-25T12:05:53.813101",
     "https://openai.com/index/eu-text-provenance": "2026-10-06T12:06:05.076859",
     "https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads": "2026-09-01T12:07:21.810485",
     "https://openai.com/index/expanding-our-presence-in-brazil": "2026-08-27T12:09:26.449619",
     "https://openai.com/index/fyxer": "2026-09-15T12:07:57.999528",
-    "https://openai.com/index/gpt-5-6-in-kiro": "2026-08-25T12:05:53.813101",
     "https://openai.com/index/grab-openai-ai-skills-southeast-asia": "2026-09-23T12:06:19.094636",
     "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life": "2026-09-17T12:13:02.409327",
     "https://openai.com/index/helping-small-businesses-put-ai-to-work": "2026-10-01T12:06:07.829111",
