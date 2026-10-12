@@ -52,7 +52,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "7225cff402e9",
-      "last_seen_at": "2026-10-11T12:01:15.298402",
+      "last_seen_at": "2026-10-12T12:02:27.932746",
       "title": "Claude Code Overview",
       "updated_at": "2026-09-22T12:05:07.666618"
     },
@@ -178,7 +178,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "f136b93947db",
-      "last_seen_at": "2026-10-11T12:01:15.298402",
+      "last_seen_at": "2026-10-12T12:02:27.932746",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-10-09T12:04:52.188794"
     },
@@ -346,7 +346,7 @@
         "The web search tool and web fetch tool now support web_search_20260318 and web_fetch_20260318 , adding a response_inclusion parameter to drop consumed result blocks from the API response for agentic workflows. No beta header is required."
       ],
       "content_hash": "9294d8700e85",
-      "last_seen_at": "2026-10-11T12:01:15.298402",
+      "last_seen_at": "2026-10-12T12:02:27.932746",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-10-10T12:04:47.946741"
     }
@@ -492,13 +492,6 @@
       "title": "DeepSeek launching v4.1 flash cheaper and more capable than v4 pro",
       "url": "https://news.ycombinator.com/item?id=49624603"
     },
-    "2acc979b3c884993fd34803ae662bd5c5bb54999": {
-      "kind": "Blog",
-      "sent_at": "2026-08-27T12:09:26.449490",
-      "source": "Booking.com Engineering",
-      "title": "Beyond the Dashboard: Accelerating Real-Time Intelligence in the Age of AI",
-      "url": "https://medium.com/booking-com-development/beyond-the-dashboard-accelerating-real-time-intelligence-in-the-age-of-ai-6f1f0f9c123f?source=rss----1c36c35f9c76---4"
-    },
     "2d3779b5f12457a0d7496bdf9b71f6299e648394": {
       "kind": "Blog",
       "sent_at": "2026-10-02T12:07:26.758217",
@@ -632,13 +625,6 @@
       "title": "0.143.0",
       "url": "https://github.com/fastapi/fastapi/releases/tag/0.143.0"
     },
-    "4312ac0d1289f58e8186f7b87a762fbc0757693e": {
-      "kind": "Paper",
-      "sent_at": "2026-08-27T12:09:26.449490",
-      "source": "arXiv",
-      "title": "EVOMAL: Self-Poisoning in Self-Evolving Coding Agents",
-      "url": "http://arxiv.org/abs/2608.25776v1"
-    },
     "44e1e6cccf323e33fe26f82ac00919f56b7e0c9c": {
       "kind": "Blog",
       "sent_at": "2026-10-03T12:07:30.150012",
@@ -715,13 +701,6 @@
       "source": "Neon Blog",
       "title": "Claimable Neon: Provisioned by agents, claimed by humans",
       "url": "https://neon.com/blog/an-agent-provisions-a-neon-backend-a-human-claims-it-later"
-    },
-    "57c50badf1a390fba655f151156af4e5e87025c9": {
-      "kind": "Blog",
-      "sent_at": "2026-08-27T12:09:26.449490",
-      "source": "AWS Architecture Blog",
-      "title": "Closing the AI agent trust gap with graduated autonomy",
-      "url": "https://aws.amazon.com/blogs/architecture/closing-the-ai-agent-trust-gap-with-graduated-autonomy/"
     },
     "5975f6bd29c7d2245aca5231af2a0ee47db040c4": {
       "kind": "Blog",
@@ -918,13 +897,6 @@
       "source": "Google DeepMind",
       "title": "Piloting the world's first double-blind AI evaluations",
       "url": "https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/"
-    },
-    "77d7fea8f6ba245152a5b5486a8f080e90729aac": {
-      "kind": "Paper",
-      "sent_at": "2026-08-27T12:09:26.449490",
-      "source": "arXiv",
-      "title": "Trace Integrity for LLM Data Agents: A Vision for Auditable Structured Reasoning in Real-World Systems",
-      "url": "http://arxiv.org/abs/2608.26036v1"
     },
     "77e24a0e6536dc3a837f920307c9e9057d7d0932": {
       "kind": "Paper",
@@ -1290,13 +1262,6 @@
       "title": "AutoCompact: Learning When to Compact Context in Long-Horizon Coding Agents",
       "url": "http://arxiv.org/abs/2610.02163v1"
     },
-    "c6903e2dfd4bf43ab962c667f7418c8f430c8c55": {
-      "kind": "Blog",
-      "sent_at": "2026-08-27T12:09:26.449490",
-      "source": "MIT Tech Review",
-      "title": "The inside story on why OpenAI agents hacked Hugging Face",
-      "url": "https://www.technologyreview.com/2026/08/26/1143013/the-inside-story-on-why-openai-agents-hacked-hugging-face/"
-    },
     "cab7f0aa99208c248d3f76c0b0b50698b336897f": {
       "kind": "Blog",
       "sent_at": "2026-09-18T12:06:23.571978",
@@ -1599,14 +1564,12 @@
     "https://claude.com/blog/claude-for-government-is-now-generally-available": "2026-10-01T12:06:07.829111",
     "https://claude.com/blog/claude-for-small-business-launches-new-workflows-integrations-and-training-programs": "2026-09-16T12:09:07.980580",
     "https://claude.com/blog/claude-for-teachers-now-available-for-schools-and-districts": "2026-08-29T12:07:07.220267",
-    "https://claude.com/blog/claude-in-chrome-generally-available": "2026-08-27T12:09:26.449619",
     "https://claude.com/blog/claude-managed-agents-memory": "2026-09-11T12:08:35.817997",
     "https://claude.com/blog/claude-managed-agents-updates": "2026-09-10T12:08:06.867270",
     "https://claude.com/blog/claude-marketplace": "2026-09-24T12:06:34.844018",
     "https://claude.com/blog/claude-opus-5-5-built-for-coding-sessions-that-use-more-context": "2026-09-25T12:05:19.070930",
     "https://claude.com/blog/claude-tag-now-supports-personal-connectors-in-channels": "2026-09-25T12:05:19.070930",
     "https://claude.com/blog/connectors-for-everyday-life": "2026-09-11T12:08:35.817997",
-    "https://claude.com/blog/cowork-built-in-browser": "2026-08-27T12:09:26.449619",
     "https://claude.com/blog/cowork-is-now-claude": "2026-09-17T12:13:02.409327",
     "https://claude.com/blog/deploying-ai-from-pilot-to-production": "2026-09-17T12:13:02.409327",
     "https://claude.com/blog/giving-companies-more-control-over-their-ai-agents-with-nvidia": "2026-09-29T12:05:14.873169",
@@ -1616,7 +1579,6 @@
     "https://claude.com/blog/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk": "2026-10-06T12:06:05.076859",
     "https://claude.com/blog/how-healthcare-organizations-use-claude-tag": "2026-09-15T12:07:57.999528",
     "https://claude.com/blog/how-to-prepare-for-ai-driven-code-modernization-projects": "2026-09-24T12:06:34.844018",
-    "https://claude.com/blog/how-warp-builds-self-improving-agents-on-claude": "2026-08-27T12:09:26.449619",
     "https://claude.com/blog/new-in-claude-managed-agents": "2026-09-10T12:08:06.867270",
     "https://claude.com/blog/preparing-your-security-program-for-ai-accelerated-offense": "2026-09-12T12:07:44.504914",
     "https://claude.com/blog/projects-redesigned": "2026-09-18T12:06:23.572212",
@@ -1634,7 +1596,6 @@
     "https://openai.com/index/asana-browser-agent": "2026-10-10T12:04:47.946949",
     "https://openai.com/index/atv-big-air-tour": "2026-09-03T12:07:26.434398",
     "https://openai.com/index/australian-youth-safety-blueprint": "2026-09-19T12:06:29.356704",
-    "https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts": "2026-08-27T12:09:26.449619",
     "https://openai.com/index/building-standards-next-phase-ai": "2026-09-22T12:05:07.666789",
     "https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources": "2026-09-02T12:07:46.364695",
     "https://openai.com/index/cooley-gopublic": "2026-09-18T12:06:23.572212",
@@ -1643,7 +1604,6 @@
     "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign": "2026-10-01T12:06:07.829111",
     "https://openai.com/index/eu-text-provenance": "2026-10-06T12:06:05.076859",
     "https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads": "2026-09-01T12:07:21.810485",
-    "https://openai.com/index/expanding-our-presence-in-brazil": "2026-08-27T12:09:26.449619",
     "https://openai.com/index/fyxer": "2026-09-15T12:07:57.999528",
     "https://openai.com/index/grab-openai-ai-skills-southeast-asia": "2026-09-23T12:06:19.094636",
     "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life": "2026-09-17T12:13:02.409327",
