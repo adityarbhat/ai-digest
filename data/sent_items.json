@@ -52,7 +52,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "7225cff402e9",
-      "last_seen_at": "2026-10-12T12:02:27.932746",
+      "last_seen_at": "2026-10-13T12:01:49.658485",
       "title": "Claude Code Overview",
       "updated_at": "2026-09-22T12:05:07.666618"
     },
@@ -178,7 +178,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "f136b93947db",
-      "last_seen_at": "2026-10-12T12:02:27.932746",
+      "last_seen_at": "2026-10-13T12:01:49.658485",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-10-09T12:04:52.188794"
     },
@@ -346,7 +346,7 @@
         "The web search tool and web fetch tool now support web_search_20260318 and web_fetch_20260318 , adding a response_inclusion parameter to drop consumed result blocks from the API response for agentic workflows. No beta header is required."
       ],
       "content_hash": "9294d8700e85",
-      "last_seen_at": "2026-10-12T12:02:27.932746",
+      "last_seen_at": "2026-10-13T12:01:49.658485",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-10-10T12:04:47.946741"
     }
@@ -632,13 +632,6 @@
       "title": "Generate embeddings with Neon AI Gateway",
       "url": "https://neon.com/blog/generate-embeddings-with-neon-ai-gateway"
     },
-    "46dd39aabde13c536ae58e7c6929ddc8b1da8a9d": {
-      "kind": "Blog",
-      "sent_at": "2026-08-28T12:07:21.899909",
-      "source": "Martin Fowler",
-      "title": "Making Your Data Ready for Agentic AI",
-      "url": "https://martinfowler.com/articles/making-data-ready-for-agentic-ai.html"
-    },
     "49ee168bb532dec5e9e56fea4c5b8241cb5d442c": {
       "kind": "Blog",
       "sent_at": "2026-09-20T12:05:02.832939",
@@ -891,13 +884,6 @@
       "title": "Parallel cut research time and cost in half with GPT\u20116 Astra",
       "url": "https://openai.com/index/parallel-cuts-time-and-cost-with-astra"
     },
-    "756244098b69232a7cc2a26da66c18a99da73b59": {
-      "kind": "Blog",
-      "sent_at": "2026-08-28T12:07:21.899909",
-      "source": "Google DeepMind",
-      "title": "Piloting the world's first double-blind AI evaluations",
-      "url": "https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/"
-    },
     "77e24a0e6536dc3a837f920307c9e9057d7d0932": {
       "kind": "Paper",
       "sent_at": "2026-09-22T12:05:07.666618",
@@ -1087,13 +1073,6 @@
       "title": "Python 3.15",
       "url": "https://www.python.org/downloads/release/python-3150/"
     },
-    "9e4cfc70ee9a221ea3481bd39441beec73e25e34": {
-      "kind": "Blog",
-      "sent_at": "2026-08-28T12:07:21.899909",
-      "source": "Simon Willison",
-      "title": "Breaking Claude Code Opus 5 Auto Mode",
-      "url": "https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/"
-    },
     "a4fd5b1aae5aae3b6db2b7ecdc9aa4ab09f052ba": {
       "kind": "Blog",
       "sent_at": "2026-09-02T12:07:46.364496",
@@ -1114,13 +1093,6 @@
       "source": "Hacker News",
       "title": "DeepSeek v4.1 Flash",
       "url": "https://twitter.com/deepseek_ai/status/2097930608790167907"
-    },
-    "a98b574014362123a0d6c4901df005f33f048653": {
-      "kind": "Paper",
-      "sent_at": "2026-08-28T12:07:21.899909",
-      "source": "arXiv",
-      "title": "Persona-Execution Separation: An Architecture Pattern for Evolving LLM Agents under Execution Audit",
-      "url": "http://arxiv.org/abs/2608.27427v1"
     },
     "aba00e8df96919ebca6e5a07a8d78c4372a90b35": {
       "kind": "Blog",
@@ -1247,13 +1219,6 @@
       "source": "Anthropic Docs",
       "title": "Anthropic Release Notes",
       "url": "https://docs.anthropic.com/en/release-notes/overview"
-    },
-    "bf06e3e99d680ee7c4d6561cb73b2778eb7441ad": {
-      "kind": "Paper",
-      "sent_at": "2026-08-28T12:07:21.899909",
-      "source": "arXiv",
-      "title": "FaulT-Bench: Towards Benchmarking Network Troubleshooting LLM Agents under Unreliable User Tickets",
-      "url": "http://arxiv.org/abs/2608.27021v1"
     },
     "c0f733a8ab7123886692872609c2d3bf761b7bec": {
       "kind": "Paper",
@@ -1528,7 +1493,6 @@
     "https://blog.cloudflare.com/cloudflares-2026-annual-founders-letter/": "2026-09-28T12:04:24.726468",
     "https://blog.cloudflare.com/containers-cross-tenant-vulnerability/": "2026-09-25T12:05:19.070930",
     "https://blog.cloudflare.com/deno-joins-cloudflare/": "2026-10-10T12:04:47.946949",
-    "https://blog.cloudflare.com/dns-cache-memory-optimization-1111/": "2026-08-28T12:07:21.900041",
     "https://blog.cloudflare.com/how-fast-is-the-web/": "2026-09-29T12:05:14.873169",
     "https://blog.cloudflare.com/introducing-adaptive-intelligence/": "2026-09-01T12:07:21.810485",
     "https://blog.cloudflare.com/introducing-web-search-api/": "2026-10-03T12:07:30.150185",
@@ -1542,6 +1506,7 @@
     "https://blog.cloudflare.com/saving-100-tb-of-ram-with-math/": "2026-09-19T12:06:29.356704",
     "https://blog.cloudflare.com/sovereign-ai-choice-one-year-later/": "2026-10-02T12:07:26.758352",
     "https://blog.cloudflare.com/streamline/": "2026-10-03T12:07:30.150185",
+    "https://blog.cloudflare.com/transformers-on-logpush/": "2026-10-13T12:05:28.453427",
     "https://blog.cloudflare.com/turnstile-spin/": "2026-09-26T12:05:49.135682",
     "https://blog.cloudflare.com/vary-support/": "2026-09-23T12:06:19.094636",
     "https://blog.cloudflare.com/vinext-nextjs-on-vite/": "2026-09-29T12:05:14.873169",
@@ -1650,13 +1615,10 @@
     "https://www.anthropic.com/news/claude-opus-5": "2026-09-13T12:07:17.595222",
     "https://www.anthropic.com/news/cyber-verification-program": "2026-10-07T12:06:18.519687",
     "https://www.anthropic.com/news/enterprise-frontier-safeguards": "2026-09-02T12:07:46.364695",
-    "https://www.anthropic.com/news/expanding-support-for-scientists": "2026-08-28T12:07:21.900041",
     "https://www.anthropic.com/news/genesis-mission-commitment": "2026-10-09T12:04:52.188908",
     "https://www.anthropic.com/news/improving-alignment-security-efforts": "2026-09-01T12:07:21.810485",
     "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards": "2026-09-27T12:05:14.092935",
     "https://www.anthropic.com/news/life-sciences-verification-program": "2026-09-20T12:05:02.833015",
-    "https://www.anthropic.com/news/model-hardware-standard-research-preview": "2026-08-28T12:07:21.900041",
-    "https://www.anthropic.com/news/position-open-weights-models": "2026-09-13T12:07:17.595222",
-    "https://www.anthropic.com/news/wellbeing-research-grants": "2026-08-28T12:07:21.900041"
+    "https://www.anthropic.com/news/position-open-weights-models": "2026-09-13T12:07:17.595222"
   }
 }
