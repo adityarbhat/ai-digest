@@ -52,7 +52,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "7225cff402e9",
-      "last_seen_at": "2026-10-13T12:01:49.658485",
+      "last_seen_at": "2026-10-14T12:01:45.902624",
       "title": "Claude Code Overview",
       "updated_at": "2026-09-22T12:05:07.666618"
     },
@@ -178,7 +178,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "f136b93947db",
-      "last_seen_at": "2026-10-13T12:01:49.658485",
+      "last_seen_at": "2026-10-14T12:01:45.902624",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-10-09T12:04:52.188794"
     },
@@ -346,7 +346,7 @@
         "The web search tool and web fetch tool now support web_search_20260318 and web_fetch_20260318 , adding a response_inclusion parameter to drop consumed result blocks from the API response for agentic workflows. No beta header is required."
       ],
       "content_hash": "9294d8700e85",
-      "last_seen_at": "2026-10-13T12:01:49.658485",
+      "last_seen_at": "2026-10-14T12:01:45.902624",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-10-10T12:04:47.946741"
     }
@@ -786,13 +786,6 @@
       "title": "Supabase is acquiring Turso",
       "url": "https://supabase.com/blog/supabase-is-acquiring-turso"
     },
-    "6732541e6d4d360178ac2c74e0f1f8a87fe44cff": {
-      "kind": "Blog",
-      "sent_at": "2026-08-29T12:07:07.220173",
-      "source": "Anthropic Docs",
-      "title": "Claude Code Overview",
-      "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
-    },
     "68fafb22b3d2a0d863b3926cee4595a13d2c97c1": {
       "kind": "Blog",
       "sent_at": "2026-09-02T12:07:46.364496",
@@ -912,6 +905,13 @@
       "title": "HarnessSQL: Harness-Native Training for SQL Agents in Realistic Database Environments",
       "url": "http://arxiv.org/abs/2610.12274v1"
     },
+    "7d0a2e18d7f0fcc299c3f791e9df3e27b75329e7": {
+      "kind": "Paper",
+      "sent_at": "2026-10-14T12:05:52.861839",
+      "source": "arXiv",
+      "title": "Lost in Implicit Routing: How LLM Agents Fail to Load Relevant Skills at Scale",
+      "url": "http://arxiv.org/abs/2610.18522v1"
+    },
     "7dbbf4a2b76826944f04a59fc21ab2518815f3bc": {
       "kind": "Blog",
       "sent_at": "2026-09-15T12:07:57.999391",
@@ -975,13 +975,6 @@
       "title": "Anthropic Release Notes",
       "url": "https://docs.anthropic.com/en/release-notes/overview"
     },
-    "82e10891687d4b94de2c79713617f714028c1c3b": {
-      "kind": "Paper",
-      "sent_at": "2026-08-29T12:07:07.220173",
-      "source": "arXiv",
-      "title": "When Tool Outputs Become Commands: Separating Action Induction from Runtime Authorization in Tool-Augmented LLM Agents",
-      "url": "http://arxiv.org/abs/2608.27146v1"
-    },
     "84c11c83e20371a942c5ac09cf6ec103b3cdf97a": {
       "kind": "Blog",
       "sent_at": "2026-10-04T12:05:40.601446",
@@ -1009,6 +1002,13 @@
       "source": "Simon Willison",
       "title": "Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price war",
       "url": "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/"
+    },
+    "8e91162d4765133a3adbaca8c8bfd53ca2132656": {
+      "kind": "Blog",
+      "sent_at": "2026-10-14T12:05:52.861839",
+      "source": "Simon Willison",
+      "title": "Quoting Geoffrey Huntley",
+      "url": "https://simonwillison.net/2026/Oct/13/geoffrey-huntley/"
     },
     "904a67322ad13c6cd1d7da5bb436a600e3bd29c6": {
       "kind": "Blog",
@@ -1072,6 +1072,13 @@
       "source": "Hacker News",
       "title": "Python 3.15",
       "url": "https://www.python.org/downloads/release/python-3150/"
+    },
+    "9ada4a62ecb9b7c7c2eff247b2ddd42c1108493d": {
+      "kind": "Paper",
+      "sent_at": "2026-10-14T12:05:52.861839",
+      "source": "arXiv",
+      "title": "ReTerm: Recovery Training for Self-Improving Terminal Agents",
+      "url": "http://arxiv.org/abs/2610.18484v1"
     },
     "a4fd5b1aae5aae3b6db2b7ecdc9aa4ab09f052ba": {
       "kind": "Blog",
@@ -1226,6 +1233,13 @@
       "source": "arXiv",
       "title": "AutoCompact: Learning When to Compact Context in Long-Horizon Coding Agents",
       "url": "http://arxiv.org/abs/2610.02163v1"
+    },
+    "c68818edc729900358c9bfc0ee2feff22ab2fd9d": {
+      "kind": "Blog",
+      "sent_at": "2026-10-14T12:05:52.861839",
+      "source": "Supabase Blog",
+      "title": "Declarative Schemas 2.0 with pg-delta",
+      "url": "https://supabase.com/blog/declarative-schemas-2-0-pg-delta"
     },
     "cab7f0aa99208c248d3f76c0b0b50698b336897f": {
       "kind": "Blog",
@@ -1416,6 +1430,13 @@
       "title": "Anthropic Release Notes",
       "url": "https://docs.anthropic.com/en/release-notes/overview"
     },
+    "ef0767233482bedbcea392b3742271da92c2b283": {
+      "kind": "Blog",
+      "sent_at": "2026-10-14T12:05:52.861839",
+      "source": "Supabase Blog",
+      "title": "Ship changes to your Supabase backend with Grok Bot",
+      "url": "https://supabase.com/blog/ship-changes-to-your-supabase-backend-with-grok-bot"
+    },
     "efc66d953fc0a7a329ebd8425c02195d046c7ca5": {
       "kind": "Blog",
       "sent_at": "2026-09-19T12:06:29.356523",
@@ -1465,6 +1486,13 @@
       "title": "Autoscaling Lakebase Postgres",
       "url": "https://neon.com/blog/autoscaling-lakebase-postgres"
     },
+    "fa6d58caca0a3b68f880454140c7138a7e07ad83": {
+      "kind": "Blog",
+      "sent_at": "2026-10-14T12:05:52.861839",
+      "source": "Martin Fowler",
+      "title": "Are Harnesses Worth the Cost?",
+      "url": "https://martinfowler.com/articles/are-harnesses-worth-the-cost.html"
+    },
     "fc9210fd3ec785442344294908c03cfec6333bd2": {
       "kind": "Blog",
       "sent_at": "2026-09-02T12:07:46.364496",
@@ -1482,7 +1510,6 @@
     "https://blog.cloudflare.com/auto-router/": "2026-10-01T12:06:07.829111",
     "https://blog.cloudflare.com/automatic-key-exchange-for-origins/": "2026-09-09T12:07:47.103026",
     "https://blog.cloudflare.com/birthday-week-2026-wrap-up/": "2026-10-06T12:06:05.076859",
-    "https://blog.cloudflare.com/botbase-for-operators/": "2026-08-29T12:07:07.220267",
     "https://blog.cloudflare.com/cache-transcoding/": "2026-09-02T12:07:46.364695",
     "https://blog.cloudflare.com/casb-policies/": "2026-09-12T12:07:44.504914",
     "https://blog.cloudflare.com/clef-decision-models/": "2026-10-02T12:07:26.758352",
@@ -1492,6 +1519,7 @@
     "https://blog.cloudflare.com/cloudflare-cf-cli-launch/": "2026-09-29T12:05:14.873169",
     "https://blog.cloudflare.com/cloudflares-2026-annual-founders-letter/": "2026-09-28T12:04:24.726468",
     "https://blog.cloudflare.com/containers-cross-tenant-vulnerability/": "2026-09-25T12:05:19.070930",
+    "https://blog.cloudflare.com/d1-control-plane/": "2026-10-14T12:05:52.861992",
     "https://blog.cloudflare.com/deno-joins-cloudflare/": "2026-10-10T12:04:47.946949",
     "https://blog.cloudflare.com/how-fast-is-the-web/": "2026-09-29T12:05:14.873169",
     "https://blog.cloudflare.com/introducing-adaptive-intelligence/": "2026-09-01T12:07:21.810485",
@@ -1502,6 +1530,7 @@
     "https://blog.cloudflare.com/python-workers-ga/": "2026-09-22T12:05:07.666789",
     "https://blog.cloudflare.com/radar-redesign/": "2026-10-09T12:04:52.188908",
     "https://blog.cloudflare.com/real-time-issue-detection/": "2026-10-01T12:06:07.829111",
+    "https://blog.cloudflare.com/rewinding-the-exponential/": "2026-10-14T12:05:52.861992",
     "https://blog.cloudflare.com/root-ksk-2024-rollover/": "2026-10-07T12:06:18.519687",
     "https://blog.cloudflare.com/saving-100-tb-of-ram-with-math/": "2026-09-19T12:06:29.356704",
     "https://blog.cloudflare.com/sovereign-ai-choice-one-year-later/": "2026-10-02T12:07:26.758352",
@@ -1528,7 +1557,6 @@
     "https://claude.com/blog/claude-for-foundation-models": "2026-09-10T12:08:06.867270",
     "https://claude.com/blog/claude-for-government-is-now-generally-available": "2026-10-01T12:06:07.829111",
     "https://claude.com/blog/claude-for-small-business-launches-new-workflows-integrations-and-training-programs": "2026-09-16T12:09:07.980580",
-    "https://claude.com/blog/claude-for-teachers-now-available-for-schools-and-districts": "2026-08-29T12:07:07.220267",
     "https://claude.com/blog/claude-managed-agents-memory": "2026-09-11T12:08:35.817997",
     "https://claude.com/blog/claude-managed-agents-updates": "2026-09-10T12:08:06.867270",
     "https://claude.com/blog/claude-marketplace": "2026-09-24T12:06:34.844018",
@@ -1538,7 +1566,6 @@
     "https://claude.com/blog/cowork-is-now-claude": "2026-09-17T12:13:02.409327",
     "https://claude.com/blog/deploying-ai-from-pilot-to-production": "2026-09-17T12:13:02.409327",
     "https://claude.com/blog/giving-companies-more-control-over-their-ai-agents-with-nvidia": "2026-09-29T12:05:14.873169",
-    "https://claude.com/blog/how-anthropic-employees-use-claude-tag": "2026-08-29T12:07:07.220267",
     "https://claude.com/blog/how-anthropics-sales-team-rebuilt-inbound-with-claude-managed-agents": "2026-10-01T12:06:07.829111",
     "https://claude.com/blog/how-coderabbit-power-digital-and-thoughtspot-scale-with-snowflake-and-vercel-on-claude-marketplace": "2026-09-24T12:06:34.844018",
     "https://claude.com/blog/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk": "2026-10-06T12:06:05.076859",
@@ -1574,6 +1601,7 @@
     "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life": "2026-09-17T12:13:02.409327",
     "https://openai.com/index/helping-small-businesses-put-ai-to-work": "2026-10-01T12:06:07.829111",
     "https://openai.com/index/higgsfield-from-prompt-to-production-with-astra": "2026-09-22T12:05:07.666789",
+    "https://openai.com/index/higgsfield-longer-videos-voice": "2026-10-14T12:05:52.861992",
     "https://openai.com/index/how-to-connect-ai-usage-to-business-value": "2026-09-17T12:13:02.409327",
     "https://openai.com/index/how-we-will-do-better-for-australia": "2026-09-29T12:05:14.873169",
     "https://openai.com/index/introducing-chatgpt-financial-services": "2026-09-11T12:08:35.817997",
@@ -1586,7 +1614,6 @@
     "https://openai.com/index/new-chatgpt-ads-format-and-measurement": "2026-10-05T12:06:37.956034",
     "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense": "2026-09-24T12:06:34.844018",
     "https://openai.com/index/oracle": "2026-10-09T12:04:52.188908",
-    "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex": "2026-08-29T12:07:07.220267",
     "https://openai.com/index/path-to-astra": "2026-09-02T12:07:46.364695",
     "https://openai.com/index/paul-christiano-joins-openai-foundation-board": "2026-09-10T12:08:06.867270",
     "https://openai.com/index/playco-game-prototyping-with-astra": "2026-09-04T12:07:47.114718",
@@ -1602,6 +1629,7 @@
     "https://openai.com/index/supporting-california-bill-advance-ai-youth-safety": "2026-09-01T12:07:21.810485",
     "https://openai.com/index/supporting-independent-journalism-in-ukraine": "2026-09-07T12:08:41.637282",
     "https://openai.com/index/the-eternal-complement": "2026-10-02T12:07:26.758352",
+    "https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic": "2026-10-14T12:05:52.861992",
     "https://openai.com/index/the-work-now-within-reach": "2026-09-09T12:07:47.103026",
     "https://openai.com/index/towards-safety-cases-for-frontier-ai-training": "2026-09-29T12:05:14.873169",
     "https://openai.com/index/two-years-of-openai-academy": "2026-09-24T12:06:34.844018",
@@ -1619,6 +1647,7 @@
     "https://www.anthropic.com/news/improving-alignment-security-efforts": "2026-09-01T12:07:21.810485",
     "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards": "2026-09-27T12:05:14.092935",
     "https://www.anthropic.com/news/life-sciences-verification-program": "2026-09-20T12:05:02.833015",
-    "https://www.anthropic.com/news/position-open-weights-models": "2026-09-13T12:07:17.595222"
+    "https://www.anthropic.com/news/position-open-weights-models": "2026-09-13T12:07:17.595222",
+    "https://www.anthropic.com/news/singapore-office-opening": "2026-10-14T12:05:52.861992"
   }
 }
