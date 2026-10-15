@@ -52,7 +52,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "7225cff402e9",
-      "last_seen_at": "2026-10-14T12:01:45.902624",
+      "last_seen_at": "2026-10-15T12:01:14.888835",
       "title": "Claude Code Overview",
       "updated_at": "2026-09-22T12:05:07.666618"
     },
@@ -178,7 +178,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "f136b93947db",
-      "last_seen_at": "2026-10-14T12:01:45.902624",
+      "last_seen_at": "2026-10-15T12:01:14.888835",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-10-09T12:04:52.188794"
     },
@@ -189,6 +189,9 @@
         "The Claude Platform release notes list changes to the Claude API, the client SDKs, and the Claude Console, newest first.",
         "For release notes on Claude Apps, see the Release notes for Claude Apps in the Claude Help Center .",
         "For updates to Claude Code, see the complete CHANGELOG.md in the claude-code repository.",
+        "October 14, 2026 \ue09a",
+        "We've launched OpenTelemetry export in beta, so you can trace Messages API requests and Claude Managed Agents sessions in your observability backend. The Claude SDK emits spans in Python, TypeScript, C#, Go, Java, PHP, and Ruby. To get spans from the API, add an OpenTelemetry destination in the Claude Console.",
+        "Claude Managed Agents scheduled deployments are now available on Claude Platform on AWS .",
         "October 9, 2026 \ue09a",
         "You can now let a Claude Managed Agents agent use dynamic workflows , in beta with the managed-agents-2026-04-01 beta header. For work with many pieces, such as reviewing hundreds of documents, the agent can write a workflow. A workflow is a program that runs many agents in phases and combines their results. The server runs it in the background as a workflow run. To turn dynamic workflows on , set the agent's multiagent field to {\"type\": \"multiagent_20261001\", \"workflows\": {\"type\": \"enabled\"}} . To guide the agent, tell it in its system prompt when to start a run. Follow each run through workflow_run.* events on the session's event stream. See Workflow runs .",
         "October 8, 2026 \ue09a",
@@ -340,15 +343,12 @@
         "June 18, 2026 \ue09a",
         "The Python, TypeScript, Go, Java, Ruby, PHP, and C# SDKs now include support for code_execution_20260120 , the code execution tool version that adds REPL state persistence and is the minimum version for programmatic tool calling . To adopt it, set the tool's type to code_execution_20260120 ; no beta header is required. It's available on Claude Fable 5, Claude Mythos 5, Claude Opus 4.5 and newer, and Claude Sonnet 4.5 and newer; see the code execution tool's Compatibility section.",
         "June 15, 2026 \ue09a",
-        "We've retired the Claude Sonnet 4 model ( claude-sonnet-4-20250514 ) and the Claude Opus 4 model ( claude-opus-4-20250514 ). All requests to these models on the Claude API will now return an error. We recommend upgrading to Claude Sonnet 4.6 and Claude Opus 4.8 respectively. Researchers can request ongoing access through the External Researcher Access Program .",
-        "June 11, 2026 \ue09a",
-        "The code execution tool now supports code_execution_20260521 , which discloses the 90-second per-cell execution time limit in the tool description so Claude can budget long-running cells. No beta header is required.",
-        "The web search tool and web fetch tool now support web_search_20260318 and web_fetch_20260318 , adding a response_inclusion parameter to drop consumed result blocks from the API response for agentic workflows. No beta header is required."
+        "We've retired the Claude Sonnet 4 model ( claude-sonnet-4-20250514 ) and the Claude Opus 4 model ( claude-opus-4-20250514 ). All requests to these models on the Claude API will now return an error. We recommend upgrading to Claude Sonnet 4.6 and Claude Opus 4.8 respectively. Researchers can request ongoing access through the External Researcher Access Program ."
       ],
-      "content_hash": "9294d8700e85",
-      "last_seen_at": "2026-10-14T12:01:45.902624",
+      "content_hash": "69610cc04cda",
+      "last_seen_at": "2026-10-15T12:05:43.021655",
       "title": "Anthropic Release Notes",
-      "updated_at": "2026-10-10T12:04:47.946741"
+      "updated_at": "2026-10-15T12:05:43.021655"
     }
   },
   "sent": {
@@ -372,6 +372,13 @@
       "source": "Dropbox Tech",
       "title": "Evolving our calendar assistant Reclaim to be AI-native without starting over",
       "url": "https://dropbox.tech/machine-learning/evolving-calendar-assistant-reclaim-to-be-ai-native"
+    },
+    "126dcf4e90f5febc71e566049ff22f3d1420c550": {
+      "kind": "Paper",
+      "sent_at": "2026-10-15T12:05:43.021655",
+      "source": "arXiv",
+      "title": "Maximising Transparency in Context Compaction Improves Retention of Facts and Commitments for Lightweight Coding Agents",
+      "url": "http://arxiv.org/abs/2610.20116v1"
     },
     "1314ca6a47f2fd06752fba9e8a2cb1e782b4197f": {
       "kind": "Blog",
@@ -463,6 +470,13 @@
       "source": "HuggingFace",
       "title": "AutoSynthData: Generating Training Data for Enterprise Agents",
       "url": "https://huggingface.co/blog/ServiceNow-AI/autosynthdata"
+    },
+    "254c3e67d3dfc8b6437cc43d33afcde858c64ee7": {
+      "kind": "Blog",
+      "sent_at": "2026-10-15T12:05:43.021655",
+      "source": "GitHub Engineering",
+      "title": "From 2,500 requests to 24: Rebuilding star history without the stargazers",
+      "url": "https://github.blog/engineering/architecture-optimization/from-2500-requests-to-24-rebuilding-star-history-without-the-stargazers/"
     },
     "259f287ba3d3ec601bd7b4fd881e68b0218bef3a": {
       "kind": "Paper",
@@ -1171,6 +1185,13 @@
       "title": "EarlyEval: Cheaper Agent Evaluation via Early Outcome Prediction",
       "url": "http://arxiv.org/abs/2609.02783v1"
     },
+    "b6b09d9b696861ee46f999c97113d7f28e3a2e5a": {
+      "kind": "Blog",
+      "sent_at": "2026-10-15T12:05:43.021655",
+      "source": "Anthropic Docs",
+      "title": "Anthropic Release Notes",
+      "url": "https://docs.anthropic.com/en/release-notes/overview"
+    },
     "b77012a8da41ee5e22125915f22184e9a8be5de7": {
       "kind": "Paper",
       "sent_at": "2026-09-18T12:06:23.571978",
@@ -1522,6 +1543,7 @@
     "https://blog.cloudflare.com/d1-control-plane/": "2026-10-14T12:05:52.861992",
     "https://blog.cloudflare.com/deno-joins-cloudflare/": "2026-10-10T12:04:47.946949",
     "https://blog.cloudflare.com/how-fast-is-the-web/": "2026-09-29T12:05:14.873169",
+    "https://blog.cloudflare.com/hyperdrive-mysql/": "2026-10-15T12:05:43.021804",
     "https://blog.cloudflare.com/introducing-adaptive-intelligence/": "2026-09-01T12:07:21.810485",
     "https://blog.cloudflare.com/introducing-web-search-api/": "2026-10-03T12:07:30.150185",
     "https://blog.cloudflare.com/one-observability-platform/": "2026-10-03T12:07:30.150185",
@@ -1545,6 +1567,7 @@
     "https://blog.cloudflare.com/workers-kv-instant/": "2026-10-02T12:07:26.758352",
     "https://blog.cloudflare.com/workers-module-registry-nodejs/": "2026-09-10T12:08:06.867270",
     "https://blog.cloudflare.com/workers-on-demand-profiling/": "2026-10-10T12:04:47.946949",
+    "https://blog.cloudflare.com/yandex-outage/": "2026-10-15T12:05:43.021804",
     "https://claude.com/blog/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic": "2026-09-15T12:07:57.999528",
     "https://claude.com/blog/agents-you-can-coach-how-asana-builds-human-agent-teams-with-claude": "2026-09-30T12:05:59.362753",
     "https://claude.com/blog/artifacts-in-claude-code": "2026-09-19T12:06:29.356704",
@@ -1584,6 +1607,7 @@
     "https://openai.com/index/advisory-group-on-mathematics-and-ai": "2026-09-22T12:05:07.666789",
     "https://openai.com/index/ai-policy-window": "2026-09-10T12:08:06.867270",
     "https://openai.com/index/albertsons-reimagining-retail": "2026-10-02T12:07:26.758352",
+    "https://openai.com/index/amp-beyond-coding": "2026-10-15T12:05:43.021804",
     "https://openai.com/index/an-alien-mind": "2026-09-07T12:08:41.637282",
     "https://openai.com/index/asana-browser-agent": "2026-10-10T12:04:47.946949",
     "https://openai.com/index/atv-big-air-tour": "2026-09-03T12:07:26.434398",
@@ -1624,6 +1648,7 @@
     "https://openai.com/index/radisson": "2026-10-08T12:05:55.349500",
     "https://openai.com/index/reimagining-advertising-with-ai": "2026-09-17T12:13:02.409327",
     "https://openai.com/index/sam-altman-un-security-council-remarks": "2026-09-24T12:06:34.844018",
+    "https://openai.com/index/sentinelone": "2026-10-15T12:05:43.021804",
     "https://openai.com/index/sharing-ai-progress-in-mathematics": "2026-10-07T12:06:18.519687",
     "https://openai.com/index/sophos": "2026-10-09T12:04:52.188908",
     "https://openai.com/index/supporting-california-bill-advance-ai-youth-safety": "2026-09-01T12:07:21.810485",
@@ -1631,9 +1656,11 @@
     "https://openai.com/index/the-eternal-complement": "2026-10-02T12:07:26.758352",
     "https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic": "2026-10-14T12:05:52.861992",
     "https://openai.com/index/the-work-now-within-reach": "2026-09-09T12:07:47.103026",
+    "https://openai.com/index/third-moment-research": "2026-10-15T12:05:43.021804",
     "https://openai.com/index/towards-safety-cases-for-frontier-ai-training": "2026-09-29T12:05:14.873169",
     "https://openai.com/index/two-years-of-openai-academy": "2026-09-24T12:06:34.844018",
     "https://openai.com/index/using-codex-chatgpt-to-search-for-new-antimicrobials": "2026-09-11T12:08:35.817997",
+    "https://www.anthropic.com/news/2026-us-midterms": "2026-10-15T12:05:43.021804",
     "https://www.anthropic.com/news/2026-usage-policy-update": "2026-10-09T12:04:52.188908",
     "https://www.anthropic.com/news/accenture-embedded-evaluation": "2026-09-20T12:05:02.833015",
     "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy": "2026-09-27T12:05:14.092935",
