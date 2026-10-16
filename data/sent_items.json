@@ -52,7 +52,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "7225cff402e9",
-      "last_seen_at": "2026-10-15T12:01:14.888835",
+      "last_seen_at": "2026-10-16T12:01:35.512232",
       "title": "Claude Code Overview",
       "updated_at": "2026-09-22T12:05:07.666618"
     },
@@ -178,7 +178,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "f136b93947db",
-      "last_seen_at": "2026-10-15T12:01:14.888835",
+      "last_seen_at": "2026-10-16T12:01:35.512232",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-10-09T12:04:52.188794"
     },
@@ -189,6 +189,10 @@
         "The Claude Platform release notes list changes to the Claude API, the client SDKs, and the Claude Console, newest first.",
         "For release notes on Claude Apps, see the Release notes for Claude Apps in the Claude Help Center .",
         "For updates to Claude Code, see the complete CHANGELOG.md in the claude-code repository.",
+        "October 15, 2026 \ue09a",
+        "The Compliance API now returns the text each organization member saved as Instructions for Claude in claude.ai and as Global instructions in Cowork, in beta for Claude Enterprise organizations. Call GET /v1/compliance/organizations/{org_uuid}/user_preferences with your existing Compliance Access Key and the read:compliance_user_data scope. See List user preferences .",
+        "Fast mode is out of research preview for Claude Opus 5.5, and you no longer need to request access. Requests to Claude Opus 5.5 no longer require the fast-mode-2026-02-01 beta header, and requests that still send it keep working. Claude Opus 5.5 now has a default fast mode rate limit in the Start, Build, and Scale usage tiers. Fast mode for Claude Opus 5 and Claude Opus 4.8 remains in research preview. Keep sending the beta header with fast mode requests to those models.",
+        "Fast mode for Claude Opus 5.5 is now available on Claude in Microsoft Foundry for deployments hosted on Azure.",
         "October 14, 2026 \ue09a",
         "We've launched OpenTelemetry export in beta, so you can trace Messages API requests and Claude Managed Agents sessions in your observability backend. The Claude SDK emits spans in Python, TypeScript, C#, Go, Java, PHP, and Ruby. To get spans from the API, add an OpenTelemetry destination in the Claude Console.",
         "Claude Managed Agents scheduled deployments are now available on Claude Platform on AWS .",
@@ -339,16 +343,12 @@
         "June 25, 2026 \ue09a",
         "We've deprecated fast mode for Claude Opus 4.7, with removal on July 24, 2026. After removal, requests to claude-opus-4-7 with speed: \"fast\" will return an error. Migrate to fast mode for Claude Opus 4.8. Read more in Fast mode .",
         "June 22, 2026 \ue09a",
-        "MCP tunnels (research preview): the management API moved from /v1/organizations/tunnels on the Admin API to /v1/tunnels on the Claude API. The new surface uses the anthropic-beta: mcp-tunnels-2026-06-22 header and the workspace:manage_tunnels WIF scope. The previous surface remains available during a migration window. See the Tunnels API reference .",
-        "June 18, 2026 \ue09a",
-        "The Python, TypeScript, Go, Java, Ruby, PHP, and C# SDKs now include support for code_execution_20260120 , the code execution tool version that adds REPL state persistence and is the minimum version for programmatic tool calling . To adopt it, set the tool's type to code_execution_20260120 ; no beta header is required. It's available on Claude Fable 5, Claude Mythos 5, Claude Opus 4.5 and newer, and Claude Sonnet 4.5 and newer; see the code execution tool's Compatibility section.",
-        "June 15, 2026 \ue09a",
-        "We've retired the Claude Sonnet 4 model ( claude-sonnet-4-20250514 ) and the Claude Opus 4 model ( claude-opus-4-20250514 ). All requests to these models on the Claude API will now return an error. We recommend upgrading to Claude Sonnet 4.6 and Claude Opus 4.8 respectively. Researchers can request ongoing access through the External Researcher Access Program ."
+        "MCP tunnels (research preview): the management API moved from /v1/organizations/tunnels on the Admin API to /v1/tunnels on the Claude API. The new surface uses the anthropic-beta: mcp-tunnels-2026-06-22 header and the workspace:manage_tunnels WIF scope. The previous surface remains available during a migration window. See the Tunnels API reference ."
       ],
-      "content_hash": "69610cc04cda",
-      "last_seen_at": "2026-10-15T12:05:43.021655",
+      "content_hash": "b720a2499a6e",
+      "last_seen_at": "2026-10-16T12:05:32.016147",
       "title": "Anthropic Release Notes",
-      "updated_at": "2026-10-15T12:05:43.021655"
+      "updated_at": "2026-10-16T12:05:32.016147"
     }
   },
   "sent": {
@@ -849,6 +849,13 @@
       "title": "SENTINEL-RL: Offloading Topological Reasoning from LLM Agents in the Security Operations Center",
       "url": "http://arxiv.org/abs/2609.04159v1"
     },
+    "6f6a5bb44f5799f8c5c65b29c152d60d830e0466": {
+      "kind": "Blog",
+      "sent_at": "2026-10-16T12:05:32.016147",
+      "source": "Meta Engineering",
+      "title": "How Meta Built Forum With AI-Native Engineering",
+      "url": "https://engineering.fb.com/2026/10/15/ml-applications/how-meta-built-forum-ai-native-engineering/"
+    },
     "6fce6f6287224547a066ec3ddea48555631a7705": {
       "kind": "Blog",
       "sent_at": "2026-09-03T12:07:26.434240",
@@ -946,13 +953,6 @@
       "source": "Simon Willison",
       "title": "Claude Fable 5.1 made me a really nice animated pelican",
       "url": "https://simonwillison.net/2026/Sep/1/claude-fable-5-1/"
-    },
-    "7f538dfb4842e300cdbe35064aa62aea04a34c6d": {
-      "kind": "Blog",
-      "sent_at": "2026-08-31T12:06:21.634118",
-      "source": "Hacker News",
-      "title": "Claude Session URL appended to commit messages and PR descriptions by default",
-      "url": "https://github.com/anthropics/claude-code/issues/66504"
     },
     "803f3e079c073655f338e119cff97b311f9cfffe": {
       "kind": "Paper",
@@ -1255,6 +1255,20 @@
       "title": "AutoCompact: Learning When to Compact Context in Long-Horizon Coding Agents",
       "url": "http://arxiv.org/abs/2610.02163v1"
     },
+    "c3e178f665fcd2bc234638e8ffc866c53228891c": {
+      "kind": "Blog",
+      "sent_at": "2026-10-16T12:05:32.016147",
+      "source": "Anthropic Docs",
+      "title": "Anthropic Release Notes",
+      "url": "https://docs.anthropic.com/en/release-notes/overview"
+    },
+    "c4be17e47c77827cadd4e97d9d4c8de56ba60f51": {
+      "kind": "Blog",
+      "sent_at": "2026-10-16T12:05:32.016147",
+      "source": "Supabase Blog",
+      "title": "Sync real-time Stripe data to Supabase with Stripe Data Pipeline",
+      "url": "https://supabase.com/blog/stripe-data-pipeline-now-syncs-real-time-data-to-supabase"
+    },
     "c68818edc729900358c9bfc0ee2feff22ab2fd9d": {
       "kind": "Blog",
       "sent_at": "2026-10-14T12:05:52.861839",
@@ -1289,6 +1303,13 @@
       "source": "Neon Blog",
       "title": "Building a searchable photo library on the Neon backend with TanStack",
       "url": "https://neon.com/blog/building-a-private-searchable-photo-library-on-the-neon-backend"
+    },
+    "cbe0fc1f42c335a85370e8d6ce8350472fe0f98d": {
+      "kind": "Blog",
+      "sent_at": "2026-10-16T12:05:32.016147",
+      "source": "LinkedIn Engineering",
+      "title": "Inside LinkedIn's data context layer: curating trustworthy context for humans and agents",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQREFWX1dkRU40cUlBZmhaanYxUWRWMHRvRy1Na0pXbnpULUJpV1BVS2xDeTF0cDB1TnM2X3NIZUs2ZWFXZGNNU285RFJnNTB5aHVlREdIajZVQVB3dU5vc2xSbWFjcFNJNFp6RjhCM2NvM2d2Z0h2bFBPc0E2RnJFekpDN0M2X1ZabE9BRzd2X1VITkNPNlpyRlN2Q2NRQjZraVVRTUlFcEJKaU51MHBsa3JBUGZsZHp4WFlZQkJ4bHZJWkZocnpsWm1JWmRZelhnN1RlS2JVTmk0WlU?oc=5"
     },
     "ced3623e1f19179bfe95191bab526ef045b3d2d5": {
       "kind": "Blog",
@@ -1380,6 +1401,13 @@
       "source": "HuggingFace",
       "title": "The Agent Said It Was Done. The Database Disagreed.",
       "url": "https://huggingface.co/blog/microsoft/thinkingbox"
+    },
+    "db4a48d2cee855a48284387239c9e5f746191ebd": {
+      "kind": "Blog",
+      "sent_at": "2026-10-16T12:05:32.016147",
+      "source": "Supabase Blog",
+      "title": "How a new branch gets its config, migrations, and functions",
+      "url": "https://supabase.com/blog/how-a-new-branch-gets-its-config-migrations-and-functions"
     },
     "db86ceb0bb7bd4df885adce8a334776449501b2f": {
       "kind": "Paper",
@@ -1493,6 +1521,13 @@
       "title": "Cloudflare Adds Optional OAuth Scopes, Letting Developers Mark What Users May Decline",
       "url": "https://www.infoq.com/news/2026/09/cloudflare-optional-oauth-scopes/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Architecture-news"
     },
+    "f43e1a8cd9a369a110631c21b247ccc276f5b0d1": {
+      "kind": "Blog",
+      "sent_at": "2026-10-16T12:05:32.016147",
+      "source": "Neon Blog",
+      "title": "Neon now has realtime",
+      "url": "https://neon.com/blog/neon-now-has-realtime"
+    },
     "f57bc353ab713d67c9f816b63bc061a9296b2e35": {
       "kind": "Blog",
       "sent_at": "2026-10-08T12:05:55.349327",
@@ -1538,10 +1573,12 @@
     "https://blog.cloudflare.com/client-side-security-finds-4-malicious-campaigns/": "2026-09-17T12:13:02.409327",
     "https://blog.cloudflare.com/cloudflare-certificate-authority/": "2026-09-30T12:05:59.362753",
     "https://blog.cloudflare.com/cloudflare-cf-cli-launch/": "2026-09-29T12:05:14.873169",
+    "https://blog.cloudflare.com/cloudflare-openai-discovery-agentic-web/": "2026-10-16T12:05:32.016399",
     "https://blog.cloudflare.com/cloudflares-2026-annual-founders-letter/": "2026-09-28T12:04:24.726468",
     "https://blog.cloudflare.com/containers-cross-tenant-vulnerability/": "2026-09-25T12:05:19.070930",
     "https://blog.cloudflare.com/d1-control-plane/": "2026-10-14T12:05:52.861992",
     "https://blog.cloudflare.com/deno-joins-cloudflare/": "2026-10-10T12:04:47.946949",
+    "https://blog.cloudflare.com/deploy-with-void/": "2026-10-16T12:05:32.016399",
     "https://blog.cloudflare.com/how-fast-is-the-web/": "2026-09-29T12:05:14.873169",
     "https://blog.cloudflare.com/hyperdrive-mysql/": "2026-10-15T12:05:43.021804",
     "https://blog.cloudflare.com/introducing-adaptive-intelligence/": "2026-09-01T12:07:21.810485",
@@ -1549,6 +1586,7 @@
     "https://blog.cloudflare.com/one-observability-platform/": "2026-10-03T12:07:30.150185",
     "https://blog.cloudflare.com/one-year-later-1111-interns/": "2026-10-06T12:06:05.076859",
     "https://blog.cloudflare.com/post-quantum-dnssec-1111/": "2026-09-11T12:08:35.817997",
+    "https://blog.cloudflare.com/programmable-gateway-dlp/": "2026-10-16T12:05:32.016399",
     "https://blog.cloudflare.com/python-workers-ga/": "2026-09-22T12:05:07.666789",
     "https://blog.cloudflare.com/radar-redesign/": "2026-10-09T12:04:52.188908",
     "https://blog.cloudflare.com/real-time-issue-detection/": "2026-10-01T12:06:07.829111",
@@ -1631,6 +1669,7 @@
     "https://openai.com/index/introducing-chatgpt-financial-services": "2026-09-11T12:08:35.817997",
     "https://openai.com/index/introducing-chatgpt-images-2-5": "2026-09-09T12:07:47.103026",
     "https://openai.com/index/introducing-gpt-6-1-sol": "2026-09-30T12:05:59.362753",
+    "https://openai.com/index/introducing-the-rosalind-academic-plan": "2026-10-16T12:05:32.016399",
     "https://openai.com/index/jump-trading": "2026-10-07T12:06:18.519687",
     "https://openai.com/index/legora-financial-statement-review-with-astra": "2026-09-04T12:07:47.114718",
     "https://openai.com/index/lenfest-ai-collaborative-expansion": "2026-09-29T12:05:14.873169",
@@ -1663,6 +1702,7 @@
     "https://www.anthropic.com/news/2026-us-midterms": "2026-10-15T12:05:43.021804",
     "https://www.anthropic.com/news/2026-usage-policy-update": "2026-10-09T12:04:52.188908",
     "https://www.anthropic.com/news/accenture-embedded-evaluation": "2026-09-20T12:05:02.833015",
+    "https://www.anthropic.com/news/an-update-on-independent-evaluators": "2026-10-16T12:05:32.016399",
     "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy": "2026-09-27T12:05:14.092935",
     "https://www.anthropic.com/news/anthropic-cyber-mission": "2026-10-09T12:04:52.188908",
     "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system": "2026-09-27T12:05:14.092935",
