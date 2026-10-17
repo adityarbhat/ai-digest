@@ -52,7 +52,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "7225cff402e9",
-      "last_seen_at": "2026-10-16T12:01:35.512232",
+      "last_seen_at": "2026-10-17T12:01:22.085258",
       "title": "Claude Code Overview",
       "updated_at": "2026-09-22T12:05:07.666618"
     },
@@ -178,7 +178,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "f136b93947db",
-      "last_seen_at": "2026-10-16T12:01:35.512232",
+      "last_seen_at": "2026-10-17T12:01:22.085258",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-10-09T12:04:52.188794"
     },
@@ -346,7 +346,7 @@
         "MCP tunnels (research preview): the management API moved from /v1/organizations/tunnels on the Admin API to /v1/tunnels on the Claude API. The new surface uses the anthropic-beta: mcp-tunnels-2026-06-22 header and the workspace:manage_tunnels WIF scope. The previous surface remains available during a migration window. See the Tunnels API reference ."
       ],
       "content_hash": "b720a2499a6e",
-      "last_seen_at": "2026-10-16T12:05:32.016147",
+      "last_seen_at": "2026-10-17T12:01:22.085258",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-10-16T12:05:32.016147"
     }
@@ -541,19 +541,19 @@
       "title": "Scale without limits: Multigres, OrioleDB, and dbarena",
       "url": "https://supabase.com/blog/select-2026-scale-without-limits"
     },
+    "3078c7398b1730792cac9a6ffe186937c1ff6c76": {
+      "kind": "Blog",
+      "sent_at": "2026-10-17T12:04:55.266858",
+      "source": "Neon Blog",
+      "title": "Sync Stripe data in real-time to Neon",
+      "url": "https://neon.com/blog/stripe-data-pipeline-realtime-sync-to-postgres"
+    },
     "32c3b4ab7f727a916e69ef14d82f48a31629bb95": {
       "kind": "Blog",
       "sent_at": "2026-09-07T12:08:41.637193",
       "source": "OpenAI",
       "title": "Research acceleration: The view inside OpenAI",
       "url": "https://openai.com/index/research-acceleration-view-inside-openai"
-    },
-    "34da11b1abba483ade5efab37e0fb553e1aa0d14": {
-      "kind": "Paper",
-      "sent_at": "2026-09-01T12:07:21.810335",
-      "source": "arXiv",
-      "title": "SkillZip Pro: Execution-Aware Dynamic Compression of Progressively Loaded Skills for Self-Evolving Agents",
-      "url": "http://arxiv.org/abs/2608.30785v1"
     },
     "353cc1508e067a06efddac6008df772cea04ebb3": {
       "kind": "Blog",
@@ -708,13 +708,6 @@
       "source": "Neon Blog",
       "title": "Claimable Neon: Provisioned by agents, claimed by humans",
       "url": "https://neon.com/blog/an-agent-provisions-a-neon-backend-a-human-claims-it-later"
-    },
-    "5975f6bd29c7d2245aca5231af2a0ee47db040c4": {
-      "kind": "Blog",
-      "sent_at": "2026-09-01T12:07:21.810335",
-      "source": "Simon Willison",
-      "title": "Introducing wrapture",
-      "url": "https://simonwillison.net/2026/Aug/31/introducing-wrapture/"
     },
     "5a3b9df656a8fc7010ad7e773ef8b5d2aa9d23cd": {
       "kind": "Blog",
@@ -877,13 +870,6 @@
       "title": "Operate with confidence",
       "url": "https://supabase.com/blog/select-2026-operate-with-confidence"
     },
-    "7220f730119fec32eb62e0b7163a866f57836370": {
-      "kind": "Blog",
-      "sent_at": "2026-09-01T12:07:21.810335",
-      "source": "Hacker News",
-      "title": "Breaking Claude Code Opus 5 Auto Mode",
-      "url": "https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode/"
-    },
     "73a298a58b99d5c1ff5026d9905bee17ccf3ff29": {
       "kind": "Blog",
       "sent_at": "2026-09-03T12:07:26.434240",
@@ -988,6 +974,13 @@
       "source": "Anthropic Docs",
       "title": "Anthropic Release Notes",
       "url": "https://docs.anthropic.com/en/release-notes/overview"
+    },
+    "83fd134c96d088315551e43b81af539eee29b24d": {
+      "kind": "Blog",
+      "sent_at": "2026-10-17T12:04:55.266858",
+      "source": "Hacker News",
+      "title": "How the Claude Code team does code review",
+      "url": "https://claude.dev/blog/solving-code-review-at-anthropic/"
     },
     "84c11c83e20371a942c5ac09cf6ec103b3cdf97a": {
       "kind": "Blog",
@@ -1107,6 +1100,13 @@
       "source": "Supabase Blog",
       "title": "Build anything: Supabase from code, and an MCP server for your app",
       "url": "https://supabase.com/blog/select-2026-build-anything"
+    },
+    "a6d7ca69b8b2404f2938879287ac70a0bc4850fe": {
+      "kind": "Blog",
+      "sent_at": "2026-10-17T12:04:55.266858",
+      "source": "Simon Willison",
+      "title": "Quoting Addy Osmani, Morgan Westlee Lunt, and Qing Wang",
+      "url": "https://simonwillison.net/2026/Oct/16/code-review/"
     },
     "a8f2199eb4cba0ebddfdf39d574688862bb65aa2": {
       "kind": "Blog",
@@ -1535,13 +1535,6 @@
       "title": "BM25 is only as good as your tokens",
       "url": "https://neon.com/blog/bm25-is-only-as-good-as-your-tokens"
     },
-    "f77525c37f5300732c037966242b570ba7b949e7": {
-      "kind": "Blog",
-      "sent_at": "2026-09-01T12:07:21.810335",
-      "source": "Neon Blog",
-      "title": "Autoscaling Lakebase Postgres",
-      "url": "https://neon.com/blog/autoscaling-lakebase-postgres"
-    },
     "fa6d58caca0a3b68f880454140c7138a7e07ad83": {
       "kind": "Blog",
       "sent_at": "2026-10-14T12:05:52.861839",
@@ -1581,7 +1574,6 @@
     "https://blog.cloudflare.com/deploy-with-void/": "2026-10-16T12:05:32.016399",
     "https://blog.cloudflare.com/how-fast-is-the-web/": "2026-09-29T12:05:14.873169",
     "https://blog.cloudflare.com/hyperdrive-mysql/": "2026-10-15T12:05:43.021804",
-    "https://blog.cloudflare.com/introducing-adaptive-intelligence/": "2026-09-01T12:07:21.810485",
     "https://blog.cloudflare.com/introducing-web-search-api/": "2026-10-03T12:07:30.150185",
     "https://blog.cloudflare.com/one-observability-platform/": "2026-10-03T12:07:30.150185",
     "https://blog.cloudflare.com/one-year-later-1111-interns/": "2026-10-06T12:06:05.076859",
@@ -1598,6 +1590,7 @@
     "https://blog.cloudflare.com/transformers-on-logpush/": "2026-10-13T12:05:28.453427",
     "https://blog.cloudflare.com/turnstile-spin/": "2026-09-26T12:05:49.135682",
     "https://blog.cloudflare.com/vary-support/": "2026-09-23T12:06:19.094636",
+    "https://blog.cloudflare.com/verified-bots-accountability/": "2026-10-17T12:04:55.267019",
     "https://blog.cloudflare.com/vinext-nextjs-on-vite/": "2026-09-29T12:05:14.873169",
     "https://blog.cloudflare.com/vulnerability-discovery-remediation/": "2026-09-04T12:07:47.114718",
     "https://blog.cloudflare.com/worker-previews/": "2026-09-23T12:06:19.094636",
@@ -1657,7 +1650,6 @@
     "https://openai.com/index/devday-2026-recap": "2026-09-30T12:05:59.362753",
     "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign": "2026-10-01T12:06:07.829111",
     "https://openai.com/index/eu-text-provenance": "2026-10-06T12:06:05.076859",
-    "https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads": "2026-09-01T12:07:21.810485",
     "https://openai.com/index/fyxer": "2026-09-15T12:07:57.999528",
     "https://openai.com/index/grab-openai-ai-skills-southeast-asia": "2026-09-23T12:06:19.094636",
     "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life": "2026-09-17T12:13:02.409327",
@@ -1690,7 +1682,6 @@
     "https://openai.com/index/sentinelone": "2026-10-15T12:05:43.021804",
     "https://openai.com/index/sharing-ai-progress-in-mathematics": "2026-10-07T12:06:18.519687",
     "https://openai.com/index/sophos": "2026-10-09T12:04:52.188908",
-    "https://openai.com/index/supporting-california-bill-advance-ai-youth-safety": "2026-09-01T12:07:21.810485",
     "https://openai.com/index/supporting-independent-journalism-in-ukraine": "2026-09-07T12:08:41.637282",
     "https://openai.com/index/the-eternal-complement": "2026-10-02T12:07:26.758352",
     "https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic": "2026-10-14T12:05:52.861992",
@@ -1711,7 +1702,6 @@
     "https://www.anthropic.com/news/cyber-verification-program": "2026-10-07T12:06:18.519687",
     "https://www.anthropic.com/news/enterprise-frontier-safeguards": "2026-09-02T12:07:46.364695",
     "https://www.anthropic.com/news/genesis-mission-commitment": "2026-10-09T12:04:52.188908",
-    "https://www.anthropic.com/news/improving-alignment-security-efforts": "2026-09-01T12:07:21.810485",
     "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards": "2026-09-27T12:05:14.092935",
     "https://www.anthropic.com/news/life-sciences-verification-program": "2026-09-20T12:05:02.833015",
     "https://www.anthropic.com/news/position-open-weights-models": "2026-09-13T12:07:17.595222",
