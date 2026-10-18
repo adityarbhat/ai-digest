@@ -52,7 +52,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "7225cff402e9",
-      "last_seen_at": "2026-10-17T12:01:22.085258",
+      "last_seen_at": "2026-10-18T12:02:38.057663",
       "title": "Claude Code Overview",
       "updated_at": "2026-09-22T12:05:07.666618"
     },
@@ -178,7 +178,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "f136b93947db",
-      "last_seen_at": "2026-10-17T12:01:22.085258",
+      "last_seen_at": "2026-10-18T12:02:38.057663",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-10-09T12:04:52.188794"
     },
@@ -346,12 +346,19 @@
         "MCP tunnels (research preview): the management API moved from /v1/organizations/tunnels on the Admin API to /v1/tunnels on the Claude API. The new surface uses the anthropic-beta: mcp-tunnels-2026-06-22 header and the workspace:manage_tunnels WIF scope. The previous surface remains available during a migration window. See the Tunnels API reference ."
       ],
       "content_hash": "b720a2499a6e",
-      "last_seen_at": "2026-10-17T12:01:22.085258",
+      "last_seen_at": "2026-10-18T12:02:38.057663",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-10-16T12:05:32.016147"
     }
   },
   "sent": {
+    "012e3e7e58f279b72726f0276a28170f6781df7c": {
+      "kind": "Blog",
+      "sent_at": "2026-10-18T12:05:46.714318",
+      "source": "Hacker News",
+      "title": "DeepSeek search and fetch \u2013 $0.75 per 1000 successful requests",
+      "url": "https://api-docs.deepseek.com/guides/search/"
+    },
     "04ec494665784ce99f517106431ac81f375ca793": {
       "kind": "Blog",
       "sent_at": "2026-09-23T12:06:19.094471",
@@ -618,6 +625,13 @@
       "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
       "url": "https://openai.com/index/perplexity-improving-accuracy-with-astra"
     },
+    "3f52cce32f85e86899f2366d21aa0d5bf9f631d8": {
+      "kind": "Blog",
+      "sent_at": "2026-10-18T12:05:46.714318",
+      "source": "FastAPI Releases",
+      "title": "0.143.5",
+      "url": "https://github.com/fastapi/fastapi/releases/tag/0.143.5"
+    },
     "3fc8dba9f713e46156a2abe4364ed891a26456c1": {
       "kind": "Blog",
       "sent_at": "2026-09-09T12:07:47.102858",
@@ -793,13 +807,6 @@
       "title": "Supabase is acquiring Turso",
       "url": "https://supabase.com/blog/supabase-is-acquiring-turso"
     },
-    "68fafb22b3d2a0d863b3926cee4595a13d2c97c1": {
-      "kind": "Blog",
-      "sent_at": "2026-09-02T12:07:46.364496",
-      "source": "OpenAI",
-      "title": "How AI-native companies turn workflows into operating capability",
-      "url": "https://openai.com/index/ai-native-company-workflows"
-    },
     "6922db39f0c97919622ac1f690b98210bbf72f0a": {
       "kind": "Blog",
       "sent_at": "2026-10-10T12:04:47.946741",
@@ -933,13 +940,6 @@
       "title": "Advancing computer use with Ironclad",
       "url": "https://openai.com/index/advancing-computer-use-with-ironclad"
     },
-    "7ded64522b0463845ff4cbdfbfc4ef83577150a3": {
-      "kind": "Blog",
-      "sent_at": "2026-09-02T12:07:46.364496",
-      "source": "Simon Willison",
-      "title": "Claude Fable 5.1 made me a really nice animated pelican",
-      "url": "https://simonwillison.net/2026/Sep/1/claude-fable-5-1/"
-    },
     "803f3e079c073655f338e119cff97b311f9cfffe": {
       "kind": "Paper",
       "sent_at": "2026-09-10T12:08:06.867051",
@@ -960,13 +960,6 @@
       "source": "arXiv",
       "title": "CoTrace: Data Recipes for Training Terminal Agents with Harness-Model Co-Evolution",
       "url": "http://arxiv.org/abs/2610.10426v1"
-    },
-    "815c74ce5b386e17f64964bf6d6f5903471720ea": {
-      "kind": "Paper",
-      "sent_at": "2026-09-02T12:07:46.364496",
-      "source": "arXiv",
-      "title": "AgentFactory: Towards Automated Agentic System Design and Optimization",
-      "url": "http://arxiv.org/abs/2609.01045v1"
     },
     "82d5a9fe27adffe16ad357ed22e76eca9de0215d": {
       "kind": "Blog",
@@ -1052,13 +1045,6 @@
       "title": "MCP Error Messages Written for Developers Hurt the Most Capable Agents Most",
       "url": "http://arxiv.org/abs/2609.35381v1"
     },
-    "964ff81fde7b1db71ce329da4ab445076e343ece": {
-      "kind": "Blog",
-      "sent_at": "2026-09-02T12:07:46.364496",
-      "source": "Hacker News",
-      "title": "Claude Fable 5.1 and Claude Mythos 5.1",
-      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1"
-    },
     "97e3f60c27d69bb617e0bf9dc71fca65c22ffa7a": {
       "kind": "Paper",
       "sent_at": "2026-09-09T12:07:47.102858",
@@ -1086,13 +1072,6 @@
       "source": "arXiv",
       "title": "ReTerm: Recovery Training for Self-Improving Terminal Agents",
       "url": "http://arxiv.org/abs/2610.18484v1"
-    },
-    "a4fd5b1aae5aae3b6db2b7ecdc9aa4ab09f052ba": {
-      "kind": "Blog",
-      "sent_at": "2026-09-02T12:07:46.364496",
-      "source": "AWS Architecture Blog",
-      "title": "MCP went stateless: Is your AWS MCP server deployment well-architected?",
-      "url": "https://aws.amazon.com/blogs/architecture/mcp-went-stateless-is-your-aws-mcp-server-deployment-well-architected/"
     },
     "a57ec048731d0ac330c35af2b182432c1d93a1f6": {
       "kind": "Blog",
@@ -1353,13 +1332,6 @@
       "title": "Beyond the model: Engineering AI infra with scientific judgement",
       "url": "https://medium.com/airbnb-engineering/beyond-the-model-engineering-ai-infra-with-scientific-judgement-371316d43261?source=rss----53c7c27702d5--ai"
     },
-    "d56fb3e61e46a6626143605520d95b9438613d3b": {
-      "kind": "Blog",
-      "sent_at": "2026-09-02T12:07:46.364496",
-      "source": "Simon Willison",
-      "title": "datasette-mcp 0.2",
-      "url": "https://simonwillison.net/2026/Sep/1/datasette-mcp/"
-    },
     "d7ac59ae0532d6e009ea8eff247cc7bee9aa133d": {
       "kind": "Blog",
       "sent_at": "2026-09-23T12:06:19.094471",
@@ -1514,13 +1486,6 @@
       "title": "Claude Cowork and chat are now one Claude",
       "url": "https://simonwillison.net/2026/Sep/16/one-claude/"
     },
-    "f433a8048051f99df634d6a33beff91a7e4e91c5": {
-      "kind": "Blog",
-      "sent_at": "2026-09-02T12:07:46.364496",
-      "source": "InfoQ Architecture News",
-      "title": "Cloudflare Adds Optional OAuth Scopes, Letting Developers Mark What Users May Decline",
-      "url": "https://www.infoq.com/news/2026/09/cloudflare-optional-oauth-scopes/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Architecture-news"
-    },
     "f43e1a8cd9a369a110631c21b247ccc276f5b0d1": {
       "kind": "Blog",
       "sent_at": "2026-10-16T12:05:32.016147",
@@ -1541,13 +1506,6 @@
       "source": "Martin Fowler",
       "title": "Are Harnesses Worth the Cost?",
       "url": "https://martinfowler.com/articles/are-harnesses-worth-the-cost.html"
-    },
-    "fc9210fd3ec785442344294908c03cfec6333bd2": {
-      "kind": "Blog",
-      "sent_at": "2026-09-02T12:07:46.364496",
-      "source": "Google DeepMind",
-      "title": "Introducing agentic video understanding with Gemini",
-      "url": "https://deepmind.google/blog/introducing-agentic-video-in-gemini/"
     }
   },
   "watchlist_seen": {
@@ -1559,7 +1517,6 @@
     "https://blog.cloudflare.com/auto-router/": "2026-10-01T12:06:07.829111",
     "https://blog.cloudflare.com/automatic-key-exchange-for-origins/": "2026-09-09T12:07:47.103026",
     "https://blog.cloudflare.com/birthday-week-2026-wrap-up/": "2026-10-06T12:06:05.076859",
-    "https://blog.cloudflare.com/cache-transcoding/": "2026-09-02T12:07:46.364695",
     "https://blog.cloudflare.com/casb-policies/": "2026-09-12T12:07:44.504914",
     "https://blog.cloudflare.com/clef-decision-models/": "2026-10-02T12:07:26.758352",
     "https://blog.cloudflare.com/clef-faster-cheaper-multimodal/": "2026-10-10T12:04:47.946949",
@@ -1644,7 +1601,6 @@
     "https://openai.com/index/atv-big-air-tour": "2026-09-03T12:07:26.434398",
     "https://openai.com/index/australian-youth-safety-blueprint": "2026-09-19T12:06:29.356704",
     "https://openai.com/index/building-standards-next-phase-ai": "2026-09-22T12:05:07.666789",
-    "https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources": "2026-09-02T12:07:46.364695",
     "https://openai.com/index/cooley-gopublic": "2026-09-18T12:06:23.572212",
     "https://openai.com/index/daybreak-for-frontline-defenders": "2026-09-04T12:07:47.114718",
     "https://openai.com/index/devday-2026-recap": "2026-09-30T12:05:59.362753",
@@ -1669,7 +1625,6 @@
     "https://openai.com/index/new-chatgpt-ads-format-and-measurement": "2026-10-05T12:06:37.956034",
     "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense": "2026-09-24T12:06:34.844018",
     "https://openai.com/index/oracle": "2026-10-09T12:04:52.188908",
-    "https://openai.com/index/path-to-astra": "2026-09-02T12:07:46.364695",
     "https://openai.com/index/paul-christiano-joins-openai-foundation-board": "2026-09-10T12:08:06.867270",
     "https://openai.com/index/playco-game-prototyping-with-astra": "2026-09-04T12:07:47.114718",
     "https://openai.com/index/pollo-ai": "2026-10-09T12:04:52.188908",
@@ -1700,7 +1655,6 @@
     "https://www.anthropic.com/news/claude-frontier-academy": "2026-10-03T12:07:30.150185",
     "https://www.anthropic.com/news/claude-opus-5": "2026-09-13T12:07:17.595222",
     "https://www.anthropic.com/news/cyber-verification-program": "2026-10-07T12:06:18.519687",
-    "https://www.anthropic.com/news/enterprise-frontier-safeguards": "2026-09-02T12:07:46.364695",
     "https://www.anthropic.com/news/genesis-mission-commitment": "2026-10-09T12:04:52.188908",
     "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards": "2026-09-27T12:05:14.092935",
     "https://www.anthropic.com/news/life-sciences-verification-program": "2026-09-20T12:05:02.833015",
