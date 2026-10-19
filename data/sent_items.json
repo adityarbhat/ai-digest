@@ -52,7 +52,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "7225cff402e9",
-      "last_seen_at": "2026-10-18T12:02:38.057663",
+      "last_seen_at": "2026-10-19T12:02:10.051971",
       "title": "Claude Code Overview",
       "updated_at": "2026-09-22T12:05:07.666618"
     },
@@ -178,7 +178,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "f136b93947db",
-      "last_seen_at": "2026-10-18T12:02:38.057663",
+      "last_seen_at": "2026-10-19T12:02:10.051971",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-10-09T12:04:52.188794"
     },
@@ -346,7 +346,7 @@
         "MCP tunnels (research preview): the management API moved from /v1/organizations/tunnels on the Admin API to /v1/tunnels on the Claude API. The new surface uses the anthropic-beta: mcp-tunnels-2026-06-22 header and the workspace:manage_tunnels WIF scope. The previous surface remains available during a migration window. See the Tunnels API reference ."
       ],
       "content_hash": "b720a2499a6e",
-      "last_seen_at": "2026-10-18T12:02:38.057663",
+      "last_seen_at": "2026-10-19T12:02:10.051971",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-10-16T12:05:32.016147"
     }
@@ -365,13 +365,6 @@
       "source": "Anthropic Docs",
       "title": "Anthropic Release Notes",
       "url": "https://docs.anthropic.com/en/release-notes/overview"
-    },
-    "0972b6d44d88a8abc561a37b8108293daf02d0be": {
-      "kind": "Blog",
-      "sent_at": "2026-09-03T12:07:26.434240",
-      "source": "Martin Fowler",
-      "title": "An Accidental Blackboard",
-      "url": "https://martinfowler.com/articles/exploring-gen-ai/an-accidental-blackboard.html"
     },
     "0be96d37c88d4d52d89f7569c12361d700ee3726": {
       "kind": "Blog",
@@ -639,13 +632,6 @@
       "title": "I-have-ADHD: A skill to stop coding agents from burying the answer",
       "url": "https://github.com/ayghri/i-have-adhd"
     },
-    "4036e7d0f8be7c671d39e1ce86a33a026ea95463": {
-      "kind": "Blog",
-      "sent_at": "2026-09-03T12:07:26.434240",
-      "source": "Meta Engineering",
-      "title": "An Organizational Second Brain: Building an AI That Learns From Experts",
-      "url": "https://engineering.fb.com/2026/09/02/ml-applications/organizational-second-brain-ai-learns-from-experts/"
-    },
     "4304f4222b60b9ef71816e4b547950784d5e836a": {
       "kind": "Blog",
       "sent_at": "2026-10-09T12:04:52.188794",
@@ -730,6 +716,13 @@
       "title": "Video compressor",
       "url": "https://simonwillison.net/2026/Sep/7/video-compressor/"
     },
+    "5a4e8453cd75290f5fb145582e3c8580e8f724db": {
+      "kind": "Blog",
+      "sent_at": "2026-10-19T12:05:51.076107",
+      "source": "MIT Tech Review",
+      "title": "AI researchers stranded Claude on a virtual desert island. It started to \u201cplay.\u201d",
+      "url": "https://www.technologyreview.com/2026/10/19/1147095/ai-stranded-claude-virtual-desert-island-play/"
+    },
     "5bab7daca22bc59db6ec5ec5c95d2710b7c3b127": {
       "kind": "Blog",
       "sent_at": "2026-09-05T12:06:59.205553",
@@ -743,6 +736,13 @@
       "source": "arXiv",
       "title": "Compositional Policy Violations: When Step-Level Compliance Fails In Agentic AI Workflows",
       "url": "http://arxiv.org/abs/2609.18820v1"
+    },
+    "5c0566fdfe14afb5c4d601f396601d06bf5de82e": {
+      "kind": "Blog",
+      "sent_at": "2026-10-19T12:05:51.076107",
+      "source": "Hacker News",
+      "title": "Hybrid Reasoning Agents: LLM agents that think in latent space, act through text",
+      "url": "https://arxiv.org/abs/2610.18861"
     },
     "5c6499d1de4a2644968aa2703cd05f724da6265b": {
       "kind": "Blog",
@@ -856,13 +856,6 @@
       "title": "How Meta Built Forum With AI-Native Engineering",
       "url": "https://engineering.fb.com/2026/10/15/ml-applications/how-meta-built-forum-ai-native-engineering/"
     },
-    "6fce6f6287224547a066ec3ddea48555631a7705": {
-      "kind": "Blog",
-      "sent_at": "2026-09-03T12:07:26.434240",
-      "source": "Simon Willison",
-      "title": "Claude's new system prompt really doesn't want to reproduce song lyrics",
-      "url": "https://simonwillison.net/2026/Sep/2/claudes-new-system-prompt/"
-    },
     "707a18afd73999fca70d0e4f9cdc950e64afa171": {
       "kind": "Paper",
       "sent_at": "2026-09-26T12:05:49.135583",
@@ -877,12 +870,12 @@
       "title": "Operate with confidence",
       "url": "https://supabase.com/blog/select-2026-operate-with-confidence"
     },
-    "73a298a58b99d5c1ff5026d9905bee17ccf3ff29": {
+    "72adaf4a63011cfc4a4622290cbd2564cd9e1e6f": {
       "kind": "Blog",
-      "sent_at": "2026-09-03T12:07:26.434240",
-      "source": "HuggingFace",
-      "title": "Give Your Coding Agents a Memory You Own",
-      "url": "https://huggingface.co/blog/funes"
+      "sent_at": "2026-10-19T12:05:51.076107",
+      "source": "FastAPI Releases",
+      "title": "0.144.0",
+      "url": "https://github.com/fastapi/fastapi/releases/tag/0.144.0"
     },
     "74e3d6e5f7061819c389e6c0b5c8de6eb6dfbe14": {
       "kind": "Blog",
@@ -1150,20 +1143,6 @@
       "title": "Anthropic Release Notes",
       "url": "https://docs.anthropic.com/en/release-notes/overview"
     },
-    "b353974952677338d136eb7822093ed97503348c": {
-      "kind": "Blog",
-      "sent_at": "2026-09-03T12:07:26.434240",
-      "source": "Anthropic Docs",
-      "title": "Anthropic Release Notes",
-      "url": "https://docs.anthropic.com/en/release-notes/overview"
-    },
-    "b69cef5caae255cf8d54c6df5436c4de45875384": {
-      "kind": "Paper",
-      "sent_at": "2026-09-03T12:07:26.434240",
-      "source": "arXiv",
-      "title": "EarlyEval: Cheaper Agent Evaluation via Early Outcome Prediction",
-      "url": "http://arxiv.org/abs/2609.02783v1"
-    },
     "b6b09d9b696861ee46f999c97113d7f28e3a2e5a": {
       "kind": "Blog",
       "sent_at": "2026-10-15T12:05:43.021655",
@@ -1233,6 +1212,13 @@
       "source": "arXiv",
       "title": "AutoCompact: Learning When to Compact Context in Long-Horizon Coding Agents",
       "url": "http://arxiv.org/abs/2610.02163v1"
+    },
+    "c25e622d8dd691cdfb1a16f1d39c4b705f189ce5": {
+      "kind": "Blog",
+      "sent_at": "2026-10-19T12:05:51.076107",
+      "source": "FastAPI Releases",
+      "title": "0.147.0",
+      "url": "https://github.com/fastapi/fastapi/releases/tag/0.147.0"
     },
     "c3e178f665fcd2bc234638e8ffc866c53228891c": {
       "kind": "Blog",
@@ -1346,13 +1332,6 @@
       "title": "Quoting voxium",
       "url": "https://simonwillison.net/2026/Sep/20/voxium/"
     },
-    "d994d57bb189dfab703403330204331496ddac7e": {
-      "kind": "Blog",
-      "sent_at": "2026-09-03T12:07:26.434240",
-      "source": "GitHub Engineering",
-      "title": "How we make AI coding more cost efficient without sacrificing task quality",
-      "url": "https://github.blog/ai-and-ml/github-copilot/how-we-make-ai-coding-more-cost-efficient-without-sacrificing-task-quality/"
-    },
     "da31a175863d9ab04aab84e98d0402fcc2328acd": {
       "kind": "Blog",
       "sent_at": "2026-10-08T12:05:55.349327",
@@ -1387,13 +1366,6 @@
       "source": "arXiv",
       "title": "FOCUS: Training-Free Decision-Preserving Context Compression for LLM Agents",
       "url": "http://arxiv.org/abs/2609.37590v1"
-    },
-    "deb5de4e773b925c412e83e68249c258c539bc51": {
-      "kind": "Paper",
-      "sent_at": "2026-09-03T12:07:26.434240",
-      "source": "arXiv",
-      "title": "Efficient GUI Agents: A Systems Survey of Observation, Memory, Action, and Runtime Optimization",
-      "url": "http://arxiv.org/abs/2609.02309v1"
     },
     "def5893ab448a54f570491e1d474728a90e46321": {
       "kind": "Blog",
@@ -1563,7 +1535,6 @@
     "https://claude.com/blog/building-an-ai-native-revenue-organization": "2026-09-16T12:09:07.980580",
     "https://claude.com/blog/claude-code-desktop-redesign": "2026-09-11T12:08:35.817997",
     "https://claude.com/blog/claude-code-mods": "2026-10-02T12:07:26.758352",
-    "https://claude.com/blog/claude-for-commerce-agents": "2026-09-03T12:07:26.434398",
     "https://claude.com/blog/claude-for-financial-advisors": "2026-09-15T12:07:57.999528",
     "https://claude.com/blog/claude-for-foundation-models": "2026-09-10T12:08:06.867270",
     "https://claude.com/blog/claude-for-government-is-now-generally-available": "2026-10-01T12:06:07.829111",
@@ -1588,7 +1559,6 @@
     "https://claude.com/blog/reducing-cost-and-improving-performance-with-claude-platform": "2026-09-09T12:07:47.103026",
     "https://claude.com/blog/salesforce-in-claude": "2026-09-16T12:09:07.980580",
     "https://claude.com/blog/t-rowe-price-brings-more-of-claude-to-its-investment-process": "2026-09-12T12:07:44.504914",
-    "https://claude.com/blog/the-anatomy-of-effective-commerce-agents": "2026-09-03T12:07:26.434398",
     "https://claude.com/blog/what-1-000-small-business-owners-taught-us-about-ai": "2026-09-12T12:07:44.504914",
     "https://claude.com/blog/what-a-task-costs-on-opus-5-5": "2026-09-23T12:06:19.094636",
     "https://claude.com/blog/working-at-the-frontier-how-balyasny-asset-management-evaluates-and-governs-claude-fable-5": "2026-09-18T12:06:23.572212",
@@ -1598,7 +1568,6 @@
     "https://openai.com/index/amp-beyond-coding": "2026-10-15T12:05:43.021804",
     "https://openai.com/index/an-alien-mind": "2026-09-07T12:08:41.637282",
     "https://openai.com/index/asana-browser-agent": "2026-10-10T12:04:47.946949",
-    "https://openai.com/index/atv-big-air-tour": "2026-09-03T12:07:26.434398",
     "https://openai.com/index/australian-youth-safety-blueprint": "2026-09-19T12:06:29.356704",
     "https://openai.com/index/building-standards-next-phase-ai": "2026-09-22T12:05:07.666789",
     "https://openai.com/index/cooley-gopublic": "2026-09-18T12:06:23.572212",
@@ -1659,6 +1628,7 @@
     "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards": "2026-09-27T12:05:14.092935",
     "https://www.anthropic.com/news/life-sciences-verification-program": "2026-09-20T12:05:02.833015",
     "https://www.anthropic.com/news/position-open-weights-models": "2026-09-13T12:07:17.595222",
+    "https://www.anthropic.com/news/public-benefit-fund": "2026-10-19T12:05:51.076240",
     "https://www.anthropic.com/news/singapore-office-opening": "2026-10-14T12:05:52.861992"
   }
 }
