@@ -52,7 +52,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "1fff0c097d29",
-      "last_seen_at": "2026-10-20T12:05:14.915139",
+      "last_seen_at": "2026-10-21T12:03:22.878882",
       "title": "Claude Code Overview",
       "updated_at": "2026-10-20T12:05:14.915139"
     },
@@ -178,7 +178,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "f136b93947db",
-      "last_seen_at": "2026-10-20T12:01:21.586013",
+      "last_seen_at": "2026-10-21T12:03:22.878882",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-10-09T12:04:52.188794"
     },
@@ -189,6 +189,10 @@
         "The Claude Platform release notes list changes to the Claude API, the client SDKs, and the Claude Console, newest first.",
         "For release notes on Claude Apps, see the Release notes for Claude Apps in the Claude Help Center .",
         "For updates to Claude Code, see the complete CHANGELOG.md in the claude-code repository.",
+        "October 20, 2026 \ue09a",
+        "Inference hooks are out of beta for Claude Enterprise organizations.",
+        "We've launched user profiles , so you can tell Anthropic which of your end customers each API request is for. If you operate a platform or gateway, or resell API access, a safety enforcement action can then apply to one end customer instead of your whole organization. The SDK and the ant CLI support the new /v1/user_profiles endpoints .",
+        "We've added organization webhooks to the Admin API , in beta with the webhooks-2026-10-07 beta header. Its /v1/organizations/webhooks endpoints register webhook endpoints for two event types: one for when Anthropic restricts or bans one of your organization's user profiles, and one for when the restriction or ban ends. To request access, contact your Anthropic account team.",
         "October 15, 2026 \ue09a",
         "We've added capabilities.thinking.types.between_tools to the Models API . GET /v1/models and GET /v1/models/{model_id} now report whether each model accepts thinking: {type: \"between_tools\"} , which turns off up-front thinking. See Using the Models API .",
         "The Compliance API now returns the text each organization member saved as Instructions for Claude in claude.ai and as Global instructions in Cowork, in beta for Claude Enterprise organizations. Call GET /v1/compliance/organizations/{org_uuid}/user_preferences with your existing Compliance Access Key and the read:compliance_user_data scope. See List user preferences .",
@@ -339,16 +343,12 @@
         "Webhooks for Claude Managed Agents now cover the agent, deployment, and deployment run lifecycle. You can react to a newly published agent version, a paused deployment, or a failed scheduled run without polling. See the Agent events, Deployment events, and Deployment run events tabs in Subscribe to webhooks .",
         "June 29, 2026 \ue09a",
         "We've removed fast mode for Claude Opus 4.6. Requests to claude-opus-4-6 with speed: \"fast\" no longer run at fast speed or premium pricing: they run at standard speed, are billed at standard rates, and do not return an error. The response's usage.speed field reports the speed used. To continue using fast mode, migrate to Claude Opus 4.8 . Read more in Fast mode .",
-        "June 26, 2026 \ue09a",
-        "We've raised rate limits across the Claude API. Claude Sonnet and Claude Haiku rate limits now match Claude Opus at every usage tier, and usage tiers have been consolidated into three: Start, Build, and Scale. Most organizations move to a higher tier, no organization receives lower limits than before, and no action is required. You can view your tier and current limits in the Claude Console .",
-        "June 25, 2026 \ue09a",
-        "We've deprecated fast mode for Claude Opus 4.7, with removal on July 24, 2026. After removal, requests to claude-opus-4-7 with speed: \"fast\" will return an error. Migrate to fast mode for Claude Opus 4.8. Read more in Fast mode .",
-        "June 22, 2026 \ue09a"
+        "June 26, 2026 \ue09a"
       ],
-      "content_hash": "f778168b6c53",
-      "last_seen_at": "2026-10-20T12:05:14.915139",
+      "content_hash": "1eb5c244e91d",
+      "last_seen_at": "2026-10-21T12:07:40.757373",
       "title": "Anthropic Release Notes",
-      "updated_at": "2026-10-20T12:05:14.915139"
+      "updated_at": "2026-10-21T12:07:40.757373"
     }
   },
   "sent": {
@@ -646,6 +646,13 @@
       "title": "Generate embeddings with Neon AI Gateway",
       "url": "https://neon.com/blog/generate-embeddings-with-neon-ai-gateway"
     },
+    "46d8e9ac8dd9a0fdeb0f7ff2cf3581a791d7215d": {
+      "kind": "Blog",
+      "sent_at": "2026-10-21T12:07:40.757373",
+      "source": "Anthropic Docs",
+      "title": "Anthropic Release Notes",
+      "url": "https://docs.anthropic.com/en/release-notes/overview"
+    },
     "49ee168bb532dec5e9e56fea4c5b8241cb5d442c": {
       "kind": "Blog",
       "sent_at": "2026-09-20T12:05:02.832939",
@@ -666,13 +673,6 @@
       "source": "Hacker News",
       "title": "Real-SWE: Benchmarking AI models on private, real-world, enterprise codebases",
       "url": "https://withspecific.com/benchmarks/real-swe"
-    },
-    "4c7eb22d0ad1ffec9644b059c60bb1c2487568ba": {
-      "kind": "Paper",
-      "sent_at": "2026-09-05T12:06:59.205553",
-      "source": "arXiv",
-      "title": "A Blind Trust, the Bloody Thrust: When Attacker-Controlled Hook Updates Steer AI Agent Harnesses towards Malicious Behaviors",
-      "url": "http://arxiv.org/abs/2609.03884v1"
     },
     "4ee270e7ef3db706950fb8ab7949e2e3a3738eed": {
       "kind": "Blog",
@@ -715,13 +715,6 @@
       "source": "MIT Tech Review",
       "title": "AI researchers stranded Claude on a virtual desert island. It started to \u201cplay.\u201d",
       "url": "https://www.technologyreview.com/2026/10/19/1147095/ai-stranded-claude-virtual-desert-island-play/"
-    },
-    "5bab7daca22bc59db6ec5ec5c95d2710b7c3b127": {
-      "kind": "Blog",
-      "sent_at": "2026-09-05T12:06:59.205553",
-      "source": "Hacker News",
-      "title": "Formalizing Fermat's Last Theorem",
-      "url": "https://www.anthropic.com/research/formalizing-fermats-last-theorem"
     },
     "5bef1a8a68dae2121b00518fe30f64dc032f5ef6": {
       "kind": "Paper",
@@ -834,13 +827,6 @@
       "source": "arXiv",
       "title": "Continuous Process-Level Evaluation for Evolving Enterprise AI Agent Skills",
       "url": "http://arxiv.org/abs/2610.01833v1"
-    },
-    "6f6819aea27532df503eb74e6e2876b0bb06d410": {
-      "kind": "Paper",
-      "sent_at": "2026-09-05T12:06:59.205553",
-      "source": "arXiv",
-      "title": "SENTINEL-RL: Offloading Topological Reasoning from LLM Agents in the Security Operations Center",
-      "url": "http://arxiv.org/abs/2609.04159v1"
     },
     "6f6a5bb44f5799f8c5c65b29c152d60d830e0466": {
       "kind": "Blog",
@@ -1346,13 +1332,6 @@
       "title": "Claude Haiku 5.5",
       "url": "https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/"
     },
-    "dada85d69a0745068b310508872fbfb7532ce13b": {
-      "kind": "Blog",
-      "sent_at": "2026-09-05T12:06:59.205553",
-      "source": "Anthropic Docs",
-      "title": "Anthropic Release Notes",
-      "url": "https://docs.anthropic.com/en/release-notes/overview"
-    },
     "dafdb2cac5cf3b9167a51a0aa62f85f355a308e6": {
       "kind": "Blog",
       "sent_at": "2026-10-04T12:05:40.601446",
@@ -1387,13 +1366,6 @@
       "source": "Simon Willison",
       "title": "llm-keys-ui 0.1",
       "url": "https://simonwillison.net/2026/Sep/20/llm-keys-ui/"
-    },
-    "e7869f6cd5a29f2f7b54635670704680437531c6": {
-      "kind": "Blog",
-      "sent_at": "2026-09-05T12:06:59.205553",
-      "source": "Neon Blog",
-      "title": "Comparing token economics across 42 AI models",
-      "url": "https://neon.com/blog/comparing-token-economics-across-42-ai-models"
     },
     "e9a1e417227e2b087441f3d52a4f5a2770d43bf1": {
       "kind": "Blog",
@@ -1444,12 +1416,26 @@
       "title": "Article: Architecting Secure and Scalable Facial Verification Systems",
       "url": "https://www.infoq.com/articles/secure-scalable-facial-verification/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Architecture-articles"
     },
+    "f1aea4a6bb2d6d90d8bf9975a69f0994d1e6b99b": {
+      "kind": "Blog",
+      "sent_at": "2026-10-21T12:07:40.757373",
+      "source": "HuggingFace",
+      "title": "FairStress: A deeper evaluation of fairness in LLM decision-making",
+      "url": "https://huggingface.co/blog/allenai/fairstress"
+    },
     "f2244e3be9490c52ba257cbbae97d84c5e9cbb0b": {
       "kind": "Blog",
       "sent_at": "2026-09-22T12:05:07.666618",
       "source": "Anthropic Docs",
       "title": "Anthropic Release Notes",
       "url": "https://docs.anthropic.com/en/release-notes/overview"
+    },
+    "f2b8562e9d6365a78a64cfd00cab8a9b2014df7d": {
+      "kind": "Blog",
+      "sent_at": "2026-10-21T12:07:40.757373",
+      "source": "Supabase Blog",
+      "title": "Operate with confidence: check production with your coding agent",
+      "url": "https://supabase.com/blog/operate-with-confidence-check-production-with-your-coding-agent"
     },
     "f363ffb2cf508bb3fb3a461543454f9ac1a39f8f": {
       "kind": "Blog",
@@ -1509,6 +1495,7 @@
     "https://blog.cloudflare.com/d1-control-plane/": "2026-10-14T12:05:52.861992",
     "https://blog.cloudflare.com/deno-joins-cloudflare/": "2026-10-10T12:04:47.946949",
     "https://blog.cloudflare.com/deploy-with-void/": "2026-10-16T12:05:32.016399",
+    "https://blog.cloudflare.com/emudhra-certificate-compromise/": "2026-10-21T12:07:40.757503",
     "https://blog.cloudflare.com/how-fast-is-the-web/": "2026-09-29T12:05:14.873169",
     "https://blog.cloudflare.com/hyperdrive-mysql/": "2026-10-15T12:05:43.021804",
     "https://blog.cloudflare.com/introducing-web-search-api/": "2026-10-03T12:07:30.150185",
@@ -1528,6 +1515,7 @@
     "https://blog.cloudflare.com/streamline/": "2026-10-03T12:07:30.150185",
     "https://blog.cloudflare.com/transformers-on-logpush/": "2026-10-13T12:05:28.453427",
     "https://blog.cloudflare.com/turnstile-spin/": "2026-09-26T12:05:49.135682",
+    "https://blog.cloudflare.com/typescript-rust-port/": "2026-10-21T12:07:40.757503",
     "https://blog.cloudflare.com/vary-support/": "2026-09-23T12:06:19.094636",
     "https://blog.cloudflare.com/verified-bots-accountability/": "2026-10-17T12:04:55.267019",
     "https://blog.cloudflare.com/vinext-nextjs-on-vite/": "2026-09-29T12:05:14.873169",
@@ -1614,6 +1602,8 @@
     "https://openai.com/index/sharing-ai-progress-in-mathematics": "2026-10-07T12:06:18.519687",
     "https://openai.com/index/sophos": "2026-10-09T12:04:52.188908",
     "https://openai.com/index/supporting-independent-journalism-in-ukraine": "2026-09-07T12:08:41.637282",
+    "https://openai.com/index/ted-taylor-restaurant": "2026-10-21T12:07:40.757503",
+    "https://openai.com/index/terminal-x": "2026-10-21T12:07:40.757503",
     "https://openai.com/index/the-eternal-complement": "2026-10-02T12:07:26.758352",
     "https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic": "2026-10-14T12:05:52.861992",
     "https://openai.com/index/the-work-now-within-reach": "2026-09-09T12:07:47.103026",
@@ -1631,6 +1621,7 @@
     "https://www.anthropic.com/news/claude-frontier-academy": "2026-10-03T12:07:30.150185",
     "https://www.anthropic.com/news/claude-opus-5": "2026-09-13T12:07:17.595222",
     "https://www.anthropic.com/news/cyber-verification-program": "2026-10-07T12:06:18.519687",
+    "https://www.anthropic.com/news/features": "2026-10-21T12:07:40.757503",
     "https://www.anthropic.com/news/genesis-mission-commitment": "2026-10-09T12:04:52.188908",
     "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards": "2026-09-27T12:05:14.092935",
     "https://www.anthropic.com/news/life-sciences-verification-program": "2026-09-20T12:05:02.833015",
