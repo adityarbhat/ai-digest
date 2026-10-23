@@ -52,7 +52,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "1fff0c097d29",
-      "last_seen_at": "2026-10-22T12:01:47.473658",
+      "last_seen_at": "2026-10-23T12:01:45.506573",
       "title": "Claude Code Overview",
       "updated_at": "2026-10-20T12:05:14.915139"
     },
@@ -180,7 +180,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "9dda4b28be94",
-      "last_seen_at": "2026-10-22T12:06:09.234325",
+      "last_seen_at": "2026-10-23T12:01:45.506573",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-10-22T12:06:09.234325"
     },
@@ -191,6 +191,9 @@
         "The Claude Platform release notes list changes to the Claude API, the client SDKs, and the Claude Console, newest first.",
         "For release notes on Claude Apps, see the Release notes for Claude Apps in the Claude Help Center .",
         "For updates to Claude Code, see the complete CHANGELOG.md in the claude-code repository.",
+        "October 22, 2026 \ue09a",
+        "We've launched Claude Models on Google Cloud (Anthropic managed) , the Claude API operated by Anthropic and reached through your Google Cloud project. Google Cloud IAM controls access. Google Cloud Marketplace handles billing.",
+        "Fast mode is available for Claude Opus 5.5 on Claude Models on Google Cloud (Anthropic managed).",
         "October 21, 2026 \ue09a",
         "We've released API version 2026-10-21 . Migrating to API version 2026-10-21 shows how to upgrade.",
         "We've released new versions of the client SDKs and the ant CLI that send API version 2026-10-21 by default: Python SDK 2.0.0, TypeScript SDK 1.0.0, C# SDK 13.0.0, Go SDK 2.0.0, Java SDK 3.0.0, PHP SDK 1.0.0, Ruby SDK 2.0.0, and ant CLI 2.0.0. See Switch to 2026-10-21 .",
@@ -200,7 +203,7 @@
         "Inference hooks are out of beta for Claude Enterprise organizations.",
         "We've launched user profiles , so you can tell Anthropic which of your end customers each API request is for. If you operate a platform or gateway, or resell API access, a safety enforcement action can then apply to one end customer instead of your whole organization. The SDK and the ant CLI support the new /v1/user_profiles endpoints .",
         "We've added organization webhooks to the Admin API , in beta with the webhooks-2026-10-07 beta header. Its /v1/organizations/webhooks endpoints register webhook endpoints for two event types: one for when Anthropic restricts or bans one of your organization's user profiles, and one for when the restriction or ban ends. To request access, contact your Anthropic account team.",
-        "Organization admins can now turn off web fetch for their organization on the Capabilities page of the Claude Console. With web fetch off, a Messages API request that includes the web fetch tool fails with a 400 error. In a Claude Managed Agents session, web_fetch calls return an error result to the agent instead. With web fetch on, admins can also set allowed or blocked domains for web fetch on the same page. See Web fetch tool and Domain filtering .",
+        "Organization admins can now turn off web fetch for their organization on the Capabilities page of the Claude Console. With web fetch off, a Messages API request that includes the web fetch tool fails with a 400 error. In a Claude Managed Agents session, web_fetch calls return an error result to the agent instead. With web fetch on, admins can also set allowed or blocked domains for web fetch on the same page. See How to use web fetch and Domain filtering .",
         "In Claude Managed Agents, the web_fetch tool now follows your organization's web fetch domain restrictions set on the Capabilities page of the Claude Console. A URL, including one reached by a redirect, must pass both the organization's list and the allowed_domains or blocked_domains list on the agent's web_fetch tool. See Restrict web search and web fetch domains .",
         "In Claude Managed Agents, sessions follow your organization's web search settings on the Capabilities page of the Claude Console: the Allow web search setting since October 6, and its web search domain restrictions since October 14. The agent receives only the search results that both the organization's domain restrictions and the allowed_domains or blocked_domains list on the agent's web_search tool allow. See Restrict web search and web fetch domains .",
         "October 15, 2026 \ue09a",
@@ -237,7 +240,7 @@
         "We announced the deprecation of the Claude Sonnet 4.5 model ( claude-sonnet-4-5-20250929 ), with retirement on the Claude API scheduled for November 30, 2026. We recommend migrating to Claude Sonnet 5.5 . Read more in Model deprecations .",
         "September 28, 2026 \ue09a",
         "We've launched Claude Sonnet 5.5 ( claude-sonnet-5-5 ). It's available on the Claude API, Claude in Amazon Bedrock , Claude Platform on AWS , Claude on Google Cloud , and Claude in Microsoft Foundry . For its context window, output limits, and prices, see the Claude Sonnet 5.5 model page .",
-        "Code written for Claude Sonnet 5 can break on Claude Sonnet 5.5 in five ways. To turn off up-front thinking, send thinking: {\"type\": \"between_tools\"} instead of \"disabled\" , at high effort or below. Forced tool use ( tool_choice types any and tool ) returns a 400 error. Thinking blocks are tied to the model and the conversation. On the Claude API and Google Cloud, the earlier computer_20251124 computer use tool isn't accepted. The advisor tool rejects Claude Opus 4.8, Claude Opus 4.7, and Claude Sonnet 5 as advisors. See What's new in Claude Sonnet 5.5 for each change and the migration guide for before-and-after requests. For model-specific prompting patterns, see Prompting Claude Sonnet 5.5 .",
+        "Code written for Claude Sonnet 5 can break on Claude Sonnet 5.5 in five ways. To turn off up-front thinking, send thinking: {\"type\": \"between_tools\"} instead of \"disabled\" , at high effort or below. Forced tool use ( tool_choice types any and tool ) returns a 400 error. Thinking blocks are tied to the model and the conversation. On the Claude API and Google Cloud, the earlier computer_20251124 computer use tool isn't accepted. The advisor tool rejects Claude Opus 4.8, Claude Opus 4.7, and Claude Sonnet 5 as advisors. See What's new in Claude Sonnet 5.5 for each change and the Claude Sonnet 5.5 migration guide for before-and-after requests. For model-specific prompting patterns, see Prompting Claude Sonnet 5.5 .",
         "Thinking blocks that Claude Sonnet 5.5 produces work only in the account that produced them, or in an account linked to it. When another account sends one of these blocks, the API drops the block before the model sees it, and the request succeeds. Blocks from earlier models aren't affected. See Preserved thinking .",
         "September 24, 2026 \ue09a",
         "We're resuming billing for refusals that arrive before any output when stop_details.category is \"bio\" , \"frontier_llm\" , or \"reasoning_extraction\" , the categories where we measure low volumes of false positives. Mid-stream refusals were already billed. Refusals billed under this change are charged like any other request, at the rates of the model that ran it. Refusals before any output in other categories are still not billed, and fallback credit is unchanged. This change applies on all platforms. See How refusals are billed .",
@@ -246,8 +249,8 @@
         "September 23, 2026 \ue09a",
         "Cache diagnostics is out of beta on the Claude API and no longer requires the cache-diagnosis-2026-04-07 beta header. Include the diagnostics object on a Messages request to opt in; requests that still send the header work as before. Responses from POST /v1/messages now always include the diagnostics field, which is null when the request did not include the diagnostics object.",
         "September 22, 2026 \ue09a",
-        "We've launched Claude Opus 5.5 ( claude-opus-5-5 ), a model for long-running agentic coding and knowledge work. It has a 1M token context window by default, 128k max output tokens, and always-on adaptive thinking , at $4 / $20 USD per MTok (Claude Opus 5 is $5 / $25). Claude Opus 5.5 is available on the Claude API, Claude in Amazon Bedrock , Claude Platform on AWS , Claude on Google Cloud , and Claude in Microsoft Foundry . See What's new in Claude Opus 5.5 for capabilities, API changes, and migration guidance.",
-        "On Claude Opus 5.5, thinking can't be disabled: thinking: {\"type\": \"disabled\"} and thinking: {\"type\": \"enabled\", ...} return a 400 error. Omit the thinking field and control thinking depth with the effort parameter . tool_choice types any and tool also return a 400 error, as on Claude Fable 5.1; use auto with strict tool use . On the Claude API and Google Cloud, computer use on this model requires the computer_toolset_20260801 toolset and the earlier computer_20251124 tool returns a 400 error; on Amazon Bedrock, computer_20251124 keeps working. See the migration guide .",
+        "We've launched Claude Opus 5.5 ( claude-opus-5-5 ), a model for long-running agentic coding and knowledge work. It has a 1M token context window by default, 128k max output tokens, and always-on adaptive thinking , at $4 / $20 USD per MTok (Claude Opus 5 is $5 / $25 USD). Claude Opus 5.5 is available on the Claude API, Claude in Amazon Bedrock , Claude Platform on AWS , Claude on Google Cloud , and Claude in Microsoft Foundry . See What's new in Claude Opus 5.5 for capabilities, API changes, and migration guidance.",
+        "On Claude Opus 5.5, thinking can't be disabled: thinking: {\"type\": \"disabled\"} and thinking: {\"type\": \"enabled\", ...} return a 400 error. Omit the thinking field and control thinking depth with the effort parameter . tool_choice types any and tool also return a 400 error, as on Claude Fable 5.1; use auto with strict tool use . On the Claude API and Google Cloud, computer use on this model requires the computer_toolset_20260801 toolset and the earlier computer_20251124 tool returns a 400 error; on Amazon Bedrock, computer_20251124 keeps working. See the Claude Opus 5.5 migration guide .",
         "Fast mode (research preview) is available for Claude Opus 5.5 on the Claude API.",
         "Tools can now be defined inside a mid-conversation system message , in beta on the Claude API with the inline-tools-2026-09-15 beta header. A tool_addition block can carry the tool's full definition ( tool: {\"type\": \"tool_definition\", \"definition\": {...}} ), so you can add a tool, change its schema, or move a server tool to a newer version without editing tools or invalidating the prompt cache. The same header covers adding and removing tools by reference. With the MCP connector's mcp-client-2026-09-15 beta header as well, the definition can be an MCP toolset, and a response records each server's fetched tool list in an mcp_tool_listing block, which pins that list when you send it back.",
         "September 18, 2026 \ue09a",
@@ -265,7 +268,7 @@
         "Version 1.30.0 of the ant CLI adds ant apply , which creates and updates agents, environments, skills, memory stores, and deployments from files in your repository. Describe each resource in a file, run ant apply , and approve the plan it prints. Commit the claude-lock.json lockfile it writes so that later runs, on your machine or in CI, update the same resources instead of creating new ones. See Manage resources as code with ant apply .",
         "Per-message effort changes, in beta, are also available on Google Cloud for Claude Fable 5.1, Claude Mythos 5.1, and Claude Opus 5, with the same mid-conversation-output-config-2026-07-01 beta header.",
         "September 1, 2026 \ue09a",
-        "We've launched Claude Fable 5.1 ( claude-fable-5-1 ), the successor to Claude Fable 5 for long-running agentic coding, knowledge work, and research, alongside Claude Mythos 5.1 ( claude-mythos-5-1 ) for Project Glasswing participants. Both models support a 1M token context window by default, 128k max output tokens, and always-on adaptive thinking , at $10 / $50 USD per MTok, the same as Claude Fable 5, with cache reads cut to $0.25 per MTok. Claude Fable 5.1 is available on the Claude API, Claude in Amazon Bedrock , Claude Platform on AWS , Claude on Google Cloud , and Claude in Microsoft Foundry . See What's new in Claude Fable 5.1 for capabilities, API changes, and migration guidance.",
+        "We've launched Claude Fable 5.1 ( claude-fable-5-1 ), the successor to Claude Fable 5 for long-running agentic coding, knowledge work, and research, alongside Claude Mythos 5.1 ( claude-mythos-5-1 ) for Project Glasswing participants. Both models support a 1M token context window by default, 128k max output tokens, and always-on adaptive thinking , at $10 / $50 USD per MTok, the same as Claude Fable 5, with cache reads cut to $0.25 USD per MTok. Claude Fable 5.1 is available on the Claude API, Claude in Amazon Bedrock , Claude Platform on AWS , Claude on Google Cloud , and Claude in Microsoft Foundry . See What's new in Claude Fable 5.1 for capabilities, API changes, and migration guidance.",
         "Prompt cache reads on Claude Fable 5.1 and Claude Mythos 5.1 cost $0.25 USD per million tokens: 0.025x the base input price, compared with 0.1x on other models. Cache writes are unchanged. See Prompt caching pricing .",
         "On Claude Fable 5.1 and Claude Mythos 5.1, tool_choice types any and tool aren't supported and return a 400 error. auto and none are unchanged. To guarantee schema-conformant tool inputs, use strict tool use or structured outputs .",
         "Thinking blocks produced by Claude Fable 5.1 and Claude Mythos 5.1 are preserved only for the model that produced them or a newer one: earlier models can't read them, and the API drops one replayed to an earlier model. Claude Fable 5.1 accepts thinking blocks from Claude Opus 5, Claude Fable 5, Claude Mythos 5, and earlier Claude models. On Claude Fable 5.1, the API also checks that nothing before a block has changed : for new accounts created on or after August 31, 2026, replaying one after the system prompt, tools , or an earlier message changed returns a 400 error. With the thinking-binding-controls-2026-08-01 beta header, dropped blocks are reported in an input_transformations response field, and thinking.block_binding.prefix_mismatch_behavior chooses between rejecting and dropping blocks whose history changed. See Preserved thinking .",
@@ -277,7 +280,7 @@
         "The guides for the Claude Enterprise endpoints of the Admin API ( user management and spend limits ), the Claude Enterprise Analytics API , and the Compliance API now show the anthropic-version header; send it on every request to these endpoints, as in the rest of the Claude API. See API versions .",
         "August 27, 2026 \ue09a",
         "In Python SDK 1.2.0, TypeScript SDK 0.122.0, Go SDK 1.68.0, Java SDK 2.59.0, Ruby SDK 1.67.0, and C# SDK 12.44.0, client.beta.files and client.beta.skills no longer send the files-api-2025-04-14 and skills-2025-10-02 beta headers and return the same shapes as client.files and client.skills . With this change, client.beta.skills.delete() deletes a Skill together with all of its versions, and the beta Messages type BetaSkill (the container Skill reference) is renamed BetaContainerSkill . Requests that still send the beta headers keep receiving the beta shapes. See Migrate from files-api-2025-04-14 and Migrate from skills-2025-10-02 .",
-        "You can now create personal keys and service account keys in the Claude Console. They act as you or as a service account , with the same permissions, and stop working when the linked account is removed from an organization. This lets organization admins more easily track usage for each account, and ensure key usage is legitimate. These API keys can be scoped to a specific workspace or work on admin endpoints and across any workspace the account has access to. Workspace API keys remain supported as a legacy option. See API keys for more information.",
+        "You can now create personal keys and service account keys in the Claude Console. They act as you or as a service account , with the same permissions, and stop working when the linked account is removed from an organization. This lets organization admins more easily track usage for each account, and ensure key usage is legitimate. These API keys can be scoped to a specific workspace or work on admin endpoints and across any workspace the account has access to. Workspace API keys remain supported as a legacy option. See API keys in Authentication for more information.",
         "August 26, 2026 \ue09a",
         "The Compliance API session endpoints are out of beta for Cowork and Claude Code sessions. See Retrieve session transcripts .",
         "The Compliance API local session endpoints now also return transcripts of Claude Science sessions ( product_surface value claude_science ) and Claude for Microsoft 365 sessions in Excel, PowerPoint, Word, and Outlook ( product_surface values beginning with office_agents ), in beta for Claude Enterprise organizations, with your existing Compliance Access Key and the read:compliance_user_data scope. See Sessions on users' machines .",
@@ -301,7 +304,7 @@
         "The Compliance API now returns transcripts of Cowork and Claude Code sessions that run on your users' machines, in beta for Claude Enterprise organizations. GET /v1/compliance/apps/sessions/local lists sessions across your organization, GET /v1/compliance/apps/sessions/local/{session_id} retrieves one session's metadata, and GET /v1/compliance/apps/sessions/local/{session_id}/messages returns its transcript, all with your existing Compliance Access Key and the read:compliance_user_data scope. See Sessions on users' machines .",
         "We've added the anthropic-workspace-id response header to the Claude API. It carries the wrkspc_ -prefixed ID of the workspace that the request's API key or access token resolved to, including your organization's Default Workspace. See Identify the workspace behind an API response .",
         "August 10, 2026 \ue09a",
-        "The introductory pricing for Claude Sonnet 5 ($2 / $10 per MTok) is now the standard price: the previously scheduled increase to $3 / $15 per MTok on September 1, 2026 will not occur. See Pricing .",
+        "The introductory pricing for Claude Sonnet 5 ($2 / $10 USD per MTok) is now the standard price: the previously scheduled increase to $3 / $15 USD per MTok on September 1, 2026, will not occur. See Pricing .",
         "August 7, 2026 \ue09a",
         "You can now set a budget on a Claude Managed Agents session: a hard cap on the session's spend, priced at public list rates. A session that reaches its budget pauses with the budget_reached stop reason instead of starting new model requests; changing or removing the budget resumes it. Deployments accept the same budget and apply it to each session they start. See Session budgets .",
         "You can now give a Claude Managed Agents session an advisor: a model at least as capable as the agent's own that the session's primary thread can consult mid-turn for strategic guidance. Configure it as a {\"type\": \"advisor\"} entry in the agent's multiagent roster, naming the model to consult. See Give the session an advisor .",
@@ -320,10 +323,10 @@
         "Effort is the primary control for steering Claude Opus 5: the model supports the full ladder ( low , medium , high , xhigh , max ), with max for capability-critical work.",
         "Mid-conversation tool changes are now in beta on Claude Fable 5, Claude Mythos 5, Claude Opus 4.8, and Claude Opus 5: add or remove tools between turns of a conversation while preserving the prompt cache. Include the mid-conversation-tool-changes-2026-07-01 beta header in your requests.",
         "The fallbacks parameter now supports a \"default\" mode, which applies Anthropic's recommended fallback models by refusal category. Server-side fallback is in beta, and the \"default\" mode requires the server-side-fallback-2026-07-01 beta header. See Refusals and fallback .",
-        "We've removed fast mode for Claude Opus 4.7. Requests to claude-opus-4-7 with speed: \"fast\" now return an error; unlike Claude Opus 4.6, they do not fall back to standard speed. Claude Opus 4.7 itself remains available at standard speed. To continue using fast mode, migrate to Claude Opus 5 or Claude Opus 4.8. Read more in Fast mode .",
+        "We've removed fast mode for Claude Opus 4.7. Requests to claude-opus-4-7 with speed: \"fast\" now return an error; unlike Claude Opus 4.6, they do not fall back to standard speed. Claude Opus 4.7 itself remains available at standard speed. To continue using fast mode, migrate to Claude Opus 5 or Claude Opus 4.8. Read more in Fast mode model availability .",
         "July 22, 2026 \ue09a",
         "You can now set an effort level on a Claude Managed Agents agent's model configuration. Pass effort inside the model object when you create the agent . See Effort levels for what each level does.",
-        "Webhooks for Claude Managed Agents now cover the environment and memory store lifecycle: four environment.* event types and three memory_store.* event types. You can react to environment and memory store lifecycle changes without polling. See the Environment events and Memory store events tabs in Subscribe to webhooks .",
+        "Webhooks for Claude Managed Agents now cover the environment and memory store lifecycle: four environment.* event types and three memory_store.* event types. You can react to environment and memory store lifecycle changes without polling. See the Environment events and Memory store events tabs in Supported event types .",
         "When creating a Claude Managed Agents session, you can now seed it with initial events . Pass initial_events on POST /v1/sessions with up to 50 user.message and user.define_outcome events. A non-empty list starts the agent loop in the same call, so you don't need a separate send-events request to start work.",
         "The version field is now optional when updating a Claude Managed Agents agent . Supply it for optimistic concurrency (a mismatch returns a 409 error), or omit it to apply the update unconditionally. See Update semantics .",
         "Claude Managed Agents session thread event streams now support event deltas . GET /v1/sessions/{session_id}/threads/{thread_id}/stream accepts the same event_deltas[] query parameter as the session-level stream, so you can preview a subagent's text as the model generates it. A connection previews only the thread it's reading. See Preview session thread events .",
@@ -338,19 +341,16 @@
         "Dreams (research preview) now supports Claude Fable 5 and Claude Sonnet 5. See Supported models .",
         "We've expanded the Access Transparency documentation of cmek_preserve events with a filter example, an example event payload, and two preservation reason codes ( policy_violation_investigation , csae_report ). The documentation now also clarifies that a preservation event is written whether the preservation was initiated by a human reviewer or an automated safety pipeline. See CMEK content preservation .",
         "July 8, 2026 \ue09a",
-        "You can now set an expiration when you create an API key or an Admin API key in the Claude Console . Choose a preset, a custom duration, or Never . For keys with a lifetime of at least 7 days, Anthropic emails the creator before expiration. Existing keys are unaffected. The Admin API reports each key's expiration in the expires_at field. See Authentication .",
+        "You can now set an expiration when you create an API key or an Admin API key in the Claude Console . Choose a preset, a custom duration, or Never . For keys with a lifetime of at least 7 days, Anthropic emails the creator before expiration. Existing keys are unaffected. The Admin API reports each key's expiration in the expires_at field. See Key expiration in Authentication .",
         "July 2, 2026 \ue09a",
         "We've added the agent-memory-2026-07-22 beta header, which changes how listing memories ( GET /v1/memory_stores/{memory_store_id}/memories ) behaves: results are returned in a stable, server-defined order and the order_by and order parameters are ignored; depth accepts only 0 , 1 , or being omitted (other values return a 400 error); and path_prefix must end with / and matches whole path segments instead of a substring. Page cursors issued without the header aren't valid with it, so restart from the first page when you adopt it. On memory store endpoints, agent-memory-2026-07-22 replaces managed-agents-2026-04-01 ; sending both returns a 400 error. On July 22, 2026, the managed-agents-2026-04-01 header adopts the same list behavior. See Beta headers .",
         "The Python (0.116.0), TypeScript (0.110.0), Go (1.56.0), Java (2.48.0), Ruby (1.55.0), PHP (0.36.0), C# (12.35.0), and CLI (1.16.0) SDKs now send agent-memory-2026-07-22 on all memory store calls instead of managed-agents-2026-04-01 . If your code passes betas explicitly on memory store calls, replace managed-agents-2026-04-01 with agent-memory-2026-07-22 there rather than adding a second value.",
-        "July 1, 2026 \ue09a",
-        "We've restored access to Claude Fable 5 and Claude Mythos 5. See our statement for more information.",
-        "June 30, 2026 \ue09a",
-        "We've launched Claude Sonnet 5 ( claude-sonnet-5 ), the next generation of our Sonnet model family, at introductory pricing of $2 / $10 per MTok (made the standard price on August 10, 2026). Claude Sonnet 5 supports a 1M token context window , 128k max output tokens, and the same set of tools and platform features as Claude Sonnet 4.6, except Priority Tier , which is not available on Claude Sonnet 5. Three behavior changes apply when migrating: adaptive thinking is now on by default; manual extended thinking ( thinking: {type: \"enabled\", budget_tokens: N} ) is removed and returns a 400 error (it was deprecated on Sonnet 4.6); and setting sampling parameters ( temperature , top_p , top_k ) to non-default values returns a 400 error. Claude Sonnet 5 also uses a new tokenizer that produces approximately 30% more tokens for the same text. The exact increase depends on the content and workload shape. See What's new in Claude Sonnet 5 for details and migration guidance. For behavioral differences and model-specific prompting patterns, see Prompting Claude Sonnet 5 ."
+        "July 1, 2026 \ue09a"
       ],
-      "content_hash": "15662190943b",
-      "last_seen_at": "2026-10-22T12:06:09.234325",
+      "content_hash": "8d0c70f65b93",
+      "last_seen_at": "2026-10-23T12:05:56.559584",
       "title": "Anthropic Release Notes",
-      "updated_at": "2026-10-22T12:06:09.234325"
+      "updated_at": "2026-10-23T12:05:56.559584"
     }
   },
   "sent": {
@@ -416,6 +416,13 @@
       "source": "arXiv",
       "title": "RAFT: A Stateful Retrieval-Augmented Framework for Troubleshooting Agents",
       "url": "http://arxiv.org/abs/2609.20754v1"
+    },
+    "1b261e3caa9e6eb439b42c26610a34c28d8b2b84": {
+      "kind": "Blog",
+      "sent_at": "2026-10-23T12:05:56.559584",
+      "source": "HuggingFace",
+      "title": "Turning Database Grading into RL Rewards: Post-Training Agents with ThinkingBox",
+      "url": "https://huggingface.co/blog/microsoft/thinkingbox-training"
     },
     "1c08347f378f18ea4407ad4fea6824a192da57ed": {
       "kind": "Blog",
@@ -550,13 +557,6 @@
       "title": "Anthropic Release Notes",
       "url": "https://docs.anthropic.com/en/release-notes/overview"
     },
-    "32c3b4ab7f727a916e69ef14d82f48a31629bb95": {
-      "kind": "Blog",
-      "sent_at": "2026-09-07T12:08:41.637193",
-      "source": "OpenAI",
-      "title": "Research acceleration: The view inside OpenAI",
-      "url": "https://openai.com/index/research-acceleration-view-inside-openai"
-    },
     "33ee6591e33e669318fc0373a037fd7a10b98989": {
       "kind": "Blog",
       "sent_at": "2026-10-20T12:05:14.915139",
@@ -605,6 +605,13 @@
       "source": "arXiv",
       "title": "CliffCompaction: Cost-Efficient Compaction for Long-Horizon Coding Agents",
       "url": "http://arxiv.org/abs/2609.26779v1"
+    },
+    "3e403ac1a929e3ffca75df1bc426119c0e9ff90c": {
+      "kind": "Paper",
+      "sent_at": "2026-10-23T12:05:56.559584",
+      "source": "arXiv",
+      "title": "Adaptive Skill Granularity for Coding Agents: Runtime Routing and Macro-to-Micro Recovery",
+      "url": "http://arxiv.org/abs/2610.31461v1"
     },
     "3e48849c442afe567391840b54cb51cb04556699": {
       "kind": "Blog",
@@ -690,6 +697,13 @@
       "title": "Anthropic Release Notes",
       "url": "https://docs.anthropic.com/en/release-notes/overview"
     },
+    "5107c05a5a6227ba41aaf5417d8677a006d2bf87": {
+      "kind": "Blog",
+      "sent_at": "2026-10-23T12:05:56.559584",
+      "source": "Simon Willison",
+      "title": "Donating Agent Skills to the Agentic AI Foundation",
+      "url": "https://simonwillison.net/2026/Oct/22/donating-agent-skills/"
+    },
     "524d79138d3e53cc6365131a1b2550496dac00be": {
       "kind": "Blog",
       "sent_at": "2026-09-12T12:07:44.504781",
@@ -703,6 +717,13 @@
       "source": "Simon Willison",
       "title": "Claude Sonnet 5.5",
       "url": "https://simonwillison.net/2026/Sep/28/claude-sonnet-5-5/"
+    },
+    "547ed7897c1dcccc9475ba92e16490573d278a9a": {
+      "kind": "Blog",
+      "sent_at": "2026-10-23T12:05:56.559584",
+      "source": "Hacker News",
+      "title": "LLMs are making formal software verification feasible at a much larger scale",
+      "url": "https://www.anthropic.com/research/formal-verification"
     },
     "558318417ee46fcb4aaa38e7b0dc6a374339d43c": {
       "kind": "Blog",
@@ -871,6 +892,13 @@
       "source": "FastAPI Releases",
       "title": "0.144.0",
       "url": "https://github.com/fastapi/fastapi/releases/tag/0.144.0"
+    },
+    "72d47fd284f4fc3b3db075dbeda234d810b82371": {
+      "kind": "Blog",
+      "sent_at": "2026-10-23T12:05:56.559584",
+      "source": "Supabase Blog",
+      "title": "Give your Supabase app its own MCP server",
+      "url": "https://supabase.com/blog/give-your-supabase-app-its-own-mcp-server"
     },
     "74e3d6e5f7061819c389e6c0b5c8de6eb6dfbe14": {
       "kind": "Blog",
@@ -1089,6 +1117,13 @@
       "title": "DeepSeek v4.1 Flash",
       "url": "https://twitter.com/deepseek_ai/status/2097930608790167907"
     },
+    "aa58d57638ccc681c72cea43ad03fd3781eb2008": {
+      "kind": "Blog",
+      "sent_at": "2026-10-23T12:05:56.559584",
+      "source": "Shopify Engineering",
+      "title": "We gave AI agents a mobile dev environment (2026)",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5ITlpIV2JVS01kYVNwNEZrNW5UWGozQXVIWExVUVUwWEp5dDRDWVVwSzJNT1VUN3ZVSkJJZmhoVDdXeVVzOHpqS1c5Y3dkb2c?oc=5"
+    },
     "aba00e8df96919ebca6e5a07a8d78c4372a90b35": {
       "kind": "Blog",
       "sent_at": "2026-09-19T12:06:29.356523",
@@ -1130,6 +1165,13 @@
       "source": "Simon Willison",
       "title": "Self-generated prompt injections in compaction summaries",
       "url": "https://simonwillison.net/2026/Sep/17/compaction-summaries/"
+    },
+    "b12f8fbc7f8d3fb42bdd129b5d76f9e106b01160": {
+      "kind": "Blog",
+      "sent_at": "2026-10-23T12:05:56.559584",
+      "source": "Anthropic Docs",
+      "title": "Anthropic Release Notes",
+      "url": "https://docs.anthropic.com/en/release-notes/overview"
     },
     "b13e55301093869de8e6b6b90f88c7dfb771c233": {
       "kind": "Paper",
@@ -1355,6 +1397,13 @@
       "title": "Better prompt caching for GPT-6",
       "url": "https://openai.com/index/better-prompt-caching-for-gpt-6"
     },
+    "d7b5988f22e7dadba9840d2258e1e937477b5277": {
+      "kind": "Blog",
+      "sent_at": "2026-10-23T12:05:56.559584",
+      "source": "InfoQ Architecture Articles",
+      "title": "Article: AI Changes the Data Interface, Not the Query Engine",
+      "url": "https://www.infoq.com/articles/ai-changes-data-interface/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Architecture-articles"
+    },
     "d88172934ef3b3631f16a81d450bc5eb524be756": {
       "kind": "Blog",
       "sent_at": "2026-09-21T12:08:56.804324",
@@ -1389,6 +1438,13 @@
       "source": "arXiv",
       "title": "FOCUS: Training-Free Decision-Preserving Context Compression for LLM Agents",
       "url": "http://arxiv.org/abs/2609.37590v1"
+    },
+    "dcda7f17304ce9ea49c2aa0e7ddd03601a8dd77b": {
+      "kind": "Blog",
+      "sent_at": "2026-10-23T12:05:56.559584",
+      "source": "OpenAI",
+      "title": "Build more responsive apps with the Decisions API",
+      "url": "https://openai.com/index/decisions-api"
     },
     "def5893ab448a54f570491e1d474728a90e46321": {
       "kind": "Blog",
@@ -1537,6 +1593,7 @@
     "https://blog.cloudflare.com/how-fast-is-the-web/": "2026-09-29T12:05:14.873169",
     "https://blog.cloudflare.com/hyperdrive-mysql/": "2026-10-15T12:05:43.021804",
     "https://blog.cloudflare.com/introducing-web-search-api/": "2026-10-03T12:07:30.150185",
+    "https://blog.cloudflare.com/k-isms/": "2026-10-23T12:05:56.559813",
     "https://blog.cloudflare.com/obsessive-inference-optimization/": "2026-10-20T12:05:14.915294",
     "https://blog.cloudflare.com/one-observability-platform/": "2026-10-03T12:07:30.150185",
     "https://blog.cloudflare.com/one-year-later-1111-interns/": "2026-10-06T12:06:05.076859",
@@ -1603,7 +1660,6 @@
     "https://openai.com/index/ai-policy-window": "2026-09-10T12:08:06.867270",
     "https://openai.com/index/albertsons-reimagining-retail": "2026-10-02T12:07:26.758352",
     "https://openai.com/index/amp-beyond-coding": "2026-10-15T12:05:43.021804",
-    "https://openai.com/index/an-alien-mind": "2026-09-07T12:08:41.637282",
     "https://openai.com/index/asana-browser-agent": "2026-10-10T12:04:47.946949",
     "https://openai.com/index/att-legal": "2026-10-22T12:06:09.234476",
     "https://openai.com/index/australian-youth-safety-blueprint": "2026-09-19T12:06:29.356704",
@@ -1613,6 +1669,7 @@
     "https://openai.com/index/devday-2026-recap": "2026-09-30T12:05:59.362753",
     "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign": "2026-10-01T12:06:07.829111",
     "https://openai.com/index/eu-text-provenance": "2026-10-06T12:06:05.076859",
+    "https://openai.com/index/forward-deployed-engineering-means": "2026-10-23T12:05:56.559813",
     "https://openai.com/index/fyxer": "2026-09-15T12:07:57.999528",
     "https://openai.com/index/grab-openai-ai-skills-southeast-asia": "2026-09-23T12:06:19.094636",
     "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life": "2026-09-17T12:13:02.409327",
@@ -1632,6 +1689,7 @@
     "https://openai.com/index/new-chatgpt-ads-format-and-measurement": "2026-10-05T12:06:37.956034",
     "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense": "2026-09-24T12:06:34.844018",
     "https://openai.com/index/openai-models-google-cloud": "2026-10-22T12:06:09.234476",
+    "https://openai.com/index/openai-nask-ai-safety-security-partnership": "2026-10-23T12:05:56.559813",
     "https://openai.com/index/oracle": "2026-10-09T12:04:52.188908",
     "https://openai.com/index/paul-christiano-joins-openai-foundation-board": "2026-09-10T12:08:06.867270",
     "https://openai.com/index/pollo-ai": "2026-10-09T12:04:52.188908",
@@ -1644,7 +1702,6 @@
     "https://openai.com/index/sentinelone": "2026-10-15T12:05:43.021804",
     "https://openai.com/index/sharing-ai-progress-in-mathematics": "2026-10-07T12:06:18.519687",
     "https://openai.com/index/sophos": "2026-10-09T12:04:52.188908",
-    "https://openai.com/index/supporting-independent-journalism-in-ukraine": "2026-09-07T12:08:41.637282",
     "https://openai.com/index/ted-taylor-restaurant": "2026-10-21T12:07:40.757503",
     "https://openai.com/index/terminal-x": "2026-10-21T12:07:40.757503",
     "https://openai.com/index/the-eternal-complement": "2026-10-02T12:07:26.758352",
@@ -1658,6 +1715,7 @@
     "https://www.anthropic.com/news/2026-usage-policy-update": "2026-10-09T12:04:52.188908",
     "https://www.anthropic.com/news/accenture-embedded-evaluation": "2026-09-20T12:05:02.833015",
     "https://www.anthropic.com/news/an-update-on-independent-evaluators": "2026-10-16T12:05:32.016399",
+    "https://www.anthropic.com/news/announcements": "2026-10-23T12:05:56.559813",
     "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy": "2026-09-27T12:05:14.092935",
     "https://www.anthropic.com/news/anthropic-cyber-mission": "2026-10-09T12:04:52.188908",
     "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system": "2026-09-27T12:05:14.092935",
