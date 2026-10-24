@@ -52,7 +52,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "1fff0c097d29",
-      "last_seen_at": "2026-10-23T12:01:45.506573",
+      "last_seen_at": "2026-10-24T12:02:42.226944",
       "title": "Claude Code Overview",
       "updated_at": "2026-10-20T12:05:14.915139"
     },
@@ -180,7 +180,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "9dda4b28be94",
-      "last_seen_at": "2026-10-23T12:01:45.506573",
+      "last_seen_at": "2026-10-24T12:02:42.226944",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-10-22T12:06:09.234325"
     },
@@ -200,6 +200,7 @@
         "The new SDK and CLI versions also have breaking changes that don't depend on the API version, and they are licensed under Apache 2.0 instead of the MIT License. See SDK and CLI changes .",
         "We've added the enforcement_status and enforcement_actions fields to user profiles , so you can see whether Anthropic has restricted or banned one of your end customers. To find the profiles that have an open restriction or ban, list your profiles with the new enforcement_status[] filter. See Check whether Anthropic has restricted or banned a profile .",
         "October 20, 2026 \ue09a",
+        "The Claude Tag API is available in beta for Claude Enterprise organizations with the experimental-claude-tag-2026-10-21 beta header. Its /v1/organizations/claude_tag/ endpoints read and change Claude Tag settings on Slack channels and Slack workspaces, show which settings apply in a channel and where each comes from, and attach Access bundles. Call it with an Admin API key that your primary owner creates in claude.ai with the read:claude_tag or write:claude_tag scope. It is not available to Claude Platform (Claude Console) organizations.",
         "Inference hooks are out of beta for Claude Enterprise organizations.",
         "We've launched user profiles , so you can tell Anthropic which of your end customers each API request is for. If you operate a platform or gateway, or resell API access, a safety enforcement action can then apply to one end customer instead of your whole organization. The SDK and the ant CLI support the new /v1/user_profiles endpoints .",
         "We've added organization webhooks to the Admin API , in beta with the webhooks-2026-10-07 beta header. Its /v1/organizations/webhooks endpoints register webhook endpoints for two event types: one for when Anthropic restricts or bans one of your organization's user profiles, and one for when the restriction or ban ends. To request access, contact your Anthropic account team.",
@@ -344,13 +345,12 @@
         "You can now set an expiration when you create an API key or an Admin API key in the Claude Console . Choose a preset, a custom duration, or Never . For keys with a lifetime of at least 7 days, Anthropic emails the creator before expiration. Existing keys are unaffected. The Admin API reports each key's expiration in the expires_at field. See Key expiration in Authentication .",
         "July 2, 2026 \ue09a",
         "We've added the agent-memory-2026-07-22 beta header, which changes how listing memories ( GET /v1/memory_stores/{memory_store_id}/memories ) behaves: results are returned in a stable, server-defined order and the order_by and order parameters are ignored; depth accepts only 0 , 1 , or being omitted (other values return a 400 error); and path_prefix must end with / and matches whole path segments instead of a substring. Page cursors issued without the header aren't valid with it, so restart from the first page when you adopt it. On memory store endpoints, agent-memory-2026-07-22 replaces managed-agents-2026-04-01 ; sending both returns a 400 error. On July 22, 2026, the managed-agents-2026-04-01 header adopts the same list behavior. See Beta headers .",
-        "The Python (0.116.0), TypeScript (0.110.0), Go (1.56.0), Java (2.48.0), Ruby (1.55.0), PHP (0.36.0), C# (12.35.0), and CLI (1.16.0) SDKs now send agent-memory-2026-07-22 on all memory store calls instead of managed-agents-2026-04-01 . If your code passes betas explicitly on memory store calls, replace managed-agents-2026-04-01 with agent-memory-2026-07-22 there rather than adding a second value.",
-        "July 1, 2026 \ue09a"
+        "The Python (0.116.0), TypeScript (0.110.0), Go (1.56.0), Java (2.48.0), Ruby (1.55.0), PHP (0.36.0), C# (12.35.0), and CLI (1.16.0) SDKs now send agent-memory-2026-07-22 on all memory store calls instead of managed-agents-2026-04-01 . If your code passes betas explicitly on memory store calls, replace managed-agents-2026-04-01 with agent-memory-2026-07-22 there rather than adding a second value."
       ],
-      "content_hash": "8d0c70f65b93",
-      "last_seen_at": "2026-10-23T12:05:56.559584",
+      "content_hash": "16cd840c2594",
+      "last_seen_at": "2026-10-24T12:06:33.888741",
       "title": "Anthropic Release Notes",
-      "updated_at": "2026-10-23T12:05:56.559584"
+      "updated_at": "2026-10-24T12:06:33.888741"
     }
   },
   "sent": {
@@ -683,6 +683,13 @@
       "title": "Introducing GPT-6 Sol and Luna",
       "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna"
     },
+    "4ade4349b65a33d3db55f20d20651360517a9400": {
+      "kind": "Blog",
+      "sent_at": "2026-10-24T12:06:33.888741",
+      "source": "Anthropic Docs",
+      "title": "Anthropic Release Notes",
+      "url": "https://docs.anthropic.com/en/release-notes/overview"
+    },
     "4bc695297c2e15d251c913132d5383f5b3f62447": {
       "kind": "Blog",
       "sent_at": "2026-09-13T12:07:17.595128",
@@ -738,13 +745,6 @@
       "source": "Neon Blog",
       "title": "Claimable Neon: Provisioned by agents, claimed by humans",
       "url": "https://neon.com/blog/an-agent-provisions-a-neon-backend-a-human-claims-it-later"
-    },
-    "5a3b9df656a8fc7010ad7e773ef8b5d2aa9d23cd": {
-      "kind": "Blog",
-      "sent_at": "2026-09-08T12:07:16.586830",
-      "source": "Simon Willison",
-      "title": "Video compressor",
-      "url": "https://simonwillison.net/2026/Sep/7/video-compressor/"
     },
     "5a4e8453cd75290f5fb145582e3c8580e8f724db": {
       "kind": "Blog",
@@ -1117,6 +1117,20 @@
       "title": "DeepSeek v4.1 Flash",
       "url": "https://twitter.com/deepseek_ai/status/2097930608790167907"
     },
+    "a9380d6cca8754fc3930a07ac7d4d6ddb5ecc576": {
+      "kind": "Blog",
+      "sent_at": "2026-10-24T12:06:33.888741",
+      "source": "Simon Willison",
+      "title": "Quick Study",
+      "url": "https://simonwillison.net/2026/Oct/23/quick-study-painter/"
+    },
+    "a98a49e1f35b841e38bc6a0f7f7e8eb2cd489ff9": {
+      "kind": "Paper",
+      "sent_at": "2026-10-24T12:06:33.888741",
+      "source": "arXiv",
+      "title": "Certified Execution Harness for Agentic AI: Safe and Least-Intrusive Petri-Net Supervisory Control Between Reasoning and Action",
+      "url": "http://arxiv.org/abs/2610.31376v1"
+    },
     "aa58d57638ccc681c72cea43ad03fd3781eb2008": {
       "kind": "Blog",
       "sent_at": "2026-10-23T12:05:56.559584",
@@ -1383,6 +1397,13 @@
       "title": "Beyond the model: Engineering AI infra with scientific judgement",
       "url": "https://medium.com/airbnb-engineering/beyond-the-model-engineering-ai-infra-with-scientific-judgement-371316d43261?source=rss----53c7c27702d5--ai"
     },
+    "d65ada6f3663348e77f748d1bbaf1773089095ee": {
+      "kind": "Blog",
+      "sent_at": "2026-10-24T12:06:33.888741",
+      "source": "FastAPI Releases",
+      "title": "0.162.0",
+      "url": "https://github.com/fastapi/fastapi/releases/tag/0.162.0"
+    },
     "d73b7cb855e23229a00b2ce2c822257ccb257821": {
       "kind": "Blog",
       "sent_at": "2026-10-20T12:05:14.915139",
@@ -1597,8 +1618,10 @@
     "https://blog.cloudflare.com/obsessive-inference-optimization/": "2026-10-20T12:05:14.915294",
     "https://blog.cloudflare.com/one-observability-platform/": "2026-10-03T12:07:30.150185",
     "https://blog.cloudflare.com/one-year-later-1111-interns/": "2026-10-06T12:06:05.076859",
+    "https://blog.cloudflare.com/origin-range-requests/": "2026-10-24T12:06:33.888920",
     "https://blog.cloudflare.com/php-vulnerabilities-waf-protection/": "2026-10-22T12:06:09.234476",
     "https://blog.cloudflare.com/post-quantum-dnssec-1111/": "2026-09-11T12:08:35.817997",
+    "https://blog.cloudflare.com/post-quantum-geo-key-manager/": "2026-10-24T12:06:33.888920",
     "https://blog.cloudflare.com/programmable-gateway-dlp/": "2026-10-16T12:05:32.016399",
     "https://blog.cloudflare.com/protect-your-netscaler-gateway/": "2026-10-20T12:05:14.915294",
     "https://blog.cloudflare.com/python-workers-ga/": "2026-09-22T12:05:07.666789",
@@ -1699,6 +1722,8 @@
     "https://openai.com/index/radisson": "2026-10-08T12:05:55.349500",
     "https://openai.com/index/reimagining-advertising-with-ai": "2026-09-17T12:13:02.409327",
     "https://openai.com/index/sam-altman-un-security-council-remarks": "2026-09-24T12:06:34.844018",
+    "https://openai.com/index/scaling-storage-one-billion-users-part-two": "2026-10-24T12:06:33.888920",
+    "https://openai.com/index/securing-our-frontier-model-training-environment": "2026-10-24T12:06:33.888920",
     "https://openai.com/index/sentinelone": "2026-10-15T12:05:43.021804",
     "https://openai.com/index/sharing-ai-progress-in-mathematics": "2026-10-07T12:06:18.519687",
     "https://openai.com/index/sophos": "2026-10-09T12:04:52.188908",
