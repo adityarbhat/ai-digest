@@ -52,7 +52,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "1fff0c097d29",
-      "last_seen_at": "2026-10-24T12:02:42.226944",
+      "last_seen_at": "2026-10-25T12:02:38.860954",
       "title": "Claude Code Overview",
       "updated_at": "2026-10-20T12:05:14.915139"
     },
@@ -180,7 +180,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "9dda4b28be94",
-      "last_seen_at": "2026-10-24T12:02:42.226944",
+      "last_seen_at": "2026-10-25T12:02:38.860954",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-10-22T12:06:09.234325"
     },
@@ -348,7 +348,7 @@
         "The Python (0.116.0), TypeScript (0.110.0), Go (1.56.0), Java (2.48.0), Ruby (1.55.0), PHP (0.36.0), C# (12.35.0), and CLI (1.16.0) SDKs now send agent-memory-2026-07-22 on all memory store calls instead of managed-agents-2026-04-01 . If your code passes betas explicitly on memory store calls, replace managed-agents-2026-04-01 with agent-memory-2026-07-22 there rather than adding a second value."
       ],
       "content_hash": "16cd840c2594",
-      "last_seen_at": "2026-10-24T12:06:33.888741",
+      "last_seen_at": "2026-10-25T12:02:38.860954",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-10-24T12:06:33.888741"
     }
@@ -641,12 +641,12 @@
       "title": "0.143.5",
       "url": "https://github.com/fastapi/fastapi/releases/tag/0.143.5"
     },
-    "3fc8dba9f713e46156a2abe4364ed891a26456c1": {
+    "42d5228259a0c6b93ee055a1d642917f74cfe246": {
       "kind": "Blog",
-      "sent_at": "2026-09-09T12:07:47.102858",
+      "sent_at": "2026-10-25T12:06:02.649907",
       "source": "Hacker News",
-      "title": "I-have-ADHD: A skill to stop coding agents from burying the answer",
-      "url": "https://github.com/ayghri/i-have-adhd"
+      "title": "Node2Shell evolves to HTTP2Shell, blast radius affects many HTTP libs and apps",
+      "url": "https://www.aikido.dev/blog/python-packages-vulnerable-node2shell-brotli-cve-2026-111497"
     },
     "4304f4222b60b9ef71816e4b547950784d5e836a": {
       "kind": "Blog",
@@ -780,13 +780,6 @@
       "source": "Anthropic Docs",
       "title": "Claude Code Overview",
       "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
-    },
-    "600e0602f78b7c27e368a65e80b6b10d4f9d5d80": {
-      "kind": "Blog",
-      "sent_at": "2026-09-09T12:07:47.102858",
-      "source": "MIT Tech Review",
-      "title": "What OpenAI\u2019s latest controversy tells us about the future of math",
-      "url": "https://www.technologyreview.com/2026/09/08/1143747/what-openais-latest-controversy-tells-us-about-the-future-of-math/"
     },
     "6254fec3d16fdba5cf21d35e6e8399a811ad6738": {
       "kind": "Blog",
@@ -1067,13 +1060,6 @@
       "source": "arXiv",
       "title": "MCP Error Messages Written for Developers Hurt the Most Capable Agents Most",
       "url": "http://arxiv.org/abs/2609.35381v1"
-    },
-    "97e3f60c27d69bb617e0bf9dc71fca65c22ffa7a": {
-      "kind": "Paper",
-      "sent_at": "2026-09-09T12:07:47.102858",
-      "source": "arXiv",
-      "title": "ExecCritic: Learn to Test, Test to Improve for Coding Agents",
-      "url": "http://arxiv.org/abs/2609.09133v1"
     },
     "99c66ecebeb22541030e27f64c17fd9ce3d5a763": {
       "kind": "Blog",
@@ -1594,7 +1580,6 @@
     "https://blog.cloudflare.com/ai-driven-cryptography-discovery/": "2026-09-30T12:05:59.362753",
     "https://blog.cloudflare.com/ai-era-framework/": "2026-09-30T12:05:59.362753",
     "https://blog.cloudflare.com/auto-router/": "2026-10-01T12:06:07.829111",
-    "https://blog.cloudflare.com/automatic-key-exchange-for-origins/": "2026-09-09T12:07:47.103026",
     "https://blog.cloudflare.com/birthday-week-2026-wrap-up/": "2026-10-06T12:06:05.076859",
     "https://blog.cloudflare.com/casb-policies/": "2026-09-12T12:07:44.504914",
     "https://blog.cloudflare.com/clairic-extraction-model/": "2026-10-20T12:05:14.915294",
@@ -1673,7 +1658,6 @@
     "https://claude.com/blog/new-in-claude-managed-agents": "2026-09-10T12:08:06.867270",
     "https://claude.com/blog/preparing-your-security-program-for-ai-accelerated-offense": "2026-09-12T12:07:44.504914",
     "https://claude.com/blog/projects-redesigned": "2026-09-18T12:06:23.572212",
-    "https://claude.com/blog/reducing-cost-and-improving-performance-with-claude-platform": "2026-09-09T12:07:47.103026",
     "https://claude.com/blog/salesforce-in-claude": "2026-09-16T12:09:07.980580",
     "https://claude.com/blog/t-rowe-price-brings-more-of-claude-to-its-investment-process": "2026-09-12T12:07:44.504914",
     "https://claude.com/blog/what-1-000-small-business-owners-taught-us-about-ai": "2026-09-12T12:07:44.504914",
@@ -1702,13 +1686,11 @@
     "https://openai.com/index/how-to-connect-ai-usage-to-business-value": "2026-09-17T12:13:02.409327",
     "https://openai.com/index/how-we-will-do-better-for-australia": "2026-09-29T12:05:14.873169",
     "https://openai.com/index/introducing-chatgpt-financial-services": "2026-09-11T12:08:35.817997",
-    "https://openai.com/index/introducing-chatgpt-images-2-5": "2026-09-09T12:07:47.103026",
     "https://openai.com/index/introducing-gpt-6-1-sol": "2026-09-30T12:05:59.362753",
     "https://openai.com/index/introducing-the-rosalind-academic-plan": "2026-10-16T12:05:32.016399",
     "https://openai.com/index/jump-trading": "2026-10-07T12:06:18.519687",
     "https://openai.com/index/lenfest-ai-collaborative-expansion": "2026-09-29T12:05:14.873169",
     "https://openai.com/index/low-resource-programming-languages": "2026-10-20T12:05:14.915294",
-    "https://openai.com/index/navier-stokes-solution": "2026-09-09T12:07:47.103026",
     "https://openai.com/index/new-chatgpt-ads-format-and-measurement": "2026-10-05T12:06:37.956034",
     "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense": "2026-09-24T12:06:34.844018",
     "https://openai.com/index/openai-models-google-cloud": "2026-10-22T12:06:09.234476",
@@ -1731,7 +1713,6 @@
     "https://openai.com/index/terminal-x": "2026-10-21T12:07:40.757503",
     "https://openai.com/index/the-eternal-complement": "2026-10-02T12:07:26.758352",
     "https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic": "2026-10-14T12:05:52.861992",
-    "https://openai.com/index/the-work-now-within-reach": "2026-09-09T12:07:47.103026",
     "https://openai.com/index/third-moment-research": "2026-10-15T12:05:43.021804",
     "https://openai.com/index/towards-safety-cases-for-frontier-ai-training": "2026-09-29T12:05:14.873169",
     "https://openai.com/index/two-years-of-openai-academy": "2026-09-24T12:06:34.844018",
