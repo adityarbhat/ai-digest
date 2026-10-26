@@ -52,7 +52,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "1fff0c097d29",
-      "last_seen_at": "2026-10-25T12:02:38.860954",
+      "last_seen_at": "2026-10-26T12:01:34.900558",
       "title": "Claude Code Overview",
       "updated_at": "2026-10-20T12:05:14.915139"
     },
@@ -180,7 +180,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "9dda4b28be94",
-      "last_seen_at": "2026-10-25T12:02:38.860954",
+      "last_seen_at": "2026-10-26T12:01:34.900558",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-10-22T12:06:09.234325"
     },
@@ -348,7 +348,7 @@
         "The Python (0.116.0), TypeScript (0.110.0), Go (1.56.0), Java (2.48.0), Ruby (1.55.0), PHP (0.36.0), C# (12.35.0), and CLI (1.16.0) SDKs now send agent-memory-2026-07-22 on all memory store calls instead of managed-agents-2026-04-01 . If your code passes betas explicitly on memory store calls, replace managed-agents-2026-04-01 with agent-memory-2026-07-22 there rather than adding a second value."
       ],
       "content_hash": "16cd840c2594",
-      "last_seen_at": "2026-10-25T12:02:38.860954",
+      "last_seen_at": "2026-10-26T12:01:34.900558",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-10-24T12:06:33.888741"
     }
@@ -500,13 +500,6 @@
       "source": "arXiv",
       "title": "Failure-Transparent Agents: Benchmarking Post-Failure Reporting in Tool-Using Language Models",
       "url": "http://arxiv.org/abs/2609.35732v1"
-    },
-    "284177c0015e0342c872734fdae86d57ecbb7ce6": {
-      "kind": "Blog",
-      "sent_at": "2026-09-10T12:08:06.867051",
-      "source": "Hacker News",
-      "title": "DeepSeek launching v4.1 flash cheaper and more capable than v4 pro",
-      "url": "https://news.ycombinator.com/item?id=49624603"
     },
     "2d3779b5f12457a0d7496bdf9b71f6299e648394": {
       "kind": "Blog",
@@ -956,13 +949,6 @@
       "title": "Advancing computer use with Ironclad",
       "url": "https://openai.com/index/advancing-computer-use-with-ironclad"
     },
-    "803f3e079c073655f338e119cff97b311f9cfffe": {
-      "kind": "Paper",
-      "sent_at": "2026-09-10T12:08:06.867051",
-      "source": "arXiv",
-      "title": "AgentAudit: An Open, Extensible Framework for Full-Lifecycle Trust Evaluation of AI Agents",
-      "url": "http://arxiv.org/abs/2609.09875v1"
-    },
     "80f6d330770553eef7a0e568bc68b2a0dc18866e": {
       "kind": "Blog",
       "sent_at": "2026-09-29T12:05:14.873017",
@@ -1060,13 +1046,6 @@
       "source": "arXiv",
       "title": "MCP Error Messages Written for Developers Hurt the Most Capable Agents Most",
       "url": "http://arxiv.org/abs/2609.35381v1"
-    },
-    "99c66ecebeb22541030e27f64c17fd9ce3d5a763": {
-      "kind": "Blog",
-      "sent_at": "2026-09-10T12:08:06.867051",
-      "source": "OpenAI",
-      "title": "GPT-6 Astra: The next generation in intelligence for work",
-      "url": "https://openai.com/index/gpt-6-astra-next-generation-work"
     },
     "9a4e73807cc6a50b858174f9e9d8f2daefe9f92d": {
       "kind": "Blog",
@@ -1222,13 +1201,6 @@
       "title": "Training a 4B model to produce 81% faster query plans than Postgres",
       "url": "https://rohanbansal.com/qorl"
     },
-    "ba4a4b3e87bca2e49537580b409e60ac589e9db1": {
-      "kind": "Blog",
-      "sent_at": "2026-09-10T12:08:06.867051",
-      "source": "Anthropic Docs",
-      "title": "Anthropic Release Notes",
-      "url": "https://docs.anthropic.com/en/release-notes/overview"
-    },
     "bad7a956d596ed8f19c097a2a667c04f083fc7b3": {
       "kind": "Blog",
       "sent_at": "2026-09-27T12:05:14.092860",
@@ -1362,13 +1334,6 @@
       "title": "Claude Opus 5.5",
       "url": "https://www.anthropic.com/claude-opus-5-5"
     },
-    "d234b8974b81c6a4b2a07d88c19aad8756b8b779": {
-      "kind": "Blog",
-      "sent_at": "2026-09-10T12:08:06.867051",
-      "source": "Neon Blog",
-      "title": "Improving Lakebase Postgres Compute Cache on Neon, Part 1",
-      "url": "https://neon.com/blog/improving-lakebase-compute-cache-part-1"
-    },
     "d2d35d0e66cb864d91981e1736246f91f8dc5458": {
       "kind": "Blog",
       "sent_at": "2026-10-07T12:06:18.519554",
@@ -1445,6 +1410,13 @@
       "source": "arXiv",
       "title": "FOCUS: Training-Free Decision-Preserving Context Compression for LLM Agents",
       "url": "http://arxiv.org/abs/2609.37590v1"
+    },
+    "dbd54b88b72b72aac9e78424f3b4c55033b0910c": {
+      "kind": "Blog",
+      "sent_at": "2026-10-26T12:05:22.282057",
+      "source": "Hacker News",
+      "title": "The State of Context Engineering",
+      "url": "https://www.dbreunig.com/2026/10/24/the-state-of-context-engineering.html"
     },
     "dcda7f17304ce9ea49c2aa0e7ddd03601a8dd77b": {
       "kind": "Blog",
@@ -1627,7 +1599,6 @@
     "https://blog.cloudflare.com/worker-previews/": "2026-09-23T12:06:19.094636",
     "https://blog.cloudflare.com/workers-granular-authorization/": "2026-09-16T12:09:07.980580",
     "https://blog.cloudflare.com/workers-kv-instant/": "2026-10-02T12:07:26.758352",
-    "https://blog.cloudflare.com/workers-module-registry-nodejs/": "2026-09-10T12:08:06.867270",
     "https://blog.cloudflare.com/workers-on-demand-profiling/": "2026-10-10T12:04:47.946949",
     "https://blog.cloudflare.com/yandex-outage/": "2026-10-15T12:05:43.021804",
     "https://claude.com/blog/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic": "2026-09-15T12:07:57.999528",
@@ -1638,11 +1609,9 @@
     "https://claude.com/blog/claude-code-desktop-redesign": "2026-09-11T12:08:35.817997",
     "https://claude.com/blog/claude-code-mods": "2026-10-02T12:07:26.758352",
     "https://claude.com/blog/claude-for-financial-advisors": "2026-09-15T12:07:57.999528",
-    "https://claude.com/blog/claude-for-foundation-models": "2026-09-10T12:08:06.867270",
     "https://claude.com/blog/claude-for-government-is-now-generally-available": "2026-10-01T12:06:07.829111",
     "https://claude.com/blog/claude-for-small-business-launches-new-workflows-integrations-and-training-programs": "2026-09-16T12:09:07.980580",
     "https://claude.com/blog/claude-managed-agents-memory": "2026-09-11T12:08:35.817997",
-    "https://claude.com/blog/claude-managed-agents-updates": "2026-09-10T12:08:06.867270",
     "https://claude.com/blog/claude-marketplace": "2026-09-24T12:06:34.844018",
     "https://claude.com/blog/claude-opus-5-5-built-for-coding-sessions-that-use-more-context": "2026-09-25T12:05:19.070930",
     "https://claude.com/blog/claude-tag-now-supports-personal-connectors-in-channels": "2026-09-25T12:05:19.070930",
@@ -1655,7 +1624,6 @@
     "https://claude.com/blog/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk": "2026-10-06T12:06:05.076859",
     "https://claude.com/blog/how-healthcare-organizations-use-claude-tag": "2026-09-15T12:07:57.999528",
     "https://claude.com/blog/how-to-prepare-for-ai-driven-code-modernization-projects": "2026-09-24T12:06:34.844018",
-    "https://claude.com/blog/new-in-claude-managed-agents": "2026-09-10T12:08:06.867270",
     "https://claude.com/blog/preparing-your-security-program-for-ai-accelerated-offense": "2026-09-12T12:07:44.504914",
     "https://claude.com/blog/projects-redesigned": "2026-09-18T12:06:23.572212",
     "https://claude.com/blog/salesforce-in-claude": "2026-09-16T12:09:07.980580",
@@ -1664,7 +1632,6 @@
     "https://claude.com/blog/what-a-task-costs-on-opus-5-5": "2026-09-23T12:06:19.094636",
     "https://claude.com/blog/working-at-the-frontier-how-balyasny-asset-management-evaluates-and-governs-claude-fable-5": "2026-09-18T12:06:23.572212",
     "https://openai.com/index/advisory-group-on-mathematics-and-ai": "2026-09-22T12:05:07.666789",
-    "https://openai.com/index/ai-policy-window": "2026-09-10T12:08:06.867270",
     "https://openai.com/index/albertsons-reimagining-retail": "2026-10-02T12:07:26.758352",
     "https://openai.com/index/amp-beyond-coding": "2026-10-15T12:05:43.021804",
     "https://openai.com/index/asana-browser-agent": "2026-10-10T12:04:47.946949",
@@ -1696,7 +1663,6 @@
     "https://openai.com/index/openai-models-google-cloud": "2026-10-22T12:06:09.234476",
     "https://openai.com/index/openai-nask-ai-safety-security-partnership": "2026-10-23T12:05:56.559813",
     "https://openai.com/index/oracle": "2026-10-09T12:04:52.188908",
-    "https://openai.com/index/paul-christiano-joins-openai-foundation-board": "2026-09-10T12:08:06.867270",
     "https://openai.com/index/pollo-ai": "2026-10-09T12:04:52.188908",
     "https://openai.com/index/practical-guide-building-gpt-6": "2026-10-03T12:07:30.150185",
     "https://openai.com/index/proaction": "2026-09-26T12:05:49.135682",
