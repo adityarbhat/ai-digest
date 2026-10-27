@@ -52,7 +52,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "1fff0c097d29",
-      "last_seen_at": "2026-10-26T12:01:34.900558",
+      "last_seen_at": "2026-10-27T12:02:25.533275",
       "title": "Claude Code Overview",
       "updated_at": "2026-10-20T12:05:14.915139"
     },
@@ -180,7 +180,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "9dda4b28be94",
-      "last_seen_at": "2026-10-26T12:01:34.900558",
+      "last_seen_at": "2026-10-27T12:02:25.533275",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-10-22T12:06:09.234325"
     },
@@ -191,6 +191,8 @@
         "The Claude Platform release notes list changes to the Claude API, the client SDKs, and the Claude Console, newest first.",
         "For release notes on Claude Apps, see the Release notes for Claude Apps in the Claude Help Center .",
         "For updates to Claude Code, see the complete CHANGELOG.md in the claude-code repository.",
+        "October 23, 2026 \ue09a",
+        "The Claude Tag API is available in beta for Claude Enterprise organizations with the experimental-claude-tag-2026-10-21 beta header. Its /v1/organizations/claude_tag/ endpoints read and change Claude Tag settings on Slack channels and Slack workspaces, show which settings apply in a channel and where each comes from, and attach Access bundles. Call it with an Admin API key that your primary owner creates in claude.ai with the read:claude_tag or write:claude_tag scope. It is not available to Claude Platform (Claude Console) organizations.",
         "October 22, 2026 \ue09a",
         "We've launched Claude Models on Google Cloud (Anthropic managed) , the Claude API operated by Anthropic and reached through your Google Cloud project. Google Cloud IAM controls access. Google Cloud Marketplace handles billing.",
         "Fast mode is available for Claude Opus 5.5 on Claude Models on Google Cloud (Anthropic managed).",
@@ -200,7 +202,6 @@
         "The new SDK and CLI versions also have breaking changes that don't depend on the API version, and they are licensed under Apache 2.0 instead of the MIT License. See SDK and CLI changes .",
         "We've added the enforcement_status and enforcement_actions fields to user profiles , so you can see whether Anthropic has restricted or banned one of your end customers. To find the profiles that have an open restriction or ban, list your profiles with the new enforcement_status[] filter. See Check whether Anthropic has restricted or banned a profile .",
         "October 20, 2026 \ue09a",
-        "The Claude Tag API is available in beta for Claude Enterprise organizations with the experimental-claude-tag-2026-10-21 beta header. Its /v1/organizations/claude_tag/ endpoints read and change Claude Tag settings on Slack channels and Slack workspaces, show which settings apply in a channel and where each comes from, and attach Access bundles. Call it with an Admin API key that your primary owner creates in claude.ai with the read:claude_tag or write:claude_tag scope. It is not available to Claude Platform (Claude Console) organizations.",
         "Inference hooks are out of beta for Claude Enterprise organizations.",
         "We've launched user profiles , so you can tell Anthropic which of your end customers each API request is for. If you operate a platform or gateway, or resell API access, a safety enforcement action can then apply to one end customer instead of your whole organization. The SDK and the ant CLI support the new /v1/user_profiles endpoints .",
         "We've added organization webhooks to the Admin API , in beta with the webhooks-2026-10-07 beta header. Its /v1/organizations/webhooks endpoints register webhook endpoints for two event types: one for when Anthropic restricts or bans one of your organization's user profiles, and one for when the restriction or ban ends. To request access, contact your Anthropic account team.",
@@ -344,13 +345,12 @@
         "July 8, 2026 \ue09a",
         "You can now set an expiration when you create an API key or an Admin API key in the Claude Console . Choose a preset, a custom duration, or Never . For keys with a lifetime of at least 7 days, Anthropic emails the creator before expiration. Existing keys are unaffected. The Admin API reports each key's expiration in the expires_at field. See Key expiration in Authentication .",
         "July 2, 2026 \ue09a",
-        "We've added the agent-memory-2026-07-22 beta header, which changes how listing memories ( GET /v1/memory_stores/{memory_store_id}/memories ) behaves: results are returned in a stable, server-defined order and the order_by and order parameters are ignored; depth accepts only 0 , 1 , or being omitted (other values return a 400 error); and path_prefix must end with / and matches whole path segments instead of a substring. Page cursors issued without the header aren't valid with it, so restart from the first page when you adopt it. On memory store endpoints, agent-memory-2026-07-22 replaces managed-agents-2026-04-01 ; sending both returns a 400 error. On July 22, 2026, the managed-agents-2026-04-01 header adopts the same list behavior. See Beta headers .",
-        "The Python (0.116.0), TypeScript (0.110.0), Go (1.56.0), Java (2.48.0), Ruby (1.55.0), PHP (0.36.0), C# (12.35.0), and CLI (1.16.0) SDKs now send agent-memory-2026-07-22 on all memory store calls instead of managed-agents-2026-04-01 . If your code passes betas explicitly on memory store calls, replace managed-agents-2026-04-01 with agent-memory-2026-07-22 there rather than adding a second value."
+        "We've added the agent-memory-2026-07-22 beta header, which changes how listing memories ( GET /v1/memory_stores/{memory_store_id}/memories ) behaves: results are returned in a stable, server-defined order and the order_by and order parameters are ignored; depth accepts only 0 , 1 , or being omitted (other values return a 400 error); and path_prefix must end with / and matches whole path segments instead of a substring. Page cursors issued without the header aren't valid with it, so restart from the first page when you adopt it. On memory store endpoints, agent-memory-2026-07-22 replaces managed-agents-2026-04-01 ; sending both returns a 400 error. On July 22, 2026, the managed-agents-2026-04-01 header adopts the same list behavior. See Beta headers ."
       ],
-      "content_hash": "16cd840c2594",
-      "last_seen_at": "2026-10-26T12:01:34.900558",
+      "content_hash": "cf4d7fa320d9",
+      "last_seen_at": "2026-10-27T12:06:30.845562",
       "title": "Anthropic Release Notes",
-      "updated_at": "2026-10-24T12:06:33.888741"
+      "updated_at": "2026-10-27T12:06:30.845562"
     }
   },
   "sent": {
@@ -501,6 +501,13 @@
       "title": "Failure-Transparent Agents: Benchmarking Post-Failure Reporting in Tool-Using Language Models",
       "url": "http://arxiv.org/abs/2609.35732v1"
     },
+    "2c470e0e83d06677567b79da0ce98be962d85bcc": {
+      "kind": "Blog",
+      "sent_at": "2026-10-27T12:06:30.845562",
+      "source": "Simon Willison",
+      "title": "GPT-6.1 Terra",
+      "url": "https://simonwillison.net/2026/Oct/26/gpt-61-terra/"
+    },
     "2d3779b5f12457a0d7496bdf9b71f6299e648394": {
       "kind": "Blog",
       "sent_at": "2026-10-02T12:07:26.758217",
@@ -543,6 +550,13 @@
       "title": "Sync Stripe data in real-time to Neon",
       "url": "https://neon.com/blog/stripe-data-pipeline-realtime-sync-to-postgres"
     },
+    "30daebcbec038d8a661fd589b0845c00c32d2130": {
+      "kind": "Blog",
+      "sent_at": "2026-10-27T12:06:30.845562",
+      "source": "InfoQ Architecture Articles",
+      "title": "Article: The Evolution of Agentic Harnesses: From Chains to Graph to Code",
+      "url": "https://www.infoq.com/articles/agentic-ai-architecture-harness-evolution/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Architecture-articles"
+    },
     "31c22c5e10ca23e2d747fe6c7a60524bd2a31e24": {
       "kind": "Blog",
       "sent_at": "2026-10-20T12:05:14.915139",
@@ -563,6 +577,13 @@
       "source": "Simon Willison",
       "title": "Quoting Muse AI Agent",
       "url": "https://simonwillison.net/2026/Sep/28/muse-ai-agent/"
+    },
+    "35c5362ed62d858c729a0b15576c006d73aaa4ed": {
+      "kind": "Blog",
+      "sent_at": "2026-10-27T12:06:30.845562",
+      "source": "Hacker News",
+      "title": "Anthropic S-1",
+      "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm"
     },
     "3739c75d42509e077724db82d15840bb8a29d4ce": {
       "kind": "Blog",
@@ -634,6 +655,13 @@
       "title": "0.143.5",
       "url": "https://github.com/fastapi/fastapi/releases/tag/0.143.5"
     },
+    "3ffcaaca306fa80c86a7f03b6fc875a81aab13f0": {
+      "kind": "Blog",
+      "sent_at": "2026-10-27T12:06:30.845562",
+      "source": "Anthropic Docs",
+      "title": "Anthropic Release Notes",
+      "url": "https://docs.anthropic.com/en/release-notes/overview"
+    },
     "42d5228259a0c6b93ee055a1d642917f74cfe246": {
       "kind": "Blog",
       "sent_at": "2026-10-25T12:06:02.649907",
@@ -690,13 +718,6 @@
       "title": "Real-SWE: Benchmarking AI models on private, real-world, enterprise codebases",
       "url": "https://withspecific.com/benchmarks/real-swe"
     },
-    "4ee270e7ef3db706950fb8ab7949e2e3a3738eed": {
-      "kind": "Blog",
-      "sent_at": "2026-09-11T12:08:35.817868",
-      "source": "Anthropic Docs",
-      "title": "Anthropic Release Notes",
-      "url": "https://docs.anthropic.com/en/release-notes/overview"
-    },
     "5107c05a5a6227ba41aaf5417d8677a006d2bf87": {
       "kind": "Blog",
       "sent_at": "2026-10-23T12:05:56.559584",
@@ -731,13 +752,6 @@
       "source": "Anthropic Docs",
       "title": "Claude Code Tutorials",
       "url": "https://docs.anthropic.com/en/docs/claude-code/tutorials"
-    },
-    "5773d6ef3bef0f8d5a452fe036e03a5e35e3cf0f": {
-      "kind": "Blog",
-      "sent_at": "2026-09-11T12:08:35.817868",
-      "source": "Neon Blog",
-      "title": "Claimable Neon: Provisioned by agents, claimed by humans",
-      "url": "https://neon.com/blog/an-agent-provisions-a-neon-backend-a-human-claims-it-later"
     },
     "5a4e8453cd75290f5fb145582e3c8580e8f724db": {
       "kind": "Blog",
@@ -1074,13 +1088,6 @@
       "source": "Simon Willison",
       "title": "Quoting Addy Osmani, Morgan Westlee Lunt, and Qing Wang",
       "url": "https://simonwillison.net/2026/Oct/16/code-review/"
-    },
-    "a8f2199eb4cba0ebddfdf39d574688862bb65aa2": {
-      "kind": "Blog",
-      "sent_at": "2026-09-11T12:08:35.817868",
-      "source": "Hacker News",
-      "title": "DeepSeek v4.1 Flash",
-      "url": "https://twitter.com/deepseek_ai/status/2097930608790167907"
     },
     "a9380d6cca8754fc3930a07ac7d4d6ddb5ecc576": {
       "kind": "Blog",
@@ -1439,6 +1446,13 @@
       "title": "llm-keys-ui 0.1",
       "url": "https://simonwillison.net/2026/Sep/20/llm-keys-ui/"
     },
+    "e9801063eca140452ee9fbb5ddbeeb05d03a58eb": {
+      "kind": "Blog",
+      "sent_at": "2026-10-27T12:06:30.845562",
+      "source": "Supabase Blog",
+      "title": "Scope your Personal Access Tokens",
+      "url": "https://supabase.com/blog/scope-your-personal-access-tokens"
+    },
     "e9a1e417227e2b087441f3d52a4f5a2770d43bf1": {
       "kind": "Blog",
       "sent_at": "2026-09-14T12:06:48.369827",
@@ -1459,13 +1473,6 @@
       "source": "arXiv",
       "title": "An Empirical Study of Harness Design for Coding Agents",
       "url": "http://arxiv.org/abs/2609.20804v1"
-    },
-    "eb4614a57d646002e865081f9b45bf1f126280fa": {
-      "kind": "Paper",
-      "sent_at": "2026-09-11T12:08:35.817868",
-      "source": "arXiv",
-      "title": "T1: Terminal Agent Reinforcement Learning for Long-Horizon Tasks",
-      "url": "http://arxiv.org/abs/2609.11042v1"
     },
     "ec11af8c19c8ac75f31c9b2db55425b8439e88b6": {
       "kind": "Blog",
@@ -1572,12 +1579,12 @@
     "https://blog.cloudflare.com/hyperdrive-mysql/": "2026-10-15T12:05:43.021804",
     "https://blog.cloudflare.com/introducing-web-search-api/": "2026-10-03T12:07:30.150185",
     "https://blog.cloudflare.com/k-isms/": "2026-10-23T12:05:56.559813",
+    "https://blog.cloudflare.com/kv-cache-exposure-remediation/": "2026-10-27T12:06:30.845735",
     "https://blog.cloudflare.com/obsessive-inference-optimization/": "2026-10-20T12:05:14.915294",
     "https://blog.cloudflare.com/one-observability-platform/": "2026-10-03T12:07:30.150185",
     "https://blog.cloudflare.com/one-year-later-1111-interns/": "2026-10-06T12:06:05.076859",
     "https://blog.cloudflare.com/origin-range-requests/": "2026-10-24T12:06:33.888920",
     "https://blog.cloudflare.com/php-vulnerabilities-waf-protection/": "2026-10-22T12:06:09.234476",
-    "https://blog.cloudflare.com/post-quantum-dnssec-1111/": "2026-09-11T12:08:35.817997",
     "https://blog.cloudflare.com/post-quantum-geo-key-manager/": "2026-10-24T12:06:33.888920",
     "https://blog.cloudflare.com/programmable-gateway-dlp/": "2026-10-16T12:05:32.016399",
     "https://blog.cloudflare.com/protect-your-netscaler-gateway/": "2026-10-20T12:05:14.915294",
@@ -1606,16 +1613,13 @@
     "https://claude.com/blog/artifacts-in-claude-code": "2026-09-19T12:06:29.356704",
     "https://claude.com/blog/build-plugins-for-claude": "2026-09-26T12:05:49.135682",
     "https://claude.com/blog/building-an-ai-native-revenue-organization": "2026-09-16T12:09:07.980580",
-    "https://claude.com/blog/claude-code-desktop-redesign": "2026-09-11T12:08:35.817997",
     "https://claude.com/blog/claude-code-mods": "2026-10-02T12:07:26.758352",
     "https://claude.com/blog/claude-for-financial-advisors": "2026-09-15T12:07:57.999528",
     "https://claude.com/blog/claude-for-government-is-now-generally-available": "2026-10-01T12:06:07.829111",
     "https://claude.com/blog/claude-for-small-business-launches-new-workflows-integrations-and-training-programs": "2026-09-16T12:09:07.980580",
-    "https://claude.com/blog/claude-managed-agents-memory": "2026-09-11T12:08:35.817997",
     "https://claude.com/blog/claude-marketplace": "2026-09-24T12:06:34.844018",
     "https://claude.com/blog/claude-opus-5-5-built-for-coding-sessions-that-use-more-context": "2026-09-25T12:05:19.070930",
     "https://claude.com/blog/claude-tag-now-supports-personal-connectors-in-channels": "2026-09-25T12:05:19.070930",
-    "https://claude.com/blog/connectors-for-everyday-life": "2026-09-11T12:08:35.817997",
     "https://claude.com/blog/cowork-is-now-claude": "2026-09-17T12:13:02.409327",
     "https://claude.com/blog/deploying-ai-from-pilot-to-production": "2026-09-17T12:13:02.409327",
     "https://claude.com/blog/giving-companies-more-control-over-their-ai-agents-with-nvidia": "2026-09-29T12:05:14.873169",
@@ -1638,7 +1642,9 @@
     "https://openai.com/index/att-legal": "2026-10-22T12:06:09.234476",
     "https://openai.com/index/australian-youth-safety-blueprint": "2026-09-19T12:06:29.356704",
     "https://openai.com/index/broad-access-through-consistent-standards": "2026-10-22T12:06:09.234476",
+    "https://openai.com/index/building-scientific-understanding-with-academic-communities": "2026-10-27T12:06:30.845735",
     "https://openai.com/index/building-standards-next-phase-ai": "2026-09-22T12:05:07.666789",
+    "https://openai.com/index/chatgpt-expanding-world-of-work": "2026-10-27T12:06:30.845735",
     "https://openai.com/index/cooley-gopublic": "2026-09-18T12:06:23.572212",
     "https://openai.com/index/devday-2026-recap": "2026-09-30T12:05:59.362753",
     "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign": "2026-10-01T12:06:07.829111",
@@ -1646,13 +1652,13 @@
     "https://openai.com/index/forward-deployed-engineering-means": "2026-10-23T12:05:56.559813",
     "https://openai.com/index/fyxer": "2026-09-15T12:07:57.999528",
     "https://openai.com/index/grab-openai-ai-skills-southeast-asia": "2026-09-23T12:06:19.094636",
+    "https://openai.com/index/greptile-code-review-codex-astra": "2026-10-27T12:06:30.845735",
     "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life": "2026-09-17T12:13:02.409327",
     "https://openai.com/index/helping-small-businesses-put-ai-to-work": "2026-10-01T12:06:07.829111",
     "https://openai.com/index/higgsfield-from-prompt-to-production-with-astra": "2026-09-22T12:05:07.666789",
     "https://openai.com/index/higgsfield-longer-videos-voice": "2026-10-14T12:05:52.861992",
     "https://openai.com/index/how-to-connect-ai-usage-to-business-value": "2026-09-17T12:13:02.409327",
     "https://openai.com/index/how-we-will-do-better-for-australia": "2026-09-29T12:05:14.873169",
-    "https://openai.com/index/introducing-chatgpt-financial-services": "2026-09-11T12:08:35.817997",
     "https://openai.com/index/introducing-gpt-6-1-sol": "2026-09-30T12:05:59.362753",
     "https://openai.com/index/introducing-the-rosalind-academic-plan": "2026-10-16T12:05:32.016399",
     "https://openai.com/index/jump-trading": "2026-10-07T12:06:18.519687",
@@ -1666,7 +1672,6 @@
     "https://openai.com/index/pollo-ai": "2026-10-09T12:04:52.188908",
     "https://openai.com/index/practical-guide-building-gpt-6": "2026-10-03T12:07:30.150185",
     "https://openai.com/index/proaction": "2026-09-26T12:05:49.135682",
-    "https://openai.com/index/put-data-to-work": "2026-09-11T12:08:35.817997",
     "https://openai.com/index/radisson": "2026-10-08T12:05:55.349500",
     "https://openai.com/index/reimagining-advertising-with-ai": "2026-09-17T12:13:02.409327",
     "https://openai.com/index/sam-altman-un-security-council-remarks": "2026-09-24T12:06:34.844018",
@@ -1682,7 +1687,6 @@
     "https://openai.com/index/third-moment-research": "2026-10-15T12:05:43.021804",
     "https://openai.com/index/towards-safety-cases-for-frontier-ai-training": "2026-09-29T12:05:14.873169",
     "https://openai.com/index/two-years-of-openai-academy": "2026-09-24T12:06:34.844018",
-    "https://openai.com/index/using-codex-chatgpt-to-search-for-new-antimicrobials": "2026-09-11T12:08:35.817997",
     "https://www.anthropic.com/news/2026-us-midterms": "2026-10-15T12:05:43.021804",
     "https://www.anthropic.com/news/2026-usage-policy-update": "2026-10-09T12:04:52.188908",
     "https://www.anthropic.com/news/accenture-embedded-evaluation": "2026-09-20T12:05:02.833015",
