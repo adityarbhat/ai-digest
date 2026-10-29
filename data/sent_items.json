@@ -52,7 +52,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "1fff0c097d29",
-      "last_seen_at": "2026-10-28T12:01:28.351536",
+      "last_seen_at": "2026-10-29T12:02:36.736769",
       "title": "Claude Code Overview",
       "updated_at": "2026-10-20T12:05:14.915139"
     },
@@ -180,7 +180,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "9dda4b28be94",
-      "last_seen_at": "2026-10-28T12:01:28.351536",
+      "last_seen_at": "2026-10-29T12:02:36.736769",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-10-22T12:06:09.234325"
     },
@@ -348,7 +348,7 @@
         "We\u2019ve added the agent-memory-2026-07-22 beta header, which changes how listing memories ( GET /v1/memory_stores/{memory_store_id}/memories ) behaves: results are returned in a stable, server-defined order and the order_by and order parameters are ignored; depth accepts only 0 , 1 , or being omitted (other values return a 400 error); and path_prefix must end with / and matches whole path segments instead of a substring. Page cursors issued without the header aren\u2019t valid with it, so restart from the first page when you adopt it. On memory store endpoints, agent-memory-2026-07-22 replaces managed-agents-2026-04-01 ; sending both returns a 400 error. On July 22, 2026, the managed-agents-2026-04-01 header adopts the same list behavior. See Beta headers ."
       ],
       "content_hash": "147c2148f142",
-      "last_seen_at": "2026-10-28T12:05:39.312520",
+      "last_seen_at": "2026-10-29T12:02:36.736769",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-10-28T12:05:39.312520"
     }
@@ -395,6 +395,13 @@
       "source": "Anthropic Docs",
       "title": "Anthropic Release Notes",
       "url": "https://docs.anthropic.com/en/release-notes/overview"
+    },
+    "15a230e416118242dc1cd4e6fceee94d08bfca9b": {
+      "kind": "Blog",
+      "sent_at": "2026-10-29T12:06:53.602089",
+      "source": "Supabase Blog",
+      "title": "OrioleDB public beta: a Postgres storage engine for update-heavy tables",
+      "url": "https://supabase.com/blog/orioledb-public-beta"
     },
     "172b5b6c8ba5ef2d179c7b25bd9dbf2e1d4238f8": {
       "kind": "Paper",
@@ -648,6 +655,13 @@
       "title": "0.143.5",
       "url": "https://github.com/fastapi/fastapi/releases/tag/0.143.5"
     },
+    "3fc39ecfd23d701fd70166ddebd7d47375382bec": {
+      "kind": "Blog",
+      "sent_at": "2026-10-29T12:06:53.602089",
+      "source": "MIT Tech Review",
+      "title": "We urgently need to monitor AI agents\u2019 actions in real time",
+      "url": "https://www.technologyreview.com/2026/10/29/1147824/monitor-ai-agents-actions-real-time/"
+    },
     "3ffcaaca306fa80c86a7f03b6fc875a81aab13f0": {
       "kind": "Blog",
       "sent_at": "2026-10-27T12:06:30.845562",
@@ -711,12 +725,12 @@
       "title": "Anthropic Release Notes",
       "url": "https://docs.anthropic.com/en/release-notes/overview"
     },
-    "4bc695297c2e15d251c913132d5383f5b3f62447": {
+    "4e6dacea15cf9843cd054cd787fa2915eeb4b2b9": {
       "kind": "Blog",
-      "sent_at": "2026-09-13T12:07:17.595128",
-      "source": "Hacker News",
-      "title": "Real-SWE: Benchmarking AI models on private, real-world, enterprise codebases",
-      "url": "https://withspecific.com/benchmarks/real-swe"
+      "sent_at": "2026-10-29T12:06:53.602089",
+      "source": "Simon Willison",
+      "title": "GitHub Octoverse 2026",
+      "url": "https://simonwillison.net/2026/Oct/28/github-octoverse-2026/"
     },
     "5107c05a5a6227ba41aaf5417d8677a006d2bf87": {
       "kind": "Blog",
@@ -822,6 +836,13 @@
       "source": "Supabase Blog",
       "title": "Supabase is acquiring Turso",
       "url": "https://supabase.com/blog/supabase-is-acquiring-turso"
+    },
+    "66698da7b3f78b59c39d809a28135a6bc6819e88": {
+      "kind": "Blog",
+      "sent_at": "2026-10-29T12:06:53.602089",
+      "source": "Google DeepMind",
+      "title": "Gemini 4 Carbon: Our next frontier model",
+      "url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/"
     },
     "6922db39f0c97919622ac1f690b98210bbf72f0a": {
       "kind": "Blog",
@@ -935,6 +956,13 @@
       "title": "HarnessSQL: Harness-Native Training for SQL Agents in Realistic Database Environments",
       "url": "http://arxiv.org/abs/2610.12274v1"
     },
+    "7c4f1e84045d654f1e2c9b081abd821d64467e39": {
+      "kind": "Blog",
+      "sent_at": "2026-10-29T12:06:53.602089",
+      "source": "Supabase Blog",
+      "title": "Automate your Supabase backend with Make",
+      "url": "https://supabase.com/blog/automate-your-supabase-backend-with-make"
+    },
     "7d0a2e18d7f0fcc299c3f791e9df3e27b75329e7": {
       "kind": "Paper",
       "sent_at": "2026-10-14T12:05:52.861839",
@@ -955,6 +983,20 @@
       "source": "OpenAI",
       "title": "Advancing computer use with Ironclad",
       "url": "https://openai.com/index/advancing-computer-use-with-ironclad"
+    },
+    "7ed6398608ce26b4e53d9c7da763812237df1aad": {
+      "kind": "Blog",
+      "sent_at": "2026-10-29T12:06:53.602089",
+      "source": "Hacker News",
+      "title": "Claude Code regularly sends each background agent\u2019s transcript to its model",
+      "url": "https://gist.github.com/flamerix-ai/c3905705cc4205e5de3011fa2e74efce"
+    },
+    "80c2bd488b42af9ddd759fe584bc9c327174cc2d": {
+      "kind": "Paper",
+      "sent_at": "2026-10-29T12:06:53.602089",
+      "source": "arXiv",
+      "title": "Grounding LLM Agents in Business Processes: Process-Aware Knowledge Graphs for Reliable Multi-Step Service Invocation",
+      "url": "http://arxiv.org/abs/2610.37242v1"
     },
     "80f6d330770553eef7a0e568bc68b2a0dc18866e": {
       "kind": "Blog",
@@ -1446,13 +1488,6 @@
       "title": "Scope your Personal Access Tokens",
       "url": "https://supabase.com/blog/scope-your-personal-access-tokens"
     },
-    "e9a1e417227e2b087441f3d52a4f5a2770d43bf1": {
-      "kind": "Blog",
-      "sent_at": "2026-09-14T12:06:48.369827",
-      "source": "Simon Willison",
-      "title": "commit-rewriter 0.1",
-      "url": "https://simonwillison.net/2026/Sep/14/commit-rewriter/"
-    },
     "e9b20ef847dc33fd9cd26f00c283dc9c398872e5": {
       "kind": "Blog",
       "sent_at": "2026-10-10T12:04:47.946741",
@@ -1653,6 +1688,7 @@
     "https://openai.com/index/introducing-gpt-6-1-sol": "2026-09-30T12:05:59.362753",
     "https://openai.com/index/introducing-the-rosalind-academic-plan": "2026-10-16T12:05:32.016399",
     "https://openai.com/index/jump-trading": "2026-10-07T12:06:18.519687",
+    "https://openai.com/index/legora": "2026-10-29T12:06:53.602298",
     "https://openai.com/index/legora-agentic-operating-system-for-legal-work": "2026-10-28T12:05:39.312639",
     "https://openai.com/index/lenfest-ai-collaborative-expansion": "2026-09-29T12:05:14.873169",
     "https://openai.com/index/low-resource-programming-languages": "2026-10-20T12:05:14.915294",
@@ -1660,6 +1696,7 @@
     "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense": "2026-09-24T12:06:34.844018",
     "https://openai.com/index/openai-models-google-cloud": "2026-10-22T12:06:09.234476",
     "https://openai.com/index/openai-nask-ai-safety-security-partnership": "2026-10-23T12:05:56.559813",
+    "https://openai.com/index/openai-servicenow-partnership-expansion": "2026-10-29T12:06:53.602298",
     "https://openai.com/index/oracle": "2026-10-09T12:04:52.188908",
     "https://openai.com/index/oracle-apps-in-chatgpt": "2026-10-28T12:05:39.312639",
     "https://openai.com/index/pollo-ai": "2026-10-09T12:04:52.188908",
@@ -1677,6 +1714,7 @@
     "https://openai.com/index/terminal-x": "2026-10-21T12:07:40.757503",
     "https://openai.com/index/the-eternal-complement": "2026-10-02T12:07:26.758352",
     "https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic": "2026-10-14T12:05:52.861992",
+    "https://openai.com/index/the-future-of-the-firm": "2026-10-29T12:06:53.602298",
     "https://openai.com/index/third-moment-research": "2026-10-15T12:05:43.021804",
     "https://openai.com/index/towards-safety-cases-for-frontier-ai-training": "2026-09-29T12:05:14.873169",
     "https://openai.com/index/two-years-of-openai-academy": "2026-09-24T12:06:34.844018",
@@ -1689,13 +1727,11 @@
     "https://www.anthropic.com/news/anthropic-cyber-mission": "2026-10-09T12:04:52.188908",
     "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system": "2026-09-27T12:05:14.092935",
     "https://www.anthropic.com/news/claude-frontier-academy": "2026-10-03T12:07:30.150185",
-    "https://www.anthropic.com/news/claude-opus-5": "2026-09-13T12:07:17.595222",
     "https://www.anthropic.com/news/cyber-verification-program": "2026-10-07T12:06:18.519687",
     "https://www.anthropic.com/news/features": "2026-10-21T12:07:40.757503",
     "https://www.anthropic.com/news/genesis-mission-commitment": "2026-10-09T12:04:52.188908",
     "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards": "2026-09-27T12:05:14.092935",
     "https://www.anthropic.com/news/life-sciences-verification-program": "2026-09-20T12:05:02.833015",
-    "https://www.anthropic.com/news/position-open-weights-models": "2026-09-13T12:07:17.595222",
     "https://www.anthropic.com/news/public-benefit-fund": "2026-10-19T12:05:51.076240",
     "https://www.anthropic.com/news/singapore-office-opening": "2026-10-14T12:05:52.861992"
   }
