@@ -52,7 +52,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "1fff0c097d29",
-      "last_seen_at": "2026-10-29T12:02:36.736769",
+      "last_seen_at": "2026-10-30T12:02:40.981341",
       "title": "Claude Code Overview",
       "updated_at": "2026-10-20T12:05:14.915139"
     },
@@ -180,7 +180,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "9dda4b28be94",
-      "last_seen_at": "2026-10-29T12:02:36.736769",
+      "last_seen_at": "2026-10-30T12:02:40.981341",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-10-22T12:06:09.234325"
     },
@@ -191,6 +191,11 @@
         "The Claude Platform release notes list changes to the Claude API, the client SDKs, and the Claude Console, newest first.",
         "For release notes on Claude Apps, see the Release notes for Claude Apps in the Claude Help Center .",
         "For updates to Claude Code, see the complete CHANGELOG.md in the claude-code repository.",
+        "October 29, 2026 \ue09a",
+        "We\u2019ve launched the Usage and Cost Analytics API in beta with the analytics-usage-cost-2026-08-24 beta header. Its /v1/organizations/analytics/usage and /v1/organizations/analytics/cost endpoints report token usage and cost for Claude Console and Claude Enterprise organizations. You can filter and group results by dimensions such as model, workspace, API key, and the user or service account behind each request.",
+        "The Usage and Cost API is now a legacy API, and so are the usage_report , cost_report , user_usage_report , and user_cost_report endpoints of the Claude Enterprise Analytics API . All of them remain supported. To move an existing integration, see Migrate from the Usage and Cost API or Migrate from the Claude Enterprise usage and cost reports .",
+        "October 28, 2026 \ue09a",
+        "We\u2019ve raised the maximum request size for the Messages API and the Token Counting API from 32 MB to 128 MB on the first-party Claude API.",
         "October 23, 2026 \ue09a",
         "The Claude Tag API is available in beta for Claude Enterprise organizations with the experimental-claude-tag-2026-10-21 beta header. Its /v1/organizations/claude_tag/ endpoints read and change Claude Tag settings on Slack channels and Slack workspaces, show which settings apply in a channel and where each comes from, and attach Access bundles. Call it with an Admin API key that your primary owner creates in claude.ai with the read:claude_tag or write:claude_tag scope. It is not available to Claude Platform (Claude Console) organizations.",
         "October 22, 2026 \ue09a",
@@ -340,17 +345,12 @@
         "July 14, 2026 \ue09a",
         "You can now manage the people in your Claude Enterprise (claude.ai) organization with the Admin API , in beta for all Claude Enterprise organizations: list members and look them up by email address, change a member\u2019s role, remove members, send and withdraw invites, manage groups and their membership, and read custom roles. Group and custom-role requests require the anthropic-beta: ce-user-management-2026-07-13 beta header; member and invite requests take no beta header. An Admin API key with the read:org_audit scope can also call every user-management GET endpoint. See User management .",
         "July 10, 2026 \ue09a",
-        "Dreams (research preview) now supports Claude Fable 5 and Claude Sonnet 5. See Supported models .",
-        "We\u2019ve expanded the Access Transparency documentation of cmek_preserve events with a filter example, an example event payload, and two preservation reason codes ( policy_violation_investigation , csae_report ). The documentation now also clarifies that a preservation event is written whether the preservation was initiated by a human reviewer or an automated safety pipeline. See CMEK content preservation .",
-        "July 8, 2026 \ue09a",
-        "You can now set an expiration when you create an API key or an Admin API key in the Claude Console . Choose a preset, a custom duration, or Never . For keys with a lifetime of at least 7 days, Anthropic emails the creator before expiration. Existing keys are unaffected. The Admin API reports each key\u2019s expiration in the expires_at field. See Key expiration in Authentication .",
-        "July 2, 2026 \ue09a",
-        "We\u2019ve added the agent-memory-2026-07-22 beta header, which changes how listing memories ( GET /v1/memory_stores/{memory_store_id}/memories ) behaves: results are returned in a stable, server-defined order and the order_by and order parameters are ignored; depth accepts only 0 , 1 , or being omitted (other values return a 400 error); and path_prefix must end with / and matches whole path segments instead of a substring. Page cursors issued without the header aren\u2019t valid with it, so restart from the first page when you adopt it. On memory store endpoints, agent-memory-2026-07-22 replaces managed-agents-2026-04-01 ; sending both returns a 400 error. On July 22, 2026, the managed-agents-2026-04-01 header adopts the same list behavior. See Beta headers ."
+        "Dreams (research preview) now supports Claude Fable 5 and Claude Sonnet 5. See Supported models ."
       ],
-      "content_hash": "147c2148f142",
-      "last_seen_at": "2026-10-29T12:02:36.736769",
+      "content_hash": "11d9c9efdf45",
+      "last_seen_at": "2026-10-30T12:06:54.945631",
       "title": "Anthropic Release Notes",
-      "updated_at": "2026-10-28T12:05:39.312520"
+      "updated_at": "2026-10-30T12:06:54.945631"
     }
   },
   "sent": {
@@ -381,6 +381,13 @@
       "source": "Dropbox Tech",
       "title": "Evolving our calendar assistant Reclaim to be AI-native without starting over",
       "url": "https://dropbox.tech/machine-learning/evolving-calendar-assistant-reclaim-to-be-ai-native"
+    },
+    "12399600af28383f8563aa79e7c13a792bb32b1f": {
+      "kind": "Blog",
+      "sent_at": "2026-10-30T12:06:54.945631",
+      "source": "Simon Willison",
+      "title": "Quoting Ben Hylak",
+      "url": "https://simonwillison.net/2026/Oct/29/ben-hylak/"
     },
     "126dcf4e90f5febc71e566049ff22f3d1420c550": {
       "kind": "Paper",
@@ -473,6 +480,13 @@
       "title": "Agent Lightning v1.0: A 3,500-Line Lightweight Agentic RL Framework for Training Agents with Real Harnesses",
       "url": "https://www.microsoft.com/en-us/research/blog/agent-lightning-v1-0-a-3500-line-lightweight-agentic-rl-framework-for-training-agents-with-real-harnesses/"
     },
+    "2075f47fc4b33e42b2069078b0cf9b4e991e2632": {
+      "kind": "Blog",
+      "sent_at": "2026-10-30T12:06:54.945631",
+      "source": "Simon Willison",
+      "title": "Building a multiplayer game world with autonomous Fable-class models",
+      "url": "https://simonwillison.net/2026/Oct/29/how-i-built-the-most-ai-pilled-company-in-the-world/"
+    },
     "2174300967a8c7637d833ded86682d1cb1b4186d": {
       "kind": "Blog",
       "sent_at": "2026-09-17T12:13:02.409095",
@@ -535,6 +549,13 @@
       "source": "Simon Willison",
       "title": "Quoting Felix Rieseberg",
       "url": "https://simonwillison.net/2026/Oct/5/felix-rieseberg/"
+    },
+    "2f9015a17d10d5418df461ef9835e26f5952fbf3": {
+      "kind": "Blog",
+      "sent_at": "2026-10-30T12:06:54.945631",
+      "source": "Anthropic Docs",
+      "title": "Anthropic Release Notes",
+      "url": "https://docs.anthropic.com/en/release-notes/overview"
     },
     "2fcf5a446e51d0308a67a297be40744969f31a5c": {
       "kind": "Paper",
@@ -717,6 +738,13 @@
       "source": "OpenAI",
       "title": "Introducing GPT-6 Sol and Luna",
       "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna"
+    },
+    "4a2dad8e0e1ee619135bc27acc8a7de02788a643": {
+      "kind": "Paper",
+      "sent_at": "2026-10-30T12:06:54.945631",
+      "source": "arXiv",
+      "title": "Agentic process evidence",
+      "url": "http://arxiv.org/abs/2610.40071v1"
     },
     "4ade4349b65a33d3db55f20d20651360517a9400": {
       "kind": "Blog",
@@ -1109,6 +1137,20 @@
       "source": "arXiv",
       "title": "ReTerm: Recovery Training for Self-Improving Terminal Agents",
       "url": "http://arxiv.org/abs/2610.18484v1"
+    },
+    "9b783732bbc39980f4aca85c403870928b0f1d81": {
+      "kind": "Blog",
+      "sent_at": "2026-10-30T12:06:54.945631",
+      "source": "Martin Fowler",
+      "title": "Why are good developers so wary of agentic development?",
+      "url": "https://martinfowler.com/rachels-ramblings/good-devs-wary.html"
+    },
+    "a40112a3b9559ebfdeb47f98ccb5dda8f45ca0df": {
+      "kind": "Blog",
+      "sent_at": "2026-10-30T12:06:54.945631",
+      "source": "Supabase Blog",
+      "title": "Multigres private alpha: automatic failover for Supabase Postgres",
+      "url": "https://supabase.com/blog/multigres-private-alpha"
     },
     "a57ec048731d0ac330c35af2b182432c1d93a1f6": {
       "kind": "Blog",
@@ -1598,6 +1640,7 @@
     "https://blog.cloudflare.com/cloudflares-2026-annual-founders-letter/": "2026-09-28T12:04:24.726468",
     "https://blog.cloudflare.com/containers-cross-tenant-vulnerability/": "2026-09-25T12:05:19.070930",
     "https://blog.cloudflare.com/d1-control-plane/": "2026-10-14T12:05:52.861992",
+    "https://blog.cloudflare.com/ddos-threat-report-2026-q3/": "2026-10-30T12:06:54.945777",
     "https://blog.cloudflare.com/deno-joins-cloudflare/": "2026-10-10T12:04:47.946949",
     "https://blog.cloudflare.com/deploy-with-void/": "2026-10-16T12:05:32.016399",
     "https://blog.cloudflare.com/emudhra-certificate-compromise/": "2026-10-21T12:07:40.757503",
@@ -1684,6 +1727,7 @@
     "https://openai.com/index/higgsfield-from-prompt-to-production-with-astra": "2026-09-22T12:05:07.666789",
     "https://openai.com/index/higgsfield-longer-videos-voice": "2026-10-14T12:05:52.861992",
     "https://openai.com/index/how-to-connect-ai-usage-to-business-value": "2026-09-17T12:13:02.409327",
+    "https://openai.com/index/how-we-detect-frontier-model-misalignment": "2026-10-30T12:06:54.945777",
     "https://openai.com/index/how-we-will-do-better-for-australia": "2026-09-29T12:05:14.873169",
     "https://openai.com/index/introducing-gpt-6-1-sol": "2026-09-30T12:05:59.362753",
     "https://openai.com/index/introducing-the-rosalind-academic-plan": "2026-10-16T12:05:32.016399",
@@ -1704,6 +1748,7 @@
     "https://openai.com/index/proaction": "2026-09-26T12:05:49.135682",
     "https://openai.com/index/radisson": "2026-10-08T12:05:55.349500",
     "https://openai.com/index/reimagining-advertising-with-ai": "2026-09-17T12:13:02.409327",
+    "https://openai.com/index/ropes-gray-ai-diligence": "2026-10-30T12:06:54.945777",
     "https://openai.com/index/sam-altman-un-security-council-remarks": "2026-09-24T12:06:34.844018",
     "https://openai.com/index/scaling-storage-one-billion-users-part-two": "2026-10-24T12:06:33.888920",
     "https://openai.com/index/securing-our-frontier-model-training-environment": "2026-10-24T12:06:33.888920",
@@ -1718,6 +1763,7 @@
     "https://openai.com/index/third-moment-research": "2026-10-15T12:05:43.021804",
     "https://openai.com/index/towards-safety-cases-for-frontier-ai-training": "2026-09-29T12:05:14.873169",
     "https://openai.com/index/two-years-of-openai-academy": "2026-09-24T12:06:34.844018",
+    "https://openai.com/index/updated-model-spec": "2026-10-30T12:06:54.945777",
     "https://www.anthropic.com/news/2026-us-midterms": "2026-10-15T12:05:43.021804",
     "https://www.anthropic.com/news/2026-usage-policy-update": "2026-10-09T12:04:52.188908",
     "https://www.anthropic.com/news/accenture-embedded-evaluation": "2026-09-20T12:05:02.833015",
