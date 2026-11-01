@@ -52,7 +52,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "1fff0c097d29",
-      "last_seen_at": "2026-10-31T12:02:28.469341",
+      "last_seen_at": "2026-11-01T12:02:06.038705",
       "title": "Claude Code Overview",
       "updated_at": "2026-10-20T12:05:14.915139"
     },
@@ -180,7 +180,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "9dda4b28be94",
-      "last_seen_at": "2026-10-31T12:02:28.469341",
+      "last_seen_at": "2026-11-01T12:02:06.038705",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-10-22T12:06:09.234325"
     },
@@ -348,12 +348,19 @@
         "You can now manage the people in your Claude Enterprise (claude.ai) organization with the Admin API , in beta for all Claude Enterprise organizations: list members and look them up by email address, change a member\u2019s role, remove members, send and withdraw invites, manage groups and their membership, and read custom roles. Group and custom-role requests require the anthropic-beta: ce-user-management-2026-07-13 beta header; member and invite requests take no beta header. An Admin API key with the read:org_audit scope can also call every user-management GET endpoint. See User management ."
       ],
       "content_hash": "38e08d2d8655",
-      "last_seen_at": "2026-10-31T12:06:05.973592",
+      "last_seen_at": "2026-11-01T12:02:06.038705",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-10-31T12:06:05.973592"
     }
   },
   "sent": {
+    "00e82a92f412a3a8a70d67a6fc878f34ce962483": {
+      "kind": "Blog",
+      "sent_at": "2026-11-01T12:05:26.967530",
+      "source": "Hacker News",
+      "title": "Memdoor: A team of 5 Qwen3.8-27B models beats Fable 5 on LiveCodeBench Hard",
+      "url": "https://github.com/guregodevo/memdoor/tree/main/examples/workflows/team-solve"
+    },
     "012e3e7e58f279b72726f0276a28170f6781df7c": {
       "kind": "Blog",
       "sent_at": "2026-10-18T12:05:46.714318",
@@ -830,20 +837,6 @@
       "title": "Prefix Executability: Evaluating Tool-Using Agents Beyond Final Success",
       "url": "http://arxiv.org/abs/2610.40444v1"
     },
-    "5c6499d1de4a2644968aa2703cd05f724da6265b": {
-      "kind": "Blog",
-      "sent_at": "2026-09-16T12:09:07.980449",
-      "source": "HuggingFace",
-      "title": "Your Agent Aced the Task. Will It Do It Again?",
-      "url": "https://huggingface.co/blog/ibm-research/altk-evolve-consistency"
-    },
-    "5d535f9c0e3066b22f67f98f9e3a5a81d486185e": {
-      "kind": "Blog",
-      "sent_at": "2026-09-16T12:09:07.980449",
-      "source": "Anthropic Docs",
-      "title": "Claude Code Overview",
-      "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
-    },
     "6254fec3d16fdba5cf21d35e6e8399a811ad6738": {
       "kind": "Blog",
       "sent_at": "2026-09-21T12:08:56.804324",
@@ -1054,13 +1047,6 @@
       "title": "CoTrace: Data Recipes for Training Terminal Agents with Harness-Model Co-Evolution",
       "url": "http://arxiv.org/abs/2610.10426v1"
     },
-    "82d5a9fe27adffe16ad357ed22e76eca9de0215d": {
-      "kind": "Blog",
-      "sent_at": "2026-09-16T12:09:07.980449",
-      "source": "Anthropic Docs",
-      "title": "Anthropic Release Notes",
-      "url": "https://docs.anthropic.com/en/release-notes/overview"
-    },
     "83fd134c96d088315551e43b81af539eee29b24d": {
       "kind": "Blog",
       "sent_at": "2026-10-17T12:04:55.266858",
@@ -1074,13 +1060,6 @@
       "source": "Simon Willison",
       "title": "We're going to need default hard budget caps on pretty much everything",
       "url": "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/"
-    },
-    "87336ed8dc2a5d505e47fb0ab62ef9f6e16cc6e8": {
-      "kind": "Paper",
-      "sent_at": "2026-09-16T12:09:07.980449",
-      "source": "arXiv",
-      "title": "Protocol-Preserving Context Trimming for Agentic Workflows: Benefits, Failure Regimes, and Budget Guardrails",
-      "url": "http://arxiv.org/abs/2609.16461v1"
     },
     "88cc183d832a49339ed59f64aca7fc94a5ba107c": {
       "kind": "Blog",
@@ -1439,13 +1418,6 @@
       "title": "Building Git infrastructure for agent-scale development",
       "url": "https://github.blog/engineering/architecture-optimization/building-git-infrastructure-for-agent-scale-development/"
     },
-    "d4a138a91c735605a733587a890ebcf93971fd92": {
-      "kind": "Blog",
-      "sent_at": "2026-09-16T12:09:07.980449",
-      "source": "Airbnb Engineering",
-      "title": "Beyond the model: Engineering AI infra with scientific judgement",
-      "url": "https://medium.com/airbnb-engineering/beyond-the-model-engineering-ai-infra-with-scientific-judgement-371316d43261?source=rss----53c7c27702d5--ai"
-    },
     "d65ada6f3663348e77f748d1bbaf1773089095ee": {
       "kind": "Blog",
       "sent_at": "2026-10-24T12:06:33.888741",
@@ -1645,7 +1617,6 @@
   },
   "watchlist_seen": {
     "https://blog.cloudflare.com/100-million-donations/": "2026-10-01T12:06:07.829111",
-    "https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/": "2026-09-16T12:09:07.980580",
     "https://blog.cloudflare.com/agentic-security-operations/": "2026-10-08T12:05:55.349500",
     "https://blog.cloudflare.com/ai-driven-cryptography-discovery/": "2026-09-30T12:05:59.362753",
     "https://blog.cloudflare.com/ai-era-framework/": "2026-09-30T12:05:59.362753",
@@ -1699,17 +1670,14 @@
     "https://blog.cloudflare.com/vinext-nextjs-on-vite/": "2026-09-29T12:05:14.873169",
     "https://blog.cloudflare.com/webmcp-commerce/": "2026-10-22T12:06:09.234476",
     "https://blog.cloudflare.com/worker-previews/": "2026-09-23T12:06:19.094636",
-    "https://blog.cloudflare.com/workers-granular-authorization/": "2026-09-16T12:09:07.980580",
     "https://blog.cloudflare.com/workers-kv-instant/": "2026-10-02T12:07:26.758352",
     "https://blog.cloudflare.com/workers-on-demand-profiling/": "2026-10-10T12:04:47.946949",
     "https://blog.cloudflare.com/yandex-outage/": "2026-10-15T12:05:43.021804",
     "https://claude.com/blog/agents-you-can-coach-how-asana-builds-human-agent-teams-with-claude": "2026-09-30T12:05:59.362753",
     "https://claude.com/blog/artifacts-in-claude-code": "2026-09-19T12:06:29.356704",
     "https://claude.com/blog/build-plugins-for-claude": "2026-09-26T12:05:49.135682",
-    "https://claude.com/blog/building-an-ai-native-revenue-organization": "2026-09-16T12:09:07.980580",
     "https://claude.com/blog/claude-code-mods": "2026-10-02T12:07:26.758352",
     "https://claude.com/blog/claude-for-government-is-now-generally-available": "2026-10-01T12:06:07.829111",
-    "https://claude.com/blog/claude-for-small-business-launches-new-workflows-integrations-and-training-programs": "2026-09-16T12:09:07.980580",
     "https://claude.com/blog/claude-marketplace": "2026-09-24T12:06:34.844018",
     "https://claude.com/blog/claude-opus-5-5-built-for-coding-sessions-that-use-more-context": "2026-09-25T12:05:19.070930",
     "https://claude.com/blog/claude-tag-now-supports-personal-connectors-in-channels": "2026-09-25T12:05:19.070930",
@@ -1721,7 +1689,6 @@
     "https://claude.com/blog/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk": "2026-10-06T12:06:05.076859",
     "https://claude.com/blog/how-to-prepare-for-ai-driven-code-modernization-projects": "2026-09-24T12:06:34.844018",
     "https://claude.com/blog/projects-redesigned": "2026-09-18T12:06:23.572212",
-    "https://claude.com/blog/salesforce-in-claude": "2026-09-16T12:09:07.980580",
     "https://claude.com/blog/what-a-task-costs-on-opus-5-5": "2026-09-23T12:06:19.094636",
     "https://claude.com/blog/working-at-the-frontier-how-balyasny-asset-management-evaluates-and-governs-claude-fable-5": "2026-09-18T12:06:23.572212",
     "https://openai.com/index/advisory-group-on-mathematics-and-ai": "2026-09-22T12:05:07.666789",
