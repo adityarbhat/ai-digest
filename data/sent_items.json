@@ -52,7 +52,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "1fff0c097d29",
-      "last_seen_at": "2026-11-01T12:02:06.038705",
+      "last_seen_at": "2026-11-02T12:02:39.222906",
       "title": "Claude Code Overview",
       "updated_at": "2026-10-20T12:05:14.915139"
     },
@@ -180,7 +180,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "9dda4b28be94",
-      "last_seen_at": "2026-11-01T12:02:06.038705",
+      "last_seen_at": "2026-11-02T12:02:39.222906",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-10-22T12:06:09.234325"
     },
@@ -348,7 +348,7 @@
         "You can now manage the people in your Claude Enterprise (claude.ai) organization with the Admin API , in beta for all Claude Enterprise organizations: list members and look them up by email address, change a member\u2019s role, remove members, send and withdraw invites, manage groups and their membership, and read custom roles. Group and custom-role requests require the anthropic-beta: ce-user-management-2026-07-13 beta header; member and invite requests take no beta header. An Admin API key with the read:org_audit scope can also call every user-management GET endpoint. See User management ."
       ],
       "content_hash": "38e08d2d8655",
-      "last_seen_at": "2026-11-01T12:02:06.038705",
+      "last_seen_at": "2026-11-02T12:02:39.222906",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-10-31T12:06:05.973592"
     }
@@ -388,6 +388,13 @@
       "source": "Dropbox Tech",
       "title": "Evolving our calendar assistant Reclaim to be AI-native without starting over",
       "url": "https://dropbox.tech/machine-learning/evolving-calendar-assistant-reclaim-to-be-ai-native"
+    },
+    "1013987e4ae34575181c9280a6dd19cb3cb51f70": {
+      "kind": "Blog",
+      "sent_at": "2026-11-02T12:06:55.661965",
+      "source": "MIT Tech Review",
+      "title": "The agentic web is here",
+      "url": "https://www.technologyreview.com/2026/11/02/1147846/the-agentic-web-is-here/"
     },
     "12399600af28383f8563aa79e7c13a792bb32b1f": {
       "kind": "Blog",
@@ -459,26 +466,12 @@
       "title": "Anthropic Release Notes",
       "url": "https://docs.anthropic.com/en/release-notes/overview"
     },
-    "1ef6e8235ecfd6e84f4b3f39e90f7c0c6c4368b6": {
-      "kind": "Blog",
-      "sent_at": "2026-09-18T12:06:23.571978",
-      "source": "Neon Blog",
-      "title": "The Neon backend is GA: a complete set of primitives so agents can build",
-      "url": "https://neon.com/blog/neon-backend-is-ga"
-    },
     "1f8960fc24c269775ad563fbe6cf57e43cac2065": {
       "kind": "Blog",
       "sent_at": "2026-09-19T12:06:29.356523",
       "source": "Hacker News",
       "title": "ZCode, the GLM coding agent, silently uploads your Git history",
       "url": "https://tokenstead.ai/guides/zcode-silent-git-history-upload"
-    },
-    "1fcbe86f8ab5e7cbb26d2f10a6b6684888ba7332": {
-      "kind": "Blog",
-      "sent_at": "2026-09-17T12:13:02.409095",
-      "source": "Martin Fowler",
-      "title": "Fragments: September 16",
-      "url": "https://martinfowler.com/fragments/2026-09-16.html"
     },
     "2027720e7c5924096bcd339e0e6c8f2a9a8027bb": {
       "kind": "Blog",
@@ -493,13 +486,6 @@
       "source": "Simon Willison",
       "title": "Building a multiplayer game world with autonomous Fable-class models",
       "url": "https://simonwillison.net/2026/Oct/29/how-i-built-the-most-ai-pilled-company-in-the-world/"
-    },
-    "2174300967a8c7637d833ded86682d1cb1b4186d": {
-      "kind": "Blog",
-      "sent_at": "2026-09-17T12:13:02.409095",
-      "source": "DoorDash Engineering",
-      "title": "Inside Vera, DoorDash\u2019s Data Agent",
-      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1PZXM5Y3hsaDhiYW13OXd1SGU4ekRRTnZhdmRRQ2NteFZ2X0JqVmw2U09LbzZrOU8xV2pzUVduMHFqak1MV3NXdTFva1g5R2VOc0NYYUpIaTA5ZEpaRjAyMU5KZkpDd2JKLURkM3RBSG1DWVZzekt3?oc=5"
     },
     "22586d3388d81382fe0e52f3b3243d1affc871a4": {
       "kind": "Blog",
@@ -774,6 +760,13 @@
       "title": "Anthropic Release Notes",
       "url": "https://docs.anthropic.com/en/release-notes/overview"
     },
+    "4bbb0528402c2449885417bd6b6852ebb7ac3a1b": {
+      "kind": "Blog",
+      "sent_at": "2026-11-02T12:06:55.661965",
+      "source": "Hacker News",
+      "title": "Brazilian Court Sanctions Lawyers for Prompt Injection in Court Filing",
+      "url": "https://jetstream.security/insights/brazilian-court-sanctions-prompt-injection-filing/"
+    },
     "4e6dacea15cf9843cd054cd787fa2915eeb4b2b9": {
       "kind": "Blog",
       "sent_at": "2026-10-29T12:06:53.602089",
@@ -815,13 +808,6 @@
       "source": "MIT Tech Review",
       "title": "AI researchers stranded Claude on a virtual desert island. It started to \u201cplay.\u201d",
       "url": "https://www.technologyreview.com/2026/10/19/1147095/ai-stranded-claude-virtual-desert-island-play/"
-    },
-    "5bef1a8a68dae2121b00518fe30f64dc032f5ef6": {
-      "kind": "Paper",
-      "sent_at": "2026-09-17T12:13:02.409095",
-      "source": "arXiv",
-      "title": "Compositional Policy Violations: When Step-Level Compliance Fails In Agentic AI Workflows",
-      "url": "http://arxiv.org/abs/2609.18820v1"
     },
     "5c0566fdfe14afb5c4d601f396601d06bf5de82e": {
       "kind": "Blog",
@@ -1215,26 +1201,12 @@
       "title": "Agents don't need memory, they need documentation",
       "url": "https://liao.gg/blog/agents-dont-need-memory"
     },
-    "b06e5d7ca683c88498d7a0db3421277a982eaf27": {
-      "kind": "Blog",
-      "sent_at": "2026-09-18T12:06:23.571978",
-      "source": "Simon Willison",
-      "title": "Self-generated prompt injections in compaction summaries",
-      "url": "https://simonwillison.net/2026/Sep/17/compaction-summaries/"
-    },
     "b12f8fbc7f8d3fb42bdd129b5d76f9e106b01160": {
       "kind": "Blog",
       "sent_at": "2026-10-23T12:05:56.559584",
       "source": "Anthropic Docs",
       "title": "Anthropic Release Notes",
       "url": "https://docs.anthropic.com/en/release-notes/overview"
-    },
-    "b13e55301093869de8e6b6b90f88c7dfb771c233": {
-      "kind": "Paper",
-      "sent_at": "2026-09-17T12:13:02.409095",
-      "source": "arXiv",
-      "title": "Beyond Outcomes: Dual-View Relational Learning for Efficient Agent Benchmarking",
-      "url": "http://arxiv.org/abs/2609.18909v1"
     },
     "b2497ef327c882b8bd9a1d0232a1d426aea18683": {
       "kind": "Blog",
@@ -1263,20 +1235,6 @@
       "source": "Hacker News",
       "title": "Claude Duet",
       "url": "https://claude.com/product/claude-duet"
-    },
-    "b77012a8da41ee5e22125915f22184e9a8be5de7": {
-      "kind": "Paper",
-      "sent_at": "2026-09-18T12:06:23.571978",
-      "source": "arXiv",
-      "title": "Quantifying Overclaiming Propensity in Frontier LLM Agents",
-      "url": "http://arxiv.org/abs/2609.20812v1"
-    },
-    "b9e3434a9e070f5c54fcdef9d1babb9b1272d848": {
-      "kind": "Blog",
-      "sent_at": "2026-09-17T12:13:02.409095",
-      "source": "Hacker News",
-      "title": "Training a 4B model to produce 81% faster query plans than Postgres",
-      "url": "https://rohanbansal.com/qorl"
     },
     "bad7a956d596ed8f19c097a2a667c04f083fc7b3": {
       "kind": "Blog",
@@ -1354,13 +1312,6 @@
       "source": "Supabase Blog",
       "title": "Declarative Schemas 2.0 with pg-delta",
       "url": "https://supabase.com/blog/declarative-schemas-2-0-pg-delta"
-    },
-    "cab7f0aa99208c248d3f76c0b0b50698b336897f": {
-      "kind": "Blog",
-      "sent_at": "2026-09-18T12:06:23.571978",
-      "source": "Anthropic Docs",
-      "title": "Anthropic Release Notes",
-      "url": "https://docs.anthropic.com/en/release-notes/overview"
     },
     "cae0046d23792907864d3b31b503dd7a93dc05cc": {
       "kind": "Blog",
@@ -1523,20 +1474,6 @@
       "title": "Show HN: Let your AI agents paint big arrows, boxes and text on your screen",
       "url": "https://github.com/franzenzenhofer/big-arrow-on-the-screen"
     },
-    "ea07db0088cf62d1b09504eb3df76040e0d46542": {
-      "kind": "Paper",
-      "sent_at": "2026-09-18T12:06:23.571978",
-      "source": "arXiv",
-      "title": "An Empirical Study of Harness Design for Coding Agents",
-      "url": "http://arxiv.org/abs/2609.20804v1"
-    },
-    "ec11af8c19c8ac75f31c9b2db55425b8439e88b6": {
-      "kind": "Blog",
-      "sent_at": "2026-09-17T12:13:02.409095",
-      "source": "Anthropic Docs",
-      "title": "Anthropic Release Notes",
-      "url": "https://docs.anthropic.com/en/release-notes/overview"
-    },
     "ef06d6a0ef0b96da9d16be58c3fa7a4cc610f289": {
       "kind": "Paper",
       "sent_at": "2026-10-31T12:06:05.973592",
@@ -1586,13 +1523,6 @@
       "title": "Claude Code Overview",
       "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
     },
-    "f3991f4d3e2ac74188d88ad43199d9ec02e8c48b": {
-      "kind": "Blog",
-      "sent_at": "2026-09-17T12:13:02.409095",
-      "source": "Simon Willison",
-      "title": "Claude Cowork and chat are now one Claude",
-      "url": "https://simonwillison.net/2026/Sep/16/one-claude/"
-    },
     "f43e1a8cd9a369a110631c21b247ccc276f5b0d1": {
       "kind": "Blog",
       "sent_at": "2026-10-16T12:05:32.016147",
@@ -1625,7 +1555,6 @@
     "https://blog.cloudflare.com/clairic-extraction-model/": "2026-10-20T12:05:14.915294",
     "https://blog.cloudflare.com/clef-decision-models/": "2026-10-02T12:07:26.758352",
     "https://blog.cloudflare.com/clef-faster-cheaper-multimodal/": "2026-10-10T12:04:47.946949",
-    "https://blog.cloudflare.com/client-side-security-finds-4-malicious-campaigns/": "2026-09-17T12:13:02.409327",
     "https://blog.cloudflare.com/cloudflare-certificate-authority/": "2026-09-30T12:05:59.362753",
     "https://blog.cloudflare.com/cloudflare-cf-cli-launch/": "2026-09-29T12:05:14.873169",
     "https://blog.cloudflare.com/cloudflare-openai-discovery-agentic-web/": "2026-10-16T12:05:32.016399",
@@ -1681,16 +1610,12 @@
     "https://claude.com/blog/claude-marketplace": "2026-09-24T12:06:34.844018",
     "https://claude.com/blog/claude-opus-5-5-built-for-coding-sessions-that-use-more-context": "2026-09-25T12:05:19.070930",
     "https://claude.com/blog/claude-tag-now-supports-personal-connectors-in-channels": "2026-09-25T12:05:19.070930",
-    "https://claude.com/blog/cowork-is-now-claude": "2026-09-17T12:13:02.409327",
-    "https://claude.com/blog/deploying-ai-from-pilot-to-production": "2026-09-17T12:13:02.409327",
     "https://claude.com/blog/giving-companies-more-control-over-their-ai-agents-with-nvidia": "2026-09-29T12:05:14.873169",
     "https://claude.com/blog/how-anthropics-sales-team-rebuilt-inbound-with-claude-managed-agents": "2026-10-01T12:06:07.829111",
     "https://claude.com/blog/how-coderabbit-power-digital-and-thoughtspot-scale-with-snowflake-and-vercel-on-claude-marketplace": "2026-09-24T12:06:34.844018",
     "https://claude.com/blog/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk": "2026-10-06T12:06:05.076859",
     "https://claude.com/blog/how-to-prepare-for-ai-driven-code-modernization-projects": "2026-09-24T12:06:34.844018",
-    "https://claude.com/blog/projects-redesigned": "2026-09-18T12:06:23.572212",
     "https://claude.com/blog/what-a-task-costs-on-opus-5-5": "2026-09-23T12:06:19.094636",
-    "https://claude.com/blog/working-at-the-frontier-how-balyasny-asset-management-evaluates-and-governs-claude-fable-5": "2026-09-18T12:06:23.572212",
     "https://openai.com/index/advisory-group-on-mathematics-and-ai": "2026-09-22T12:05:07.666789",
     "https://openai.com/index/albertsons-reimagining-retail": "2026-10-02T12:07:26.758352",
     "https://openai.com/index/amp-beyond-coding": "2026-10-15T12:05:43.021804",
@@ -1702,19 +1627,16 @@
     "https://openai.com/index/building-standards-next-phase-ai": "2026-09-22T12:05:07.666789",
     "https://openai.com/index/chatgpt-expanding-world-of-work": "2026-10-27T12:06:30.845735",
     "https://openai.com/index/community-safety-report-and-new-protections-for-teens": "2026-10-31T12:06:05.973708",
-    "https://openai.com/index/cooley-gopublic": "2026-09-18T12:06:23.572212",
     "https://openai.com/index/devday-2026-recap": "2026-09-30T12:05:59.362753",
     "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign": "2026-10-01T12:06:07.829111",
     "https://openai.com/index/eu-text-provenance": "2026-10-06T12:06:05.076859",
     "https://openai.com/index/forward-deployed-engineering-means": "2026-10-23T12:05:56.559813",
     "https://openai.com/index/grab-openai-ai-skills-southeast-asia": "2026-09-23T12:06:19.094636",
     "https://openai.com/index/greptile-code-review-codex-astra": "2026-10-27T12:06:30.845735",
-    "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life": "2026-09-17T12:13:02.409327",
     "https://openai.com/index/helping-small-businesses-put-ai-to-work": "2026-10-01T12:06:07.829111",
     "https://openai.com/index/helping-websites-express-ai-training-preferences": "2026-10-31T12:06:05.973708",
     "https://openai.com/index/higgsfield-from-prompt-to-production-with-astra": "2026-09-22T12:05:07.666789",
     "https://openai.com/index/higgsfield-longer-videos-voice": "2026-10-14T12:05:52.861992",
-    "https://openai.com/index/how-to-connect-ai-usage-to-business-value": "2026-09-17T12:13:02.409327",
     "https://openai.com/index/how-we-detect-frontier-model-misalignment": "2026-10-30T12:06:54.945777",
     "https://openai.com/index/how-we-will-do-better-for-australia": "2026-09-29T12:05:14.873169",
     "https://openai.com/index/introducing-gpt-6-1-sol": "2026-09-30T12:05:59.362753",
@@ -1735,7 +1657,6 @@
     "https://openai.com/index/practical-guide-building-gpt-6": "2026-10-03T12:07:30.150185",
     "https://openai.com/index/proaction": "2026-09-26T12:05:49.135682",
     "https://openai.com/index/radisson": "2026-10-08T12:05:55.349500",
-    "https://openai.com/index/reimagining-advertising-with-ai": "2026-09-17T12:13:02.409327",
     "https://openai.com/index/ropes-gray-ai-diligence": "2026-10-30T12:06:54.945777",
     "https://openai.com/index/sam-altman-un-security-council-remarks": "2026-09-24T12:06:34.844018",
     "https://openai.com/index/scaling-storage-one-billion-users-part-two": "2026-10-24T12:06:33.888920",
