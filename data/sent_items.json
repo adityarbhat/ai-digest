@@ -52,7 +52,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "1fff0c097d29",
-      "last_seen_at": "2026-11-02T12:02:39.222906",
+      "last_seen_at": "2026-11-03T12:01:42.269553",
       "title": "Claude Code Overview",
       "updated_at": "2026-10-20T12:05:14.915139"
     },
@@ -180,7 +180,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "9dda4b28be94",
-      "last_seen_at": "2026-11-02T12:02:39.222906",
+      "last_seen_at": "2026-11-03T12:01:42.269553",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-10-22T12:06:09.234325"
     },
@@ -191,6 +191,8 @@
         "The Claude Platform release notes list changes to the Claude API, the client SDKs, and the Claude Console, newest first.",
         "For release notes on Claude Apps, see the Release notes for Claude Apps in the Claude Help Center .",
         "For updates to Claude Code, see the complete CHANGELOG.md in the claude-code repository.",
+        "November 2, 2026 \ue09a",
+        "Long conversations and agent loops on the Messages API can now send smaller requests and get a lower time to first token with message threads , in beta with the message-threads-2026-08-12 beta header. The API keeps the conversation on the server, so each later request sends only the new messages. A thread expires 5 minutes after its last request and is deleted no more than 1 hour after its last use. Message threads are available on the Claude API, Claude Platform on AWS , Claude Models on Google Cloud (Anthropic managed), and Claude in Microsoft Foundry .",
         "October 30, 2026 \ue09a",
         "We\u2019ve deprecated fast mode for Claude Opus 4.8, with removal on November 30, 2026. After removal, requests to claude-opus-4-8 with speed: \"fast\" will return an error. To continue using fast mode, migrate to Claude Opus 5.5 . Read more in Fast mode .",
         "October 29, 2026 \ue09a",
@@ -343,17 +345,22 @@
         "The legacy Workbench ( platform.claude.com/workbench ) in the Claude Console is being sunset with access ending on August 17, 2026. Saved prompts, variables, and evals are not supported in the updated Workbench in the Console. You can export any data you want to keep from the banner and under your Organizational Settings . For more, see How do I use the Workbench? in the Claude Help Center.",
         "The experimental prompt tools APIs for generating, improving, and templatizing prompts ( /v1/experimental/generate_prompt , /v1/experimental/improve_prompt , and /v1/experimental/templatize_prompt ) are being retired along with the Workbench on August 17, 2026. After removal, requests to these endpoints will return an error.",
         "July 15, 2026 \ue09a",
-        "Mid-conversation system messages are available on Claude Fable 5, Claude Mythos 5, and Claude Opus 4.8, on the Claude API, Claude in Amazon Bedrock , and Google Cloud . No beta header is required. This corrects earlier availability notes.",
-        "July 14, 2026 \ue09a",
-        "You can now manage the people in your Claude Enterprise (claude.ai) organization with the Admin API , in beta for all Claude Enterprise organizations: list members and look them up by email address, change a member\u2019s role, remove members, send and withdraw invites, manage groups and their membership, and read custom roles. Group and custom-role requests require the anthropic-beta: ce-user-management-2026-07-13 beta header; member and invite requests take no beta header. An Admin API key with the read:org_audit scope can also call every user-management GET endpoint. See User management ."
+        "Mid-conversation system messages are available on Claude Fable 5, Claude Mythos 5, and Claude Opus 4.8, on the Claude API, Claude in Amazon Bedrock , and Google Cloud . No beta header is required. This corrects earlier availability notes."
       ],
-      "content_hash": "38e08d2d8655",
-      "last_seen_at": "2026-11-02T12:02:39.222906",
+      "content_hash": "1c36b7d72e2a",
+      "last_seen_at": "2026-11-03T12:05:35.152672",
       "title": "Anthropic Release Notes",
-      "updated_at": "2026-10-31T12:06:05.973592"
+      "updated_at": "2026-11-03T12:05:35.152672"
     }
   },
   "sent": {
+    "006ec733ab4a2f0d47e7268aa5112c445f1bd3c9": {
+      "kind": "Blog",
+      "sent_at": "2026-11-03T12:05:35.152672",
+      "source": "OpenAI",
+      "title": "Scaling Git at OpenAI",
+      "url": "https://openai.com/index/scaling-git-at-openai"
+    },
     "00e82a92f412a3a8a70d67a6fc878f34ce962483": {
       "kind": "Blog",
       "sent_at": "2026-11-01T12:05:26.967530",
@@ -388,6 +395,13 @@
       "source": "Dropbox Tech",
       "title": "Evolving our calendar assistant Reclaim to be AI-native without starting over",
       "url": "https://dropbox.tech/machine-learning/evolving-calendar-assistant-reclaim-to-be-ai-native"
+    },
+    "0cd0b74553ce9c9026096fd5d5b7048318ddd029": {
+      "kind": "Blog",
+      "sent_at": "2026-11-03T12:05:35.152672",
+      "source": "MIT Tech Review",
+      "title": "Stop counting tokens, start counting what ships",
+      "url": "https://www.technologyreview.com/2026/11/02/1147702/stop-counting-tokens-start-counting-what-ships/"
     },
     "1013987e4ae34575181c9280a6dd19cb3cb51f70": {
       "kind": "Blog",
@@ -1117,6 +1131,13 @@
       "title": "Why are good developers so wary of agentic development?",
       "url": "https://martinfowler.com/rachels-ramblings/good-devs-wary.html"
     },
+    "9d3d804fb6ad57df28ce560c339e1ab08964868f": {
+      "kind": "Blog",
+      "sent_at": "2026-11-03T12:05:35.152672",
+      "source": "Neon Blog",
+      "title": "Managed Better Auth is now an OAuth provider, with MCP support",
+      "url": "https://neon.com/blog/managed-better-auth-oauth-provider-mcp"
+    },
     "a40112a3b9559ebfdeb47f98ccb5dda8f45ca0df": {
       "kind": "Blog",
       "sent_at": "2026-10-30T12:06:54.945631",
@@ -1145,6 +1166,13 @@
       "title": "Quick Study",
       "url": "https://simonwillison.net/2026/Oct/23/quick-study-painter/"
     },
+    "a95aba43e2166028b645c8fde7c10d2962d90fed": {
+      "kind": "Paper",
+      "sent_at": "2026-11-03T12:05:35.152672",
+      "source": "arXiv",
+      "title": "CoworkOS:Scaling Agent Coworkers for Real-world Automation",
+      "url": "http://arxiv.org/abs/2611.03178v1"
+    },
     "a98a49e1f35b841e38bc6a0f7f7e8eb2cd489ff9": {
       "kind": "Paper",
       "sent_at": "2026-10-24T12:06:33.888741",
@@ -1166,12 +1194,26 @@
       "title": "Supabase Compute: run your agents inside your project",
       "url": "https://supabase.com/blog/supabase-compute-private-alpha"
     },
+    "ab3e631e1e124050e80cb8c491c7b26f0ee16e9a": {
+      "kind": "Blog",
+      "sent_at": "2026-11-03T12:05:35.152672",
+      "source": "OpenAI",
+      "title": "LifeVal",
+      "url": "https://openai.com/index/lifeval"
+    },
     "aba00e8df96919ebca6e5a07a8d78c4372a90b35": {
       "kind": "Blog",
       "sent_at": "2026-09-19T12:06:29.356523",
       "source": "Simon Willison",
       "title": "Quoting Thariq Shihipar",
       "url": "https://simonwillison.net/2026/Sep/18/thariq-shihipar/"
+    },
+    "abc2ed722e1aaa59fd73a366fca6540cf62cda5b": {
+      "kind": "Blog",
+      "sent_at": "2026-11-03T12:05:35.152672",
+      "source": "Anthropic Docs",
+      "title": "Anthropic Release Notes",
+      "url": "https://docs.anthropic.com/en/release-notes/overview"
     },
     "ac0e9f4e96743bee8e5420add00177f5c4d7e66b": {
       "kind": "Blog",
@@ -1516,6 +1558,13 @@
       "title": "Operate with confidence: check production with your coding agent",
       "url": "https://supabase.com/blog/operate-with-confidence-check-production-with-your-coding-agent"
     },
+    "f3417692c4abd843fd0028850e5df7315765d6bc": {
+      "kind": "Blog",
+      "sent_at": "2026-11-03T12:05:35.152672",
+      "source": "InfoQ Architecture Articles",
+      "title": "Article: Systemic Approach to Memory, Knowledge, and Context in Agentic AI Architectures",
+      "url": "https://www.infoq.com/articles/agentic-ai-context-memory-knowledge/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Architecture-articles"
+    },
     "f363ffb2cf508bb3fb3a461543454f9ac1a39f8f": {
       "kind": "Blog",
       "sent_at": "2026-09-22T12:05:07.666618",
@@ -1564,6 +1613,7 @@
     "https://blog.cloudflare.com/ddos-threat-report-2026-q3/": "2026-10-30T12:06:54.945777",
     "https://blog.cloudflare.com/deno-joins-cloudflare/": "2026-10-10T12:04:47.946949",
     "https://blog.cloudflare.com/deploy-with-void/": "2026-10-16T12:05:32.016399",
+    "https://blog.cloudflare.com/dns-targeted-zone-builds/": "2026-11-03T12:05:35.152916",
     "https://blog.cloudflare.com/emudhra-certificate-compromise/": "2026-10-21T12:07:40.757503",
     "https://blog.cloudflare.com/emudhra-patching/": "2026-10-31T12:06:05.973708",
     "https://blog.cloudflare.com/full-transaction-waf/": "2026-10-22T12:06:09.234476",
@@ -1633,6 +1683,8 @@
     "https://openai.com/index/forward-deployed-engineering-means": "2026-10-23T12:05:56.559813",
     "https://openai.com/index/grab-openai-ai-skills-southeast-asia": "2026-09-23T12:06:19.094636",
     "https://openai.com/index/greptile-code-review-codex-astra": "2026-10-27T12:06:30.845735",
+    "https://openai.com/index/grid-protectors-program": "2026-11-03T12:05:35.152916",
+    "https://openai.com/index/heimstaden": "2026-11-03T12:05:35.152916",
     "https://openai.com/index/helping-small-businesses-put-ai-to-work": "2026-10-01T12:06:07.829111",
     "https://openai.com/index/helping-websites-express-ai-training-preferences": "2026-10-31T12:06:05.973708",
     "https://openai.com/index/higgsfield-from-prompt-to-production-with-astra": "2026-09-22T12:05:07.666789",
