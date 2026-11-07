@@ -52,7 +52,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "1fff0c097d29",
-      "last_seen_at": "2026-11-06T12:02:01.038737",
+      "last_seen_at": "2026-11-07T12:03:09.164780",
       "title": "Claude Code Overview",
       "updated_at": "2026-10-20T12:05:14.915139"
     },
@@ -180,7 +180,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "9dda4b28be94",
-      "last_seen_at": "2026-11-06T12:02:01.038737",
+      "last_seen_at": "2026-11-07T12:03:09.164780",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-10-22T12:06:09.234325"
     },
@@ -348,7 +348,7 @@
         "Claude Managed Agents session thread event streams now support event deltas . GET /v1/sessions/{session_id}/threads/{thread_id}/stream accepts the same event_deltas[] query parameter as the session-level stream, so you can preview a subagent\u2019s text as the model generates it. A connection previews only the thread it\u2019s reading. See Preview session thread events ."
       ],
       "content_hash": "b188092a6925",
-      "last_seen_at": "2026-11-06T12:06:07.095296",
+      "last_seen_at": "2026-11-07T12:03:09.164780",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-11-06T12:06:07.095296"
     }
@@ -381,13 +381,6 @@
       "source": "Neon Blog",
       "title": "Save tokens with Neon Function templates",
       "url": "https://neon.com/blog/save-tokens-with-neon-function-templates"
-    },
-    "04ec494665784ce99f517106431ac81f375ca793": {
-      "kind": "Blog",
-      "sent_at": "2026-09-23T12:06:19.094471",
-      "source": "Anthropic Docs",
-      "title": "Anthropic Release Notes",
-      "url": "https://docs.anthropic.com/en/release-notes/overview"
     },
     "0acb7c8077a09baa0459e72d7550ba84b13ccbfe": {
       "kind": "Blog",
@@ -641,13 +634,6 @@
       "title": "Inside a Kylon room, where people and agents build apps on Neon",
       "url": "https://neon.com/blog/inside-a-kylon-room-where-people-and-agents-build-apps-on-neon"
     },
-    "3889dbaf67e10d47681f7e1387d55c8fd910fa8b": {
-      "kind": "Paper",
-      "sent_at": "2026-09-23T12:06:19.094471",
-      "source": "arXiv",
-      "title": "Grow the Harness, Not the Context: From Strategy-Free Scaffolds to Reusable Specialist Agents",
-      "url": "http://arxiv.org/abs/2609.26760v1"
-    },
     "38bd6c8e7a8ac757214c7fe502ae2f669069099a": {
       "kind": "Blog",
       "sent_at": "2026-09-24T12:06:34.843935",
@@ -661,13 +647,6 @@
       "source": "HuggingFace",
       "title": "Holo4: powering generalist computer-use agents",
       "url": "https://huggingface.co/blog/Hcompany/holo4"
-    },
-    "3d98965b71ed77b0601190a63f1ec7a0f541caac": {
-      "kind": "Paper",
-      "sent_at": "2026-09-23T12:06:19.094471",
-      "source": "arXiv",
-      "title": "CliffCompaction: Cost-Efficient Compaction for Long-Horizon Coding Agents",
-      "url": "http://arxiv.org/abs/2609.26779v1"
     },
     "3e403ac1a929e3ffca75df1bc426119c0e9ff90c": {
       "kind": "Paper",
@@ -760,13 +739,6 @@
       "title": "Introducing DBArena: open, reproducible benchmarks for hosted Postgres",
       "url": "https://supabase.com/blog/introducing-dbarena"
     },
-    "4a2296303aa15e7576f5305efd605303419382f4": {
-      "kind": "Blog",
-      "sent_at": "2026-09-23T12:06:19.094471",
-      "source": "OpenAI",
-      "title": "Introducing GPT-6 Sol and Luna",
-      "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna"
-    },
     "4a2dad8e0e1ee619135bc27acc8a7de02788a643": {
       "kind": "Paper",
       "sent_at": "2026-10-30T12:06:54.945631",
@@ -787,6 +759,13 @@
       "source": "Hacker News",
       "title": "Brazilian Court Sanctions Lawyers for Prompt Injection in Court Filing",
       "url": "https://jetstream.security/insights/brazilian-court-sanctions-prompt-injection-filing/"
+    },
+    "4c8b185c901f529ee75831d466e97a4d9c6d9895": {
+      "kind": "Paper",
+      "sent_at": "2026-11-07T12:06:31.489790",
+      "source": "arXiv",
+      "title": "ControlAnything: Generative UI and On-Demand Device Integration for Mixed-Reality Hand Interaction by a Coding Agent",
+      "url": "http://arxiv.org/abs/2611.08321v1"
     },
     "4e6dacea15cf9843cd054cd787fa2915eeb4b2b9": {
       "kind": "Blog",
@@ -928,13 +907,6 @@
       "title": "Why isn't the industry freaking out about DeepSeek 4.1 Flash?",
       "url": "https://www.dgt.is/blog/2026-10-07-deepseek-freek-out/"
     },
-    "6bcfd1ac2890db2696f3da50fa67e5aefa04889a": {
-      "kind": "Blog",
-      "sent_at": "2026-09-23T12:06:19.094471",
-      "source": "Anthropic Docs",
-      "title": "Claude Code Tutorials",
-      "url": "https://docs.anthropic.com/en/docs/claude-code/tutorials"
-    },
     "6e3b629c34928d6ec6c8a6bcf37d76bdbcd08e30": {
       "kind": "Paper",
       "sent_at": "2026-10-03T12:07:30.150012",
@@ -976,13 +948,6 @@
       "source": "Supabase Blog",
       "title": "Give your Supabase app its own MCP server",
       "url": "https://supabase.com/blog/give-your-supabase-app-its-own-mcp-server"
-    },
-    "74e3d6e5f7061819c389e6c0b5c8de6eb6dfbe14": {
-      "kind": "Blog",
-      "sent_at": "2026-09-23T12:06:19.094471",
-      "source": "OpenAI",
-      "title": "Parallel cut research time and cost in half with GPT\u20116 Astra",
-      "url": "https://openai.com/index/parallel-cuts-time-and-cost-with-astra"
     },
     "7812bc42b64c1822e07330cd2a7978c4109a6833": {
       "kind": "Paper",
@@ -1095,13 +1060,6 @@
       "source": "FastAPI Releases",
       "title": "0.151.0",
       "url": "https://github.com/fastapi/fastapi/releases/tag/0.151.0"
-    },
-    "8d6ba6e8236c63e7f0f3e7216c3cd52cc169f3db": {
-      "kind": "Blog",
-      "sent_at": "2026-09-23T12:06:19.094471",
-      "source": "Simon Willison",
-      "title": "Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price war",
-      "url": "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/"
     },
     "8e91162d4765133a3adbaca8c8bfd53ca2132656": {
       "kind": "Blog",
@@ -1299,6 +1257,13 @@
       "title": "Anthropic Release Notes",
       "url": "https://docs.anthropic.com/en/release-notes/overview"
     },
+    "b4ce2b5805629a7cc93c5b60071c0b90d1ba2115": {
+      "kind": "Blog",
+      "sent_at": "2026-11-07T12:06:31.489790",
+      "source": "FastAPI Releases",
+      "title": "0.162.1",
+      "url": "https://github.com/fastapi/fastapi/releases/tag/0.162.1"
+    },
     "b6b09d9b696861ee46f999c97113d7f28e3a2e5a": {
       "kind": "Blog",
       "sent_at": "2026-10-15T12:05:43.021655",
@@ -1439,13 +1404,6 @@
       "title": "pg_redact: Content-aware PII redaction with Jev, enforced in Postgres",
       "url": "https://neon.com/blog/pg-redact-content-aware-pii-redaction-with-jev-enforced-in-postgres"
     },
-    "cf77b45aa789d9ea494c5e6d166b8096551ba321": {
-      "kind": "Blog",
-      "sent_at": "2026-09-23T12:06:19.094471",
-      "source": "Hacker News",
-      "title": "Claude Opus 5.5",
-      "url": "https://www.anthropic.com/claude-opus-5-5"
-    },
     "d2d35d0e66cb864d91981e1736246f91f8dc5458": {
       "kind": "Blog",
       "sent_at": "2026-10-07T12:06:18.519554",
@@ -1473,13 +1431,6 @@
       "source": "Neon Blog",
       "title": "Is MCP good yet?",
       "url": "https://neon.com/blog/is-mcp-good-yet"
-    },
-    "d7ac59ae0532d6e009ea8eff247cc7bee9aa133d": {
-      "kind": "Blog",
-      "sent_at": "2026-09-23T12:06:19.094471",
-      "source": "OpenAI",
-      "title": "Better prompt caching for GPT-6",
-      "url": "https://openai.com/index/better-prompt-caching-for-gpt-6"
     },
     "d7b5988f22e7dadba9840d2258e1e937477b5277": {
       "kind": "Blog",
@@ -1536,6 +1487,13 @@
       "source": "Simon Willison",
       "title": "Quoting Matthew Green",
       "url": "https://simonwillison.net/2026/Oct/1/matthew-green/"
+    },
+    "e8582d9acc848573119e9157420f522351d4855e": {
+      "kind": "Paper",
+      "sent_at": "2026-11-07T12:06:31.489790",
+      "source": "arXiv",
+      "title": "AttnSR: Attention Step Reward for Long-Horizon Agentic RL",
+      "url": "http://arxiv.org/abs/2611.07932v1"
     },
     "e9801063eca140452ee9fbb5ddbeeb05d03a58eb": {
       "kind": "Blog",
@@ -1679,11 +1637,10 @@
     "https://blog.cloudflare.com/trusted-agent-delegation/": "2026-11-06T12:06:07.095449",
     "https://blog.cloudflare.com/turnstile-spin/": "2026-09-26T12:05:49.135682",
     "https://blog.cloudflare.com/typescript-rust-port/": "2026-10-21T12:07:40.757503",
-    "https://blog.cloudflare.com/vary-support/": "2026-09-23T12:06:19.094636",
     "https://blog.cloudflare.com/verified-bots-accountability/": "2026-10-17T12:04:55.267019",
     "https://blog.cloudflare.com/vinext-nextjs-on-vite/": "2026-09-29T12:05:14.873169",
+    "https://blog.cloudflare.com/vole-mole/": "2026-11-07T12:06:31.489883",
     "https://blog.cloudflare.com/webmcp-commerce/": "2026-10-22T12:06:09.234476",
-    "https://blog.cloudflare.com/worker-previews/": "2026-09-23T12:06:19.094636",
     "https://blog.cloudflare.com/workers-kv-instant/": "2026-10-02T12:07:26.758352",
     "https://blog.cloudflare.com/workers-on-demand-profiling/": "2026-10-10T12:04:47.946949",
     "https://blog.cloudflare.com/yandex-outage/": "2026-10-15T12:05:43.021804",
@@ -1700,7 +1657,6 @@
     "https://claude.com/blog/how-coderabbit-power-digital-and-thoughtspot-scale-with-snowflake-and-vercel-on-claude-marketplace": "2026-09-24T12:06:34.844018",
     "https://claude.com/blog/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk": "2026-10-06T12:06:05.076859",
     "https://claude.com/blog/how-to-prepare-for-ai-driven-code-modernization-projects": "2026-09-24T12:06:34.844018",
-    "https://claude.com/blog/what-a-task-costs-on-opus-5-5": "2026-09-23T12:06:19.094636",
     "https://openai.com/index/accelerating-engineering-for-the-physical-world": "2026-11-04T12:06:28.376355",
     "https://openai.com/index/albertsons-reimagining-retail": "2026-10-02T12:07:26.758352",
     "https://openai.com/index/amp-beyond-coding": "2026-10-15T12:05:43.021804",
@@ -1716,7 +1672,6 @@
     "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign": "2026-10-01T12:06:07.829111",
     "https://openai.com/index/eu-text-provenance": "2026-10-06T12:06:05.076859",
     "https://openai.com/index/forward-deployed-engineering-means": "2026-10-23T12:05:56.559813",
-    "https://openai.com/index/grab-openai-ai-skills-southeast-asia": "2026-09-23T12:06:19.094636",
     "https://openai.com/index/greptile-code-review-codex-astra": "2026-10-27T12:06:30.845735",
     "https://openai.com/index/grid-protectors-program": "2026-11-03T12:05:35.152916",
     "https://openai.com/index/heimstaden": "2026-11-03T12:05:35.152916",
@@ -1741,6 +1696,7 @@
     "https://openai.com/index/openai-to-acquire-pierre": "2026-11-05T12:06:48.489100",
     "https://openai.com/index/oracle": "2026-10-09T12:04:52.188908",
     "https://openai.com/index/oracle-apps-in-chatgpt": "2026-10-28T12:05:39.312639",
+    "https://openai.com/index/partnering-with-hacktron": "2026-11-07T12:06:31.489883",
     "https://openai.com/index/pollo-ai": "2026-10-09T12:04:52.188908",
     "https://openai.com/index/practical-guide-building-gpt-6": "2026-10-03T12:07:30.150185",
     "https://openai.com/index/proaction": "2026-09-26T12:05:49.135682",
