@@ -52,7 +52,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "1fff0c097d29",
-      "last_seen_at": "2026-11-07T12:03:09.164780",
+      "last_seen_at": "2026-11-08T12:03:26.472765",
       "title": "Claude Code Overview",
       "updated_at": "2026-10-20T12:05:14.915139"
     },
@@ -180,7 +180,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "9dda4b28be94",
-      "last_seen_at": "2026-11-07T12:03:09.164780",
+      "last_seen_at": "2026-11-08T12:03:26.472765",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-10-22T12:06:09.234325"
     },
@@ -348,7 +348,7 @@
         "Claude Managed Agents session thread event streams now support event deltas . GET /v1/sessions/{session_id}/threads/{thread_id}/stream accepts the same event_deltas[] query parameter as the session-level stream, so you can preview a subagent\u2019s text as the model generates it. A connection previews only the thread it\u2019s reading. See Preview session thread events ."
       ],
       "content_hash": "b188092a6925",
-      "last_seen_at": "2026-11-07T12:03:09.164780",
+      "last_seen_at": "2026-11-08T12:03:26.472765",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-11-06T12:06:07.095296"
     }
@@ -633,13 +633,6 @@
       "source": "Neon Blog",
       "title": "Inside a Kylon room, where people and agents build apps on Neon",
       "url": "https://neon.com/blog/inside-a-kylon-room-where-people-and-agents-build-apps-on-neon"
-    },
-    "38bd6c8e7a8ac757214c7fe502ae2f669069099a": {
-      "kind": "Blog",
-      "sent_at": "2026-09-24T12:06:34.843935",
-      "source": "Hacker News",
-      "title": "Claude Code reads AGENTS.md only when telemetry is on [fixed]",
-      "url": "https://blog.szypowi.cz/p/claude-code-reads-agents.md-only-when-telemetry-is-on/"
     },
     "3baf7a1c898a0f0ffc41d0f5d5945a800154f702": {
       "kind": "Blog",
@@ -949,13 +942,6 @@
       "title": "Give your Supabase app its own MCP server",
       "url": "https://supabase.com/blog/give-your-supabase-app-its-own-mcp-server"
     },
-    "7812bc42b64c1822e07330cd2a7978c4109a6833": {
-      "kind": "Paper",
-      "sent_at": "2026-09-24T12:06:34.843935",
-      "source": "arXiv",
-      "title": "Guides That Cause Actions: An Offline Study of Guide-Action Mutual Reinforcement in Multimodal Web Agents",
-      "url": "http://arxiv.org/abs/2609.27353v1"
-    },
     "792abee5165eec0cce2bdf5ef5847e326f0565dc": {
       "kind": "Blog",
       "sent_at": "2026-10-20T12:05:14.915139",
@@ -1095,6 +1081,13 @@
       "source": "arXiv",
       "title": "MCP Error Messages Written for Developers Hurt the Most Capable Agents Most",
       "url": "http://arxiv.org/abs/2609.35381v1"
+    },
+    "95a76befb5a5e68059198dbef6c9742ae4497927": {
+      "kind": "Blog",
+      "sent_at": "2026-11-08T12:08:42.250469",
+      "source": "Hacker News",
+      "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
+      "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again"
     },
     "9840dd83d8d65e4aaacea1b3cff4100e5b807466": {
       "kind": "Blog",
@@ -1649,14 +1642,11 @@
     "https://claude.com/blog/build-plugins-for-claude": "2026-09-26T12:05:49.135682",
     "https://claude.com/blog/claude-code-mods": "2026-10-02T12:07:26.758352",
     "https://claude.com/blog/claude-for-government-is-now-generally-available": "2026-10-01T12:06:07.829111",
-    "https://claude.com/blog/claude-marketplace": "2026-09-24T12:06:34.844018",
     "https://claude.com/blog/claude-opus-5-5-built-for-coding-sessions-that-use-more-context": "2026-09-25T12:05:19.070930",
     "https://claude.com/blog/claude-tag-now-supports-personal-connectors-in-channels": "2026-09-25T12:05:19.070930",
     "https://claude.com/blog/giving-companies-more-control-over-their-ai-agents-with-nvidia": "2026-09-29T12:05:14.873169",
     "https://claude.com/blog/how-anthropics-sales-team-rebuilt-inbound-with-claude-managed-agents": "2026-10-01T12:06:07.829111",
-    "https://claude.com/blog/how-coderabbit-power-digital-and-thoughtspot-scale-with-snowflake-and-vercel-on-claude-marketplace": "2026-09-24T12:06:34.844018",
     "https://claude.com/blog/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk": "2026-10-06T12:06:05.076859",
-    "https://claude.com/blog/how-to-prepare-for-ai-driven-code-modernization-projects": "2026-09-24T12:06:34.844018",
     "https://openai.com/index/accelerating-engineering-for-the-physical-world": "2026-11-04T12:06:28.376355",
     "https://openai.com/index/albertsons-reimagining-retail": "2026-10-02T12:07:26.758352",
     "https://openai.com/index/amp-beyond-coding": "2026-10-15T12:05:43.021804",
@@ -1689,7 +1679,6 @@
     "https://openai.com/index/lenfest-ai-collaborative-expansion": "2026-09-29T12:05:14.873169",
     "https://openai.com/index/low-resource-programming-languages": "2026-10-20T12:05:14.915294",
     "https://openai.com/index/new-chatgpt-ads-format-and-measurement": "2026-10-05T12:06:37.956034",
-    "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense": "2026-09-24T12:06:34.844018",
     "https://openai.com/index/openai-models-google-cloud": "2026-10-22T12:06:09.234476",
     "https://openai.com/index/openai-nask-ai-safety-security-partnership": "2026-10-23T12:05:56.559813",
     "https://openai.com/index/openai-servicenow-partnership-expansion": "2026-10-29T12:06:53.602298",
@@ -1702,7 +1691,6 @@
     "https://openai.com/index/proaction": "2026-09-26T12:05:49.135682",
     "https://openai.com/index/radisson": "2026-10-08T12:05:55.349500",
     "https://openai.com/index/ropes-gray-ai-diligence": "2026-10-30T12:06:54.945777",
-    "https://openai.com/index/sam-altman-un-security-council-remarks": "2026-09-24T12:06:34.844018",
     "https://openai.com/index/scaling-storage-one-billion-users-part-two": "2026-10-24T12:06:33.888920",
     "https://openai.com/index/securing-our-frontier-model-training-environment": "2026-10-24T12:06:33.888920",
     "https://openai.com/index/sentinelone": "2026-10-15T12:05:43.021804",
@@ -1716,7 +1704,6 @@
     "https://openai.com/index/the-future-of-the-firm": "2026-10-29T12:06:53.602298",
     "https://openai.com/index/third-moment-research": "2026-10-15T12:05:43.021804",
     "https://openai.com/index/towards-safety-cases-for-frontier-ai-training": "2026-09-29T12:05:14.873169",
-    "https://openai.com/index/two-years-of-openai-academy": "2026-09-24T12:06:34.844018",
     "https://openai.com/index/updated-model-spec": "2026-10-30T12:06:54.945777",
     "https://www.anthropic.com/news/2026-us-midterms": "2026-10-15T12:05:43.021804",
     "https://www.anthropic.com/news/2026-usage-policy-update": "2026-10-09T12:04:52.188908",
