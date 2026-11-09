@@ -52,7 +52,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "1fff0c097d29",
-      "last_seen_at": "2026-11-08T12:03:26.472765",
+      "last_seen_at": "2026-11-09T12:03:01.175479",
       "title": "Claude Code Overview",
       "updated_at": "2026-10-20T12:05:14.915139"
     },
@@ -180,7 +180,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "9dda4b28be94",
-      "last_seen_at": "2026-11-08T12:03:26.472765",
+      "last_seen_at": "2026-11-09T12:03:01.175479",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-10-22T12:06:09.234325"
     },
@@ -348,7 +348,7 @@
         "Claude Managed Agents session thread event streams now support event deltas . GET /v1/sessions/{session_id}/threads/{thread_id}/stream accepts the same event_deltas[] query parameter as the session-level stream, so you can preview a subagent\u2019s text as the model generates it. A connection previews only the thread it\u2019s reading. See Preview session thread events ."
       ],
       "content_hash": "b188092a6925",
-      "last_seen_at": "2026-11-08T12:03:26.472765",
+      "last_seen_at": "2026-11-09T12:03:01.175479",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-11-06T12:06:07.095296"
     }
@@ -444,20 +444,6 @@
       "source": "arXiv",
       "title": "Spine: Compiling Subtask Trees into Structured Context for Long-Horizon Coding Agents",
       "url": "http://arxiv.org/abs/2610.37224v1"
-    },
-    "17c2e5cbd953e424223d219b43d48517c533a9b5": {
-      "kind": "Paper",
-      "sent_at": "2026-09-25T12:05:19.070788",
-      "source": "arXiv",
-      "title": "Hard Stop: Kernel-Level Preemption and Containment for Rogue Agentic Execution",
-      "url": "http://arxiv.org/abs/2609.29808v1"
-    },
-    "198f8083f6900a7c282ab235221bde12d40af1f7": {
-      "kind": "Blog",
-      "sent_at": "2026-09-25T12:05:19.070788",
-      "source": "Anthropic Docs",
-      "title": "Anthropic Release Notes",
-      "url": "https://docs.anthropic.com/en/release-notes/overview"
     },
     "1b261e3caa9e6eb439b42c26610a34c28d8b2b84": {
       "kind": "Blog",
@@ -563,13 +549,6 @@
       "source": "Anthropic Docs",
       "title": "Anthropic Release Notes",
       "url": "https://docs.anthropic.com/en/release-notes/overview"
-    },
-    "2fcf5a446e51d0308a67a297be40744969f31a5c": {
-      "kind": "Paper",
-      "sent_at": "2026-09-25T12:05:19.070788",
-      "source": "arXiv",
-      "title": "LLM Agents Can Easily Tamper With Their Own Traces",
-      "url": "http://arxiv.org/abs/2609.30266v1"
     },
     "3048d86371626f9750e74729a36df8aee3ff7eb2": {
       "kind": "Blog",
@@ -1397,6 +1376,13 @@
       "title": "pg_redact: Content-aware PII redaction with Jev, enforced in Postgres",
       "url": "https://neon.com/blog/pg-redact-content-aware-pii-redaction-with-jev-enforced-in-postgres"
     },
+    "cf9ee5832cb356a935ff73d3ca5c5fc4ebee9b50": {
+      "kind": "Blog",
+      "sent_at": "2026-11-09T12:06:20.215801",
+      "source": "Simon Willison",
+      "title": "Hide your slop PR descriptions behind <details><summary>",
+      "url": "https://simonwillison.net/2026/Nov/9/details-summary/"
+    },
     "d2d35d0e66cb864d91981e1736246f91f8dc5458": {
       "kind": "Blog",
       "sent_at": "2026-10-07T12:06:18.519554",
@@ -1594,7 +1580,6 @@
     "https://blog.cloudflare.com/cloudflare-cf-cli-launch/": "2026-09-29T12:05:14.873169",
     "https://blog.cloudflare.com/cloudflare-openai-discovery-agentic-web/": "2026-10-16T12:05:32.016399",
     "https://blog.cloudflare.com/cloudflares-2026-annual-founders-letter/": "2026-09-28T12:04:24.726468",
-    "https://blog.cloudflare.com/containers-cross-tenant-vulnerability/": "2026-09-25T12:05:19.070930",
     "https://blog.cloudflare.com/d1-control-plane/": "2026-10-14T12:05:52.861992",
     "https://blog.cloudflare.com/ddos-threat-report-2026-q3/": "2026-10-30T12:06:54.945777",
     "https://blog.cloudflare.com/deno-joins-cloudflare/": "2026-10-10T12:04:47.946949",
@@ -1642,8 +1627,6 @@
     "https://claude.com/blog/build-plugins-for-claude": "2026-09-26T12:05:49.135682",
     "https://claude.com/blog/claude-code-mods": "2026-10-02T12:07:26.758352",
     "https://claude.com/blog/claude-for-government-is-now-generally-available": "2026-10-01T12:06:07.829111",
-    "https://claude.com/blog/claude-opus-5-5-built-for-coding-sessions-that-use-more-context": "2026-09-25T12:05:19.070930",
-    "https://claude.com/blog/claude-tag-now-supports-personal-connectors-in-channels": "2026-09-25T12:05:19.070930",
     "https://claude.com/blog/giving-companies-more-control-over-their-ai-agents-with-nvidia": "2026-09-29T12:05:14.873169",
     "https://claude.com/blog/how-anthropics-sales-team-rebuilt-inbound-with-claude-managed-agents": "2026-10-01T12:06:07.829111",
     "https://claude.com/blog/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk": "2026-10-06T12:06:05.076859",
