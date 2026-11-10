@@ -52,7 +52,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "1fff0c097d29",
-      "last_seen_at": "2026-11-09T12:03:01.175479",
+      "last_seen_at": "2026-11-10T12:02:23.835155",
       "title": "Claude Code Overview",
       "updated_at": "2026-10-20T12:05:14.915139"
     },
@@ -180,7 +180,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "9dda4b28be94",
-      "last_seen_at": "2026-11-09T12:03:01.175479",
+      "last_seen_at": "2026-11-10T12:02:23.835155",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-10-22T12:06:09.234325"
     },
@@ -191,6 +191,15 @@
         "The Claude Platform release notes list changes to the Claude API, the client SDKs, and the Claude Console, newest first.",
         "For release notes on Claude Apps, see the Release notes for Claude Apps in the Claude Help Center .",
         "For updates to Claude Code, see the complete CHANGELOG.md in the claude-code repository.",
+        "November 9, 2026 \ue09a",
+        "We\u2019ve launched Claude Fable 5.2 ( claude-fable-5-2 ), built for demanding reasoning and long-horizon agentic work. Claude Mythos 5.2 ( claude-mythos-5-2 ) offers the same capabilities only to organizations verified through Anthropic\u2019s verification programs, such as the Cyber Verification Program . Both models have a 1M token context window , 128k max output tokens, and always-on adaptive thinking . They cost $8 USD per MTok of input and $40 USD per MTok of output (Claude Fable 5.1 and Claude Mythos 5.1 cost $10 USD per MTok of input and $50 USD per MTok of output). Claude Fable 5.2 is available on the Claude API, Claude Platform on AWS , and Claude Models on Google Cloud (Anthropic managed) . It\u2019s also available on Claude in Amazon Bedrock . It\u2019s also available on Claude Models on Google Cloud (Google managed) . It\u2019s also available on Claude in Microsoft Foundry . See What\u2019s new in Claude Fable 5.2 for API changes and migration guidance. For model-specific prompting patterns, see Prompting Claude Fable 5.2 .",
+        "Claude Fable 5.2 and Claude Mythos 5.2 enforce the prefix check for every account, whatever its age. Claude Fable 5.1 returns the error by default on accounts created on or after August 31, 2026 (see When prefix_mismatch_behavior is unset ). If your code edits the system prompt, tools , or an earlier message and then sends back a Claude Fable 5.2 or Claude Mythos 5.2 thinking block from a later turn, the request returns a 400 error. Before you switch, check whether your code edits the prefix .",
+        "On the Claude API and Claude Models on Google Cloud (Google managed) , a conversation that moves onto Claude Fable 5.2 or Claude Mythos 5.2 keeps the reasoning from other models, including Claude Opus 5.5, Claude Sonnet 5.5, and Claude Haiku 5.5. When the conversation moves the other way, to any other model, including Claude Opus 5.5 and Claude Fable 5.1, the API drops the thinking blocks that Claude Fable 5.2 or Claude Mythos 5.2 produced, and the request still succeeds. See Switching models mid-conversation .",
+        "Claude Fable 5.2 and Claude Mythos 5.2 support computer use through the computer_toolset_20260801 toolset. A request that declares the earlier computer_20251124 tool returns a 400 error on every platform except Amazon Bedrock, where the earlier tool still works . See Migrate from computer_20251124 .",
+        "With the advisor tool , which is in beta, a Claude Fable 5.2 or Claude Mythos 5.2 executor accepts only Claude Fable 5.2 or Claude Mythos 5.2 as its advisor. Any other advisor returns a 400 error, so set the advisor\u2019s model to one of these two models when you move an executor to them. Every executor model accepts Claude Fable 5.2 as its advisor. See Model compatibility .",
+        "Both models require 30-day data retention, like Claude Fable 5.1 and Claude Mythos 5.1. They aren\u2019t available under zero data retention unless expressly authorized by Anthropic. See Model-specific data retention requirements .",
+        "Thinking blocks that Claude Fable 5.2 and Claude Mythos 5.2 produce work only in the account that produced them, or in an account linked to it. See Preserved thinking .",
+        "We\u2019ve launched fast mode for Claude Fable 5.2 in Messages API requests on the Claude API. Fast mode delivers up to 2.5x higher output tokens per second, at $16 USD per MTok of input and $80 USD per MTok of output. Set speed: \"fast\" on your request, with no beta header.",
         "November 5, 2026 \ue09a",
         "You can now set up an IP allowlist for your organization in the Claude Console, in beta. Requests to covered services from addresses not on your list are refused, which limits where a leaked API key can be used. Add IPv4 and IPv6 addresses or CIDR ranges, up to 1,000 per organization. See IP allowlisting for what\u2019s covered and how to set it up.",
         "You can now sign a member of your Claude Enterprise (claude.ai) organization out of Claude everywhere with the Admin API. This capability is in beta. See the Admin API reference . The member stays in the organization and can sign in again. See Sign a member out everywhere for the beta header and what the request doesn\u2019t end.",
@@ -336,21 +345,12 @@
         "July 24, 2026 \ue09a",
         "We\u2019ve launched Claude Opus 5 ( claude-opus-5 ), a step-change improvement over Claude Opus 4.8. Claude Opus 5 supports a 1M token context window (both the default and the maximum), 128k max output tokens, and thinking on by default, at $5 / $25 USD per MTok, the same pricing as Claude Opus 4.8. It\u2019s available on the Claude API, Claude in Amazon Bedrock , Claude Platform on AWS , Claude Models on Google Cloud (Google managed) , and Claude in Microsoft Foundry . See What\u2019s new in Claude Opus 5 for new features, behavior changes, and migration guidance, and the models overview for complete specs.",
         "On Claude Opus 5, disabling thinking is allowed only at effort high or below: thinking: {\"type\": \"disabled\"} with effort xhigh or max returns a 400 error, a breaking change from Claude Opus 4.8. See What\u2019s new in Claude Opus 5 .",
-        "Effort is the primary control for steering Claude Opus 5: the model supports the full ladder ( low , medium , high , xhigh , max ), with max for capability-critical work.",
-        "Mid-conversation tool changes are now in beta on Claude Fable 5, Claude Mythos 5, Claude Opus 4.8, and Claude Opus 5: add or remove tools between turns of a conversation while preserving the prompt cache. Include the mid-conversation-tool-changes-2026-07-01 beta header in your requests.",
-        "The fallbacks parameter now supports a \"default\" mode, which applies Anthropic\u2019s recommended fallback models by refusal category. Server-side fallback is in beta, and the \"default\" mode requires the server-side-fallback-2026-07-01 beta header. See Refusals and fallback .",
-        "We\u2019ve removed fast mode for Claude Opus 4.7. Requests to claude-opus-4-7 with speed: \"fast\" now return an error; unlike Claude Opus 4.6, they do not fall back to standard speed. Claude Opus 4.7 itself remains available at standard speed. To continue using fast mode, migrate to Claude Opus 5 or Claude Opus 4.8. Read more in Fast mode model availability .",
-        "July 22, 2026 \ue09a",
-        "You can now set an effort level on a Claude Managed Agents agent\u2019s model configuration. Pass effort inside the model object when you create the agent . See Effort levels for what each level does.",
-        "Webhooks for Claude Managed Agents now cover the environment and memory store lifecycle: four environment.* event types and three memory_store.* event types. You can react to environment and memory store lifecycle changes without polling. See the Environment events and Memory store events tabs in Supported event types .",
-        "When creating a Claude Managed Agents session, you can now seed it with initial events . Pass initial_events on POST /v1/sessions with up to 50 user.message and user.define_outcome events. A non-empty list starts the agent loop in the same call, so you don\u2019t need a separate send-events request to start work.",
-        "The version field is now optional when updating a Claude Managed Agents agent . Supply it for optimistic concurrency (a mismatch returns a 409 error), or omit it to apply the update unconditionally. See Update semantics .",
-        "Claude Managed Agents session thread event streams now support event deltas . GET /v1/sessions/{session_id}/threads/{thread_id}/stream accepts the same event_deltas[] query parameter as the session-level stream, so you can preview a subagent\u2019s text as the model generates it. A connection previews only the thread it\u2019s reading. See Preview session thread events ."
+        "Effort is the primary control for steering Claude Opus 5: the model supports the full ladder ( low , medium , high , xhigh , max ), with max for capability-critical work."
       ],
-      "content_hash": "b188092a6925",
-      "last_seen_at": "2026-11-09T12:03:01.175479",
+      "content_hash": "bde5f3a3f912",
+      "last_seen_at": "2026-11-10T12:08:39.514766",
       "title": "Anthropic Release Notes",
-      "updated_at": "2026-11-06T12:06:07.095296"
+      "updated_at": "2026-11-10T12:08:39.514766"
     }
   },
   "sent": {
@@ -409,6 +409,13 @@
       "source": "MIT Tech Review",
       "title": "The agentic web is here",
       "url": "https://www.technologyreview.com/2026/11/02/1147846/the-agentic-web-is-here/"
+    },
+    "11db4e3a5303526cae57e3926ab33197e334a840": {
+      "kind": "Blog",
+      "sent_at": "2026-11-10T12:08:39.514766",
+      "source": "Simon Willison",
+      "title": "llm-anthropic 0.31",
+      "url": "https://simonwillison.net/2026/Nov/9/llm-anthropic/"
     },
     "12399600af28383f8563aa79e7c13a792bb32b1f": {
       "kind": "Blog",
@@ -627,13 +634,6 @@
       "title": "Adaptive Skill Granularity for Coding Agents: Runtime Routing and Macro-to-Micro Recovery",
       "url": "http://arxiv.org/abs/2610.31461v1"
     },
-    "3e48849c442afe567391840b54cb51cb04556699": {
-      "kind": "Blog",
-      "sent_at": "2026-09-26T12:05:49.135583",
-      "source": "Anthropic Docs",
-      "title": "Anthropic Release Notes",
-      "url": "https://docs.anthropic.com/en/release-notes/overview"
-    },
     "3e8c9e10cd87584cf65fd7c754a811c4c9c16bf0": {
       "kind": "Blog",
       "sent_at": "2026-09-30T12:05:59.362606",
@@ -662,6 +662,13 @@
       "title": "Anthropic Release Notes",
       "url": "https://docs.anthropic.com/en/release-notes/overview"
     },
+    "4133c672faa896b72ed32e71cb4ff48c8155f548": {
+      "kind": "Blog",
+      "sent_at": "2026-11-10T12:08:39.514766",
+      "source": "Google DeepMind",
+      "title": "Introducing AlphaProof Code: a breakthrough in verifying complex software at depth",
+      "url": "https://deepmind.google/blog/introducing-alphaproof-code/"
+    },
     "42d5228259a0c6b93ee055a1d642917f74cfe246": {
       "kind": "Blog",
       "sent_at": "2026-10-25T12:06:02.649907",
@@ -689,6 +696,13 @@
       "source": "Anthropic Docs",
       "title": "Anthropic Release Notes",
       "url": "https://docs.anthropic.com/en/release-notes/overview"
+    },
+    "466a4a372617a216a97801787c43ded84653421c": {
+      "kind": "Blog",
+      "sent_at": "2026-11-10T12:08:39.514766",
+      "source": "Simon Willison",
+      "title": "Quoting Prompting Claude Fable 5.2",
+      "url": "https://simonwillison.net/2026/Nov/10/prompting-claude-fable-52/"
     },
     "4683ffb864a45c071e71fa5b6c36893bdaaaa28c": {
       "kind": "Blog",
@@ -802,6 +816,13 @@
       "title": "ScamWorld: An Interactive Environment for Evaluating Web Agents Against Online Fraud",
       "url": "http://arxiv.org/abs/2611.04879v1"
     },
+    "59b12428eb3181e29ab5c0a211f2fb9db2b47ed2": {
+      "kind": "Blog",
+      "sent_at": "2026-11-10T12:08:39.514766",
+      "source": "OpenAI",
+      "title": "CodeRabbit scales agentic software development and ships 20x more",
+      "url": "https://openai.com/index/coderabbit-codex-daybreak"
+    },
     "5a4e8453cd75290f5fb145582e3c8580e8f724db": {
       "kind": "Blog",
       "sent_at": "2026-10-19T12:05:51.076107",
@@ -893,13 +914,6 @@
       "title": "How Meta Built Forum With AI-Native Engineering",
       "url": "https://engineering.fb.com/2026/10/15/ml-applications/how-meta-built-forum-ai-native-engineering/"
     },
-    "707a18afd73999fca70d0e4f9cdc950e64afa171": {
-      "kind": "Paper",
-      "sent_at": "2026-09-26T12:05:49.135583",
-      "source": "arXiv",
-      "title": "Jev-Mobile: Jev as an Executor for Mobile GUI Agents",
-      "url": "http://arxiv.org/abs/2609.30186v1"
-    },
     "709e9a493f86896b8c8d58c118a9b3a12b6681cc": {
       "kind": "Blog",
       "sent_at": "2026-10-03T12:07:30.150012",
@@ -948,6 +962,13 @@
       "source": "Supabase Blog",
       "title": "Automate your Supabase backend with Make",
       "url": "https://supabase.com/blog/automate-your-supabase-backend-with-make"
+    },
+    "7c9d21f53ae81412b75612d66d7180faf26f5996": {
+      "kind": "Paper",
+      "sent_at": "2026-11-10T12:08:39.514766",
+      "source": "arXiv",
+      "title": "WorkflowArena: Benchmarking Executable Workflow Orchestration in LLM-Based Multi-Agent Systems",
+      "url": "http://arxiv.org/abs/2611.12856v1"
     },
     "7d0a2e18d7f0fcc299c3f791e9df3e27b75329e7": {
       "kind": "Paper",
@@ -1214,6 +1235,13 @@
       "source": "Anthropic Docs",
       "title": "Anthropic Release Notes",
       "url": "https://docs.anthropic.com/en/release-notes/overview"
+    },
+    "b230bc624112030de21a3a6aae4a9105c16c0f2b": {
+      "kind": "Paper",
+      "sent_at": "2026-11-10T12:08:39.514766",
+      "source": "arXiv",
+      "title": "System Optimizations for Cost-Efficient Agent Harnesses",
+      "url": "http://arxiv.org/abs/2611.12122v1"
     },
     "b2497ef327c882b8bd9a1d0232a1d426aea18683": {
       "kind": "Blog",
@@ -1544,6 +1572,13 @@
       "title": "BM25 is only as good as your tokens",
       "url": "https://neon.com/blog/bm25-is-only-as-good-as-your-tokens"
     },
+    "f9aa0b1978f599bf42151c2b05c8099c3cd44ac6": {
+      "kind": "Blog",
+      "sent_at": "2026-11-10T12:08:39.514766",
+      "source": "Anthropic Docs",
+      "title": "Anthropic Release Notes",
+      "url": "https://docs.anthropic.com/en/release-notes/overview"
+    },
     "fa6d58caca0a3b68f880454140c7138a7e07ad83": {
       "kind": "Blog",
       "sent_at": "2026-10-14T12:05:52.861839",
@@ -1593,6 +1628,7 @@
     "https://blog.cloudflare.com/introducing-web-search-api/": "2026-10-03T12:07:30.150185",
     "https://blog.cloudflare.com/k-isms/": "2026-10-23T12:05:56.559813",
     "https://blog.cloudflare.com/kv-cache-exposure-remediation/": "2026-10-27T12:06:30.845735",
+    "https://blog.cloudflare.com/launching-vite-ecosystem-fund/": "2026-11-10T12:08:39.514895",
     "https://blog.cloudflare.com/obsessive-inference-optimization/": "2026-10-20T12:05:14.915294",
     "https://blog.cloudflare.com/one-observability-platform/": "2026-10-03T12:07:30.150185",
     "https://blog.cloudflare.com/one-year-later-1111-interns/": "2026-10-06T12:06:05.076859",
@@ -1613,7 +1649,6 @@
     "https://blog.cloudflare.com/streamline/": "2026-10-03T12:07:30.150185",
     "https://blog.cloudflare.com/transformers-on-logpush/": "2026-10-13T12:05:28.453427",
     "https://blog.cloudflare.com/trusted-agent-delegation/": "2026-11-06T12:06:07.095449",
-    "https://blog.cloudflare.com/turnstile-spin/": "2026-09-26T12:05:49.135682",
     "https://blog.cloudflare.com/typescript-rust-port/": "2026-10-21T12:07:40.757503",
     "https://blog.cloudflare.com/verified-bots-accountability/": "2026-10-17T12:04:55.267019",
     "https://blog.cloudflare.com/vinext-nextjs-on-vite/": "2026-09-29T12:05:14.873169",
@@ -1624,7 +1659,6 @@
     "https://blog.cloudflare.com/yandex-outage/": "2026-10-15T12:05:43.021804",
     "https://blog.cloudflare.com/zero-wire/": "2026-11-04T12:06:28.376355",
     "https://claude.com/blog/agents-you-can-coach-how-asana-builds-human-agent-teams-with-claude": "2026-09-30T12:05:59.362753",
-    "https://claude.com/blog/build-plugins-for-claude": "2026-09-26T12:05:49.135682",
     "https://claude.com/blog/claude-code-mods": "2026-10-02T12:07:26.758352",
     "https://claude.com/blog/claude-for-government-is-now-generally-available": "2026-10-01T12:06:07.829111",
     "https://claude.com/blog/giving-companies-more-control-over-their-ai-agents-with-nvidia": "2026-09-29T12:05:14.873169",
@@ -1637,9 +1671,11 @@
     "https://openai.com/index/att-legal": "2026-10-22T12:06:09.234476",
     "https://openai.com/index/broad-access-through-consistent-standards": "2026-10-22T12:06:09.234476",
     "https://openai.com/index/building-scientific-understanding-with-academic-communities": "2026-10-27T12:06:30.845735",
+    "https://openai.com/index/chatgpt-enterprise-aws-marketplace": "2026-11-10T12:08:39.514895",
     "https://openai.com/index/chatgpt-expanding-world-of-work": "2026-10-27T12:06:30.845735",
     "https://openai.com/index/cisco-cyber": "2026-11-04T12:06:28.376355",
     "https://openai.com/index/community-safety-report-and-new-protections-for-teens": "2026-10-31T12:06:05.973708",
+    "https://openai.com/index/control-room": "2026-11-10T12:08:39.514895",
     "https://openai.com/index/daybreak-red-aws-govcloud": "2026-11-05T12:06:48.489100",
     "https://openai.com/index/devday-2026-recap": "2026-09-30T12:05:59.362753",
     "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign": "2026-10-01T12:06:07.829111",
@@ -1671,7 +1707,6 @@
     "https://openai.com/index/partnering-with-hacktron": "2026-11-07T12:06:31.489883",
     "https://openai.com/index/pollo-ai": "2026-10-09T12:04:52.188908",
     "https://openai.com/index/practical-guide-building-gpt-6": "2026-10-03T12:07:30.150185",
-    "https://openai.com/index/proaction": "2026-09-26T12:05:49.135682",
     "https://openai.com/index/radisson": "2026-10-08T12:05:55.349500",
     "https://openai.com/index/ropes-gray-ai-diligence": "2026-10-30T12:06:54.945777",
     "https://openai.com/index/scaling-storage-one-billion-users-part-two": "2026-10-24T12:06:33.888920",
@@ -1701,6 +1736,7 @@
     "https://www.anthropic.com/news/genesis-mission-commitment": "2026-10-09T12:04:52.188908",
     "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards": "2026-09-27T12:05:14.092935",
     "https://www.anthropic.com/news/public-benefit-fund": "2026-10-19T12:05:51.076240",
+    "https://www.anthropic.com/news/roadshow-launch": "2026-11-10T12:08:39.514895",
     "https://www.anthropic.com/news/singapore-office-opening": "2026-10-14T12:05:52.861992"
   }
 }
