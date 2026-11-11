@@ -52,7 +52,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "1fff0c097d29",
-      "last_seen_at": "2026-11-10T12:02:23.835155",
+      "last_seen_at": "2026-11-11T12:02:24.959658",
       "title": "Claude Code Overview",
       "updated_at": "2026-10-20T12:05:14.915139"
     },
@@ -180,7 +180,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "9dda4b28be94",
-      "last_seen_at": "2026-11-10T12:02:23.835155",
+      "last_seen_at": "2026-11-11T12:02:24.959658",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-10-22T12:06:09.234325"
     },
@@ -201,6 +201,7 @@
         "Thinking blocks that Claude Fable 5.2 and Claude Mythos 5.2 produce work only in the account that produced them, or in an account linked to it. See Preserved thinking .",
         "We\u2019ve launched fast mode for Claude Fable 5.2 in Messages API requests on the Claude API. Fast mode delivers up to 2.5x higher output tokens per second, at $16 USD per MTok of input and $80 USD per MTok of output. Set speed: \"fast\" on your request, with no beta header.",
         "November 5, 2026 \ue09a",
+        "The Compliance API now includes Security posture data, in beta for Claude Enterprise organizations. The Activity Feed records changes to attestations on the Security posture page in claude.ai Organization settings . The GET /v1/compliance/organizations/{organization_id}/security_posture endpoint returns an organization\u2019s current Security posture results. See Security posture in the Compliance API .",
         "You can now set up an IP allowlist for your organization in the Claude Console, in beta. Requests to covered services from addresses not on your list are refused, which limits where a leaked API key can be used. Add IPv4 and IPv6 addresses or CIDR ranges, up to 1,000 per organization. See IP allowlisting for what\u2019s covered and how to set it up.",
         "You can now sign a member of your Claude Enterprise (claude.ai) organization out of Claude everywhere with the Admin API. This capability is in beta. See the Admin API reference . The member stays in the organization and can sign in again. See Sign a member out everywhere for the beta header and what the request doesn\u2019t end.",
         "November 3, 2026 \ue09a",
@@ -344,13 +345,12 @@
         "Dreams (research preview) now supports Claude Opus 5. See Supported models .",
         "July 24, 2026 \ue09a",
         "We\u2019ve launched Claude Opus 5 ( claude-opus-5 ), a step-change improvement over Claude Opus 4.8. Claude Opus 5 supports a 1M token context window (both the default and the maximum), 128k max output tokens, and thinking on by default, at $5 / $25 USD per MTok, the same pricing as Claude Opus 4.8. It\u2019s available on the Claude API, Claude in Amazon Bedrock , Claude Platform on AWS , Claude Models on Google Cloud (Google managed) , and Claude in Microsoft Foundry . See What\u2019s new in Claude Opus 5 for new features, behavior changes, and migration guidance, and the models overview for complete specs.",
-        "On Claude Opus 5, disabling thinking is allowed only at effort high or below: thinking: {\"type\": \"disabled\"} with effort xhigh or max returns a 400 error, a breaking change from Claude Opus 4.8. See What\u2019s new in Claude Opus 5 .",
-        "Effort is the primary control for steering Claude Opus 5: the model supports the full ladder ( low , medium , high , xhigh , max ), with max for capability-critical work."
+        "On Claude Opus 5, disabling thinking is allowed only at effort high or below: thinking: {\"type\": \"disabled\"} with effort xhigh or max returns a 400 error, a breaking change from Claude Opus 4.8. See What\u2019s new in Claude Opus 5 ."
       ],
-      "content_hash": "bde5f3a3f912",
-      "last_seen_at": "2026-11-10T12:08:39.514766",
+      "content_hash": "4850e250e7a2",
+      "last_seen_at": "2026-11-11T12:06:20.938683",
       "title": "Anthropic Release Notes",
-      "updated_at": "2026-11-10T12:08:39.514766"
+      "updated_at": "2026-11-11T12:06:20.938683"
     }
   },
   "sent": {
@@ -472,6 +472,13 @@
       "source": "arXiv",
       "title": "Agent-R$^2$: Scaling Agents for Realistic Productivity Work via Real-Source Data Synthesis",
       "url": "http://arxiv.org/abs/2611.08219v1"
+    },
+    "1f81bf923bcdc07b0e13463818768ce81337efa6": {
+      "kind": "Blog",
+      "sent_at": "2026-11-11T12:06:20.938683",
+      "source": "OpenAI",
+      "title": "Work at the Frontier: AI\u2019s effect on freelance work",
+      "url": "https://openai.com/index/ai-effect-on-freelance-work"
     },
     "2027720e7c5924096bcd339e0e6c8f2a9a8027bb": {
       "kind": "Blog",
@@ -991,6 +998,13 @@
       "title": "Claude Code regularly sends each background agent\u2019s transcript to its model",
       "url": "https://gist.github.com/flamerix-ai/c3905705cc4205e5de3011fa2e74efce"
     },
+    "7fd70838a81b168b5b7ca7dc8e02e342d54cb03e": {
+      "kind": "Paper",
+      "sent_at": "2026-11-11T12:06:20.938683",
+      "source": "arXiv",
+      "title": "Coding Agent Memory Post-Training II: Unlocking the Memory Potential of Pre-trained File Operations for Long-Horizon Tasks via On-Policy Distillation",
+      "url": "http://arxiv.org/abs/2611.14009v1"
+    },
     "80c2bd488b42af9ddd759fe584bc9c327174cc2d": {
       "kind": "Paper",
       "sent_at": "2026-10-29T12:06:53.602089",
@@ -1033,12 +1047,26 @@
       "title": "We're going to need default hard budget caps on pretty much everything",
       "url": "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/"
     },
+    "85071e0cfc3b1a5eb6caf3b0e616344b5205e30c": {
+      "kind": "Blog",
+      "sent_at": "2026-11-11T12:06:20.938683",
+      "source": "Simon Willison",
+      "title": "Introducing Our Smallest, Most Efficient Model: Muse Ember",
+      "url": "https://simonwillison.net/2026/Nov/10/muse-ember/"
+    },
     "87ac1c0c19dd79d0da0adf7bef0884a06cc542e5": {
       "kind": "Paper",
       "sent_at": "2026-11-05T12:06:48.488963",
       "source": "arXiv",
       "title": "ServerBench: How can your coding agents design specialized LLM serving systems?",
       "url": "http://arxiv.org/abs/2611.06841v1"
+    },
+    "89a590c7f3e9b1378dda23736b745684c745cf70": {
+      "kind": "Blog",
+      "sent_at": "2026-11-11T12:06:20.938683",
+      "source": "Supabase Blog",
+      "title": "Set up Supabase for every Expo environment in one command",
+      "url": "https://supabase.com/blog/set-up-supabase-for-every-expo-environment-in-one-command"
     },
     "8aeda62a83ffd9679139bfa8f29a1b244719faf9": {
       "kind": "Blog",
@@ -1060,6 +1088,13 @@
       "source": "Neon Blog",
       "title": "Neon gives you 100 projects for free, with 1 GB of Postgres storage each",
       "url": "https://neon.com/blog/neon-free-plan-1-gb-per-project"
+    },
+    "909544d2d282b4c443c9ab34fd3d0dbafc11ea4f": {
+      "kind": "Blog",
+      "sent_at": "2026-11-11T12:06:20.938683",
+      "source": "Microsoft Research",
+      "title": "Lazare, veni foras: Reprogramming Dormant Neurons to Backdoor AI Agents",
+      "url": "https://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/"
     },
     "91d47054dbcac54191f89c5e98209a545eb1d853": {
       "kind": "Blog",
@@ -1278,12 +1313,12 @@
       "title": "Claude Duet",
       "url": "https://claude.com/product/claude-duet"
     },
-    "bad7a956d596ed8f19c097a2a667c04f083fc7b3": {
+    "bb2ee5dbe79295ce5d6ae28af5ca23ce16e1c43a": {
       "kind": "Blog",
-      "sent_at": "2026-09-27T12:05:14.092860",
-      "source": "Hacker News",
-      "title": "DeepSeek Elastic Compute (DSec)",
-      "url": "https://arxiv.org/abs/2609.22978"
+      "sent_at": "2026-11-11T12:06:20.938683",
+      "source": "Anthropic Docs",
+      "title": "Anthropic Release Notes",
+      "url": "https://docs.anthropic.com/en/release-notes/overview"
     },
     "bc2e768adaadeff772a71574fb24c9dbad599514": {
       "kind": "Blog",
@@ -1551,6 +1586,13 @@
       "title": "Article: Systemic Approach to Memory, Knowledge, and Context in Agentic AI Architectures",
       "url": "https://www.infoq.com/articles/agentic-ai-context-memory-knowledge/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Architecture-articles"
     },
+    "f3b6599e6a643a27ec42d513574217b8c5f51893": {
+      "kind": "Paper",
+      "sent_at": "2026-11-11T12:06:20.938683",
+      "source": "arXiv",
+      "title": "ReTrace: Distilling Tool-Using Agents into Planner-Free Workflows",
+      "url": "http://arxiv.org/abs/2611.14492v1"
+    },
     "f43e1a8cd9a369a110631c21b247ccc276f5b0d1": {
       "kind": "Blog",
       "sent_at": "2026-10-16T12:05:32.016147",
@@ -1673,6 +1715,7 @@
     "https://openai.com/index/building-scientific-understanding-with-academic-communities": "2026-10-27T12:06:30.845735",
     "https://openai.com/index/chatgpt-enterprise-aws-marketplace": "2026-11-10T12:08:39.514895",
     "https://openai.com/index/chatgpt-expanding-world-of-work": "2026-10-27T12:06:30.845735",
+    "https://openai.com/index/chatgpt-plus-for-veterans": "2026-11-11T12:06:20.938855",
     "https://openai.com/index/cisco-cyber": "2026-11-04T12:06:28.376355",
     "https://openai.com/index/community-safety-report-and-new-protections-for-teens": "2026-10-31T12:06:05.973708",
     "https://openai.com/index/control-room": "2026-11-10T12:08:39.514895",
@@ -1681,9 +1724,11 @@
     "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign": "2026-10-01T12:06:07.829111",
     "https://openai.com/index/eu-text-provenance": "2026-10-06T12:06:05.076859",
     "https://openai.com/index/forward-deployed-engineering-means": "2026-10-23T12:05:56.559813",
+    "https://openai.com/index/gilbert-tobin-sam-nickless": "2026-11-11T12:06:20.938855",
     "https://openai.com/index/greptile-code-review-codex-astra": "2026-10-27T12:06:30.845735",
     "https://openai.com/index/grid-protectors-program": "2026-11-03T12:05:35.152916",
     "https://openai.com/index/heimstaden": "2026-11-03T12:05:35.152916",
+    "https://openai.com/index/helping-caregivers-use-ai-in-everyday-life": "2026-11-11T12:06:20.938855",
     "https://openai.com/index/helping-small-businesses-put-ai-to-work": "2026-10-01T12:06:07.829111",
     "https://openai.com/index/helping-websites-express-ai-training-preferences": "2026-10-31T12:06:05.973708",
     "https://openai.com/index/higgsfield-longer-videos-voice": "2026-10-14T12:05:52.861992",
@@ -1727,14 +1772,11 @@
     "https://www.anthropic.com/news/2026-usage-policy-update": "2026-10-09T12:04:52.188908",
     "https://www.anthropic.com/news/an-update-on-independent-evaluators": "2026-10-16T12:05:32.016399",
     "https://www.anthropic.com/news/announcements": "2026-10-23T12:05:56.559813",
-    "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy": "2026-09-27T12:05:14.092935",
     "https://www.anthropic.com/news/anthropic-cyber-mission": "2026-10-09T12:04:52.188908",
-    "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system": "2026-09-27T12:05:14.092935",
     "https://www.anthropic.com/news/claude-frontier-academy": "2026-10-03T12:07:30.150185",
     "https://www.anthropic.com/news/cyber-verification-program": "2026-10-07T12:06:18.519687",
     "https://www.anthropic.com/news/features": "2026-10-21T12:07:40.757503",
     "https://www.anthropic.com/news/genesis-mission-commitment": "2026-10-09T12:04:52.188908",
-    "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards": "2026-09-27T12:05:14.092935",
     "https://www.anthropic.com/news/public-benefit-fund": "2026-10-19T12:05:51.076240",
     "https://www.anthropic.com/news/roadshow-launch": "2026-11-10T12:08:39.514895",
     "https://www.anthropic.com/news/singapore-office-opening": "2026-10-14T12:05:52.861992"
