@@ -52,7 +52,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "1fff0c097d29",
-      "last_seen_at": "2026-11-11T12:02:24.959658",
+      "last_seen_at": "2026-11-12T12:03:38.622642",
       "title": "Claude Code Overview",
       "updated_at": "2026-10-20T12:05:14.915139"
     },
@@ -180,7 +180,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "9dda4b28be94",
-      "last_seen_at": "2026-11-11T12:02:24.959658",
+      "last_seen_at": "2026-11-12T12:03:38.622642",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-10-22T12:06:09.234325"
     },
@@ -192,13 +192,15 @@
         "For release notes on Claude Apps, see the Release notes for Claude Apps in the Claude Help Center .",
         "For updates to Claude Code, see the complete CHANGELOG.md in the claude-code repository.",
         "November 9, 2026 \ue09a",
-        "We\u2019ve launched Claude Fable 5.2 ( claude-fable-5-2 ), built for demanding reasoning and long-horizon agentic work. Claude Mythos 5.2 ( claude-mythos-5-2 ) offers the same capabilities only to organizations verified through Anthropic\u2019s verification programs, such as the Cyber Verification Program . Both models have a 1M token context window , 128k max output tokens, and always-on adaptive thinking . They cost $8 USD per MTok of input and $40 USD per MTok of output (Claude Fable 5.1 and Claude Mythos 5.1 cost $10 USD per MTok of input and $50 USD per MTok of output). Claude Fable 5.2 is available on the Claude API, Claude Platform on AWS , and Claude Models on Google Cloud (Anthropic managed) . It\u2019s also available on Claude in Amazon Bedrock . It\u2019s also available on Claude Models on Google Cloud (Google managed) . It\u2019s also available on Claude in Microsoft Foundry . See What\u2019s new in Claude Fable 5.2 for API changes and migration guidance. For model-specific prompting patterns, see Prompting Claude Fable 5.2 .",
+        "We\u2019ve launched Claude Fable 5.2 ( claude-fable-5-2 ), built for demanding reasoning and long-horizon agentic work. Claude Mythos 5.2 ( claude-mythos-5-2 ) offers the same capabilities only to organizations verified through Anthropic\u2019s verification programs, such as the Cyber Verification Program . Both models have a 1M token context window , 128k max output tokens, and always-on adaptive thinking . They cost $8 USD per MTok of input and $40 USD per MTok of output (Claude Fable 5.1 and Claude Mythos 5.1 cost $10 USD per MTok of input and $50 USD per MTok of output). Claude Fable 5.2 is available on the Claude API, Amazon Bedrock ( bedrock-runtime ) , Claude Platform on AWS , Claude Models on Google Cloud (Anthropic managed) , Claude Models on Google Cloud (Google managed) , and Claude in Microsoft Foundry . See What\u2019s new in Claude Fable 5.2 for API changes and migration guidance. For model-specific prompting patterns, see Prompting Claude Fable 5.2 .",
         "Claude Fable 5.2 and Claude Mythos 5.2 enforce the prefix check for every account, whatever its age. Claude Fable 5.1 returns the error by default on accounts created on or after August 31, 2026 (see When prefix_mismatch_behavior is unset ). If your code edits the system prompt, tools , or an earlier message and then sends back a Claude Fable 5.2 or Claude Mythos 5.2 thinking block from a later turn, the request returns a 400 error. Before you switch, check whether your code edits the prefix .",
-        "On the Claude API and Claude Models on Google Cloud (Google managed) , a conversation that moves onto Claude Fable 5.2 or Claude Mythos 5.2 keeps the reasoning from other models, including Claude Opus 5.5, Claude Sonnet 5.5, and Claude Haiku 5.5. When the conversation moves the other way, to any other model, including Claude Opus 5.5 and Claude Fable 5.1, the API drops the thinking blocks that Claude Fable 5.2 or Claude Mythos 5.2 produced, and the request still succeeds. See Switching models mid-conversation .",
-        "Claude Fable 5.2 and Claude Mythos 5.2 support computer use through the computer_toolset_20260801 toolset. A request that declares the earlier computer_20251124 tool returns a 400 error on every platform except Amazon Bedrock, where the earlier tool still works . See Migrate from computer_20251124 .",
+        "Claude Fable 5.2 and Claude Mythos 5.2 read other models\u2019 thinking blocks on the Claude API and Claude Models on Google Cloud (Google managed). So on those platforms, a conversation that moves onto either model keeps its reasoning. The other models include Claude Opus 5.5, Claude Sonnet 5.5, and Claude Haiku 5.5.",
+        "No other model reads thinking blocks from Claude Fable 5.2 or Claude Mythos 5.2. When a conversation moves from either one to a model outside this pair, the API drops those blocks. That includes a move to Claude Opus 5.5 or Claude Fable 5.1. The request still succeeds. See Switching models mid-conversation .",
+        "Claude Fable 5.2 and Claude Mythos 5.2 support computer use through the computer_toolset_20260801 toolset. A request that declares the earlier computer_20251124 tool returns a 400 error on every platform except Amazon Bedrock, where the earlier tool still works. See Migrate from computer_20251124 .",
         "With the advisor tool , which is in beta, a Claude Fable 5.2 or Claude Mythos 5.2 executor accepts only Claude Fable 5.2 or Claude Mythos 5.2 as its advisor. Any other advisor returns a 400 error, so set the advisor\u2019s model to one of these two models when you move an executor to them. Every executor model accepts Claude Fable 5.2 as its advisor. See Model compatibility .",
         "Both models require 30-day data retention, like Claude Fable 5.1 and Claude Mythos 5.1. They aren\u2019t available under zero data retention unless expressly authorized by Anthropic. See Model-specific data retention requirements .",
         "Thinking blocks that Claude Fable 5.2 and Claude Mythos 5.2 produce work only in the account that produced them, or in an account linked to it. See Preserved thinking .",
+        "Dreams (research preview) now supports Claude Fable 5.2. See Supported models .",
         "We\u2019ve launched fast mode for Claude Fable 5.2 in Messages API requests on the Claude API. Fast mode delivers up to 2.5x higher output tokens per second, at $16 USD per MTok of input and $80 USD per MTok of output. Set speed: \"fast\" on your request, with no beta header.",
         "November 5, 2026 \ue09a",
         "The Compliance API now includes Security posture data, in beta for Claude Enterprise organizations. The Activity Feed records changes to attestations on the Security posture page in claude.ai Organization settings . The GET /v1/compliance/organizations/{organization_id}/security_posture endpoint returns an organization\u2019s current Security posture results. See Security posture in the Compliance API .",
@@ -294,7 +296,7 @@
         "Version 1.30.0 of the ant CLI adds ant apply , which creates and updates agents, environments, skills, memory stores, and deployments from files in your repository. Describe each resource in a file, run ant apply , and approve the plan it prints. Commit the claude-lock.json lockfile it writes so that later runs, on your machine or in CI, update the same resources instead of creating new ones. See Manage resources as code with ant apply .",
         "Per-message effort changes, in beta, are also available on Google Cloud for Claude Fable 5.1, Claude Mythos 5.1, and Claude Opus 5, with the same mid-conversation-output-config-2026-07-01 beta header.",
         "September 1, 2026 \ue09a",
-        "We\u2019ve launched Claude Fable 5.1 ( claude-fable-5-1 ), the successor to Claude Fable 5 for long-running agentic coding, knowledge work, and research, alongside Claude Mythos 5.1 ( claude-mythos-5-1 ) for Project Glasswing participants. Both models support a 1M token context window by default, 128k max output tokens, and always-on adaptive thinking , at $10 / $50 USD per MTok, the same as Claude Fable 5, with cache reads cut to $0.25 USD per MTok. Claude Fable 5.1 is available on the Claude API, Claude in Amazon Bedrock , Claude Platform on AWS , Claude Models on Google Cloud (Google managed) , and Claude in Microsoft Foundry . See What\u2019s new in Claude Fable 5.1 for capabilities, API changes, and migration guidance.",
+        "We\u2019ve launched Claude Fable 5.1 ( claude-fable-5-1 ), the successor to Claude Fable 5 for long-running agentic coding, knowledge work, and research. For Project Glasswing participants, we\u2019ve also launched Claude Mythos 5.1 ( claude-mythos-5-1 ). Both models support a 1M token context window by default, 128k max output tokens, and always-on adaptive thinking . They cost $10 / $50 USD per MTok, the same as Claude Fable 5, with cache reads cut to $0.25 USD per MTok. Claude Fable 5.1 is available on the Claude API, Claude in Amazon Bedrock , and Claude Platform on AWS . It\u2019s also on Claude Models on Google Cloud (Google managed) and Claude in Microsoft Foundry . See Claude Fable 5.1 for specifications.",
         "Prompt cache reads on Claude Fable 5.1 and Claude Mythos 5.1 cost $0.25 USD per million tokens: 0.025x the base input price, compared with 0.1x on other models. Cache writes are unchanged. See Prompt caching pricing .",
         "On Claude Fable 5.1 and Claude Mythos 5.1, tool_choice types any and tool aren\u2019t supported and return a 400 error. auto and none are unchanged. To guarantee schema-conformant tool inputs, use strict tool use or structured outputs .",
         "Thinking blocks produced by Claude Fable 5.1 and Claude Mythos 5.1 are preserved only for the model that produced them or a newer one: earlier models can\u2019t read them, and the API drops one replayed to an earlier model. Claude Fable 5.1 accepts thinking blocks from Claude Opus 5, Claude Fable 5, Claude Mythos 5, and earlier Claude models. On Claude Fable 5.1, the API also checks that nothing before a block has changed : for new accounts created on or after August 31, 2026, replaying one after the system prompt, tools , or an earlier message changed returns a 400 error. With the thinking-binding-controls-2026-08-01 beta header, dropped blocks are reported in an input_transformations response field, and thinking.block_binding.prefix_mismatch_behavior chooses between rejecting and dropping blocks whose history changed. See Preserved thinking .",
@@ -343,14 +345,12 @@
         "The Compliance API now returns transcripts of Cowork sessions started on claude.ai web or mobile, in beta for Claude Enterprise organizations. GET /v1/compliance/apps/sessions/remote lists sessions and GET /v1/compliance/apps/sessions/remote/{session_id}/messages returns one session\u2019s transcript, using your existing Compliance Access Key with the read:compliance_user_data scope. See Sessions in the cloud .",
         "August 1, 2026 \ue09a",
         "Dreams (research preview) now supports Claude Opus 5. See Supported models .",
-        "July 24, 2026 \ue09a",
-        "We\u2019ve launched Claude Opus 5 ( claude-opus-5 ), a step-change improvement over Claude Opus 4.8. Claude Opus 5 supports a 1M token context window (both the default and the maximum), 128k max output tokens, and thinking on by default, at $5 / $25 USD per MTok, the same pricing as Claude Opus 4.8. It\u2019s available on the Claude API, Claude in Amazon Bedrock , Claude Platform on AWS , Claude Models on Google Cloud (Google managed) , and Claude in Microsoft Foundry . See What\u2019s new in Claude Opus 5 for new features, behavior changes, and migration guidance, and the models overview for complete specs.",
-        "On Claude Opus 5, disabling thinking is allowed only at effort high or below: thinking: {\"type\": \"disabled\"} with effort xhigh or max returns a 400 error, a breaking change from Claude Opus 4.8. See What\u2019s new in Claude Opus 5 ."
+        "July 24, 2026 \ue09a"
       ],
-      "content_hash": "4850e250e7a2",
-      "last_seen_at": "2026-11-11T12:06:20.938683",
+      "content_hash": "e35b73e0da41",
+      "last_seen_at": "2026-11-12T12:07:21.804887",
       "title": "Anthropic Release Notes",
-      "updated_at": "2026-11-11T12:06:20.938683"
+      "updated_at": "2026-11-12T12:07:21.804887"
     }
   },
   "sent": {
@@ -381,6 +381,20 @@
       "source": "Neon Blog",
       "title": "Save tokens with Neon Function templates",
       "url": "https://neon.com/blog/save-tokens-with-neon-function-templates"
+    },
+    "060081fb98181b77bd7c37ed4961dc7b863ff7af": {
+      "kind": "Blog",
+      "sent_at": "2026-11-12T12:07:21.804887",
+      "source": "Anthropic Docs",
+      "title": "Anthropic Release Notes",
+      "url": "https://docs.anthropic.com/en/release-notes/overview"
+    },
+    "0a56c359d125f5a3df4bc10aa526192249dc1635": {
+      "kind": "Blog",
+      "sent_at": "2026-11-12T12:07:21.804887",
+      "source": "Simon Willison",
+      "title": "Gemini Decisions API",
+      "url": "https://simonwillison.net/2026/Nov/11/gemini-decisions-api/"
     },
     "0acb7c8077a09baa0459e72d7550ba84b13ccbfe": {
       "kind": "Blog",
@@ -437,6 +451,13 @@
       "source": "Anthropic Docs",
       "title": "Anthropic Release Notes",
       "url": "https://docs.anthropic.com/en/release-notes/overview"
+    },
+    "14f9a915a419da30d4d1c1ecad5fdbb284803da9": {
+      "kind": "Blog",
+      "sent_at": "2026-11-12T12:07:21.804887",
+      "source": "Martin Fowler",
+      "title": "Tests as data: ensuring AI-generated code does what we want",
+      "url": "https://martinfowler.com/articles/tests-as-data.html"
     },
     "15a230e416118242dc1cd4e6fceee94d08bfca9b": {
       "kind": "Blog",
@@ -599,13 +620,6 @@
       "title": "Claude Code Overview",
       "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
     },
-    "353cc1508e067a06efddac6008df772cea04ebb3": {
-      "kind": "Blog",
-      "sent_at": "2026-09-28T12:04:24.726383",
-      "source": "Simon Willison",
-      "title": "Quoting Muse AI Agent",
-      "url": "https://simonwillison.net/2026/Sep/28/muse-ai-agent/"
-    },
     "35c5362ed62d858c729a0b15576c006d73aaa4ed": {
       "kind": "Blog",
       "sent_at": "2026-10-27T12:06:30.845562",
@@ -627,12 +641,12 @@
       "title": "Inside a Kylon room, where people and agents build apps on Neon",
       "url": "https://neon.com/blog/inside-a-kylon-room-where-people-and-agents-build-apps-on-neon"
     },
-    "3baf7a1c898a0f0ffc41d0f5d5945a800154f702": {
+    "3a7f98b1b47d8df0926c784b1bc7428efadf3cc7": {
       "kind": "Blog",
-      "sent_at": "2026-09-28T12:04:24.726383",
-      "source": "HuggingFace",
-      "title": "Holo4: powering generalist computer-use agents",
-      "url": "https://huggingface.co/blog/Hcompany/holo4"
+      "sent_at": "2026-11-12T12:07:21.804887",
+      "source": "FastAPI Releases",
+      "title": "0.162.5",
+      "url": "https://github.com/fastapi/fastapi/releases/tag/0.162.5"
     },
     "3e403ac1a929e3ffca75df1bc426119c0e9ff90c": {
       "kind": "Paper",
@@ -675,6 +689,13 @@
       "source": "Google DeepMind",
       "title": "Introducing AlphaProof Code: a breakthrough in verifying complex software at depth",
       "url": "https://deepmind.google/blog/introducing-alphaproof-code/"
+    },
+    "4280da3f9a30d22eac46e6557f02382bcff6f042": {
+      "kind": "Blog",
+      "sent_at": "2026-11-12T12:07:21.804887",
+      "source": "InfoQ Architecture News",
+      "title": "JioHotstar Benchmarks Knowledge Bases for AI Coding Agents",
+      "url": "https://www.infoq.com/news/2026/11/jiohotstar-codingagent-retrieval/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Architecture-news"
     },
     "42d5228259a0c6b93ee055a1d642917f74cfe246": {
       "kind": "Blog",
@@ -843,6 +864,13 @@
       "source": "Hacker News",
       "title": "Hybrid Reasoning Agents: LLM agents that think in latent space, act through text",
       "url": "https://arxiv.org/abs/2610.18861"
+    },
+    "5c0e1269e5eef0c50b35b3edfcfcd867ae285a90": {
+      "kind": "Paper",
+      "sent_at": "2026-11-12T12:07:21.804887",
+      "source": "arXiv",
+      "title": "Comparative Analysis of Agent Evaluation Frameworks: Stability, Detection, and Discovery in Enterprise Analytics Agents",
+      "url": "http://arxiv.org/abs/2611.14493v1"
     },
     "5c162f9ed1bf5668ad537f937165aa9a57c73fcd": {
       "kind": "Paper",
@@ -1257,6 +1285,13 @@
       "title": "Fragments: September 29",
       "url": "https://martinfowler.com/fragments/2026-09-29.html"
     },
+    "ac9867319b06a1da26fa8581dfa59269436bd6e4": {
+      "kind": "Paper",
+      "sent_at": "2026-11-12T12:07:21.804887",
+      "source": "arXiv",
+      "title": "EngineAgent: Agentizing On-Device LLM Inference Engines with Inference Stack Hierarchy Awareness and Hardware Abilities",
+      "url": "http://arxiv.org/abs/2611.14356v1"
+    },
     "adc701f32dde5caf11dbbd8d4eba35fae7ec37a9": {
       "kind": "Blog",
       "sent_at": "2026-10-04T12:05:40.601446",
@@ -1530,6 +1565,13 @@
       "title": "Quoting Matthew Green",
       "url": "https://simonwillison.net/2026/Oct/1/matthew-green/"
     },
+    "e548c69024db0f7cd708c5b5a9775eb3882c8b0e": {
+      "kind": "Blog",
+      "sent_at": "2026-11-12T12:07:21.804887",
+      "source": "Simon Willison",
+      "title": "Anthropic's IPO roadshow video",
+      "url": "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow/"
+    },
     "e8582d9acc848573119e9157420f522351d4855e": {
       "kind": "Paper",
       "sent_at": "2026-11-07T12:06:31.489790",
@@ -1650,13 +1692,13 @@
     "https://blog.cloudflare.com/ai-era-framework/": "2026-09-30T12:05:59.362753",
     "https://blog.cloudflare.com/auto-router/": "2026-10-01T12:06:07.829111",
     "https://blog.cloudflare.com/birthday-week-2026-wrap-up/": "2026-10-06T12:06:05.076859",
+    "https://blog.cloudflare.com/choosing-quepaxa/": "2026-11-12T12:07:21.805082",
     "https://blog.cloudflare.com/clairic-extraction-model/": "2026-10-20T12:05:14.915294",
     "https://blog.cloudflare.com/clef-decision-models/": "2026-10-02T12:07:26.758352",
     "https://blog.cloudflare.com/clef-faster-cheaper-multimodal/": "2026-10-10T12:04:47.946949",
     "https://blog.cloudflare.com/cloudflare-certificate-authority/": "2026-09-30T12:05:59.362753",
     "https://blog.cloudflare.com/cloudflare-cf-cli-launch/": "2026-09-29T12:05:14.873169",
     "https://blog.cloudflare.com/cloudflare-openai-discovery-agentic-web/": "2026-10-16T12:05:32.016399",
-    "https://blog.cloudflare.com/cloudflares-2026-annual-founders-letter/": "2026-09-28T12:04:24.726468",
     "https://blog.cloudflare.com/d1-control-plane/": "2026-10-14T12:05:52.861992",
     "https://blog.cloudflare.com/ddos-threat-report-2026-q3/": "2026-10-30T12:06:54.945777",
     "https://blog.cloudflare.com/deno-joins-cloudflare/": "2026-10-10T12:04:47.946949",
@@ -1716,6 +1758,7 @@
     "https://openai.com/index/chatgpt-enterprise-aws-marketplace": "2026-11-10T12:08:39.514895",
     "https://openai.com/index/chatgpt-expanding-world-of-work": "2026-10-27T12:06:30.845735",
     "https://openai.com/index/chatgpt-plus-for-veterans": "2026-11-11T12:06:20.938855",
+    "https://openai.com/index/children-first-declaration": "2026-11-12T12:07:21.805082",
     "https://openai.com/index/cisco-cyber": "2026-11-04T12:06:28.376355",
     "https://openai.com/index/community-safety-report-and-new-protections-for-teens": "2026-10-31T12:06:05.973708",
     "https://openai.com/index/control-room": "2026-11-10T12:08:39.514895",
