@@ -52,7 +52,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "1fff0c097d29",
-      "last_seen_at": "2026-11-12T12:03:38.622642",
+      "last_seen_at": "2026-11-13T12:03:58.216153",
       "title": "Claude Code Overview",
       "updated_at": "2026-10-20T12:05:14.915139"
     },
@@ -180,7 +180,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "9dda4b28be94",
-      "last_seen_at": "2026-11-12T12:03:38.622642",
+      "last_seen_at": "2026-11-13T12:03:58.216153",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-10-22T12:06:09.234325"
     },
@@ -191,6 +191,8 @@
         "The Claude Platform release notes list changes to the Claude API, the client SDKs, and the Claude Console, newest first.",
         "For release notes on Claude Apps, see the Release notes for Claude Apps in the Claude Help Center .",
         "For updates to Claude Code, see the complete CHANGELOG.md in the claude-code repository.",
+        "November 12, 2026 \ue09a",
+        "We\u2019ve launched self-hosted Claude Managed Agents . You run the whole Managed Agents service, not only self-hosted sandboxes , on your own infrastructure, and you store agents, sessions, and session history there. The server sends model requests to the provider that you choose, which is Anthropic by default. To request access, contact your Anthropic account team.",
         "November 9, 2026 \ue09a",
         "We\u2019ve launched Claude Fable 5.2 ( claude-fable-5-2 ), built for demanding reasoning and long-horizon agentic work. Claude Mythos 5.2 ( claude-mythos-5-2 ) offers the same capabilities only to organizations verified through Anthropic\u2019s verification programs, such as the Cyber Verification Program . Both models have a 1M token context window , 128k max output tokens, and always-on adaptive thinking . They cost $8 USD per MTok of input and $40 USD per MTok of output (Claude Fable 5.1 and Claude Mythos 5.1 cost $10 USD per MTok of input and $50 USD per MTok of output). Claude Fable 5.2 is available on the Claude API, Amazon Bedrock ( bedrock-runtime ) , Claude Platform on AWS , Claude Models on Google Cloud (Anthropic managed) , Claude Models on Google Cloud (Google managed) , and Claude in Microsoft Foundry . See What\u2019s new in Claude Fable 5.2 for API changes and migration guidance. For model-specific prompting patterns, see Prompting Claude Fable 5.2 .",
         "Claude Fable 5.2 and Claude Mythos 5.2 enforce the prefix check for every account, whatever its age. Claude Fable 5.1 returns the error by default on accounts created on or after August 31, 2026 (see When prefix_mismatch_behavior is unset ). If your code edits the system prompt, tools , or an earlier message and then sends back a Claude Fable 5.2 or Claude Mythos 5.2 thinking block from a later turn, the request returns a 400 error. Before you switch, check whether your code edits the prefix .",
@@ -343,14 +345,12 @@
         "We\u2019ve retired the Claude Opus 4.1 model ( claude-opus-4-1-20250805 ). All requests to this model on the Claude API will now return an error. We recommend upgrading to Claude Opus 5 . Researchers can request ongoing access through the External Researcher Access Program .",
         "August 3, 2026 \ue09a",
         "The Compliance API now returns transcripts of Cowork sessions started on claude.ai web or mobile, in beta for Claude Enterprise organizations. GET /v1/compliance/apps/sessions/remote lists sessions and GET /v1/compliance/apps/sessions/remote/{session_id}/messages returns one session\u2019s transcript, using your existing Compliance Access Key with the read:compliance_user_data scope. See Sessions in the cloud .",
-        "August 1, 2026 \ue09a",
-        "Dreams (research preview) now supports Claude Opus 5. See Supported models .",
-        "July 24, 2026 \ue09a"
+        "August 1, 2026 \ue09a"
       ],
-      "content_hash": "e35b73e0da41",
-      "last_seen_at": "2026-11-12T12:07:21.804887",
+      "content_hash": "ac3cf6e0299c",
+      "last_seen_at": "2026-11-13T12:07:35.148419",
       "title": "Anthropic Release Notes",
-      "updated_at": "2026-11-12T12:07:21.804887"
+      "updated_at": "2026-11-13T12:07:35.148419"
     }
   },
   "sent": {
@@ -535,13 +535,6 @@
       "source": "arXiv",
       "title": "EMHO: EMbodied Agent Harness Optimization via Experience Traces",
       "url": "http://arxiv.org/abs/2610.08432v1"
-    },
-    "27773c2a878028af0d1abb7d54f9a7234aab811d": {
-      "kind": "Paper",
-      "sent_at": "2026-09-29T12:05:14.873017",
-      "source": "arXiv",
-      "title": "Failure-Transparent Agents: Benchmarking Post-Failure Reporting in Tool-Using Language Models",
-      "url": "http://arxiv.org/abs/2609.35732v1"
     },
     "284177c0015e0342c872734fdae86d57ecbb7ce6": {
       "kind": "Blog",
@@ -802,13 +795,6 @@
       "title": "Donating Agent Skills to the Agentic AI Foundation",
       "url": "https://simonwillison.net/2026/Oct/22/donating-agent-skills/"
     },
-    "53a46e72d8846bcdfe965afd16afb510c6ef736e": {
-      "kind": "Blog",
-      "sent_at": "2026-09-29T12:05:14.873017",
-      "source": "Simon Willison",
-      "title": "Claude Sonnet 5.5",
-      "url": "https://simonwillison.net/2026/Sep/28/claude-sonnet-5-5/"
-    },
     "547ed7897c1dcccc9475ba92e16490573d278a9a": {
       "kind": "Blog",
       "sent_at": "2026-10-23T12:05:56.559584",
@@ -822,6 +808,13 @@
       "source": "Hacker News",
       "title": "Ripple-65B Preview: U.S. Open-Weight SOTA on Agentic Coding",
       "url": "https://www.ricursive.com/ripple"
+    },
+    "551c564b4757c8cb124ee7f033083530b8089977": {
+      "kind": "Paper",
+      "sent_at": "2026-11-13T12:07:35.148419",
+      "source": "arXiv",
+      "title": "Contain, Conform, Compare (Extended Version): A Red-Teamed Evaluation Kit for Small Coding Agents and the Full Record of Its Experiments",
+      "url": "http://arxiv.org/abs/2611.16485v1"
     },
     "558318417ee46fcb4aaa38e7b0dc6a374339d43c": {
       "kind": "Blog",
@@ -878,6 +871,13 @@
       "source": "arXiv",
       "title": "Prefix Executability: Evaluating Tool-Using Agents Beyond Final Success",
       "url": "http://arxiv.org/abs/2610.40444v1"
+    },
+    "610aed789cf47217b8065c9678f1942d0f98846b": {
+      "kind": "Blog",
+      "sent_at": "2026-11-13T12:07:35.148419",
+      "source": "AWS Architecture Blog",
+      "title": "Inside an enterprise AI agent: A governed, observable loop architecture",
+      "url": "https://aws.amazon.com/blogs/architecture/inside-an-enterprise-ai-agent-a-governed-observable-loop-architecture/"
     },
     "63eb904a218ed0fe8953ed3fe613e1b6356c9ee9": {
       "kind": "Blog",
@@ -977,13 +977,6 @@
       "title": "The Thin Orchestrator: How We Made Our AI Agents More Reliable by Giving the Router Less to Do",
       "url": "https://engineering.fb.com/2026/10/19/ml-applications/thin-orchestrator-ai-agent-architecture/"
     },
-    "79c8f3e9a7ab359419ac32f7f6a9bb2878982806": {
-      "kind": "Blog",
-      "sent_at": "2026-09-29T12:05:14.873017",
-      "source": "Hacker News",
-      "title": "The problem is not AI code, but not knowing about system architecture or intent",
-      "url": "https://www.ssp.sh/brain/the-problem-is-not-the-ai-code-but-nobody-knows-anything-anymore/"
-    },
     "7a90eeff233843f01ce4e49ece90c9564cae69fe": {
       "kind": "Paper",
       "sent_at": "2026-10-10T12:04:47.946741",
@@ -1039,13 +1032,6 @@
       "source": "arXiv",
       "title": "Grounding LLM Agents in Business Processes: Process-Aware Knowledge Graphs for Reliable Multi-Step Service Invocation",
       "url": "http://arxiv.org/abs/2610.37242v1"
-    },
-    "80f6d330770553eef7a0e568bc68b2a0dc18866e": {
-      "kind": "Blog",
-      "sent_at": "2026-09-29T12:05:14.873017",
-      "source": "Neon Blog",
-      "title": "Inside branch-based restores in Lakebase Postgres",
-      "url": "https://neon.com/blog/inside-branch-based-restores-in-lakebase-postgres"
     },
     "8103a052b49d49849ef0807d174d73ea409b29bb": {
       "kind": "Paper",
@@ -1138,13 +1124,6 @@
       "title": "Enterprise-managed auth for MCP: Claude can now issue the identity assertion",
       "url": "https://supabase.com/blog/claude-issued-enterprise-managed-auth-for-mcp"
     },
-    "93e526cd5feac8f229510d169c37f3544585b939": {
-      "kind": "Paper",
-      "sent_at": "2026-09-29T12:05:14.873017",
-      "source": "arXiv",
-      "title": "MCP Error Messages Written for Developers Hurt the Most Capable Agents Most",
-      "url": "http://arxiv.org/abs/2609.35381v1"
-    },
     "95a76befb5a5e68059198dbef6c9742ae4497927": {
       "kind": "Blog",
       "sent_at": "2026-11-08T12:08:42.250469",
@@ -1207,6 +1186,13 @@
       "source": "Supabase Blog",
       "title": "Build anything: Supabase from code, and an MCP server for your app",
       "url": "https://supabase.com/blog/select-2026-build-anything"
+    },
+    "a6d72549f3c501930fb40e08bd4782f667af2113": {
+      "kind": "Blog",
+      "sent_at": "2026-11-13T12:07:35.148419",
+      "source": "Neon Blog",
+      "title": "Mubit + Neon AI Gateway: an agent that cuts its own frontier-model tokens by 73%",
+      "url": "https://neon.com/blog/mubit-neon-ai-gateway"
     },
     "a6d7ca69b8b2404f2938879287ac70a0bc4850fe": {
       "kind": "Blog",
@@ -1362,23 +1348,9 @@
       "title": "DeepSeek Harness Desktop for macOS and Windows",
       "url": "https://www.deepseek.com/en/harness/"
     },
-    "bc384e8280d7b02dbfdaa971bf6d9925f2b63aa0": {
-      "kind": "Blog",
-      "sent_at": "2026-09-29T12:05:14.873017",
-      "source": "Hacker News",
-      "title": "Sonnet 5.5",
-      "url": "https://www.anthropic.com/claude-sonnet-5-5"
-    },
     "bd76ea32e318ee2dc9520a8629ea563afe4ecdc4": {
       "kind": "Blog",
       "sent_at": "2026-10-10T12:04:47.946741",
-      "source": "Anthropic Docs",
-      "title": "Anthropic Release Notes",
-      "url": "https://docs.anthropic.com/en/release-notes/overview"
-    },
-    "bef6b6fb4b741f1336f304a4ed0f04f3bbbe74f9": {
-      "kind": "Blog",
-      "sent_at": "2026-09-29T12:05:14.873017",
       "source": "Anthropic Docs",
       "title": "Anthropic Release Notes",
       "url": "https://docs.anthropic.com/en/release-notes/overview"
@@ -1565,6 +1537,13 @@
       "title": "Quoting Matthew Green",
       "url": "https://simonwillison.net/2026/Oct/1/matthew-green/"
     },
+    "dfb615500350f48548ba9e7ad1586ad7820707cc": {
+      "kind": "Blog",
+      "sent_at": "2026-11-13T12:07:35.148419",
+      "source": "Anthropic Docs",
+      "title": "Anthropic Release Notes",
+      "url": "https://docs.anthropic.com/en/release-notes/overview"
+    },
     "e548c69024db0f7cd708c5b5a9775eb3882c8b0e": {
       "kind": "Blog",
       "sent_at": "2026-11-12T12:07:21.804887",
@@ -1697,7 +1676,6 @@
     "https://blog.cloudflare.com/clef-decision-models/": "2026-10-02T12:07:26.758352",
     "https://blog.cloudflare.com/clef-faster-cheaper-multimodal/": "2026-10-10T12:04:47.946949",
     "https://blog.cloudflare.com/cloudflare-certificate-authority/": "2026-09-30T12:05:59.362753",
-    "https://blog.cloudflare.com/cloudflare-cf-cli-launch/": "2026-09-29T12:05:14.873169",
     "https://blog.cloudflare.com/cloudflare-openai-discovery-agentic-web/": "2026-10-16T12:05:32.016399",
     "https://blog.cloudflare.com/d1-control-plane/": "2026-10-14T12:05:52.861992",
     "https://blog.cloudflare.com/ddos-threat-report-2026-q3/": "2026-10-30T12:06:54.945777",
@@ -1707,7 +1685,6 @@
     "https://blog.cloudflare.com/emudhra-certificate-compromise/": "2026-10-21T12:07:40.757503",
     "https://blog.cloudflare.com/emudhra-patching/": "2026-10-31T12:06:05.973708",
     "https://blog.cloudflare.com/full-transaction-waf/": "2026-10-22T12:06:09.234476",
-    "https://blog.cloudflare.com/how-fast-is-the-web/": "2026-09-29T12:05:14.873169",
     "https://blog.cloudflare.com/hyperdrive-mysql/": "2026-10-15T12:05:43.021804",
     "https://blog.cloudflare.com/introducing-web-search-api/": "2026-10-03T12:07:30.150185",
     "https://blog.cloudflare.com/k-isms/": "2026-10-23T12:05:56.559813",
@@ -1735,7 +1712,6 @@
     "https://blog.cloudflare.com/trusted-agent-delegation/": "2026-11-06T12:06:07.095449",
     "https://blog.cloudflare.com/typescript-rust-port/": "2026-10-21T12:07:40.757503",
     "https://blog.cloudflare.com/verified-bots-accountability/": "2026-10-17T12:04:55.267019",
-    "https://blog.cloudflare.com/vinext-nextjs-on-vite/": "2026-09-29T12:05:14.873169",
     "https://blog.cloudflare.com/vole-mole/": "2026-11-07T12:06:31.489883",
     "https://blog.cloudflare.com/webmcp-commerce/": "2026-10-22T12:06:09.234476",
     "https://blog.cloudflare.com/workers-kv-instant/": "2026-10-02T12:07:26.758352",
@@ -1745,7 +1721,6 @@
     "https://claude.com/blog/agents-you-can-coach-how-asana-builds-human-agent-teams-with-claude": "2026-09-30T12:05:59.362753",
     "https://claude.com/blog/claude-code-mods": "2026-10-02T12:07:26.758352",
     "https://claude.com/blog/claude-for-government-is-now-generally-available": "2026-10-01T12:06:07.829111",
-    "https://claude.com/blog/giving-companies-more-control-over-their-ai-agents-with-nvidia": "2026-09-29T12:05:14.873169",
     "https://claude.com/blog/how-anthropics-sales-team-rebuilt-inbound-with-claude-managed-agents": "2026-10-01T12:06:07.829111",
     "https://claude.com/blog/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk": "2026-10-06T12:06:05.076859",
     "https://openai.com/index/accelerating-engineering-for-the-physical-world": "2026-11-04T12:06:28.376355",
@@ -1776,14 +1751,12 @@
     "https://openai.com/index/helping-websites-express-ai-training-preferences": "2026-10-31T12:06:05.973708",
     "https://openai.com/index/higgsfield-longer-videos-voice": "2026-10-14T12:05:52.861992",
     "https://openai.com/index/how-we-detect-frontier-model-misalignment": "2026-10-30T12:06:54.945777",
-    "https://openai.com/index/how-we-will-do-better-for-australia": "2026-09-29T12:05:14.873169",
     "https://openai.com/index/introducing-gpt-6-1-sol": "2026-09-30T12:05:59.362753",
     "https://openai.com/index/introducing-gpt-6-cyber": "2026-11-06T12:06:07.095449",
     "https://openai.com/index/introducing-the-rosalind-academic-plan": "2026-10-16T12:05:32.016399",
     "https://openai.com/index/jump-trading": "2026-10-07T12:06:18.519687",
     "https://openai.com/index/legora": "2026-10-29T12:06:53.602298",
     "https://openai.com/index/legora-agentic-operating-system-for-legal-work": "2026-10-28T12:05:39.312639",
-    "https://openai.com/index/lenfest-ai-collaborative-expansion": "2026-09-29T12:05:14.873169",
     "https://openai.com/index/low-resource-programming-languages": "2026-10-20T12:05:14.915294",
     "https://openai.com/index/new-chatgpt-ads-format-and-measurement": "2026-10-05T12:06:37.956034",
     "https://openai.com/index/openai-models-google-cloud": "2026-10-22T12:06:09.234476",
@@ -1809,7 +1782,6 @@
     "https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic": "2026-10-14T12:05:52.861992",
     "https://openai.com/index/the-future-of-the-firm": "2026-10-29T12:06:53.602298",
     "https://openai.com/index/third-moment-research": "2026-10-15T12:05:43.021804",
-    "https://openai.com/index/towards-safety-cases-for-frontier-ai-training": "2026-09-29T12:05:14.873169",
     "https://openai.com/index/updated-model-spec": "2026-10-30T12:06:54.945777",
     "https://www.anthropic.com/news/2026-us-midterms": "2026-10-15T12:05:43.021804",
     "https://www.anthropic.com/news/2026-usage-policy-update": "2026-10-09T12:04:52.188908",
