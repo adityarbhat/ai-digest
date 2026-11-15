@@ -48,7 +48,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "5da86d346540",
-      "last_seen_at": "2026-11-14T12:06:33.029264",
+      "last_seen_at": "2026-11-15T12:02:28.441746",
       "title": "Claude Code Overview",
       "updated_at": "2026-11-14T12:06:33.029264"
     },
@@ -156,7 +156,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "bcca77a7d335",
-      "last_seen_at": "2026-11-14T12:06:33.029264",
+      "last_seen_at": "2026-11-15T12:02:28.441746",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-11-14T12:06:33.029264"
     },
@@ -324,7 +324,7 @@
         "August 1, 2026"
       ],
       "content_hash": "27eeeb599d5b",
-      "last_seen_at": "2026-11-14T12:06:33.029264",
+      "last_seen_at": "2026-11-15T12:02:28.441746",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-11-14T12:06:33.029264"
     }
@@ -855,26 +855,12 @@
       "title": "Inside an enterprise AI agent: A governed, observable loop architecture",
       "url": "https://aws.amazon.com/blogs/architecture/inside-an-enterprise-ai-agent-a-governed-observable-loop-architecture/"
     },
-    "63eb904a218ed0fe8953ed3fe613e1b6356c9ee9": {
-      "kind": "Blog",
-      "sent_at": "2026-10-01T12:06:07.828924",
-      "source": "InfoQ Architecture Articles",
-      "title": "Article: High Availability Is Not Resilience: Why Cloud Systems Fail When It Matters Most",
-      "url": "https://www.infoq.com/articles/high-availability-not-resilience-cloud/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Architecture-articles"
-    },
     "643889a193d1c8ae1b2a900715bf1a018bcfb811": {
       "kind": "Paper",
       "sent_at": "2026-10-06T12:06:05.076757",
       "source": "arXiv",
       "title": "Can Agent Harnesses and Inference Engines Hear Each Other? The HEAR Protocol for Agentic LLM Serving",
       "url": "http://arxiv.org/abs/2610.06597v1"
-    },
-    "64f2a8db36dd45d23f7f4b248c3f7a8a98ab21eb": {
-      "kind": "Blog",
-      "sent_at": "2026-10-01T12:06:07.828924",
-      "source": "Hacker News",
-      "title": "You said no MCP",
-      "url": "https://earendil.com/posts/you-said-no-mcp/"
     },
     "650f3677c97280f08cd6b847c68e64f626fddf1f": {
       "kind": "Blog",
@@ -896,13 +882,6 @@
       "source": "HuggingFace",
       "title": "Impactful scheduling for GPU clusters",
       "url": "https://huggingface.co/blog/allenai/impactful-scheduling"
-    },
-    "69ac76234a777a99a252d105c0ac91a4afd68737": {
-      "kind": "Blog",
-      "sent_at": "2026-10-01T12:06:07.828924",
-      "source": "Neon Blog",
-      "title": "How we systematically improved our reliability",
-      "url": "https://neon.com/blog/how-we-systematically-improved-our-reliability"
     },
     "6b1143d290f2620e50f377c21a64ea6419d1e808": {
       "kind": "Blog",
@@ -931,6 +910,13 @@
       "source": "Supabase Blog",
       "title": "Operate with confidence",
       "url": "https://supabase.com/blog/select-2026-operate-with-confidence"
+    },
+    "7273402a6919ecd1ada5336022c981aa3602ac3b": {
+      "kind": "Blog",
+      "sent_at": "2026-11-15T12:06:37.980070",
+      "source": "FastAPI Releases",
+      "title": "0.163.0",
+      "url": "https://github.com/fastapi/fastapi/releases/tag/0.163.0"
     },
     "72adaf4a63011cfc4a4622290cbd2564cd9e1e6f": {
       "kind": "Blog",
@@ -1022,6 +1008,13 @@
       "source": "Hacker News",
       "title": "Claude Code sends your email address to websites",
       "url": "https://github.com/anthropics/claude-code/issues/107757"
+    },
+    "81dd8bfcdc4660064f0751b926581e5c78d4b560": {
+      "kind": "Blog",
+      "sent_at": "2026-11-15T12:06:37.980070",
+      "source": "FastAPI Releases",
+      "title": "0.163.1",
+      "url": "https://github.com/fastapi/fastapi/releases/tag/0.163.1"
     },
     "824e0c8b6faed6a8f61c3e1625246f706a56a5a6": {
       "kind": "Blog",
@@ -1394,13 +1387,6 @@
       "title": "Inside GitHub\u2019s new Git storage architecture",
       "url": "https://github.blog/engineering/architecture-optimization/inside-githubs-new-git-storage-architecture/"
     },
-    "cae0046d23792907864d3b31b503dd7a93dc05cc": {
-      "kind": "Blog",
-      "sent_at": "2026-10-01T12:06:07.828924",
-      "source": "Anthropic Docs",
-      "title": "Anthropic Release Notes",
-      "url": "https://docs.anthropic.com/en/release-notes/overview"
-    },
     "cb77998bc27a79ccf167381f35ff06589bace066": {
       "kind": "Blog",
       "sent_at": "2026-10-06T12:06:05.076757",
@@ -1449,6 +1435,13 @@
       "source": "Hacker News",
       "title": "Elevated errors on claude.ai, Claude Code, and platform.claude.com",
       "url": "https://status.claude.com/incidents/nn11wk485zfn"
+    },
+    "d4fa51e41cdb0fb260298051ab19d019183b8fb7": {
+      "kind": "Blog",
+      "sent_at": "2026-11-15T12:06:37.980070",
+      "source": "Render Blog",
+      "title": "Industry November 17, 2026 What does \"production\" mean in the era of agentic development? Shifra Williams",
+      "url": "https://render.com/blog/what-does-production-mean-in-the-era-of-agentic-development"
     },
     "d65ada6f3663348e77f748d1bbaf1773089095ee": {
       "kind": "Blog",
@@ -1512,13 +1505,6 @@
       "source": "OpenAI",
       "title": "Build more responsive apps with the Decisions API",
       "url": "https://openai.com/index/decisions-api"
-    },
-    "def5893ab448a54f570491e1d474728a90e46321": {
-      "kind": "Blog",
-      "sent_at": "2026-10-01T12:06:07.828924",
-      "source": "Simon Willison",
-      "title": "Quoting Matthew Green",
-      "url": "https://simonwillison.net/2026/Oct/1/matthew-green/"
     },
     "dfb615500350f48548ba9e7ad1586ad7820707cc": {
       "kind": "Blog",
@@ -1655,10 +1641,8 @@
     }
   },
   "watchlist_seen": {
-    "https://blog.cloudflare.com/100-million-donations/": "2026-10-01T12:06:07.829111",
     "https://blog.cloudflare.com/adapting-to-ai-penetration-testing-orchestrators/": "2026-11-14T12:06:33.029457",
     "https://blog.cloudflare.com/agentic-security-operations/": "2026-10-08T12:05:55.349500",
-    "https://blog.cloudflare.com/auto-router/": "2026-10-01T12:06:07.829111",
     "https://blog.cloudflare.com/birthday-week-2026-wrap-up/": "2026-10-06T12:06:05.076859",
     "https://blog.cloudflare.com/choosing-quepaxa/": "2026-11-12T12:07:21.805082",
     "https://blog.cloudflare.com/clairic-extraction-model/": "2026-10-20T12:05:14.915294",
@@ -1692,7 +1676,6 @@
     "https://blog.cloudflare.com/protect-your-netscaler-gateway/": "2026-10-20T12:05:14.915294",
     "https://blog.cloudflare.com/q3-2026-internet-disruption-summary/": "2026-10-28T12:05:39.312639",
     "https://blog.cloudflare.com/radar-redesign/": "2026-10-09T12:04:52.188908",
-    "https://blog.cloudflare.com/real-time-issue-detection/": "2026-10-01T12:06:07.829111",
     "https://blog.cloudflare.com/rewinding-the-exponential/": "2026-10-14T12:05:52.861992",
     "https://blog.cloudflare.com/root-ksk-2024-rollover/": "2026-10-07T12:06:18.519687",
     "https://blog.cloudflare.com/sovereign-ai-choice-one-year-later/": "2026-10-02T12:07:26.758352",
@@ -1709,8 +1692,6 @@
     "https://blog.cloudflare.com/yandex-outage/": "2026-10-15T12:05:43.021804",
     "https://blog.cloudflare.com/zero-wire/": "2026-11-04T12:06:28.376355",
     "https://claude.com/blog/claude-code-mods": "2026-10-02T12:07:26.758352",
-    "https://claude.com/blog/claude-for-government-is-now-generally-available": "2026-10-01T12:06:07.829111",
-    "https://claude.com/blog/how-anthropics-sales-team-rebuilt-inbound-with-claude-managed-agents": "2026-10-01T12:06:07.829111",
     "https://claude.com/blog/how-cresta-turned-cx-expertise-into-an-agent-builder-on-the-claude-agent-sdk": "2026-10-06T12:06:05.076859",
     "https://openai.com/index/accelerating-engineering-for-the-physical-world": "2026-11-04T12:06:28.376355",
     "https://openai.com/index/albertsons-reimagining-retail": "2026-10-02T12:07:26.758352",
@@ -1727,7 +1708,6 @@
     "https://openai.com/index/community-safety-report-and-new-protections-for-teens": "2026-10-31T12:06:05.973708",
     "https://openai.com/index/control-room": "2026-11-10T12:08:39.514895",
     "https://openai.com/index/daybreak-red-aws-govcloud": "2026-11-05T12:06:48.489100",
-    "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign": "2026-10-01T12:06:07.829111",
     "https://openai.com/index/eu-text-provenance": "2026-10-06T12:06:05.076859",
     "https://openai.com/index/forward-deployed-engineering-means": "2026-10-23T12:05:56.559813",
     "https://openai.com/index/gilbert-tobin-sam-nickless": "2026-11-11T12:06:20.938855",
@@ -1735,7 +1715,6 @@
     "https://openai.com/index/grid-protectors-program": "2026-11-03T12:05:35.152916",
     "https://openai.com/index/heimstaden": "2026-11-03T12:05:35.152916",
     "https://openai.com/index/helping-caregivers-use-ai-in-everyday-life": "2026-11-11T12:06:20.938855",
-    "https://openai.com/index/helping-small-businesses-put-ai-to-work": "2026-10-01T12:06:07.829111",
     "https://openai.com/index/helping-websites-express-ai-training-preferences": "2026-10-31T12:06:05.973708",
     "https://openai.com/index/higgsfield-longer-videos-voice": "2026-10-14T12:05:52.861992",
     "https://openai.com/index/how-we-detect-frontier-model-misalignment": "2026-10-30T12:06:54.945777",
