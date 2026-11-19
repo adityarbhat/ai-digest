@@ -48,7 +48,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "5da86d346540",
-      "last_seen_at": "2026-11-18T12:01:49.676141",
+      "last_seen_at": "2026-11-19T12:02:05.889438",
       "title": "Claude Code Overview",
       "updated_at": "2026-11-14T12:06:33.029264"
     },
@@ -156,7 +156,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "bcca77a7d335",
-      "last_seen_at": "2026-11-18T12:01:49.676141",
+      "last_seen_at": "2026-11-19T12:02:05.889438",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-11-14T12:06:33.029264"
     },
@@ -324,7 +324,7 @@
         "Inference hooks are now in beta for Claude Enterprise organizations. Point Claude at your organization\u2019s AI security server, and each governed prompt across claude.ai, Cowork, and Claude Code is held for the server\u2019s allow or deny verdict before inference proceeds. Requests are signed, failure handling is configurable, and every denial is recorded in the compliance Activity Feed . See Inference hooks ."
       ],
       "content_hash": "3e07730ca90f",
-      "last_seen_at": "2026-11-18T12:05:35.330150",
+      "last_seen_at": "2026-11-19T12:02:05.889438",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-11-18T12:05:35.330150"
     }
@@ -435,12 +435,26 @@
       "title": "OrioleDB public beta: a Postgres storage engine for update-heavy tables",
       "url": "https://supabase.com/blog/orioledb-public-beta"
     },
+    "16cd912d3052be1fc5460becbb2c15859144023a": {
+      "kind": "Blog",
+      "sent_at": "2026-11-19T12:05:47.608277",
+      "source": "OpenAI",
+      "title": "Managing frontier AI risk: From training to deployment",
+      "url": "https://openai.com/index/managing-frontier-ai-risk"
+    },
     "172b5b6c8ba5ef2d179c7b25bd9dbf2e1d4238f8": {
       "kind": "Paper",
       "sent_at": "2026-10-28T12:05:39.312520",
       "source": "arXiv",
       "title": "Spine: Compiling Subtask Trees into Structured Context for Long-Horizon Coding Agents",
       "url": "http://arxiv.org/abs/2610.37224v1"
+    },
+    "194e0bd2a1ae19d2c38ed43217040fd3552ba192": {
+      "kind": "Blog",
+      "sent_at": "2026-11-19T12:05:47.608277",
+      "source": "FastAPI Releases",
+      "title": "0.165.0",
+      "url": "https://github.com/fastapi/fastapi/releases/tag/0.165.0"
     },
     "1b261e3caa9e6eb439b42c26610a34c28d8b2b84": {
       "kind": "Blog",
@@ -511,13 +525,6 @@
       "source": "Martin Fowler",
       "title": "Deterministic Simulation Testing",
       "url": "https://martinfowler.com/articles/deterministic-simulation-testing.html"
-    },
-    "2e905802dbc570c3a9d6c1f9aee7d0365f12169d": {
-      "kind": "Blog",
-      "sent_at": "2026-10-04T12:05:40.601446",
-      "source": "Hacker News",
-      "title": "Getting the most out of Opus 5.5 in Claude and Claude Code",
-      "url": "https://claude.dev/blog/getting-the-most-out-of-opus-5-5/"
     },
     "2f410fa7dfa2a08d4d8bc4009d87e12954422a59": {
       "kind": "Blog",
@@ -848,6 +855,13 @@
       "title": "TokenEconomizer: Learning from Experience to Make AI Coding Agents More Efficient",
       "url": "https://www.microsoft.com/en-us/research/blog/tokeneconomizer-learning-from-experience-to-make-ai-coding-agents-more-efficient/"
     },
+    "5e8d4aecbfa0e4ab1f683fe4a3fd77c584d6748f": {
+      "kind": "Blog",
+      "sent_at": "2026-11-19T12:05:47.608277",
+      "source": "AWS Architecture Blog",
+      "title": "Resilience testing your agents on Amazon Bedrock AgentCore",
+      "url": "https://aws.amazon.com/blogs/architecture/resilience-testing-your-agents-on-amazon-bedrock-agentcore/"
+    },
     "610aed789cf47217b8065c9678f1942d0f98846b": {
       "kind": "Blog",
       "sent_at": "2026-11-13T12:07:35.148419",
@@ -1009,13 +1023,6 @@
       "title": "How the Claude Code team does code review",
       "url": "https://claude.dev/blog/solving-code-review-at-anthropic/"
     },
-    "84c11c83e20371a942c5ac09cf6ec103b3cdf97a": {
-      "kind": "Blog",
-      "sent_at": "2026-10-04T12:05:40.601446",
-      "source": "Simon Willison",
-      "title": "We're going to need default hard budget caps on pretty much everything",
-      "url": "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/"
-    },
     "85071e0cfc3b1a5eb6caf3b0e616344b5205e30c": {
       "kind": "Blog",
       "sent_at": "2026-11-11T12:06:20.938683",
@@ -1029,6 +1036,13 @@
       "source": "arXiv",
       "title": "ServerBench: How can your coding agents design specialized LLM serving systems?",
       "url": "http://arxiv.org/abs/2611.06841v1"
+    },
+    "88153fc0e6b2b2b9e4c4a25768fcaab36e216a4d": {
+      "kind": "Blog",
+      "sent_at": "2026-11-19T12:05:47.608277",
+      "source": "Meta Engineering",
+      "title": "How Meta Uses AI Agents to Scale ML Innovations Across Ads Ranking Models",
+      "url": "https://engineering.fb.com/2026/11/18/ml-applications/ai-agents-to-scale-ml-innovations-across-ads-ranking-models/"
     },
     "89a590c7f3e9b1378dda23736b745684c745cf70": {
       "kind": "Blog",
@@ -1261,13 +1275,6 @@
       "title": "EngineAgent: Agentizing On-Device LLM Inference Engines with Inference Stack Hierarchy Awareness and Hardware Abilities",
       "url": "http://arxiv.org/abs/2611.14356v1"
     },
-    "adc701f32dde5caf11dbbd8d4eba35fae7ec37a9": {
-      "kind": "Blog",
-      "sent_at": "2026-10-04T12:05:40.601446",
-      "source": "Hacker News",
-      "title": "Agents don't need memory, they need documentation",
-      "url": "https://liao.gg/blog/agents-dont-need-memory"
-    },
     "af93c840445514d7d0bf0e06b305dbf1254e7860": {
       "kind": "Paper",
       "sent_at": "2026-11-14T12:06:33.029264",
@@ -1415,6 +1422,13 @@
       "title": "Hide your slop PR descriptions behind <details><summary>",
       "url": "https://simonwillison.net/2026/Nov/9/details-summary/"
     },
+    "d055cb533e5a1788b284d30018ec62604f967a12": {
+      "kind": "Blog",
+      "sent_at": "2026-11-19T12:05:47.608277",
+      "source": "OpenAI",
+      "title": "Inside the Codex sandbox",
+      "url": "https://openai.com/index/inside-the-codex-sandbox"
+    },
     "d22b147be206bc84069f850bbc003191fc8ebdd0": {
       "kind": "Blog",
       "sent_at": "2026-11-18T12:05:35.330150",
@@ -1478,13 +1492,6 @@
       "title": "Claude Haiku 5.5",
       "url": "https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/"
     },
-    "dafdb2cac5cf3b9167a51a0aa62f85f355a308e6": {
-      "kind": "Blog",
-      "sent_at": "2026-10-04T12:05:40.601446",
-      "source": "HuggingFace",
-      "title": "The Agent Said It Was Done. The Database Disagreed.",
-      "url": "https://huggingface.co/blog/microsoft/thinkingbox"
-    },
     "db4a48d2cee855a48284387239c9e5f746191ebd": {
       "kind": "Blog",
       "sent_at": "2026-10-16T12:05:32.016147",
@@ -1513,12 +1520,26 @@
       "title": "Anthropic Release Notes",
       "url": "https://docs.anthropic.com/en/release-notes/overview"
     },
+    "e04197aaa18b4d60fb38844c7c53583c13c90177": {
+      "kind": "Paper",
+      "sent_at": "2026-11-19T12:05:47.608277",
+      "source": "arXiv",
+      "title": "Probing agent overeagerness in realistic settings with continuation audits",
+      "url": "http://arxiv.org/abs/2611.24491v1"
+    },
     "e364eae4c7cd5b05bd31969c8a3ef1576129e346": {
       "kind": "Blog",
       "sent_at": "2026-11-14T12:06:33.029264",
       "source": "Anthropic Docs",
       "title": "Claude Code Tutorials",
       "url": "https://docs.anthropic.com/en/docs/claude-code/tutorials"
+    },
+    "e41150d271450798ae7b4988f449293896969daa": {
+      "kind": "Blog",
+      "sent_at": "2026-11-19T12:05:47.608277",
+      "source": "OpenAI",
+      "title": "Research acceleration: The jagged frontier",
+      "url": "https://openai.com/index/research-acceleration-jagged-frontier"
     },
     "e548c69024db0f7cd708c5b5a9775eb3882c8b0e": {
       "kind": "Blog",
@@ -1575,6 +1596,13 @@
       "source": "Simon Willison",
       "title": "datasette 1.0a43",
       "url": "https://simonwillison.net/2026/Nov/15/datasette/"
+    },
+    "f25b34049b97bab92b5d5ee27a3ef99674d93ede": {
+      "kind": "Paper",
+      "sent_at": "2026-11-19T12:05:47.608277",
+      "source": "arXiv",
+      "title": "A Capability Framework for Evaluating Agentic AI Platforms in Regulated Enterprises",
+      "url": "http://arxiv.org/abs/2611.24039v1"
     },
     "f2b8562e9d6365a78a64cfd00cab8a9b2014df7d": {
       "kind": "Blog",
@@ -1664,12 +1692,14 @@
     "https://blog.cloudflare.com/emudhra-patching/": "2026-10-31T12:06:05.973708",
     "https://blog.cloudflare.com/full-transaction-waf/": "2026-10-22T12:06:09.234476",
     "https://blog.cloudflare.com/hyperdrive-mysql/": "2026-10-15T12:05:43.021804",
+    "https://blog.cloudflare.com/java4shell-waf-protection/": "2026-11-19T12:05:47.608431",
     "https://blog.cloudflare.com/k-isms/": "2026-10-23T12:05:56.559813",
     "https://blog.cloudflare.com/kitesurf-open-source/": "2026-11-14T12:06:33.029457",
     "https://blog.cloudflare.com/kv-cache-exposure-remediation/": "2026-10-27T12:06:30.845735",
     "https://blog.cloudflare.com/launching-vite-ecosystem-fund/": "2026-11-10T12:08:39.514895",
     "https://blog.cloudflare.com/obsessive-inference-optimization/": "2026-10-20T12:05:14.915294",
     "https://blog.cloudflare.com/one-year-later-1111-interns/": "2026-10-06T12:06:05.076859",
+    "https://blog.cloudflare.com/open-clairic/": "2026-11-19T12:05:47.608431",
     "https://blog.cloudflare.com/origin-range-requests/": "2026-10-24T12:06:33.888920",
     "https://blog.cloudflare.com/personal-agents-visibility-control/": "2026-11-05T12:06:48.489100",
     "https://blog.cloudflare.com/php-ctf/": "2026-10-28T12:05:39.312639",
