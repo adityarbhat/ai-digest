@@ -48,7 +48,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "5da86d346540",
-      "last_seen_at": "2026-11-19T12:02:05.889438",
+      "last_seen_at": "2026-11-20T12:02:10.690935",
       "title": "Claude Code Overview",
       "updated_at": "2026-11-14T12:06:33.029264"
     },
@@ -156,7 +156,7 @@
         "Was this page helpful?"
       ],
       "content_hash": "bcca77a7d335",
-      "last_seen_at": "2026-11-19T12:02:05.889438",
+      "last_seen_at": "2026-11-20T12:02:10.690935",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-11-14T12:06:33.029264"
     },
@@ -324,7 +324,7 @@
         "Inference hooks are now in beta for Claude Enterprise organizations. Point Claude at your organization\u2019s AI security server, and each governed prompt across claude.ai, Cowork, and Claude Code is held for the server\u2019s allow or deny verdict before inference proceeds. Requests are signed, failure handling is configurable, and every denial is recorded in the compliance Activity Feed . See Inference hooks ."
       ],
       "content_hash": "3e07730ca90f",
-      "last_seen_at": "2026-11-19T12:02:05.889438",
+      "last_seen_at": "2026-11-20T12:02:10.690935",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-11-18T12:05:35.330150"
     }
@@ -385,6 +385,13 @@
       "source": "MIT Tech Review",
       "title": "Stop counting tokens, start counting what ships",
       "url": "https://www.technologyreview.com/2026/11/02/1147702/stop-counting-tokens-start-counting-what-ships/"
+    },
+    "0ee5feaa2dd244b519355b66a745c30173cfe7ec": {
+      "kind": "Paper",
+      "sent_at": "2026-11-20T12:06:00.163328",
+      "source": "arXiv",
+      "title": "Validation-driven Deployment of LLM Inference Platforms for Agentic Workloads",
+      "url": "http://arxiv.org/abs/2611.25905v1"
     },
     "1013987e4ae34575181c9280a6dd19cb3cb51f70": {
       "kind": "Blog",
@@ -526,6 +533,13 @@
       "title": "Deterministic Simulation Testing",
       "url": "https://martinfowler.com/articles/deterministic-simulation-testing.html"
     },
+    "2d99014d48076f75261acee8ccddbd2ba7002584": {
+      "kind": "Blog",
+      "sent_at": "2026-11-20T12:06:00.163328",
+      "source": "Neon Blog",
+      "title": "Postgres 19 is out: try it on Neon",
+      "url": "https://neon.com/blog/postgres-19-is-out-try-it-on-neon"
+    },
     "2f410fa7dfa2a08d4d8bc4009d87e12954422a59": {
       "kind": "Blog",
       "sent_at": "2026-10-06T12:06:05.076757",
@@ -602,6 +616,13 @@
       "source": "arXiv",
       "title": "PACT: Plan-Action Consistency Training by Preserving Correct Plans and Repairing Actions in GUI Agents",
       "url": "http://arxiv.org/abs/2611.22591v1"
+    },
+    "397a14fbcc7178b103bb514dbb18f49840b07ec7": {
+      "kind": "Blog",
+      "sent_at": "2026-11-20T12:06:00.163328",
+      "source": "Simon Willison",
+      "title": "PostgreSQL 19 Released",
+      "url": "https://simonwillison.net/2026/Nov/19/postgresql-19/"
     },
     "3a7f98b1b47d8df0926c784b1bc7428efadf3cc7": {
       "kind": "Blog",
@@ -848,6 +869,13 @@
       "title": "Prefix Executability: Evaluating Tool-Using Agents Beyond Final Success",
       "url": "http://arxiv.org/abs/2610.40444v1"
     },
+    "5d36c406dd973f28309956d0cf3993a9a9ee22dc": {
+      "kind": "Blog",
+      "sent_at": "2026-11-20T12:06:00.163328",
+      "source": "Spotify Engineering",
+      "title": "When Can You Ship on Offline Evals Alone?",
+      "url": "https://engineering.atspotify.com/2026/11/when-can-you-ship-on-offline-evals-alone/"
+    },
     "5e81aa07cdc77e960e5265422db328536118b927": {
       "kind": "Blog",
       "sent_at": "2026-11-17T12:05:42.137553",
@@ -868,6 +896,13 @@
       "source": "AWS Architecture Blog",
       "title": "Inside an enterprise AI agent: A governed, observable loop architecture",
       "url": "https://aws.amazon.com/blogs/architecture/inside-an-enterprise-ai-agent-a-governed-observable-loop-architecture/"
+    },
+    "6321c7fbb2e0d61eaea0a99b107b48cb87911643": {
+      "kind": "Blog",
+      "sent_at": "2026-11-20T12:06:00.163328",
+      "source": "OpenAI",
+      "title": "How OpenAI\u2019s Performance Factory keeps ChatGPT fast",
+      "url": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast"
     },
     "643889a193d1c8ae1b2a900715bf1a018bcfb811": {
       "kind": "Paper",
@@ -1043,6 +1078,13 @@
       "source": "Meta Engineering",
       "title": "How Meta Uses AI Agents to Scale ML Innovations Across Ads Ranking Models",
       "url": "https://engineering.fb.com/2026/11/18/ml-applications/ai-agents-to-scale-ml-innovations-across-ads-ranking-models/"
+    },
+    "885e17d0ac631345a3f43da2cd1d58c65ac60812": {
+      "kind": "Paper",
+      "sent_at": "2026-11-20T12:06:00.163328",
+      "source": "arXiv",
+      "title": "Characterizing and Detecting Unfaithful Work Reports by Coding Agents",
+      "url": "http://arxiv.org/abs/2611.25760v1"
     },
     "89a590c7f3e9b1378dda23736b745684c745cf70": {
       "kind": "Blog",
@@ -1429,6 +1471,13 @@
       "title": "Inside the Codex sandbox",
       "url": "https://openai.com/index/inside-the-codex-sandbox"
     },
+    "d1fe178cf91a8cdebfab4c80a0146b1353c26e89": {
+      "kind": "Blog",
+      "sent_at": "2026-11-20T12:06:00.163328",
+      "source": "Neon Blog",
+      "title": "The Neon Terraform provider is now official",
+      "url": "https://neon.com/blog/official-neon-terraform-provider"
+    },
     "d22b147be206bc84069f850bbc003191fc8ebdd0": {
       "kind": "Blog",
       "sent_at": "2026-11-18T12:05:35.330150",
@@ -1692,11 +1741,13 @@
     "https://blog.cloudflare.com/emudhra-patching/": "2026-10-31T12:06:05.973708",
     "https://blog.cloudflare.com/full-transaction-waf/": "2026-10-22T12:06:09.234476",
     "https://blog.cloudflare.com/hyperdrive-mysql/": "2026-10-15T12:05:43.021804",
+    "https://blog.cloudflare.com/internet-traffic-2026-us-election/": "2026-11-20T12:06:00.163486",
     "https://blog.cloudflare.com/java4shell-waf-protection/": "2026-11-19T12:05:47.608431",
     "https://blog.cloudflare.com/k-isms/": "2026-10-23T12:05:56.559813",
     "https://blog.cloudflare.com/kitesurf-open-source/": "2026-11-14T12:06:33.029457",
     "https://blog.cloudflare.com/kv-cache-exposure-remediation/": "2026-10-27T12:06:30.845735",
     "https://blog.cloudflare.com/launching-vite-ecosystem-fund/": "2026-11-10T12:08:39.514895",
+    "https://blog.cloudflare.com/nginx2root/": "2026-11-20T12:06:00.163486",
     "https://blog.cloudflare.com/obsessive-inference-optimization/": "2026-10-20T12:05:14.915294",
     "https://blog.cloudflare.com/one-year-later-1111-interns/": "2026-10-06T12:06:05.076859",
     "https://blog.cloudflare.com/open-clairic/": "2026-11-19T12:05:47.608431",
@@ -1759,7 +1810,6 @@
     "https://openai.com/index/legora-agentic-operating-system-for-legal-work": "2026-10-28T12:05:39.312639",
     "https://openai.com/index/low-resource-programming-languages": "2026-10-20T12:05:14.915294",
     "https://openai.com/index/lvmh-media-division-partnership": "2026-11-16T12:05:47.751347",
-    "https://openai.com/index/new-chatgpt-ads-format-and-measurement": "2026-10-05T12:06:37.956034",
     "https://openai.com/index/openai-models-google-cloud": "2026-10-22T12:06:09.234476",
     "https://openai.com/index/openai-nask-ai-safety-security-partnership": "2026-10-23T12:05:56.559813",
     "https://openai.com/index/openai-servicenow-partnership-expansion": "2026-10-29T12:06:53.602298",
