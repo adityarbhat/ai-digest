@@ -47,7 +47,7 @@
         "code.claude.com : demos, pricing, and product details"
       ],
       "content_hash": "a2e9c36b7b64",
-      "last_seen_at": "2026-11-22T12:05:23.989634",
+      "last_seen_at": "2026-11-23T12:03:17.701148",
       "title": "Claude Code Overview",
       "updated_at": "2026-11-22T12:05:23.989634"
     },
@@ -154,7 +154,7 @@
         "Extend Claude Code"
       ],
       "content_hash": "1a3e7cce140b",
-      "last_seen_at": "2026-11-22T12:05:23.989634",
+      "last_seen_at": "2026-11-23T12:03:17.701148",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-11-22T12:05:23.989634"
     },
@@ -322,7 +322,7 @@
         "August 5, 2026"
       ],
       "content_hash": "cc12b8355e91",
-      "last_seen_at": "2026-11-22T12:05:23.989634",
+      "last_seen_at": "2026-11-23T12:03:17.701148",
       "title": "Anthropic Release Notes",
       "updated_at": "2026-11-22T12:05:23.989634"
     },
@@ -352,7 +352,7 @@
         "ChatGPT Capabilities"
       ],
       "content_hash": "e9db8f6057f2",
-      "last_seen_at": "2026-11-22T12:02:10.615943",
+      "last_seen_at": "2026-11-23T12:03:17.701148",
       "title": "Prompt engineering best practices for ChatGPT",
       "updated_at": null
     },
@@ -495,7 +495,7 @@
         "Restart Codex after updating your configuration. The project-level trust_level = \"untrusted\" setting is separate and remains supported."
       ],
       "content_hash": "94170915c1b9",
-      "last_seen_at": "2026-11-22T12:02:10.615943",
+      "last_seen_at": "2026-11-23T12:03:17.701148",
       "title": "Using Codex with your ChatGPT plan",
       "updated_at": null
     },
@@ -663,7 +663,7 @@
         "Organize your work in ChatGPT Space"
       ],
       "content_hash": "88e335115945",
-      "last_seen_at": "2026-11-22T12:02:10.615943",
+      "last_seen_at": "2026-11-23T12:03:17.701148",
       "title": "ChatGPT Release Notes",
       "updated_at": null
     },
@@ -702,7 +702,7 @@
         "Join OpenAI Academy today"
       ],
       "content_hash": "b0fd7b7f54e5",
-      "last_seen_at": "2026-11-22T12:02:10.615943",
+      "last_seen_at": "2026-11-23T12:03:17.701148",
       "title": "Codex Academy",
       "updated_at": null
     },
@@ -750,7 +750,7 @@
         "Start building with Codex"
       ],
       "content_hash": "5f1b0267fbb3",
-      "last_seen_at": "2026-11-22T12:02:10.615943",
+      "last_seen_at": "2026-11-23T12:03:17.701148",
       "title": "Codex Overview",
       "updated_at": null
     }
@@ -910,13 +910,6 @@
       "title": "Work at the Frontier: AI\u2019s effect on freelance work",
       "url": "https://openai.com/index/ai-effect-on-freelance-work"
     },
-    "2027720e7c5924096bcd339e0e6c8f2a9a8027bb": {
-      "kind": "Blog",
-      "sent_at": "2026-10-08T12:05:55.349327",
-      "source": "Microsoft Research",
-      "title": "Agent Lightning v1.0: A 3,500-Line Lightweight Agentic RL Framework for Training Agents with Real Harnesses",
-      "url": "https://www.microsoft.com/en-us/research/blog/agent-lightning-v1-0-a-3500-line-lightweight-agentic-rl-framework-for-training-agents-with-real-harnesses/"
-    },
     "2075f47fc4b33e42b2069078b0cf9b4e991e2632": {
       "kind": "Blog",
       "sent_at": "2026-10-30T12:06:54.945631",
@@ -1015,13 +1008,6 @@
       "title": "Anthropic S-1",
       "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm"
     },
-    "3739c75d42509e077724db82d15840bb8a29d4ce": {
-      "kind": "Blog",
-      "sent_at": "2026-10-09T12:04:52.188794",
-      "source": "Anthropic Docs",
-      "title": "Claude Code Tutorials",
-      "url": "https://docs.anthropic.com/en/docs/claude-code/tutorials"
-    },
     "373c98c92701ec31ed34d877aad77ab1a1355d39": {
       "kind": "Blog",
       "sent_at": "2026-11-05T12:06:48.488963",
@@ -1105,13 +1091,6 @@
       "source": "Hacker News",
       "title": "Node2Shell evolves to HTTP2Shell, blast radius affects many HTTP libs and apps",
       "url": "https://www.aikido.dev/blog/python-packages-vulnerable-node2shell-brotli-cve-2026-111497"
-    },
-    "4304f4222b60b9ef71816e4b547950784d5e836a": {
-      "kind": "Blog",
-      "sent_at": "2026-10-09T12:04:52.188794",
-      "source": "FastAPI Releases",
-      "title": "0.143.0",
-      "url": "https://github.com/fastapi/fastapi/releases/tag/0.143.0"
     },
     "43a9e67846c685840fd932d579b138fcd20a5474": {
       "kind": "Blog",
@@ -1351,13 +1330,6 @@
       "title": "Impactful scheduling for GPU clusters",
       "url": "https://huggingface.co/blog/allenai/impactful-scheduling"
     },
-    "6b1143d290f2620e50f377c21a64ea6419d1e808": {
-      "kind": "Blog",
-      "sent_at": "2026-10-09T12:04:52.188794",
-      "source": "Hacker News",
-      "title": "Why isn't the industry freaking out about DeepSeek 4.1 Flash?",
-      "url": "https://www.dgt.is/blog/2026-10-07-deepseek-freek-out/"
-    },
     "6f6a5bb44f5799f8c5c65b29c152d60d830e0466": {
       "kind": "Blog",
       "sent_at": "2026-10-16T12:05:32.016147",
@@ -1441,13 +1413,6 @@
       "source": "arXiv",
       "title": "Grounding LLM Agents in Business Processes: Process-Aware Knowledge Graphs for Reliable Multi-Step Service Invocation",
       "url": "http://arxiv.org/abs/2610.37242v1"
-    },
-    "8103a052b49d49849ef0807d174d73ea409b29bb": {
-      "kind": "Paper",
-      "sent_at": "2026-10-08T12:05:55.349327",
-      "source": "arXiv",
-      "title": "CoTrace: Data Recipes for Training Terminal Agents with Harness-Model Co-Evolution",
-      "url": "http://arxiv.org/abs/2610.10426v1"
     },
     "819229fc61c9721967cbaca99e3b87a4711e2ad8": {
       "kind": "Blog",
@@ -1771,13 +1736,6 @@
       "title": "0.162.6",
       "url": "https://github.com/fastapi/fastapi/releases/tag/0.162.6"
     },
-    "b30c2a0cf81e33ace9baf987d59974a45f2cd0ae": {
-      "kind": "Blog",
-      "sent_at": "2026-10-08T12:05:55.349327",
-      "source": "Anthropic Docs",
-      "title": "Anthropic Release Notes",
-      "url": "https://docs.anthropic.com/en/release-notes/overview"
-    },
     "b4ce2b5805629a7cc93c5b60071c0b90d1ba2115": {
       "kind": "Blog",
       "sent_at": "2026-11-07T12:06:31.489790",
@@ -1953,13 +1911,6 @@
       "title": "Article: AI Changes the Data Interface, Not the Query Engine",
       "url": "https://www.infoq.com/articles/ai-changes-data-interface/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Architecture-articles"
     },
-    "da31a175863d9ab04aab84e98d0402fcc2328acd": {
-      "kind": "Blog",
-      "sent_at": "2026-10-08T12:05:55.349327",
-      "source": "Simon Willison",
-      "title": "Claude Haiku 5.5",
-      "url": "https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/"
-    },
     "db4a48d2cee855a48284387239c9e5f746191ebd": {
       "kind": "Blog",
       "sent_at": "2026-10-16T12:05:32.016147",
@@ -2107,13 +2058,6 @@
       "title": "Anthropic Release Notes",
       "url": "https://docs.anthropic.com/en/release-notes/overview"
     },
-    "f57bc353ab713d67c9f816b63bc061a9296b2e35": {
-      "kind": "Blog",
-      "sent_at": "2026-10-08T12:05:55.349327",
-      "source": "Neon Blog",
-      "title": "BM25 is only as good as your tokens",
-      "url": "https://neon.com/blog/bm25-is-only-as-good-as-your-tokens"
-    },
     "f9aa0b1978f599bf42151c2b05c8099c3cd44ac6": {
       "kind": "Blog",
       "sent_at": "2026-11-10T12:08:39.514766",
@@ -2145,7 +2089,6 @@
   },
   "watchlist_seen": {
     "https://blog.cloudflare.com/adapting-to-ai-penetration-testing-orchestrators/": "2026-11-14T12:06:33.029457",
-    "https://blog.cloudflare.com/agentic-security-operations/": "2026-10-08T12:05:55.349500",
     "https://blog.cloudflare.com/choosing-quepaxa/": "2026-11-12T12:07:21.805082",
     "https://blog.cloudflare.com/clairic-extraction-model/": "2026-10-20T12:05:14.915294",
     "https://blog.cloudflare.com/clef-faster-cheaper-multimodal/": "2026-10-10T12:04:47.946949",
@@ -2179,7 +2122,6 @@
     "https://blog.cloudflare.com/protect-your-netscaler-gateway/": "2026-10-20T12:05:14.915294",
     "https://blog.cloudflare.com/q3-2026-internet-disruption-summary/": "2026-10-28T12:05:39.312639",
     "https://blog.cloudflare.com/quad9-withdrawal-from-france/": "2026-11-18T12:05:35.330310",
-    "https://blog.cloudflare.com/radar-redesign/": "2026-10-09T12:04:52.188908",
     "https://blog.cloudflare.com/rewinding-the-exponential/": "2026-10-14T12:05:52.861992",
     "https://blog.cloudflare.com/ruby2shell-waf-protection/": "2026-11-21T12:06:14.463281",
     "https://blog.cloudflare.com/spend-management/": "2026-11-14T12:06:33.029457",
@@ -2230,17 +2172,13 @@
     "https://openai.com/index/openai-nask-ai-safety-security-partnership": "2026-10-23T12:05:56.559813",
     "https://openai.com/index/openai-servicenow-partnership-expansion": "2026-10-29T12:06:53.602298",
     "https://openai.com/index/openai-to-acquire-pierre": "2026-11-05T12:06:48.489100",
-    "https://openai.com/index/oracle": "2026-10-09T12:04:52.188908",
     "https://openai.com/index/oracle-apps-in-chatgpt": "2026-10-28T12:05:39.312639",
     "https://openai.com/index/partnering-with-hacktron": "2026-11-07T12:06:31.489883",
-    "https://openai.com/index/pollo-ai": "2026-10-09T12:04:52.188908",
-    "https://openai.com/index/radisson": "2026-10-08T12:05:55.349500",
     "https://openai.com/index/ropes-gray-ai-diligence": "2026-10-30T12:06:54.945777",
     "https://openai.com/index/scaling-storage-one-billion-users-part-two": "2026-10-24T12:06:33.888920",
     "https://openai.com/index/securing-our-frontier-model-training-environment": "2026-10-24T12:06:33.888920",
     "https://openai.com/index/sentinelone": "2026-10-15T12:05:43.021804",
     "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure": "2026-11-05T12:06:48.489100",
-    "https://openai.com/index/sophos": "2026-10-09T12:04:52.188908",
     "https://openai.com/index/step-toward-defining-the-standard-model": "2026-11-16T12:05:47.751347",
     "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai": "2026-11-17T12:05:42.137677",
     "https://openai.com/index/strengthening-online-child-safety": "2026-11-17T12:05:42.137677",
@@ -2252,12 +2190,9 @@
     "https://openai.com/index/third-moment-research": "2026-10-15T12:05:43.021804",
     "https://openai.com/index/updated-model-spec": "2026-10-30T12:06:54.945777",
     "https://www.anthropic.com/news/2026-us-midterms": "2026-10-15T12:05:43.021804",
-    "https://www.anthropic.com/news/2026-usage-policy-update": "2026-10-09T12:04:52.188908",
     "https://www.anthropic.com/news/an-update-on-independent-evaluators": "2026-10-16T12:05:32.016399",
     "https://www.anthropic.com/news/announcements": "2026-10-23T12:05:56.559813",
-    "https://www.anthropic.com/news/anthropic-cyber-mission": "2026-10-09T12:04:52.188908",
     "https://www.anthropic.com/news/features": "2026-10-21T12:07:40.757503",
-    "https://www.anthropic.com/news/genesis-mission-commitment": "2026-10-09T12:04:52.188908",
     "https://www.anthropic.com/news/public-benefit-fund": "2026-10-19T12:05:51.076240",
     "https://www.anthropic.com/news/roadshow-launch": "2026-11-10T12:08:39.514895",
     "https://www.anthropic.com/news/singapore-office-opening": "2026-10-14T12:05:52.861992"
