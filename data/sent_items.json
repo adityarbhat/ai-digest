@@ -47,7 +47,7 @@
         "code.claude.com : demos, pricing, and product details"
       ],
       "content_hash": "a2e9c36b7b64",
-      "last_seen_at": "2026-11-23T12:03:17.701148",
+      "last_seen_at": "2026-11-24T12:02:37.490078",
       "title": "Claude Code Overview",
       "updated_at": "2026-11-22T12:05:23.989634"
     },
@@ -154,7 +154,7 @@
         "Extend Claude Code"
       ],
       "content_hash": "1a3e7cce140b",
-      "last_seen_at": "2026-11-23T12:03:17.701148",
+      "last_seen_at": "2026-11-24T12:02:37.490078",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-11-22T12:05:23.989634"
     },
@@ -165,6 +165,10 @@
         "The Claude Platform release notes list changes to the Claude API, the client SDKs, and the Claude Console, newest first.",
         "For release notes on Claude Apps, see the Release notes for Claude Apps in the Claude Help Center .",
         "For updates to Claude Code, see the complete CHANGELOG.md in the claude-code repository.",
+        "November 23, 2026",
+        "We announced the deprecation of the Claude Opus 4.5 model ( claude-opus-4-5-20251101 and claude-opus-4-5 ), with retirement on the Claude API scheduled for January 22, 2027. We recommend migrating to Claude Opus 5.5. See Migrating from Claude Opus 4.5 or earlier . To check which dates apply on other platforms, see Model deprecations .",
+        "We\u2019ve launched Enterprise Frontier Safeguards (EFS) in beta on Claude Platform , Claude Platform on AWS , and Claude Models on Google Cloud (Anthropic managed) . EFS is Zero Data Retention (ZDR) for eligible organizations that use Claude\u2019s most capable models . Anthropic doesn\u2019t retain your prompts and responses. Encrypted copies of them, called Sealed Safety Data, go to a bucket in your own cloud account. A workspace on Anthropic-managed storage isn\u2019t on EFS, because Anthropic stores that workspace\u2019s Sealed Safety Data. To get access, see Setup guide .",
+        "We\u2019ve added two event types to organization webhooks , which are in beta. We send external_storage.failed when a bucket that you use as customer-owned storage fails our daily check, and external_storage.recovered when it passes again.",
         "November 17, 2026",
         "We\u2019ve launched Linked billing in beta with the user-profiles-billing-2026-10-01 beta header. Your customers can now pay for the Claude usage in your app through their own Claude organization. Once a customer links their organization, set billing_policy on each /v1/messages or /v1/chat/completions request to choose who pays. In the Claude Console, customers can set a spend cap for your app or unlink your app. Linked billing works for customers whose organization pays Anthropic directly for API usage.",
         "November 16, 2026",
@@ -315,16 +319,12 @@
         "August 10, 2026",
         "The introductory pricing for Claude Sonnet 5 ($2 / $10 USD per MTok) is now the standard price: the previously scheduled increase to $3 / $15 USD per MTok on September 1, 2026, will not occur. See Pricing .",
         "August 7, 2026",
-        "You can now set a budget on a Claude Managed Agents session: a hard cap on the session\u2019s spend, priced at public list rates. A session that reaches its budget pauses with the budget_reached stop reason instead of starting new model requests; changing or removing the budget resumes it. Deployments accept the same budget and apply it to each session they start. See Session budgets .",
-        "You can now give a Claude Managed Agents session an advisor: a model at least as capable as the agent\u2019s own that the session\u2019s primary thread can consult mid-turn for strategic guidance. Configure it as a {\"type\": \"advisor\"} entry in the agent\u2019s multiagent roster, naming the model to consult. See Give the session an advisor .",
-        "You can now control where model inference runs for a Claude Managed Agents agent. Set inference_geo inside the model object when you create the agent (see Pin the inference geo ), or override it for a single session . See Data residency for the available geos and pricing.",
-        "Claude Managed Agents sessions can now load skills from a GitHub repository . When a session mounts a repository , any skills in its root .claude/skills directory are discovered automatically at session start and available to the agent for that session.",
-        "August 5, 2026"
+        "You can now set a budget on a Claude Managed Agents session: a hard cap on the session\u2019s spend, priced at public list rates. A session that reaches its budget pauses with the budget_reached stop reason instead of starting new model requests; changing or removing the budget resumes it. Deployments accept the same budget and apply it to each session they start. See Session budgets ."
       ],
-      "content_hash": "cc12b8355e91",
-      "last_seen_at": "2026-11-23T12:03:17.701148",
+      "content_hash": "cbfed72a25df",
+      "last_seen_at": "2026-11-24T12:06:40.394765",
       "title": "Anthropic Release Notes",
-      "updated_at": "2026-11-22T12:05:23.989634"
+      "updated_at": "2026-11-24T12:06:40.394765"
     },
     "https://help.openai.com/en/articles/10032626-prompt-engineering-best-practices-for-chatgpt": {
       "blocks": [
@@ -352,7 +352,7 @@
         "ChatGPT Capabilities"
       ],
       "content_hash": "e9db8f6057f2",
-      "last_seen_at": "2026-11-23T12:03:17.701148",
+      "last_seen_at": "2026-11-24T12:02:37.490078",
       "title": "Prompt engineering best practices for ChatGPT",
       "updated_at": null
     },
@@ -495,7 +495,7 @@
         "Restart Codex after updating your configuration. The project-level trust_level = \"untrusted\" setting is separate and remains supported."
       ],
       "content_hash": "94170915c1b9",
-      "last_seen_at": "2026-11-23T12:03:17.701148",
+      "last_seen_at": "2026-11-24T12:02:37.490078",
       "title": "Using Codex with your ChatGPT plan",
       "updated_at": null
     },
@@ -503,6 +503,19 @@
       "blocks": [
         "ChatGPT release notes",
         "Review the latest updates and release notes for ChatGPT.",
+        "November 23, 2026",
+        "GPT-6.2, now in the chat tab",
+        "We\u2019re rolling out a version of GPT-6.2, optimized for the chat tab, for Plus, Pro, Business and Enterprise tiers. It\u2019s better at handling more complex requests that involve following detailed instructions or finding information online. If you\u2019re comparing hotels for a weekend trip, it can help you weigh trade-offs like price and location and recommend the one that best fits your priorities.",
+        "It\u2019s also better at knowing when to follow up. For example, if you ask whether something is on sale, ChatGPT can offer to let you know when the price drops.",
+        "Better at understanding images and following instructions",
+        "GPT\u20116.2 is better at answering questions about the images you share. In our tests in the Chat tab, it scored 71.7% on image understanding, up from 47.4% for GPT\u20116.",
+        "On especially challenging prompts, GPT-6.2 followed instructions 78.1% of the time, up from 62.5% for GPT-6.",
+        "At the lowest reasoning setting we tested, GPT\u20116.2 scored 65% on an internal evaluation of expert-level tasks, up from 52% for GPT\u20116.",
+        "GPT\u20116.2 was also better at finding answers to difficult questions on the web. On an internal version of BrowseComp, it outperformed GPT\u20116 at all four reasoning settings. At Extra high, GPT\u20116.2 scored about 10 percentage points higher (64.5% vs. 54.4%).",
+        "Deploying GPT-6.2 safely",
+        "GPT\u20116.2 shows significantly improved performance on our teen safety evaluations, with the largest gains in emotional reliance, disordered eating, and age-restricted goods, services, and dangerous activities. In evaluations of policy compliance in challenging conversations, responses met our safety policies 91\u201394% of the time, up from 77\u201380% for GPT\u20116. Read more in our system card .",
+        "Availability",
+        "GPT\u20116.2 starts rolling out globally to ChatGPT Plus, Pro, Business and Enterprise tiers today in the Chat tab. Enterprise availability depends on workplace admin settings. GPT\u20116.2 in ChatGPT is powered by a version of GPT\u20116.2 Sol for Plus, Pro, Business, and Enterprise tiers, and is tuned for everyday conversation. This update applies to the Chat experience in ChatGPT. The models powering Work and Codex are not changing as part of this release.",
         "November 20, 2026",
         "ChatGPT Space is rolling out to Plus",
         "Starting today, ChatGPT Space is rolling out globally to Plus users ages 18 and older. In Space, you can create interactive pages and presentations with ChatGPT, then invite other people with Space access to build on them with you. You can also set pages and slides to automatically update based on your connected apps and tools.",
@@ -647,25 +660,12 @@
         "Turn a conversation into a Page, start from a template, or begin writing directly in Space. Edit the text yourself or ask ChatGPT to revise it, add charts, or create interactive content. Collaborators can work on the same Page and leave comments, with each person using their own ChatGPT.",
         "Pages follow Space\u2019s availability and sharing settings. Sharing a Page does not give other people access to your private chats or memory; information added to the Page is visible to people who can view it.",
         "Creating, editing, and scheduling Sites",
-        "Site owners and editors on Plus and Pro can select Edit site from a published Site in a desktop browser to continue editing in ChatGPT, review changes, and publish when ready.",
-        "Site owners can also create recurring cloud schedules from Automations . These updates are available where Sites is supported. Learn more about creating and managing Sites .",
-        "GPT-6.1 Sol in ChatGPT Work and Codex",
-        "GPT-6.1 Sol improves on GPT-6 Sol in agentic coding, computer use, and professional work. We\u2019re rolling it out in ChatGPT Work and Codex, starting with Pro users and expanding to Plus, Business, Enterprise, and Edu. Enterprise and Edu workspace owners can enable model access in Workspace settings > Permissions & roles, on the Workspace tab or through a custom role. Learn how to manage model access with role-based access control .",
-        "For availability and model selection, see: ChatGPT Work and Codex .",
-        "Meet your dot",
-        "We\u2019re introducing dots: always-on agents in ChatGPT that can take on ongoing work and keep making progress between conversations. Give your dot a goal, connect the apps it needs, and define what it can do on its own. Powered by GPT-6 Astra, your dot has its own cloud computer and can bring results back for your review.",
-        "Dots are rolling out gradually to eligible Pro and Business Premium users aged 18 and older in supported markets. Pro access excludes the European Economic Area, Switzerland, and the UK at launch. Enterprise access is a beta and is off by default. Create your dot in the ChatGPT desktop app or on desktop web.",
-        "For the next month, dots usage won\u2019t count toward eligible Pro, Business, and Enterprise users\u2019 plan allowances. After this period, we\u2019ll share usage terms for each plan.",
-        "Learn more about getting started with your dot .",
-        "Meetings plugin",
-        "We\u2019re making it easier to bring meeting context into ChatGPT so you can act on next steps faster. The Meetings plugin takes notes for you based on what\u2019s said in the meeting and saves personalized summaries with action items in ChatGPT Space. You can keep them private or share them with your team, then ask ChatGPT to update a project plan or draft a follow-up.",
-        "Audio is deleted once your notes are ready and can\u2019t be accessed or replayed. Available in beta in the ChatGPT desktop app on macOS to Pro and Business users, with Enterprise coming soon. Learn more .",
-        "Organize your work in ChatGPT Space"
+        "Site owners and editors on Plus and Pro can select Edit site from a published Site in a desktop browser to continue editing in ChatGPT, review changes, and publish when ready."
       ],
-      "content_hash": "88e335115945",
-      "last_seen_at": "2026-11-23T12:03:17.701148",
+      "content_hash": "dc3120117e74",
+      "last_seen_at": "2026-11-24T12:06:40.394765",
       "title": "ChatGPT Release Notes",
-      "updated_at": null
+      "updated_at": "2026-11-24T12:06:40.394765"
     },
     "https://openai.com/academy/codex/": {
       "blocks": [
@@ -702,7 +702,7 @@
         "Join OpenAI Academy today"
       ],
       "content_hash": "b0fd7b7f54e5",
-      "last_seen_at": "2026-11-23T12:03:17.701148",
+      "last_seen_at": "2026-11-24T12:02:37.490078",
       "title": "Codex Academy",
       "updated_at": null
     },
@@ -750,7 +750,7 @@
         "Start building with Codex"
       ],
       "content_hash": "5f1b0267fbb3",
-      "last_seen_at": "2026-11-23T12:03:17.701148",
+      "last_seen_at": "2026-11-24T12:02:37.490078",
       "title": "Codex Overview",
       "updated_at": null
     }
@@ -790,6 +790,13 @@
       "source": "arXiv",
       "title": "System-One RSI: Building Muscle Memory for Interactive Agents through Guided Practice",
       "url": "http://arxiv.org/abs/2611.26007v1"
+    },
+    "05c5c1c6141b25918e975e428336c3ee5bfd26ed": {
+      "kind": "Blog",
+      "sent_at": "2026-11-24T12:06:40.394765",
+      "source": "Supabase Blog",
+      "title": "Introducing Supabase Knowledge Base",
+      "url": "https://supabase.com/blog/introducing-supabase-knowledge-base"
     },
     "060081fb98181b77bd7c37ed4961dc7b863ff7af": {
       "kind": "Blog",
@@ -881,6 +888,13 @@
       "source": "arXiv",
       "title": "Spine: Compiling Subtask Trees into Structured Context for Long-Horizon Coding Agents",
       "url": "http://arxiv.org/abs/2610.37224v1"
+    },
+    "181570ebd7522cd4cf9111c7a3d9f3246743c0d2": {
+      "kind": "Blog",
+      "sent_at": "2026-11-24T12:06:40.394765",
+      "source": "Simon Willison",
+      "title": "datasette-charts 0.2a0",
+      "url": "https://simonwillison.net/2026/Nov/24/datasette-charts/"
     },
     "194e0bd2a1ae19d2c38ed43217040fd3552ba192": {
       "kind": "Blog",
@@ -986,6 +1000,13 @@
       "source": "InfoQ Architecture Articles",
       "title": "Article: The Evolution of Agentic Harnesses: From Chains to Graph to Code",
       "url": "https://www.infoq.com/articles/agentic-ai-architecture-harness-evolution/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Architecture-articles"
+    },
+    "31a12e6581fa16a53af0b0def7630762965a0294": {
+      "kind": "Blog",
+      "sent_at": "2026-11-24T12:06:40.394765",
+      "source": "Anthropic Docs",
+      "title": "Anthropic Release Notes",
+      "url": "https://docs.anthropic.com/en/release-notes/overview"
     },
     "31c22c5e10ca23e2d747fe6c7a60524bd2a31e24": {
       "kind": "Blog",
@@ -1098,6 +1119,13 @@
       "source": "Anthropic Docs",
       "title": "Claude Code Overview",
       "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
+    },
+    "4513a64d59436212411f58103395ca3ad3220720": {
+      "kind": "Blog",
+      "sent_at": "2026-11-24T12:06:40.394765",
+      "source": "InfoQ Architecture Articles",
+      "title": "Article: Engineering Around Non-Determinism: Evals, Grounding, and Release Gates for AI-Drafted Suspicious Reports",
+      "url": "https://www.infoq.com/articles/llm-agent-architecture-evals-grounding/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Architecture-articles"
     },
     "45a5013ea7847b5bdad7b7381f1e509956f373fb": {
       "kind": "Blog",
@@ -1323,13 +1351,6 @@
       "title": "Gemini 4 Carbon: Our next frontier model",
       "url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/"
     },
-    "6922db39f0c97919622ac1f690b98210bbf72f0a": {
-      "kind": "Blog",
-      "sent_at": "2026-10-10T12:04:47.946741",
-      "source": "HuggingFace",
-      "title": "Impactful scheduling for GPU clusters",
-      "url": "https://huggingface.co/blog/allenai/impactful-scheduling"
-    },
     "6f6a5bb44f5799f8c5c65b29c152d60d830e0466": {
       "kind": "Blog",
       "sent_at": "2026-10-16T12:05:32.016147",
@@ -1364,13 +1385,6 @@
       "source": "Meta Engineering",
       "title": "The Thin Orchestrator: How We Made Our AI Agents More Reliable by Giving the Router Less to Do",
       "url": "https://engineering.fb.com/2026/10/19/ml-applications/thin-orchestrator-ai-agent-architecture/"
-    },
-    "7a90eeff233843f01ce4e49ece90c9564cae69fe": {
-      "kind": "Paper",
-      "sent_at": "2026-10-10T12:04:47.946741",
-      "source": "arXiv",
-      "title": "HarnessSQL: Harness-Native Training for SQL Agents in Realistic Database Environments",
-      "url": "http://arxiv.org/abs/2610.12274v1"
     },
     "7c4f1e84045d654f1e2c9b081abd821d64467e39": {
       "kind": "Blog",
@@ -1539,13 +1553,6 @@
       "source": "Neon Blog",
       "title": "The agent builds the app, the user claims the database: how Ideavo does it",
       "url": "https://neon.com/blog/the-agent-builds-the-app-the-user-claims-the-database-how-ideavo-does-it"
-    },
-    "9a4e73807cc6a50b858174f9e9d8f2daefe9f92d": {
-      "kind": "Blog",
-      "sent_at": "2026-10-10T12:04:47.946741",
-      "source": "Hacker News",
-      "title": "Python 3.15",
-      "url": "https://www.python.org/downloads/release/python-3150/"
     },
     "9a6a84fad97704c4713f080bd99d33d411bb3d68": {
       "kind": "Blog",
@@ -1764,13 +1771,6 @@
       "title": "Anthropic Release Notes",
       "url": "https://docs.anthropic.com/en/release-notes/overview"
     },
-    "bd76ea32e318ee2dc9520a8629ea563afe4ecdc4": {
-      "kind": "Blog",
-      "sent_at": "2026-10-10T12:04:47.946741",
-      "source": "Anthropic Docs",
-      "title": "Anthropic Release Notes",
-      "url": "https://docs.anthropic.com/en/release-notes/overview"
-    },
     "bfd1a10b08c9dd9298a30191070e86fc7777b63a": {
       "kind": "Blog",
       "sent_at": "2026-11-22T12:05:23.989634",
@@ -1883,6 +1883,13 @@
       "title": "Industry November 17, 2026 What does \"production\" mean in the era of agentic development? Shifra Williams",
       "url": "https://render.com/blog/what-does-production-mean-in-the-era-of-agentic-development"
     },
+    "d5f4a643f14c5b68c11bbf5b3db70a839a7c04f0": {
+      "kind": "Blog",
+      "sent_at": "2026-11-24T12:06:40.394765",
+      "source": "OpenAI Help",
+      "title": "ChatGPT Release Notes",
+      "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+    },
     "d65ada6f3663348e77f748d1bbaf1773089095ee": {
       "kind": "Blog",
       "sent_at": "2026-10-24T12:06:33.888741",
@@ -1981,13 +1988,6 @@
       "title": "Scope your Personal Access Tokens",
       "url": "https://supabase.com/blog/scope-your-personal-access-tokens"
     },
-    "e9b20ef847dc33fd9cd26f00c283dc9c398872e5": {
-      "kind": "Blog",
-      "sent_at": "2026-10-10T12:04:47.946741",
-      "source": "Hacker News",
-      "title": "Show HN: Let your AI agents paint big arrows, boxes and text on your screen",
-      "url": "https://github.com/franzenzenhofer/big-arrow-on-the-screen"
-    },
     "ef06d6a0ef0b96da9d16be58c3fa7a4cc610f289": {
       "kind": "Paper",
       "sent_at": "2026-10-31T12:06:05.973592",
@@ -2058,6 +2058,13 @@
       "title": "Anthropic Release Notes",
       "url": "https://docs.anthropic.com/en/release-notes/overview"
     },
+    "f70801c0961bfad6c2515945fb069fc01dc7caa3": {
+      "kind": "Blog",
+      "sent_at": "2026-11-24T12:06:40.394765",
+      "source": "InfoQ Architecture News",
+      "title": "OpenAI Scales Git for Coding Agents with Pando",
+      "url": "https://www.infoq.com/news/2026/11/openai-git-pando/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Architecture-news"
+    },
     "f9aa0b1978f599bf42151c2b05c8099c3cd44ac6": {
       "kind": "Blog",
       "sent_at": "2026-11-10T12:08:39.514766",
@@ -2091,11 +2098,9 @@
     "https://blog.cloudflare.com/adapting-to-ai-penetration-testing-orchestrators/": "2026-11-14T12:06:33.029457",
     "https://blog.cloudflare.com/choosing-quepaxa/": "2026-11-12T12:07:21.805082",
     "https://blog.cloudflare.com/clairic-extraction-model/": "2026-10-20T12:05:14.915294",
-    "https://blog.cloudflare.com/clef-faster-cheaper-multimodal/": "2026-10-10T12:04:47.946949",
     "https://blog.cloudflare.com/cloudflare-openai-discovery-agentic-web/": "2026-10-16T12:05:32.016399",
     "https://blog.cloudflare.com/d1-control-plane/": "2026-10-14T12:05:52.861992",
     "https://blog.cloudflare.com/ddos-threat-report-2026-q3/": "2026-10-30T12:06:54.945777",
-    "https://blog.cloudflare.com/deno-joins-cloudflare/": "2026-10-10T12:04:47.946949",
     "https://blog.cloudflare.com/deploy-with-void/": "2026-10-16T12:05:32.016399",
     "https://blog.cloudflare.com/dns-targeted-zone-builds/": "2026-11-03T12:05:35.152916",
     "https://blog.cloudflare.com/emudhra-certificate-compromise/": "2026-10-21T12:07:40.757503",
@@ -2118,6 +2123,7 @@
     "https://blog.cloudflare.com/phpaftershell-waf-protection/": "2026-11-21T12:06:14.463281",
     "https://blog.cloudflare.com/post-quantum-geo-key-manager/": "2026-10-24T12:06:33.888920",
     "https://blog.cloudflare.com/private-origins-public-to-private/": "2026-10-31T12:06:05.973708",
+    "https://blog.cloudflare.com/probing-dns-at-cloudflare/": "2026-11-24T12:06:40.394937",
     "https://blog.cloudflare.com/programmable-gateway-dlp/": "2026-10-16T12:05:32.016399",
     "https://blog.cloudflare.com/protect-your-netscaler-gateway/": "2026-10-20T12:05:14.915294",
     "https://blog.cloudflare.com/q3-2026-internet-disruption-summary/": "2026-10-28T12:05:39.312639",
@@ -2131,12 +2137,10 @@
     "https://blog.cloudflare.com/verified-bots-accountability/": "2026-10-17T12:04:55.267019",
     "https://blog.cloudflare.com/vole-mole/": "2026-11-07T12:06:31.489883",
     "https://blog.cloudflare.com/webmcp-commerce/": "2026-10-22T12:06:09.234476",
-    "https://blog.cloudflare.com/workers-on-demand-profiling/": "2026-10-10T12:04:47.946949",
     "https://blog.cloudflare.com/yandex-outage/": "2026-10-15T12:05:43.021804",
     "https://blog.cloudflare.com/zero-wire/": "2026-11-04T12:06:28.376355",
     "https://openai.com/index/accelerating-engineering-for-the-physical-world": "2026-11-04T12:06:28.376355",
     "https://openai.com/index/amp-beyond-coding": "2026-10-15T12:05:43.021804",
-    "https://openai.com/index/asana-browser-agent": "2026-10-10T12:04:47.946949",
     "https://openai.com/index/att-legal": "2026-10-22T12:06:09.234476",
     "https://openai.com/index/broad-access-through-consistent-standards": "2026-10-22T12:06:09.234476",
     "https://openai.com/index/building-scientific-understanding-with-academic-communities": "2026-10-27T12:06:30.845735",
@@ -2162,6 +2166,7 @@
     "https://openai.com/index/introducing-chatgpt-for-sales": "2026-11-18T12:05:35.330310",
     "https://openai.com/index/introducing-chatgpt-wallet": "2026-11-14T12:06:33.029457",
     "https://openai.com/index/introducing-gpt-6-cyber": "2026-11-06T12:06:07.095449",
+    "https://openai.com/index/introducing-shirudo": "2026-11-24T12:06:40.394937",
     "https://openai.com/index/introducing-the-rosalind-academic-plan": "2026-10-16T12:05:32.016399",
     "https://openai.com/index/le-groupe-figaro-and-openai-announce-partnership": "2026-11-18T12:05:35.330310",
     "https://openai.com/index/legora": "2026-10-29T12:06:53.602298",
