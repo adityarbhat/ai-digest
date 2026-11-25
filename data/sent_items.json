@@ -36,7 +36,7 @@
         "Message Dispatch a task from your phone and open the Desktop session it creates",
         "Start a long-running task on the web or the Claude mobile app , then pull it into your terminal with claude --teleport . Teleport requires a claude.ai subscription.",
         "Run /desktop to continue your current terminal session in the Desktop app , where you can review diffs visually. The /desktop handoff requires a claude.ai subscription. Available on macOS and x64 Windows.",
-        "Route tasks from team chat: mention @Claude in Slack with a bug report and get a pull request back",
+        "Route tasks from team chat on Team and Enterprise plans: mention @Claude in Slack with a bug report and get a pull request back",
         "Quickstart : walk through your first real task, from exploring a codebase to committing a fix",
         "Store instructions and memories : give Claude persistent instructions with CLAUDE.md files and auto memory",
         "Common workflows and best practices : patterns for getting the most out of Claude Code",
@@ -46,10 +46,10 @@
         "Troubleshooting : solutions for common issues",
         "code.claude.com : demos, pricing, and product details"
       ],
-      "content_hash": "a2e9c36b7b64",
-      "last_seen_at": "2026-11-24T12:02:37.490078",
+      "content_hash": "643439a00f3f",
+      "last_seen_at": "2026-11-25T12:06:37.718739",
       "title": "Claude Code Overview",
-      "updated_at": "2026-11-22T12:05:23.989634"
+      "updated_at": "2026-11-25T12:06:37.718739"
     },
     "https://docs.anthropic.com/en/docs/claude-code/tutorials": {
       "blocks": [
@@ -154,7 +154,7 @@
         "Extend Claude Code"
       ],
       "content_hash": "1a3e7cce140b",
-      "last_seen_at": "2026-11-24T12:02:37.490078",
+      "last_seen_at": "2026-11-25T12:02:37.379699",
       "title": "Claude Code Tutorials",
       "updated_at": "2026-11-22T12:05:23.989634"
     },
@@ -166,9 +166,35 @@
         "For release notes on Claude Apps, see the Release notes for Claude Apps in the Claude Help Center .",
         "For updates to Claude Code, see the complete CHANGELOG.md in the claude-code repository.",
         "November 23, 2026",
+        "A fix is live for an undercount of web searches in the List User Activity Preview with links to the API reference available \u2014 press Tab until focus enters the card, Escape to return. endpoint of the Claude Enterprise Analytics API . The top-level web_search_count did not count every search tool that Claude uses in chats, so it left out some searches. It now includes them, so it can be higher. Most of the added searches come from Chat and Cowork unified .",
+        "The web search fix applies to data for November 17, 2026 (UTC), and later, so counts that you already pulled for those days can change. It does not recount earlier days.",
+        "A fix is live for an undercount in the Get Connector Usage Preview with links to the API reference available \u2014 press Tab until focus enters the card, Escape to return. endpoint of the Claude Enterprise Analytics API . In chats that the session counting change reached, individual_auth_distinct_user_count and managed_auth_distinct_user_count left out users who used a connector. For most organizations, these counts now include most of those users. They can be higher, and can show a number where they used to be null .",
+        "The connector fix applies to data for November 19, 2026 (UTC), and later, so counts that you already pulled for those days can change. It does not recount earlier days.",
+        "On November 24, 2026, a fix for an undercount of project activity in the Claude Enterprise Analytics API will go live. The Get Chat Project Usage Preview with links to the API reference available \u2014 press Tab until focus enters the card, Escape to return. endpoint leaves out some messages in project chats. One example is messages sent after a chat moves into a Cowork cloud session. After the fix, it will count most of those messages. message_count , distinct_conversation_count , and distinct_user_count can then be higher, and more projects can appear in the results.",
+        "The List User Activity Preview with links to the API reference available \u2014 press Tab until focus enters the card, Escape to return. endpoint will change in the same way when you filter by project_id . message_count and distinct_conversation_count can be higher, last_activity_date can be later, and more users can appear. Without the filter, some of these messages count in chat_cowork_unified_metrics.sessions.message_count . So the chat message_count for a user can be higher with the filter than without it.",
+        "The project fix will apply to data for November 20, 2026 (UTC), and later, so counts that you already pulled for those days can change. It does not recount earlier days.",
         "We announced the deprecation of the Claude Opus 4.5 model ( claude-opus-4-5-20251101 and claude-opus-4-5 ), with retirement on the Claude API scheduled for January 22, 2027. We recommend migrating to Claude Opus 5.5. See Migrating from Claude Opus 4.5 or earlier . To check which dates apply on other platforms, see Model deprecations .",
         "We\u2019ve launched Enterprise Frontier Safeguards (EFS) in beta on Claude Platform , Claude Platform on AWS , and Claude Models on Google Cloud (Anthropic managed) . EFS is Zero Data Retention (ZDR) for eligible organizations that use Claude\u2019s most capable models . Anthropic doesn\u2019t retain your prompts and responses. Encrypted copies of them, called Sealed Safety Data, go to a bucket in your own cloud account. A workspace on Anthropic-managed storage isn\u2019t on EFS, because Anthropic stores that workspace\u2019s Sealed Safety Data. To get access, see Setup guide .",
         "We\u2019ve added two event types to organization webhooks , which are in beta. We send external_storage.failed when a bucket that you use as customer-owned storage fails our daily check, and external_storage.recovered when it passes again.",
+        "November 20, 2026",
+        "The Claude Enterprise Analytics API has a new rule for when a chat in Chat and Cowork unified counts as a session. New rule: A session starts the first time on a UTC day that Claude successfully runs a Bash command, creates a file, or edits a file in the chat. It ends when that day ends. Previous rule: A chat counted as a session after it moved into a Cowork cloud session (a sandbox where Claude runs code), including on later days. Uploading some types of files could cause that move. Rollout: The change reaches chats gradually, and existing chats can change later than new ones. Until then, a chat follows the previous rule. Activity from before then is not recounted. The API does not show which rule a chat follows.",
+        "New rule: A session starts the first time on a UTC day that Claude successfully runs a Bash command, creates a file, or edits a file in the chat. It ends when that day ends.",
+        "Previous rule: A chat counted as a session after it moved into a Cowork cloud session (a sandbox where Claude runs code), including on later days. Uploading some types of files could cause that move.",
+        "Rollout: The change reaches chats gradually, and existing chats can change later than new ones. Until then, a chat follows the previous rule. Activity from before then is not recounted. The API does not show which rule a chat follows.",
+        "In List User Activity Preview with links to the API reference available \u2014 press Tab until focus enters the card, Escape to return. , these counts can change. chat and sessions are the objects in chat_cowork_unified_metrics . Sessions: sessions.distinct_session_count can be higher, or lower for some users. Messages: They count in chat before the session starts and in sessions after. message_count can be higher or lower in each. Chats: chat.distinct_conversation_count can be higher. A chat counts there on each day that it gets a message, even one that counts in sessions . Tool actions and file edits: They count in sessions during the session. action_count and file_edit_count can be higher or lower. Connectors: In most chats, connectors_used_count and distinct_connectors_used_count split the same way as messages. Added up across both objects, each can be higher or lower. Skills and plugins: Their use counts in sessions , even on a day with no session. Artifacts: Counts can move between chat and sessions .",
+        "Sessions: sessions.distinct_session_count can be higher, or lower for some users.",
+        "Messages: They count in chat before the session starts and in sessions after. message_count can be higher or lower in each.",
+        "Chats: chat.distinct_conversation_count can be higher. A chat counts there on each day that it gets a message, even one that counts in sessions .",
+        "Tool actions and file edits: They count in sessions during the session. action_count and file_edit_count can be higher or lower.",
+        "Connectors: In most chats, connectors_used_count and distinct_connectors_used_count split the same way as messages. Added up across both objects, each can be higher or lower.",
+        "Skills and plugins: Their use counts in sessions , even on a day with no session.",
+        "Artifacts: Counts can move between chat and sessions .",
+        "For chats that the change reached, the API does not get the names of some skills and plugins that Anthropic did not make, such as your own. List User Activity: distinct_skills_used_count can leave out these skills. Added up across both objects, it can be lower. Get Skill Usage Preview with links to the API reference available \u2014 press Tab until focus enters the card, Escape to return. : Spend for these skills can leave out these chats. estimated_overage_spend can be lower, and attributed_list_price can be lower or null . Get Plugin Usage Preview with links to the API reference available \u2014 press Tab until focus enters the card, Escape to return. : These plugins can appear under the plugin_name value third-party .",
+        "List User Activity: distinct_skills_used_count can leave out these skills. Added up across both objects, it can be lower.",
+        "Get Skill Usage Preview with links to the API reference available \u2014 press Tab until focus enters the card, Escape to return. : Spend for these skills can leave out these chats. estimated_overage_spend can be lower, and attributed_list_price can be lower or null .",
+        "Get Plugin Usage Preview with links to the API reference available \u2014 press Tab until focus enters the card, Escape to return. : These plugins can appear under the plugin_name value third-party .",
+        "In Get Connector Usage Preview with links to the API reference available \u2014 press Tab until focus enters the card, Escape to return. , individual_auth_distinct_user_count and managed_auth_distinct_user_count can leave out some users of chats that the change reached, so they can be lower.",
+        "Other counts from the connector, skill, and plugin usage endpoints can be higher or lower.",
         "November 17, 2026",
         "We\u2019ve launched Linked billing in beta with the user-profiles-billing-2026-10-01 beta header. Your customers can now pay for the Claude usage in your app through their own Claude organization. Once a customer links their organization, set billing_policy on each /v1/messages or /v1/chat/completions request to choose who pays. In the Claude Console, customers can set a spend cap for your app or unlink your app. Linked billing works for customers whose organization pays Anthropic directly for API usage.",
         "November 16, 2026",
@@ -191,6 +217,8 @@
         "The Compliance API now includes Security posture data, in beta for Claude Enterprise organizations. The Activity Feed records changes to attestations on the Security posture page in claude.ai Organization settings . The GET /v1/compliance/organizations/{organization_id}/security_posture endpoint returns an organization\u2019s current Security posture results. See Security posture in the Compliance API .",
         "You can now set up an IP allowlist for your organization in the Claude Console, in beta. Requests to covered services from addresses not on your list are refused, which limits where a leaked API key can be used. Add IPv4 and IPv6 addresses or CIDR ranges, up to 1,000 per organization. See IP allowlisting for what\u2019s covered and how to set it up.",
         "You can now sign a member of your Claude Enterprise (claude.ai) organization out of Claude everywhere with the Admin API. This capability is in beta. See the Admin API reference . The member stays in the organization and can sign in again. See Sign a member out everywhere for the beta header and what the request doesn\u2019t end.",
+        "November 4, 2026",
+        "We\u2019ve added error codes to the SDK so you can handle one cause of an error without parsing the response body. Each API error now carries the API\u2019s error code, message, and details, and each error code has its own exception class (in Go, a constant). To use error codes, update to the latest version of the SDK . See Handle errors .",
         "November 3, 2026",
         "Text generated by Claude Mythos 5, Claude Opus 4.7, and Claude Sonnet 4.6 carries Anthropic\u2019s text watermark on the platforms listed in How Claude marks AI-generated content . On Claude Sonnet 4.6, text generated for a request that sets temperature , top_p , or top_k to a non-default value might not carry it. See Text watermark .",
         "November 2, 2026",
@@ -291,40 +319,12 @@
         "Text generated by Claude Fable 5.1 and Claude Mythos 5.1 carries Anthropic\u2019s text watermark, and supported image, video, and audio files that Claude produces through the code execution tool carry C2PA Content Credentials when you retrieve them through the Files API on the Claude API. Marking requires no changes to your requests or response handling.",
         "Like Claude Fable 5, both models require 30-day data retention and aren\u2019t available under zero data retention unless expressly authorized by Anthropic. See Model-specific data retention requirements .",
         "The guides for the Claude Enterprise endpoints of the Admin API ( user management and spend limits ), the Claude Enterprise Analytics API , and the Compliance API now show the anthropic-version header; send it on every request to these endpoints, as in the rest of the Claude API. See API versions .",
-        "August 27, 2026",
-        "In Python SDK 1.2.0, TypeScript SDK 0.122.0, Go SDK 1.68.0, Java SDK 2.59.0, Ruby SDK 1.67.0, and C# SDK 12.44.0, client.beta.files and client.beta.skills no longer send the files-api-2025-04-14 and skills-2025-10-02 beta headers and return the same shapes as client.files and client.skills . With this change, client.beta.skills.delete() deletes a Skill together with all of its versions, and the beta Messages type BetaSkill (the container Skill reference) is renamed BetaContainerSkill . Requests that still send the beta headers keep receiving the beta shapes. See Migrate from files-api-2025-04-14 and Migrate from skills-2025-10-02 .",
-        "You can now create personal keys and service account keys in the Claude Console. They act as you or as a service account , with the same permissions, and stop working when the linked account is removed from an organization. This lets organization admins more easily track usage for each account, and ensure key usage is legitimate. These API keys can be scoped to a specific workspace or work on admin endpoints and across any workspace the account has access to. Workspace API keys remain supported as a legacy option. See API keys in Authentication for more information.",
-        "August 26, 2026",
-        "The Compliance API session endpoints are out of beta for Cowork and Claude Code sessions. See Retrieve session transcripts .",
-        "The Compliance API local session endpoints now also return transcripts of Claude Science sessions ( product_surface value claude_science ) and Claude for Microsoft 365 sessions in Excel, PowerPoint, Word, and Outlook ( product_surface values beginning with office_agents ), in beta for Claude Enterprise organizations, with your existing Compliance Access Key and the read:compliance_user_data scope. See Sessions on users\u2019 machines .",
-        "The Admin API is now available in the ant CLI and the Python, TypeScript, C#, Go, Java, PHP, and Ruby SDKs under client.beta.organization . They cover organization info, members, invites, workspaces and workspace members, API keys, rate limits, service accounts, workload identity federation issuers and rules, and customer-managed encryption keys. Usage and cost reports and the Claude Enterprise user-management and analytics endpoints remain curl-only. The CLI and SDKs read an Admin API key from ANTHROPIC_API_KEY or an org:admin OAuth token from ANTHROPIC_AUTH_TOKEN .",
-        "August 20, 2026",
-        "We\u2019ve released v1.0 of the Python SDK . The SDK\u2019s HTTP layer moves from httpx to httpx2 , a maintained, API-compatible fork: build custom http_client , Timeout , and transport objects from httpx2 (the DefaultHttpxClient helpers are unchanged), and call httpx2.alias_httpx() at startup if you rely on tracing or mocking libraries that patch httpx . v1.0 requires Python 3.10 or later and removes long-deprecated surface, including the legacy Text Completions API, the temperature , top_p , and top_k parameters on Messages methods, and the tool runner\u2019s client-side compaction_control . On the async client, .with_raw_response results now need await response.parse() , and AnthropicBedrock now raises an error when no AWS region is configured instead of defaulting to us-east-1 . See the v1 migration guide for every change with before-and-after snippets.",
-        "The computer use and browser use toolsets ( computer_toolset_20260801 and browser_toolset_20260801 ) are now available on Google Cloud for Claude Fable 5, Claude Mythos 5, Claude Opus 5, Claude Sonnet 5, and Claude Opus 4.8. Requests use the same tools entries as on the Claude API.",
-        "August 19, 2026",
-        "The computer use tool is out of beta on the Claude API as the computer_toolset_20260801 toolset: no beta header, batch actions (several actions in one turn), zoom enabled by default, and per-member configuration through configs . Earlier beta versions remain available. Upgrading an existing integration changes the request shape and tool handling; see Migrate from computer_20251124 .",
-        "We\u2019ve launched the browser use tool ( browser_toolset_20260801 ), a client toolset for driving a browser that your application hosts. It works inside a browser viewport rather than a whole desktop, reading the page itself (its accessibility tree, elements, forms, and tabs) and adding element references, form input, tab management, download reporting, and opt-in file upload on top of screenshot-and-click control.",
-        "Both toolsets are available for Claude Fable 5, Claude Mythos 5, Claude Opus 5, Claude Sonnet 5, and Claude Opus 4.8 on the Claude API.",
-        "The Files API is out of beta on the Claude API. Requests to the /v1/files endpoints, and Messages API requests that reference an uploaded file, no longer require the files-api-2025-04-14 beta header. Requests sent without the header use the current response format: file expiration (set expires_in_seconds when you upload a file; file objects report expires_at ), and page and next_page pagination plus an ids[] filter when you list files . /v1/files requests that still send the beta header keep working and return the previous response format. To move an existing integration off the header, see Migrate from files-api-2025-04-14 .",
-        "Agent Skills and the Skills API ( /v1/skills ) are out of beta on the Claude API. Requests no longer require the skills-2025-10-02 beta header, including Messages API requests that load Skills through the container parameter. Requests that still send the header continue to work unchanged. See Using Agent Skills with the API . To move an existing integration off the header, see Migrate from skills-2025-10-02 .",
-        "The Admin API user-management endpoints for Claude Enterprise (claude.ai) organizations (members, invites, groups, and custom roles) are out of beta. The anthropic-beta: ce-user-management-2026-07-13 header is no longer required on group and custom-role requests; requests that still send it are accepted unchanged. See User management .",
-        "You can now restrict which sites a Claude Managed Agents agent\u2019s web_search and web_fetch tools can reach. Set allowed_domains or blocked_domains on the tool\u2019s entry in the agent_toolset_20260401 configs array; web_fetch also accepts max_content_tokens and web_search accepts user_location . Each configs entry is identified by its name and typed by an optional type , and requests that pass only name , enabled , and permission_policy continue to work; in the typed SDKs, configs entries become per-tool types . See Restrict web search and web fetch domains .",
-        "Claude Managed Agents sessions that run in a self-hosted sandbox can now attach memory stores . The Python, TypeScript, and Go SDK workers download each attached store into the sandbox at its mount_path and sync the agent\u2019s changes back to the store. See Memory stores in self-hosted sandboxes .",
-        "The session viewer in the Claude Console has been redesigned with a timeline minimap, a transcript grouped by model request, and an Inspector panel for session details and cost, raw events, per-tool statistics, mounted resources, and per-thread activity. See Inspect a session in the Console .",
-        "August 18, 2026",
-        "Workbench is now playground in the Claude Console. Playground supports every Messages API parameter and includes templates that demonstrate API features such as code execution and web search. It shows the full SDK request and the API response for each run, to help you understand the API and build with it. For more, see the Claude Help Center or try it at platform.claude.com/playground .",
-        "August 11, 2026",
-        "The Compliance API now returns transcripts of Cowork and Claude Code sessions that run on your users\u2019 machines, in beta for Claude Enterprise organizations. GET /v1/compliance/apps/sessions/local lists sessions across your organization, GET /v1/compliance/apps/sessions/local/{session_id} retrieves one session\u2019s metadata, and GET /v1/compliance/apps/sessions/local/{session_id}/messages returns its transcript, all with your existing Compliance Access Key and the read:compliance_user_data scope. See Sessions on users\u2019 machines .",
-        "We\u2019ve added the anthropic-workspace-id response header to the Claude API. It carries the wrkspc_ -prefixed ID of the workspace that the request\u2019s API key or access token resolved to, including your organization\u2019s Default Workspace. See Identify the workspace behind an API response .",
-        "August 10, 2026",
-        "The introductory pricing for Claude Sonnet 5 ($2 / $10 USD per MTok) is now the standard price: the previously scheduled increase to $3 / $15 USD per MTok on September 1, 2026, will not occur. See Pricing .",
-        "August 7, 2026",
-        "You can now set a budget on a Claude Managed Agents session: a hard cap on the session\u2019s spend, priced at public list rates. A session that reaches its budget pauses with the budget_reached stop reason instead of starting new model requests; changing or removing the budget resumes it. Deployments accept the same budget and apply it to each session they start. See Session budgets ."
+        "August 27, 2026"
       ],
-      "content_hash": "cbfed72a25df",
-      "last_seen_at": "2026-11-24T12:06:40.394765",
+      "content_hash": "4c25ffe8c77b",
+      "last_seen_at": "2026-11-25T12:06:37.718739",
       "title": "Anthropic Release Notes",
-      "updated_at": "2026-11-24T12:06:40.394765"
+      "updated_at": "2026-11-25T12:06:37.718739"
     },
     "https://help.openai.com/en/articles/10032626-prompt-engineering-best-practices-for-chatgpt": {
       "blocks": [
@@ -352,7 +352,7 @@
         "ChatGPT Capabilities"
       ],
       "content_hash": "e9db8f6057f2",
-      "last_seen_at": "2026-11-24T12:02:37.490078",
+      "last_seen_at": "2026-11-25T12:02:37.379699",
       "title": "Prompt engineering best practices for ChatGPT",
       "updated_at": null
     },
@@ -495,7 +495,7 @@
         "Restart Codex after updating your configuration. The project-level trust_level = \"untrusted\" setting is separate and remains supported."
       ],
       "content_hash": "94170915c1b9",
-      "last_seen_at": "2026-11-24T12:02:37.490078",
+      "last_seen_at": "2026-11-25T12:02:37.379699",
       "title": "Using Codex with your ChatGPT plan",
       "updated_at": null
     },
@@ -663,7 +663,7 @@
         "Site owners and editors on Plus and Pro can select Edit site from a published Site in a desktop browser to continue editing in ChatGPT, review changes, and publish when ready."
       ],
       "content_hash": "dc3120117e74",
-      "last_seen_at": "2026-11-24T12:06:40.394765",
+      "last_seen_at": "2026-11-25T12:02:37.379699",
       "title": "ChatGPT Release Notes",
       "updated_at": "2026-11-24T12:06:40.394765"
     },
@@ -702,7 +702,7 @@
         "Join OpenAI Academy today"
       ],
       "content_hash": "b0fd7b7f54e5",
-      "last_seen_at": "2026-11-24T12:02:37.490078",
+      "last_seen_at": "2026-11-25T12:02:37.379699",
       "title": "Codex Academy",
       "updated_at": null
     },
@@ -750,7 +750,7 @@
         "Start building with Codex"
       ],
       "content_hash": "5f1b0267fbb3",
-      "last_seen_at": "2026-11-24T12:02:37.490078",
+      "last_seen_at": "2026-11-25T12:02:37.379699",
       "title": "Codex Overview",
       "updated_at": null
     }
@@ -945,6 +945,13 @@
       "title": "OpenAI seems to be silently re-enabling model training on Codex chats",
       "url": "https://news.ycombinator.com/item?id=50352757"
     },
+    "2b27bc2987fc9be9a1a2d0fb001ab644e0f56953": {
+      "kind": "Blog",
+      "sent_at": "2026-11-25T12:06:37.718739",
+      "source": "Anthropic Docs",
+      "title": "Anthropic Release Notes",
+      "url": "https://docs.anthropic.com/en/release-notes/overview"
+    },
     "2c470e0e83d06677567b79da0ce98be962d85bcc": {
       "kind": "Blog",
       "sent_at": "2026-10-27T12:06:30.845562",
@@ -1056,6 +1063,13 @@
       "source": "FastAPI Releases",
       "title": "0.162.5",
       "url": "https://github.com/fastapi/fastapi/releases/tag/0.162.5"
+    },
+    "3d8400815117025ada6b5ab48127e222ceebd51d": {
+      "kind": "Blog",
+      "sent_at": "2026-11-25T12:06:37.718739",
+      "source": "Anthropic Docs",
+      "title": "Claude Code Overview",
+      "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
     },
     "3dfd0f04853daad06347b374b31e539db924e9c3": {
       "kind": "Blog",
@@ -1351,12 +1365,26 @@
       "title": "Gemini 4 Carbon: Our next frontier model",
       "url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/"
     },
+    "692c9b6544d589d062eef377ca382606f31ffcb2": {
+      "kind": "Paper",
+      "sent_at": "2026-11-25T12:06:37.718739",
+      "source": "arXiv",
+      "title": "ShellBench: What Matters More for AI Agents, Models, or Harness for Everyday Tasks",
+      "url": "http://arxiv.org/abs/2611.32946v1"
+    },
     "6f6a5bb44f5799f8c5c65b29c152d60d830e0466": {
       "kind": "Blog",
       "sent_at": "2026-10-16T12:05:32.016147",
       "source": "Meta Engineering",
       "title": "How Meta Built Forum With AI-Native Engineering",
       "url": "https://engineering.fb.com/2026/10/15/ml-applications/how-meta-built-forum-ai-native-engineering/"
+    },
+    "6fa7b06d6fe445129e6967a4905de015be81fcfe": {
+      "kind": "Blog",
+      "sent_at": "2026-11-25T12:06:37.718739",
+      "source": "Uber Engineering",
+      "title": "How Uber Evals 1 Million Agent Skill Invocations a Month",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1Ed1lTNVF4RUpSUkdSNkptbHdaOFN5cVNrMXpvZ3pWdDZUUm01cjh3VGJlVDU0aklCeTY4WWxINHJHYnk5bG5wb094TXFnNG1GMTJGRVpfRlRnR0U5cEJVMXJUckJKMTZNWTlRNG93SQ?oc=5"
     },
     "7273402a6919ecd1ada5336022c981aa3602ac3b": {
       "kind": "Blog",
@@ -1588,6 +1616,13 @@
       "source": "Neon Blog",
       "title": "Managed Better Auth is now an OAuth provider, with MCP support",
       "url": "https://neon.com/blog/managed-better-auth-oauth-provider-mcp"
+    },
+    "9fa887359ee01e62c006e37b55f6eb9d8d71e561": {
+      "kind": "Paper",
+      "sent_at": "2026-11-25T12:06:37.718739",
+      "source": "arXiv",
+      "title": "Delegent: A Multi-Agent Harness That Reduces Cost without Sacrificing Performance",
+      "url": "http://arxiv.org/abs/2611.33098v1"
     },
     "a264df964f3dcb2e82dc8e33ca1a0d93fbb63d3e": {
       "kind": "Blog",
@@ -2156,6 +2191,7 @@
     "https://openai.com/index/expanding-chatgpt-for-academic-researchers": "2026-11-17T12:05:42.137677",
     "https://openai.com/index/forward-deployed-engineering-means": "2026-10-23T12:05:56.559813",
     "https://openai.com/index/gilbert-tobin-sam-nickless": "2026-11-11T12:06:20.938855",
+    "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities": "2026-11-25T12:06:37.718873",
     "https://openai.com/index/greptile-code-review-codex-astra": "2026-10-27T12:06:30.845735",
     "https://openai.com/index/grid-protectors-program": "2026-11-03T12:05:35.152916",
     "https://openai.com/index/heimstaden": "2026-11-03T12:05:35.152916",
@@ -2181,6 +2217,7 @@
     "https://openai.com/index/partnering-with-hacktron": "2026-11-07T12:06:31.489883",
     "https://openai.com/index/ropes-gray-ai-diligence": "2026-10-30T12:06:54.945777",
     "https://openai.com/index/scaling-storage-one-billion-users-part-two": "2026-10-24T12:06:33.888920",
+    "https://openai.com/index/searching-for-distant-planets-with-astra": "2026-11-25T12:06:37.718873",
     "https://openai.com/index/securing-our-frontier-model-training-environment": "2026-10-24T12:06:33.888920",
     "https://openai.com/index/sentinelone": "2026-10-15T12:05:43.021804",
     "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure": "2026-11-05T12:06:48.489100",
